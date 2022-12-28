@@ -1,0 +1,305 @@
+{
+  "main_products": [
+    {
+      "id":1,
+      "title": "DS-2CD2142FWD-IS",
+      "icon":"survillenceSvg",
+      "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+      "link":"products/DS-2CD2142FWD-IS",
+      "type":"surveillance"
+    },
+    
+    {
+      "id":2,
+      "title": "F09",
+      "icon":"fingerprintSvg",
+      "description":"Thumbprint Based Access Control Device",
+      "link":"products/f09",
+      "type":"access_control"
+    },
+    {
+      "id":3,
+      "title": "Central Clocks",
+      "icon":"centralclockSvg",
+      "description":"Control your organization with centralized timekeeping solutions",
+      "link":"products/clocks",
+      "type":"building_management"
+    },
+    {
+      "id":4,
+      "title": "DS-2CD2142FWD-IS",
+      "icon":"survillenceSvg",
+      "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+      "link":"products/DS-2CD2142FWD-IS",
+      "type":"surveillance"
+    },
+    
+    {
+      "id":5,
+      "title": "F09",
+      "icon":"fingerprintSvg",
+      "description":"Thumbprint Based Access Control Device",
+      "link":"products/f09",
+      "type":"access_control"
+    },
+    {
+      "id":6,
+      "title": "Central Clocks",
+      "icon":"centralclockSvg",
+      "description":"Control your organization with centralized timekeeping solutions",
+      "link":"products/clocks",
+      "type":"building_management"
+    }
+     
+      
+  ],
+      "surveillance": [
+        {
+          "id":1,
+          "title": "DS-2CD2142FWD-IS",
+          "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+          "download":"pdf"
+        },
+        {
+          "id":2,
+            "title": "DS-2CD2142FWD-IS",
+            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+            "download":"pdf"
+          },
+          {
+            "id":3,
+            "title": "DS-2CD2142FWD-IS",
+            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
+          },
+          {
+            "id":4,
+            "title": "DS-2CD2142FWD-IS",
+            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+            "download":"pdf"
+          },
+          {
+            "id":5,
+            "title": "DS-2CD2142FWD-IS",
+            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
+          },
+          {
+            "id":6,
+            "title": "DS-2CD2142FWD-IS",
+            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
+          },
+          {
+            "id":7,
+            "title": "DS-2CD2142FWD-IS",
+            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
+          },
+          {
+            "id":8,
+            "title": "DS-2CD2142FWD-IS",
+            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
+          }
+      ],
+      "access_control": [
+        
+        {
+          "id":1,
+            "title": "F09",
+            "image":"https://zadip.com/images/egov/f09banner.jpg",
+            "description":"Thumbprint Based Access Control Device"
+          },
+          {
+            "id":2,
+            "title": "F09",
+            "image":"https://zadip.com/images/egov/F09.jpg",
+            "description":"Thumbprint Based Access Control Device"
+          },
+          {
+            "id":3,
+            "title": "F09",
+            "image":"https://zadip.com/images/egov/F09.jpg",
+            "description":"Thumbprint Based Access Control Device"
+          },
+          {
+            "id":4,
+            "title": "F09",
+            "image":"https://zadip.com/images/egov/F09.jpg",
+            "description":"Thumbprint Based Access Control Device"
+          }
+
+         
+      ],
+      "all": [
+        {
+          "id":1,
+          "title": "DS-2CD2142FWD-IS",
+          "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+          "type":"surveillance",
+          "specs":true,
+          "link":"/DS-2CD2142FWD-IS"
+        },
+        {
+          "id":2,
+          "title": "DS-2CD2142FWD-IS",
+          "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+          "type":"surveillance",
+          "link":"/DS-2CD2142FWD-IS"
+        },
+        {
+          "id":3,
+          "title": "DS-2CD2142FWD-IS",
+          "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+          "type":"surveillance",
+          "specs":true,
+          "link":"/DS-2CD2142FWD-IS"
+        },
+        {
+          "id":4,
+            "title": "DS-2CD2142FWD-IS",
+            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+            "type":"surveillance",
+            "link":"/DS-2CD2142FWD-IS"
+          },
+          {
+            "id":5,
+              "title": "DS-2CD2142FWD-IS",
+              "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+              "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+              "type":"surveillance",
+              "link":"/DS-2CD2142FWD-IS"
+            },
+            {
+              "id":6,
+                "title": "F06",
+                "image":"https://zadip.com/images/egov/F09.jpg",
+                "description":"Thumbprint Based Access Control Device",
+                "type":"access_control",
+                "link":"/f09"
+              },
+              {
+                "id":7,
+                "title": "F07",
+                "image":"https://zadip.com/images/egov/F09.jpg",
+                "description":"Thumbprint Based Access Control Device",
+                "type":"access_control",
+                "link":"/f09"
+              },
+            {
+              "id":8,
+              "title": "F08",
+              "image":"https://zadip.com/images/egov/F09.jpg",
+              "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+              "type":"access_control",
+              "link":"/f09"
+            },
+            {
+              "id":9,
+              "title": "DS-2CD2142FWD-IS",
+              "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+              "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+              "type":"surveillance",
+              "specs":true,
+              "link":"/DS-2CD2142FWD-IS"
+            },
+            {
+              "id":10,
+                "title": "F09",
+                "image":"https://zadip.com/images/egov/F09.jpg",
+                "description":"Thumbprint Based Access Control Device",
+                "type":"access_control",
+                "link":"/f09"
+              },
+              {
+                "id":11,
+                "title": "Central Clocks",
+                "image":"https://zadip.com/images/egov/clock.jpg",
+                "description":"Control your organization with centralized timekeeping solutions",
+                "type":"building_management",
+                "link":"/central_clock"
+              },
+           
+            {
+              "id":12,
+              "title": "DS-2CD2142FWD-IS",
+              "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+              "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+              "type":"surveillance",
+              "link":"/DS-2CD2142FWD-IS"
+            },
+        
+          {
+            "id":13,
+            "title": "F09",
+            "image":"https://zadip.com/images/egov/F09.jpg",
+            "description":"Thumbprint Based Access Control Device",
+            "type":"access_control",
+            "link":"/f09"
+          },
+         
+          {
+            "id":14,
+            "title": "Central Clocks",
+            "image":"https://zadip.com/images/egov/clock.jpg",
+            "description":"Control your organization with centralized timekeeping solutions",
+            "type":"building_management",
+            "link":"/central_clock"
+          },
+          {
+            "id":15,
+            "title": "Central Clocks",
+            "image":"https://zadip.com/images/egov/clock.jpg",
+            "description":"Control your organization with centralized timekeeping solutions",
+            "type":"building_management",
+            "link":"/central_clock"
+          },
+          {
+            "id":16,
+            "title": "Central Clocks",
+            "image":"https://zadip.com/images/egov/clock.jpg",
+            "description":"Control your organization with centralized timekeeping solutions",
+            "type":"building_management",
+            "link":"/central_clock"
+          }
+
+         
+      ],
+      "building_management": [
+        {
+          "id":1,
+            "title": "Central Clocks",
+            "image":"https://zadip.com/images/egov/clockbanner.jpg",
+            "description":"Control your organization with centralized timekeeping solutions"
+          },
+          {
+            "id":2,
+            "title": "Central Clocks",
+            "image":"https://zadip.com/images/egov/clock.jpg",
+            "description":"Control your organization with centralized timekeeping solutions"
+          },
+          {
+            "id":3,
+            "title": "Central Clocks",
+            "image":"https://zadip.com/images/egov/clock.jpg",
+            "description":"Control your organization with centralized timekeeping solutions"
+          },
+          {
+            "id":4,
+            "title": "Central Clocks",
+            "image":"https://zadip.com/images/egov/clock.jpg",
+            "description":"Control your organization with centralized timekeeping solutions"
+          }
+          
+      ]
+
+  }
+  

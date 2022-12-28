@@ -1,0 +1,68 @@
+{
+    
+    "technical_specs": [
+        {"id":1,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":2,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":3,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":4,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":5,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":6,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":7,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":8,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":9,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":10,"name":"Display/Speaker", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"}
+
+    ],
+    "features":[
+        {"id":1, "description": "Issuing the one-time exit and re-entry visa"},
+        {"id":2, "description": "Printing the exit and re-entry visa"},
+        {"id":3, "description": "Canceling the exit and re-entry visa"},
+        {"id":4, "description": "Extending the exit and re-entry visa"},
+        {"id":5, "description": "Issuing and printing final exit visa"},
+        {"id":6, "description": "Iqama issuance and renewal"},
+        {"id":7, "description": "Resident's data through the residency number"},
+        {"id":8, "description": "General data regarding any resident on your sponsorship"},
+        {"id":9, "description": "Information regarding driving licenses"},
+        {"id":10, "description": "Any fines for any resident on your sponsorship"},
+        {"id":10, "description": "About any resident by name"},
+        {"id":10, "description": "Exit and re-entry visa by residency number"}
+
+    ],
+    "muaref_features":[
+        {"id":1, "description": "Real-time attendance marking and reporting","icon":"boltSvg"},
+        {"id":2, "description": "Support all major smart device platforms" ,"icon":"wrenchSvg"},
+        {"id":3, "description": "Save expenses made on biometric devices" ,"icon":"usersSvg"},
+        {"id":4, "description": "Multiple users can mark attendance at the same instant" ,"icon":"boltSvg"},
+        {"id":5, "description": "Issuing and printing final exit visa" ,"icon":"boltSvg"},
+        {"id":6, "description": "Iqama issuance and renewal" ,"icon":"hourglassSvg"},
+        {"id":7, "description": "Resident's data through the residency number" ,"icon":"wrenchSvg"},
+        {"id":8, "description": "General data regarding any resident on your sponsorship" ,"icon":"usersSvg"}
+
+    ],
+    "software_development":[
+        {"id":1,"name":"ReactJs", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":2,"name":"NextJS", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":3,"name":"VueJS", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":4,"name":"JavaScript", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":5,"name":"Php", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":6,"name":".Net", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"},
+        {"id":7,"name":"Java", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"}
+       
+
+    ],
+    "pricing_Data":[
+        {"name":"Number of Workers", "col1":"0-10", "col2":"10-30", "col3":"30-50", "col4":"50-70", "col5":"70-90", "col6":"90-110"},
+        {"name":"Cost in SAR (Annual)", "col1":"1100", "col2":"1200", "col3":"1300", "col4":"1400", "col5":"1500", "col6":"1600"}
+    ]
+
+}
+
+
+
+
+
+
+
+
+
+

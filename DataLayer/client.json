@@ -1,0 +1,55 @@
+{
+    "our_clients": [
+      {  "id":1,
+        "image":"https://zadip.com/images/clients/adel.jpg",
+        "title":"Ministry of Justice",
+        "sector":"Government"
+      },
+      {  "id":2,
+        "image":"https://zadip.com/images/clients/americana.jpg",
+        "title":"Americana Foods",
+        "sector":"Distribution"
+      },
+      {  "id":3,
+        "image":"https://zadip.com/images/clients/dawa.jpg",
+        "title":"DMSCO Group",
+        "sector":"Medical"
+      },
+      {  "id":4,
+        "image":"https://zadip.com/images/clients/fanar.jpg",
+        "title":"Fanar Group",
+        "sector":"Private"
+      },
+      {  "id":5,
+        "image":"https://zadip.com/images/clients/fayha.jpg",
+        "title":"Fayha Water",
+        "sector":"Private"
+      },
+      {  "id":6,
+        "image":"https://zadip.com/images/clients/americana.jpg",
+        "title":"Americana Foods",
+        "sector":"Distribution"
+      },
+      {  "id":7,
+        "image":"https://zadip.com/images/clients/dawa.jpg",
+        "title":"DMSCO Group",
+        "sector":"Medical"
+      },
+      {  "id":8,
+        "image":"https://zadip.com/images/clients/fanar.jpg",
+        "title":"Fanar Group",
+        "sector":"Private"
+      },
+      {  "id":9,
+        "image":"https://zadip.com/images/clients/fayha.jpg",
+        "title":"Fayha Water",
+        "sector":"Private"
+      }
+     
+
+      
+      
+    ]
+  
+    }
+    

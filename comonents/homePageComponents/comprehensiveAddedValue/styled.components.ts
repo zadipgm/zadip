@@ -1,0 +1,53 @@
+import styled from "styled-components";
+
+export const ComprehensiveContainer = styled.div`
+background-attachment: fixed;
+background-image:url("https://www.vision2030.gov.sa/media/re3bnupp/hero-bg.png") ;
+padding:50px 0px ;
+`
+
+export const Wrapper = styled.div`
+position:relative;
+display: flex;
+justify-content: center;
+align-items: center;
+@media (max-width: 600px) {
+display: block;
+width: 100%;
+padding: 15px;
+}
+@media (min-width: 1200px) {
+
+width: 1170px;
+padding: 15px;
+}
+margin:0 auto;
+`
+export const ImageWrapper = styled.div`
+        padding: 15px;
+    width: 50%;
+    height: 442px;
+    background-color:#fff ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5% ;
+    
+`
+export const VisionImage = styled.img``
+export const Description = styled.div`
+padding: 20px;
+width:50% ;
+`  
+export const Title = styled.h3`font-size: 35px;
+line-height: 45px;
+color: #fff;`
+export const DescriptionVision = styled.p`  
+text-align: justify;
+font-size: 20px;
+line-height: 23px;
+color: #fff;
+> span {
+color:orange ;
+}
+`

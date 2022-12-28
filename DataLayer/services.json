@@ -1,0 +1,182 @@
+{
+    "main_services": [
+      {
+        "id":1,
+        "title": "Software Development",
+        "icon":"codeSvg",
+        "description":"Dynamic custom software development to suit your unique needs",
+        "link":"services/software_development",
+        "type":"software_evelopment"
+       
+      },
+      {
+        "id":2,
+        "title": "Data Centers",
+        "icon":"ciscoSvg",
+        "description":"Accredited select partner for Cisco in Saudi Arabia",
+        "link":"services/data_centers",
+        "type":"data_centers"
+      },
+      
+      {
+        "id":3,
+        "title": "eGov Services",
+        "icon":"websiteSvg",
+        "description":"Professional website and portal development to represent your online identity",
+        "link":"services/egov_ervices",
+        "type":"eGov_services"
+      },
+      {
+        "id":4,
+        "title": "Cloud Solutions",
+        "icon":"cloudSvg",
+        "description":"New-age solutions for workforce management with ease.",
+        "link":"services/cloud_solutions",
+        "type":"cloud_solutions"
+      },
+      {
+        "id":3,
+        "title": "eGov Services",
+        "icon":"websiteSvg",
+        "description":"Professional website and portal development to represent your online identity",
+        "link":"services/egov_ervices",
+        "type":"eGov_services"
+      },  {
+        "id":3,
+        "title": "eGov Services",
+        "icon":"websiteSvg",
+        "description":"Professional website and portal development to represent your online identity",
+        "link":"services/egov_ervices",
+        "type":"eGov_services"
+      }
+    ],
+    "sub_services":  [{
+        "id":1,
+        "title": "Custom Software",
+        "icon":"softwaresolutionSvg",
+        "description":"Dynamic custom software development to suit your unique",
+        "link":"/software_development",
+        "image":"https://mobirise.com/extensions/softwarem4/software-app/assets/images/features1.jpg",
+        "type":"software_evelopment"
+      },
+      
+      {
+        "id":2,
+        "title": "Website Development",
+        "icon":"websiteSvg",
+        "description":"Professional website and portal development to represent your online",
+        "link":"/mobile",
+        "image":"https://zadip.com/images/egov/website.jpg",
+        "type":"software_evelopment"
+      },
+      {
+        "id":3,
+        "title": "Mobile Applications",
+        "icon":"mobileAppsvg",
+        "description":"Bring your corporate to the world of smartphones",
+        "link":"/mobile",
+        "image":"https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "type":"software_evelopment"
+      },
+      {
+        "id":4,
+        "title": "Cisco SLA",
+        "icon":"ciscoSvg",
+        "description":"Accredited select partner for Cisco in Saudi Arabia",
+        "link":"/data_centers",
+        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_1632961779.img.jpg/1667897153934.jpg",
+        "type":"data_centers"
+      },
+      
+      {
+        "id":5,
+        "title": "Network Infrastructure",
+        "icon":"networkingSvg",
+        "description":"Building efficient infrastrucutres to help your organization expand and grow",
+        "link":"/mobile",
+        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_63734854.img.jpg/1668135786981.jpg",
+        "type":"data_centers"
+      },
+      {
+        "id":6,
+        "title": "Servers & Storage",
+        "icon":"serverSvg",
+        "description":"Specialized data center processing and storage products",
+        "link":"/mobile",
+        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_1638890213.img.jpg/1668136074723.jpg",
+        "type":"data_centers"
+      },
+      {
+        "id":7,
+        "title": "Muqeem",
+        "icon":"softwaresolutionSvg",
+        "description":"New-age solutions for workforce management with ease.",
+        "link":"/muqeem",
+        "image":"https://zadip.com/images/egov/muqeembanner.jpg",
+        "type":"eGov_services"
+      },
+      {
+        "id":8,
+        "title": "Tamm",
+        "icon":"softwaresolutionSvg",
+        "description":"Complete management of your vehicle fleet in your hands.",
+        "link":"/tam",
+        "image":"https://zadip.com/images/egov/tammbanner.jpg",
+        "type":"eGov_services"
+
+      },
+      
+      {
+        "id":9,
+        "title": "Masarat",
+        "icon":"softwaresolutionSvg",
+        "description":"Manage your fleet with ease",
+        "link":"/masarat",
+        "image":"https://www.elm.sa/en/e-services/ElmCloud/PublishingImages/Pages/Masarat/shutterstock_659615179.jpg",
+        "type":"eGov_services"
+      
+      },
+      {
+        "id":10,
+        "title": "Ektefa",
+        "icon":"softwaresolutionSvg",
+        "description":"Human Resource Management",
+        "link":"/ektefa",
+        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_1632961779.img.jpg/1667897153934.jpg",
+        "type":"cloud_solutions"
+      
+      },
+      {
+        "id":11,
+        "title": "Muaref QR",
+        "icon":"softwaresolutionSvg",
+        "description":"Goodbye Biometric Devices!",
+        "link":"/muaref",
+        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_1632961779.img.jpg/1667897153934.jpg",
+        "type":"cloud_solutions"
+      
+      },
+      {
+        "id":12,
+        "title": "Cadre",
+        "icon":"softwaresolutionSvg",
+        "description":"Recruitment portal with unique opportunities directly from employers.",
+        "link":"/cadre",
+        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_1632961779.img.jpg/1667897153934.jpg",
+        "type":"cloud_solutions"
+      
+      },
+      {
+        "id":13,
+        "title": "Nafeth",
+        "icon":"softwaresolutionSvg",
+        "description":"Specialized data center processing",
+        "link":"/nafeth",
+        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_1632961779.img.jpg/1667897153934.jpg",
+        "type":"cloud_solutions"
+      
+      }
+       
+        
+    ]
+  }
