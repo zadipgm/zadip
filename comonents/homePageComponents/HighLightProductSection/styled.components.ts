@@ -22,6 +22,7 @@ export const HighLightProductWrapper = styled.div`
     @media (max-width: 600px) {
      display:block ;
      width:100% ;
+     padding:0px 0px 40px 0px ;
  }
     margin:  0 auto;
     padding: 40px 0px;
@@ -59,6 +60,10 @@ line-height: 24px;
 max-width:520px;
 letter-spacing: 0.6px;
 padding: 0px 15px;
+@media (max-width: 600px) {
+    width: 100%;
+     padding:0px 
+ }
 font-size:18px ;
 
 `
@@ -71,6 +76,12 @@ display: flex;
 export const VedioWrapper =  styled.div`
 margin:20px 0px ;
 width:100% ;
+@media (max-width: 600px) {
+     display:block ;
+     width:90% ;
+     margin:0 auto ;
+    
+ }
 > iframe{
     height:500px ;
     border-radius:20px ;

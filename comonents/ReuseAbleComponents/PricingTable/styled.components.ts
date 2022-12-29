@@ -4,6 +4,7 @@ export const Conditions = styled.p`
 
 `
 export const Wrapper= styled.div`
+    padding: 15px;
 & .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiTableContainer-root {
     /* background-color: #E7EBF0; */
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;

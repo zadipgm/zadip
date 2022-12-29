@@ -20,6 +20,10 @@ margin:25px 0px ;
 > a{
 text-decoration:none ;
 width: 29%;
+@media (max-width: 600px) {
+   width:100% ;
+
+}
 margin: 12px;
 }
 `
@@ -40,6 +44,10 @@ export const ListWrapper = styled.div`
     position: relative;
 gap:12px;
 width: 300px;
+@media (max-width: 600px) {
+   width:100% ;
+
+}
 height: 300px;
 border-radius: 1rem;
 background: #f2f3f7;

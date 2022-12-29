@@ -7,6 +7,14 @@ export const Link = styled.a`
   text-decoration:none;
   padding: 0px 8px;
 ` 
+export const HeaderLogo = styled.img`
+ @media (max-width: 600px) {
+ display:flex ;
+ justify-content:center ;
+ align-items:center ;
+ width:200px ;
+}
+`
 export const IconsWrapper = styled.div`
 & .mouse{
 
@@ -25,6 +33,13 @@ fill:#fff ;
   bottom:20px ;
   left:50.4% ;
   right:50.4%;
+  @media (max-width: 600px) {
+    left: 51.6%;
+    right: 50.6%;
+}
+
+
+
   width:25px ;
   height:25px ;
 fill:#fff ;

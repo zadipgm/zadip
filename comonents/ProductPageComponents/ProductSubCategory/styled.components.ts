@@ -36,6 +36,11 @@ display: flex;
 justify-content:flex-end ;
 align-items:center ;
 margin: 100px 0px 0px 0px;
+@media (max-width:600px){
+    margin: 70px 15px 0px 15px;
+
+}
+
 `
 // export const LoadMoreButton = styled.button<{color:string}>`
 // padding: 15px 30px ;

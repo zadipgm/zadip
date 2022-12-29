@@ -47,6 +47,7 @@ margin: 0;
 `
 export const FooterContanerThree= styled.div`
     background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    padding: 12px;
 `
 export const FooterContanerThreeCol = styled.div`
 width: 33%;

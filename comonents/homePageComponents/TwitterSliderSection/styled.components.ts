@@ -1,12 +1,11 @@
 import styled from "styled-components"
 
 export const TwitterSliderContainer =  styled.div`
- /* box-shadow: 0 0 35px rgb(0 0 0 / 10%);
-background-color: #1a3345;
-background-image: url("https://zadip.com/images/twitter.png");
-background-position: 50% 50%;
-background-repeat: no-repeat; */
+
 margin:50px ;
+@media (max-width: 600px) {
+    margin:0 ;
+ }
 .slick-slider{
 box-shadow: 0 0 35px rgb(0 0 0 / 10%);
 
@@ -21,44 +20,6 @@ box-shadow: 0 0 35px rgb(0 0 0 / 10%);
            
            }
 }
-.slick-dots{
-    /* width: 40px;
-    height:40px ;
-    display:flex !important;
-    justify-content:center ;
-    align-items:center ;
-    position:unset !important ;
-    bottom: 0px !important;
-    margin: 0 auto !important; */
-}
-.slick-dots li button{
-    /* content: "" !important;
-    background-color: #99d2e3;
-    width:20px ;
-    height: 8px;
-    padding: 2px;
-    border-radius: 10px; */
-}
-.slick-dots li.slick-active button:before{
-    /* background-color:#0D4A76  !important ;
-    opacity: .75;
-    height: 8px;
-    width:20px ;
-    border-radius: 10px; */
-}
-.slick-dots li button:before {
-    /* font-size: unset;
-    line-height: unset; */
-  }
-  .slick-arrow{
-
-&.slick-prev{
-    display:none !important ;
-}
-&.slick-next{
-    display:none !important ;
-}
-  }
 `
 export const TwitterIconWrapper =  styled.div`
 display:flex;

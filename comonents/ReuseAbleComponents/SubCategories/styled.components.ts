@@ -61,6 +61,10 @@ margin:30px 0px ;
 > a{
 text-decoration:none ;
 width: 29%;
+@media (max-width: 600px) {
+   width:100% ;
+
+}
 margin: 12px;
 }
 
@@ -87,11 +91,19 @@ color: #737c85;
 export const CardListWrapper= styled.div`
 display:flex ;
 flex-wrap:wrap ;
+
 &.MuiPaper-root.MuiButtonBase-root.MuiCardContent-root{
     width:300px ;
+    @media (max-width: 600px) {
+   width:100% ;
+}
 }
 >a{
     text-decoration:none ;
+    @media (max-width: 600px) {
+   width:100% ;
+
+}
 }
 `
 export const OverLay =  styled.div`
@@ -141,6 +153,9 @@ width: 12%;
     svg{
         fill: #fff;
     }
+ 
+
+
 `
 export const  SearchWrapper= styled.div`
 display: flex;
@@ -148,6 +163,10 @@ display: flex;
     align-items: center;
         max-width: 700px; 
 margin: 0 auto;
+@media (max-width: 600px) {
+        margin: 12px;
+
+}
    
 `
 export const  Input= styled.input`

@@ -24,6 +24,13 @@ padding: 15px;
 margin:0 auto;
 `
 export const ImageWrapper = styled.div`
+  @media (max-width: 600px) {
+     display:block ;
+     width:100% ;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+ }
         padding: 15px;
     width: 50%;
     height: 442px;
@@ -34,10 +41,24 @@ export const ImageWrapper = styled.div`
     border-radius:5% ;
     
 `
-export const VisionImage = styled.img``
+export const VisionImage = styled.img`
+text-align:center ;
+display: flex;
+justify-content:center ;
+align-items:center ;
+  @media (max-width: 600px) {
+     display:block ;
+     width:100% ;
+ }
+`
 export const Description = styled.div`
 padding: 20px;
 width:50% ;
+@media (max-width: 600px) {
+     display:block ;
+     width:100% ;
+     padding:0px ;
+ }
 `  
 export const Title = styled.h3`font-size: 35px;
 line-height: 45px;

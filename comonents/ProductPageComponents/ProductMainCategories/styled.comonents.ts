@@ -4,6 +4,10 @@ import styled from "styled-components"
 export const ProductCategoriesContainer = styled.div`
 transition:.5s ;
 margin:70px 0px ;
+@media (max-width: 600px) {
+    margin:60px 0px ;
+
+}
 `
 export const ProductCategoriesHeader = styled.div`
 background-image:url("https://cdn.pixabay.com/photo/2016/04/06/08/50/gears-1311171__340.jpg") ;
@@ -40,6 +44,9 @@ export const ProductCardsItems = styled.ul`
     > a{
 text-decoration:none ;
 width: 22%;
+@media (max-width: 600px) {
+ width: 100%;
+}
     margin: 12px;
     }
     `

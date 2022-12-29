@@ -5,6 +5,9 @@ display: flex;
 justify-content:center ;
 align-items:center ;
 margin:20px 0px  ;
+@media (max-width: 600px) {
+  display: block;
+}
 `
 export const AdvantageWrapper= styled.div`
 display: flex;

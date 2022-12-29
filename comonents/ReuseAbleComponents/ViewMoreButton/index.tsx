@@ -9,7 +9,6 @@ interface IProps {
 const ViewMore: React.FC<IProps> = ({ color }) => {
   const { t } = useTranslation();
   const theme = useTheme();
-  console.log("here is theme", theme);
   return (
     <LearnMore color={color}>
       <a href="#">

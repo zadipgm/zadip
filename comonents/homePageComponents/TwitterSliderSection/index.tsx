@@ -84,6 +84,7 @@ const TwitterSliderSection = () => {
           slidesToScroll: 1,
           nextIcon: false,
           prevIcon: false,
+          arrows: false,
         },
       },
       {
@@ -93,6 +94,7 @@ const TwitterSliderSection = () => {
           slidesToScroll: 1,
           nextIcon: false,
           prevIcon: false,
+          arrows: false,
         },
       },
     ],

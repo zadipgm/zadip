@@ -14,12 +14,21 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin:30px 0px ;
+@media (max-width: 600px) {
+  display:block ;
+
+      }
 `
 export const AboutusDescription = styled.div`
 padding: 15px;
 color:#737c85; ;
 `
-export const AboutusImage = styled.img``
+export const AboutusImage = styled.img`
+ @media (max-width: 600px) {
+  width:100% ;
+
+      }
+`
 export const AboutusImageWrapper =styled.div`  
 padding: 15px;
 `
@@ -28,6 +37,10 @@ display:flex ;
 justify-content:space-between ;
 align-items: center;
 margin-top:100px ;
+@media (max-width: 600px) {
+  display:block ;
+
+      }
 `
 export const AboutHeading = styled.h2`
 color: #737c85;
@@ -57,6 +70,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin:30px 0px ;
+@media (max-width: 600px) {
+  display:block ;
+
+      }
 
 `
 
@@ -76,6 +93,12 @@ display:flex ;
 justify-content:center ;
 align-items:center ;
 margin: 30px 0px;
+@media (max-width: 600px) {
+  display:block ;
+
+      }
+
+
 
 `
 export const TeamCradsWrapper =styled.div`
@@ -144,6 +167,10 @@ flex-wrap:wrap ;
 justify-content:center ;
 align-items:center ;
 margin:30px 0px  ;
+@media (max-width: 600px) {
+  display:block ;
+
+      }
 `
 export const ClientWrapper= styled.div`
 text-align: center;
@@ -153,6 +180,12 @@ border: 1px solid #dee2e6;
     box-shadow: 0px 3px 24px rgb(0 0 0 / 20%);
 margin: 15px;
 padding: 15px;
+@media (max-width: 600px) {   
+> img{
+    width:300px ;
+    height: 200px;
+}
+}
 border-radius: 20px;
 cursor: pointer;
 -webkit-transition: .5s;

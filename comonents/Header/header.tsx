@@ -18,6 +18,7 @@ import {
   BannerImage,
   ScrollTopButton,
   IconsWrapper,
+  HeaderLogo,
 } from "./header.styled.components";
 import i18n from "../../i18n";
 import LocaleContext from "../../LocaleContext";
@@ -116,7 +117,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                 sx={{ flexGrow: 1, display: { sm: "block" } }}
               >
                 <Link href={"/"}>
-                  <img
+                  <HeaderLogo
                     src="https://www.zadip.com/en/images/logo-full.png"
                     width={"auto"}
                     height={"auto"}

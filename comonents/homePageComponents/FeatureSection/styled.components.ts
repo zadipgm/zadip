@@ -6,17 +6,21 @@ display:flex ;
 justify-content:center ;
 align-items:center ;
 width:1170px ;
+margin:0 auto ;
 @media (max-width: 600px) {
    width:100% ;
    display:block ;
   }
  
-margin: 0 auto ;
 `
 export const  FeatureSectionWrapper = styled.div`
 
 @media (max-width: 600px) {
    display:block ;
+   width:92% ;
+   padding:15px ;
+   margin: 30px 15px;
+  
   }
   position: relative;
     padding: 1rem;

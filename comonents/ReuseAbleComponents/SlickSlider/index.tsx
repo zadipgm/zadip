@@ -76,15 +76,17 @@ const SliderSlick: React.FC<IProps> = ({
           slidesToScroll: 2,
           nextIcon: false,
           prevIcon: false,
+          arrows: false,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           nextIcon: false,
           prevIcon: false,
+          arrows: false,
         },
       },
     ],

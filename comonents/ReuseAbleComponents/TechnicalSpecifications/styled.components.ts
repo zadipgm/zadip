@@ -1,43 +1,15 @@
  import styled from "styled-components";
 export const SpecsContainerBGImage = styled.div`
 background-repeat: repeat;
-    background-attachment: fixed;
-    padding: 100px 6px;
-
-
+background-attachment: fixed;
+padding: 100px 6px;
 `
-// export const Wrapper = styled.div``
-// export const TableContainer = styled.div``
+
  export const Title = styled.h1`
     color: #0196e3;
     font-size:18px ;
  `
-// export const Table = styled.table`
-// border-collapse: collapse;
-// width:100% ;
-// display:flex ;
-//  justify-content:center ;
-//   align-items:center ;
-// `
-// export const TableBody = styled.tbody``
-// export const StyledTableRow = styled.tr`
-//  color: #737c85;
-// :nth-child(odd) {
-//     background-color:#34495e ;
-//     color:#fff ;
-// }
-// `
-// export const StyledTableHead = styled.th`
-//     width: 20%;
-//     padding: 20px;
-//   font-size: 16px;
-//   font-weight:500 ;
 
-// `
-// export const StyledTableData = styled.td`
-//    font-size: 16px;
-//   font-weight:500 ;
-// `
 export const TechmicalSpecsMainPage = styled.div`
 `
 export const SpecsContainer = styled.div`
@@ -56,6 +28,10 @@ overflow: visible;
     transition: .5s ease-in;
     margin: 1rem;
     width: 40%;
+    @media (max-width: 600px) {
+       width:100% ;
+
+}
         background-color: rgba(13,74,118,0.04);
         box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
         &.services-detail{
@@ -121,6 +97,10 @@ export const TitleWrapper = styled.div`
 display:flex ;
 justify-content:space-between ;
 align-items:center ;
+@media (max-width: 600px) {
+       display:block ;
+
+}
 `
 export const SpecsMainSection = styled.div`
 

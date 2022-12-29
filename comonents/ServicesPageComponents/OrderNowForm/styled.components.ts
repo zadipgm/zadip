@@ -4,10 +4,17 @@ export const OrderNowFormContainer = styled.div`
 display:flex ;
 justify-content:space-between ;
 /* align-items: ; */
+  @media (max-width: 600px) {
+  display: block;
+  }
 `
 
 export const Wrapper = styled.div`
     width: 60%;
+      @media (max-width: 600px) {
+  width:100% ;
+  margin:0px ;
+      }
     background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
     border-radius: 10px;
     padding: 20px;
@@ -16,6 +23,10 @@ export const Wrapper = styled.div`
 export const Input= styled.input`
     padding: 12px;
     width: 95%;
+      @media (max-width: 600px) {
+  width:100% ;
+
+      }
     border-radius: 7px;
     margin:12px 0px ;
     outline: none;
@@ -33,6 +44,10 @@ export const Input= styled.input`
 export const Textarea =styled.textarea`
     padding: 12px;
     width: 95%;
+    @media (max-width: 600px) {
+  width:100% ;
+
+      }
     border-radius: 7px;
     outline: none;
     margin: 12px 0px;  
@@ -100,7 +115,7 @@ export const Button= styled.button<{color:string}>`
     margin: 12px;
 `
 export const Span = styled.span`
-font-size:24px ;
+font-size:23px ;
 color:#fff ;
 text-align:center ;
 padding:20px ;
