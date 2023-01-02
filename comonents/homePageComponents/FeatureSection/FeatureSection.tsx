@@ -18,7 +18,7 @@ const FeatureSection = () => {
       <AnimationBar
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
-        title={t("featureProduct")}
+        title={t("featureProduct") as string}
         description={t("featureDescription")}
       />
       <FeatureSectionContainer>
