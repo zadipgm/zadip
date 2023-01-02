@@ -39,9 +39,11 @@ const AnimationBar: React.FC<IProps> = ({
     <AnimationBarContainer>
       <Icon fill={color ?? ""} width={"100px"} height={"100px"} />
       <Title color={headingColor}>{title}</Title>
-      <DesCription color={descriptionColor} fontWeight={fontWeight ?? ""}>
-        {description}
-      </DesCription>
+      <DesCription
+        color={descriptionColor}
+        fontWeight={fontWeight ?? ""}
+        dangerouslySetInnerHTML={{ __html: description }}
+      ></DesCription>
       <SectionBar></SectionBar>
     </AnimationBarContainer>
   );
