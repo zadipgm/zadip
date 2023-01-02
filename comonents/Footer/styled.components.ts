@@ -11,22 +11,7 @@ display:block ;
         }
 margin: 0 auto;
 `
-export const FooterContanerThreeLink = styled.a`
-text-align: center;
-text-decoration: none;
-color: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-padding:6px 0px  ;
-> svg {
-    width: 3em;
-height: 1.4em;
-}
-:hover {
-    color: #6fc5e8;
-}
-`
+
 export const FooterContanerThreeRow = styled.div`
 display: flex;
 justify-content: center;
@@ -46,7 +31,7 @@ margin: 0;
 
 `
 export const FooterContanerThree= styled.div`
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    background: #006791;
     padding: 12px;
 `
 export const FooterContanerThreeCol = styled.div`
@@ -82,6 +67,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding:6px 0px  ;
+transition:.5s ;
 > svg {
     width:20px ;
         height:20px ;
@@ -89,6 +75,8 @@ padding:6px 0px  ;
 }
 :hover {
     color: #6fc5e8;
+transition:.5s ;
+
 }
 }
 

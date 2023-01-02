@@ -9,11 +9,15 @@ width:70% ;
 export const MuarefSectionContainer =styled.div`
 display:flex ;
 justify-content:center ;
+align-items: center;
 `
 export const Description =styled.div`
 color:#737c85 ;
 font-size:18px ;
 margin: 20px 0px;
+width:50% ;
+text-align:justify ;
+word-break:break-all ;
 >a{
     text-decoration:none ;
     color: #6fc5e8;
@@ -26,31 +30,43 @@ transition:.5s ;
 
 `
 export const   MuarefCompatibleWrapper = styled.div`
-width:30% ;
+width:100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        margin: 40px 0px;
 `
 export const   MuarefBGImage = styled.div`
 background-image: url("https://zadip.com/images/components/promo-primary.png");
 background-color: #34495e;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    width:100% ;
-    height:464px ;
+    width:80% ;
     padding: 20px;
     text-align: center;
+   
     &.play-store{
         height:200px ;
     }
 `
-
+export const DownloadAppWrapper =styled.div``
+export const Compatible =styled.div`
+width:50% ;
+`
 export const   Text = styled.p`
-    color: #fed37f;
+    color: #2193b0;
     font-size:24px;
+margin: 0;
+    
+    
+
 `
 export const   Image = styled.img``
 export const   MuarefDescription = styled.p`   
  font-size: 18px;
-line-height: 28px;
-
+line-height: 22px;
+margin: 0 auto;
+    width: 280px;
 color:#fff ;
 `
 export const Link = styled.a`
@@ -86,7 +102,7 @@ export const Wrapper = styled.div`
 display:flex ;
 justify-content:center ;
 align-items:center ;
-gap:15px;
+gap:52px;
 `
 export const ImageWrapper = styled.div`
     display: flex;
@@ -95,6 +111,10 @@ export const ImageWrapper = styled.div`
     background-color: rgba(13,74,118,0.04);
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
     padding: 15px;
+    
+    width: 313px;
+    height: 200px;
+
 `
 
   export const TechImage = styled.img``

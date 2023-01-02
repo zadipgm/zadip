@@ -25,13 +25,19 @@ interface IProps {
   title: string;
   condition: string;
   data: IPriceProps[];
+  classname: string;
 }
 
-const PricingTable: React.FC<IProps> = ({ title, condition, data }) => {
+const PricingTable: React.FC<IProps> = ({
+  title,
+  condition,
+  data,
+  classname,
+}) => {
   return (
-    <Wrapper>
-      <TableHeading>{title}</TableHeading>
+    <Wrapper className={classname}>
       <TableContainer component={Paper}>
+        <TableHeading>{title}</TableHeading>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableBody>
             {data.map((row) => (

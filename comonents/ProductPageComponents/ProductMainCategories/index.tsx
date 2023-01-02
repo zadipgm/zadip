@@ -3,7 +3,6 @@ import {
   ProductCategoriesContainer,
   ProductCategoriesHeader,
   Title,
-  LoadMoreButton,
 } from "./styled.comonents";
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
@@ -19,11 +18,6 @@ const ProductCategories = () => {
       Products
     </Typography>,
   ];
-  const imagePerRow = 6;
-  const [next, setNext] = React.useState(imagePerRow);
-  const handleMoreImage = () => {
-    setNext(next + imagePerRow);
-  };
   return (
     <>
       <ProductCategoriesContainer>
@@ -31,15 +25,7 @@ const ProductCategories = () => {
           <Title>Products</Title>
           <Breadcrumb color="#fff" breadcrumbs={breadcrumbs} />
         </ProductCategoriesHeader>
-        <CardComponent cardData={productData.main_products.slice(0, next)} />
-        {next < productData.all.length ||
-        next < productData.surveillance.length ||
-        next < productData.access_control.length ||
-        next < productData.building_management.length ? (
-          <LoadMoreButton onClick={handleMoreImage}>Load More</LoadMoreButton>
-        ) : (
-          ""
-        )}
+        <CardComponent cardData={productData.main_products} />
       </ProductCategoriesContainer>
     </>
   );

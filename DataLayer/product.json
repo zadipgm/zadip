@@ -1,305 +1,559 @@
 {
-  "main_products": [
+"main_products": [
+{
+  "id":1,
+  "title": "Surveillance",
+  "icon":"survillenceSvg",
+  "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+  "link":"products/DS-2CD2142FWD-IS",
+  "type":"surveillance"
+},
+{
+  "id":2,
+  "title": "NVRs & DVRs",
+  "icon":"videoRecorderSvg",
+  "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+  "link":"products/DS-2CD2142FWD-IS",
+  "type":"nvr_dvr"
+},
+
+{
+  "id":3,
+  "title": "Access Control",
+  "icon":"fingerprintSvg",
+  "description":"Thumbprint Based Access Control Device",
+  "link":"products/access_control",
+  "type":"access_control"
+},
+{
+  "id":4,
+  "title": "Building Management",
+  "icon":"centralclockSvg",
+  "description":"Control your organization with centralized timekeeping solutions",
+  "link":"products/clocks",
+  "type":"building_management"
+}
+
+  
+],
+  
+  "all": [
     {
       "id":1,
       "title": "DS-2CD2142FWD-IS",
-      "icon":"survillenceSvg",
+      "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
       "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-      "link":"products/DS-2CD2142FWD-IS",
-      "type":"surveillance"
+      "type":"surveillance",
+      "specs":true,
+      "link":"/DS-2CD2142FWD-IS",
+      "main_image":"https://demo.htmlcodex.com/1798/cctv-website-template/img/carousel-2.jpg",
+      "icon":"survillenceSvg",
+      "main_title":"Surveillance"
+     
     },
-    
     {
       "id":2,
-      "title": "F09",
-      "icon":"fingerprintSvg",
-      "description":"Thumbprint Based Access Control Device",
-      "link":"products/f09",
-      "type":"access_control"
+      "title": "DS-2CD2942F",
+      "image":"https://zadip.com/images/products/cameras/ds-2cd2942f.jpg",
+      "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+      "type":"surveillance",
+      "specs":true,
+      "link":"/DS-2CD2942F"
+     
     },
     {
       "id":3,
-      "title": "Central Clocks",
-      "icon":"centralclockSvg",
-      "description":"Control your organization with centralized timekeeping solutions",
-      "link":"products/clocks",
-      "type":"building_management"
+      "title": "DS-2CD2T42WD",
+      "image":"https://zadip.com/images/products/cameras/DS-2CD2T42WD.jpg",
+      "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+      "type":"surveillance",
+      "specs":true,
+      "link":"/DS-2CD2T42WD"
+      
     },
     {
       "id":4,
-      "title": "DS-2CD2142FWD-IS",
-      "icon":"survillenceSvg",
-      "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-      "link":"products/DS-2CD2142FWD-IS",
-      "type":"surveillance"
-    },
-    
-    {
-      "id":5,
-      "title": "F09",
-      "icon":"fingerprintSvg",
-      "description":"Thumbprint Based Access Control Device",
-      "link":"products/f09",
-      "type":"access_control"
-    },
-    {
-      "id":6,
-      "title": "Central Clocks",
-      "icon":"centralclockSvg",
-      "description":"Control your organization with centralized timekeeping solutions",
-      "link":"products/clocks",
-      "type":"building_management"
-    }
-     
-      
-  ],
-      "surveillance": [
+        "title": "DS-2CE16C0T-IR",
+        "image":"https://zadip.com/images/products/cameras/DS-2CE16C0T-IR.jpg",
+        "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+        "type":"surveillance",
+        "specs":true,
+        "link":"/DS-2CE16C0T-IR"
+        
+      },
         {
-          "id":1,
-          "title": "DS-2CD2142FWD-IS",
-          "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-          "download":"pdf"
-        },
-        {
-          "id":2,
-            "title": "DS-2CD2142FWD-IS",
-            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+          "id":6,
+            "title": "DS-2CE16D0T-IR(P)",
+            "image":"https://zadip.com/images/products/cameras/DS-2CE16D0T-IR(P).jpg",
             "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-            "download":"pdf"
-          },
-          {
-            "id":3,
-            "title": "DS-2CD2142FWD-IS",
-            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
-          },
-          {
-            "id":4,
-            "title": "DS-2CD2142FWD-IS",
-            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-            "download":"pdf"
-          },
-          {
-            "id":5,
-            "title": "DS-2CD2142FWD-IS",
-            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
-          },
-          {
-            "id":6,
-            "title": "DS-2CD2142FWD-IS",
-            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
+            "type":"surveillance",
+            "specs":true,
+            "link":"/DS-2CE16D0T-IR(P)"
+           
+
           },
           {
             "id":7,
-            "title": "DS-2CD2142FWD-IS",
-            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
-          },
-          {
-            "id":8,
-            "title": "DS-2CD2142FWD-IS",
-            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output"
-          }
-      ],
-      "access_control": [
-        
-        {
-          "id":1,
-            "title": "F09",
-            "image":"https://zadip.com/images/egov/f09banner.jpg",
-            "description":"Thumbprint Based Access Control Device"
-          },
-          {
-            "id":2,
-            "title": "F09",
-            "image":"https://zadip.com/images/egov/F09.jpg",
-            "description":"Thumbprint Based Access Control Device"
-          },
-          {
-            "id":3,
-            "title": "F09",
-            "image":"https://zadip.com/images/egov/F09.jpg",
-            "description":"Thumbprint Based Access Control Device"
-          },
-          {
-            "id":4,
-            "title": "F09",
-            "image":"https://zadip.com/images/egov/F09.jpg",
-            "description":"Thumbprint Based Access Control Device"
-          }
-
-         
-      ],
-      "all": [
-        {
-          "id":1,
-          "title": "DS-2CD2142FWD-IS",
-          "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-          "type":"surveillance",
-          "specs":true,
-          "link":"/DS-2CD2142FWD-IS"
-        },
-        {
-          "id":2,
-          "title": "DS-2CD2142FWD-IS",
-          "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-          "type":"surveillance",
-          "link":"/DS-2CD2142FWD-IS"
-        },
-        {
-          "id":3,
-          "title": "DS-2CD2142FWD-IS",
-          "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-          "type":"surveillance",
-          "specs":true,
-          "link":"/DS-2CD2142FWD-IS"
-        },
-        {
-          "id":4,
-            "title": "DS-2CD2142FWD-IS",
-            "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-            "type":"surveillance",
-            "link":"/DS-2CD2142FWD-IS"
-          },
-          {
-            "id":5,
-              "title": "DS-2CD2142FWD-IS",
-              "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
-              "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-              "type":"surveillance",
-              "link":"/DS-2CD2142FWD-IS"
-            },
-            {
-              "id":6,
-                "title": "F06",
-                "image":"https://zadip.com/images/egov/F09.jpg",
-                "description":"Thumbprint Based Access Control Device",
-                "type":"access_control",
-                "link":"/f09"
-              },
-              {
-                "id":7,
-                "title": "F07",
-                "image":"https://zadip.com/images/egov/F09.jpg",
-                "description":"Thumbprint Based Access Control Device",
-                "type":"access_control",
-                "link":"/f09"
-              },
-            {
-              "id":8,
-              "title": "F08",
-              "image":"https://zadip.com/images/egov/F09.jpg",
-              "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
-              "type":"access_control",
-              "link":"/f09"
-            },
-            {
-              "id":9,
-              "title": "DS-2CD2142FWD-IS",
-              "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+              "title": "DS-2CE16D0T-IT3",
+              "image":"https://zadip.com/images/products/cameras/DS-2CE16D0T-IT3.jpg",
               "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
               "type":"surveillance",
               "specs":true,
-              "link":"/DS-2CD2142FWD-IS"
+              "link":"/DS-2CE16D0T-IT3"
+              
             },
             {
-              "id":10,
-                "title": "F09",
-                "image":"https://zadip.com/images/egov/F09.jpg",
-                "description":"Thumbprint Based Access Control Device",
-                "type":"access_control",
-                "link":"/f09"
+              "id":8,
+                "title": "DS-2CE16D7T-IT3Z",
+                "image":"https://zadip.com/images/products/cameras/DS-2CE16D7T-IT3Z.jpg",
+                "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+                "type":"surveillance",
+                "specs":true,
+                "link":"/DS-2CE16D7T-IT3Z"
+               
               },
               {
-                "id":11,
-                "title": "Central Clocks",
-                "image":"https://zadip.com/images/egov/clock.jpg",
-                "description":"Control your organization with centralized timekeeping solutions",
-                "type":"building_management",
-                "link":"/central_clock"
-              },
-           
-            {
-              "id":12,
-              "title": "DS-2CD2142FWD-IS",
-              "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
+                "id":9,
+                  "title": "DS-2CE16F7T-IT3Z",
+                  "image":"https://zadip.com/images/products/cameras/DS-2CE16F7T-IT3Z.jpg",
+                  "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+                  "type":"surveillance",
+                  "specs":true,
+                  "link":"/DS-2CE16F7T-IT3Z"
+                 
+                },
+                {
+                  "id":10,
+                    "title": "DS-2CE56C0T-IRP",
+                    "image":"https://zadip.com/images/products/cameras/DS-2CE56C0T-IRP.jpg",
+                    "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+                    "type":"surveillance",
+                    "specs":true,
+                    "link":"/DS-2CE56C0T-IRP"
+                    
+                  },
+                  {
+                    "id":11,
+                      "title": "DS-2CE56D1T-(A)VFIR",
+                      "image":"https://zadip.com/images/products/cameras/DS-2CE56D1T-(A)VFIR.jpg",
+                      "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+                      "type":"surveillance",
+                      "specs":true,
+                      "link":"/DS-2CE56D1T-(A)VFIR"
+                     
+                    },
+                    {
+                      "id":12,
+                        "title": "DS-2CE56D1T-VPIR",
+                        "image":"https://zadip.com/images/products/cameras/DS-2CE56D1T-VPIR.jpg",
+                        "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+                        "type":"surveillance",
+                        "specs":true,
+                        "link":"/DS-2CE56D1T-VPIR"
+                        
+                      },
+                      {
+                        "id":13,
+                          "title": "DS-2CE56D7T",
+                          "image":"https://zadip.com/images/products/cameras/DS-2CE56D7T.jpg",
+                          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+                          "type":"surveillance",
+                          "specs":true,
+                          "link":"/DS-2CE56D7T"
+                          
+                        },
+
+                        {
+                          "id":14,
+                            "title": "DS-2DE5120I5220I-AE",
+                            "image":"https://zadip.com/images/products/cameras/DS-2DE5120I5220I-AE.jpg",
+                            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+                            "type":"surveillance",
+                            "specs":true,
+                            "link":"/DS-2DE5120I5220I-AE"
+                            
+                          },
+                          {
+        "id":15,
+          "title": "DS-2CE56C2T-VFIR3",
+          "image":"https://zadip.com/images/products/cameras/DS-2CE56C2T-VFIR3.jpg",
+          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+          "type":"surveillance",
+          "specs":true,
+          "link":"/DS-2CE56C2T-VFIR3"
+          
+        },
+        {
+          "id":16,
+            "title": "DS-2CE56D0T-IRP",
+            "image":"https://zadip.com/images/products/cameras/DS-2CE56D0T-IRP.jpg",
+            "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+            "type":"surveillance",
+            "specs":true,
+            "link":"/DS-2CE56D0T-IRP"
+            
+          },
+          
+          {
+            "id":17,
+              "title": "DS-2CE16C2T-VFIR3",
+              "image":"https://zadip.com/images/products/cameras/DS-2CE16C2T-VFIR3.jpg",
               "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
               "type":"surveillance",
-              "link":"/DS-2CD2142FWD-IS"
+              "specs":true,
+              "link":"/DS-2CE16C2T-VFIR3"
+              
             },
+        {
+          "id":18,
+          "title": "DS-7200HGHI-E2",
+          "image":"https://zadip.com/images/products/recorders/DS-7200HGHI-E2.jpg",
+          "description":"Control your organization with centralized timekeeping solutions",
+          "type":"nvr_dvr",
+          "specs":true,
+          "link":"/nvr_dvr",
+          "main_image":"https://widevisionuae.com/img/banner_dvr.jpg",
+          "main_title":"NVRs & DVRs",
+          "icon":"videoRecorderSvg"
+          
+        },
+        {
+          "id":19,
+          "title": "DS-7200HQHI",
+          "image":"https://zadip.com/images/products/recorders/DS-7200HQHI.jpg",
+          "description":"Control your organization with centralized timekeeping solutions",
+          "type":"nvr_dvr",
+          "specs":true,
+          "link":"/nvr_dvr"
+         
+        },
+        {
+          "id":20,
+          "title": "DS-7200HUHI",
+          "image":"https://zadip.com/images/products/recorders/DS-7200HUHI.jpg",
+          "description":"Control your organization with centralized timekeeping solutions",
+          "type":"nvr_dvr",
+          "specs":true,
+          "link":"/nvr_dvr"
+          
+          
+        },
+        {
+          "id":21,
+          "title": "DS-7200HGHI-E2",
+          "image":"https://zadip.com/images/products/recorders/DS-7200HQHI-F1.jpg",
+          "description":"Control your organization with centralized timekeeping solutions",
+          "type":"nvr_dvr",
+          "specs":true,
+          "link":"/nvr_dvr"
+          
+         
+        },
+        {"id":21,
+          "title": "DS-7600NI-E",
+          "image":"https://zadip.com/images/products/recorders/DS-7600NI-E.jpg",
+          "description":"Control your organization with centralized timekeeping solutions",
+          "type":"nvr_dvr",
+          "specs":true,
+          "link":"/nvr_dvr"
+          
         
-          {
-            "id":13,
+        },
+
+        {
+          "id":22,
             "title": "F09",
             "image":"https://zadip.com/images/egov/F09.jpg",
             "description":"Thumbprint Based Access Control Device",
             "type":"access_control",
-            "link":"/f09"
+            "link":"/f09",
+            "main_image":"https://img.freepik.com/free-photo/biometric-technology-background-with-fingerprint-scanning-system-virtual-screen-digital-remix_53876-104937.jpg?w=1380&t=st=1672577494~exp=1672578094~hmac=15d98f420e2909c590f555576bc3c56abe9a32572afb2660fd5ff0d0a7d8dac6",
+            "icon":"fingerprintSvg",
+            "main_title":"Access Control",
+            "detail_description":"The access control system, F09, is a professional access control product made by Granding Technology, combined with numerous features such as fingerprint recognition algorithm, optical sensors, embedded design technology, and software development kit. F09 gets maximum security and maximum value to the customers, it is one of the latest and most popular devices developed by Granding.",
+            "technical_specs":[
+              {
+                "id":1,
+                "name":"",
+                "icon":"",
+                "description":"Composite algorithm system with high speed operating"
+              },
+              {
+                "id":2,
+                "name":"",
+                "icon":"",
+                "description":"Embedded LINUX system, easy to integrate into various system"
+              },
+              {
+                "id":3,
+                "name":"",
+                "icon":"",
+                "description":"Standalone or network environment"
+              },
+              {
+                "id":4,
+                "name":"",
+                "icon":"",
+                "description":"Professional access control system support real-time entrance logs transferring"
+              },
+              {
+                "id":5,
+                "name":"",
+                "icon":"",
+                "description":"Web server application for online solution"
+              },
+              {
+                "id":6,
+                "name":"",
+                "icon":"",
+                "description":"24 hours continuous operation available"
+              },
+              {
+                "id":7,
+                "name":"",
+                "icon":"",
+                "description":"Wired doorbell connection supported"
+              }
+            ]
+            
           },
-         
           {
-            "id":14,
-            "title": "Central Clocks",
-            "image":"https://zadip.com/images/egov/clock.jpg",
-            "description":"Control your organization with centralized timekeeping solutions",
-            "type":"building_management",
-            "link":"/central_clock"
+            "id":23,
+            "title": "Multibio700",
+            "image":"https://www.pngitem.com/pimgs/m/637-6378206_zkteco-multibio-700-hd-png-download.png",
+            "description":"Thumbprint Based Access Control Device",
+            "type":"access_control",
+            "link":"/multibio700",
+            "detail_description":"MultiBio 700 is a new generation multiple biometric identification product. Integrating with Face, Fingerprint and PIN recognition and optional with RFID mode. It performs up to 20 verification methods all in a single device conveniently.",
+            "technical_specs":[
+              {
+                "id":1,
+                "name":"Display/Speaker",
+                "icon":"",
+                "description":"LCD Display: 3″ TFT Touch screen Speaker: Voice Prompt (language can be selected)"
+              },
+              {
+                "id":2,
+                "name":"Language",
+                "icon":"",
+                "description":"Multi Language, English, French, Spanish, Arabic, Speaker: Voice Prompt (language can be selected) etc., for more than 40 languages can be selected"
+              },
+              {
+                "id":3,
+                "name":"Technical Specifications Capacity",
+                "icon":"",
+                "description":"Face capacity: 3,000(1:1); 1500(1:N) Fingerprint capacity: 5,000; Log capacity: 100,000"
+              },
+              {
+                "id":4,
+                "name":"Environment",
+                "icon":"",
+                "description":"Operation temperature: 0℃ ~ 45℃ Operation humidity: 20% ~ 80%"
+              },
+              {
+                "id":5,
+                "name":"Verification/Identification",
+                "icon":"",
+                "description":"Verification speed(1:1): ≤1s Identification speed(1:N): ≤1s"
+              },
+              {
+                "id":6,
+                "name":"Power Supply",
+                "icon":"",
+                "description":"Power: 110/220VAC ~ 12VDC (PS-3A is optional item)"
+              },
+              {
+                "id":7,
+                "name":"Machine Size",
+                "icon":"",
+                "description":"210(L)*95(W)*40(H)mm"
+              },
+              {
+                "id":8,
+                "name":"Communication",
+                "icon":"",
+                "description":"TCP/IP, RS232/485, USB Host, Wiegand in, Wiegand out"
+              },
+              {
+                "id":9,
+                "name":"Attendance status",
+                "icon":"",
+                "description":"Check in, Check out, Break in, Break out, OT in, OT out"
+              },
+              {
+                "id":10,
+                "name":"Standand Function",
+                "icon":"",
+                "description":"High definition infrared camera; 2 user-defines function keys; Built-in relay, professional asccess control, door sensor; Dismantlement alarm, break-in alarm, duress alarm; Multi-verification mode selectable (20 modes); Scheduled bell, Workcode, SMS, T9 input, DST, Self inquiry, Photo-ID, Webserver"
+              },
+              {
+                "id":11,
+                "name":"Customize Function",
+                "icon":"",
+                "description":"Printer output, ID reader, MIFARE reader"
+              }
+            ]
           },
-          {
-            "id":15,
-            "title": "Central Clocks",
-            "image":"https://zadip.com/images/egov/clock.jpg",
-            "description":"Control your organization with centralized timekeeping solutions",
-            "type":"building_management",
-            "link":"/central_clock"
-          },
-          {
-            "id":16,
-            "title": "Central Clocks",
-            "image":"https://zadip.com/images/egov/clock.jpg",
-            "description":"Control your organization with centralized timekeeping solutions",
-            "type":"building_management",
-            "link":"/central_clock"
-          }
-
-         
-      ],
-      "building_management": [
         {
-          "id":1,
-            "title": "Central Clocks",
-            "image":"https://zadip.com/images/egov/clockbanner.jpg",
-            "description":"Control your organization with centralized timekeeping solutions"
-          },
+          "id":24,
+          "title": "SC103",
+          "image":"https://zadip.com/images/egov/sc103.jpg",
+          "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+          "type":"access_control",
+          "link":"/sc103",
+          "detail_description":"SC103 is made with elegant design and professional surface treatment. The device have lock control, alarm, exit button, door sensor. The wiegand-in interface is used to connect external reader to construct master and slave system. Also the device can be used to connect with a control panel as a reader by wiegand-out interface. The operation can be done on the device through LCD display, also can be done on PC software and upload to the device through TCP/IP, RS232/485 communication. The USB-host is used for data download and upload, including user template and record etc.",
+            "technical_specs":[
+              {
+                "id":1,
+                "name":"Display/Speaker",
+                "icon":"",
+                "description":"LCD Display: 4 lines Character white LCD 128*64 Speaker: Voice Prompt (language can be selected)"
+              },
+              {
+                "id":2,
+                "name":"Language",
+                "icon":"",
+                "description":"Multi Language, English, French, Spanish, Arabic, Speaker: Voice Prompt (language can be selected) etc., for more than 40 languages can be selected"
+              },
+              {
+                "id":3,
+                "name":"Technical Specifications Capacity",
+                "icon":"",
+                "description":"Card capacity: 30,000 Log capacity: 50,000"
+              },
+              {
+                "id":4,
+                "name":"Environment",
+                "icon":"",
+                "description":"Operation temperature: 0℃ ~ 45℃ Operation humidity: 20% ~ 80%"
+              },
+              {
+                "id":5,
+                "name":"Verification/Identification",
+                "icon":"",
+                "description":"Identification speed(1:N): ≤20ms"
+              },
+              {
+                "id":6,
+                "name":"Power Supply",
+                "icon":"",
+                "description":"Power: 110/220VAC ~ 12VDC (PS-3A is optional item)"
+              },
+              {
+                "id":7,
+                "name":"Machine Size",
+                "icon":"",
+                "description":"210(L)*95(W)*40(H)mm"
+              },
+              {
+                "id":8,
+                "name":"Communication",
+                "icon":"",
+                "description":"TCP/IP, RS232/485, USB Host, Wiegand In/out"
+              },
+              {
+                "id":9,
+                "name":"Attendance status",
+                "icon":"",
+                "description":"Check in, Check out"
+              },
+              {
+                "id":10,
+                "name":"Standand Function",
+                "icon":"",
+                "description":"Professional access control, built-in relay, 50 time zones, 5 groups and 10 combinations; Dismantlement alarm, break-in alarm, duress alarm; door sensor; Support wired door bell connection; 9-PIN ID, Auto status, Workcode, SMS"
+              },
+              {
+                "id":11,
+                "name":"Customize Function",
+                "icon":"",
+                "description":"Webserver, Anti-pass back, MIFARE reader"
+              },
+              {
+                "id":12,
+                "name":"Access Mode",
+                "icon":"",
+                "description":"Card only, PIN only, Card+PIN"
+              }
+            ]
+        },
           {
-            "id":2,
+            "id":25,
             "title": "Central Clocks",
             "image":"https://zadip.com/images/egov/clock.jpg",
-            "description":"Control your organization with centralized timekeeping solutions"
+            "description":"Control your organization with centralized timekeeping solutions",
+            "type":"building_management",
+            "link":"/central_clock",
+            "main_image":"https://centragama.com/wp-content/uploads/2018/06/Building-Management-Training-1.jpg",
+            "icon":"centralclockSvg",
+            "main_title":"Building Management",
+            "detail_description":"Timekeeping is one of the most contingent requirements of a large facility. In the modern era, central timekeepers are important installations in environments such as government offices, universities, warehouses and even large transport stations as they determine the unification of schedules throughout multiple departments and facilities.",
+            "technical_specs":[
+              {
+                "id":1,
+                "name":"",
+                "icon":"",
+                "description":"Wireless connectivity for centralized timekeeping."
+              },
+              {
+                "id":2,
+                "name":"",
+                "icon":"",
+                "description":"Easy maintenance and follow-up."
+              },
+              {
+                "id":3,
+                "name":"",
+                "icon":"",
+                "description":"High quality in manufacturing using materials with a long life span."
+              },
+              {
+                "id":4,
+                "name":"",
+                "icon":"",
+                "description":"Power options consist of direct electric current and battery use."
+              },
+              {
+                "id":5,
+                "name":"",
+                "icon":"",
+                "description":"Time unification links all clocks synchronized to tell the same time."
+              },
+              {
+                "id":6,
+                "name":"",
+                "icon":"",
+                "description":"Set lecture and meeting times."
+              },
+              {
+                "id":7,
+                "name":"",
+                "icon":"",
+                "description":"Schedule operations for health sector facilities."
+              },
+              {
+                "id":8,
+                "name":"",
+                "icon":"",
+                "description":"The possibility of connecting to the world time via GPS satellite system"
+              }
+            ]
           },
-          {
-            "id":3,
-            "title": "Central Clocks",
-            "image":"https://zadip.com/images/egov/clock.jpg",
-            "description":"Control your organization with centralized timekeeping solutions"
-          },
-          {
-            "id":4,
-            "title": "Central Clocks",
-            "image":"https://zadip.com/images/egov/clock.jpg",
-            "description":"Control your organization with centralized timekeeping solutions"
-          }
-          
-      ]
-
-  }
+      
+      {
+        "id":26,
+        "title": "Smart Building Systems",
+        "image":"https://zadip.com/images/egov/building.jpg",
+        "description":"Control your organization with centralized timekeeping solutions",
+        "type":"building_management",
+        "link":"/smart_building_systems",
+        "detail_description":"We see the world around us in constant change and developments happening around the clock and very quickly. Hardly a day goes by without hearing about the launch of a revolutionary new device or technology. And those who work in construction are looking to provide modern buildings with a sophisticated technical nature that meets the needs of the client. Hence, the collection of all these techniques within a unified device managed by all professionally, economy and control.",
+        "technical_specs":[]
+      }
+      
+      
+      
+  ]
   
+
+}

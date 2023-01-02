@@ -7,7 +7,7 @@ import {
   DesCription,
 } from "./styled.components";
 interface IProps {
-  title: string;
+  title: string | undefined;
   description: string;
   icon?: string;
   color?: string;

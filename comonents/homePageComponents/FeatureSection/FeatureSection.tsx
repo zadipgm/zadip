@@ -10,6 +10,7 @@ import {
 import { useTranslation } from "react-i18next";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import ViewMore from "../../ReuseAbleComponents/ViewMoreButton";
+import Link from "next/link";
 const FeatureSection = () => {
   const { t } = useTranslation();
   return (
@@ -31,8 +32,9 @@ const FeatureSection = () => {
           <FeatureTitleLink href="https://ektefa.net">
             {t("featureTitleEktefa")}
           </FeatureTitleLink>
-          <FeatureDescription>{t("featurecardDescription")}</FeatureDescription>
-          <ViewMore color={"#34495e"} />
+          <FeatureDescription
+            dangerouslySetInnerHTML={{ __html: t("featurecardDescription") }}
+          ></FeatureDescription>
         </FeatureSectionWrapper>
 
         <FeatureSectionWrapper>
@@ -45,8 +47,9 @@ const FeatureSection = () => {
           <FeatureTitleLink href="https://nafeth.com">
             {t("featureTitleNafeth")}
           </FeatureTitleLink>
-          <FeatureDescription>{t("featurecardDescription")}</FeatureDescription>
-          <ViewMore color={"#34495e"} />
+          <FeatureDescription
+            dangerouslySetInnerHTML={{ __html: t("featurecardDescription") }}
+          ></FeatureDescription>
         </FeatureSectionWrapper>
 
         <FeatureSectionWrapper>
@@ -56,11 +59,12 @@ const FeatureSection = () => {
               alt="Feature"
             />
           </FeatureIcon>
-          <FeatureTitleLink href="https://Feature.net">
+          <FeatureTitleLink href="/services/tam/eGov_services">
             {t("featureTitleTam")}
           </FeatureTitleLink>
-          <FeatureDescription>{t("featurecardDescription")}</FeatureDescription>
-          <ViewMore color={"#34495e"} />
+          <FeatureDescription
+            dangerouslySetInnerHTML={{ __html: t("featurecardDescription") }}
+          ></FeatureDescription>
         </FeatureSectionWrapper>
       </FeatureSectionContainer>
     </FeatureSectionParent>

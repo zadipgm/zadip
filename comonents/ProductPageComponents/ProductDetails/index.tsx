@@ -1,19 +1,29 @@
+import { useRouter } from "next/router";
 import * as React from "react";
-import TechnicalSpecsTable from "../../ReuseAbleComponents/TechnicalSpecifications";
-import FaqSection from "../../ReuseAbleComponents/FaqSection";
-import _data from "../../../DataLayer/technicalSpecsTable.json";
+import _data from "../../../DataLayer/product.json";
 
-import RelatedProducts from "../RelatedProducts";
+import DetailsComponent from "../../ReuseAbleComponents/DetailsComponent";
+
 const ProductDetails = () => {
+  const router = useRouter();
+  let type = router.query.sub_category;
+  const filterProducts = _data.all.filter((item) =>
+    item.link.includes(type as string)
+  );
+  const filterRelatedProducts = _data.all.filter(
+    (item) => item.type === router.query.detail
+  );
+
   return (
     <>
-      <TechnicalSpecsTable
-        data={_data.technical_specs}
-        title={"Technical Specifications"}
+      <DetailsComponent
+        title={filterProducts[0]?.title}
         page={"products"}
+        image={filterProducts[0]?.image}
+        description={filterProducts[0]?.detail_description}
+        filterRelatedData={filterRelatedProducts}
+        technical_specs={filterProducts[0]?.technical_specs}
       />
-      <FaqSection />
-      <RelatedProducts />
     </>
   );
 };

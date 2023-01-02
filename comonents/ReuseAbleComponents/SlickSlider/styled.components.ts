@@ -69,6 +69,13 @@ border-radius: 100%;
 export const SliderWrapper = styled.div`
 &.recent-news{
     display:flex !important ;
+    @media (max-width: 600px) {
+         display:block !important ;
+         width:100% ;
+         :hover{
+        background: transparent;
+         }
+        }
  justify-content:center ;
  margin: 40px 20px;
      background: #fff;

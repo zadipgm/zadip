@@ -22,15 +22,53 @@ import {
   HRGateImage,
 } from "./styled.components";
 import _data from "../../../DataLayer/technicalSpecsTable.json";
+import {
+  GoBackButton,
+  PageBreadCrumbWrapper,
+} from "../../ReuseAbleComponents/DetailsComponent/styled.components";
+import Breadcrumb from "../../ReuseAbleComponents/Breadcrumb";
+import LocaleContext from "../../../LocaleContext";
+import Links from "@mui/material/Link";
+import { useRouter } from "next/router";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import HighLightProductSection from "../../homePageComponents/HighLightProductSection";
+import VedioComponent from "../../ReuseAbleComponents/Vedio";
 
 const MuarefDetails = () => {
+  const { locale } = React.useContext(LocaleContext);
+  const router = useRouter();
+  const breadcrumbs = [
+    <Links underline="hover" key="1" color="inherit" href="/">
+      Home
+    </Links>,
+    <Links
+      underline="hover"
+      key="2"
+      color="inherit"
+      href={`/${locale}/${"services"}`}
+    >
+      {"services"}
+    </Links>,
+    <Links
+      underline="hover"
+      key="2"
+      color="inherit"
+      href={`/${locale}/${"services"}/${router?.query?.sub_category}?type=${
+        router.query.detail
+      }`}
+    >
+      {router.query.sub_category}
+    </Links>,
+  ];
   return (
     <Container>
-      <TechnicalSpecsTable
-        data={_data.muaref_features}
-        title={"Features"}
-        page={"muaref"}
-      />
+      <PageBreadCrumbWrapper>
+        <GoBackButton onClick={() => router.back()}>
+          <KeyboardBackspaceIcon />
+          Go Back
+        </GoBackButton>
+        <Breadcrumb color="#0196e3" breadcrumbs={breadcrumbs} />
+      </PageBreadCrumbWrapper>
       <AnimationBar
         title={"Muaref QR"}
         description={"Goodbye Biometric Devices!"}
@@ -38,58 +76,52 @@ const MuarefDetails = () => {
         descriptionColor={"#737c85"}
       />
       <MuarefSectionContainer>
-        <MuarefVedioWrapper>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/OmhpMuieTWM?rel=0&amp;controls=0&amp;showinfo=0"
-            frameBorder="0"
-            allowFullScreen={true}
-          ></iframe>
-        </MuarefVedioWrapper>
-        <MuarefCompatibleWrapper>
-          <MuarefBGImage>
-            <Text>100% COMPATIBLE WITH</Text>
-            <Image
-              src="https://www.zadip.com/en/images/products/muaref/ektefa.png"
-              alt="ektef"
-              width={178}
-              height={58}
-            />
-            <MuarefDescription>
-              {" "}
-              Muaref if completely compatible with Ektefa - the premium Human
-              Resources Management System.{" "}
-            </MuarefDescription>
-            <Link href="https://ektefa.net">Learn About Ektefa</Link>
-          </MuarefBGImage>
-        </MuarefCompatibleWrapper>
+        <VedioComponent />
+        <Description>
+          Keep your workspace safe for yourself and others. Muaref is our QR
+          based attendance system that seamlessly links with Ektefa and all our
+          cloud solutions to provide safe and contactless attendance technology.
+          <br></br>
+          Using <strong>Muaref</strong> with your{" "}
+          <a href="https://ektefa.net">Ektefa</a> Ektefa mobile application to
+          mark attendance, you don't even need to select Check-In or Check-Out,
+          the system will do it for you. Your attendance is updared and
+          reflected in front of you within seconds.
+        </Description>{" "}
       </MuarefSectionContainer>
-      <Description>
-        Keep your workspace safe for yourself and others. Muaref is our QR based
-        attendance system that seamlessly links with Ektefa and all our cloud
-        solutions to provide safe and contactless attendance technology.
-        <br></br>
-        Using <strong>Muaref</strong> with your{" "}
-        <a href="https://ektefa.net">Ektefa</a> Ektefa mobile application to
-        mark attendance, you don't even need to select Check-In or Check-Out,
-        the system will do it for you. Your attendance is updared and reflected
-        in front of you within seconds.
-      </Description>
-      <ValuedWrapper>
+      <MuarefCompatibleWrapper>
+        <MuarefBGImage>
+          <Text>100% COMPATIBLE WITH</Text>
+          <Image
+            src="https://www.zadip.com/en/images/products/muaref/ektefa.png"
+            alt="ektef"
+            width={178}
+            height={58}
+          />
+          <MuarefDescription>
+            Muaref if completely compatible with Ektefa - the premium Human
+            Resources Management System.{" "}
+          </MuarefDescription>
+        </MuarefBGImage>
         <MuarefCompatibleWrapper>
-          <MuarefBGImage className="play-store">
-            <Text>DownLoad The Application</Text>
+          <Link href="https://play.google.com/store/apps/details?id=com.zadip.muaref">
             <Image
               src="https://zadip.com/images/playstore.png"
               alt="ektef"
               width={200}
               height={77}
             />
-          </MuarefBGImage>
+          </Link>
         </MuarefCompatibleWrapper>
+      </MuarefCompatibleWrapper>
+      <ValuedWrapper>
         <ValuedDistributors>
-          <Heading>Valued Distributors</Heading>
+          <AnimationBar
+            title={"Valued Distributors"}
+            description={""}
+            headingColor={"#2193b0"}
+            descriptionColor={"#737c85"}
+          />
           <Wrapper>
             <ImageWrapper>
               <TechImage
@@ -114,6 +146,11 @@ const MuarefDetails = () => {
           </Wrapper>
         </ValuedDistributors>
       </ValuedWrapper>
+      <TechnicalSpecsTable
+        data={_data.muaref_features}
+        title={"Features"}
+        page={"muaref"}
+      />
     </Container>
   );
 };

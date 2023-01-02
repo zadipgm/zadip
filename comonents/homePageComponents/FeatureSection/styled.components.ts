@@ -14,7 +14,9 @@ margin:0 auto ;
  
 `
 export const  FeatureSectionWrapper = styled.div`
-
+>a{
+    text-decoration:none ;
+}
 @media (max-width: 600px) {
    display:block ;
    width:92% ;
@@ -26,7 +28,6 @@ export const  FeatureSectionWrapper = styled.div`
     padding: 1rem;
     border-radius: 1rem;
     background: #f2f3f7;
-    height: 460px;
     width:33% ;
     margin:1rem ;
     display: flex;
@@ -73,11 +74,17 @@ export const FeatureTitleLink = styled.a`
     color: #34495e;
 `
 export const FeatureDescription = styled.p`
-
+text-align:justify;
     line-height: 26px;
     color: #737c85;
     transition:.5s ;
     margin:0 ;
-
+> a {
+    text-decoration:none ;
+    color: #020202;
+    :hover {
+        text-decoration: underline;
+    }
+}
 
 `

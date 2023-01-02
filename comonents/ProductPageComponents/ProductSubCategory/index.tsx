@@ -31,19 +31,20 @@ const ProductSubCategory = () => {
       {router.query.sub_category}
     </Typography>,
   ];
+  const query = router?.query?.type;
   const filteredProducts = productData.all.filter(
-    (item) => item.type === router.query.type
+    (item) => item.type === query
   );
-
+  const main_category = filteredProducts[0];
   return (
-    <ProductSubCategoryContainer>
+    <ProductSubCategoryContainer bgimage={main_category?.main_image}>
       <ProductSubCategoryWrapper>
         <ProductBreadcrumbWrapper>
           <Breadcrumb color={"#fff"} breadcrumbs={breadcrumbs} />
         </ProductBreadcrumbWrapper>
         <AnimationBar
-          title="survillence"
-          icon={"survillenceSvg"}
+          title={main_category?.main_title}
+          icon={main_category?.icon}
           color={"#fff"}
           description="We have successfully tied partnerships with global leaders in technology, advertising and building frameworks harnessing best practices to enhance the dependability of our solutions and offerings."
           headingColor={"#fff"}

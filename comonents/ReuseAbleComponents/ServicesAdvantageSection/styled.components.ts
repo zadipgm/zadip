@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AdvantageContainer =  styled.div`
 display: flex;
+width:100% ;
 justify-content:center ;
 align-items:center ;
 margin:20px 0px  ;

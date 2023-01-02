@@ -70,12 +70,20 @@ transition: .5s;
 
 & .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular{
 width:1170px ;
+&.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit.MuiIconButton-edgeStart.MuiIconButton-sizeMedium {
+  &.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium{
 
+  
+  > svg {
+    fill:#fff
+  }
+}
+}
 @media (max-width: 600px) {
 width: 100%;
 }
 margin:0 auto ;
-padding:0 ;
+padding:5px 0px ;
 
 & .MuiButtonBase-root {
     svg {
@@ -90,9 +98,8 @@ padding:0 ;
 }
 
 &.scrolled {
-  background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+  background:#006791;
   transition: .6s;
- 
       }
 }
 

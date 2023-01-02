@@ -20,6 +20,7 @@ import {
   RetweetContainer,
   RetweetWrapper,
 } from "./styled.components";
+import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 const TwitterSliderSection = () => {
   const postData = [
     {
@@ -64,7 +65,7 @@ const TwitterSliderSection = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     cssEase: "linear",
     nextIcon: false,
@@ -101,6 +102,12 @@ const TwitterSliderSection = () => {
   };
   return (
     <TwitterSliderContainer>
+      <AnimationBar
+        title={"Zadip news Feed"}
+        description={""}
+        headingColor={"#2193b0"}
+        descriptionColor={""}
+      />
       <Slider {...settings}>
         {postData.map((item) => {
           return (

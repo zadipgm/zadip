@@ -1,12 +1,14 @@
 import styled from "styled-components"
 
-export const ProductSubCategoryContainer =  styled.div`
+export const ProductSubCategoryContainer =  styled.div<{bgimage?:string}>`
 background-attachment: fixed !important;
 width:100% ;
 height:100% ;
 padding: 36px 0px;
 margin-bottom: -60px;
-background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), url("https://demo.htmlcodex.com/1798/cctv-website-template/img/carousel-2.jpg") repeat;
+background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), url(${({bgimage})=>bgimage}) no-repeat;
+background-position: center center;
+    background-size: cover;
 `
 export const ProductSubCategoryWrapper  = styled.div`
 @media (min-width:1200px){

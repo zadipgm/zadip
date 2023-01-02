@@ -87,7 +87,7 @@ transition: .5s;
 
  }
 :hover{
-  background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+  background: #167ac6;
 transition:.5s;
 }
 `

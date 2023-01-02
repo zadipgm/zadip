@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ComprehensiveContainer = styled.div`
 background-attachment: fixed;
-background-image:url("https://www.vision2030.gov.sa/media/re3bnupp/hero-bg.png") ;
+background-image:url("https://zadip.com/images/ntpbg.jpg") ;
 padding:50px 0px ;
 `
 
@@ -11,6 +11,10 @@ position:relative;
 display: flex;
 justify-content: center;
 align-items: center;
+background: #189990;
+    opacity: .8;
+    border-radius: 15px;
+    padding: 15px;
 @media (max-width: 600px) {
 display: block;
 width: 100%;
@@ -20,8 +24,14 @@ padding: 15px;
 
 width: 1170px;
 padding: 15px;
+}margin: 20px 40px auto auto;
+&.zadip{
+  background: #000000;
+    opacity: .6;
+    border-radius: 15px;
+    margin: 20px auto auto 40px;
+
 }
-margin:0 auto;
 `
 export const ImageWrapper = styled.div`
   @media (max-width: 600px) {

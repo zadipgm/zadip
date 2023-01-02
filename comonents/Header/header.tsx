@@ -94,9 +94,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
     <>
       <HeaderWrapper
         headerBgColor={
-          router.pathname === "/"
-            ? "rgba(13, 74, 118, 0.15)"
-            : "linear-gradient(-30deg,#0576bc 67%,#38b7ae)"
+          router.pathname === "/" ? "rgba(13, 74, 118, 0.15)" : "#006791"
         }
       >
         <Box sx={{ display: "flex" }}>

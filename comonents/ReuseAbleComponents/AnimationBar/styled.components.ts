@@ -5,7 +5,8 @@ export const Title = styled.h2<{color:string}>`
     font-size:${({})} ;
     text-align: center;
     color: ${({color})=>color};
-    text-transform:capitalize ;
+    text-transform:uppercase ;
+
 `
 export const AnimationBarContainer= styled.div`
     text-align: center;

@@ -13,9 +13,9 @@ import {
 import { RelatedWrapper, RelatedTitle } from "./styled.components";
 interface ICategory {
   id?: number;
-  title: string;
+  title?: string;
   icon?: string;
-  description: string;
+  description?: string;
   link?: string;
   type?: string;
   specs?: boolean;

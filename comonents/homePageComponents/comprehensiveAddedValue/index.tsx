@@ -14,7 +14,7 @@ import visiionIMage2030 from "../../../public/images/saudi-vision.jpg";
 const ComprehensiveAddedValue = () => {
   return (
     <ComprehensiveContainer>
-      <Wrapper>
+      <Wrapper className="zadip">
         <ImageWrapper>
           <Image src={visiionIMage2030} alt={"2030"} width={526} height={442} />
         </ImageWrapper>

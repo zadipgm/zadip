@@ -6,11 +6,14 @@
       "About Us":"About Us",
       "Career":"Career",
       "Ektefa":"Why Ektefa?",
-      "description":"Ektefa is a completely flexible and environement independent human resource management system. The objective behind the development of Ektefa as a complete enterprise level HRMS solution was to encourage a user-friendly, simple yet robust system which not only answers to the routine HR department issues but also provides intelligent analytics and new-age technological implementations.",
+      "description":"Ektefa is a completely flexible and environement independent human resource management system. The objective behind the development of Ektefa as a complete enterprise level HRMS solution was to encourage a user-friendly, simple yet robust system which not only answers to the routine HR department issues but also provides intelligent analytics and new-age technological implementations. <a href={https://ektefa.net/}>read more...</a>",
    "hrm":"Human Resource Management System",
 
    "featureProduct":" Our Feature Products",
-   "featureDescription":"We have successfully tied partnerships with global leaders in technology, advertising and building frameworks harnessing best practices to enhance the dependability of our solutions and offerings.",
-   "featurecardDescription":"Ektefa is the most effectively delivered cloud solution for human resource management. Every component of ektefa has been developed by a Saudi company with dedicated focus on Saudi businesses and challenges.",
-   "viewmore":"Read more"
+   "featureDescription":"We have successfully tied partnerships with global leaders in technology, advertising and building frameworks harnessing best practices to enhance the dependability of our solutions and offerings. <a href={https://ektefa.net/}>read more...</a>",
+   "featurecardDescription":"Ektefa is the most effectively delivered cloud solution for human resource management. Every component of ektefa has been developed by a Saudi company with dedicated focus on Saudi businesses and challenges. <a href={https://ektefa.net/}>read more...</a>",
+   "viewmore":"Read more",
+   "featureTitleEktefa":"Ektefa",
+   "featureTitleNafeth":"Nafeth",
+   "featureTitleTam":"Tam"
   }

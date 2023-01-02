@@ -117,7 +117,7 @@ height: 100%;
 width: 100%;
 opacity: 0;
 transition: .5s ease;
-background-color: #607DAC;
+background-color: #006791;
 :hover{
 opacity:0.99 ;
 transition: .5s ease;

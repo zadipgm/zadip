@@ -19,7 +19,7 @@ width: 100%;
 margin:25px 0px ;
 > a{
 text-decoration:none ;
-width: 29%;
+width: 22%;
 @media (max-width: 600px) {
    width:100% ;
 
@@ -43,7 +43,6 @@ text-align:center ;
 export const ListWrapper = styled.div`
     position: relative;
 gap:12px;
-width: 300px;
 @media (max-width: 600px) {
    width:100% ;
 

@@ -3,6 +3,7 @@ import AccurateSvg from "../../../public/icons/acurateSvg";
 import SecurehSvg from "../../../public/icons/secureSvg";
 import TransactionSvg from "../../../public/icons/transactionSvg";
 import DownLoadButton from "../DownLoadButton";
+import VedioComponent from "../Vedio";
 import {
   AdvantageWrapper,
   AdvantageContainer,
@@ -15,24 +16,27 @@ const ServicesAdvantageSection = () => {
   return (
     <AdvantageWrapper>
       <AdvantageContainer>
-        <Wrapper>
-          <TransactionSvg />
-          <Heading>Efficient</Heading>
-          <Description>
-            Raise the efficiency of transactions finalization.
-          </Description>
-        </Wrapper>
-        <Wrapper>
-          <SecurehSvg />
-          <Heading>Secure</Heading>
-          <Description>Offer quick and secure procedure.</Description>
-        </Wrapper>
-        <Wrapper>
-          <AccurateSvg />
-          <Heading>Accurate</Heading>
-          <Description>Acquire accurate information.</Description>
-        </Wrapper>
-        <VedioLinkWrapper>
+        <div>
+          <Wrapper>
+            <TransactionSvg />
+            <Heading>Efficient</Heading>
+            <Description>
+              Raise the efficiency of transactions finalization.
+            </Description>
+          </Wrapper>
+          <Wrapper>
+            <SecurehSvg />
+            <Heading>Secure</Heading>
+            <Description>Offer quick and secure procedure.</Description>
+          </Wrapper>
+          <Wrapper>
+            <AccurateSvg />
+            <Heading>Accurate</Heading>
+            <Description>Acquire accurate information.</Description>
+          </Wrapper>
+        </div>
+        <VedioComponent />
+        {/* <VedioLinkWrapper>
           {" "}
           <iframe
             width="100%"
@@ -41,7 +45,7 @@ const ServicesAdvantageSection = () => {
             frameBorder="0"
             allowFullScreen={true}
           ></iframe>
-        </VedioLinkWrapper>
+        </VedioLinkWrapper> */}
       </AdvantageContainer>
     </AdvantageWrapper>
   );

@@ -76,7 +76,11 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
           filteredCategorys.slice(0, next).map((item) => {
             return (
               <Link
-                href={`/${locale}/${page}/${item.link}/${item.type}`}
+                href={
+                  item.type === "surveillance" || item.type === "nvr_dvr"
+                    ? "#"
+                    : `/${locale}/${page}/${item.link}/${item.type}`
+                }
                 key={item.id}
               >
                 <CategoryCardsListItems>
@@ -92,9 +96,9 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
                   {item.specs && (
                     <OverLay>
                       <OverLayWrapper>
-                        <OverLayTitle>DS-2CD2142FWD-IS</OverLayTitle>
+                        <OverLayTitle>{item.title}</OverLayTitle>
                         <OverLaySubtitle>Hikvision</OverLaySubtitle>
-                        <DownLoadButton title={"DownLoad"} />
+                        <DownLoadButton title={"Download"} />
                       </OverLayWrapper>
                     </OverLay>
                   )}
@@ -107,7 +111,13 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
             filteredCategorys.slice(0, next).map((item) => {
               return (
                 <Link
-                  href={`/${locale}/${page}/${item.link}/${item.type}`}
+                  href={
+                    item.link === "/ektefa"
+                      ? "https://ektefa.net"
+                      : item.link === "/nafeth"
+                      ? "https://nafeth.com/"
+                      : `/${locale}/${page}/${item.link}/${item.type}`
+                  }
                   key={item.id}
                   onClick={() => console.log(item.type)}
                 >

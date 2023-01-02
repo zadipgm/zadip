@@ -11,21 +11,8 @@ import {
 import i18n from "i18next";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import LocaleContext from "../../../LocaleContext";
-import { Router, useRouter } from "next/router";
-// export default function SimpleSlider() {
-//   var settings = {
-//     slideToScroll: 1,
-//     slideToShow: 1,
-//     dots: true,
-//     autoPlay: true,
-//     infinite: true,
-//     arrows: true,
-//
-//
-//     adaptiveHeight: true,
-//     speed: 500,
-//   };
+import { useRouter } from "next/router";
+
 interface sliderDataProps {
   image: string;
   description: string;
@@ -59,6 +46,7 @@ const SliderSlick: React.FC<IProps> = ({
     slidesToScroll: 1,
     nextIcon: arrowForw,
     rows: rows,
+    arrows: false,
 
     prevIcon: arrowPrev,
     responsive: [
@@ -76,7 +64,6 @@ const SliderSlick: React.FC<IProps> = ({
           slidesToScroll: 2,
           nextIcon: false,
           prevIcon: false,
-          arrows: false,
         },
       },
       {
