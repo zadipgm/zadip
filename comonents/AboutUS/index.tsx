@@ -36,6 +36,10 @@ import LinkedInSvg from "../../public/icons/linkedinSvg";
 import FacebookSvg from "../../public/icons/facebookSvg";
 import clients from "../../DataLayer/client.json";
 import OrderNowForm from "../ServicesPageComponents/OrderNowForm";
+import OurPartnerSection from "../homePageComponents/OurPartnerSection";
+import SliderSlick from "../ReuseAbleComponents/SlickSlider";
+import partner from "../../DataLayer/client.json";
+
 const AboutUS = () => {
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
@@ -105,6 +109,14 @@ const AboutUS = () => {
           </Text>
         </OurHistory>
       </AboutComapny>
+      <SliderSlick
+        sliderData={partner.our_value}
+        rows={1}
+        sliderToShow={1}
+        classname={"our-value-slider"}
+        autoplay={true}
+        autoplaySpeed={2000}
+      />
       <OurTeam>
         <AnimationBar
           title={"Our Awesome Team"}
@@ -202,7 +214,15 @@ const AboutUS = () => {
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
       />
-      <OurClients>
+      <SliderSlick
+        sliderData={partner.our_clients}
+        rows={1}
+        sliderToShow={6}
+        classname={"partner-slider"}
+        autoplay={true}
+        autoplaySpeed={2000}
+      />
+      {/* <OurClients>
         {clients.our_clients.map((item) => {
           return (
             <ClientWrapper key={item.id}>
@@ -212,7 +232,7 @@ const AboutUS = () => {
             </ClientWrapper>
           );
         })}
-      </OurClients>
+      </OurClients> */}
     </AboutUsContainer>
   );
 };

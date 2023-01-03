@@ -105,6 +105,12 @@ export const SliderWrapper = styled.div`
             transform: translateY(-5px); 
     }
     }
+    &.our-value-slider{
+        > img{
+            width: 100%;
+    height: 100%;
+        }
+    }
 `
 export const Image= styled.img``
 export const Title = styled.h4`

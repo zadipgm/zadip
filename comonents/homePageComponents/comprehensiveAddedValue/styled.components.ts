@@ -4,6 +4,9 @@ export const ComprehensiveContainer = styled.div`
 background-attachment: fixed;
 background-image:url("https://zadip.com/images/ntpbg.jpg") ;
 padding:50px 0px ;
+background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 `
 
 export const Wrapper = styled.div`
@@ -24,12 +27,14 @@ padding: 15px;
 
 width: 1170px;
 padding: 15px;
-}margin: 20px 40px auto auto;
+}
+margin:0 auto ;
+
 &.zadip{
   background: #000000;
     opacity: .6;
     border-radius: 15px;
-    margin: 20px auto auto 40px;
+  margin:40px auto ;
 
 }
 `

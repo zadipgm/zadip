@@ -2,54 +2,139 @@
     "our_clients": [
       {  "id":1,
         "image":"https://zadip.com/images/clients/adel.jpg",
-        "title":"Ministry of Justice",
-        "sector":"Government"
+        "description":""
+        
       },
       {  "id":2,
         "image":"https://zadip.com/images/clients/americana.jpg",
-        "title":"Americana Foods",
-        "sector":"Distribution"
+        "description":""
+        
       },
       {  "id":3,
         "image":"https://zadip.com/images/clients/dawa.jpg",
-        "title":"DMSCO Group",
-        "sector":"Medical"
+        "description":""
+      
       },
       {  "id":4,
         "image":"https://zadip.com/images/clients/fanar.jpg",
-        "title":"Fanar Group",
-        "sector":"Private"
+        "description":""
+        
       },
       {  "id":5,
         "image":"https://zadip.com/images/clients/fayha.jpg",
-        "title":"Fayha Water",
-        "sector":"Private"
+        "description":""
+        
       },
       {  "id":6,
         "image":"https://zadip.com/images/clients/americana.jpg",
-        "title":"Americana Foods",
-        "sector":"Distribution"
+        "description":""
+        
       },
       {  "id":7,
         "image":"https://zadip.com/images/clients/dawa.jpg",
-        "title":"DMSCO Group",
-        "sector":"Medical"
+        "description":""
+        
       },
       {  "id":8,
         "image":"https://zadip.com/images/clients/fanar.jpg",
-        "title":"Fanar Group",
-        "sector":"Private"
+        "description":""
+        
       },
       {  "id":9,
         "image":"https://zadip.com/images/clients/fayha.jpg",
-        "title":"Fayha Water",
-        "sector":"Private"
+        "description":""
+        
       }
-     
+    ],
+  
+    
 
-      
+    
+    "partners" : [
+      {"id":1,
+        "image": "https://www.zadip.com/en//images/staff/commvault.jpg",
+        "description": ""
+      },
+      {"id":2,
+        "image": "https://www.zadip.com/en//images/staff/elmpartners.jpg",
+        "description": ""
+      },
+      {"id":3,
+        "image": "https://www.zadip.com/en//images/staff/himayatak.jpg",
+        "description": ""
+      },
+      {"id":4,
+        "image": "https://www.zadip.com/en//images/staff/zadlaunch.jpg",
+        "description": ""
+      },
+      {"id":5,
+        "image": "https://www.zadip.com/en//images/staff/ramadan.jpg",
+        "description": ""
+      },
+      {"id":6,
+        "image": "https://www.zadip.com/en//images/staff/ramadan.jpg",
+        "description": ""
+      },
+      {"id":7,
+        "image": "https://www.zadip.com/en//images/staff/ramadan.jpg",
+        "description": ""
+      },
+  
+      {"id":8,
+        "image": "https://www.zadip.com/en//images/staff/ramadan.jpg",
+        "description": ""
+      },
+      {"id":9,
+        "image": "https://www.zadip.com/en//images/partners/zk.jpg",
+        "description": ""
+      },
+      {"id":10,
+        "image": "https://www.zadip.com/en//images/staff/commvault.jpg",
+        "description": ""
+      },
+      {"id":11,
+        "image": "https://www.zadip.com/en//images/staff/commvault.jpg",
+        "description": ""
+      }
+    ] ,
+  
+    
+
+    
+    "our_value" : [
+      {"id":1,
+        "image": "https://zadip.com/images/values/1.jpg",
+        "description": ""
+      },
+      {"id":2,
+        "image": "https://zadip.com/images/values/4.jpg",
+        "description": ""
+      },
+      {"id":3,
+        "image": "https://zadip.com/images/values/5.jpg",
+        "description": ""
+      },
+      {"id":4,
+        "image": "https://zadip.com/images/values/6.jpg",
+        "description": ""
+      },
+      {"id":5,
+        "image": "https://zadip.com/images/values/8.jpg",
+        "description": ""
+      },
+      {"id":6,
+        "image": "https://zadip.com/images/values/9.jpg",
+        "description": ""
+      },
+      {"id":7,
+        "image": "https://zadip.com/images/values/10.jpg",
+        "description": ""
+      },
+  
+      {"id":8,
+        "image": "https://zadip.com/images/values/2.jpg",
+        "description": ""
+      }
       
     ]
-  
     }
-    

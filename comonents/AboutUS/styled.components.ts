@@ -21,7 +21,9 @@ margin:30px 0px ;
 `
 export const AboutusDescription = styled.div`
 padding: 15px;
-color:#737c85; ;
+color:#737c85; 
+    text-align: justify;
+    word-break: break-all;
 `
 export const AboutusImage = styled.img`
  @media (max-width: 600px) {

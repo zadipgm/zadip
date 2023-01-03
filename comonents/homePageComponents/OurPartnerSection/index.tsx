@@ -2,54 +2,8 @@ import * as React from "react";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import SliderSlick from "../../ReuseAbleComponents/SlickSlider";
 import { OurPartnerSectionContainer } from "./styled.components";
+import partner from "../../../DataLayer/client.json";
 const OurPartnerSection = () => {
-  const partners = [
-    {
-      image: "https://www.zadip.com/en//images/staff/commvault.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/staff/elmpartners.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/staff/himayatak.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/staff/zadlaunch.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/staff/ramadan.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/staff/ramadan.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/staff/ramadan.jpg",
-      description: "",
-    },
-
-    {
-      image: "https://www.zadip.com/en//images/staff/ramadan.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/partners/zk.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/staff/commvault.jpg",
-      description: "",
-    },
-    {
-      image: "https://www.zadip.com/en//images/staff/commvault.jpg",
-      description: "",
-    },
-  ];
   return (
     <OurPartnerSectionContainer>
       <AnimationBar
@@ -59,7 +13,7 @@ const OurPartnerSection = () => {
         descriptionColor={"#737c85;"}
       />
       <SliderSlick
-        sliderData={partners}
+        sliderData={partner.partners}
         rows={1}
         sliderToShow={6}
         classname={"partner-slider"}

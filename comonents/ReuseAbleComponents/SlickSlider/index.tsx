@@ -16,6 +16,7 @@ import { useRouter } from "next/router";
 interface sliderDataProps {
   image: string;
   description: string;
+  id: number;
 }
 interface IProps {
   sliderData?: sliderDataProps[];
@@ -83,7 +84,7 @@ const SliderSlick: React.FC<IProps> = ({
       <Slider {...settings}>
         {sliderData?.map((item, index) => {
           return (
-            <div key={index} onClick={() => router.push("/news-headlines")}>
+            <div key={item.id} onClick={() => router.push("/news-headlines")}>
               <SliderWrapper className={classname}>
                 <Image src={item.image} alt="" width={158} height={158} />
                 <Title>{item.description}</Title>
