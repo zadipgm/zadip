@@ -3,7 +3,6 @@ import type { ReactElement } from "react";
 import Layout from "../../../../comonents/Layouts/PageLayout";
 import ProductDetails from "../../../../comonents/ProductPageComponents/ProductDetails";
 import { NextPageWithLayout } from "../../../_app";
-import { TechnicalSpecsMainPage } from "../../styled.components";
 import detailsPageData from "../../../../DataLayer/product.json";
 
 const Page: NextPageWithLayout = () => {
@@ -13,9 +12,9 @@ const Page: NextPageWithLayout = () => {
     item.link.includes(query as string)
   );
   return (
-    <TechnicalSpecsMainPage>
+    <>
       <ProductDetails />
-    </TechnicalSpecsMainPage>
+    </>
   );
 };
 

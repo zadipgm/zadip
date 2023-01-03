@@ -11,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import {
   HeaderWrapper,
   LangButton,
@@ -20,7 +20,7 @@ import {
   IconsWrapper,
   HeaderLogo,
 } from "./header.styled.components";
-// import i18n from "../../i18n";
+import i18n from "../../i18n";
 import LocaleContext from "../../LocaleContext";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Link from "next/link";
@@ -33,13 +33,13 @@ interface IProps {
   headerImage?: string;
 }
 const Header: React.FC<IProps> = ({ headerImage }) => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   const { locale, setLocale } = React.useContext(LocaleContext);
   const [show, setShow] = React.useState(0);
   const changeLocale = (lang: string) => {
-    // if (locale !== lang) {
-    //   i18n.changeLanguage(lang);
-    // }
+    if (locale !== lang) {
+      i18n.changeLanguage(lang);
+    }
     if (locale === "en-US") {
       router.push(`${router.asPath}`, `${router.asPath}`, { locale: "en-US" });
       setLocale("en-US");
@@ -68,7 +68,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
           <ListItem key={item.name} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <Link href={item.link}>
-                <ListItemText primary={item.name} />
+                <ListItemText primary={t(item.name)} />
               </Link>
             </ListItemButton>
           </ListItem>
@@ -127,7 +127,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                   <Button key={item.name} sx={{ color: "#fff" }}>
                     <Link href={item.link} className="nav-items">
                       {" "}
-                      {item.name}
+                      {t(item.name)}
                     </Link>
                   </Button>
                 ))}
