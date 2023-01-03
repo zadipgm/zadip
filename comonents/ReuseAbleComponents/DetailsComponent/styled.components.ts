@@ -2,6 +2,9 @@ import styled from "styled-components";
 export const DetailsWrapper  = styled.div`
 width:1170px ;
 margin: 0 auto;
+@media(max-width:600px){
+       width:100% ;
+    }
 `
 export const DetailTitle = styled.h1`
     color: #0196e3;
@@ -12,6 +15,10 @@ export const DetailTitle = styled.h1`
  justify-content:space-between ;
  align-items:center ;
  padding:15px ;
+ @media(max-width:600px){
+        display: block;
+        padding:0 ;
+    }
  `
  export const GoBackButton =  styled.button`
     width: 180px;

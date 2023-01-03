@@ -10,12 +10,19 @@ export const MuarefSectionContainer =styled.div`
 display:flex ;
 justify-content:center ;
 align-items: center;
+@media(max-width:600px){
+    display:block ;
+}
 `
 export const Description =styled.div`
 color:#737c85 ;
 font-size:18px ;
 margin: 20px 0px;
 width:50% ;
+@media(max-width:600px){
+    width:100% ;
+    padding:15px ;
+}
 text-align:justify ;
 word-break:break-all ;
 >a{
@@ -35,6 +42,9 @@ width:100% ;
     justify-content: center;
     align-items: center;
         margin: 40px 0px;
+        @media(max-width:600px){
+    display:block ;
+}
 `
 export const   MuarefBGImage = styled.div`
 background-image: url("https://zadip.com/images/components/promo-primary.png");
@@ -42,11 +52,14 @@ background-color: #34495e;
     background-attachment: fixed;
     background-repeat: no-repeat;
     width:80% ;
+    @media(max-width:600px){
+        width:100% ;
+}
     padding: 20px;
     text-align: center;
    
     &.play-store{
-        height:200px ;
+        /* height:200px ; */
     }
 `
 export const DownloadAppWrapper =styled.div``
@@ -73,9 +86,12 @@ export const Link = styled.a`
     padding: 10px 30px;
     text-decoration: none;
     color: #fff;
-    background: lightslategrey;
+   text-align:center ;
     border-radius: 6px;
     transition: .5s;
+    @media(max-width:600px){
+        display: block;
+    }
     :hover{
         opacity:.8 ;
     transition: .5s;
@@ -91,6 +107,11 @@ export const ValuedDistributors = styled.div`
     width: 70%;
     text-align: center;
     padding: 20px;
+    @media(max-width:600px){
+       
+        width:100% ;
+      
+    }
 
 `
 export const Heading = styled.div`
@@ -103,6 +124,10 @@ display:flex ;
 justify-content:center ;
 align-items:center ;
 gap:52px;
+ @media(max-width:600px){
+        display: block;
+        width:100% ;
+    }
 `
 export const ImageWrapper = styled.div`
     display: flex;
@@ -111,7 +136,11 @@ export const ImageWrapper = styled.div`
     background-color: rgba(13,74,118,0.04);
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
     padding: 15px;
-    
+    @media(max-width:600px){
+        display: block;
+        width:100% ;
+        margin: 20px 0px;
+    }
     width: 313px;
     height: 200px;
 

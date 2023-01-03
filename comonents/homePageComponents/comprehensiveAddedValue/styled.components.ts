@@ -14,7 +14,7 @@ position:relative;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #189990;
+background: #006891;
     opacity: .8;
     border-radius: 15px;
     padding: 15px;

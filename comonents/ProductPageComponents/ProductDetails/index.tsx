@@ -3,7 +3,6 @@ import * as React from "react";
 import _data from "../../../DataLayer/product.json";
 
 import DetailsComponent from "../../ReuseAbleComponents/DetailsComponent";
-import { Wrapper } from "./styled.componnets";
 
 const ProductDetails = () => {
   const router = useRouter();
@@ -16,7 +15,7 @@ const ProductDetails = () => {
   );
 
   return (
-    <Wrapper>
+    <>
       <DetailsComponent
         title={filterProducts[0]?.title}
         page={"products"}
@@ -25,7 +24,7 @@ const ProductDetails = () => {
         filterRelatedData={filterRelatedProducts}
         technical_specs={filterProducts[0]?.technical_specs}
       />
-    </Wrapper>
+    </>
   );
 };
 export default ProductDetails;

@@ -12,6 +12,10 @@ display:flex ;
 justify-content:center ;
 align-items:center ;
 flex-wrap:wrap ;
+@media(max-width:600px){
+      display: block;
+      padding:15px ;
+    }
 `
 export const SpecsWrapper = styled.div`
 overflow: visible;
@@ -25,6 +29,8 @@ overflow: visible;
     width: 40%;
     @media (max-width: 600px) {
        width:100% ;
+       margin:1rem 0rem ;
+       padding:1rem 0rem ;
 
 }
         background-color: rgba(13,74,118,0.04);

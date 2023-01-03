@@ -24,6 +24,9 @@ color:#fff ;
 
 
 export const ProductCards = styled.div`
+@media (max-width: 600px) {
+width:100%
+}
 @media (min-width: 1200px) {
 width:1170px;
 margin: 0 auto ;
@@ -33,6 +36,9 @@ transition: .5s;
 `
 export const ProductCardsItems = styled.ul`
     all: unset;
+    @media (max-width: 600px) {
+display:block ;
+}
     display:flex ;
     list-style: none;
         flex-wrap: wrap;
@@ -76,6 +82,9 @@ width: 22%;
     transition: all 0.3s;
     overflow: hidden;
     width: 100%;
+    @media(max-width:600px){
+        width:300px ;
+    }
     height: 100%;
     height: 140px;
     object-fit: cover;
