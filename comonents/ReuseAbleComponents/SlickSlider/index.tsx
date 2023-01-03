@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 interface sliderDataProps {
   image: string;
   description: string;
-  id: number;
+  id?: number;
 }
 interface IProps {
   sliderData?: sliderDataProps[];
