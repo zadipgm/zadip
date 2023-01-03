@@ -36,7 +36,7 @@ margin-top: 100px;
 
 export const CardDescription = styled.p`   
 
-
+margin:0 ;
 text-align:center ;
     color: #737c85;
 `
