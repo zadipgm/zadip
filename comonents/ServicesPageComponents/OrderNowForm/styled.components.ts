@@ -122,6 +122,9 @@ padding:20px ;
 `
 export const   CallUsNowWrapper =styled.div`
 width:40% ;
+@media(max-width:600px){
+        width:100% ;
+}
 padding:20px ;
 margin:20px ;
 `

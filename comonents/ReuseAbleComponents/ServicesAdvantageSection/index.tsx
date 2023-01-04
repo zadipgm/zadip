@@ -10,30 +10,32 @@ import {
   Heading,
   Description,
   Wrapper,
-  VedioLinkWrapper,
 } from "./styled.components";
+import data from "../../../DataLayer/services.json";
+import { useTheme } from "styled-components";
+import IconComponent from "../IconComponent";
 const ServicesAdvantageSection = () => {
+  const { isLTR } = useTheme();
   return (
     <AdvantageWrapper>
       <AdvantageContainer>
         <div>
-          <Wrapper>
-            <TransactionSvg />
-            <Heading>Efficient</Heading>
-            <Description>
-              Raise the efficiency of transactions finalization.
-            </Description>
-          </Wrapper>
-          <Wrapper>
-            <SecurehSvg />
-            <Heading>Secure</Heading>
-            <Description>Offer quick and secure procedure.</Description>
-          </Wrapper>
-          <Wrapper>
-            <AccurateSvg />
-            <Heading>Accurate</Heading>
-            <Description>Acquire accurate information.</Description>
-          </Wrapper>
+          {data.services_advantages.map((item) => {
+            return (
+              <Wrapper key={item.id}>
+                <IconComponent
+                  fill={"#2193b0"}
+                  width={"25px"}
+                  height={"25px"}
+                  icon={item.icon}
+                />
+                <Heading>{isLTR ? item.title_en : item.title_ar}</Heading>
+                <Description>
+                  {isLTR ? item.description_en : item.description_ar}
+                </Description>
+              </Wrapper>
+            );
+          })}
         </div>
         <VedioComponent />
         {/* <VedioLinkWrapper>

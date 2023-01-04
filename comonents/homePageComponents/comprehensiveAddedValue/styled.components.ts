@@ -14,8 +14,8 @@ position:relative;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #006891;
-    opacity: .8;
+    background: linear-gradient(-30deg,rgb(5 118 188 / 49%) 30%,#38b7ae);
+    
     border-radius: 15px;
     padding: 15px;
 @media (max-width: 600px) {
@@ -31,8 +31,7 @@ padding: 15px;
 margin:0 auto ;
 
 &.zadip{
-  background: #000000;
-    opacity: .6;
+      background: linear-gradient(-30deg,rgb(5 118 188 / 49%) 30%,#38b7ae);
     border-radius: 15px;
   margin:40px auto ;
 
@@ -79,10 +78,10 @@ export const Title = styled.h3`font-size: 35px;
 line-height: 45px;
 color: #fff;`
 export const DescriptionVision = styled.p`  
-text-align: justify;
-font-size: 20px;
-line-height: 23px;
 color: #fff;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 27px;
 > span {
 color:orange ;
 }

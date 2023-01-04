@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
+import { useTheme } from "styled-components";
 import LocaleContext from "../../../LocaleContext";
 import IconComponent from "../IconComponent";
 import {
@@ -15,8 +16,10 @@ import {
 } from "./styled.components";
 interface CardProps {
   icon: string;
-  title: string;
-  description: string;
+  title_en?: string;
+  title_ar?: string;
+  description_en?: string;
+  description_ar?: string;
   link: string;
   id: number;
   type?: string;
@@ -27,6 +30,7 @@ interface IProps {
 const CardComponent: React.FC<IProps> = ({ cardData }) => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
+  const { isLTR } = useTheme();
   return (
     <>
       <CardContainer>
@@ -53,8 +57,9 @@ const CardComponent: React.FC<IProps> = ({ cardData }) => {
                     />
                   </IconWrapper>
                   <CardListItems>
-                    <CardTitle>{item.title}</CardTitle>
-                    <CardDescription>{item.description}</CardDescription>
+                    <CardTitle>
+                      {isLTR ? item.title_en : item.title_ar}
+                    </CardTitle>
                   </CardListItems>
                 </ListWrapper>
               </Link>

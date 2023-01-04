@@ -4,6 +4,9 @@ export const Conditions = styled.p`
  margin:0 ;
 `
 export const Wrapper= styled.div`
+@media(max-width:600px){
+    display:block ;
+}
 display: flex;
 justify-content:center ;
 align-items:center ;
@@ -17,12 +20,18 @@ gap:15px;
     /* background-color: #E7EBF0; */
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
     width:50% ;
+    @media(max-width:600px){
+        width:100% ;
+}
    
 }
 `
 export const ConditionWrapper= styled.div`
 padding:15px ;
 width:50% ;
+@media(max-width:600px){
+        width:100% ;
+}
 box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
 `
 export const TableHeading= styled.h3`

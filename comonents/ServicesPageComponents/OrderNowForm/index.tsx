@@ -1,8 +1,9 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import FacebookSvg from "../../../public/icons/facebookSvg";
 import LinkedInSvg from "../../../public/icons/linkedinSvg";
 import TwitterSvg from "../../../public/icons/twitterSvg";
-import SocialIcons from "../../ReuseAbleComponents/SocialIcons";
+import SocialIcons from "../../ReuseAbleComponents/SocialIconsReUseable";
 import {
   OrderNowFormContainer,
   Wrapper,
@@ -27,19 +28,20 @@ interface IProps {
   buttonTitle: string;
 }
 const OrderNowForm: React.FC<IProps> = ({ title, buttonTitle }) => {
+  const { t } = useTranslation();
   return (
     <OrderNowFormContainer>
       <Wrapper>
         <Span>{title}</Span>
-        <Input type="text" placeholder="Full Name" required />
-        <Input type="email" placeholder="Email" />
-        <Input type="text" placeholder="Phone" />
+        <Input type="text" placeholder={`${t("fullName")}`} required />
+        <Input type="email" placeholder={`${t("email")}`} />
+        <Input type="text" placeholder={`${t("contact")}`} />
         <Textarea
           id="comments"
           name="comments"
           rows={4}
           cols={50}
-          placeholder="Message"
+          placeholder={`${t("message")}`}
         />
         {/* <RecaptchaContainer>
           <RecaptchaWrapper>
@@ -66,14 +68,14 @@ const OrderNowForm: React.FC<IProps> = ({ title, buttonTitle }) => {
             </LinksWrapper>
           </RecaptchaLinksWrapper>
         </RecaptchaContainer> */}
-        <Button color={"rgb(82 39 63 / 78%);"}>Cancel</Button>
+        <Button color={"rgb(82 39 63 / 78%);"}>{t("cancel")}</Button>
         <Button color="linear-gradient(-30deg,#009bfb 30%,#38b7ae);">
           {buttonTitle}
         </Button>
       </Wrapper>
       <CallUsNowWrapper>
         <CallContainer>
-          <Call>Call US Now</Call>
+          <Call>{t("callUsNow")}</Call>
           <CallButton href="tel://9200 10047">920010047</CallButton>
         </CallContainer>
         <SocialIcons />

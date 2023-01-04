@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 
 export const CardContainer = styled.div`
@@ -88,8 +88,15 @@ export const IconWrapper =styled.div`
     display: flex;
     justify-content: flex-start;
     background: linear-gradient(-30deg, #0576bc 30%, #38b7ae);
-    border-bottom-right-radius: 77px;
     
+    ${({ theme }) =>
+    theme.isLTR
+    ? css`
+       border-bottom-right-radius: 77px;
+        `
+    : css`
+    border-bottom-left-radius: 77px;
+    `}
         svg{
         transition: .5s;
         fill:#fff;

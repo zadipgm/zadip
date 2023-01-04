@@ -4,7 +4,7 @@ import { Container, Description, Image } from "./styled.components";
 interface IProps {
   text?: string;
   image: string;
-  title: string;
+  title?: string;
 }
 const OverView: React.FC<IProps> = ({ text, image, title }) => {
   return (

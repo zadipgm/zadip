@@ -12,12 +12,15 @@ import Links from "@mui/material/Link";
 import { useRouter } from "next/router";
 import LocaleContext from "../../../LocaleContext";
 import SubCategory from "../../ReuseAbleComponents/SubCategories";
+import { useTheme } from "styled-components";
+import { useTranslation } from "react-i18next";
 const ProductSubCategory = () => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
+  const { t } = useTranslation();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      Home
+      {t("home")}
     </Links>,
     <Links
       underline="hover"
@@ -25,10 +28,10 @@ const ProductSubCategory = () => {
       color="inherit"
       href={`/${locale}/products`}
     >
-      Products
+      {t("products")}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#fff" }}>
-      {router.query.sub_category}
+      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
     </Typography>,
   ];
   const query = router?.query?.type;
@@ -36,6 +39,7 @@ const ProductSubCategory = () => {
     (item) => item.type === query
   );
   const main_category = filteredProducts[0];
+  const { isLTR } = useTheme();
   return (
     <ProductSubCategoryContainer bgimage={main_category?.main_image}>
       <ProductSubCategoryWrapper>
@@ -43,10 +47,12 @@ const ProductSubCategory = () => {
           <Breadcrumb color={"#fff"} breadcrumbs={breadcrumbs} />
         </ProductBreadcrumbWrapper>
         <AnimationBar
-          title={main_category?.main_title}
+          title={
+            isLTR ? main_category?.main_title_en : main_category?.main_title_ar
+          }
           icon={main_category?.icon}
           color={"#fff"}
-          description="We have successfully tied partnerships with global leaders in technology, advertising and building frameworks harnessing best practices to enhance the dependability of our solutions and offerings."
+          description={t("featureDescription")}
           headingColor={"#fff"}
           descriptionColor={"#fff"}
         />

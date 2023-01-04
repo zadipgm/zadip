@@ -7,10 +7,6 @@ import {
   AboutusImage,
   AboutusImageWrapper,
   BreadCrumbWrapper,
-  OurHistory,
-  AboutComapny,
-  Title,
-  Text,
   OurTeam,
   TeamCards,
   TeamCradsWrapper,
@@ -19,10 +15,6 @@ import {
   InfoTitleSkill,
   SocialIcons,
   MemberDescription,
-  OurClients,
-  ClientWrapper,
-  ClientTitle,
-  ClientSector,
   AboutHeading,
 } from "./styled.components";
 // import Slider from "react-slick";
@@ -34,81 +26,53 @@ import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import TwitterSvg from "../../public/icons/twitterSvg";
 import LinkedInSvg from "../../public/icons/linkedinSvg";
 import FacebookSvg from "../../public/icons/facebookSvg";
-import clients from "../../DataLayer/client.json";
-import OrderNowForm from "../ServicesPageComponents/OrderNowForm";
-import OurPartnerSection from "../homePageComponents/OurPartnerSection";
 import SliderSlick from "../ReuseAbleComponents/SlickSlider";
 import partner from "../../DataLayer/client.json";
+import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
+import Link from "next/link";
+import SocialIconsReUseable from "../ReuseAbleComponents/SocialIconsReUseable";
 
 const AboutUS = () => {
+  const { t } = useTranslation();
+  const { isLTR } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
-      Home
+      {t("home")}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#0196e3" }}>
-      about-us
+      {t("aboutUs")}
     </Typography>,
   ];
   return (
     <AboutUsContainer>
       <BreadCrumbWrapper>
-        <AboutHeading>About</AboutHeading>
+        <AboutHeading>{t("aboutUs")}</AboutHeading>
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>
       <AnimationBar
-        title={"About the Company"}
-        description={
-          "Founded in 2004, ZADIP has expanded from a small business to a multi-industry enterprise with operational teams in ICT, Networking, Software Development, Construction and Advertising."
-        }
+        title={`${t("zadipGroups")}`}
+        description={`${t("compnaysummry")}`}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
       />
       <AboutusWrapper>
-        <AboutusDescription>
-          Founded in 2004, ZADIP has expanded from a small business to a
-          multi-industry enterprise with operational teams in ICT, Networking,
-          Software Development, Construction and Advertising. Our rapid
-          expansion was only possible through the trust and support our
-          customers put in our abilities. <br></br>
-          <br></br>Today, ZADIP GROUP, has over 7000 customers all over KSA and
-          operates from two offices located in Riyadh and Dammam. Our vigilant
-          focus on emerging technologies in the global arena and their local
-          relevance is where our service proposition becomes unparalleled and
-          fits every business need. We have successfully tied partnerships with
-          global leaders in technology, advertising and building frameworks
-          harnessing best practices to enhance the dependability of our
-          solutions and offerings.
-        </AboutusDescription>
+        <div>
+          <h3>{isLTR ? "About The Company" : "عن مجموعة زاد المعلومات"}</h3>
+          <AboutusDescription
+            dangerouslySetInnerHTML={{ __html: `${t("companyDescription")}` }}
+          ></AboutusDescription>
+        </div>
         <AboutusImageWrapper>
           <AboutusImage
-            src="https://startp-next.envytheme.com/images/about-one.png"
+            src="https://zadip.com/images/values/8.jpg"
             alt="about-us"
+            height={500}
+            width={600}
           />
         </AboutusImageWrapper>
       </AboutusWrapper>
-      <AboutComapny>
-        <OurHistory>
-          <Title>Our History</Title>
-          <Text>
-            Founded in 2004, ZADIP has expanded from a small business to a
-            multi-industry enterprise with operational teams in ICT
-          </Text>
-        </OurHistory>
-        <OurHistory>
-          <Title>Our Mission</Title>
-          <Text>
-            Founded in 2004, ZADIP has expanded from a small business to a
-            multi-industry enterprise with operational teams in ICT
-          </Text>
-        </OurHistory>
-        <OurHistory>
-          <Title>Who We Are</Title>
-          <Text>
-            Founded in 2004, ZADIP has expanded from a small business to a
-            multi-industry enterprise with operational teams in ICT
-          </Text>
-        </OurHistory>
-      </AboutComapny>
+
       <SliderSlick
         sliderData={partner.our_value}
         rows={1}
@@ -119,98 +83,40 @@ const AboutUS = () => {
       />
       <OurTeam>
         <AnimationBar
-          title={"Our Awesome Team"}
-          description={
-            "Founded in 2004, ZADIP has expanded from a small business to a multi-industry enterprise with operational teams in ICT"
-          }
+          title={`${t("ourteam")}`}
+          description={`${t("teamDescription")}`}
           headingColor={"#2193b0"}
           descriptionColor={"#737c85;"}
         />
         <TeamCards>
           {/* <Slider {...settings}> */}
-          <TeamCradsWrapper>
-            <img
-              src="https://startp-next.envytheme.com/images/team-image/team4.jpg"
-              alt="json"
-            />
-            <TeamInfo>
-              <InfoTitle>jason</InfoTitle>
-              <InfoTitleSkill>UI/UX Designer</InfoTitleSkill>
-            </TeamInfo>
-            <SocialIcons>
-              <TwitterSvg />
-              <LinkedInSvg />
-              <FacebookSvg />
-            </SocialIcons>
-            <MemberDescription>
-              Small business to a multi-industry teams in ICT{" "}
-            </MemberDescription>
-          </TeamCradsWrapper>
-
-          <TeamCradsWrapper>
-            <img
-              src="https://startp-next.envytheme.com/images/team-image/team4.jpg"
-              alt="json"
-            />
-            <TeamInfo>
-              <InfoTitle>jason</InfoTitle>
-              <InfoTitleSkill>UI/UX Designer</InfoTitleSkill>
-            </TeamInfo>
-            <SocialIcons>
-              <TwitterSvg />
-              <LinkedInSvg />
-              <FacebookSvg />
-            </SocialIcons>
-            <MemberDescription>
-              Small business to a multi-industry teams in ICT{" "}
-            </MemberDescription>
-          </TeamCradsWrapper>
-
-          <TeamCradsWrapper>
-            <img
-              src="https://startp-next.envytheme.com/images/team-image/team4.jpg"
-              alt="json"
-            />
-            <TeamInfo>
-              <InfoTitle>jason</InfoTitle>
-              <InfoTitleSkill>UI/UX Designer</InfoTitleSkill>
-            </TeamInfo>
-            <SocialIcons>
-              <TwitterSvg />
-              <LinkedInSvg />
-              <FacebookSvg />
-            </SocialIcons>
-            <MemberDescription>
-              Small business to a multi-industry teams in ICT{" "}
-            </MemberDescription>
-          </TeamCradsWrapper>
-
-          <TeamCradsWrapper>
-            <img
-              src="https://startp-next.envytheme.com/images/team-image/team4.jpg"
-              alt="json"
-            />
-            <TeamInfo className="info">
-              <InfoTitle>jason</InfoTitle>
-              <InfoTitleSkill>UI/UX Designer</InfoTitleSkill>
-            </TeamInfo>
-            <SocialIcons>
-              <TwitterSvg />
-              <LinkedInSvg />
-              <FacebookSvg />
-            </SocialIcons>
-            <MemberDescription>
-              Small business to a multi-industry teams in ICT{" "}
-            </MemberDescription>
-          </TeamCradsWrapper>
-          {/* </Slider> */}
+          {partner.our_team.map((item) => {
+            return (
+              <TeamCradsWrapper>
+                <img src={item.image} alt="json" width={125} height={125} />
+                <TeamInfo className="information">
+                  <InfoTitle>{isLTR ? item.name_en : item.name_ar}</InfoTitle>
+                  <InfoTitleSkill>
+                    {isLTR ? item.position_en : item.position_ar}
+                  </InfoTitleSkill>
+                </TeamInfo>
+                <SocialIconsReUseable classname={"about-page"} />
+                {/* <SocialIcons>
+                  <Link href={item.twitter}>
+                    <TwitterSvg className="icon" />
+                  </Link>
+                  <Link href={item.linkedIn}>
+                    <LinkedInSvg className="icon" />
+                  </Link>
+                </SocialIcons> */}
+              </TeamCradsWrapper>
+            );
+          })}
         </TeamCards>
       </OurTeam>
       <AnimationBar
-        title={"Our Happy Clients"}
-        description={
-          "We have successfully tied partnerships with global leaders in technology, advertising and building frameworks."
-        }
+        title={`${t("ourClient")}`}
+        description={`${t("clientdescription")}`}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
       />

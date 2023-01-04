@@ -1,4 +1,4 @@
-const SoftwareSvg = ({
+const JavaSvg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -30,4 +30,4 @@ const SoftwareSvg = ({
     </svg>
   );
 };
-export default SoftwareSvg;
+export default JavaSvg;

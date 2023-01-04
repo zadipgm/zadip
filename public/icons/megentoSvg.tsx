@@ -1,4 +1,4 @@
-const TransactionSvg = ({
+const MagentoSvg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -17,4 +17,4 @@ const TransactionSvg = ({
     </svg>
   );
 };
-export default TransactionSvg;
+export default MagentoSvg;

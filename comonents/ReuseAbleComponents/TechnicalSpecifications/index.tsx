@@ -13,10 +13,14 @@ import LocaleContext from "../../../LocaleContext";
 import BadgeSvg from "../../../public/icons/badgeSvg";
 import IconComponent from "../IconComponent";
 import AnimationBar from "../AnimationBar/AnimationBar";
+import { useTheme } from "styled-components";
+import { useTranslation } from "react-i18next";
 interface ISpecsData {
   id?: number;
-  name?: string;
-  description?: string;
+  name_en?: string;
+  name_ar?: string;
+  description_ar?: string;
+  description_en?: string;
   icon?: string;
 }
 interface IProps {
@@ -25,11 +29,13 @@ interface IProps {
   page: string;
 }
 const TechnicalSpecsTable: React.FC<IProps> = ({ data, title, page }) => {
+  const { isLTR } = useTheme();
+  const { t } = useTranslation();
   return (
     <SpecsContainer>
       {(data?.length as number) > 0 && (
         <AnimationBar
-          title={"Key Features"}
+          title={`${t("keyFeatures")}`}
           description={""}
           headingColor={"#0576bc"}
           descriptionColor={""}
@@ -47,16 +53,20 @@ const TechnicalSpecsTable: React.FC<IProps> = ({ data, title, page }) => {
               }
             >
               {/* {page === "services" && <BadgeSvg width="25px" height="25px" />} */}
-              {item.icon === "" && <SpecsTitle>{item.name}</SpecsTitle>}
+              {item.icon === "" && (
+                <SpecsTitle>{isLTR ? item.name_en : item.name_ar}</SpecsTitle>
+              )}
               <div>
                 <IconComponent
                   icon={item.icon}
-                  fill={""}
+                  fill={"#006791"}
                   width={"40px"}
                   height={"40px"}
                 />
 
-                <SpecsDescription>{item.description}</SpecsDescription>
+                <SpecsDescription>
+                  {isLTR ? item.description_en : item.description_ar}
+                </SpecsDescription>
               </div>
             </SpecsWrapper>
           );

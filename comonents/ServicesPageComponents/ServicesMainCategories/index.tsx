@@ -8,30 +8,25 @@ import {
 import servicesData from "../../../DataLayer/services.json";
 import Breadcrumb from "../../ReuseAbleComponents/Breadcrumb";
 import Typography from "@mui/material/Typography";
+import { useTranslation } from "react-i18next";
 import Links from "@mui/material/Link";
-import { LoadMoreButton } from "../../ProductPageComponents/ProductMainCategories/styled.comonents";
 const ServicesMainCategory = () => {
-  const imagePerRow = 6;
-  const [next, setNext] = React.useState(imagePerRow);
-  const handleMoreImage = () => {
-    setNext(next + imagePerRow);
-  };
+  const { t } = useTranslation();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      Home
+      {t("home")}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#fff" }}>
-      Services
+      {t("services")}
     </Typography>,
   ];
   return (
     <ServicesMainContainer>
       <ServicesMainHeader>
-        <Title>Services</Title>
+        <Title>{t("services")}</Title>
         <Breadcrumb color="#fff" breadcrumbs={breadcrumbs} />
       </ServicesMainHeader>
-      <CardComponent cardData={servicesData.main_services.slice(0, next)} />
-      <LoadMoreButton onClick={handleMoreImage}>Load More</LoadMoreButton>
+      <CardComponent cardData={servicesData.main_services} />
     </ServicesMainContainer>
   );
 };

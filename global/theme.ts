@@ -1,14 +1,15 @@
 
 import { DefaultTheme } from "styled-components";
+
 declare module "styled-components" {
   export interface DefaultTheme {
     translations?:
-      | typeof import("../locales/ar").default
-      | typeof import("../locales/en").default;
+    | typeof import("../locales/ar").default
+    | typeof import("../locales/en").default;
     direction: "rtl" | "ltr";
     isLTR: boolean;
     isRTL: boolean;
-    locale: "ar" | "en";
+    locale: "ar" | "en-US";
     colors: {
       Black: string;
     };
@@ -17,7 +18,7 @@ declare module "styled-components" {
 
 const defaultTheme: DefaultTheme = {
 
-  locale: "en",
+  locale: "en-US",
   direction: "rtl",
   isLTR: false,
   isRTL: true,

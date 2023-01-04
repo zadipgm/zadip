@@ -4,14 +4,10 @@ import Header from "../../Header/header";
 import i18n from "i18next";
 import * as React from "react";
 import LocaleContext from "../../../LocaleContext";
-import { Cairo } from "@next/font/google";
 interface IProps {
   children: ReactElement;
 }
-const roboto = Cairo({
-  weight: "400",
-  subsets: ["arabic"],
-});
+
 const Layout: React.FC<IProps> = ({ children }) => {
   const [locale, setLocale] = React.useState(i18n.language);
   const [initialRenderComplete, setInitialRenderComplete] =
@@ -25,10 +21,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
   i18n.on("languageChanged", () => setLocale(i18n.language));
   return (
     <>
-      <div
-        dir={locale === "en-US" || locale === "en" ? "ltr" : "rtl"}
-        className={roboto.className}
-      >
+      <div dir={locale === "en-US" || locale === "en" ? "ltr" : "rtl"}>
         <LocaleContext.Provider value={{ locale, setLocale }}>
           <Header />
           {children}

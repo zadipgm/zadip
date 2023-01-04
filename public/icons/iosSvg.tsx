@@ -1,4 +1,4 @@
-const TwitterSvg = ({
+const IosSvg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -17,4 +17,4 @@ const TwitterSvg = ({
     </svg>
   );
 };
-export default TwitterSvg;
+export default IosSvg;

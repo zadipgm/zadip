@@ -2,7 +2,8 @@
     "main_services": [
       {
         "id":1,
-        "title": "Software Development",
+        "title_ar":"خدمات البرمجة",
+        "title_en": "Software Development",
         "icon":"codeSvg",
         "description":"Dynamic custom software development to suit your unique needs",
         "link":"services/software_development",
@@ -11,7 +12,8 @@
       },
       {
         "id":2,
-        "title": "Data Centers",
+        "title_ar":"خدمات مركز البيانات",
+        "title_en": "Data Centers",
         "icon":"ciscoSvg",
         "description":"Accredited select partner for Cisco in Saudi Arabia",
         "link":"services/data_centers",
@@ -20,7 +22,8 @@
       
       {
         "id":3,
-        "title": "eGov Services",
+        "title_ar":"خدمات الحكومة الإلكترونية",
+        "title_en": "eGov Services",
         "icon":"websiteSvg",
         "description":"Professional website and portal development to represent your online identity",
         "link":"services/egov_ervices",
@@ -28,7 +31,8 @@
       },
       {
         "id":4,
-        "title": "Cloud Solutions",
+        "title_ar":"الخدمات السحابية",
+        "title_en": "Cloud Solutions",
         "icon":"cloudSvg",
         "description":"New-age solutions for workforce management with ease.",
         "link":"services/cloud_solutions",
@@ -39,44 +43,51 @@
 
     "sub_services":  [{
         "id":1,
-        "title": "Custom Software",
-        "icon":"softwaresolutionSvg",
+        "title_ar":"تطوير البرمجيات",
+        "title_en": "Custom Software",
+        "icon":"codeSvg",
         "description":"Dynamic custom software development to suit your unique",
-        "link":"/software_development",
+        "link":"software_development",
         "image":"https://mobirise.com/extensions/softwarem4/software-app/assets/images/features1.jpg",
         "type":"software_development",
-        "detail_description":"ZADIP has gained a broad range of technical expertise with an unparalleled commitment to client satisfaction, we have become an authoritative option for companies looking for custom software development services, including supplementing in-house resources in the delivery of discrete project components, integration of the latest technology with existing enterprise infrastructure, creating complex interactive and multimedia environments.",
+        "detail_description_ar":"تطوير البرمجيات أحد الخدمات التي نقدمها لعملائنا الكرام. حيث وفرت مجموعة زاد المعلومات تطوير البرمجيات محليا وذلك من خلال فريق من المبرمجين المحترفين. يتمتع فريقنا بعدد من الخبرات في مجال برمجة العديد من لغات البرمجة العالمية. يمكنك الاعتماد على فريقنا لإتمام احتياجاتك البرمجية بكل اطمئنان لأنك سوف تحصل على برمجيات احترافية تم فيها ضبط طريقة البرمجة وفق السياسات المتبعة لذلك لنضمن لعملائنا الحصول على برامج خالية من العيوب البرمجية وتلامس متطلبات العميل باحترافية.",
+        "detail_description_en":"ZADIP has gained a broad range of technical expertise with an unparalleled commitment to client satisfaction, we have become an authoritative option for companies looking for custom software development services, including supplementing in-house resources in the delivery of discrete project components, integration of the latest technology with existing enterprise infrastructure, creating complex interactive and multimedia environments.",
         "technical_specs":[
           {
           "id":1,
           "name":"PHP",
           "icon":"phpSvg",
-          "description":"PHP is a general-purpose scripting language geared toward web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1993 and released in 1995. The PHP reference implementation is now produced by The PHP Group."
+          "description_ar":"PHP هي لغة برمجة نصية للأغراض العامة موجهة نحو تطوير الويب. تم إنشاؤه في الأصل من قبل المبرمج الكندي الدنماركي Rasmus Lerdorf في عام 1993 وتم إصداره في عام 1995. يتم الآن إنتاج تطبيق PHP المرجعي بواسطة مجموعة PHP.",
+          "description_en":"PHP is a general-purpose scripting language geared toward web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1993 and released in 1995. The PHP reference implementation is now produced by The PHP Group."
         },
        
         {
           "id":3,
           "name":"Java",
           "icon":"javaSvg",
-          "description":"Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible."
+          "description_ar":"Java هي لغة برمجة عالية المستوى قائمة على الفئة وموجهة للكائنات مصممة بحيث تحتوي على أقل تبعيات تنفيذية قدر الإمكان.",
+          "description_en":"Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible."
         },
         {
           "id":4,
           "name":"ASP.NET",
           "icon":"aspNetSvg",
-          "description":"ASP.NET Core is a free and open-source web framework and successor to ASP.NET, developed by Microsoft. It is a modular framework that runs on both the full .NET Framework, on Windows, and the cross-platform .NET. However, ASP.NET Core version 3 only works on .NET Core, dropping support of the .NET Framework."
+          "description_ar":"ASP.NET هو إطار تطبيق ويب مفتوح المصدر من جانب الخادم مصمم لتطوير الويب لإنتاج صفحات ويب ديناميكية. تم تطويره بواسطة Microsoft للسماح للمبرمجين بإنشاء مواقع ويب وتطبيقات وخدمات ديناميكية. يرمز الاسم إلى تقنيات تمكين الشبكة بصفحات الخادم النشطة.",
+          "description_en":"ASP.NET Core is a free and open-source web framework and successor to ASP.NET, developed by Microsoft. It is a modular framework that runs on both the full .NET Framework, on Windows, and the cross-platform .NET. However, ASP.NET Core version 3 only works on .NET Core, dropping support of the .NET Framework."
         },
         {
           "id":5,
           "name":"HTML5",
           "icon":"htmlSvg",
-          "description":"The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript"
+          "description_ar":"لغة ترميز النص التشعبي أو HTML هي لغة الترميز القياسية للمستندات المصممة للعرض في مستعرض الويب. يمكن أن تساعده تقنيات مثل Cascading Style Sheets ولغات البرمجة النصية مثل JavaScript.",
+          "description_en":"The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript"
         },
         {
           "id":6,
           "name":"CSS3",
           "icon":"cssSvg",
-          "description":"Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript."
+          "description_ar":"Cascading Style Sheets هي لغة ورقة أنماط تُستخدم لوصف العرض التقديمي لمستند مكتوب بلغة ترميزية مثل HTML أو XML. CSS هي تقنية أساسية لشبكة الويب العالمية ، جنبًا إلى جنب مع HTML و JavaScript.",
+          "description_en":"Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript."
         }
        
       ]
@@ -85,87 +96,101 @@
       
       {
         "id":2,
-        "title": "Website Development",
+        "title_ar":"تطوير المواقع الإلكترونية",
+        "title_en": "Website Development",
         "icon":"websiteSvg",
         "description":"Professional website and portal development to represent your online",
-        "link":"/website_development",
+        "link":"website_development",
         "image":"https://zadip.com/images/egov/website.jpg",
         "type":"software_development",
-        "detail_description":"The local business owner is very unique and our countless hours of effort and interaction has built in us a knowledgebase that very few compete. We have developed websites, portals and automation software for every industry and in doing so have found that the chief concern that bothered our customers was not technology, but trust.",
+        "detail_description_ar":"اصبح العالم الرقمي في هذا العصر احد اهم مقومات اي منشأة تجارية كانت او حكومية. وتسعى المنشأت الى الوصول للعديد من الأسواق المستهدفة لمنتجاتها وخدماتها خلال بواباتها الرقمية التي تتيح استخدام العديد من المؤثرات الصوتية والمرئية خلالها. وهنا يأتي دورنا في ايصال وتصميم وتطوير تلك البوابات الرقمية للعالم الرقمي حيث نقوم بإيصال أفكارك ومنتجاتك وخدماتك لمواطني العالم الرقمي العالمي. حيث سيصل صوتك الى جميع اطياف المجتمع الذين يجدون للشبكة العنكبوتية مقرا لهم.",
+        "detail_description_en":"The local business owner is very unique and our countless hours of effort and interaction has built in us a knowledgebase that very few compete. We have developed websites, portals and automation software for every industry and in doing so have found that the chief concern that bothered our customers was not technology, but trust.",
         "technical_specs":[
          
         {
           "id":1,
           "name":"ReactJS",
           "icon":"reactSvg",
-          "description":"React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies."
+          "description_ar":"React هي مكتبة JavaScript أمامية مجانية ومفتوحة المصدر لبناء واجهات مستخدم تعتمد على مكونات واجهة المستخدم. يتم صيانتها بواسطة Meta ومجتمع من المطورين والشركات الفردية.",
+          "description_en":"React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies."
         },
        
         {
-          "id":2,
-          "name":"HTML",
+          "id":5,
+          "name":"HTML5",
           "icon":"htmlSvg",
-          "description":"The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript"
+          "description_ar":"لغة ترميز النص التشعبي أو HTML هي لغة الترميز القياسية للمستندات المصممة للعرض في مستعرض الويب. يمكن أن تساعده تقنيات مثل Cascading Style Sheets ولغات البرمجة النصية مثل JavaScript.",
+          "description_en":"The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript"
         },
         {
-          "id":3,
-          "name":"CSS",
+          "id":6,
+          "name":"CSS3",
           "icon":"cssSvg",
-          "description":"Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript."
+          "description_ar":"Cascading Style Sheets هي لغة ورقة أنماط تُستخدم لوصف العرض التقديمي لمستند مكتوب بلغة ترميزية مثل HTML أو XML. CSS هي تقنية أساسية لشبكة الويب العالمية ، جنبًا إلى جنب مع HTML و JavaScript.",
+          "description_en":"Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript."
         },
         {
           "id":4,
           "name":"Wordpress",
           "icon":"wordpressSvg",
-          "description":"WordPress is a free and open-source content management system written in hypertext preprocessor language and paired with a MySQL or MariaDB database with supported HTTPS. Features include a plugin architecture and a template system, referred to within WordPress as themes."
+          "description_ar":"WordPress هو نظام إدارة محتوى مجاني ومفتوح المصدر مكتوب بلغة المعالجة المسبقة للنص التشعبي ومقترن بقاعدة بيانات MySQL أو MariaDB مع HTTPS المدعومة. تتضمن الميزات بنية البرنامج المساعد ونظام القالب ، يشار إليه في WordPress باسم.",
+          "description_en":"WordPress is a free and open-source content management system written in hypertext preprocessor language and paired with a MySQL or MariaDB database with supported HTTPS. Features include a plugin architecture and a template system, referred to within WordPress as themes."
         },
         {
           "id":5,
           "name":"megentoSvg",
           "icon":"megentoSvg",
-          "description":"Magento is an open-source e-commerce platform written in PHP. It uses multiple other PHP frameworks such as Laminas and Symfony. Magento source code is distributed under Open Software License v3.0. Magento was acquired by Adobe Inc in May 2018 for $1.68 billion"
+          "description_ar":"Magento هي منصة تجارة إلكترونية مفتوحة المصدر مكتوبة بلغة PHP. يستخدم العديد من أطر PHP الأخرى مثل Laminas و Symfony. يتم توزيع كود مصدر Magento بموجب Open Software License v3.0. استحوذت Adobe Inc على Magento في مايو 2018 مقابل 1.68 مليار دولار",
+          "description_en":"Magento is an open-source e-commerce platform written in PHP. It uses multiple other PHP frameworks such as Laminas and Symfony. Magento source code is distributed under Open Software License v3.0. Magento was acquired by Adobe Inc in May 2018 for $1.68 billion"
         }
       ]
       },
       {
         "id":3,
-        "title": "Mobile Applications",
+        "title_ar":"تطوير تطبيقات الهاتف",
+        "title_en": "Mobile Applications",
         "icon":"mobileAppsvg",
         "description":"Bring your corporate to the world of smartphones",
-        "link":"/mobile_apps",
+        "link":"mobile_apps",
         "image":"https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "type":"software_development",
-        "detail_description":"Smartphones now control the world’s tech. The advent of mobile based ecommerce, secure methods of financial transactions and most importantly social media has enforced the presence of mobile applications as the key element of success. Our mobile development team has produced applications ranging from business to social media applications with expert focus on ease of use, dependability, architectural robustness and most importantly security that you can depend on.",
+        "detail_description_ar":"يسعدنا ان نقدم لكم في مجموعة زاد المعلومات التجارية خدمة متميزة ونادرة في السوق المحلية وهي خدمة برمجة تطبيقات الهواتف الذكية تعتبر الهواتف الذكية في وقتنا الحاضر احد اهم وسائل التواصل بين أي منشأة تجارية كانت او حكومية مع المواطنين بشكل عام او العملاء بشكل خاص. نوفر لكم إمكانية برمجة التطبيقات على احدث الهواتف الذكية باخر طرق البرمجة المتوفرة واحدثها. حيث يمكنك استخدام تطبيقك على أي بيئة تريدها سواء كانت بيئة هواتف قوقل الذكي التي تستخدم نظام اندرويد ( Android ) او نظام أبل للهواتف الذكية أيضا ( iphone ) واحدثها نظام البرمجة الجديدة لهواتف ويندوز ( Windows phone) وأيضا نظام البرمجة للهواتف الذكية من بلاك بيري ( Black berry ) , جميع خدماتنا متوفرة لكم وبين ايديكم لإنتاج تطبيق متميز يحظى بثقه كل من يستخدمه.",
+        "detail_description_en":"Smartphones now control the world’s tech. The advent of mobile based ecommerce, secure methods of financial transactions and most importantly social media has enforced the presence of mobile applications as the key element of success. Our mobile development team has produced applications ranging from business to social media applications with expert focus on ease of use, dependability, architectural robustness and most importantly security that you can depend on.",
         "technical_specs":[
         {
           "id":1,
           "name":"IOS",
           "icon":"iosSvg",
-          "description":"iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that powers many of the company's mobile devices, including the iPhone"
+          "description_ar":"iOS هو نظام تشغيل للأجهزة المحمولة تم إنشاؤه وتطويره بواسطة شركة Apple Inc. حصريًا لأجهزتها. إنه نظام التشغيل الذي يشغل العديد من الأجهزة المحمولة للشركة ، بما في ذلك iPhone",
+          "description_en":"iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that powers many of the company's mobile devices, including the iPhone"
         },
         {
           "id":2,
           "name":"blackberry",
           "icon":"blackberrySvg",
-          "description":"BlackBerry Limited is a Canadian software company specializing in cybersecurity. Founded in 1984, it was originally known as Research In Motion. As RIM, it developed the BlackBerry brand of interactive pagers, smartphones, and tablets."
+          "description_ar":"BlackBerry Limited هي شركة برمجيات كندية متخصصة في الأمن السيبراني. تأسست عام 1984 ، وكانت تعرف في الأصل باسم Research In Motion. بصفتها RIM ، قامت بتطوير علامة BlackBerry التجارية لأجهزة الاستدعاء التفاعلية والهواتف الذكية والأجهزة اللوحية.",
+          "description_en":"BlackBerry Limited is a Canadian software company specializing in cybersecurity. Founded in 1984, it was originally known as Research In Motion. As RIM, it developed the BlackBerry brand of interactive pagers, smartphones, and tablets."
         },
         {
           "id":3,
           "name":"andriod",
           "icon":"andriodSvg",
-          "description":"Android is a mobile operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen mobile devices such as smartphones and tablets."
-        },
-        {
-          "id":4,
-          "name":"HTML",
-          "icon":"htmlSvg",
-          "description":"The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript"
+          "description_ar":"Android هو نظام تشغيل محمول يعتمد على نسخة معدلة من Linux kernel وبرامج أخرى مفتوحة المصدر ، مصممة بشكل أساسي للأجهزة المحمولة التي تعمل باللمس مثل الهواتف الذكية والأجهزة اللوحية.",
+          "description_en":"Android is a mobile operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen mobile devices such as smartphones and tablets."
         },
         {
           "id":5,
-          "name":"CSS",
+          "name":"HTML5",
+          "icon":"htmlSvg",
+          "description_ar":"لغة ترميز النص التشعبي أو HTML هي لغة الترميز القياسية للمستندات المصممة للعرض في مستعرض الويب. يمكن أن تساعده تقنيات مثل Cascading Style Sheets ولغات البرمجة النصية مثل JavaScript.",
+          "description_en":"The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript"
+        },
+        {
+          "id":6,
+          "name":"CSS3",
           "icon":"cssSvg",
-          "description":"Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript."
+          "description_ar":"Cascading Style Sheets هي لغة ورقة أنماط تُستخدم لوصف العرض التقديمي لمستند مكتوب بلغة ترميزية مثل HTML أو XML. CSS هي تقنية أساسية لشبكة الويب العالمية ، جنبًا إلى جنب مع HTML و JavaScript.",
+          "description_en":"Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript."
         }
       ]
       },
@@ -173,37 +198,43 @@
 
       {
         "id":4,
-        "title": "Cisco SLA",
+        "title_ar":"عقد دعم سيسكو",
+        "title_en": "Cisco SLA",
         "icon":"ciscoSvg",
         "description":"Accredited select partner for Cisco in Saudi Arabia",
-        "link":"/cisco_sla",
+        "link":"cisco_sla",
         "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_1632961779.img.jpg/1667897153934.jpg",
         "type":"data_centers",
-        "detail_description":"Cisco is the world's largest networking company. Its internetwork devices and communications solutions are unmatched and a core ingrediant of any business industry. ZADIP Group has been raised as Cisco Select Partner in 2016 which helps us provide our clients with added value services directly without the involvement of any third party. This assures that our clients always enjoy the commitment that we promise them and that our relationship covers all facets of supply, implementation and management.",
+        "detail_description_ar":"المطلع على حياتنا اليومية يجد ان التقنية أصبحت حاضرة في كل جوانبها بدءا عندما تستيقظ صباحا على صوت جرس هاتفك الذكي وحتى تصل الى عملك والعودة منة ستجد أنك محاط بالتقنية ولا تكاد تستغني عنها يوما واحدا. ولكي يعمل هذا كله يلزم وجود ترابط بين تلك التقنيات المتعددة ويتم ذلك عبر الشبكات. هذه الشبكات تدير معظمها أجهزة سيسكو العالمية والتي بدورها تنظم عملها وتتأكد من صلاحيتها وأيضا تقوم بفلترتها لتقدم للمستخدم كل البيانات التي تلزمه ليقوم بأعماله بشكل أسهل وأمن.",
+        "detail_description_en":"Cisco is the world's largest networking company. Its internetwork devices and communications solutions are unmatched and a core ingrediant of any business industry. ZADIP Group has been raised as Cisco Select Partner in 2016 which helps us provide our clients with added value services directly without the involvement of any third party. This assures that our clients always enjoy the commitment that we promise them and that our relationship covers all facets of supply, implementation and management.",
         "technical_specs":[
           {
             "id":1,
             "name":"Service Level Agreement",
             "icon":"",
-            "description":"ZAD provides information on maintenance, follow-up and installation services for Cisco's various network and communications systems using SmartNet Total Care technology in additional to regular technical visits to resolve any problems you may encounter with Cisco devices. We assure that you feel at ease surrounded by expert hands to help you solve the problems that may be encountered during your work as quickly as possible and accurately without the need to lose your business"
+            "description_ar":"نوفر في مجموعة زاد المعلومات خدمات الصيانة والمتابعة والتركيب لأنظمة سيسكو المتعددة والتي تبدأ من الشبكات باستخدام تقنية SmartNet Total Care وانتهاء بزيارة الفني لديك لحل أي إشكالية قد تواجهك في أنظمة سيسكو.",
+            "description_en":"ZAD provides information on maintenance, follow-up and installation services for Cisco's various network and communications systems using SmartNet Total Care technology in additional to regular technical visits to resolve any problems you may encounter with Cisco devices. We assure that you feel at ease surrounded by expert hands to help you solve the problems that may be encountered during your work as quickly as possible and accurately without the need to lose your business"
           },
           {
             "id":2,
             "name":"Network & Wireless",
             "icon":"",
-            "description":"Network hardware are the key variable in providing high-speed connections between devices, applications and users that are needed to increase productivity and ensure the competitiveness of your business. LAN Switching & Routing technologies now include many smart features such as protection, QoS and power over Ethernet that enable an effective and measurable connection to applications."
+            "description_ar":"تعد أسس الشبكات هي قلب الشبكات لتوفيرها اتصالات عالية السرعة بين الأجهزة والتطبيقات والمستخدمين التي تلزم لزيادة الإنتاجية وضمان التنافسية لاعمالك. تتضمن تقنيات  LAN Switching & Routing الآن العديد من السمات الذكية مثل الحماية وجودة الخدمة وأجهزة نقل الطاقة عبر خطوط البيانات  Power over Ethernet التي تمكن من ربط فعال ويمكن قياسه للتطبيقات.",
+            "description_en":"Network hardware are the key variable in providing high-speed connections between devices, applications and users that are needed to increase productivity and ensure the competitiveness of your business. LAN Switching & Routing technologies now include many smart features such as protection, QoS and power over Ethernet that enable an effective and measurable connection to applications."
           },
           {
             "id":3,
             "name":"Network Security System",
             "icon":"",
-            "description":"Business-critical data can be protected with continued Internet access while enjoying the flexibility to access the Internet. Networks must be interconnected and enjoined in the fabric of the network infrastructure. The network will become the main point of control, thus preventing and responding to security threats. All this will ensure the confidentiality of information and secure access to the company's resources."
+            "description_ar":"يمكن حماية البيانات الهامة للأعمال مع استمرارية إمكانية استخدام الإنترنت عند التنقل مع التمتع بمرونة إمكانية الدخول إلى شبكة الإنترنت. يجب على حماية الشبكات أن تتداخل وتترابط في نسيج البنية التحتية للشبكات ، فالشبكة ستصبح هي النقطة الرئيسية للمراقبة لتمنع بدورها التهديدات الأمنية ولتستجيب إليها. كل هذا سيضمن سرية المعلومات والوصول بشكل آمن إلى مصادر الشركة.",
+            "description_en":"Business-critical data can be protected with continued Internet access while enjoying the flexibility to access the Internet. Networks must be interconnected and enjoined in the fabric of the network infrastructure. The network will become the main point of control, thus preventing and responding to security threats. All this will ensure the confidentiality of information and secure access to the company's resources."
           },
           {
             "id":4,
             "name":"VOIP Solutions",
             "icon":"",
-            "description":"In addition to collaboration, conferencing, messaging and mobility applications to meet the needs of existing offices and workplaces in terms of video and communications services and unified communications systems solutions, the benefits of IP Telephony and IP Convergence are increasing."
+            "description_ar":"تدمج أنظمة الاتصالات الموحدة ما بين الصوت والصورة، فبالإضافة إلى تطبيقات العمل التعاوني وعقد المؤتمرات والرسائل والتنقل لتلبية احتياجات المكاتب وأماكن العمل الراهنة من حيث خدمات الاتصالات والفيديو وحلول أنظمة الاتصالات الموحدة، فإن الفوائد المترتبة على الاتصال عبر ”IP Telephony” IP Convergence تزداد.",
+            "description_en":"In addition to collaboration, conferencing, messaging and mobility applications to meet the needs of existing offices and workplaces in terms of video and communications services and unified communications systems solutions, the benefits of IP Telephony and IP Convergence are increasing."
           }
           
         ]
@@ -213,80 +244,92 @@
       
       {
         "id":5,
-        "title": "Network Infrastructure",
+        "title_ar":"تصميم البنية التحتية للشبكة",
+        "title_en": "Network Infrastructure",
         "icon":"networkingSvg",
         "description":"Building efficient infrastrucutres to help your organization expand and grow",
-        "link":"/network_infrastructure",
+        "link":"network_infrastructure",
         "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_63734854.img.jpg/1668135786981.jpg",
         "type":"data_centers",
-        "detail_description":"Increased business demands and dependence on technology has resulted in the rapid growth and need for efficient and economical data center solutions. This results in the need for skilled IT administration staff and other maintenance and load detection tools that help detect concerns of expansion and utilization.",
+        "detail_description_ar":"أدت زيادة طلب الأعمال على وظائف التكنولوجيا إلى تحقيق نمو سريع لمراكز بيانات العديد من المنظمات. لقد حدث هذا في كثير من الأحيان ليقوم بحل مشاكل منبثقة بشكل خاص، وأدى هذا الى تنفيذ تطبيقات تعالج هذه المشاكل بالتالي تشغيل عناصر البنية التحتية بكامل طاقتها في حين عناصر أخرى يتم إهمالها . وهذا يعني بالنسبة إلى أقسام تكنولوجيا المعلومات دعماً ومصاريف تشغيلية أكبر وقلة الكفاءة. فتكاليف الدعم لا تمثل سوى إحدى التكاليف التشغيلية المتصاعدة لمراكز البيانات، فمع تعدد المرافق وتباعد أماكن الخوادم، فإن المنظمات تواجه ارتفاعاً في فواتير الطاقة ومتطلبات المساحة.",
+        "detail_description_en":"Increased business demands and dependence on technology has resulted in the rapid growth and need for efficient and economical data center solutions. This results in the need for skilled IT administration staff and other maintenance and load detection tools that help detect concerns of expansion and utilization.",
         "technical_specs":[
           {
             "id":1,
             "name":"Data Center Sysytems",
             "icon":"",
-            "description":"ZADIP has been successful in helping our clients evolve with their growing processing and storage needs by designing scalable and modular infrastructure models that are retrofit to suit any business. Our technology consultants help assess your current needs, devise a roadmap forecasting costs and staffing necessary to support this framework and provide one of the most sophisticated and efficient data infrastructure to suit your business goals."
+            "description_ar":"أدت زيادة طلب الأعمال على وظائف التكنولوجيا إلى تحقيق نمو سريع لمراكز بيانات العديد من المنظمات. لقد حدث هذا في كثير من الأحيان ليقوم بحل مشاكل منبثقة بشكل خاص، وأدى هذا الى تنفيذ تطبيقات تعالج هذه المشاكل بالتالي تشغيل عناصر البنية التحتية بكامل طاقتها في حين عناصر أخرى يتم إهمالها . وهذا يعني بالنسبة إلى أقسام تكنولوجيا المعلومات دعماً ومصاريف تشغيلية أكبر وقلة الكفاءة. فتكاليف الدعم لا تمثل سوى إحدى التكاليف التشغيلية المتصاعدة لمراكز البيانات، فمع تعدد المرافق وتباعد أماكن الخوادم، فإن المنظمات تواجه ارتفاعاً في فواتير الطاقة ومتطلبات المساحة.",
+            "description_en":"ZADIP has been successful in helping our clients evolve with their growing processing and storage needs by designing scalable and modular infrastructure models that are retrofit to suit any business. Our technology consultants help assess your current needs, devise a roadmap forecasting costs and staffing necessary to support this framework and provide one of the most sophisticated and efficient data infrastructure to suit your business goals."
           }
         ]
       },
       {
         "id":6,
-        "title": "Servers & Storage",
+        "title_ar":"الخوادم والتخزين",
+        "title_en": "Servers & Storage",
         "icon":"serverSvg",
         "description":"Specialized data center processing and storage products",
-        "link":"/servers_storage",
+        "link":"servers_storage",
         "image":"https://zadip.com/images/egov/server.jpg",
         "type":"data_centers",
-        "detail_description":"We specialize in providing infrastructure services for data centers. One of the most important elements of these centers are servers and storage systems. We assist you in the selection, supply and installation process and help you to accomplish from high quality servers and exceptional after-sales services.",
+        "detail_description_ar":"متخصصون في تقديم خدمات البنية التحتية لمراكز البيانات والمعلومات. أحد اهم عناصر تلك المراكز هي الخوادم وأنظمة التخزين. نساهم معك عزيزي العميل في اختيار وتوريد وتركيب ما يتناسب مع أعمالك التجارية وما ترغب في إنجازه من خادمات عالية الجودة وخدمات بعد البيع استثنائية. كما نساعدك عزيزنا العميل بتوريد وتركيب أجهزة التخزين الرقمية وأنظمة النسخ الاحتياطي الطارئ التي قد تنقذك وأعمالك في الأوقات الحرجة. يسعدنا ان نوفر لك عزيزي العميل عدد من المنتجات التي تساهم في تعدد الخيارات والتي تناسب احتياجاتك وأيضا توفر عليك التكلفة المستقبلية والحالية.",
+        "detail_description_en":"We specialize in providing infrastructure services for data centers. One of the most important elements of these centers are servers and storage systems. We assist you in the selection, supply and installation process and help you to accomplish from high quality servers and exceptional after-sales services.",
         "technical_specs":[
           {
             "id":1,
             "name":"",
             "icon":"",
-            "description":"Rack & Blade Servers"
+            "description_ar":"الخوادم بأنواعها و ماركاتها المتعددة",
+            "description_en":"Rack & Blade Servers"
           },
           {
             "id":2,
             "name":"",
             "icon":"",
-            "description":"Backup Automation Devices"
+            "description_ar":"أجهزة النسخ الاحتياطي",
+            "description_en":"Backup Automation Devices"
           },
           {
             "id":3,
             "name":"",
             "icon":"",
-            "description":"Electronic Archiving Devices"
+            "description_ar":"أجهزة الأرشفة الإلكترونية",
+            "description_en":"Electronic Archiving Devices"
           },
           {
             "id":4,
             "name":"",
             "icon":"",
-            "description":"Compact Data Center Modules"
+            "description_ar":"كبائن مراكز البيانات المدمجة",
+            "description_en":"Compact Data Center Modules"
           },
           {
             "id":5,
             "name":"",
             "icon":"",
-            "description":"UPS & Energy Management Devices"
+            "description_ar":"أجهزة تخزين الطاقة UPS#",
+            "description_en":"UPS & Energy Management Devices"
           }
         ]
       },
 
       {
         "id":7,
-        "title": "Muqeem",
-        "icon":"softwaresolutionSvg",
+        "title_ar":"خدمة مقيم",
+        "title_en": "Muqeem",
+        "icon":"websiteSvg",
         "description":"New-age solutions for workforce management with ease.",
-        "link":"/muqeem",
+        "link":"muqeem",
         "image":"https://zadip.com/images/egov/muqeembanner.jpg",
         "type":"eGov_services"
       },
       {
         "id":8,
-        "title": "Tamm",
-        "icon":"softwaresolutionSvg",
+        "title_ar":"خدمة تم",
+        "title_en": "Tamm",
+        "icon":"websiteSvg",
         "description":"Complete management of your vehicle fleet in your hands.",
-        "link":"/tam",
+        "link":"tam",
         "image":"https://zadip.com/images/egov/tammbanner.jpg",
         "type":"eGov_services"
 
@@ -294,10 +337,11 @@
       
       {
         "id":9,
-        "title": "Masarat",
-        "icon":"softwaresolutionSvg",
+        "title_ar":"خدمة مسارات",
+        "title_en": "Masarat",
+        "icon":"websiteSvg",
         "description":"Manage your fleet with ease",
-        "link":"/masarat",
+        "link":"masarat",
         "image":"https://www.elm.sa/en/e-services/ElmCloud/PublishingImages/Pages/Masarat/shutterstock_659615179.jpg",
         "type":"eGov_services"
       
@@ -306,47 +350,78 @@
 
       {
         "id":10,
-        "title": "Ektefa",
-        "icon":"softwaresolutionSvg",
+        "title_ar":"خدمة اكتفاء",
+        "title_en": "Ektefa",
+        "icon":"websiteSvg",
         "description":"Human Resource Management",
-        "link":"/ektefa",
+        "link":"ektefa",
         "image":"https://ektefa.net/agency/img/illustrations/employee.svg",
         "type":"cloud_solutions"
       
       },
       {
         "id":11,
-        "title": "Muaref QR",
-        "icon":"softwaresolutionSvg",
+        "title_ar":"مـــعرف كــيو ار",
+        "title_en": "Muaref QR",
+        "icon":"websiteSvg",
         "description":"Goodbye Biometric Devices!",
-        "link":"/muaref",
+        "link":"muaref",
         "image":"https://www.zadip.com/en/images/products/muaref/muaref.jpg",
-        "type":"cloud_solutions"
+        "type":"cloud_solutions",
+        "detail_description_ar":"هو أحد إصدارات نظام معرف للتحكم في الدخول. معرف كيو ار تم تطويره وبرمجته كليا في مجموعة زاد المعلومات. حيث يغير النظام طريقة وأسلوب الحضور والانصراف المتعارف عليها باستخدام أجهزة البصمة والمعلومات الحيوية. ولأننا وجدنا ان هذه الأجهزة تتطلب لمس الجهاز من أكثر من شخص لتسجيل الحضور قررنا ان نبحث عن حل."
       
       },
       {
         "id":12,
-        "title": "Cadre",
-        "icon":"softwaresolutionSvg",
+        "title_ar":"كادر للتوظيف",
+        "title_en": "Cadre",
+        "icon":"websiteSvg",
         "description":"Recruitment portal with unique opportunities directly from employers.",
-        "link":"/cadre",
+        "link":"cadre",
         "image":"https://zadip.com/images/egov/cadre.jpg",
         "type":"cloud_solutions",
-        "detail_description":"Cadre is an value add service for the subscribers to Ektefa HRMS. It provides Ektefa subscribers a fully integrated and managed vacancy posting portal with no extra charges at all. Cadre links bona fide job seekers to employers directly on real vacancies without the intervention of mediators or headhunters.",
+        "detail_description_ar":"هي خدمة اضافيه مجانية لمشتركينا في خدمة إكتفاء. حيث يتيح موقع كادر للباحثين عن عمل التسجيل بشكل مجاني والتقديم على الوظائف الشاغرة المتاحة والمنشورة من قبل الشركات المشتركة معنا في نظام اكتفاء.",
+        "detail_description_en":"Cadre is an value add service for the subscribers to Ektefa HRMS. It provides Ektefa subscribers a fully integrated and managed vacancy posting portal with no extra charges at all. Cadre links bona fide job seekers to employers directly on real vacancies without the intervention of mediators or headhunters.",
         "technical_specs":[]
       
       },
       {
         "id":13,
-        "title": "Nafeth",
-        "icon":"softwaresolutionSvg",
+        "title_ar":"خدمة نافذ",
+        "title_en": "Nafeth",
+        "icon":"websiteSvg",
         "description":"Specialized data center processing",
-        "link":"/nafeth",
+        "link":"nafeth",
         "image":"https://nafeth.com/images/nafeth-naql.png",
         "type":"cloud_solutions"
       
       }
        
         
+    ],
+    "services_advantages":[
+      { "id":1,
+        "title_en":"Efficient",
+        "title_ar":"سريع",
+        "icon":"transactionSvg",
+        "description_en":"Raise the efficiency of transactions finalization.",
+        "description_ar":"سرعة ودقة وأمان في إجراء كافة معاملات المركبات."
+      },
+      {
+        "id":2,
+        "title_en":"Secure",
+        "title_ar":"تخفيض",
+        "icon":"secureSvg",
+        "description_en":"Offer quick and secure procedure.",
+        "description_ar":"تخفيض التكاليف."
+      },
+      {
+        "id":3,
+        "title_en":"Acurate",
+        "title_ar":"تنظيم",
+        "icon":"acurateSvg",
+        "description_en":"Acquire accurate information.",
+        "description_ar":"تنظيم كافة البيانات والمعلومات المطلوبة."
+      }
     ]
   }

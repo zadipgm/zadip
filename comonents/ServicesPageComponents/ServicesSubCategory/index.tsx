@@ -13,12 +13,14 @@ import { useRouter } from "next/router";
 import LocaleContext from "../../../LocaleContext";
 import SubCategory from "../../ReuseAbleComponents/SubCategories";
 import { ServicesSubCategoryContainer } from "./styled.components";
+import { useTranslation } from "react-i18next";
 const ServicesSubCategory = () => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
+  const { t } = useTranslation();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      Home
+      {t("home")}
     </Links>,
     <Links
       underline="hover"
@@ -26,15 +28,16 @@ const ServicesSubCategory = () => {
       color="inherit"
       href={`/${locale}/services`}
     >
-      Services
+      {t("services")}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#fff" }}>
-      {router.query.sub_category}
+      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
     </Typography>,
   ];
   const filter_services = servicesData.sub_services.filter(
     (item) => item.type === router.query.type
   );
+  const main_category = filter_services[0];
   return (
     <ServicesSubCategoryContainer>
       <ProductSubCategoryWrapper>
@@ -42,10 +45,9 @@ const ServicesSubCategory = () => {
           <Breadcrumb color={"#fff"} breadcrumbs={breadcrumbs} />
         </ProductBreadcrumbWrapper>
         <AnimationBar
-          title="Web Development"
-          icon={"websiteSvg"}
+          icon={main_category?.icon}
           color={"#fff"}
-          description="We have successfully tied partnerships with global leaders in technology, advertising and building frameworks harnessing best practices to enhance the dependability of our solutions and offerings."
+          description={t("featureDescription")}
           headingColor={"#fff"}
           descriptionColor={"#fff"}
         />

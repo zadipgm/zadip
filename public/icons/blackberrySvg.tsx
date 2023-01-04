@@ -1,4 +1,4 @@
-const WebsiteSvg = ({
+const BlackBerrySvg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -23,4 +23,4 @@ const WebsiteSvg = ({
     </svg>
   );
 };
-export default WebsiteSvg;
+export default BlackBerrySvg;

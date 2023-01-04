@@ -21,7 +21,9 @@ import {
   RetweetWrapper,
 } from "./styled.components";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
+import { useTranslation } from "react-i18next";
 const TwitterSliderSection = () => {
+  const { t } = useTranslation();
   const postData = [
     {
       title: "zadipgroup",
@@ -103,7 +105,7 @@ const TwitterSliderSection = () => {
   return (
     <TwitterSliderContainer>
       <AnimationBar
-        title={"Zadip news Feed"}
+        title={`${t("zadipnewsFeed")}`}
         description={""}
         headingColor={"#2193b0"}
         descriptionColor={""}
@@ -136,20 +138,20 @@ const TwitterSliderSection = () => {
                 </TwitterIconWrapper>
                 <RetweetContainer>
                   <FollowLink href="https://twitter.com/intent/follow?original_referer=&screen_name=zadipgroup&tw_p=followbutton&variant=2.0">
-                    <TwitterIcon /> Follow
+                    <TwitterIcon /> {t("twitter")}
                   </FollowLink>
                   <RetweetWrapper>
                     <Link href="https://twitter.com/intent/tweet?in_reply_to=1597907992955215872">
                       <ReplyIcon />
-                      Reply
+                      {t("replay")}
                     </Link>
                     <Link href="https://twitter.com/intent/retweet?tweet_id=1597907992955215872">
                       <RepeatIcon />
-                      Retweet
+                      {t("retweet")}
                     </Link>
                     <Link href="https://twitter.com/intent/favorite?tweet_id=1597907992955215872">
                       <GradeIcon />
-                      Favorite
+                      {t("favourite")}
                     </Link>
                   </RetweetWrapper>
                 </RetweetContainer>

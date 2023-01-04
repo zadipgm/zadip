@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const  SliderContainer = styled.div<{locale:string}>`
      
@@ -68,6 +68,14 @@ border-radius: 100%;
 `
 export const SliderWrapper = styled.div`
 &.recent-news{
+    ${({ theme }) =>
+    theme.isLTR
+    ? css`
+        direction:ltr ;
+        `
+    : css`
+    direction:rtl ;
+    `}
     display:flex !important ;
     @media (max-width: 600px) {
          display:block !important ;
@@ -76,18 +84,20 @@ export const SliderWrapper = styled.div`
         background: transparent;
          }
         }
- justify-content:center ;
+justify-content: flex-start; ;
  margin: 40px 20px;
      background: #fff;
     border-radius: 25px;
     cursor: pointer;
     transition: .5s;
     :hover{
+       > h4{
+            color: #fff;
+        }
         background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
-        color: #fff;
         transition: .5s;
-            transform: translateY(-5px);
-            box-shadow: -3px 4px 15px 9px rgba(148,148,148,0.47);
+        transform: translateY(-5px);
+        box-shadow: -3px 4px 15px 9px rgba(148,148,148,0.47);
     }
 }
 
@@ -108,15 +118,15 @@ export const SliderWrapper = styled.div`
     &.our-value-slider{
         > img{
             width: 100%;
-    height: 100%;
+            height: 100%;
         }
     }
 `
 export const Image= styled.img``
 export const Title = styled.h4`
-    margin: 25px;
     font-weight: 700;
-    letter-spacing: 0.6px;
-
+    text-align: start;
+    margin: 0px 12px;
+    color:#34495e ;
     `
 

@@ -14,9 +14,11 @@ import {
   DetailsWrapper,
 } from "./styled.components";
 import RelatedProducts from "../RelatedSection";
+import { useTranslation } from "react-i18next";
 interface IRelated {
   id?: number;
-  title?: string;
+  title_en?: string;
+  title_ar?: string;
   icon?: string;
   description?: string;
   link?: string;
@@ -26,12 +28,13 @@ interface IRelated {
 }
 interface ITechnical_specs {
   id?: number;
-  name?: string;
+  name_en?: string;
+  name_ar?: string;
   icon?: string;
   description?: string;
 }
 interface IProps {
-  title: string;
+  title: string | undefined;
   page: string;
   image: string;
   filterRelatedData: IRelated[];
@@ -48,13 +51,14 @@ const DetailsComponent: React.FC<IProps> = ({
 }) => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
+  const { t } = useTranslation();
   const query = router?.query?.sub_category;
   const data = detailsPageData.all.filter((item) =>
     item.link.includes(query as string)
   );
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      Home
+      {t("home")}
     </Links>,
     <Links
       underline="hover"
@@ -62,7 +66,7 @@ const DetailsComponent: React.FC<IProps> = ({
       color="inherit"
       href={`/${locale}/${page}`}
     >
-      {page}
+      {page === "products" ? `${t("products")}` : page}
     </Links>,
     <Links
       underline="hover"
@@ -70,7 +74,7 @@ const DetailsComponent: React.FC<IProps> = ({
       color="inherit"
       href={`/${locale}/${page}/${router?.query?.sub_category}?type=${router.query.detail}`}
     >
-      {router.query.sub_category}
+      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
     </Links>,
   ];
   return (
@@ -78,7 +82,7 @@ const DetailsComponent: React.FC<IProps> = ({
       <PageBreadCrumbWrapper>
         <GoBackButton onClick={() => router.back()}>
           <KeyboardBackspaceIcon />
-          Go Back
+          {t("goBack")}
         </GoBackButton>
         <Breadcrumb color="#0196e3" breadcrumbs={breadcrumbs} />
       </PageBreadCrumbWrapper>
@@ -89,11 +93,7 @@ const DetailsComponent: React.FC<IProps> = ({
         page={page}
       />
 
-      <RelatedProducts
-        relatedData={filterRelatedData}
-        title={`Related ${page}`}
-        page={page}
-      />
+      <RelatedProducts relatedData={filterRelatedData} page={page} />
     </DetailsWrapper>
   );
 };

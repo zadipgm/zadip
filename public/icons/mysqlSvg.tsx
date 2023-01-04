@@ -1,4 +1,4 @@
-const WrenchSvg = ({
+const MsqlSvg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -17,4 +17,4 @@ const WrenchSvg = ({
     </svg>
   );
 };
-export default WrenchSvg;
+export default MsqlSvg;

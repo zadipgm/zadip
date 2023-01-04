@@ -4,7 +4,10 @@ import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-
+import { Cairo } from "@next/font/google";
+import theme from "../global/theme";
+import { useRouter } from "next/router";
+import { ThemeProvider } from "styled-components";
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -13,8 +16,24 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+const roboto = Cairo({
+  weight: "400",
+  subsets: ["arabic"],
+});
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const router = useRouter();
+  const { locale } = router;
   const getLayout = Component.getLayout ?? ((page) => page);
+  const arLocalStrings = import("../locales/ar");
+  const enLocalStrings = import("../locales/en");
+
+  const translations = locale === "ar" ? arLocalStrings : enLocalStrings;
+  theme.direction = locale === "ar" ? "rtl" : "ltr";
+  // @ts-ignore
+  theme.translations = translations;
+  theme.isLTR = locale === "en-US";
+  theme.isRTL = locale === "ar";
+  theme.locale = locale === "en-US" ? "en-US" : "ar";
 
   return getLayout(
     <>
@@ -25,7 +44,12 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           href="https://www.zadip.com/en/favicons/favicon_96x96.png"
         />
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <div className={roboto.className}>
+          <Component {...pageProps} />
+        </div>
+      </ThemeProvider>
     </>
   );
-}
+};
+export default MyApp;

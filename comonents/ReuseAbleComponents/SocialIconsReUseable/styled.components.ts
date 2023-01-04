@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const SocialIconsWrapper =styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 61px;
+    &.about-page{
+    gap:10px;
+    justify-content:center ;
+    }
 > svg{
 &.facebook{
   

@@ -1,4 +1,4 @@
-const UsersSvg = ({
+const SharePointSVg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -22,4 +22,4 @@ const UsersSvg = ({
     </svg>
   );
 };
-export default UsersSvg;
+export default SharePointSVg;

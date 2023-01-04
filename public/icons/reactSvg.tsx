@@ -1,4 +1,4 @@
-const SoftwareSolutionSvg = ({
+const ReactSvg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -21,4 +21,4 @@ const SoftwareSolutionSvg = ({
     </svg>
   );
 };
-export default SoftwareSolutionSvg;
+export default ReactSvg;

@@ -50,8 +50,8 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
   };
   const navItems = [
     { name: "home", link: "/" },
-    { name: "Product", link: `/products` },
-    { name: "Services", link: `/services` },
+    { name: "products", link: `/products` },
+    { name: "services", link: `/services` },
     { name: "About Us", link: "/about-us" },
   ];
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -94,14 +94,16 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
     <>
       <HeaderWrapper
         headerBgColor={
-          router.pathname === "/" ? "rgba(13, 74, 118, 0.15)" : "#006791"
+          router.pathname === "/"
+            ? "rgba(13, 74, 118, 0.15)"
+            : "linear-gradient(-30deg,#0576bc 30%,#38b7ae)"
         }
       >
         <Box sx={{ display: "flex" }}>
           <AppBar component="nav" id="navbar">
             <Toolbar>
               <IconButton
-                color="inherit"
+                color="default"
                 aria-label="open drawer"
                 edge="start"
                 onClick={handleDrawerToggle}

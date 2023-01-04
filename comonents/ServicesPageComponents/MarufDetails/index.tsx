@@ -33,13 +33,15 @@ import { useRouter } from "next/router";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import HighLightProductSection from "../../homePageComponents/HighLightProductSection";
 import VedioComponent from "../../ReuseAbleComponents/Vedio";
+import { useTranslation } from "react-i18next";
 
 const MuarefDetails = () => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
+  const { t } = useTranslation();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      Home
+      {t("home")}
     </Links>,
     <Links
       underline="hover"
@@ -47,7 +49,7 @@ const MuarefDetails = () => {
       color="inherit"
       href={`/${locale}/${"services"}`}
     >
-      {"services"}
+      {t("services")}
     </Links>,
     <Links
       underline="hover"
@@ -57,7 +59,7 @@ const MuarefDetails = () => {
         router.query.detail
       }`}
     >
-      {router.query.sub_category}
+      {(router.query?.sub_category as string).replaceAll("_", " ")}
     </Links>,
   ];
   return (
@@ -65,43 +67,32 @@ const MuarefDetails = () => {
       <PageBreadCrumbWrapper>
         <GoBackButton onClick={() => router.back()}>
           <KeyboardBackspaceIcon />
-          Go Back
+          {t("goBack")}
         </GoBackButton>
         <Breadcrumb color="#0196e3" breadcrumbs={breadcrumbs} />
       </PageBreadCrumbWrapper>
       <AnimationBar
-        title={"Muaref QR"}
-        description={"Goodbye Biometric Devices!"}
+        title={`${t("muarefQR")}`}
+        description={`${t("goodbyebiometric")}`}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
       />
       <MuarefSectionContainer>
         <VedioComponent />
-        <Description>
-          Keep your workspace safe for yourself and others. Muaref is our QR
-          based attendance system that seamlessly links with Ektefa and all our
-          cloud solutions to provide safe and contactless attendance technology.
-          <br></br>
-          Using <strong>Muaref</strong> with your{" "}
-          <a href="https://ektefa.net">Ektefa</a> Ektefa mobile application to
-          mark attendance, you don't even need to select Check-In or Check-Out,
-          the system will do it for you. Your attendance is updared and
-          reflected in front of you within seconds.
-        </Description>{" "}
+        <Description
+          dangerouslySetInnerHTML={{ __html: `${t("maurefdescription")}` }}
+        ></Description>{" "}
       </MuarefSectionContainer>
       <MuarefCompatibleWrapper>
         <MuarefBGImage>
-          <Text>100% COMPATIBLE WITH</Text>
+          <Text>{t("compatible")}</Text>
           <Image
             src="https://www.zadip.com/en/images/products/muaref/ektefa.png"
             alt="ektef"
             width={178}
             height={58}
           />
-          <MuarefDescription>
-            Muaref if completely compatible with Ektefa - the premium Human
-            Resources Management System.{" "}
-          </MuarefDescription>
+          <MuarefDescription>{t("compatibleDescription")}</MuarefDescription>
         </MuarefBGImage>
         <MuarefCompatibleWrapper>
           <Link href="https://play.google.com/store/apps/details?id=com.zadip.muaref">
@@ -117,7 +108,7 @@ const MuarefDetails = () => {
       <ValuedWrapper>
         <ValuedDistributors>
           <AnimationBar
-            title={"Valued Distributors"}
+            title={`${t("valuedDistributors")}`}
             description={""}
             headingColor={"#2193b0"}
             descriptionColor={"#737c85"}
@@ -129,8 +120,7 @@ const MuarefDetails = () => {
                 alt="tecs"
               />
               <ValueLink href="https://www.techsup.co/" target={"_blank"}>
-                {" "}
-                Techsup Marketing Support Co.{" "}
+                {t("techSup")}
               </ValueLink>
             </ImageWrapper>
             <ImageWrapper>
@@ -140,7 +130,7 @@ const MuarefDetails = () => {
               />
               <ValueLink href="https://www.techsup.co/" target={"_blank"}>
                 {" "}
-                HR Gate.{" "}
+                {t("hrGate")}
               </ValueLink>
             </ImageWrapper>
           </Wrapper>

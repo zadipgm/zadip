@@ -10,6 +10,13 @@ margin:0 auto ;
 `
 
 export const AboutusWrapper = styled.div`
+h3{
+        margin-top: 0;
+    margin-bottom: 36px;
+    font-size: 48px;
+    line-height: 44px;
+    color: #2193b0;
+}
 display: flex;
 justify-content: center;
 align-items: center;
@@ -26,6 +33,7 @@ color:#737c85;
     word-break: break-all;
 `
 export const AboutusImage = styled.img`
+border-radius:10px ;
  @media (max-width: 600px) {
   width:100% ;
 
@@ -45,7 +53,7 @@ margin-top:100px ;
       }
 `
 export const AboutHeading = styled.h2`
-color: #737c85;
+color: #2193b0;
 `
 
 export const OurHistory = styled.div`
@@ -97,7 +105,7 @@ align-items:center ;
 margin: 30px 0px;
 @media (max-width: 600px) {
   display:block ;
-
+width:100% ;
       }
 
 
@@ -105,6 +113,7 @@ margin: 30px 0px;
 `
 export const TeamCradsWrapper =styled.div`
 text-align:center ;
+    width: 30%;
 transition: .5s;
     box-shadow: 0px 3px 24px rgb(0 0 0 / 20%);
 margin: 15px;
@@ -112,12 +121,23 @@ padding: 15px;
 border-radius: 20px;
 cursor: pointer;
 transition: .5s;
+a {
+    display:flex ;
+    justify-content:center ;
+    align-items:center ;
+    .icon{
+        margin: 12px;
+        width: 30px;
+    height: 30px;
+    }
+}
 >img{
     border-radius:100% ;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
 }
+
 :hover{
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    background: linear-gradient(-30deg,#11aeff 30%,#397e7a);
 color: #fff;
 transition: .5s;
 transform: translateY(-10px);
@@ -126,22 +146,24 @@ svg{
     fill:#fff
 }
 img{
-    border: 2px solid #23bdb8;
+    border: 3px solid #fff;
 }
-&.info{
-    border-radius: 1px;
+& .information{
+    background: linear-gradient(135deg,#23bdb8,#43e794);
 }
 p{
     color:#fff ;
 }
+
 }
 `
 export const TeamInfo =styled.div`
-background: linear-gradient(135deg,#23bdb8,#43e794);
 
+background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
 border-radius: 75px;
 margin: 25px 10px;
 transition: .5s;
+
 `
 export const InfoTitle =styled.h4`
 font-size: 18px;
@@ -153,6 +175,9 @@ color: #fff;
 font-size: 13px;
 `
 export const SocialIcons =styled.div`
+display: flex;
+    justify-content: center;
+    align-items: center;
 svg{
 margin:6px ;
 }
@@ -198,6 +223,7 @@ color: #fff;
 transition: .5s;
 transform: translateY(-10px);
 box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+
 h5{
 color:#fff ;
 }

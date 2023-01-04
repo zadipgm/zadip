@@ -3,9 +3,12 @@ import FacebookSvg from "../../../public/icons/facebookSvg";
 import LinkedInSvg from "../../../public/icons/linkedinSvg";
 import TwitterSvg from "../../../public/icons/twitterSvg";
 import { SocialIconsWrapper } from "./styled.components";
-const SocialIcons = () => {
+interface ISocial {
+  classname?: string;
+}
+const SocialIconsReUseable: React.FC<ISocial> = ({ classname }) => {
   return (
-    <SocialIconsWrapper>
+    <SocialIconsWrapper className={classname}>
       <FacebookSvg
         className="facebook"
         width="20px"
@@ -22,4 +25,4 @@ const SocialIcons = () => {
     </SocialIconsWrapper>
   );
 };
-export default SocialIcons;
+export default SocialIconsReUseable;

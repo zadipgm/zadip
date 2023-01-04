@@ -26,11 +26,16 @@ import {
 import Link from "next/link";
 import SearchSvg from "../../../public/icons/searchSvg";
 import DownLoadButton from "../DownLoadButton";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
 interface ICategory {
   id?: number;
-  title: string;
+  title_en?: string;
+  title_ar?: string;
   icon?: string;
-  description: string;
+  description_en?: string;
+  description_ar?: string;
   link?: string;
   type?: string;
   specs?: boolean;
@@ -43,8 +48,10 @@ interface IProps {
 const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
   const { locale } = React.useContext(LocaleContext);
   const imagePerRow = 6;
+  const { t } = useTranslation();
   const [next, setNext] = React.useState(imagePerRow);
   const [search, setSearch] = React.useState("");
+  const { isLTR } = useTheme();
   const handleMoreImage = () => {
     setNext(next + imagePerRow);
   };
@@ -54,8 +61,11 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
     setSearch(value);
   };
   const filteredCategorys = sub_categories.filter(
-    (product: { title: string }) => {
-      return product.title.toLowerCase().includes(search.toLowerCase());
+    (product: { title_en?: string; title_ar?: string }) => {
+      return (
+        product?.title_en?.toLowerCase().includes(search.toLowerCase()) ||
+        product?.title_ar?.toLowerCase().includes(search.toLowerCase())
+      );
     }
   );
   return (
@@ -64,7 +74,7 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
         <Input
           type={"search"}
           value={search}
-          placeholder={`Search ${page}....`}
+          placeholder={`${t("serchProducts")}`}
           onChange={(e) => serchHandler(e)}
         />
         <SearchSvgWrapper>
@@ -89,16 +99,20 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
                     width={328}
                     height={218}
                   />
-                  <CategoryCardsTitle>{item.title}</CategoryCardsTitle>
-                  <CategoryCardsDescription>
-                    {item.description}
-                  </CategoryCardsDescription>
+                  <CategoryCardsTitle>
+                    {isLTR ? item.title_en : item.title_ar}
+                  </CategoryCardsTitle>
+                  {/* <CategoryCardsDescription>
+                    {isLTR ? item.description_en : item.description_ar}
+                  </CategoryCardsDescription> */}
                   {item.specs && (
                     <OverLay>
                       <OverLayWrapper>
-                        <OverLayTitle>{item.title}</OverLayTitle>
+                        <OverLayTitle>
+                          {isLTR ? item.title_en : item.title_ar}
+                        </OverLayTitle>
                         <OverLaySubtitle>Hikvision</OverLaySubtitle>
-                        <DownLoadButton title={"Download"} />
+                        <DownLoadButton title={`${t("download")}`} />
                       </OverLayWrapper>
                     </OverLay>
                   )}
@@ -131,10 +145,10 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
                       />
                       <CardContent style={{ width: "313px" }}>
                         <Typography gutterBottom variant="h5" component="div">
-                          {item.title}
+                          {isLTR ? item.title_en : item.title_ar}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          {item.description}
+                          {isLTR ? item.description_en : item.description_ar}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -148,14 +162,14 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
               );
             })}
         </CardListWrapper>
-        {sub_categories.length > next ? (
-          <LoadMoreButton color="#fff" onClick={handleMoreImage}>
-            Load More
-          </LoadMoreButton>
-        ) : (
-          ""
-        )}
       </CategoryCardsItems>
+      {sub_categories.length > next ? (
+        <LoadMoreButton color="#fff" onClick={handleMoreImage}>
+          {t("loadMore")}
+        </LoadMoreButton>
+      ) : (
+        ""
+      )}
     </>
   );
 };

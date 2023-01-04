@@ -12,10 +12,12 @@ import i18n from "i18next";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useRouter } from "next/router";
+import { useTheme } from "styled-components";
 
 interface sliderDataProps {
   image: string;
-  description: string;
+  description_en: string;
+  description_ar: string;
   id?: number;
 }
 interface IProps {
@@ -36,6 +38,7 @@ const SliderSlick: React.FC<IProps> = ({
 }) => {
   const arrowForw = <ArrowForwardIosIcon color={"primary"} />;
   const arrowPrev = <ArrowBackIosIcon />;
+  const { isLTR } = useTheme();
   const router = useRouter();
   var settings = {
     dots: true,
@@ -87,7 +90,9 @@ const SliderSlick: React.FC<IProps> = ({
             <div key={item.id} onClick={() => router.push("/news-headlines")}>
               <SliderWrapper className={classname}>
                 <Image src={item.image} alt="" width={158} height={158} />
-                <Title>{item.description}</Title>
+                <Title>
+                  {isLTR ? item.description_en : item.description_ar}
+                </Title>
               </SliderWrapper>
             </div>
           );

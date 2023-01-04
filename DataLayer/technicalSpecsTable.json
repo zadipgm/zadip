@@ -28,29 +28,29 @@
 
     ],
     "features":[
-        {"id":1, "description": "Issuing the one-time exit and re-entry visa"},
-        {"id":2, "description": "Printing the exit and re-entry visa"},
-        {"id":3, "description": "Canceling the exit and re-entry visa"},
-        {"id":4, "description": "Extending the exit and re-entry visa"},
-        {"id":5, "description": "Issuing and printing final exit visa"},
-        {"id":6, "description": "Iqama issuance and renewal"},
-        {"id":7, "description": "Resident's data through the residency number"},
-        {"id":8, "description": "General data regarding any resident on your sponsorship"},
-        {"id":9, "description": "Information regarding driving licenses"},
-        {"id":10, "description": "Any fines for any resident on your sponsorship"},
-        {"id":10, "description": "About any resident by name"},
-        {"id":10, "description": "Exit and re-entry visa by residency number"}
+        {"id":1, "description_ar":"الطرود البريدية","description_en": "Issuing the one-time exit and re-entry visa"},
+        {"id":2, "description_ar":"تقارير الجوازات","description_en": "Printing the exit and re-entry visa"},
+        {"id":3, "description_ar":"تقرير الخدمات التفاعلية","description_en": "Canceling the exit and re-entry visa"},
+        {"id":4, "description_ar":"تقرير الاشتراكات","description_en": "Extending the exit and re-entry visa"},
+        {"id":5, "description_ar":"تقرير العمليات","description_en": "Issuing and printing final exit visa"},
+        {"id":6, "description_ar":"تقرير المدفوعات","description_en": "Iqama issuance and renewal"},
+        {"id":7, "description_ar":"البحث والاستعلام","description_en": "Resident's data through the residency number"},
+        {"id":8, "description_ar":"إصدار تأشيرة الخروج والعودةوإعادة طباعتها","description_en": "General data regarding any resident on your sponsorship"},
+        {"id":9, "description_ar":"إلغاء تأشيرة الخروج والعودة","description_en": "Information regarding driving licenses"},
+        {"id":10, "description_ar":"إصدار تأشيرة الخروج النهائي وإعادة طباعتها","description_en": "Any fines for any resident on your sponsorship"},
+        {"id":11, "description_ar":"إلغاء تأشيرة الخروج النهائي","description_en": "About any resident by name"},
+        {"id":12, "description_ar":"إصدار الإقامة","description_en": "Exit and re-entry visa by residency number"}
 
     ],
     "muaref_features":[
-        {"id":1, "description": "Real-time attendance marking and reporting","icon":"boltSvg"},
-        {"id":2, "description": "Support all major smart device platforms" ,"icon":"wrenchSvg"},
-        {"id":3, "description": "Save expenses made on biometric devices" ,"icon":"usersSvg"},
-        {"id":4, "description": "Multiple users can mark attendance at the same instant" ,"icon":"boltSvg"},
-        {"id":5, "description": "Issuing and printing final exit visa" ,"icon":"boltSvg"},
-        {"id":6, "description": "Iqama issuance and renewal" ,"icon":"hourglassSvg"},
-        {"id":7, "description": "Resident's data through the residency number" ,"icon":"wrenchSvg"},
-        {"id":8, "description": "General data regarding any resident on your sponsorship" ,"icon":"usersSvg"}
+        {"id":1, "description_ar":" سرعة في تسجيل الحضور والانصراف (لحظي) ","description_en": "Real-time attendance marking and reporting","icon":"boltSvg"},
+        {"id":2, "description_ar":" يدعم تطبيق الأجهزة الذكية ","description_en": "Support all major smart device platforms" ,"icon":"wrenchSvg"},
+        {"id":3, "description_ar":" يوفر عليك قيمه أجهزة البصمة ","description_en": "Save expenses made on biometric devices" ,"icon":"usersSvg"},
+        {"id":4, "description_ar":" لا يوجد داع لانتظار أجهزة البصمة لإرسال البصمات للنظام ","description_en": "Multiple users can mark attendance at the same instant" ,"icon":"boltSvg"},
+        {"id":5, "description_ar":" يمكن لأكثر من شخص تسجيل نفس الرمز في نفس الوقت ويفرق بينهم النظام ","description_en": "Issuing and printing final exit visa" ,"icon":"boltSvg"},
+        {"id":6, "description_ar":" يوفر عليك أجور تركيب أجهزة البصمة وسحب البصمات ","description_en": "Iqama issuance and renewal" ,"icon":"hourglassSvg"},
+        {"id":7, "description_ar":" يحمي افراد منشأتك من انتقال الأمراض المعدية بسبب اللمس ","description_en": "Resident's data through the residency number" ,"icon":"wrenchSvg"},
+        {"id":8, "description_ar":" يوفر عليك صيانة أجهزة البصمة ومشاكلها ","description_en": "General data regarding any resident on your sponsorship" ,"icon":"usersSvg"}
 
     ],
     "software_development":[
@@ -65,8 +65,8 @@
 
     ],
     "pricing_Data":[
-        {"name":"Number of Workers", "col1":"0-10", "col2":"10-30", "col3":"30-50", "col4":"50-70", "col5":"70-90", "col6":"90-110"},
-        {"name":"Cost in SAR (Annual)", "col1":"1100", "col2":"1200", "col3":"1300", "col4":"1400", "col5":"1500", "col6":"1600"}
+        {"name_ar":"الشرائح حسب عدد المقيمين","name_en":"Number of Workers", "col1":"0-10", "col2":"10-30", "col3":"30-50", "col4":"50-70", "col5":"70-90", "col6":"90-110"},
+        {"name_ar":"القيمة (ريال سعودي)","name_en":"Cost in SAR (Annual)", "col1":"1100", "col2":"1200", "col3":"1300", "col4":"1400", "col5":"1500", "col6":"1600"}
     ]
 
 }

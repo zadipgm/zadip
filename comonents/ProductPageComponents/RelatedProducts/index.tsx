@@ -10,11 +10,7 @@ const RelatedProducts = () => {
   );
   return (
     <>
-      <RelatedSection
-        title="Related Products"
-        relatedData={relatedCategories}
-        page={"products"}
-      />
+      <RelatedSection relatedData={relatedCategories} page={"products"} />
     </>
   );
 };

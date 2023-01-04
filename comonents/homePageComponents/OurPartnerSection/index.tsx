@@ -3,11 +3,13 @@ import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import SliderSlick from "../../ReuseAbleComponents/SlickSlider";
 import { OurPartnerSectionContainer } from "./styled.components";
 import partner from "../../../DataLayer/client.json";
+import { useTranslation } from "react-i18next";
 const OurPartnerSection = () => {
+  const { t } = useTranslation();
   return (
     <OurPartnerSectionContainer>
       <AnimationBar
-        title="Our Partners"
+        title={`${t("ourpartner")}`}
         description=""
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}

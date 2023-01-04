@@ -18,7 +18,7 @@ import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import { BreadCrumbWrapper } from "../AboutUS/styled.components";
-import SocialIcons from "../ReuseAbleComponents/SocialIcons";
+import SocialIcons from "../ReuseAbleComponents/SocialIconsReUseable";
 const News = () => {
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">

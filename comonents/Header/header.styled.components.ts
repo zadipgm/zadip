@@ -8,6 +8,7 @@ export const Link = styled.a`
   padding: 0px 8px;
 ` 
 export const HeaderLogo = styled.img`
+padding-top:12px ;
  @media (max-width: 600px) {
  display:flex ;
  justify-content:center ;
@@ -61,12 +62,14 @@ background-color: #34495E;
 background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
 `
 export const HeaderWrapper = styled.div<{headerBgColor:string}>`
+ 
 & .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root {
 top:unset;
+height: 100px;
 background: ${({headerBgColor})=>headerBgColor}; 
 color: rgba(17, 23, 21, 0.2);
 box-shadow: none;
-transition: .5s;
+transition: opacity 1s linear;
 
 & .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular{
 width:1170px ;
@@ -98,14 +101,39 @@ padding:5px 0px ;
 }
 
 &.scrolled {
-  background:#006791;
-  transition: .6s;
+  background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+  animation: gradient 15s ease infinite;
+  opacity:.9 ;
+  transition: opacity 2s linear;
       }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+    transition:.5s ;
+	}
+	50% {
+    transition:.5s ;
+		background-position: 100% 50%;
+	}
+	100% {
+    transition:.5s ;
+		background-position: 0% 50%;
+	}
 }
 
 .nav-items{
 text-decoration:none ;
 color:#fff ;
+padding: 10px 20px;
+border-radius:6px ;
+transition: .6s;
+font-family: '__Cairo_f3a025';
+:hover{
+    background-color:#60CBEF; ;
+    transition: .6s;
+  }
+
 }
 `
 export const LangButton = styled.a`

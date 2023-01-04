@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const LoadMoreButton = styled.button<{color:string}>`
 padding: 15px 30px ;
@@ -12,7 +12,7 @@ transition:.5s ease;
 font-size: 18px;
 font-weight: 600;
 width:250px ;
-margin: 0 auto ;
+margin: 50px auto ;
 justify-content: center;
 align-items: center;
 :hover{
@@ -148,8 +148,18 @@ width: 12%;
     justify-content: center;
     align-items: center;
     background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
-    border-top-right-radius: 10px;
+    
+    ${({ theme }) =>
+    theme.isLTR
+    ? css`
+      border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+        `
+    : css`
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+    `}
     svg{
         fill: #fff;
     }
@@ -177,7 +187,16 @@ width:88% ;
 margin:20px 0px  ;
 font-size:20px ;
 color:#474d52;
-border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 
+    ${({ theme }) =>
+    theme.isLTR
+    ? css`
+       border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+        `
+    : css`
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    `}
 `

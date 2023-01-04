@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import * as React from "react";
+import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
 import _data from "../../../DataLayer/product.json";
 
 import DetailsComponent from "../../ReuseAbleComponents/DetailsComponent";
@@ -13,14 +15,21 @@ const ProductDetails = () => {
   const filterRelatedProducts = _data.all.filter(
     (item) => item.type === router.query.detail
   );
-
+  const { isLTR } = useTheme();
+  const { t } = useTranslation();
   return (
     <>
       <DetailsComponent
-        title={filterProducts[0]?.title}
+        title={
+          isLTR ? filterProducts[0]?.title_en : filterProducts[0]?.title_ar
+        }
         page={"products"}
         image={filterProducts[0]?.image}
-        description={filterProducts[0]?.detail_description}
+        description={
+          isLTR
+            ? filterProducts[0]?.detail_description_en
+            : filterProducts[0]?.detail_description_ar
+        }
         filterRelatedData={filterRelatedProducts}
         technical_specs={filterProducts[0]?.technical_specs}
       />

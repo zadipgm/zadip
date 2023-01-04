@@ -4,7 +4,7 @@
 
 
 export const TechnicalSpecsMainPage = styled.div`
-margin-top:80px ;
+    margin-top: 105px;
 
 `
 export const SpecsContainer = styled.div`
@@ -44,6 +44,9 @@ overflow: visible;
       transition: all 0.5s ease-in;
       color:#fff ;
       background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+      div{
+        color:#fff ;
+      }
       svg{
         fill:#fff;
         
@@ -79,6 +82,10 @@ display: flex;
     gap: 4px;
     word-break:break-all ;
     text-align: justify;
+    color:#737c85 ;
+    :hover{
+      color:#fff ;
+    }
 
 `
 export const TechSpecsTitle = styled.h3`

@@ -47,7 +47,7 @@ padding: 15px;
 `
 
 export const Title = styled.h3`
-color: #2afff0 ;
+color: #2193b0 ;
     text-transform: none;
 font-size: 26px;
 font-weight:600 ;

@@ -1,4 +1,4 @@
-const SurvillenceSvg = ({
+const AspNetSvg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -17,4 +17,4 @@ const SurvillenceSvg = ({
     </svg>
   );
 };
-export default SurvillenceSvg;
+export default AspNetSvg;

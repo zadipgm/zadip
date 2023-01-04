@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 export const DetailsWrapper  = styled.div`
 width:1170px ;
-margin: 0 auto;
+margin: 80px auto;
 @media(max-width:600px){
        width:100% ;
     }
@@ -36,8 +36,17 @@ export const DetailTitle = styled.h1`
     color: #0196e3;
     transition:.5s ;
     cursor: pointer;
+    
     svg {
       margin:0px 6px ;
+      ${({ theme }) =>
+    theme.isLTR
+    ? css`
+        
+        `
+    : css`
+    transform: rotate(180deg);
+    `}
     }
     :hover{
       transition:.5s ;

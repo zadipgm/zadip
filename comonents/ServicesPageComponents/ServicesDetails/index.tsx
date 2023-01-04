@@ -22,6 +22,8 @@ import {
 import LocaleContext from "../../../LocaleContext";
 
 import Breadcrumb from "../../ReuseAbleComponents/Breadcrumb";
+import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
 interface IProps {
   page: string;
 }
@@ -36,11 +38,13 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
     (item) => item.type === router.query.detail
   );
   const filterSpecificItem = filterServices.filter(
-    (item) => item.link === `/${type}`
+    (item) => item.link === `${type}`
   );
+  const { t } = useTranslation();
+  const { isLTR } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      Home
+      {t("home")}
     </Links>,
     <Links
       underline="hover"
@@ -48,7 +52,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
       color="inherit"
       href={`/${locale}/${"services"}`}
     >
-      {"services"}
+      {t("services")}
     </Links>,
     <Links
       underline="hover"
@@ -58,7 +62,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
         router.query.detail
       }`}
     >
-      {router.query.sub_category}
+      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
     </Links>,
   ];
   return (
@@ -73,11 +77,17 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
       type === "servers_storage" ||
       type === "cadre" ? (
         <DetailsComponent
-          title={filterServices[0]?.title}
-          page={"services"}
+          title={
+            isLTR ? filterServices[0]?.title_en : filterServices[0]?.title_ar
+          }
+          page={t("services")}
           image={filterServices[0]?.image}
           filterRelatedData={filterRelatedServices}
-          description={filterSpecificItem[0]?.detail_description}
+          description={
+            isLTR
+              ? filterSpecificItem[0]?.detail_description_en
+              : filterSpecificItem[0]?.detail_description_ar
+          }
           technical_specs={filterServices[0]?.technical_specs}
         />
       ) : (
@@ -91,56 +101,133 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
           <PageBreadCrumbWrapper>
             <GoBackButton onClick={() => router.back()}>
               <KeyboardBackspaceIcon />
-              Go Back
+              {t("goBack")}
             </GoBackButton>
             <Breadcrumb color="#0196e3" breadcrumbs={breadcrumbs} />
           </PageBreadCrumbWrapper>
           <AnimationBar
-            title={`${type} Advantages`}
+            title={
+              type === "tam"
+                ? isLTR
+                  ? "Tam Advantages"
+                  : "باقة تم مميزات "
+                : type === "masarat"
+                ? isLTR
+                  ? "Masarat Advantages"
+                  : "خدمة مسارات"
+                : type === "muqeem"
+                ? isLTR
+                  ? "Muqeem Advantages"
+                  : "باقة مقيم مميزات "
+                : ""
+            }
             description={""}
             headingColor={"#2193b0"}
             descriptionColor={"#737c85;"}
           />
           <ServicesAdvantageSection />
           <AnimationBar
-            title={"Pricing Packages"}
+            title={`${t("pricingPackages")}`}
             description={""}
             headingColor={"#2193b0"}
             descriptionColor={""}
           />
           <PricingTable
-            title={`${type} Shamel`}
+            title={
+              type === "tam"
+                ? isLTR
+                  ? "Tam Shamel"
+                  : "باقة تم شامل"
+                : type === "masarat"
+                ? isLTR
+                  ? "Masarat Shamel"
+                  : "خدمة مسارات"
+                : type === "muqeem"
+                ? isLTR
+                  ? "Muqeem Shamel"
+                  : "باقة مقيم شامل"
+                : ""
+            }
             data={specs_data.pricing_Data}
             classname={""}
-            condition={
-              "This packages provides unlimited transactions for all resident workers working in the establishment by the authorized entity or person within this establishment for an annual subscription with a one-time payment."
-            }
+            condition={`${t("conditions")}`}
           />
           <PricingTable
-            title={`${type} Amalyat`}
+            title={
+              type === "tam"
+                ? isLTR
+                  ? "Tam Amalyat"
+                  : "باقة تم عمليات"
+                : type === "masarat"
+                ? isLTR
+                  ? "Masarat Amalyat"
+                  : "خدمة مسارات"
+                : type === "muqeem"
+                ? isLTR
+                  ? "Muqeem Amalyat"
+                  : "باقة مقيم عمليات"
+                : ""
+            }
             classname={"direction"}
             data={specs_data.pricing_Data}
-            condition={
-              "This packages provides unlimited transactions for all resident workers working in the establishment by the authorized entity or person within this establishment for an annual subscription with a one-time payment."
-            }
+            condition={`${t("conditions")}`}
           />
           <TechnicalSpecsTable
             data={specs_data.features}
             title={"Features"}
             page={"services"}
           />
-          <AnimationBar
-            title={"Supporting Documents"}
-            description={""}
-            headingColor={"#2193b0"}
-            descriptionColor={""}
+
+          <>
+            <AnimationBar
+              title={`${t("supportingDocuments")}`}
+              description={""}
+              headingColor={"#2193b0"}
+              descriptionColor={""}
+            />
+            <ButtonsWrapper>
+              <DownLoadButton
+                title={
+                  type === "tam"
+                    ? isLTR
+                      ? "Tam Priclist"
+                      : " تم قائمة الاسعار"
+                    : type === "masarat"
+                    ? isLTR
+                      ? "Masarat Priclist"
+                      : " قائمة الاسعار مسارات"
+                    : type === "muqeem"
+                    ? isLTR
+                      ? "Muqeem Priclist"
+                      : " مقيم قائمة الاسعار"
+                    : ""
+                }
+              />
+              <DownLoadButton
+                title={
+                  type === "tam"
+                    ? isLTR
+                      ? "Tam Subscription Form"
+                      : " تم  نموذج الاشتراك"
+                    : type === "masarat"
+                    ? isLTR
+                      ? "Masarat Subscription Form"
+                      : "  نموذج الاشتراك مسارات"
+                    : type === "muqeem"
+                    ? isLTR
+                      ? "Muqeem Subscription Form"
+                      : " مقيم  نموذج الاشتراك"
+                    : ""
+                }
+              />
+              <DownLoadButton title={`${t("editdeletform")}`} />
+            </ButtonsWrapper>
+          </>
+
+          <OrderNowForm
+            title={`${t("orderNow")}`}
+            buttonTitle={`${t("sendOrder")}`}
           />
-          <ButtonsWrapper>
-            <DownLoadButton title={`${type} Priclist`} />
-            <DownLoadButton title={`${type} Subscription Form`} />
-            <DownLoadButton title=" Edit or Delete User Form " />
-          </ButtonsWrapper>
-          <OrderNowForm title="Order Now" buttonTitle={"Send Order"} />
           <RelatedServices />
         </div>
       ) : (

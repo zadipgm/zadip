@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import * as React from "react";
+import { useTheme } from "styled-components";
 import {
   AnimationBarContainer,
   Title,
@@ -7,7 +8,7 @@ import {
   DesCription,
 } from "./styled.components";
 interface IProps {
-  title: string | undefined;
+  title?: string | undefined;
   description: string;
   icon?: string;
   color?: string;
@@ -35,6 +36,8 @@ const AnimationBar: React.FC<IProps> = ({
       return mod.default;
     })
   );
+  const { locale, isLTR, isRTL, translations } = useTheme();
+
   return (
     <AnimationBarContainer>
       <Icon fill={color ?? ""} width={"100px"} height={"100px"} />

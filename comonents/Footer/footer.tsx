@@ -34,7 +34,9 @@ import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <>
       <FooterContanerThree className="footer">
@@ -42,35 +44,29 @@ const Footer = () => {
           <FooterContanerThreeRow className="row">
             <FooterContanerThreeCol className="footer-col">
               <FooterContanerThreeHeading>
-                Quick Links
+                {t("quickLinks")}
               </FooterContanerThreeHeading>
               <FooterContanerThreeUL>
                 <FooterContanerThreeLI>
-                  <Link href="#">Nafeth</Link>
+                  <Link href="#">{t("featureTitleEktefa")}</Link>
                 </FooterContanerThreeLI>
                 <FooterContanerThreeLI>
-                  <Link href="#">Ektefa</Link>
+                  <Link href="#">{t("featureTitleNafeth")}</Link>
                 </FooterContanerThreeLI>
                 <FooterContanerThreeLI>
-                  <Link href="#">eGov Services Portal</Link>
-                </FooterContanerThreeLI>
-                <FooterContanerThreeLI>
-                  <Link href="/products">Products</Link>
-                </FooterContanerThreeLI>
-                <FooterContanerThreeLI>
-                  <Link href="/services">Services</Link>
+                  <Link href="#">{t("egovService")}</Link>
                 </FooterContanerThreeLI>
               </FooterContanerThreeUL>
             </FooterContanerThreeCol>
             <FooterContanerThreeCol className="footer-col">
               <FooterContanerThreeHeading>
-                Contact US
+                {t("contactUs")}
               </FooterContanerThreeHeading>
               <FooterContanerThreeUL>
                 <FooterContanerThreeLI>
                   <Link href="#">
-                    <MyLocationOutlinedIcon fontSize={"small"} /> Prince Fahad
-                    Bin Ibrahim Al-Saud Road, Malaz, Riyadh
+                    <MyLocationOutlinedIcon fontSize={"small"} />
+                    {t("location")}
                   </Link>
                 </FooterContanerThreeLI>
                 <FooterContanerThreeLI>
@@ -85,14 +81,16 @@ const Footer = () => {
                 </FooterContanerThreeLI>
                 <FooterContanerThreeLI>
                   <Link href="#">
-                    <CloudDownloadOutlinedIcon fontSize={"small"} /> Download
-                    Company Profile
+                    <CloudDownloadOutlinedIcon fontSize={"small"} />{" "}
+                    {t("downloadComapnyPRofile")}
                   </Link>
                 </FooterContanerThreeLI>
               </FooterContanerThreeUL>
             </FooterContanerThreeCol>
             <FooterContanerThreeCol className="footer-col">
-              <FooterContanerThreeHeading>Follow Us</FooterContanerThreeHeading>
+              <FooterContanerThreeHeading>
+                {t("followUs")}
+              </FooterContanerThreeHeading>
               <FooterContanerThreeSocialLink className="social-link">
                 <Link href="#">
                   <TwitterIcon />
@@ -111,8 +109,8 @@ const Footer = () => {
           </FooterContanerThreeRow>
         </FooterContanerThreeWrapper>
         <FooterCopyRights>
-          © 2008 - 2022 ZADIP Group, All Rights Reserved. |{" "}
-          <a href="#">Privacy Policy</a>
+          © 2008 - 2022 {t("zadipGroups")}, {t("allRightsReserved")}. |{" "}
+          <a href="#">{t("privacyPolicy")}</a>
         </FooterCopyRights>
       </FooterContanerThree>
     </>
