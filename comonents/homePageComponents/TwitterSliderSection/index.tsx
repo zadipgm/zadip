@@ -143,7 +143,7 @@ const TwitterSliderSection = () => {
                   <RetweetWrapper>
                     <Link href="https://twitter.com/intent/tweet?in_reply_to=1597907992955215872">
                       <ReplyIcon />
-                      {t("replay")}
+                      {t("reply")}
                     </Link>
                     <Link href="https://twitter.com/intent/retweet?tweet_id=1597907992955215872">
                       <RepeatIcon />
