@@ -1,54 +1,54 @@
 {
     "our_clients": [
-      {  "id":1,
+      {  "id":"1",
         "image":"https://zadip.com/images/clients/adel.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":2,
+      {  "id":"2",
         "image":"https://zadip.com/images/clients/americana.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":3,
+      {  "id":"3",
         "image":"https://zadip.com/images/clients/dawa.jpg",
         "description_en": "",
         "description_ar": ""
       
       },
-      {  "id":4,
+      {  "id":"4",
         "image":"https://zadip.com/images/clients/fanar.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":5,
+      {  "id":"5",
         "image":"https://zadip.com/images/clients/fayha.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":6,
+      {  "id":"6",
         "image":"https://zadip.com/images/clients/americana.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":7,
+      {  "id":"7",
         "image":"https://zadip.com/images/clients/dawa.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":8,
+      {  "id":"8",
         "image":"https://zadip.com/images/clients/fanar.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":9,
+      {  "id":"9",
         "image":"https://zadip.com/images/clients/fayha.jpg",
         "description_en": "",
         "description_ar": ""
@@ -60,38 +60,38 @@
 
     
     "partners" : [
-      {"id":5,
+      {"id":"5",
         "image": "https://zadip.com/images/partners/cisco.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":6,
+      {"id":"6",
         "image": "https://zadip.com/images/partners/elm.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":7,
+      {"id":"7",
         "image": "https://zadip.com/images/partners/hdl.jpg",
          "description_en": "",
         "description_ar": ""
       },
   
-      {"id":8,
+      {"id":"8",
         "image": "https://zadip.com/images/partners/quantum.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":9,
+      {"id":"9",
         "image": "https://zadip.com/images/partners/granding.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":10,
+      {"id":"10",
         "image": "https://zadip.com/images/partners/vmware.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":11,
+      {"id":"11",
         "image": "https://zadip.com/images/partners/aqeel.jpg",
          "description_en": "",
         "description_ar": ""
@@ -102,43 +102,43 @@
 
     
     "our_value" : [
-      {"id":1,
+      {"id":"1",
         "image": "https://zadip.com/images/values/1.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":2,
+      {"id":"2",
         "image": "https://zadip.com/images/values/4.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":3,
+      {"id":"3",
         "image": "https://zadip.com/images/values/5.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":4,
+      {"id":"4",
         "image": "https://zadip.com/images/values/6.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":5,
+      {"id":"5",
         "image": "https://zadip.com/images/values/8.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":6,
+      {"id":"6",
         "image": "https://zadip.com/images/values/9.jpg",
          "description_en": "",
         "description_ar": ""
       },
-      {"id":7,
+      {"id":"7",
         "image": "https://zadip.com/images/values/10.jpg",
          "description_en": "",
         "description_ar": ""
       },
   
-      {"id":8,
+      {"id":"8",
         "image": "https://zadip.com/images/values/2.jpg",
          "description_en": "",
         "description_ar": ""
@@ -147,7 +147,7 @@
     ],
     "our_team":[
       {
-        "id":1,
+        "id":"1",
         "name_en":"ABDULLAH BEN FAHAD",
         "name_ar":"عبدالله بن فهد",
         "position_en":"GROUP GENERAL MANAGER",
@@ -157,7 +157,7 @@
         "linkedIn":"https://www.linkedin.com/in/abdullah-aljelaify"
       },
       {
-        "id":2,
+        "id":"2",
         "name_en":"MOHAMMAD AL-RAYES",
         "name_ar":"محمد الريس",
         "position_en":"INFORMATION TECHNOLOGY MANAGER",
@@ -167,7 +167,7 @@
         "linkedIn":"https://www.linkedin.com/in/%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B1%D9%8A%D8%B3-26b799105/"
       },
       {
-        "id":3,
+        "id":"3",
         "name_en":"AMEED SWAY",
         "name_ar":"عميد صوي",
         "position_en":"GENERAL MANAGER MARKETING",
