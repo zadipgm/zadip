@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const OrderNowFormContainer = styled.div`
 display:flex ;
 justify-content:space-between ;
+
 /* align-items: ; */
   @media (max-width: 600px) {
   display: block;
@@ -11,6 +12,9 @@ justify-content:space-between ;
 
 export const Wrapper = styled.div`
     width: 60%;
+    &.contact-us{
+    width:100% ;
+}
       @media (max-width: 600px) {
   width:100% ;
   margin:0px ;

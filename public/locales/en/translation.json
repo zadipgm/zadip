@@ -5,6 +5,7 @@
     "services":"services",
     "About Us":"About Us",
     "Career":"Career",
+    "Contact Us":"Contact Us",
 
     
  "featureProduct":"Our Feature Products",
@@ -93,6 +94,7 @@
   "message":"Write your message...",
   "cancel":"Cancel",
   "zadipnews":"ZADIP GROUP LATEST NEWS",
-  "news":"News"
+  "news":"News",
+  "send":"Send"
   
 }

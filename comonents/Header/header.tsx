@@ -53,6 +53,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
     { name: "products", link: `/products` },
     { name: "services", link: `/services` },
     { name: "About Us", link: "/about-us" },
+    { name: "Contact Us", link: "/contact-us" },
   ];
   const [mobileOpen, setMobileOpen] = React.useState(false);
 

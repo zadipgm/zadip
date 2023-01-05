@@ -26,12 +26,19 @@ import {
 interface IProps {
   title: string;
   buttonTitle: string;
+  isShow?: boolean;
+  classname?: string;
 }
-const OrderNowForm: React.FC<IProps> = ({ title, buttonTitle }) => {
+const OrderNowForm: React.FC<IProps> = ({
+  title,
+  buttonTitle,
+  isShow = true,
+  classname,
+}) => {
   const { t } = useTranslation();
   return (
     <OrderNowFormContainer>
-      <Wrapper>
+      <Wrapper className={classname}>
         <Span>{title}</Span>
         <Input type="text" placeholder={`${t("fullName")}`} required />
         <Input type="email" placeholder={`${t("email")}`} />
@@ -73,13 +80,15 @@ const OrderNowForm: React.FC<IProps> = ({ title, buttonTitle }) => {
           {buttonTitle}
         </Button>
       </Wrapper>
-      <CallUsNowWrapper>
-        <CallContainer>
-          <Call>{t("callUsNow")}</Call>
-          <CallButton href="tel://9200 10047">920010047</CallButton>
-        </CallContainer>
-        <SocialIcons />
-      </CallUsNowWrapper>
+      {isShow && (
+        <CallUsNowWrapper>
+          <CallContainer>
+            <Call>{t("callUsNow")}</Call>
+            <CallButton href="tel://9200 10047">920010047</CallButton>
+          </CallContainer>
+          <SocialIcons />
+        </CallUsNowWrapper>
+      )}
     </OrderNowFormContainer>
   );
 };
