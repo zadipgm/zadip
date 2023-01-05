@@ -31,7 +31,6 @@ import LocaleContext from "../../../LocaleContext";
 import Links from "@mui/material/Link";
 import { useRouter } from "next/router";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import HighLightProductSection from "../../homePageComponents/HighLightProductSection";
 import VedioComponent from "../../ReuseAbleComponents/Vedio";
 import { useTranslation } from "react-i18next";
 
@@ -50,6 +49,16 @@ const MuarefDetails = () => {
       href={`/${locale}/${"services"}`}
     >
       {t("services")}
+    </Links>,
+    <Links
+      underline="hover"
+      key="2"
+      color="inherit"
+      href={`/${locale}/${"services"}/${router.query.detail}?type=${
+        router.query.detail
+      }`}
+    >
+      {router.query.detail}
     </Links>,
     <Links
       underline="hover"

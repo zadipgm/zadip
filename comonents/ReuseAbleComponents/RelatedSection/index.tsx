@@ -12,7 +12,7 @@ import {
   ProductCardsListItems,
   ProductCardsTitle,
 } from "../../ProductPageComponents/ProductMainCategories/styled.comonents";
-import { RelatedWrapper, RelatedTitle } from "./styled.components";
+import { RelatedWrapper, RelatedTitle, Divider } from "./styled.components";
 interface ICategory {
   id?: number;
   title_en?: string;
@@ -37,9 +37,11 @@ const RelatedProducts: React.FC<IProps> = ({ relatedData, page }) => {
   const { t } = useTranslation();
   return (
     <RelatedWrapper>
-      <RelatedTitle>
-        {isLTR ? `${t("relatedProducts")}` : `${t("relatedServices")}`}
-      </RelatedTitle>
+      <Divider>
+        <RelatedTitle>
+          {isLTR ? `${t("relatedProducts")}` : `${t("relatedServices")}`}
+        </RelatedTitle>
+      </Divider>
       <ProductCardsItems>
         {relatedData?.slice(0, 4)?.map((item) => {
           return (

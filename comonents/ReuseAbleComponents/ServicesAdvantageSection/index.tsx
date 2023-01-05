@@ -14,13 +14,24 @@ import {
 import data from "../../../DataLayer/services.json";
 import { useTheme } from "styled-components";
 import IconComponent from "../IconComponent";
-const ServicesAdvantageSection = () => {
+interface IProps {
+  id: number;
+  title_en: string;
+  title_ar: string;
+  icon: string;
+  description_en: string;
+  description_ar: string;
+}
+interface Idata {
+  data: IProps[];
+}
+const ServicesAdvantageSection = ({ data }: Idata) => {
   const { isLTR } = useTheme();
   return (
     <AdvantageWrapper>
       <AdvantageContainer>
         <div>
-          {data.services_advantages.map((item) => {
+          {data.map((item) => {
             return (
               <Wrapper key={item.id}>
                 <IconComponent

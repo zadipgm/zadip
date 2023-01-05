@@ -22,6 +22,7 @@ margin:0 ;
 export const Wrapper = styled.div`
 padding: 15px;
 margin:15px ;
+    border-radius: 10px;
 background-color: rgba(13,74,118,0.04);
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
     cursor: pointer;

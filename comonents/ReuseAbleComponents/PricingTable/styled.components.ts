@@ -20,6 +20,7 @@ gap:15px;
     /* background-color: #E7EBF0; */
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
     width:50% ;
+    border-radius: 10px;
     @media(max-width:600px){
         width:100% ;
 }
@@ -29,6 +30,7 @@ gap:15px;
 export const ConditionWrapper= styled.div`
 padding:15px ;
 width:50% ;
+border-radius: 10px;
 @media(max-width:600px){
         width:100% ;
 }
@@ -39,7 +41,7 @@ color:#2193b0 ;
 padding:0px 12px ;
 text-transform:capitalize ;
 `
-export const Heading= styled.h4`
+export const Heading= styled.h3`
 
 color:#2193b0 ;
 text-transform:capitalize ;

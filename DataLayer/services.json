@@ -399,29 +399,81 @@
        
         
     ],
-    "services_advantages":[
+    "tam":[
       { "id":1,
-        "title_en":"Efficient",
+        "title_en":"Vehicle Transactions",
         "title_ar":"سريع",
         "icon":"transactionSvg",
-        "description_en":"Raise the efficiency of transactions finalization.",
+        "description_en":"Make all vehicles transactions quickly, accurately and safely.",
         "description_ar":"سرعة ودقة وأمان في إجراء كافة معاملات المركبات."
       },
       {
         "id":2,
-        "title_en":"Secure",
+        "title_en":"Cost Reductions",
         "title_ar":"تخفيض",
         "icon":"secureSvg",
-        "description_en":"Offer quick and secure procedure.",
+        "description_en":"Reducing costs and increase business value.",
         "description_ar":"تخفيض التكاليف."
       },
       {
         "id":3,
-        "title_en":"Acurate",
+        "title_en":"Unified Data",
         "title_ar":"تنظيم",
         "icon":"acurateSvg",
-        "description_en":"Acquire accurate information.",
+        "description_en":"Organize all required data and information.",
         "description_ar":"تنظيم كافة البيانات والمعلومات المطلوبة."
+      }
+    ],
+    "masarat":[
+      {
+        "id":1,
+        "title_en":"Informed",
+        "title_ar":"متابعة",
+        "icon":"transactionSvg",
+        "description_en":"Follow your fleet.",
+        "description_ar":"تنظيم كافة البيانات والمعلومات المطلوبة. "
+      },
+      {
+        "id":2,
+        "title_en":"Maintained",
+        "title_ar":"صيانة",
+        "icon":"secureSvg",
+        "description_en":"Service and maintenance of the fleet.",
+        "description_ar":"متابعة برنامج الصيانة."
+      },
+      {
+        "id":3,
+        "title_en":"Managed",
+        "title_ar":"إدارة",
+        "icon":"acurateSvg",
+        "description_en":"Fleet management with complete control.",
+        "description_ar":"إدارة تأجير المركبات."
+      }
+    ],
+    "muqeem":[
+      {
+        "id":1,
+        "title_en":"Informed",
+        "title_ar":"كفاءة",
+        "icon":"transactionSvg",
+        "description_en":"Follow your fleet.",
+        "description_ar":"رفع كفاءة إنجاز المعاملات."
+      },
+      {
+        "id":2,
+        "title_en":"Maintained",
+        "title_ar":"أمن",
+        "icon":"secureSvg",
+        "description_en":"Service and maintenance of the fleet.",
+        "description_ar":"توفير إجراء سريع وآمن."
+      },
+      {
+        "id":3,
+        "title_en":"Managed",
+        "title_ar":"دقيق",
+        "icon":"acurateSvg",
+        "description_en":"Fleet management with complete control.",
+        "description_ar":"دقة المعلوماتالدقة في الحصول على المعلومات."
       }
     ]
   }

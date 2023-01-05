@@ -24,6 +24,7 @@ import LocaleContext from "../../../LocaleContext";
 import Breadcrumb from "../../ReuseAbleComponents/Breadcrumb";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
+import data from "../../../DataLayer/services.json";
 interface IProps {
   page: string;
 }
@@ -53,6 +54,16 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
       href={`/${locale}/${"services"}`}
     >
       {t("services")}
+    </Links>,
+    <Links
+      underline="hover"
+      key="2"
+      color="inherit"
+      href={`/${locale}/${"services"}/${router.query.detail}?type=${
+        router.query.detail
+      }`}
+    >
+      {router.query.detail}
     </Links>,
     <Links
       underline="hover"
@@ -125,53 +136,61 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
             headingColor={"#2193b0"}
             descriptionColor={"#737c85;"}
           />
-          <ServicesAdvantageSection />
-          <AnimationBar
-            title={`${t("pricingPackages")}`}
-            description={""}
-            headingColor={"#2193b0"}
-            descriptionColor={""}
-          />
-          <PricingTable
-            title={
-              type === "tam"
-                ? isLTR
-                  ? "Tam Shamel"
-                  : "باقة تم شامل"
-                : type === "masarat"
-                ? isLTR
-                  ? "Masarat Shamel"
-                  : "خدمة مسارات"
-                : type === "muqeem"
-                ? isLTR
-                  ? "Muqeem Shamel"
-                  : "باقة مقيم شامل"
-                : ""
-            }
-            data={specs_data.pricing_Data}
-            classname={""}
-            condition={`${t("conditions")}`}
-          />
-          <PricingTable
-            title={
-              type === "tam"
-                ? isLTR
-                  ? "Tam Amalyat"
-                  : "باقة تم عمليات"
-                : type === "masarat"
-                ? isLTR
-                  ? "Masarat Amalyat"
-                  : "خدمة مسارات"
-                : type === "muqeem"
-                ? isLTR
-                  ? "Muqeem Amalyat"
-                  : "باقة مقيم عمليات"
-                : ""
-            }
-            classname={"direction"}
-            data={specs_data.pricing_Data}
-            condition={`${t("conditions")}`}
-          />
+          {type === "tam" && <ServicesAdvantageSection data={data.tam} />}
+          {type === "muqeem" && <ServicesAdvantageSection data={data.muqeem} />}
+          {type === "masarat" && (
+            <ServicesAdvantageSection data={data.masarat} />
+          )}
+          {type === "tam" || type === "muqeem" ? (
+            <AnimationBar
+              title={`${t("pricingPackages")}`}
+              description={""}
+              headingColor={"#2193b0"}
+              descriptionColor={""}
+            />
+          ) : (
+            ""
+          )}
+          {type === "tam" || type === "muqeem" ? (
+            <PricingTable
+              title={
+                type === "tam"
+                  ? isLTR
+                    ? "Tam Shamel"
+                    : "باقة تم شامل"
+                  : type === "muqeem"
+                  ? isLTR
+                    ? "Muqeem Shamel"
+                    : "باقة مقيم شامل"
+                  : ""
+              }
+              data={specs_data.pricing_Data}
+              classname={""}
+              condition={`${t("conditions")}`}
+            />
+          ) : (
+            ""
+          )}
+          {type === "tam" || type === "muqeem" ? (
+            <PricingTable
+              title={
+                type === "tam"
+                  ? isLTR
+                    ? "Tam Amalyat"
+                    : "باقة تم عمليات"
+                  : type === "muqeem"
+                  ? isLTR
+                    ? "Muqeem Amalyat"
+                    : "باقة مقيم عمليات"
+                  : ""
+              }
+              classname={"direction"}
+              data={specs_data.pricing_Data}
+              condition={`${t("conditions")}`}
+            />
+          ) : (
+            ""
+          )}
           <TechnicalSpecsTable
             data={specs_data.features}
             title={"Features"}
@@ -179,55 +198,59 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
           />
 
           <>
-            <AnimationBar
-              title={`${t("supportingDocuments")}`}
-              description={""}
-              headingColor={"#2193b0"}
-              descriptionColor={""}
-            />
-            <ButtonsWrapper>
-              <DownLoadButton
-                title={
-                  type === "tam"
-                    ? isLTR
-                      ? "Tam Priclist"
-                      : " تم قائمة الاسعار"
-                    : type === "masarat"
-                    ? isLTR
-                      ? "Masarat Priclist"
-                      : " قائمة الاسعار مسارات"
-                    : type === "muqeem"
-                    ? isLTR
-                      ? "Muqeem Priclist"
-                      : " مقيم قائمة الاسعار"
-                    : ""
-                }
+            {type === "tam" || type === "muqeem" ? (
+              <AnimationBar
+                title={`${t("supportingDocuments")}`}
+                description={""}
+                headingColor={"#2193b0"}
+                descriptionColor={""}
               />
-              <DownLoadButton
-                title={
-                  type === "tam"
-                    ? isLTR
-                      ? "Tam Subscription Form"
-                      : " تم  نموذج الاشتراك"
-                    : type === "masarat"
-                    ? isLTR
-                      ? "Masarat Subscription Form"
-                      : "  نموذج الاشتراك مسارات"
-                    : type === "muqeem"
-                    ? isLTR
-                      ? "Muqeem Subscription Form"
-                      : " مقيم  نموذج الاشتراك"
-                    : ""
-                }
-              />
-              <DownLoadButton title={`${t("editdeletform")}`} />
-            </ButtonsWrapper>
+            ) : (
+              ""
+            )}
+            {type === "tam" || type === "muqeem" ? (
+              <ButtonsWrapper>
+                <DownLoadButton
+                  title={
+                    type === "tam"
+                      ? isLTR
+                        ? "Tam Priclist"
+                        : " تم قائمة الاسعار"
+                      : type === "muqeem"
+                      ? isLTR
+                        ? "Muqeem Priclist"
+                        : " مقيم قائمة الاسعار"
+                      : ""
+                  }
+                />
+                <DownLoadButton
+                  title={
+                    type === "tam"
+                      ? isLTR
+                        ? "Tam Subscription Form"
+                        : " تم  نموذج الاشتراك"
+                      : type === "muqeem"
+                      ? isLTR
+                        ? "Muqeem Subscription Form"
+                        : " مقيم  نموذج الاشتراك"
+                      : ""
+                  }
+                />
+                <DownLoadButton title={`${t("editdeletform")}`} />
+              </ButtonsWrapper>
+            ) : (
+              ""
+            )}
           </>
 
-          <OrderNowForm
-            title={`${t("orderNow")}`}
-            buttonTitle={`${t("sendOrder")}`}
-          />
+          {type === "tam" || type === "muqeem" ? (
+            <OrderNowForm
+              title={`${t("orderNow")}`}
+              buttonTitle={`${t("sendOrder")}`}
+            />
+          ) : (
+            ""
+          )}
           <RelatedServices />
         </div>
       ) : (

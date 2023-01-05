@@ -15,6 +15,7 @@ import {
 } from "./styled.components";
 import RelatedProducts from "../RelatedSection";
 import { useTranslation } from "react-i18next";
+import { Typography } from "@mui/material";
 interface IRelated {
   id?: number;
   title_en?: string;
@@ -74,8 +75,11 @@ const DetailsComponent: React.FC<IProps> = ({
       color="inherit"
       href={`/${locale}/${page}/${router?.query?.sub_category}?type=${router.query.detail}`}
     >
-      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
+      {(router.query.detail as string)?.replaceAll("_", " ")}
     </Links>,
+    <Typography>
+      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
+    </Typography>,
   ];
   return (
     <DetailsWrapper>

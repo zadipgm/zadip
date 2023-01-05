@@ -13,6 +13,25 @@ padding: 15px;
 `
 export const RelatedTitle = styled.h3`
 text-align:center ;
-margin:40px 0px ;
+margin:30px 20px ;
 color: #0196e3;
+`
+export const Divider = styled.div`
+ display: flex;
+  align-items: center;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  ::after {
+  content: '';
+  height: 1px;
+  background-color:  #0196e3;
+  flex-grow: 1;
+  }
+  ::before {
+  content: '';
+  height: 1px;
+  background-color: #0196e3;
+  flex-grow: 1;
+  }
 `
