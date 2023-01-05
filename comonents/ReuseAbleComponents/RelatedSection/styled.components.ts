@@ -24,14 +24,14 @@ export const Divider = styled.div`
   letter-spacing: 0.1em;
   ::after {
   content: '';
-  height: 1px;
-  background-color:  #0196e3;
+  height: 2px;
+  background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
   flex-grow: 1;
   }
   ::before {
   content: '';
-  height: 1px;
-  background-color: #0196e3;
+  height: 2px;
+  background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
   flex-grow: 1;
   }
 `

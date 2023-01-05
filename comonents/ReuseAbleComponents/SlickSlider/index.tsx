@@ -14,11 +14,18 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useRouter } from "next/router";
 import { useTheme } from "styled-components";
 
+interface INewsDetails {
+  date?: string;
+  image?: string;
+  description_en?: string;
+  description_ar?: string;
+}
 interface sliderDataProps {
-  image: string;
-  description_en: string;
-  description_ar: string;
-  id?: number;
+  image?: string;
+  description_en?: string;
+  description_ar?: string;
+  id?: string;
+  news_details?: INewsDetails[];
 }
 interface IProps {
   sliderData?: sliderDataProps[];
@@ -87,7 +94,15 @@ const SliderSlick: React.FC<IProps> = ({
       <Slider {...settings}>
         {sliderData?.map((item, index) => {
           return (
-            <div key={item.id} onClick={() => router.push("/news-headlines")}>
+            <div
+              key={item.id}
+              onClick={() =>
+                router.push({
+                  pathname: "/news-headlines",
+                  query: { id: item?.id },
+                })
+              }
+            >
               <SliderWrapper className={classname}>
                 <Image src={item.image} alt="" width={158} height={158} />
                 <Title>

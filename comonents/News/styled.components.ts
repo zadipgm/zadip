@@ -10,7 +10,7 @@ margin:0 auto ;
     }
 `
 export const NewsHeading =styled.h2`
-color: #737c85;
+color: #2193b0;
 `
 export const Date= styled.div`
 width:20% ;
@@ -19,7 +19,7 @@ width:20% ;
     }
 padding:15px ;
 color:#fff ;
-background-color:#0d4a76 ;
+background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
 margin-top:20px ;
 `
 export const NewsDescription= styled.div`
@@ -67,7 +67,8 @@ cursor: pointer;
 `
 export const UpdatedNewsImage= styled.img``  
 export const Heading =styled.h3`
-color:#737c85;
+color: #2193b0;
+margin: 0 11px;
 `
 
 export const IconHeading =styled.h4`

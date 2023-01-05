@@ -39,7 +39,9 @@ const RelatedProducts: React.FC<IProps> = ({ relatedData, page }) => {
     <RelatedWrapper>
       <Divider>
         <RelatedTitle>
-          {isLTR ? `${t("relatedProducts")}` : `${t("relatedServices")}`}
+          {page === "products"
+            ? `${t("relatedProducts")}`
+            : `${t("relatedServices")}`}
         </RelatedTitle>
       </Divider>
       <ProductCardsItems>
