@@ -183,7 +183,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
         {router.pathname === "/" && (
           <VideoWrapper>
             <Video className="videoTag" autoPlay loop muted>
-              <source src={"/vedios/zadipvideo.mp4"} type="video/mp4" />
+              <source src={"/vedios/zadipvideo_main.mp4"} type="video/mp4" />
             </Video>
           </VideoWrapper>
         )}
