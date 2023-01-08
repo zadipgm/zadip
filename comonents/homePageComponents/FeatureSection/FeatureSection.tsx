@@ -25,45 +25,76 @@ const FeatureSection = () => {
         <FeatureSectionWrapper>
           <FeatureIcon>
             <img
-              src="https://www.zadip.com/en//images/feature/2.png"
+              src="/images/ektefa.png"
               alt="Feature"
+              width={100}
+              height={100}
             />
           </FeatureIcon>
           <FeatureTitleLink href="https://ektefa.net">
             {t("featureTitleEktefa")}
           </FeatureTitleLink>
           <FeatureDescription
-            dangerouslySetInnerHTML={{ __html: t("featurecardDescription") }}
+            dangerouslySetInnerHTML={{
+              __html: t("featurecardDescriptionEktefa"),
+            }}
           ></FeatureDescription>
         </FeatureSectionWrapper>
 
         <FeatureSectionWrapper>
           <FeatureIcon>
             <img
-              src="https://www.zadip.com/en//images/feature/3.png"
+              src="/images/nafeth.png"
               alt="Feature"
-            />
-          </FeatureIcon>
-          <FeatureTitleLink href="https://nafeth.com">
-            {t("featureTitleNafeth")}
-          </FeatureTitleLink>
-          <FeatureDescription
-            dangerouslySetInnerHTML={{ __html: t("featurecardDescription") }}
-          ></FeatureDescription>
-        </FeatureSectionWrapper>
-
-        <FeatureSectionWrapper>
-          <FeatureIcon>
-            <img
-              src="https://www.zadip.com/en//images/feature/1.png"
-              alt="Feature"
+              width={100}
+              height={100}
             />
           </FeatureIcon>
           <FeatureTitleLink href="/services/tam/eGov_services">
-            {t("featureTitleTam")}
+            {t("featureTitleNafeth")}
           </FeatureTitleLink>
           <FeatureDescription
-            dangerouslySetInnerHTML={{ __html: t("featurecardDescription") }}
+            dangerouslySetInnerHTML={{
+              __html: t("featurecardDescriptionNafeth"),
+            }}
+          ></FeatureDescription>
+        </FeatureSectionWrapper>
+
+        <FeatureSectionWrapper>
+          <FeatureIcon>
+            <img
+              src="images/mauref.png"
+              alt="Feature"
+              width={100}
+              height={100}
+            />
+          </FeatureIcon>
+          <FeatureTitleLink href="https://nafeth.com">
+            {t("featureTitleMuaref")}
+          </FeatureTitleLink>
+          <FeatureDescription
+            dangerouslySetInnerHTML={{
+              __html: t("featurecardDescriptionMuaref"),
+            }}
+          ></FeatureDescription>
+        </FeatureSectionWrapper>
+
+        <FeatureSectionWrapper>
+          <FeatureIcon>
+            <img
+              src="images/ihtiwa.png"
+              alt="Feature"
+              width={100}
+              height={100}
+            />
+          </FeatureIcon>
+          <FeatureTitleLink href="https://www.ehtiwa.com/">
+            {t("featureTitleEhtiwa")}
+          </FeatureTitleLink>
+          <FeatureDescription
+            dangerouslySetInnerHTML={{
+              __html: t("featurecardDescriptionEhtiwa"),
+            }}
           ></FeatureDescription>
         </FeatureSectionWrapper>
       </FeatureSectionContainer>

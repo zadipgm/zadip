@@ -20,7 +20,7 @@ const OurPartnerSection = () => {
         sliderToShow={6}
         classname={"partner-slider"}
         autoplay={true}
-        autoplaySpeed={2000}
+        autoplaySpeed={0}
       />
     </OurPartnerSectionContainer>
   );

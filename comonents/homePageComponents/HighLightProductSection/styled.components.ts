@@ -12,7 +12,7 @@ background-image: url("https://www.ektefa.net/agency/img/illustrations/relaxed.s
 background-size:cover ;
 background-repeat:no-repeat ;
 
-  padding: 70px 0px;
+  padding: 30px 0px;
     background-attachment: fixed;
    
 
@@ -28,10 +28,9 @@ export const HighLightProductWrapper = styled.div`
      padding:0px 0px 40px 0px ;
  }
     margin:  0 auto;
-    padding:  20px;
     position: relative;
     background: rgb(35 35 35);
-    opacity: .8;
+    opacity: .7;
     border-radius: 15px;
        
 `

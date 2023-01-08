@@ -15,10 +15,13 @@ import { useTranslation } from "react-i18next";
 import {
   HeaderWrapper,
   LangButton,
-  BannerImage,
+  Video,
+  VideoWrapper,
   ScrollTopButton,
   IconsWrapper,
   HeaderLogo,
+  MainHeading,
+  Text,
 } from "./header.styled.components";
 import i18n from "../../i18n";
 import LocaleContext from "../../LocaleContext";
@@ -27,6 +30,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import MouseSvg from "../../public/icons/mouseSvg";
 import DownArrowSvg from "../../public/icons/downArrowSvg";
+import { useTheme } from "styled-components";
 const drawerWidth = 240;
 
 interface IProps {
@@ -60,7 +64,6 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
   const router = useRouter();
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -90,7 +93,6 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
     }
   };
   window.addEventListener("scroll", onScroll);
-
   return (
     <>
       <HeaderWrapper
@@ -178,7 +180,19 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
             <DownArrowSvg className="down-arrow" />
           </IconsWrapper>
         )}
-        {router.pathname === "/" && <BannerImage></BannerImage>}
+        {router.pathname === "/" && (
+          <VideoWrapper>
+            <Video className="videoTag" autoPlay loop muted>
+              <source src={"/vedios/zadipvideo.mp4"} type="video/mp4" />
+            </Video>
+          </VideoWrapper>
+        )}
+        {router.pathname === "/" && (
+          <MainHeading>
+            <Text>{t("wehelp")}</Text>
+            <Text>{t("toreachGoals")}</Text>
+          </MainHeading>
+        )}
       </HeaderWrapper>
       {show > 500 && (
         <ScrollTopButton

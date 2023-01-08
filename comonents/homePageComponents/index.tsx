@@ -10,8 +10,8 @@ const HomePage = () => {
     <>
       <FeatureSection />
       <HighLightProductSection />
-      <RecentNewsSection />
-      <TwitterSliderSection />
+      {/* <RecentNewsSection /> */}
+      {/* <TwitterSliderSection /> */}
       <OurPartnerSection />
       <ComprehensiveAddedValue />
     </>

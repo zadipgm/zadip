@@ -29,23 +29,6 @@ const ComprehensiveAddedValue = () => {
           ></DescriptionVision>
         </Description>
       </Wrapper>
-      <Wrapper>
-        <Description>
-          <Title>{t("zadipGroups")}</Title>
-          <DescriptionVision
-            dangerouslySetInnerHTML={{
-              __html: `${t("zadip")}`,
-            }}
-          ></DescriptionVision>
-        </Description>
-        <ImageWrapper>
-          <VisionImage
-            src="https://www.zadip.com/en/images/logo-full-color.png"
-            width={"100%"}
-            height={"auto"}
-          />
-        </ImageWrapper>
-      </Wrapper>
     </ComprehensiveContainer>
   );
 };

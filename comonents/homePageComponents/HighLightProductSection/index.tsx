@@ -26,11 +26,11 @@ const HighLightProductSection = () => {
         <HighLightProductSectionBGImage>
           <HighLightProductWrapper>
             <HighLightProductContent>
-              <Title>{t("hrm")}</Title>
-              <SUbTitle>{t("whyEktefa")}</SUbTitle>
+              <Title>{t("egoveservices")}</Title>
+              <SUbTitle>{t("certifiedPartner")}</SUbTitle>
               <Description
                 dangerouslySetInnerHTML={{
-                  __html: t("heighLightdescription"),
+                  __html: t("elmpartner"),
                 }}
               ></Description>
             </HighLightProductContent>

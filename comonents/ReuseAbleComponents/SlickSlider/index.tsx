@@ -48,15 +48,17 @@ const SliderSlick: React.FC<IProps> = ({
   const { isLTR } = useTheme();
   const router = useRouter();
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 4000,
     autoplay: autoplay,
     autoplaySpeed: autoplaySpeed,
     slidesToShow: sliderToShow,
     slidesToScroll: 1,
     nextIcon: arrowForw,
+
     rows: rows,
+    cssEase: "linear",
     arrows: false,
 
     prevIcon: arrowPrev,
@@ -104,7 +106,7 @@ const SliderSlick: React.FC<IProps> = ({
               }
             >
               <SliderWrapper className={classname}>
-                <Image src={item.image} alt="" width={158} height={158} />
+                <Image src={item.image} alt="" width={150} height={150} />
                 <Title>
                   {isLTR ? item.description_en : item.description_ar}
                 </Title>

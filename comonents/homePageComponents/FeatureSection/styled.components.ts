@@ -1,5 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 export const FeatureSectionParent = styled.div`
+width:1170px ;
+margin:0 auto ;
+@media (max-width: 600px) {
+   width:100% ;
+   display:block ;
+  }
 `
 export const FeatureSectionContainer = styled.div`
 display:flex ;
@@ -14,8 +20,17 @@ margin:0 auto ;
  
 `
 export const  FeatureSectionWrapper = styled.div`
+
 >a{
     text-decoration:none ;
+    ${({ theme }) =>
+    theme.isLTR
+    ? css`
+      
+        `
+    : css`
+   margin-bottom:4px ;
+    `}
 }
 @media (max-width: 600px) {
    display:block ;
@@ -28,7 +43,26 @@ export const  FeatureSectionWrapper = styled.div`
     padding: 1rem;
     border-radius: 1rem;
     background: #f2f3f7;
-    width:33% ;
+    width:25% ;
+       
+        ${({ theme }) =>
+    theme.isLTR
+    ? css`
+       height: 300px;
+        `
+    : css`
+   height: 278px;
+    `}
+    @media (max-width: 600px) {
+    ${({ theme }) =>
+    theme.isLTR
+    ? css`
+       height: 300px;
+        `
+    : css`
+   height: 230px;
+    `}
+  }
     margin:1rem ;
     display: flex;
     transition:.5s ;
@@ -70,7 +104,7 @@ export const FeatureTitleLink = styled.a`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 29px;
+    font-size: 24px;
     color: #34495e;
 `
 export const FeatureDescription = styled.p`
@@ -78,6 +112,8 @@ text-align:justify;
     line-height: 26px;
     color: #737c85;
     transition:.5s ;
+    
+    white-space: break-spaces;
     margin:0 ;
 > a {
     text-decoration:none ;

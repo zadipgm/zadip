@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 export const HeaderContainer = styled.div`
 font-size:12px;
 `
@@ -15,6 +15,30 @@ padding-top:12px ;
  align-items:center ;
  width:200px ;
 }
+`
+export const MainHeading =styled.div`
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 6%;
+    @media (max-width: 600px) {
+ 
+ ${({ theme }) =>
+    theme.isLTR
+    ? css`
+      left:4% ;
+        `
+    : css`
+    left:12% ;
+    `}
+    }
+
+`
+export const Text = styled.p`
+margin:0 ;
+font-size: 60px;
+    font-weight: 600;
+    color:#fff;
 `
 export const IconsWrapper = styled.div`
 & .mouse{
@@ -157,17 +181,30 @@ margin: 0px 11px ;
 
 `
 export const Divider = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 3px;
   background-image: url("https://zadip.com/images/components/stripe.png");
   background-repeat: repeat-x;
 `
-export const BannerImage= styled.div`
-  background-image: url("https://startp-next.envytheme.com/images/bigdata-analytics/main-banner.jpg");
-  background-position: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 112vh;
+export const VideoWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  ::before{
+    content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 4px;
+  left: 0;
+  }
+`
+export const Video= styled.video`
+ width:100% ;
+ @media (max-width: 600px) {
+height: 100vh;
+width:auto ;
+}
 `
 export const ScrollTopButton =  styled.button`
 

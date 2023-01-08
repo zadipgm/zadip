@@ -30,14 +30,13 @@ padding: 15px;
 }
 margin:0 auto ;
 
-&.zadip{
-      background: linear-gradient(-30deg,rgb(5 118 188 / 49%) 30%,#38b7ae);
-    border-radius: 15px;
-  margin:40px auto ;
 
-}
 `
 export const ImageWrapper = styled.div`
+> img {
+    
+border-radius: 5%;
+}
   @media (max-width: 600px) {
      display:block ;
      width:100% ;
@@ -45,14 +44,6 @@ export const ImageWrapper = styled.div`
     justify-content: center;
     align-items: center;
  }
-        padding: 15px;
-    width: 50%;
-    height: 442px;
-    background-color:#fff ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:5% ;
     
 `
 export const VisionImage = styled.img`
