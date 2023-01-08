@@ -183,7 +183,12 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
         {router.pathname === "/" && (
           <VideoWrapper>
             <Video className="videoTag" autoPlay loop muted>
-              <source src={"/zadipvideo.mp4"} type="video/mp4" />
+              <source
+                src={
+                  "https://drive.google.com/file/d/1hOM4-t93ArLLMzBmaWLD4LSGn7RFuMc6/view?usp=share_link"
+                }
+                type="video/mp4"
+              />
             </Video>
           </VideoWrapper>
         )}
