@@ -60,7 +60,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
     { name: "Contact Us", link: "/contact-us" },
   ];
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -93,6 +93,9 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
     }
   };
   window.addEventListener("scroll", onScroll);
+  const onLoadedData = () => {
+    setIsVideoLoaded(true);
+  };
   return (
     <>
       <HeaderWrapper
@@ -182,7 +185,21 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
         )}
         {router.pathname === "/" && (
           <VideoWrapper>
-            <Video className="videoTag" autoPlay loop muted>
+            <img
+              src={"/images/thumb.ong"}
+              className="video-thumb tiny"
+              alt="thumb"
+              style={{ opacity: isVideoLoaded ? 0 : 1 }}
+            />
+            <Video
+              className="videoTag"
+              autoPlay
+              playsInline
+              muted
+              onLoadedDataCapture={onLoadedData}
+              onLoadedData={onLoadedData}
+              style={{ opacity: isVideoLoaded ? 1 : 0 }}
+            >
               <source src={"/zadipvideo.mp4"} type="video/mp4" />
             </Video>
           </VideoWrapper>

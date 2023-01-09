@@ -189,6 +189,19 @@ export const Divider = styled.div`
   background-repeat: repeat-x;
 `
 export const VideoWrapper = styled.div`
+& .video-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 400ms ease 0ms;
+}
+& .tiny {
+  filter: blur(20px);
+  transform: scale(1.1);
+  transition: visibility 0ms ease 400ms;
+}
   position: relative;
   width: 100%;
   ::before{
