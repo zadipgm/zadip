@@ -189,7 +189,23 @@ export const Divider = styled.div`
   background-repeat: repeat-x;
 `
 export const ImageThumb = styled.img`
-& .video-thumb {
+
+`
+export const VideoWrapper = styled.div`
+
+  position: relative;
+  width: 100%;
+  ::before{
+    content: '';
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  bottom: 4px;
+  left: 0;
+  }
+
+  & .video-thumb {
   position: absolute;
   top: 0;
   right: 0;
@@ -203,20 +219,6 @@ export const ImageThumb = styled.img`
   transform: scale(1.1);
   transition: visibility 0ms ease 400ms;
 }
-`
-export const VideoWrapper = styled.div`
-
-  position: relative;
-  width: 100%;
-  ::before{
-    content: '';
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  right: 0;
-  bottom: 4px;
-  left: 0;
-  }
 `
 export const Video= styled.video`
  width:100% ;

@@ -186,31 +186,26 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
           </IconsWrapper>
         )}
         {router.pathname === "/" && (
-          <>
-            {isVideoLoaded === false ? (
-              <ImageThumb
-                src={"/images/thumb.png"}
-                className="video-thumb tiny"
-                alt="thumb"
-                style={{ opacity: isVideoLoaded ? 0.5 : 1 }}
-              />
-            ) : (
-              ""
-            )}
-            <VideoWrapper>
-              <Video
-                className="videoTag"
-                autoPlay
-                playsInline
-                loop
-                muted
-                onLoadedData={onLoadedData}
-                style={{ opacity: isVideoLoaded ? 1 : 0 }}
-              >
-                <source src={"/zadipvideo.mp4"} type="video/mp4" />
-              </Video>
-            </VideoWrapper>
-          </>
+          <VideoWrapper
+            style={{ background: isVideoLoaded ? "rgba(0, 0, 0, 0.5)" : "" }}
+          >
+            <ImageThumb
+              src={"/images/thumb.png"}
+              className="video-thumb tiny"
+              alt="thumb"
+              style={{ opacity: isVideoLoaded ? 0 : 1 }}
+            />
+            <Video
+              className="videoTag"
+              autoPlay
+              loop
+              muted
+              onLoadedData={onLoadedData}
+              style={{ opacity: isVideoLoaded ? 1 : 0 }}
+            >
+              <source src={"/zadipvideo.mp4"} type="video/mp4" />
+            </Video>
+          </VideoWrapper>
         )}
         {router.pathname === "/" && (
           <MainHeading>
