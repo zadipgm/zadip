@@ -189,9 +189,7 @@ export const Divider = styled.div`
   background-image: url("https://zadip.com/images/components/stripe.png");
   background-repeat: repeat-x;
 `
-export const ImageThumb = styled.img`
 
-`
 export const VideoWrapper = styled.div<{background:string}>`
 
   position: relative;
@@ -202,24 +200,9 @@ export const VideoWrapper = styled.div<{background:string}>`
   background: ${({background})=>background};
   top: 0;
   right: 0;
-  bottom: 4px;
+  bottom: 10px;
   left: 0;
   }
-
-  & .video-thumb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 4px;
-  left: 0;
-  width: 100%;
-  transition: opacity 400ms ease 0ms;
-}
-& .tiny {
-  filter: blur(20px);
-  transform: scale(1.1);
-  transition: visibility 0ms ease 400ms;
-}
 `
 export const Video= styled.video`
  width:100% ;

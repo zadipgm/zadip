@@ -22,7 +22,6 @@ import {
   HeaderLogo,
   MainHeading,
   Text,
-  ImageThumb,
 } from "./header.styled.components";
 import i18n from "../../i18n";
 import LocaleContext from "../../LocaleContext";
