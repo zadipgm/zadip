@@ -192,8 +192,9 @@ export const VideoWrapper = styled.div`
 & .video-thumb {
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 4px;
   left: 0;
-  height: 100%;
   width: 100%;
   transition: opacity 400ms ease 0ms;
 }

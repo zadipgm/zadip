@@ -96,6 +96,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
   const onLoadedData = () => {
     setIsVideoLoaded(true);
   };
+  console.log("here is load", isVideoLoaded);
   return (
     <>
       <HeaderWrapper
@@ -186,7 +187,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
         {router.pathname === "/" && (
           <VideoWrapper>
             <img
-              src={"/images/thumb.ong"}
+              src={"/images/thumb.png"}
               className="video-thumb tiny"
               alt="thumb"
               style={{ opacity: isVideoLoaded ? 0 : 1 }}
@@ -196,7 +197,6 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
               autoPlay
               playsInline
               muted
-              onLoadedDataCapture={onLoadedData}
               onLoadedData={onLoadedData}
               style={{ opacity: isVideoLoaded ? 1 : 0 }}
             >
