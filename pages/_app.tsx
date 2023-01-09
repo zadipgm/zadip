@@ -31,6 +31,14 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   theme.isRTL = locale === "ar";
   theme.locale = locale === "en-US" ? "en-US" : "ar";
 
+  React.useEffect(() => {
+    if (window?.innerWidth <= 600) {
+      theme.device = "mobile";
+    } else {
+      theme.device = "desktop";
+    }
+  }),
+    [];
   return getLayout(
     <>
       <Head>

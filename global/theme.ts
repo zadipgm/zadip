@@ -8,6 +8,7 @@ declare module "styled-components" {
     | typeof import("../locales/en").default;
     direction: "rtl" | "ltr";
     isLTR: boolean;
+    device:"mobile" | "desktop";
     isRTL: boolean;
     locale: "ar" | "en-US";
     colors: {
@@ -20,6 +21,7 @@ const defaultTheme: DefaultTheme = {
 
   locale: "en-US",
   direction: "rtl",
+  device:"mobile",
   isLTR: false,
   isRTL: true,
   colors: {

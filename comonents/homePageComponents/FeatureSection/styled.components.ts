@@ -118,8 +118,8 @@ align-items:center ;
 background:${({background})=>background};
 border-radius:20px;
 @media (max-width: 600px) {
-
-    display:block ;
+max-height: 600px;
+display:block !important;
 }
 `;  
 export const EktefaImageWrapper = styled.div`
@@ -130,7 +130,10 @@ width:100% ;
 }
 `;  
 export const EktefaImage = styled.img`
-
+@media (max-width: 600px) {
+width:100% ;
+max-height: 300px;
+}
 `;  
 export const EktefaDescriptionWrapper = styled.div`
 width: 40%;

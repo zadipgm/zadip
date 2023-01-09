@@ -30,7 +30,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import MouseSvg from "../../public/icons/mouseSvg";
 import DownArrowSvg from "../../public/icons/downArrowSvg";
-import { useTheme } from "styled-components";
 const drawerWidth = 240;
 
 interface IProps {
@@ -40,7 +39,6 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
   const { t } = useTranslation();
   const { locale, setLocale } = React.useContext(LocaleContext);
   const [show, setShow] = React.useState(0);
-  const { isLTR } = useTheme();
   const changeLocale = (lang: string) => {
     if (locale !== lang) {
       i18n.changeLanguage(lang);
