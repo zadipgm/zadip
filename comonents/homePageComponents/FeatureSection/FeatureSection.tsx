@@ -29,7 +29,7 @@ const FeatureSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
-    // autoplay: true,
+    autoplay: true,
     // rtl: isRTL,
     // ltr: isLTR,
     easing: "linear",
