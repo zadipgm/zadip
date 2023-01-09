@@ -22,6 +22,7 @@ import {
   HeaderLogo,
   MainHeading,
   Text,
+  ImageThumb,
 } from "./header.styled.components";
 import i18n from "../../i18n";
 import LocaleContext from "../../LocaleContext";
@@ -185,24 +186,31 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
           </IconsWrapper>
         )}
         {router.pathname === "/" && (
-          <VideoWrapper>
-            <img
-              src={"/images/thumb.png"}
-              className="video-thumb tiny"
-              alt="thumb"
-              style={{ opacity: isVideoLoaded ? 0 : 1 }}
-            />
-            <Video
-              className="videoTag"
-              autoPlay
-              playsInline
-              muted
-              onLoadedData={onLoadedData}
-              style={{ opacity: isVideoLoaded ? 1 : 0 }}
-            >
-              <source src={"/zadipvideo.mp4"} type="video/mp4" />
-            </Video>
-          </VideoWrapper>
+          <>
+            {isVideoLoaded === false ? (
+              <ImageThumb
+                src={"/images/thumb.png"}
+                className="video-thumb tiny"
+                alt="thumb"
+                style={{ opacity: isVideoLoaded ? 0.5 : 1 }}
+              />
+            ) : (
+              ""
+            )}
+            <VideoWrapper>
+              <Video
+                className="videoTag"
+                autoPlay
+                playsInline
+                loop
+                muted
+                onLoadedData={onLoadedData}
+                style={{ opacity: isVideoLoaded ? 1 : 0 }}
+              >
+                <source src={"/zadipvideo.mp4"} type="video/mp4" />
+              </Video>
+            </VideoWrapper>
+          </>
         )}
         {router.pathname === "/" && (
           <MainHeading>
