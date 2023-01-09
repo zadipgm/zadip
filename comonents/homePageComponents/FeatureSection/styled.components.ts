@@ -42,7 +42,7 @@ export const  FeatureSectionWrapper = styled.div`
   position: relative;
     padding: 1rem;
     border-radius: 1rem;
-    background: #f2f3f7;
+    background: #6c707c26;
     width:25% ;
        
         ${({ theme }) =>
@@ -68,27 +68,10 @@ export const  FeatureSectionWrapper = styled.div`
     transition:.5s ;
   cursor: pointer;
     flex-flow: column nowrap;
-    box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
 :hover {
     transform: translateY(-5px);
     transition:.5s ;
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
-    > p{
-        color:#fff ;
-        transition:.5s ;
-        margin:0 ;
-
-    }
-    >a{
-        color:#fff ;
-    transition:.5s ;
-
-    }
-    > div > a{
-        color:#fff ;
-
-    }
 }
 `
 export const FeatureIcon = styled.div`

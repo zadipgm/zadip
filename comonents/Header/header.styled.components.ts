@@ -41,6 +41,7 @@ font-size: 60px;
     color:#fff;
 `
 export const IconsWrapper = styled.div`
+
 & .mouse{
 
   position:absolute ;
@@ -49,11 +50,12 @@ export const IconsWrapper = styled.div`
   right:50%;
   width:40px ;
   height:40px ;
+  z-index:9999 ;
 fill:#fff ;
 }
 
 & .down-arrow{
- 
+  z-index:9999 ;
   position:absolute ;
   bottom:20px ;
   left:50.4% ;
