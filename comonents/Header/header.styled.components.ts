@@ -191,14 +191,14 @@ export const Divider = styled.div`
 export const ImageThumb = styled.img`
 
 `
-export const VideoWrapper = styled.div`
+export const VideoWrapper = styled.div<{background:string}>`
 
   position: relative;
   width: 100%;
   ::before{
     content: '';
   position: absolute;
-  
+  background: ${({background})=>background};
   top: 0;
   right: 0;
   bottom: 4px;

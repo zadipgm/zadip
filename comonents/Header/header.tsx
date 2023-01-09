@@ -186,9 +186,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
           </IconsWrapper>
         )}
         {router.pathname === "/" && (
-          <VideoWrapper
-            style={{ background: isVideoLoaded ? "rgba(0, 0, 0, 0.5)" : "" }}
-          >
+          <VideoWrapper background={isVideoLoaded ? "rgba(0, 0, 0, 0.5)" : ""}>
             <ImageThumb
               src={"/images/thumb.png"}
               className="video-thumb tiny"
