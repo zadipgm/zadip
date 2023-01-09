@@ -24,9 +24,9 @@ const FeatureSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
+    autoplay: true,
     easing: "linear",
   };
-  console.log("here is windoww", device);
   return (
     <FeatureSectionParent>
       <AnimationBar
