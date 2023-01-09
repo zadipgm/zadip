@@ -34,11 +34,12 @@ export const MainHeading =styled.div`
     }
 
 `
-export const Text = styled.p`
+export const Text = styled.p<{lineHeight?:string}>`
 margin:0 ;
 font-size: 60px;
     font-weight: 600;
     color:#fff;
+    line-height:${({lineHeight})=>lineHeight} ;
 `
 export const IconsWrapper = styled.div`
 

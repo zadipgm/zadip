@@ -4,6 +4,8 @@ import Header from "../../Header/header";
 import i18n from "i18next";
 import * as React from "react";
 import LocaleContext from "../../../LocaleContext";
+import { ThemeProvider } from "styled-components";
+import theme from "../../../global/theme";
 interface IProps {
   children: ReactElement;
 }
@@ -22,11 +24,13 @@ const Layout: React.FC<IProps> = ({ children }) => {
   return (
     <>
       <div dir={locale === "en-US" || locale === "en" ? "ltr" : "rtl"}>
-        <LocaleContext.Provider value={{ locale, setLocale }}>
-          <Header />
-          {children}
-          <Footer />
-        </LocaleContext.Provider>
+        <ThemeProvider theme={theme}>
+          <LocaleContext.Provider value={{ locale, setLocale }}>
+            <Header />
+            {children}
+            <Footer />
+          </LocaleContext.Provider>
+        </ThemeProvider>
       </div>
     </>
   );

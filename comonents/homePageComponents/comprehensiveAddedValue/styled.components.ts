@@ -33,6 +33,7 @@ margin:0 auto ;
 
 `
 export const ImageWrapper = styled.div`
+    padding: 20px 0px;
 > img {
     
 border-radius: 5%;

@@ -16,10 +16,6 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-const roboto = Cairo({
-  weight: "400",
-  subsets: ["arabic"],
-});
 const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   const router = useRouter();
   const { locale } = router;
@@ -43,11 +39,13 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
           rel="icon"
           href="https://www.zadip.com/en/favicons/favicon_96x96.png"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Cairo"
+          rel="stylesheet"
+        ></link>
       </Head>
       <ThemeProvider theme={theme}>
-        <div className={roboto.className}>
-          <Component {...pageProps} />
-        </div>
+        <Component {...pageProps} />
       </ThemeProvider>
     </>
   );

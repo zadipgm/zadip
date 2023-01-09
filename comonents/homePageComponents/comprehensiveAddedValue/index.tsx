@@ -16,7 +16,7 @@ const ComprehensiveAddedValue = () => {
   const { t } = useTranslation();
   return (
     <ComprehensiveContainer>
-      <Wrapper className="zadip">
+      <Wrapper>
         <ImageWrapper>
           <Image src={visiionIMage2030} alt={"2030"} width={526} height={442} />
         </ImageWrapper>

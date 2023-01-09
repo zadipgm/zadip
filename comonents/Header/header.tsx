@@ -41,6 +41,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
   const { t } = useTranslation();
   const { locale, setLocale } = React.useContext(LocaleContext);
   const [show, setShow] = React.useState(0);
+  const { isLTR } = useTheme();
   const changeLocale = (lang: string) => {
     if (locale !== lang) {
       i18n.changeLanguage(lang);
@@ -97,7 +98,6 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
   const onLoadedData = () => {
     setIsVideoLoaded(true);
   };
-  console.log("here is load", isVideoLoaded);
   return (
     <>
       <HeaderWrapper
@@ -187,13 +187,8 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
         )}
         {router.pathname === "/" && (
           <VideoWrapper background={isVideoLoaded ? "rgba(0, 0, 0, 0.5)" : ""}>
-            <ImageThumb
-              src={"/images/thumb.png"}
-              className="video-thumb tiny"
-              alt="thumb"
-              style={{ opacity: isVideoLoaded ? 0 : 1 }}
-            />
             <Video
+              poster="/images/thumb.png"
               className="videoTag"
               autoPlay
               loop
@@ -207,8 +202,8 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
         )}
         {router.pathname === "/" && (
           <MainHeading>
-            <Text>{t("wehelp")}</Text>
-            <Text>{t("toreachGoals")}</Text>
+            <Text lineHeight={"79px"}>{t("wehelp")}</Text>
+            <Text lineHeight={"79px"}>{t("toreachGoals")}</Text>
           </MainHeading>
         )}
       </HeaderWrapper>
