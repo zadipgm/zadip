@@ -155,7 +155,7 @@ color:#fff ;
 padding: 10px 20px;
 border-radius:6px ;
 transition: .6s;
-font-family: '__Cairo_f3a025';
+font-family: 'Cairo'!important;
 :hover{
     background-color:#60CBEF; ;
     transition: .6s;
