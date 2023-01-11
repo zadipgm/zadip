@@ -115,7 +115,6 @@ width: 98%!important ;
 margin:0 auto ;
 direction:${({direction})=>direction} ;
 align-items:center ;
-/* background:${({background})=>background}; */
 border-radius:20px;
 @media (max-width: 600px) {
 max-height: 600px;
