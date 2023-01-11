@@ -36,6 +36,7 @@ const RelatedProducts: React.FC<IProps> = ({ relatedData, page }) => {
   const router = useRouter();
   const { isLTR } = useTheme();
   const { t } = useTranslation();
+  console.log("here is page", page);
   return (
     <RelatedWrapper>
       <Divider>

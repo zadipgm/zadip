@@ -43,7 +43,7 @@ const ContactUs = () => {
         title={"LET US ADD VALUE TO YOUR BUSINESS"}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
-        fontSize={"20px"}
+        fontSize={"18px"}
       />
       <Container>
         <MainWrapper>

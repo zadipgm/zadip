@@ -62,7 +62,9 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
         router.query.detail
       }`}
     >
-      {router.query.detail}
+      {isLTR
+        ? filterSpecificItem[0]?.type?.replaceAll("_", " ")
+        : filterSpecificItem[0]?.type_ar}
     </Links>,
     <Links
       underline="hover"
@@ -72,7 +74,9 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
         router.query.detail
       }`}
     >
-      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
+      {isLTR
+        ? filterSpecificItem[0]?.title_en
+        : filterSpecificItem[0]?.title_ar}
     </Links>,
   ];
   return (
@@ -90,7 +94,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
           title={
             isLTR ? filterServices[0]?.title_en : filterServices[0]?.title_ar
           }
-          page={t("services")}
+          page={"services"}
           image={filterServices[0]?.image}
           filterRelatedData={filterRelatedServices}
           description={

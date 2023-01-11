@@ -33,11 +33,24 @@ import { useRouter } from "next/router";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import VedioComponent from "../../ReuseAbleComponents/Vedio";
 import { useTranslation } from "react-i18next";
+import data from "../../../DataLayer/services.json";
+import { useTheme } from "styled-components";
 
 const MuarefDetails = () => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
   const { t } = useTranslation();
+  const { isLTR } = useTheme();
+  let type = router.query.sub_category;
+  const filterServices = data.sub_services.filter((item) =>
+    item.link.includes(type as string)
+  );
+  const filterRelatedServices = data.sub_services.filter(
+    (item) => item.type === router.query.detail
+  );
+  const filterSpecificItem = filterServices.filter(
+    (item) => item.link === `${type}`
+  );
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
       {t("home")}
@@ -58,7 +71,9 @@ const MuarefDetails = () => {
         router.query.detail
       }`}
     >
-      {router.query.detail}
+      {isLTR
+        ? filterSpecificItem[0]?.type?.replaceAll("_", " ")
+        : filterSpecificItem[0]?.type_ar}
     </Links>,
     <Links
       underline="hover"
@@ -68,7 +83,9 @@ const MuarefDetails = () => {
         router.query.detail
       }`}
     >
-      {(router.query?.sub_category as string).replaceAll("_", " ")}
+      {isLTR
+        ? filterSpecificItem[0]?.title_en
+        : filterSpecificItem[0]?.title_ar}
     </Links>,
   ];
   return (
