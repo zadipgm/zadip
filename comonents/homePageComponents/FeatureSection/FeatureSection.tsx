@@ -51,7 +51,7 @@ const FeatureSection = () => {
                 src="/images/ektefa.png"
                 alt="Feature"
                 width={150}
-                height={100}
+                height={"auto"}
               />
               <EktefaTitle direction={isLTR ? "ltr" : "rtl"}>
                 {t("featureTitleEktefa")}
@@ -86,7 +86,7 @@ const FeatureSection = () => {
                 src="/images/nafeth-light-logo.png"
                 alt="nafeth"
                 width={150}
-                height={100}
+                height={"auto"}
               />
               <EktefaTitle>{t("featureTitleNafeth")}</EktefaTitle>
               <EktefaDescription
@@ -119,7 +119,7 @@ const FeatureSection = () => {
                 src="/images/mauref.png"
                 alt="Feature"
                 width={150}
-                height={100}
+                height={"auto"}
               />
               <EktefaTitle>{t("featureTitleMuaref")}</EktefaTitle>
               <EktefaDescription
@@ -152,7 +152,7 @@ const FeatureSection = () => {
                 src="/images/ihtiwa.png"
                 alt="ehtiwa"
                 width={150}
-                height={100}
+                height={"auto"}
               />
               <EktefaTitle>{t("featureTitleEhtiwa")}</EktefaTitle>
               <EktefaDescription
