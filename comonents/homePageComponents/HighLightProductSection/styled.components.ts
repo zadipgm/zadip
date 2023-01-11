@@ -17,7 +17,7 @@ background-repeat:no-repeat ;
    
 
 `
-export const HighLightProductWrapper = styled.div`
+export const HighLightProductWrapper = styled.div<{backgroundColor:string}>`
   display: flex;
     justify-content:center ;
     align-items: center;
@@ -29,8 +29,8 @@ export const HighLightProductWrapper = styled.div`
  }
     margin:  0 auto;
     position: relative;
-    background: rgb(35 35 35);
-    opacity: .7;
+    background: ${({backgroundColor})=>backgroundColor};
+    
     border-radius: 15px;
        
 `
@@ -46,7 +46,7 @@ padding: 15px;
 `
 
 export const Title = styled.h3`
-color: #2193b0 ;
+color: #77d8ff; 
     text-transform: none;
 font-size: 26px;
 font-weight:600 ;

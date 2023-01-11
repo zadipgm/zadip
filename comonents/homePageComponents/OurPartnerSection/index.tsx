@@ -13,6 +13,7 @@ const OurPartnerSection = () => {
         description=""
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
+        fontSize={"22px"}
       />
       <SliderSlick
         sliderData={partner.partners}

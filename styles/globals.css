@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap');
 html{
 
   scroll-behavior: smooth;
@@ -13,7 +13,7 @@ body{
   height:100%;
   width:100%;
   margin:0;
-  font-family: 'Cairo'!important;
+  font-family: 'Cairo', sans-serif !important;
 }
 /* h1,h2,h3,h4,h5,h6{
   font-family:"'__Cairo_f3a025'";

@@ -85,6 +85,7 @@ const MuarefDetails = () => {
         description={`${t("goodbyebiometric")}`}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
+        fontSize={"22px"}
       />
       <MuarefSectionContainer>
         <VedioComponent />
@@ -120,7 +121,7 @@ const MuarefDetails = () => {
             title={`${t("valuedDistributors")}`}
             description={""}
             headingColor={"#2193b0"}
-            descriptionColor={"#737c85"}
+            descriptionColor={""}
           />
           <Wrapper>
             <ImageWrapper>

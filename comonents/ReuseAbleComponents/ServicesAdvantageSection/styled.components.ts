@@ -2,16 +2,13 @@ import styled from "styled-components";
 
 export const AdvantageContainer =  styled.div`
 display: flex;
-width:100% ;
-justify-content:center ;
-align-items:center ;
-margin:20px 0px  ;
+margin:20px 0px ;
 @media (max-width: 600px) {
   display: block;
 }
 `
 export const AdvantageWrapper= styled.div`
-display: flex;
+
 `
 export const Heading = styled.h3`
 margin:0 ;
@@ -22,6 +19,7 @@ margin:0 ;
 export const Wrapper = styled.div`
 padding: 15px;
 margin:15px ;
+width:33% ;
     border-radius: 10px;
 background-color: rgba(13,74,118,0.04);
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;

@@ -5,6 +5,7 @@ font-size:${({})} ;
 text-align: center;
 color: ${({color})=>color};
 text-transform:uppercase ;
+margin:0 ;
 
 `
 export const AnimationBarContainer= styled.div`
@@ -41,17 +42,18 @@ to {left: 145px;}
 }
 
 `
-export const DesCription = styled.p<{color:string, fontWeight:string}>`
+export const DesCription = styled.p<{color:string, fontWeight:string, fontSize:string}>`
 max-width: 630px;
 line-height: 26px;
 color:${({color})=>color};
 text-align:center ;
-    ${({ theme }) =>
+    /* ${({ theme }) =>
     theme.isLTR
     ? css`
-        letter-spacing: 1.4px;
+        letter-spacing: .4px;
         `
-    : css``}
+    : css``} */
 margin: 0 auto;
+font-size:${({fontSize})=>fontSize} ;
 font-weight:${({fontWeight})=>fontWeight} ;
 `

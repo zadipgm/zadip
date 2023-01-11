@@ -109,7 +109,7 @@ const Footer = () => {
           </FooterContanerThreeRow>
         </FooterContanerThreeWrapper>
         <FooterCopyRights>
-          © 2008 - 2022 {t("zadipGroups")}, {t("allRightsReserved")}. |{" "}
+          © 2008 - 2022 {t("zadipGroups")}, {t("allRightsReserved")}.
           <a href="#">{t("privacyPolicy")}</a>
         </FooterCopyRights>
       </FooterContanerThree>

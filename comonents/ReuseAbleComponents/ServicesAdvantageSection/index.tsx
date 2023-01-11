@@ -30,26 +30,25 @@ const ServicesAdvantageSection = ({ data }: Idata) => {
   return (
     <AdvantageWrapper>
       <AdvantageContainer>
-        <div>
-          {data.map((item) => {
-            return (
-              <Wrapper key={item.id}>
-                <IconComponent
-                  fill={"#2193b0"}
-                  width={"25px"}
-                  height={"25px"}
-                  icon={item.icon}
-                />
-                <Heading>{isLTR ? item.title_en : item.title_ar}</Heading>
-                <Description>
-                  {isLTR ? item.description_en : item.description_ar}
-                </Description>
-              </Wrapper>
-            );
-          })}
-        </div>
-        <VedioComponent />
-        {/* <VedioLinkWrapper>
+        {data.map((item) => {
+          return (
+            <Wrapper key={item.id}>
+              <IconComponent
+                fill={"#2193b0"}
+                width={"25px"}
+                height={"25px"}
+                icon={item.icon}
+              />
+              <Heading>{isLTR ? item.title_en : item.title_ar}</Heading>
+              <Description>
+                {isLTR ? item.description_en : item.description_ar}
+              </Description>
+            </Wrapper>
+          );
+        })}
+      </AdvantageContainer>
+      <VedioComponent />
+      {/* <VedioLinkWrapper>
           {" "}
           <iframe
             width="100%"
@@ -59,7 +58,6 @@ const ServicesAdvantageSection = ({ data }: Idata) => {
             allowFullScreen={true}
           ></iframe>
         </VedioLinkWrapper> */}
-      </AdvantageContainer>
     </AdvantageWrapper>
   );
 };

@@ -1,5 +1,4 @@
 import * as React from "react";
-import FaqSection from "../../ReuseAbleComponents/FaqSection";
 import TechnicalSpecsTable from "../../ReuseAbleComponents/TechnicalSpecifications";
 import _data from "../../../DataLayer/services.json";
 import specs_data from "../../../DataLayer/technicalSpecsTable.json";
@@ -134,7 +133,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
             }
             description={""}
             headingColor={"#2193b0"}
-            descriptionColor={"#737c85;"}
+            descriptionColor={""}
           />
           {type === "tam" && <ServicesAdvantageSection data={data.tam} />}
           {type === "muqeem" && <ServicesAdvantageSection data={data.muqeem} />}

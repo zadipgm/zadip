@@ -3,16 +3,17 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
-import productData from "../../../DataLayer/product.json";
 import LocaleContext from "../../../LocaleContext";
+
 import {
-  ProductCardsDescription,
-  ProductCardsImage,
+  RelatedWrapper,
+  RelatedTitle,
+  Divider,
   ProductCardsItems,
   ProductCardsListItems,
+  ProductCardsImage,
   ProductCardsTitle,
-} from "../../ProductPageComponents/ProductMainCategories/styled.comonents";
-import { RelatedWrapper, RelatedTitle, Divider } from "./styled.components";
+} from "./styled.components";
 interface ICategory {
   id?: number;
   title_en?: string;
@@ -62,9 +63,6 @@ const RelatedProducts: React.FC<IProps> = ({ relatedData, page }) => {
                 <ProductCardsTitle>
                   {isLTR ? item.title_en : item.title_ar}
                 </ProductCardsTitle>
-                {/* <ProductCardsDescription>
-                  {item.description}
-                </ProductCardsDescription> */}
               </ProductCardsListItems>
             </Link>
           );

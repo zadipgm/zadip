@@ -7,7 +7,8 @@
         "icon":"codeSvg",
         "description":"Dynamic custom software development to suit your unique needs",
         "link":"services/software_development",
-        "type":"software_development"
+        "type":"software_development",
+        "type_ar":"خدمات البرمجة"
        
       },
       {
@@ -17,7 +18,8 @@
         "icon":"ciscoSvg",
         "description":"Accredited select partner for Cisco in Saudi Arabia",
         "link":"services/data_centers",
-        "type":"data_centers"
+        "type":"data_centers",
+        "typear":"خدمات مركز البيانات"
       },
       
       {
@@ -25,9 +27,10 @@
         "title_ar":"خدمات الحكومة الإلكترونية",
         "title_en": "eGov Services",
         "icon":"websiteSvg",
-        "description":"Professional website and portal development to represent your online identity",
+        "description":"Professional and portal development to represent your online identity",
         "link":"services/egov_ervices",
-        "type":"eGov_services"
+        "type":"eGov_services",
+        "type_ar":"خدمات الحكومة الإلكترونية"
       },
       {
         "id":4,
@@ -36,7 +39,8 @@
         "icon":"cloudSvg",
         "description":"New-age solutions for workforce management with ease.",
         "link":"services/cloud_solutions",
-        "type":"cloud_solutions"
+        "type":"cloud_solutions",
+        "type_ar":"الخدمات السحابية"
       }
       
     ],
@@ -50,6 +54,10 @@
         "link":"software_development",
         "image":"https://mobirise.com/extensions/softwarem4/software-app/assets/images/features1.jpg",
         "type":"software_development",
+        "type_ar":"خدمات البرمجة",
+        "main_image":"/images/software_development.jpg",
+        "main_title_en":"Software Development",
+        "main_title_ar":"خدمات البرمجة",
         "detail_description_ar":"تطوير البرمجيات أحد الخدمات التي نقدمها لعملائنا الكرام. حيث وفرت مجموعة زاد المعلومات تطوير البرمجيات محليا وذلك من خلال فريق من المبرمجين المحترفين. يتمتع فريقنا بعدد من الخبرات في مجال برمجة العديد من لغات البرمجة العالمية. يمكنك الاعتماد على فريقنا لإتمام احتياجاتك البرمجية بكل اطمئنان لأنك سوف تحصل على برمجيات احترافية تم فيها ضبط طريقة البرمجة وفق السياسات المتبعة لذلك لنضمن لعملائنا الحصول على برامج خالية من العيوب البرمجية وتلامس متطلبات العميل باحترافية.",
         "detail_description_en":"ZADIP has gained a broad range of technical expertise with an unparalleled commitment to client satisfaction, we have become an authoritative option for companies looking for custom software development services, including supplementing in-house resources in the delivery of discrete project components, integration of the latest technology with existing enterprise infrastructure, creating complex interactive and multimedia environments.",
         "technical_specs":[
@@ -103,6 +111,7 @@
         "link":"website_development",
         "image":"https://zadip.com/images/egov/website.jpg",
         "type":"software_development",
+        "type_ar":"خدمات البرمجة",
         "detail_description_ar":"اصبح العالم الرقمي في هذا العصر احد اهم مقومات اي منشأة تجارية كانت او حكومية. وتسعى المنشأت الى الوصول للعديد من الأسواق المستهدفة لمنتجاتها وخدماتها خلال بواباتها الرقمية التي تتيح استخدام العديد من المؤثرات الصوتية والمرئية خلالها. وهنا يأتي دورنا في ايصال وتصميم وتطوير تلك البوابات الرقمية للعالم الرقمي حيث نقوم بإيصال أفكارك ومنتجاتك وخدماتك لمواطني العالم الرقمي العالمي. حيث سيصل صوتك الى جميع اطياف المجتمع الذين يجدون للشبكة العنكبوتية مقرا لهم.",
         "detail_description_en":"The local business owner is very unique and our countless hours of effort and interaction has built in us a knowledgebase that very few compete. We have developed websites, portals and automation software for every industry and in doing so have found that the chief concern that bothered our customers was not technology, but trust.",
         "technical_specs":[
@@ -137,7 +146,7 @@
           "description_en":"WordPress is a free and open-source content management system written in hypertext preprocessor language and paired with a MySQL or MariaDB database with supported HTTPS. Features include a plugin architecture and a template system, referred to within WordPress as themes."
         },
         {
-          "id":5,
+          "id":7,
           "name":"megentoSvg",
           "icon":"megentoSvg",
           "description_ar":"Magento هي منصة تجارة إلكترونية مفتوحة المصدر مكتوبة بلغة PHP. يستخدم العديد من أطر PHP الأخرى مثل Laminas و Symfony. يتم توزيع كود مصدر Magento بموجب Open Software License v3.0. استحوذت Adobe Inc على Magento في مايو 2018 مقابل 1.68 مليار دولار",
@@ -154,6 +163,7 @@
         "link":"mobile_apps",
         "image":"https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "type":"software_development",
+        "type_ar":"خدمات البرمجة",
         "detail_description_ar":"يسعدنا ان نقدم لكم في مجموعة زاد المعلومات التجارية خدمة متميزة ونادرة في السوق المحلية وهي خدمة برمجة تطبيقات الهواتف الذكية تعتبر الهواتف الذكية في وقتنا الحاضر احد اهم وسائل التواصل بين أي منشأة تجارية كانت او حكومية مع المواطنين بشكل عام او العملاء بشكل خاص. نوفر لكم إمكانية برمجة التطبيقات على احدث الهواتف الذكية باخر طرق البرمجة المتوفرة واحدثها. حيث يمكنك استخدام تطبيقك على أي بيئة تريدها سواء كانت بيئة هواتف قوقل الذكي التي تستخدم نظام اندرويد ( Android ) او نظام أبل للهواتف الذكية أيضا ( iphone ) واحدثها نظام البرمجة الجديدة لهواتف ويندوز ( Windows phone) وأيضا نظام البرمجة للهواتف الذكية من بلاك بيري ( Black berry ) , جميع خدماتنا متوفرة لكم وبين ايديكم لإنتاج تطبيق متميز يحظى بثقه كل من يستخدمه.",
         "detail_description_en":"Smartphones now control the world’s tech. The advent of mobile based ecommerce, secure methods of financial transactions and most importantly social media has enforced the presence of mobile applications as the key element of success. Our mobile development team has produced applications ranging from business to social media applications with expert focus on ease of use, dependability, architectural robustness and most importantly security that you can depend on.",
         "technical_specs":[
@@ -203,8 +213,12 @@
         "icon":"ciscoSvg",
         "description":"Accredited select partner for Cisco in Saudi Arabia",
         "link":"cisco_sla",
-        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_1632961779.img.jpg/1667897153934.jpg",
+        "image":"/images/cisco.jpg",
         "type":"data_centers",
+        "type_ar":"خدمات مركز البيانات",
+        "main_title_en":"Data Centers",
+        "main_title_ar":"مراكز البيانات",
+        "main_image":"/images/datacenter.jpg",
         "detail_description_ar":"المطلع على حياتنا اليومية يجد ان التقنية أصبحت حاضرة في كل جوانبها بدءا عندما تستيقظ صباحا على صوت جرس هاتفك الذكي وحتى تصل الى عملك والعودة منة ستجد أنك محاط بالتقنية ولا تكاد تستغني عنها يوما واحدا. ولكي يعمل هذا كله يلزم وجود ترابط بين تلك التقنيات المتعددة ويتم ذلك عبر الشبكات. هذه الشبكات تدير معظمها أجهزة سيسكو العالمية والتي بدورها تنظم عملها وتتأكد من صلاحيتها وأيضا تقوم بفلترتها لتقدم للمستخدم كل البيانات التي تلزمه ليقوم بأعماله بشكل أسهل وأمن.",
         "detail_description_en":"Cisco is the world's largest networking company. Its internetwork devices and communications solutions are unmatched and a core ingrediant of any business industry. ZADIP Group has been raised as Cisco Select Partner in 2016 which helps us provide our clients with added value services directly without the involvement of any third party. This assures that our clients always enjoy the commitment that we promise them and that our relationship covers all facets of supply, implementation and management.",
         "technical_specs":[
@@ -249,8 +263,9 @@
         "icon":"networkingSvg",
         "description":"Building efficient infrastrucutres to help your organization expand and grow",
         "link":"network_infrastructure",
-        "image":"https://www.cisco.com/c/m/en_sg/partners/cisco-networking-academy/index/jcr:content/Grid/category_atl/layout-category-atl/spotlight_63734854.img.jpg/1668135786981.jpg",
+        "image":"/images/network.jpg",
         "type":"data_centers",
+        "type_ar":"خدمات مركز البيانات",
         "detail_description_ar":"أدت زيادة طلب الأعمال على وظائف التكنولوجيا إلى تحقيق نمو سريع لمراكز بيانات العديد من المنظمات. لقد حدث هذا في كثير من الأحيان ليقوم بحل مشاكل منبثقة بشكل خاص، وأدى هذا الى تنفيذ تطبيقات تعالج هذه المشاكل بالتالي تشغيل عناصر البنية التحتية بكامل طاقتها في حين عناصر أخرى يتم إهمالها . وهذا يعني بالنسبة إلى أقسام تكنولوجيا المعلومات دعماً ومصاريف تشغيلية أكبر وقلة الكفاءة. فتكاليف الدعم لا تمثل سوى إحدى التكاليف التشغيلية المتصاعدة لمراكز البيانات، فمع تعدد المرافق وتباعد أماكن الخوادم، فإن المنظمات تواجه ارتفاعاً في فواتير الطاقة ومتطلبات المساحة.",
         "detail_description_en":"Increased business demands and dependence on technology has resulted in the rapid growth and need for efficient and economical data center solutions. This results in the need for skilled IT administration staff and other maintenance and load detection tools that help detect concerns of expansion and utilization.",
         "technical_specs":[
@@ -270,8 +285,9 @@
         "icon":"serverSvg",
         "description":"Specialized data center processing and storage products",
         "link":"servers_storage",
-        "image":"https://zadip.com/images/egov/server.jpg",
+        "image":"/images/server.jpg",
         "type":"data_centers",
+        "type_ar":"خدمات مركز البيانات",
         "detail_description_ar":"متخصصون في تقديم خدمات البنية التحتية لمراكز البيانات والمعلومات. أحد اهم عناصر تلك المراكز هي الخوادم وأنظمة التخزين. نساهم معك عزيزي العميل في اختيار وتوريد وتركيب ما يتناسب مع أعمالك التجارية وما ترغب في إنجازه من خادمات عالية الجودة وخدمات بعد البيع استثنائية. كما نساعدك عزيزنا العميل بتوريد وتركيب أجهزة التخزين الرقمية وأنظمة النسخ الاحتياطي الطارئ التي قد تنقذك وأعمالك في الأوقات الحرجة. يسعدنا ان نوفر لك عزيزي العميل عدد من المنتجات التي تساهم في تعدد الخيارات والتي تناسب احتياجاتك وأيضا توفر عليك التكلفة المستقبلية والحالية.",
         "detail_description_en":"We specialize in providing infrastructure services for data centers. One of the most important elements of these centers are servers and storage systems. We assist you in the selection, supply and installation process and help you to accomplish from high quality servers and exceptional after-sales services.",
         "technical_specs":[
@@ -320,8 +336,12 @@
         "icon":"websiteSvg",
         "description":"New-age solutions for workforce management with ease.",
         "link":"muqeem",
-        "image":"https://zadip.com/images/egov/muqeembanner.jpg",
-        "type":"eGov_services"
+        "image":"/images/muqeem.jpg",
+        "type":"eGov_services",
+        "type_ar":"خدمات الحكومة الإلكترونية",
+        "main_title_en":"eGov Services",
+        "main_title_ar":"خدمات الحكومة الإلكترونية",
+        "main_image":"/images/eservices.jpg"
       },
       {
         "id":8,
@@ -330,8 +350,9 @@
         "icon":"websiteSvg",
         "description":"Complete management of your vehicle fleet in your hands.",
         "link":"tam",
-        "image":"https://zadip.com/images/egov/tammbanner.jpg",
-        "type":"eGov_services"
+        "image":"/images/tam.jpg",
+        "type":"eGov_services",
+        "type_ar":"خدمات الحكومة الإلكترونية"
 
       },
       
@@ -342,8 +363,9 @@
         "icon":"websiteSvg",
         "description":"Manage your fleet with ease",
         "link":"masarat",
-        "image":"https://www.elm.sa/en/e-services/ElmCloud/PublishingImages/Pages/Masarat/shutterstock_659615179.jpg",
-        "type":"eGov_services"
+        "image":"/images/masarat.jpg",
+        "type":"eGov_services",
+        "type_ar":"خدمات الحكومة الإلكترونية"
       
       },
 
@@ -352,11 +374,15 @@
         "id":10,
         "title_ar":"خدمة اكتفاء",
         "title_en": "Ektefa",
-        "icon":"websiteSvg",
+        "icon":"cloudSvg",
         "description":"Human Resource Management",
         "link":"ektefa",
         "image":"https://ektefa.net/agency/img/illustrations/employee.svg",
-        "type":"cloud_solutions"
+        "type":"cloud_solutions",
+        "type_ar":"الخدمات السحابية",
+        "main_title_en":"Cloud Solutions",
+        "main_title_ar":"حلول السحابة",
+        "main_image":"/images/cloudservices.jpg"
       
       },
       {
@@ -368,6 +394,7 @@
         "link":"muaref",
         "image":"https://www.zadip.com/en/images/products/muaref/muaref.jpg",
         "type":"cloud_solutions",
+        "type_ar":"الخدمات السحابية",
         "detail_description_ar":"هو أحد إصدارات نظام معرف للتحكم في الدخول. معرف كيو ار تم تطويره وبرمجته كليا في مجموعة زاد المعلومات. حيث يغير النظام طريقة وأسلوب الحضور والانصراف المتعارف عليها باستخدام أجهزة البصمة والمعلومات الحيوية. ولأننا وجدنا ان هذه الأجهزة تتطلب لمس الجهاز من أكثر من شخص لتسجيل الحضور قررنا ان نبحث عن حل."
       
       },
@@ -380,6 +407,7 @@
         "link":"cadre",
         "image":"https://zadip.com/images/egov/cadre.jpg",
         "type":"cloud_solutions",
+        "type_ar":"الخدمات السحابية",
         "detail_description_ar":"هي خدمة اضافيه مجانية لمشتركينا في خدمة إكتفاء. حيث يتيح موقع كادر للباحثين عن عمل التسجيل بشكل مجاني والتقديم على الوظائف الشاغرة المتاحة والمنشورة من قبل الشركات المشتركة معنا في نظام اكتفاء.",
         "detail_description_en":"Cadre is an value add service for the subscribers to Ektefa HRMS. It provides Ektefa subscribers a fully integrated and managed vacancy posting portal with no extra charges at all. Cadre links bona fide job seekers to employers directly on real vacancies without the intervention of mediators or headhunters.",
         "technical_specs":[]
@@ -393,7 +421,8 @@
         "description":"Specialized data center processing",
         "link":"nafeth",
         "image":"https://nafeth.com/images/nafeth-naql.png",
-        "type":"cloud_solutions"
+        "type":"cloud_solutions",
+        "type_ar":"الخدمات السحابية"
       
       }
        

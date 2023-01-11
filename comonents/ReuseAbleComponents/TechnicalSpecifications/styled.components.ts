@@ -39,11 +39,14 @@ overflow: visible;
           display: flex;
     justify-content: flex-start;
     align-items: center;
-   
+    transition: background-color 800ms;
     :hover{
       transition: all 0.5s ease-in;
       color:#fff ;
       background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+      background-position:  469px;
+      background-color: #A0A0A0;
+      
       div{
         color:#fff ;
       }
@@ -86,6 +89,13 @@ display: flex;
     :hover{
       color:#fff ;
     }
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height:100px ;
+    text-align:center ;
+    text-overflow: ellipsis;
 
 `
 export const TechSpecsTitle = styled.h3`

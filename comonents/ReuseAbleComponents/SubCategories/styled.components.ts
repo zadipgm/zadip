@@ -23,6 +23,16 @@ transition:.5s ease;
 }
 `
 export const CategoryCardsListItems = styled.li` 
+&.services-card{
+    height:auto ;
+    padding:0 ;
+    border-radius: 0rem;
+
+    > img {
+    border-radius: 0rem;
+    object-fit: unset;
+    }
+}
     position: relative;
 padding: 1rem;
 border-radius: 1rem;
@@ -40,7 +50,7 @@ transition: .5s ease;
     h3{
     color: #fff;
     }
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    background: #0576bc ;
 color:#fff ;
 transition: .5s ease;
 transform: translateY(-10px);
@@ -88,23 +98,11 @@ margin: 0 auto;
 text-align:center ;
 color: #737c85;
 `
+export const ServicesTitle = styled.span`
+font-size:18px ;
+`
 export const CardListWrapper= styled.div`
-display:flex ;
-flex-wrap:wrap ;
 
-&.MuiPaper-root.MuiButtonBase-root.MuiCardContent-root{
-    width:300px ;
-    @media (max-width: 600px) {
-   width:100% ;
-}
-}
->a{
-    text-decoration:none ;
-    @media (max-width: 600px) {
-   width:100% ;
-
-}
-}
 `
 export const OverLay =  styled.div`
 position: absolute;

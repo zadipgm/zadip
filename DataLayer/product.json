@@ -7,7 +7,8 @@
   "icon":"survillenceSvg",
   "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
   "link":"products/DS-2CD2142FWD-IS",
-  "type":"surveillance"
+  "type":"surveillance",
+  "type_ar":"انظمة المراقبة والأمان"
 },
 {
   "id":2,
@@ -16,7 +17,8 @@
   "icon":"videoRecorderSvg",
   "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
   "link":"products/DS-2CD2142FWD-IS",
-  "type":"nvr_dvr"
+  "type":"nvr_dvr",
+  "type_ar":"اجهزة التخزين و التسجيل"
 },
 
 {
@@ -26,7 +28,8 @@
   "icon":"fingerprintSvg",
   "description":"Thumbprint Based Access Control Device",
   "link":"products/access_control",
-  "type":"access_control"
+  "type":"access_control",
+   "type_ar":"انظمة التحكم بالدخول"
 },
 {
   "id":4,
@@ -35,7 +38,8 @@
   "icon":"centralclockSvg",
   "description":"Control your organization with centralized timekeeping solutions",
   "link":"products/clocks",
-  "type":"building_management"
+  "type":"building_management",
+  "type_ar":"إدارة المباني"
 }
 
   
@@ -48,6 +52,7 @@
       "title_ar":"DS-2CD2142FWD-IS",
       "image":"https://zadip.com/images/products/cameras/ds-2cd2142fwd-is.jpg",
       "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
+      "type_ar":"انظمة المراقبة والأمان",
       "type":"surveillance",
       "specs":true,
       "link":"DS-2CD2142FWD-IS",
@@ -65,6 +70,7 @@
       "image":"https://zadip.com/images/products/cameras/ds-2cd2942f.jpg",
       "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
       "type":"surveillance",
+      "type_ar":"انظمة المراقبة والأمان",
       "specs":true,
       "link":"DS-2CD2942F"
      
@@ -76,6 +82,7 @@
       "image":"https://zadip.com/images/products/cameras/DS-2CD2T42WD.jpg",
       "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
       "type":"surveillance",
+      "type_ar":"انظمة المراقبة والأمان",
       "specs":true,
       "link":"DS-2CD2T42WD"
       
@@ -87,6 +94,7 @@
         "image":"https://zadip.com/images/products/cameras/DS-2CE16C0T-IR.jpg",
         "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
         "type":"surveillance",
+        "type_ar":"انظمة المراقبة والأمان",
         "specs":true,
         "link":"DS-2CE16C0T-IR"
         
@@ -98,6 +106,7 @@
             "image":"https://zadip.com/images/products/cameras/DS-2CE16D0T-IR(P).jpg",
             "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
             "type":"surveillance",
+            "type_ar":"انظمة المراقبة والأمان",
             "specs":true,
             "link":"DS-2CE16D0T-IR(P)"
            
@@ -110,6 +119,7 @@
               "image":"https://zadip.com/images/products/cameras/DS-2CE16D0T-IT3.jpg",
               "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
               "type":"surveillance",
+              "type_ar":"انظمة المراقبة والأمان",
               "specs":true,
               "link":"DS-2CE16D0T-IT3"
               
@@ -121,6 +131,7 @@
                 "image":"https://zadip.com/images/products/cameras/DS-2CE16D7T-IT3Z.jpg",
                 "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
                 "type":"surveillance",
+                "type_ar":"انظمة المراقبة والأمان",
                 "specs":true,
                 "link":"DS-2CE16D7T-IT3Z"
                
@@ -132,6 +143,7 @@
                   "image":"https://zadip.com/images/products/cameras/DS-2CE16F7T-IT3Z.jpg",
                   "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
                   "type":"surveillance",
+                  "type_ar":"انظمة المراقبة والأمان",
                   "specs":true,
                   "link":"DS-2CE16F7T-IT3Z"
                  
@@ -143,6 +155,7 @@
                     "image":"https://zadip.com/images/products/cameras/DS-2CE56C0T-IRP.jpg",
                     "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
                     "type":"surveillance",
+                    "type_ar":"انظمة المراقبة والأمان",
                     "specs":true,
                     "link":"DS-2CE56C0T-IRP"
                     
@@ -154,6 +167,7 @@
                       "image":"https://zadip.com/images/products/cameras/DS-2CE56D1T-(A)VFIR.jpg",
                       "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
                       "type":"surveillance",
+                      "type_ar":"انظمة المراقبة والأمان",
                       "specs":true,
                       "link":"DS-2CE56D1T-(A)VFIR"
                      
@@ -165,6 +179,7 @@
                         "image":"https://zadip.com/images/products/cameras/DS-2CE56D1T-VPIR.jpg",
                         "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
                         "type":"surveillance",
+                        "type_ar":"انظمة المراقبة والأمان",
                         "specs":true,
                         "link":"DS-2CE56D1T-VPIR"
                         
@@ -176,6 +191,7 @@
                           "image":"https://zadip.com/images/products/cameras/DS-2CE56D7T.jpg",
                           "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
                           "type":"surveillance",
+                          "type_ar":"انظمة المراقبة والأمان",
                           "specs":true,
                           "link":"DS-2CE56D7T"
                           
@@ -188,6 +204,7 @@
                             "image":"https://zadip.com/images/products/cameras/DS-2DE5120I5220I-AE.jpg",
                             "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
                             "type":"surveillance",
+                            "type_ar":"انظمة المراقبة والأمان",
                             "specs":true,
                             "link":"DS-2DE5120I5220I-AE"
                             
@@ -199,6 +216,7 @@
           "image":"https://zadip.com/images/products/cameras/DS-2CE56C2T-VFIR3.jpg",
           "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
           "type":"surveillance",
+          "type_ar":"انظمة المراقبة والأمان",
           "specs":true,
           "link":"DS-2CE56C2T-VFIR3"
           
@@ -210,6 +228,7 @@
             "image":"https://zadip.com/images/products/cameras/DS-2CE56D0T-IRP.jpg",
             "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
             "type":"surveillance",
+            "type_ar":"انظمة المراقبة والأمان",
             "specs":true,
             "link":"DS-2CE56D0T-IRP"
             
@@ -222,6 +241,7 @@
               "image":"https://zadip.com/images/products/cameras/DS-2CE16C2T-VFIR3.jpg",
               "description":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
               "type":"surveillance",
+              "type_ar":"انظمة المراقبة والأمان",
               "specs":true,
               "link":"DS-2CE16C2T-VFIR3"
               
@@ -233,10 +253,12 @@
           "image":"https://zadip.com/images/products/recorders/DS-7200HGHI-E2.jpg",
           "description":"Control your organization with centralized timekeeping solutions",
           "type":"nvr_dvr",
+          "type_ar":"اجهزة التخزين و التسجيل",
           "specs":true,
           "link":"nvr_dvr",
-          "main_image":"https://widevisionuae.com/img/banner_dvr.jpg",
+          "main_image":"/images/recorder.jpg",
           "main_title_en":"NVRs & DVRs",
+          "main_title_ar":"اجهزة التخزين و التسجيل",
           "icon":"videoRecorderSvg"
           
         },
@@ -248,6 +270,7 @@
           "description":"Control your organization with centralized timekeeping solutions",
           "type":"nvr_dvr",
           "specs":true,
+          "type_ar":"اجهزة التخزين و التسجيل",
           "link":"nvr_dvr"
          
         },
@@ -259,6 +282,7 @@
           "description":"Control your organization with centralized timekeeping solutions",
           "type":"nvr_dvr",
           "specs":true,
+          "type_ar":"اجهزة التخزين و التسجيل",
           "link":"nvr_dvr"
           
           
@@ -271,17 +295,19 @@
           "description":"Control your organization with centralized timekeeping solutions",
           "type":"nvr_dvr",
           "specs":true,
+          "type_ar":"اجهزة التخزين و التسجيل",
           "link":"nvr_dvr"
           
          
         },
-        {"id":21,
+        {"id":30,
           "title_en": "DS-7600NI-E",
           "title_ar": "DS-7600NI-E",
           "image":"https://zadip.com/images/products/recorders/DS-7600NI-E.jpg",
           "description":"Control your organization with centralized timekeeping solutions",
           "type":"nvr_dvr",
           "specs":true,
+          "type_ar":"اجهزة التخزين و التسجيل",
           "link":"nvr_dvr"
           
         
@@ -291,9 +317,10 @@
           "id":22,
             "title_en": "F09",
             "title_ar": "F09",
-            "image":"https://zadip.com/images/egov/F09.jpg",
+            "image":"/images/f09.jpg",
             "description":"Thumbprint Based Access Control Device",
             "type":"access_control",
+             "type_ar":"انظمة التحكم بالدخول",
             "link":"f09",
             "main_image":"https://img.freepik.com/free-photo/biometric-technology-background-with-fingerprint-scanning-system-virtual-screen-digital-remix_53876-104937.jpg?w=1380&t=st=1672577494~exp=1672578094~hmac=15d98f420e2909c590f555576bc3c56abe9a32572afb2660fd5ff0d0a7d8dac6",
             "icon":"fingerprintSvg",
@@ -372,9 +399,10 @@
             "id":23,
             "title_en": "Multibio700",
             "title_ar": "Multibio700",
-            "image":"https://www.pngitem.com/pimgs/m/637-6378206_zkteco-multibio-700-hd-png-download.png",
+            "image":"/images/multi700.jpg",
             "description_en":"Thumbprint Based Access Control Device",
             "type":"access_control",
+             "type_ar":"انظمة التحكم بالدخول",
             "link":"multibio700",
             "detail_description_en":"MultiBio 700 is a new generation multiple biometric identification product. Integrating with Face, Fingerprint and PIN recognition and optional with RFID mode. It performs up to 20 verification methods all in a single device conveniently.",
             "detail_description_ar":"نضع بين يديكم احدث أجهزة التحكم بالدخول الإلكتروني من شركة قراندنق العالمية . حيث يعتمد هذا الجهاز احدث وسائل التشفير والحماية والامان من لوغاريتمات معقدة وذلك للتأكد من هويه الشخص ويستطيع هذا الجهاز القيام بالتأكد من الشخصيه وذلك بهذه السبل المتاحه سواء مجتمعه او متفرقه وهي بصمة الوجه او بصمه الاصبع او الكرت او الرقم السري وبذلك يكون هذا الجهاز هو احدث الاجهزة العالمية الدقيقه في هذا المجال.",
@@ -474,9 +502,10 @@
           "id":24,
           "title_en": "SC103",
           "title_ar": "SC103",
-          "image":"https://zadip.com/images/egov/sc103.jpg",
+          "image":"/images/sc103.png",
           "description_en":"Hikvision 3 Megapixel high-performance CMOS Analog HD output",
           "type":"access_control",
+           "type_ar":"انظمة التحكم بالدخول",
           "link":"sc103",
           "detail_description_ar":"يرغب العديد من العملاء بجهاز صغير يتم وضعه خارج المنشأة بحيث يتحكم في دخول وخروج الموظفين وهذا الجهاز من قراندق العالمية يقوم بهذه المهمة على احسن وجه حيث يتميز بحجم صغير وجوده عاليه جدا كما يتميز بشكل انسيابي انيق. ويحتوي جهاز التحكم بالدخول والخروج SC 103 مميزات عديدة تستطيع الإعتماد عليها.",
           "detail_description_en":"SC103 is made with elegant design and professional surface treatment. The device have lock control, alarm, exit button, door sensor. The wiegand-in interface is used to connect external reader to construct master and slave system. Also the device can be used to connect with a control panel as a reader by wiegand-out interface. The operation can be done on the device through LCD display, also can be done on PC software and upload to the device through TCP/IP, RS232/485 communication. The USB-host is used for data download and upload, including user template and record etc.",
@@ -578,6 +607,7 @@
             "image":"https://zadip.com/images/egov/clock.jpg",
             "description_en":"Control your organization with centralized timekeeping solutions",
             "type":"building_management",
+            "type_ar":"نظام المباني الذكية",
             "link":"central_clock",
             "main_image":"https://images.pexels.com/photos/210598/pexels-photo-210598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "icon":"centralclockSvg",
@@ -660,6 +690,7 @@
         "image":"https://zadip.com/images/egov/building.jpg",
         "description_en":"Control your organization with centralized timekeeping solutions",
         "type":"building_management",
+        "type_ar":"نظام المباني الذكية",
         "link":"smart_building_systems",
         "detail_description_ar":"نشاهد من حولنا العالم في تغيير مستمر وتطورات تحدث على مدار الساعة وبسرعة كبيرة جدا. ولا يكاد يمضي يوم بدون ان نسمع عن خبر إطلاق جهاز جديد او تقنية حديثة ثورية. كما أن من يعملون في مجال الإنشاءات يتطلعون لتقديم مباني عصرية ذات طابع تقني متطور يلبي احتياجات العميل. ومن هنا يأتي دور جمع كل هذه التقنيات ضمن جهاز موحد يديرها جميعها باحترافية واقتصاد وتحكم.",
         "detail_description_en":"We see the world around us in constant change and developments happening around the clock and very quickly. Hardly a day goes by without hearing about the launch of a revolutionary new device or technology. And those who work in construction are looking to provide modern buildings with a sophisticated technical nature that meets the needs of the client. Hence, the collection of all these techniques within a unified device managed by all professionally, economy and control.",

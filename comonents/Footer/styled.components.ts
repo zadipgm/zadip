@@ -31,7 +31,7 @@ margin: 0;
 
 `
 export const FooterContanerThree= styled.div`
-    background: #006791;
+    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
     padding: 12px;
 `
 export const FooterContanerThreeCol = styled.div`
@@ -110,11 +110,11 @@ transition: all 0.5s ease;
 
 export const FooterCopyRights = styled.div`
 border-top: 1px solid rgba(0, 0, 0, .15);
-margin-top:30px ;
+margin:30px 66px;
 padding:30px;
 color:#ffff;
 display:flex ;
-justify-content:center ;
+justify-content:space-between ;
 align-items:center ;
 > a {
 padding:0px 8px ;

@@ -16,7 +16,7 @@ list-style: none;
 justify-content: center;
 align-items: center;
 width: 100%;
-margin:25px 0px ;
+margin:80px 0px ;
 > a{
 text-decoration:none ;
 width: 22%;

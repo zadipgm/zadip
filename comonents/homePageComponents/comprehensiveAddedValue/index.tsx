@@ -18,7 +18,12 @@ const ComprehensiveAddedValue = () => {
     <ComprehensiveContainer>
       <Wrapper>
         <ImageWrapper>
-          <Image src={visiionIMage2030} alt={"2030"} width={526} height={442} />
+          <img
+            src={"https://www.zadip.com/en/images/vision2030.png"}
+            alt={"2030"}
+            width={""}
+            height={""}
+          />
         </ImageWrapper>
         <Description>
           <Title>{t("valueAddesHeading")}</Title>

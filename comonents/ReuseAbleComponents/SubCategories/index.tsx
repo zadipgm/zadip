@@ -22,6 +22,7 @@ import {
   OverLayWrapper,
   SearchSvgWrapper,
   SearchWrapper,
+  ServicesTitle,
 } from "./styled.components";
 import Link from "next/link";
 import SearchSvg from "../../../public/icons/searchSvg";
@@ -102,9 +103,6 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
                   <CategoryCardsTitle>
                     {isLTR ? item.title_en : item.title_ar}
                   </CategoryCardsTitle>
-                  {/* <CategoryCardsDescription>
-                    {isLTR ? item.description_en : item.description_ar}
-                  </CategoryCardsDescription> */}
                   {item.specs && (
                     <OverLay>
                       <OverLayWrapper>
@@ -120,48 +118,34 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
               </Link>
             );
           })}
-        <CardListWrapper>
-          {page === "services" &&
-            filteredCategorys.slice(0, next).map((item) => {
-              return (
-                <Link
-                  href={
-                    item.link === "/ektefa"
-                      ? "https://ektefa.net"
-                      : item.link === "/nafeth"
-                      ? "https://nafeth.com/"
-                      : `/${locale}/${page}/${item.link}/${item.type}`
-                  }
-                  key={item.id}
-                  onClick={() => console.log(item.type)}
-                >
-                  <Card sx={{ maxWidth: 345, height: 300, margin: "12px" }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={item.image}
-                        alt="green iguana"
-                      />
-                      <CardContent style={{ width: "313px" }}>
-                        <Typography gutterBottom variant="h5" component="div">
-                          {isLTR ? item.title_en : item.title_ar}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          {isLTR ? item.description_en : item.description_ar}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Learn more
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Link>
-              );
-            })}
-        </CardListWrapper>
+
+        {page === "services" &&
+          filteredCategorys.slice(0, next).map((item) => {
+            return (
+              <Link
+                href={
+                  item.link === "/ektefa"
+                    ? "https://ektefa.net"
+                    : item.link === "/nafeth"
+                    ? "https://nafeth.com/"
+                    : `/${locale}/${page}/${item.link}/${item.type}`
+                }
+                key={item.id}
+                onClick={() => console.log(item.type)}
+              >
+                <CategoryCardsListItems className="services-card">
+                  <CategoryCardsImage
+                    src={item.image}
+                    width={328}
+                    height={218}
+                  />
+                  <CategoryCardsTitle>
+                    {isLTR ? item.title_en : item.title_ar}
+                  </CategoryCardsTitle>
+                </CategoryCardsListItems>
+              </Link>
+            );
+          })}
       </CategoryCardsItems>
       {sub_categories.length > next ? (
         <LoadMoreButton color="#fff" onClick={handleMoreImage}>

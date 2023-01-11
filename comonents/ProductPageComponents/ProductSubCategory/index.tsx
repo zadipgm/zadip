@@ -18,6 +18,12 @@ const ProductSubCategory = () => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
   const { t } = useTranslation();
+  const query = router?.query?.type;
+  const filteredProducts = productData.all.filter(
+    (item) => item.type === query
+  );
+  const main_category = filteredProducts[0];
+  const { isLTR } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
       {t("home")}
@@ -31,15 +37,12 @@ const ProductSubCategory = () => {
       {t("products")}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#fff" }}>
-      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
+      {isLTR
+        ? filteredProducts[0]?.type?.replaceAll("_", " ")
+        : filteredProducts[0]?.type_ar}
     </Typography>,
   ];
-  const query = router?.query?.type;
-  const filteredProducts = productData.all.filter(
-    (item) => item.type === query
-  );
-  const main_category = filteredProducts[0];
-  const { isLTR } = useTheme();
+
   return (
     <ProductSubCategoryContainer bgimage={main_category?.main_image}>
       <ProductSubCategoryWrapper>
@@ -55,6 +58,7 @@ const ProductSubCategory = () => {
           description={t("featureDescription")}
           headingColor={"#fff"}
           descriptionColor={"#fff"}
+          fontSize={"22px"}
         />
         <SubCategory sub_categories={filteredProducts} page={"products"} />
       </ProductSubCategoryWrapper>

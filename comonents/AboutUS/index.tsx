@@ -55,6 +55,7 @@ const AboutUS = () => {
         description={`${t("compnaysummry")}`}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
+        fontSize={"16px"}
       />
       <AboutusWrapper>
         <div>
@@ -87,9 +88,9 @@ const AboutUS = () => {
           description={`${t("teamDescription")}`}
           headingColor={"#2193b0"}
           descriptionColor={"#737c85;"}
+          fontSize={"16px"}
         />
         <TeamCards>
-          {/* <Slider {...settings}> */}
           {partner.our_team.map((item) => {
             return (
               <TeamCradsWrapper>
@@ -101,14 +102,6 @@ const AboutUS = () => {
                   </InfoTitleSkill>
                 </TeamInfo>
                 <SocialIconsReUseable classname={"about-page"} />
-                {/* <SocialIcons>
-                  <Link href={item.twitter}>
-                    <TwitterSvg className="icon" />
-                  </Link>
-                  <Link href={item.linkedIn}>
-                    <LinkedInSvg className="icon" />
-                  </Link>
-                </SocialIcons> */}
               </TeamCradsWrapper>
             );
           })}
@@ -119,6 +112,7 @@ const AboutUS = () => {
         description={`${t("clientdescription")}`}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
+        fontSize={"16px"}
       />
       <SliderSlick
         sliderData={partner.our_clients}
@@ -128,17 +122,6 @@ const AboutUS = () => {
         autoplay={true}
         autoplaySpeed={2000}
       />
-      {/* <OurClients>
-        {clients.our_clients.map((item) => {
-          return (
-            <ClientWrapper key={item.id}>
-              <img src={item.image} alt="adel" width={200} height={200} />
-              <ClientTitle>{item.title}</ClientTitle>
-              <ClientSector>{item.sector}</ClientSector>
-            </ClientWrapper>
-          );
-        })}
-      </OurClients> */}
     </AboutUsContainer>
   );
 };

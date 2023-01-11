@@ -65,7 +65,9 @@ const TechnicalSpecsTable: React.FC<IProps> = ({ data, title, page }) => {
                 />
 
                 <SpecsDescription>
-                  {isLTR ? item.description_en : item.description_ar}
+                  <p className="ellipsis">
+                    {isLTR ? item.description_en : item.description_ar}
+                  </p>
                 </SpecsDescription>
               </div>
             </SpecsWrapper>

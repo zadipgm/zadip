@@ -32,9 +32,8 @@ padding:15px ;
 width:50% ;
 border-radius: 10px;
 @media(max-width:600px){
-        width:100% ;
+width:100% ;
 }
-box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
 `
 export const TableHeading= styled.h3`
 color:#2193b0 ;

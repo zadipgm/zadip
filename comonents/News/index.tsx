@@ -52,6 +52,7 @@ const News = () => {
         description={""}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
+        fontSize={"22px"}
       />
       <NewsWrapper>
         {filteredNews[0]?.news_details.map((item) => {

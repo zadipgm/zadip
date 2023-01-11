@@ -155,7 +155,8 @@ color:#fff ;
 padding: 10px 20px;
 border-radius:6px ;
 transition: .6s;
-font-family: 'Cairo'!important;
+font-weight:600 ;
+font-family: Cairo,sans-serif !important;
 :hover{
     background-color:#60CBEF; ;
     transition: .6s;
@@ -217,7 +218,7 @@ position: fixed;
   padding: 16px 20px;
   font-size: 20px;
   bottom: 40px;
-  right: 40px;
+  right: 23px;
   background-color: #99d2e3;
   color: rgb(255, 255, 255);
   border-radius: 100%;
@@ -227,7 +228,7 @@ position: fixed;
   transition: .5s;
   z-index: 9999;
   :hover{
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    background: #38b7ae;
     transition: .5s;
   }
 

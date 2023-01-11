@@ -23,8 +23,8 @@ const FeatureSection = () => {
     speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 3000,
-    autoplay: true,
+    // autoplaySpeed: 3000,
+    // autoplay: true,
     easing: "linear",
   };
   return (
@@ -34,15 +34,16 @@ const FeatureSection = () => {
         descriptionColor={"#737c85"}
         title={t("featureProduct") as string}
         description={t("featureDescription")}
+        fontSize={"22px"}
       />
       <FeatureSectionContainer>
         <Slider {...settings} className={"feature-section"}>
           <EktefaWrapper
-            background={
-              isLTR
-                ? "linear-gradient(-30deg,#03a9f5c7 35%,#efefefb8)"
-                : "linear-gradient(-30deg,#efefefb8 35%,#03a9f5c7)"
-            }
+            // background={
+            //   isLTR
+            //     ? "linear-gradient(-30deg,#03a9f5c7 35%,#efefefb8)"
+            //     : "linear-gradient(-30deg,#efefefb8 35%,#03a9f5c7)"
+            // }
             direction={isLTR ? "ltr" : "rtl"}
           >
             <EktefaDescriptionWrapper>
@@ -50,7 +51,7 @@ const FeatureSection = () => {
                 src="/images/ektefa.png"
                 alt="Feature"
                 width={150}
-                height={"auto"}
+                height={100}
               />
               <EktefaTitle direction={isLTR ? "ltr" : "rtl"}>
                 {t("featureTitleEktefa")}
@@ -73,11 +74,11 @@ const FeatureSection = () => {
           </EktefaWrapper>
 
           <EktefaWrapper
-            background={
-              isLTR
-                ? "linear-gradient(-30deg,#1281c4cf 35%,#efefefb8 )"
-                : "linear-gradient(-30deg,#efefefb8 35%,#1281c4cf)"
-            }
+            // background={
+            //   isLTR
+            //     ? "linear-gradient(-30deg,#1281c4cf 35%,#efefefb8 )"
+            //     : "linear-gradient(-30deg,#efefefb8 35%,#1281c4cf)"
+            // }
             direction={isLTR ? "ltr" : "rtl"}
           >
             <EktefaDescriptionWrapper>
@@ -85,7 +86,7 @@ const FeatureSection = () => {
                 src="/images/nafeth-light-logo.png"
                 alt="nafeth"
                 width={150}
-                height={"auto"}
+                height={100}
               />
               <EktefaTitle>{t("featureTitleNafeth")}</EktefaTitle>
               <EktefaDescription
@@ -106,11 +107,11 @@ const FeatureSection = () => {
           </EktefaWrapper>
 
           <EktefaWrapper
-            background={
-              isLTR
-                ? "linear-gradient(-30deg,#0464a1b5 35%,#efefefb8)"
-                : "linear-gradient(-30deg,#efefefb8, 35%,#0464a1b5)"
-            }
+            // background={
+            //   isLTR
+            //     ? "linear-gradient(-30deg,#0464a1b5 35%,#efefefb8)"
+            //     : "linear-gradient(-30deg,#efefefb8, 35%,#0464a1b5)"
+            // }
             direction={isLTR ? "ltr" : "rtl"}
           >
             <EktefaDescriptionWrapper>
@@ -118,7 +119,7 @@ const FeatureSection = () => {
                 src="/images/mauref.png"
                 alt="Feature"
                 width={150}
-                height={"auto"}
+                height={100}
               />
               <EktefaTitle>{t("featureTitleMuaref")}</EktefaTitle>
               <EktefaDescription
@@ -139,11 +140,11 @@ const FeatureSection = () => {
           </EktefaWrapper>
 
           <EktefaWrapper
-            background={
-              isLTR
-                ? "linear-gradient(-30deg,#38b7aeab 35%,#efefefb8)"
-                : "linear-gradient(-30deg,#efefefb8 35%,#38b7aeab)"
-            }
+            // background={
+            //   isLTR
+            //     ? "linear-gradient(-30deg,#38b7aeab 35%,#efefefb8)"
+            //     : "linear-gradient(-30deg,#efefefb8 35%,#38b7aeab)"
+            // }
             direction={isLTR ? "ltr" : "rtl"}
           >
             <EktefaDescriptionWrapper>
@@ -151,7 +152,7 @@ const FeatureSection = () => {
                 src="/images/ihtiwa.png"
                 alt="ehtiwa"
                 width={150}
-                height={"auto"}
+                height={100}
               />
               <EktefaTitle>{t("featureTitleEhtiwa")}</EktefaTitle>
               <EktefaDescription

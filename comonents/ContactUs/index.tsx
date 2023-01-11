@@ -3,15 +3,10 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
-import {
-  AboutHeading,
-  BreadCrumbWrapper,
-  SocialIcons,
-} from "../AboutUS/styled.components";
+import { AboutHeading, BreadCrumbWrapper } from "../AboutUS/styled.components";
 import Breadcrumb from "../ReuseAbleComponents/Breadcrumb";
 import {
   Container,
-  FormParent,
   OrderWrapper,
   IconWrapper,
   LocationLink,
@@ -23,7 +18,7 @@ import OrderNowForm from "../ServicesPageComponents/OrderNowForm";
 import LocationSvg from "../../public/icons/locationSvg";
 import PhoneSvg from "../../public/icons/phoneSvg";
 import EmailSvg from "../../public/icons/emailSvg";
-import SocialIconsReUseable from "../ReuseAbleComponents/SocialIconsReUseable";
+import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 const ContactUs = () => {
   const { t } = useTranslation();
   const { isLTR } = useTheme();
@@ -41,56 +36,63 @@ const ContactUs = () => {
         <AboutHeading>{t("Contact Us")}</AboutHeading>
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>
-      <FormParent>
-        <OrderWrapper>
-          <OrderNowForm
-            title={t("Contact Us")}
-            buttonTitle={t("send")}
-            isShow={false}
-            classname={"contact-us"}
-          />
-        </OrderWrapper>
-        {/* <MapComponent /> */}
-        <Container>
-          <MainWrapper>
-            <IconWrapper className="icons">
-              <LocationSvg fill="#fff" width="40px" height="40px" />
-            </IconWrapper>
-            <Text>
-              {isLTR ? " Adress:" : "العنوان:"}
-              <LocationLink
-                href="https://goo.gl/maps/v3MgU1yH4p12"
-                target={"_blank"}
-              >
-                {isLTR
-                  ? " Prince Fahad Bin Ibrahim Al-Saud Road, Malaz, Riyadh"
-                  : " شارع الامير فهد بن ابراهيم - الملز - الرياض "}
-              </LocationLink>
-            </Text>
-          </MainWrapper>
-          <MainWrapper>
-            <IconWrapper className="icons">
-              <PhoneSvg fill="#fff" width="40px" height="40px" />
-            </IconWrapper>
-            <Text>
-              {isLTR ? " Phone Number:" : "رقم التليفون:"}
-              <LocationLink href="tel:920010047">9200 10047</LocationLink>
-            </Text>
-          </MainWrapper>
-          <MainWrapper>
-            <IconWrapper className="icons">
-              <EmailSvg fill="#fff" width="40px" height="40px" />
-            </IconWrapper>
-            <Text>
-              {isLTR ? "Email Address:" : " عنوان البريد الالكترونى:"}
-              <LocationLink href="mailto:info@zadip.com">
-                info@zadip.com
-              </LocationLink>
-            </Text>
-          </MainWrapper>
-        </Container>
-      </FormParent>
-      <SocialIconsReUseable />
+      <AnimationBar
+        description={
+          "Our business hours are from 9am to 5pm, Sundays to Thursdays. Contact us today to learn about our cloud services and obtain subscription forms for e-Government services."
+        }
+        title={"LET US ADD VALUE TO YOUR BUSINESS"}
+        headingColor={"#2193b0"}
+        descriptionColor={"#737c85"}
+        fontSize={"20px"}
+      />
+      <Container>
+        <MainWrapper>
+          <IconWrapper className="icons">
+            <LocationSvg fill="#fff" width="40px" height="40px" />
+          </IconWrapper>
+          <Text>
+            {isLTR ? " Adress:" : "العنوان:"}
+            <LocationLink
+              href="https://goo.gl/maps/v3MgU1yH4p12"
+              target={"_blank"}
+            >
+              {isLTR
+                ? " Prince Fahad Bin Ibrahim Al-Saud Road, Malaz, Riyadh"
+                : " شارع الامير فهد بن ابراهيم - الملز - الرياض "}
+            </LocationLink>
+          </Text>
+        </MainWrapper>
+        <MainWrapper>
+          <IconWrapper className="icons">
+            <PhoneSvg fill="#fff" width="40px" height="40px" />
+          </IconWrapper>
+          <Text>
+            {isLTR ? " Phone Number:" : "رقم التليفون:"}
+            <LocationLink href="tel://920010047">920010047</LocationLink>|
+            <a href="tel://+966-11-4747771">+966-11-4776526</a>
+          </Text>
+        </MainWrapper>
+        <MainWrapper>
+          <IconWrapper className="icons">
+            <EmailSvg fill="#fff" width="40px" height="40px" />
+          </IconWrapper>
+          <Text>
+            {isLTR ? "Email Address:" : " عنوان البريد الالكترونى:"}
+            <LocationLink href="mailto:info@zadip.com">
+              info@zadip.com
+            </LocationLink>
+            |<a href="mailto:it@zadip.com">it@zadip.com</a>
+          </Text>
+        </MainWrapper>
+      </Container>
+      <OrderWrapper>
+        <OrderNowForm
+          title={t("Contact Us")}
+          buttonTitle={t("send")}
+          isShow={false}
+          classname={"contact-us"}
+        />
+      </OrderWrapper>
     </Wrapper>
   );
 };

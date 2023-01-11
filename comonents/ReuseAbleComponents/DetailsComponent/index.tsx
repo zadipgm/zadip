@@ -3,6 +3,7 @@ import TechnicalSpecsTable from "../../ReuseAbleComponents/TechnicalSpecificatio
 import _data from "../../../DataLayer/technicalSpecsTable.json";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import detailsPageData from "../../../DataLayer/product.json";
+import services from "../../../DataLayer/services.json";
 import { useRouter } from "next/router";
 import OverView from "../../ReuseAbleComponents/OverView";
 import Links from "@mui/material/Link";
@@ -16,6 +17,7 @@ import {
 import RelatedProducts from "../RelatedSection";
 import { useTranslation } from "react-i18next";
 import { Typography } from "@mui/material";
+import { useTheme } from "styled-components";
 interface IRelated {
   id?: number;
   title_en?: string;
@@ -53,9 +55,13 @@ const DetailsComponent: React.FC<IProps> = ({
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
   const { t } = useTranslation();
+  const { isLTR } = useTheme();
   const query = router?.query?.sub_category;
-  const data = detailsPageData.all.filter((item) =>
-    item.link.includes(query as string)
+  const filterProducts = detailsPageData.all.filter(
+    (item) => item.link === query
+  );
+  const filterServices = services.sub_services.filter(
+    (item) => item.link === query
   );
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
@@ -75,12 +81,27 @@ const DetailsComponent: React.FC<IProps> = ({
       color="inherit"
       href={`/${locale}/${page}/${router?.query?.sub_category}?type=${router.query.detail}`}
     >
-      {(router.query.detail as string)?.replaceAll("_", " ")}
+      {page === "services"
+        ? `${
+            isLTR
+              ? filterServices[0]?.type?.replaceAll("_", " ")
+              : filterServices[0]?.type_ar
+          }`
+        : `${
+            isLTR
+              ? filterProducts[0]?.type?.replaceAll("_", " ")
+              : filterProducts[0]?.type_ar
+          }`}
     </Links>,
     <Typography>
-      {(router.query?.sub_category as string)?.replaceAll("_", " ")}
+      {page === "services"
+        ? `${isLTR ? filterServices[0]?.title_en : filterServices[0]?.title_ar}`
+        : `${
+            isLTR ? filterProducts[0]?.title_en : filterProducts[0]?.title_ar
+          }`}
     </Typography>,
   ];
+
   return (
     <DetailsWrapper>
       <PageBreadCrumbWrapper>
@@ -96,7 +117,6 @@ const DetailsComponent: React.FC<IProps> = ({
         title={"Technical Specifications"}
         page={page}
       />
-
       <RelatedProducts relatedData={filterRelatedData} page={page} />
     </DetailsWrapper>
   );

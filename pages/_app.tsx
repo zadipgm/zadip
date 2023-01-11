@@ -47,8 +47,9 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
           rel="icon"
           href="https://www.zadip.com/en/favicons/favicon_96x96.png"
         />
+
         <link
-          href="https://fonts.googleapis.com/css?family=Cairo"
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap"
           rel="stylesheet"
         ></link>
       </Head>

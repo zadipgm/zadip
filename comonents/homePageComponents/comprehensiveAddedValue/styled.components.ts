@@ -34,6 +34,7 @@ margin:0 auto ;
 `
 export const ImageWrapper = styled.div`
     padding: 20px 0px;
+    width:30% ;
 > img {
     
 border-radius: 5%;
@@ -59,7 +60,7 @@ align-items:center ;
 `
 export const Description = styled.div`
 padding: 20px;
-width:50% ;
+width:70% ;
 @media (max-width: 600px) {
      display:block ;
      width:100% ;
@@ -68,7 +69,9 @@ width:50% ;
 `  
 export const Title = styled.h3`font-size: 35px;
 line-height: 45px;
-color: #fff;`
+color: #fff;
+margin: 0;
+`
 export const DescriptionVision = styled.p`  
 color: #fff;
     text-align: justify;

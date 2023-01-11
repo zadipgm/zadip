@@ -14,6 +14,7 @@ background-image:url("https://cdn.pixabay.com/photo/2016/08/30/16/26/banner-1631
 export const Title  = styled.h2`
 text-align:center ;
 color:#fff ;
+text-transform:capitalize ;
 `
 
 

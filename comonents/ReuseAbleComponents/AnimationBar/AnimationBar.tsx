@@ -45,6 +45,7 @@ const AnimationBar: React.FC<IProps> = ({
       <DesCription
         color={descriptionColor}
         fontWeight={fontWeight ?? ""}
+        fontSize={fontSize ?? ""}
         dangerouslySetInnerHTML={{ __html: description }}
       ></DesCription>
       <SectionBar></SectionBar>

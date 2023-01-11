@@ -108,14 +108,14 @@ text-align:justify;
 }
 
 `
-export const EktefaWrapper = styled.div<{background:string, direction:string}>`
+export const EktefaWrapper = styled.div<{direction:string}>`
 display:flex !important ;
 justify-content:center ;
 width: 98%!important ;
 margin:0 auto ;
 direction:${({direction})=>direction} ;
 align-items:center ;
-background:${({background})=>background};
+/* background:${({background})=>background}; */
 border-radius:20px;
 @media (max-width: 600px) {
 max-height: 600px;
@@ -138,6 +138,7 @@ max-height: 300px;
 export const EktefaDescriptionWrapper = styled.div`
 width: 40%;
 padding:15px ;
+text-align:justify ;
 @media (max-width: 600px) {
 width:100% ;
 }
@@ -148,12 +149,13 @@ width:100% ;
 export const EktefaTitle = styled.h3<{direction?:string}>`
 font-size: 30px;
 margin:0 ;
-/* direction: ${({direction})=>direction} */
+direction: ${({direction})=>direction};
+color:#404854 ;
 `;  
 export const EktefaDescription = styled.p<{direction:string}>`
 font-size: 18px;
 margin:0 ;
-/* direction: ${({direction})=>direction} */
+direction: ${({direction})=>direction}
 `;  
         
 
