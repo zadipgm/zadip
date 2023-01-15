@@ -19,6 +19,7 @@ import LocationSvg from "../../public/icons/locationSvg";
 import PhoneSvg from "../../public/icons/phoneSvg";
 import EmailSvg from "../../public/icons/emailSvg";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
+import SimpleGoogleMap from "../SimpleGoogleMap";
 const ContactUs = () => {
   const { t } = useTranslation();
   const { isLTR } = useTheme();
@@ -93,6 +94,7 @@ const ContactUs = () => {
           classname={"contact-us"}
         />
       </OrderWrapper>
+      <SimpleGoogleMap lat={12} long={12} />
     </Wrapper>
   );
 };
