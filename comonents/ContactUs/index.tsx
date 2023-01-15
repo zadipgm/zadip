@@ -38,10 +38,8 @@ const ContactUs = () => {
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>
       <AnimationBar
-        description={
-          "Our business hours are from 9am to 5pm, Sundays to Thursdays. Contact us today to learn about our cloud services and obtain subscription forms for e-Government services."
-        }
-        title={"LET US ADD VALUE TO YOUR BUSINESS"}
+        description={`${t("contactusDescription")}`}
+        title={`${t("letusaddValue")}`}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
         fontSize={"18px"}
