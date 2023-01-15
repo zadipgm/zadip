@@ -168,7 +168,7 @@ const FeatureSection = () => {
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
-                src="https://ektefa.net/agency/img/illustrations/employee.svg"
+                src="/images/cadre.svg"
                 alt="ektefa"
                 width={657}
                 height={438}
