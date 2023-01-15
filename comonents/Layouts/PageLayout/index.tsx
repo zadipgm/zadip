@@ -23,15 +23,13 @@ const Layout: React.FC<IProps> = ({ children }) => {
   i18n.on("languageChanged", () => setLocale(i18n.language));
   return (
     <>
-      <div dir={locale === "en-US" || locale === "en" ? "ltr" : "rtl"}>
-        <ThemeProvider theme={theme}>
-          <LocaleContext.Provider value={{ locale, setLocale }}>
-            <Header />
-            {children}
-            <Footer />
-          </LocaleContext.Provider>
-        </ThemeProvider>
-      </div>
+      <ThemeProvider theme={theme}>
+        <LocaleContext.Provider value={{ locale, setLocale }}>
+          <Header />
+          {children}
+          <Footer />
+        </LocaleContext.Provider>
+      </ThemeProvider>
     </>
   );
 };
