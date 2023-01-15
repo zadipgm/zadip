@@ -94,7 +94,7 @@ const ContactUs = () => {
           classname={"contact-us"}
         />
       </OrderWrapper>
-      <SimpleGoogleMap lat={12} long={12} />
+      {/* <SimpleGoogleMap lat={12} long={12} /> */}
     </Wrapper>
   );
 };

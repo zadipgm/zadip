@@ -148,6 +148,33 @@ const FeatureSection = () => {
               />
             </EktefaImageWrapper>
           </EktefaWrapper>
+
+          <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
+            <EktefaDescriptionWrapper>
+              <img
+                src="/images/cadre.png"
+                alt="cadre"
+                width={150}
+                height={"auto"}
+              />
+              <EktefaTitle>{t("featureTitlecadre")}</EktefaTitle>
+              <EktefaDescription
+                direction={isLTR ? "ltr" : "rtl"}
+                dangerouslySetInnerHTML={{
+                  __html: t("featurecardDescriptionCadre"),
+                }}
+              ></EktefaDescription>
+              <Link href="https://cadre.sa/">{t("visitsite")}</Link>
+            </EktefaDescriptionWrapper>
+            <EktefaImageWrapper>
+              <EktefaImage
+                src="https://ektefa.net/agency/img/illustrations/employee.svg"
+                alt="ektefa"
+                width={657}
+                height={438}
+              />
+            </EktefaImageWrapper>
+          </EktefaWrapper>
         </Slider>
       </FeatureSectionContainer>
     </FeatureSectionParent>
