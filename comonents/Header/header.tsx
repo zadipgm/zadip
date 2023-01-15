@@ -39,18 +39,25 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
   const { t } = useTranslation();
   const { locale, setLocale } = React.useContext(LocaleContext);
   const [show, setShow] = React.useState(0);
-  const changeLocale = (lang: string) => {
-    if (locale !== lang) {
-      i18n.changeLanguage(lang);
-    }
-    if (locale === "en-US") {
-      router.push(`${router.asPath}`, `${router.asPath}`, { locale: "en-US" });
-      setLocale("en-US");
-    } else {
-      router.push(`${router.asPath}`, `${router.asPath}`, { locale: "ar" });
-      setLocale("ar");
-    }
-  };
+
+  const changeLocale = React.useCallback(
+    (lang: string) => {
+      if (locale !== lang) {
+        i18n.changeLanguage(lang);
+      }
+      if (locale === "en-US" || locale === "en") {
+        router.push(`${router.asPath}`, `${router.asPath}`, {
+          locale: "en",
+        });
+        setLocale("en");
+      } else {
+        router.push(`${router.asPath}`, `${router.asPath}`, { locale: "ar" });
+        setLocale("ar");
+      }
+    },
+    [locale]
+  );
+
   const navItems = [
     { name: "home", link: "/" },
     { name: "products", link: `/products` },
@@ -141,8 +148,8 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
               </Box>
               {locale === "ar" ? (
                 <LangButton
-                  href={`/en-US${router.asPath}`}
-                  onClick={() => changeLocale("en-US")}
+                  href={`/en${router.asPath}`}
+                  onClick={() => changeLocale("en")}
                 >
                   English
                 </LangButton>

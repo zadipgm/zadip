@@ -14,6 +14,7 @@ import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 
 import Slider from "react-slick";
 import { useTheme } from "styled-components";
+import Link from "next/link";
 const FeatureSection = () => {
   const { t } = useTranslation();
   const { isLTR, device } = useTheme();
@@ -38,14 +39,7 @@ const FeatureSection = () => {
       />
       <FeatureSectionContainer>
         <Slider {...settings} className={"feature-section"}>
-          <EktefaWrapper
-            // background={
-            //   isLTR
-            //     ? "linear-gradient(-30deg,#03a9f5c7 35%,#efefefb8)"
-            //     : "linear-gradient(-30deg,#efefefb8 35%,#03a9f5c7)"
-            // }
-            direction={isLTR ? "ltr" : "rtl"}
-          >
+          <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
               <img
                 src="/images/ektefa.png"
@@ -62,6 +56,7 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionEktefa"),
                 }}
               ></EktefaDescription>
+              <Link href="https://ektefa.net">{t("visitsite")}</Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
@@ -73,14 +68,7 @@ const FeatureSection = () => {
             </EktefaImageWrapper>
           </EktefaWrapper>
 
-          <EktefaWrapper
-            // background={
-            //   isLTR
-            //     ? "linear-gradient(-30deg,#1281c4cf 35%,#efefefb8 )"
-            //     : "linear-gradient(-30deg,#efefefb8 35%,#1281c4cf)"
-            // }
-            direction={isLTR ? "ltr" : "rtl"}
-          >
+          <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
               <img
                 src="/images/nafeth-light-logo.png"
@@ -95,6 +83,7 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionNafeth"),
                 }}
               ></EktefaDescription>
+              <Link href="https://nafeth.com">{t("visitsite")}</Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
@@ -106,14 +95,7 @@ const FeatureSection = () => {
             </EktefaImageWrapper>
           </EktefaWrapper>
 
-          <EktefaWrapper
-            // background={
-            //   isLTR
-            //     ? "linear-gradient(-30deg,#0464a1b5 35%,#efefefb8)"
-            //     : "linear-gradient(-30deg,#efefefb8, 35%,#0464a1b5)"
-            // }
-            direction={isLTR ? "ltr" : "rtl"}
-          >
+          <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
               <img
                 src="/images/mauref.png"
@@ -128,6 +110,7 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionMuaref"),
                 }}
               ></EktefaDescription>
+              <Link href="#">{t("visitsite")}</Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
@@ -139,14 +122,7 @@ const FeatureSection = () => {
             </EktefaImageWrapper>
           </EktefaWrapper>
 
-          <EktefaWrapper
-            // background={
-            //   isLTR
-            //     ? "linear-gradient(-30deg,#38b7aeab 35%,#efefefb8)"
-            //     : "linear-gradient(-30deg,#efefefb8 35%,#38b7aeab)"
-            // }
-            direction={isLTR ? "ltr" : "rtl"}
-          >
+          <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
               <img
                 src="/images/ihtiwa.png"
@@ -161,6 +137,7 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionEhtiwa"),
                 }}
               ></EktefaDescription>
+              <Link href="#">{t("visitsite")}</Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage

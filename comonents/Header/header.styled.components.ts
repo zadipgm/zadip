@@ -18,7 +18,7 @@ padding-top:12px ;
 `
 export const MainHeading =styled.div`
     position: absolute;
-    top: 50%;
+    top: 70%;
     bottom: 0;
     left: 6%;
     @media (max-width: 600px) {
@@ -36,7 +36,7 @@ export const MainHeading =styled.div`
 `
 export const Text = styled.p<{lineHeight?:string}>`
 margin:0 ;
-font-size: 60px;
+font-size: 50px;
     font-weight: 600;
     color:#fff;
     line-height:${({lineHeight})=>lineHeight} ;

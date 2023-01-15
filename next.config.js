@@ -4,14 +4,14 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   i18n: {
-    locales: ["en-US", "ar"],
-    defaultLocale: "en-US",
+    locales: ["en", "ar"],
+    defaultLocale: "en",
     localeDetection: false,
 
     domains: [
       {
         domain: "http://localhost:3000/",
-        defaultLocale: "en-US",
+        defaultLocale: "en",
       },
       {
         domain: "http://localhost:3000/",

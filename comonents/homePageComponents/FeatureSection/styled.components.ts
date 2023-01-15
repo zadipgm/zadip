@@ -144,6 +144,28 @@ width:100% ;
 > img {
     /* margin:0 auto ; */
 }
+> a{
+    text-decoration: none;
+    color: #fff;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    width: 156px;
+    background-color: #0576bc;
+    margin-top: 22px;
+    transition: all 0.5s ease-in;
+    
+    :hover{
+      transition: all 0.5s ease-in;
+      color:#fff ;
+     background-color: #24afe7
+    }
+    
+}
 `;  
 export const EktefaTitle = styled.h3<{direction?:string}>`
 font-size: 30px;

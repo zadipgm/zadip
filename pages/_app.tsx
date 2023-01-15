@@ -4,10 +4,10 @@ import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Cairo } from "@next/font/google";
 import theme from "../global/theme";
 import { useRouter } from "next/router";
 import { ThemeProvider } from "styled-components";
+import i18n from "../i18n";
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -27,11 +27,12 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   theme.direction = locale === "ar" ? "rtl" : "ltr";
   // @ts-ignore
   theme.translations = translations;
-  theme.isLTR = locale === "en-US";
+  theme.isLTR = locale === "en-US" || locale === "en";
   theme.isRTL = locale === "ar";
-  theme.locale = locale === "en-US" ? "en-US" : "ar";
+  theme.locale = locale === "en-US" || locale === "en" ? "en" : "ar";
 
   React.useEffect(() => {
+    i18n.changeLanguage(locale);
     if (window?.innerWidth <= 600) {
       theme.device = "mobile";
     } else {
@@ -42,7 +43,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   return getLayout(
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
           href="https://www.zadip.com/en/favicons/favicon_96x96.png"

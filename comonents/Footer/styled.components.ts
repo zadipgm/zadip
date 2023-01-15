@@ -110,12 +110,18 @@ transition: all 0.5s ease;
 
 export const FooterCopyRights = styled.div`
 border-top: 1px solid rgba(0, 0, 0, .15);
-margin:30px 66px;
+margin:0px 66px;
 padding:30px;
 color:#ffff;
 display:flex ;
 justify-content:space-between ;
 align-items:center ;
+@media (max-width: 600px) {
+     width:100% ;
+     margin:0px;
+padding:0px;
+display:block ;
+ }
 > a {
 padding:0px 8px ;
 color:#ffff ;

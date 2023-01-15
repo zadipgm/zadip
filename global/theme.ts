@@ -10,7 +10,7 @@ declare module "styled-components" {
     isLTR: boolean;
     device:"mobile" | "desktop";
     isRTL: boolean;
-    locale: "ar" | "en-US";
+    locale: "ar" | "en-US" |"en";
     colors: {
       Black: string;
     };
@@ -19,7 +19,7 @@ declare module "styled-components" {
 
 const defaultTheme: DefaultTheme = {
 
-  locale: "en-US",
+  locale: "en",
   direction: "rtl",
   device:"mobile",
   isLTR: false,

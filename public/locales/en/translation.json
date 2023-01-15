@@ -13,16 +13,16 @@
  "featureDescription":"A range of technical products that were developed locally to suit your needs and save you the trouble of searching",
  "viewmore":"Read more",
  "featureTitleEktefa":"Ektefa",
- "featurecardDescriptionEktefa":"A unified platform for managing human resources in your organization that works via cloud services <a href={https://ektefa.net/}>read more...</a>",
+ "featurecardDescriptionEktefa":"A unified platform for managing human resources in your organization that works via cloud services.",
  "featureTitleNafeth":"Nafeth",
- "featurecardDescriptionNafeth":"A unified platform connected to all the needs of vehicle rental companies to manage their business via cloud services <a href={https://nafeth.com/}>read more...</a>",
+ "featurecardDescriptionNafeth":"A unified platform connected to all the needs of vehicle rental companies to manage their business via cloud services.",
  "featureTitleMuaref":"Muaref",
- "featurecardDescriptionMuaref":"Multiple products eliminate the need for fingerprint devices built and developed locally to suit your different needs <a href={https://www.zadip.com/en/muaref.php/}>read more...</a>",
+ "featurecardDescriptionMuaref":"Multiple products eliminate the need for fingerprint devices built and developed locally to suit your different needs.",
  "featureTitleEhtiwa":"Attendance solutions",
- "featurecardDescriptionEhtiwa":"Multiple products eliminate the need for fingerprint devices built and developed locally to suit your different needs <a href={https://www.ehtiwa.com/}>read more...</a>",
+ "featurecardDescriptionEhtiwa":"Multiple products eliminate the need for fingerprint devices built and developed locally to suit your different needs.",
 
  "whyEktefa":"Why Ektefa?",
-"heighLightdescription":"Ektefa is a completely flexible and environement independent human resource management system. The objective behind the development of Ektefa as a complete enterprise level HRMS solution was to encourage a user-friendly, simple yet robust system which not only answers to the routine HR department issues but also provides intelligent analytics and new-age technological implementations. <a href={https://ektefa.net/}>read more...</a>",
+"heighLightdescription":"Ektefa is a completely flexible and environement independent human resource management system. The objective behind the development of Ektefa as a complete enterprise level HRMS solution was to encourage a user-friendly, simple yet robust system which not only answers to the routine HR department issues but also provides intelligent analytics and new-age technological implementations.",
   "hrm":"Human Resource Management System",
 
   "recentNews":"Recent News",
@@ -102,6 +102,6 @@
   "send":"Send",
   "egoveservices":"E-government services",
   "certifiedPartner":"Elm Certified Sales Partner",
-  "elmpartner":"With an extended partnership that started in 2008 with Elm Company. We meet the needs of our customers to access e-government services that contribute to raising their productivity."
-  
+  "elmpartner":"With an extended partnership that started in 2008 with Elm Company. We meet the needs of our customers to access e-government services that contribute to raising their productivity.",
+  "visitsite":"Visit Service Site"
 }
