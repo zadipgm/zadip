@@ -44,7 +44,7 @@ const FeatureSection = () => {
               <img
                 src="/images/ektefa.png"
                 alt="Feature"
-                width={150}
+                width={100}
                 height={"auto"}
               />
               <EktefaTitle direction={isLTR ? "ltr" : "rtl"}>
@@ -73,8 +73,8 @@ const FeatureSection = () => {
               <img
                 src="/images/nafeth-light-logo.png"
                 alt="nafeth"
-                width={150}
-                height={"auto"}
+                width={100}
+                height={60}
               />
               <EktefaTitle>{t("featureTitleNafeth")}</EktefaTitle>
               <EktefaDescription
@@ -100,8 +100,8 @@ const FeatureSection = () => {
               <img
                 src="/images/mauref.png"
                 alt="Feature"
-                width={150}
-                height={"auto"}
+                width={100}
+                height={60}
               />
               <EktefaTitle>{t("featureTitleMuaref")}</EktefaTitle>
               <EktefaDescription
