@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HighLightProductSectionContainer = styled.div`
-margin: 50px 0px;
+
 background: linear-gradient(-30deg,#d6ecf9 30%,#a7f5ef);
 width: 1170px;
     @media (max-width: 600px) {
@@ -9,8 +9,7 @@ width: 1170px;
      width:100% ;
      padding:0px 0px 40px 0px ;
  }
-    margin:  0 auto;
-    position: relative;
+    margin:  50px auto auto;
     border-radius: 15px;  
 `
 export const HighLightProductWrapper = styled.div`
