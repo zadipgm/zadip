@@ -7,6 +7,7 @@ import {
   SUbTitle,
   Description,
   Eservices,
+  Elogos,
 } from "./styled.components";
 import { useTranslation } from "react-i18next";
 const HighLightProductSection = () => {
@@ -28,6 +29,22 @@ const HighLightProductSection = () => {
             <img src="/images/eGov.png" alt="" width={400} height={400} />
           </Eservices>
         </HighLightProductWrapper>
+        <Elogos>
+          <img
+            src="/images/emasarat.png"
+            alt="masarat"
+            width={150}
+            height={100}
+          />
+          <img src="/images/esmart.png" alt="smart" width={150} height={100} />
+          <img src="/images/etam.png" alt="tam" width={150} height={100} />
+          <img
+            src="/images/emuqeem.png"
+            alt="muqeem"
+            width={150}
+            height={100}
+          />
+        </Elogos>
       </HighLightProductSectionContainer>
     </>
   );

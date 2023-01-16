@@ -2,14 +2,8 @@ import styled from "styled-components";
 
 export const HighLightProductSectionContainer = styled.div`
 margin: 50px 0px;
-`
-export const HighLightProductWrapper = styled.div`
-  display: flex;
-    justify-content:center ;
-    background: linear-gradient(-30deg,#d6ecf9 30%,#a7f5ef);
-    align-items: center;
-    width: 1170px;
-    background-color: #24afe7;
+background: linear-gradient(-30deg,#d6ecf9 30%,#a7f5ef);
+width: 1170px;
     @media (max-width: 600px) {
      display:block ;
      width:100% ;
@@ -18,6 +12,12 @@ export const HighLightProductWrapper = styled.div`
     margin:  0 auto;
     position: relative;
     border-radius: 15px;  
+`
+export const HighLightProductWrapper = styled.div`
+  display: flex;
+    justify-content:center ;
+    align-items: center;
+   
 `
 export const Eservices =  styled.div`
 width:40% ;
@@ -45,6 +45,22 @@ text-transform: none;
 font-size: 26px;
 font-weight:600 ;
 margin:0 ;
+`
+export const Elogos = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 600px) {
+    display:block ;
+ }
+    > img{
+        padding: 25px;
+    margin: 0px 20px 0px;
+    @media (max-width: 600px) {
+        margin: 0;
+ }
+    }
+
 `
 export const SUbTitle = styled.h4`    padding-top: 14px;
 text-transform: uppercase;

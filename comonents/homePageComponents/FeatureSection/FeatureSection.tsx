@@ -56,7 +56,7 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionEktefa"),
                 }}
               ></EktefaDescription>
-              <Link href="https://ektefa.net">{t("visitsite")}</Link>
+              <Link href="https://ektefa.net/zadip">{t("visitsite")}</Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
@@ -83,7 +83,7 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionNafeth"),
                 }}
               ></EktefaDescription>
-              <Link href="https://nafeth.com">{t("visitsite")}</Link>
+              <Link href="https://nafeth.com/zadip">{t("visitsite")}</Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
@@ -137,7 +137,7 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionEhtiwa"),
                 }}
               ></EktefaDescription>
-              <Link href="#">{t("visitsite")}</Link>
+              <Link href="https://ehtwa.sa/">{t("visitsite")}</Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
