@@ -56,7 +56,9 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionEktefa"),
                 }}
               ></EktefaDescription>
-              <Link href="https://ektefa.net/zadip">{t("visitsite")}</Link>
+              <Link href="https://ektefa.net/zadip" target={"_blank"}>
+                {t("visitsite")}
+              </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
@@ -83,7 +85,9 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionNafeth"),
                 }}
               ></EktefaDescription>
-              <Link href="https://nafeth.com/zadip">{t("visitsite")}</Link>
+              <Link href="https://nafeth.com/zadip" target={"_blank"}>
+                {t("visitsite")}
+              </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
@@ -110,7 +114,9 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionMuaref"),
                 }}
               ></EktefaDescription>
-              <Link href="#">{t("visitsite")}</Link>
+              <Link href="#" target={"_blank"}>
+                {t("visitsite")}
+              </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
@@ -137,7 +143,9 @@ const FeatureSection = () => {
                   __html: t("featurecardDescriptionEhtiwa"),
                 }}
               ></EktefaDescription>
-              <Link href="https://ehtwa.sa/">{t("visitsite")}</Link>
+              <Link href="https://ehtwa.sa/" target={"_blank"}>
+                {t("visitsite")}
+              </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage

@@ -1,7 +1,10 @@
 import styled from "styled-components"
-export const FooterParent = styled.div`
+
+export const FooterContainer= styled.div`
+    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    padding: 12px;
 `
-export const FooterContanerThreeWrapper = styled.div`
+export const FooterWrapper = styled.div`
 @media (max-width: 600px) {
 width:100% ;
 display:block ;
@@ -12,7 +15,7 @@ display:block ;
 margin: 0 auto;
 `
 
-export const FooterContanerThreeRow = styled.div`
+export const FooterRow = styled.div`
 display: flex;
 justify-content: center;
 align-items: flex-start;
@@ -24,17 +27,13 @@ display:block ;
         width:1170px ;
         }
 `
-export const FooterContanerThreeUL = styled.ul`	
+export const FooterUL = styled.ul`	
 list-style: none;
 padding: 0;
 margin: 0;
 
 `
-export const FooterContanerThree= styled.div`
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
-    padding: 12px;
-`
-export const FooterContanerThreeCol = styled.div`
+export const FooterCol = styled.div`
 width: 33%;
 :last-child{
     width:40% ;
@@ -48,13 +47,13 @@ width:1170px ;
 }
 padding: 0 15px;
 `
-export const FooterContanerThreeHeading =  styled.h4`   
+export const FooterHeading =  styled.h4`   
 font-size: 16px;
 color: #fff !important;
 font-weight: 700;
 `
 
-export const  FooterContanerThreeLI = styled.li`
+export const  FooterLI = styled.li`
 font-style: normal;
 display: flex;
 justify-content: flex-start;
@@ -82,7 +81,7 @@ transition:.5s ;
 
 `
 
-export const FooterContanerThreeSocialLink =  styled.div`
+export const FooterSocialLink =  styled.div`
 display: flex;
 height: 40px;
 width: 40px;

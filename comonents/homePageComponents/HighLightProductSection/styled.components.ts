@@ -53,11 +53,16 @@ export const Elogos = styled.div`
     display:block ;
  }
     > img{
+        cursor: pointer;
         padding: 25px;
     margin: 0px 20px 0px;
     @media (max-width: 600px) {
         margin: 0;
  }
+ transition: transform .2s;
+ :hover{
+  transform: scale(1.2); 
+}
     }
 
 `
