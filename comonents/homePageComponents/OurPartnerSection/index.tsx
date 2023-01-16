@@ -19,6 +19,7 @@ const OurPartnerSection = () => {
         sliderData={partner.partners}
         rows={1}
         sliderToShow={4}
+        speed={4000}
         classname={"partner-slider"}
         autoplay={true}
         autoplaySpeed={0}

@@ -80,6 +80,7 @@ const AboutUS = () => {
         sliderToShow={1}
         classname={"our-value-slider"}
         autoplay={true}
+        speed={500}
         autoplaySpeed={2000}
       />
       <OurTeam>
@@ -120,6 +121,7 @@ const AboutUS = () => {
         sliderToShow={6}
         classname={"partner-slider"}
         autoplay={true}
+        speed={4000}
         autoplaySpeed={2000}
       />
     </AboutUsContainer>

@@ -34,6 +34,7 @@ interface IProps {
   classname: string;
   autoplay: boolean;
   autoplaySpeed: number;
+  speed?: number;
 }
 const SliderSlick: React.FC<IProps> = ({
   sliderData,
@@ -42,6 +43,7 @@ const SliderSlick: React.FC<IProps> = ({
   classname,
   autoplay,
   autoplaySpeed,
+  speed,
 }) => {
   const arrowForw = <ArrowForwardIosIcon color={"primary"} />;
   const arrowPrev = <ArrowBackIosIcon />;
@@ -50,7 +52,7 @@ const SliderSlick: React.FC<IProps> = ({
   var settings = {
     dots: false,
     infinite: true,
-    speed: 4000,
+    speed: speed,
     autoplay: autoplay,
     autoplaySpeed: autoplaySpeed,
     slidesToShow: sliderToShow,
