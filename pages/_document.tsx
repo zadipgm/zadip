@@ -18,7 +18,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html dir={this.props.__NEXT_DATA__.locale === "ar" ? "rtl" : "ltr"}>
-        <Head />
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
