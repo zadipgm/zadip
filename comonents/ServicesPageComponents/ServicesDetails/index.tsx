@@ -9,7 +9,7 @@ import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import DownLoadButton from "../../ReuseAbleComponents/DownLoadButton";
 import { ButtonsWrapper } from "./styled.components";
 import ServicesAdvantageSection from "../../ReuseAbleComponents/ServicesAdvantageSection";
-import OrderNowForm from "../OrderNowForm";
+import OrderNowForm from "../../ReuseAbleComponents/OrderNowForm";
 import MuarefDetails from "../MarufDetails";
 import { useRouter } from "next/router";
 import Links from "@mui/material/Link";
@@ -248,6 +248,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
 
           {type === "tam" || type === "muqeem" ? (
             <OrderNowForm
+              classname="e-services"
               title={`${t("orderNow")}`}
               buttonTitle={`${t("sendOrder")}`}
             />

@@ -20,7 +20,15 @@ const VedioComponent = () => {
         <div className="circle circle2"></div>
         <div className="circle circle3"></div>
       </VedioWrapper>
-      <ModalComponent handleClose={handleClose} open={open} />
+      <ModalComponent handleClose={handleClose} open={open}>
+        <iframe
+          width="100%"
+          height="500px"
+          src="https://www.youtube.com/embed/zkTYTA9cx6k?rel=0&amp;controls=0&amp;showinfo=0"
+          frameBorder="0"
+          allowFullScreen={true}
+        ></iframe>
+      </ModalComponent>
     </ProductVedio>
   );
 };

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const OrderNowFormContainer = styled.div`
-width:90% ;
-margin: 0 auto;
+
 @media (max-width: 600px) {
 display: block;
 }
@@ -17,7 +16,7 @@ margin:0px ;
     }
 border-radius: 10px;
 padding: 20px;
-margin: 20px;
+
 `
 export const InputWarapper = styled.div`
 margin-bottom: 12px;
@@ -32,19 +31,19 @@ transition: .5s;
 color:#2193b0 ;
 `
 export const Input= styled.input`
-width: 95%;
+width: 100%;
 
 @media (max-width: 600px) {
 width:100% ;
     }
-border-bottom: 1px solid gray;
+border-bottom: 1px solid #cdc1c1;
 border-top:1px solid transparent ;
 border-left:1px solid transparent ;
 border-right:1px solid transparent ;
 outline: none;
 font-family: 'Cairo', sans-serif !important;
 
-font-size:16px ;
+font-size:14px ;
 transition:.3s ;
 :focus{
     transition:.3s ;
@@ -52,16 +51,16 @@ transition:.3s ;
 }
 `
 export const Textarea =styled.textarea`
-width: 95%;
+width: 100%;
 @media (max-width: 600px) {
 width:100% ;
     }
 outline: none;
-border-bottom: 1px solid gray;
+border-bottom: 1px solid #cdc1c1;
 border-top:1px solid transparent ;
 border-left:1px solid transparent ;
 border-right:1px solid transparent ;
-font-size:16px ;
+font-size:14px ;
 font-family: 'Cairo', sans-serif !important;
 transition:.3s ;
 :focus{
@@ -92,11 +91,29 @@ border: none;
 background:${({color})=>color};
 `
 export const FormHeading = styled.h3`
-font-size:23px ;
+color: #2193b0;
 text-align:center ;
-padding-top: 30px;
-color:#2193b0 ;
-margin:0;
+`
+export const ContactButton = styled.button`
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    display: flex;
+    font-size:20px ;
+    justify-content: center;
+    align-items: self-start;
+    cursor: pointer;
+    background-color: #0576bc;
+    margin:0 auto ;
+    transition: all 0.5s ease-in;
+    
+    :hover{
+      transition: all 0.5s ease-in;
+      color:#fff ;
+     background-color: #24afe7
+    }
 `
 export const   CallUsNowWrapper =styled.div`
 width:40% ;

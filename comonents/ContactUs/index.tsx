@@ -14,7 +14,7 @@ import {
   Text,
   Wrapper,
 } from "./styled.components";
-import OrderNowForm from "../ServicesPageComponents/OrderNowForm";
+import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 import LocationSvg from "../../public/icons/locationSvg";
 import PhoneSvg from "../../public/icons/phoneSvg";
 import EmailSvg from "../../public/icons/emailSvg";
@@ -86,7 +86,7 @@ const ContactUs = () => {
       </Container>
       <OrderWrapper>
         <OrderNowForm
-          title={t("Contact Us")}
+          title={isLTR ? "Contact Sales Now" : "اتصل بالمبيعات الآن"}
           buttonTitle={t("send")}
           isShow={false}
           classname={"contact-us"}
