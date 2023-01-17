@@ -35,7 +35,7 @@
   "id":4,
   "title_en": "Building Management",
   "title_ar":"إدارة المباني",
-  "icon":"centralclockSvg",
+  "icon":"BuildingSvg",
   "description":"Control your organization with centralized timekeeping solutions",
   "link":"products/clocks",
   "type":"building_management",

@@ -1,4 +1,4 @@
-const CentralClockSvg = ({
+const BuildingSvg = ({
   width = "24",
   height = "24",
   className = "inline vMiddle",
@@ -17,4 +17,4 @@ const CentralClockSvg = ({
     </svg>
   );
 };
-export default CentralClockSvg;
+export default BuildingSvg;

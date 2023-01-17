@@ -11,6 +11,7 @@ const IconComponent: React.FC<IProps> = ({ icon, fill, width, height }) => {
     fill: string;
     width: string;
     height: string;
+    classname?: string;
   }> = dynamic(() =>
     import(`../../../public/icons/${icon ?? ""}`).then((mod) => {
       return mod.default;

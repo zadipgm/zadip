@@ -18,7 +18,7 @@ const OurPartnerSection = () => {
       <SliderSlick
         sliderData={partner.partners}
         rows={1}
-        sliderToShow={4}
+        sliderToShow={6}
         speed={4000}
         classname={"partner-slider"}
         autoplay={true}

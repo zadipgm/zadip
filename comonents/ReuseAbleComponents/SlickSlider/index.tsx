@@ -108,7 +108,7 @@ const SliderSlick: React.FC<IProps> = ({
               }
             >
               <SliderWrapper className={classname}>
-                <Image src={item.image} alt="" width={123} height={77} />
+                <Image src={item.image} alt="" width={130} height={90} />
                 <Title>
                   {isLTR ? item.description_en : item.description_ar}
                 </Title>

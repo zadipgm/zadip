@@ -1,0 +1,58 @@
+{
+    "survillence":[
+        {
+        "name_en": "Cameras",
+        "name_ar":"كاميرات مراقبة",
+        "link":"#"
+        },
+        {
+        "name_en": "NVRs & DVRs",
+        "name_ar":"اجهزة التخزين و التسجيل",
+        "link":"#"
+        }
+    ],
+    "access_control":[
+        {
+        "name_en": "F09",
+        "name_ar":"",
+        "link":"#"
+        },
+        {
+        "name_en": "Multibio 007",
+        "name_ar":"",
+        "link":"#"
+        },
+        {
+        "name_en": "SC103",
+        "name_ar":"",
+        "link":"#"
+        }
+
+    ],
+    "bullding_management":[
+        {
+        "name_en": "Central Clock",
+        "name_ar":"نظام الساعات المركزية",
+        "link":"#"
+        },
+        {
+        "name_en": "Smart Building System",
+        "name_ar":"نظام المباني الذكية",
+        "link":"#"
+        }
+    ],
+    "about_us":[
+        {
+            "name_en":"Clients & Partners",
+            "name_ar":"العملاء والشركاء",
+            "link":"#",
+            "icon":"client_partnerSvg"
+        },
+        {
+            "name_en":"About ZADIP Group",
+            "name_ar":"حول مجموعة زاد المعلومات",
+            "icon":"aboutusSvg"
+        }
+        
+    ]
+}

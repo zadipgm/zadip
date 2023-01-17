@@ -66,7 +66,7 @@
         "description_ar": ""
       },
       {"id":"2",
-        "image": "/images/epec.png",
+        "image": "/images/aqeel.jpg",
          "description_en": "",
         "description_ar": ""
       },
@@ -75,23 +75,53 @@
          "description_en": "",
         "description_ar": ""
       },
-  
       {"id":"4",
-        "image": "/images/mada.png",
+        "image": "/images/ciscos.jpg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"5",
-        "image": "/images/mudad.png",
+        "image": "/images/mada.png",
          "description_en": "",
         "description_ar": ""
-      }
+      },
+      {"id":"6",
+        "image": "/images/commvault.jpg",
+         "description_en": "",
+        "description_ar": ""
+      },
       
+      {"id":"7",
+        "image": "/images/granding.jpg",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"8",
+        "image": "/images/hdl.jpg",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"9",
+      "image": "/images/quantum.jpg",
+       "description_en": "",
+      "description_ar": ""
+      },
+      {"id":"10",
+        "image": "/images/epec.png",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"11",
+      "image": "/images/vmware.jpg",
+       "description_en": "",
+      "description_ar": ""
+      },
+      {"id":"12",
+      "image": "/images/zk.jpg",
+       "description_en": "",
+      "description_ar": ""
+      }
     ] ,
-  
-    
-
-    
     "our_value" : [
       {"id":"1",
         "image": "https://zadip.com/images/values/1.jpg",

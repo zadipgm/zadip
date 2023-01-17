@@ -4,8 +4,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   i18n: {
-    locales: ["en", "ar"],
-    defaultLocale: "en",
+    locales: ["ar", "en"],
+    defaultLocale: "ar",
     localeDetection: false,
 
     domains: [

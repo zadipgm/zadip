@@ -83,7 +83,7 @@ const AboutUS = () => {
         speed={500}
         autoplaySpeed={2000}
       />
-      <OurTeam>
+      {/* <OurTeam>
         <AnimationBar
           title={`${t("ourteam")}`}
           description={`${t("teamDescription")}`}
@@ -107,7 +107,7 @@ const AboutUS = () => {
             );
           })}
         </TeamCards>
-      </OurTeam>
+      </OurTeam> */}
       <AnimationBar
         title={`${t("ourClient")}`}
         description={`${t("clientdescription")}`}

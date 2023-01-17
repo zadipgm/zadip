@@ -28,24 +28,6 @@ const Footer = () => {
         <FooterWrapper>
           <FooterRow>
             <FooterCol>
-              <FooterHeading>{t("quickLinks")}</FooterHeading>
-              <FooterUL>
-                <FooterLI>
-                  <Link href="https://ektefa.net/zadip" target={"_blank"}>
-                    {t("featureTitleEktefa")}
-                  </Link>
-                </FooterLI>
-                <FooterLI>
-                  <Link href="https://nafeth.com/zadip" target={"_blank"}>
-                    {t("featureTitleNafeth")}
-                  </Link>
-                </FooterLI>
-                <FooterLI>
-                  <Link href="#">{t("egovService")}</Link>
-                </FooterLI>
-              </FooterUL>
-            </FooterCol>
-            <FooterCol>
               <FooterHeading>{t("contactUs")}</FooterHeading>
               <FooterUL>
                 <FooterLI>
@@ -56,7 +38,7 @@ const Footer = () => {
                 </FooterLI>
                 <FooterLI>
                   <Link href="tel:920010047">
-                    <PhoneAndroidOutlinedIcon fontSize={"small"} /> 9200 10047
+                    <PhoneAndroidOutlinedIcon fontSize={"small"} /> 920010047
                   </Link>
                 </FooterLI>
                 <FooterLI>
@@ -101,7 +83,7 @@ const Footer = () => {
           </FooterRow>
         </FooterWrapper>
         <FooterCopyRights>
-          © 2008 - 2022 {t("zadipGroups")}, {t("allRightsReserved")}.
+          © 2008 - 2023 {t("zadipGroups")}, {t("allRightsReserved")}.
           <a href="#">{t("privacyPolicy")}</a>
         </FooterCopyRights>
       </FooterContainer>

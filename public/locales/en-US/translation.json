@@ -3,9 +3,9 @@
     "home":"home",
     "products":"product",
     "services":"services",
-    "About Us":"About Us",
+    "aboutUs":"About Us",
     "Career":"Career",
-    "Contact Us":"Contact us",
+    "contactUs":"Contact us",
 
     "wehelp":"We help you...",
     "toreachGoals":"to reach your goals",
@@ -20,8 +20,8 @@
  "featurecardDescriptionMuaref":"Multiple products eliminate the need for fingerprint devices built and developed locally to suit your different needs.",
  "featureTitleEhtiwa":"Attendance solutions",
  "featurecardDescriptionEhtiwa":"Multiple products eliminate the need for fingerprint devices built and developed locally to suit your different needs.",
-"featureTitlecadre":"Cadre",
-"featurecardDescriptionCadre":"Cadre is an value add service for the subscribers to Ektefa HRMS. It provides Ektefa subscribers a fully integrated and managed vacancy posting portal with no extra charges at all.",
+"featureTitlecadre":"Reliable jobs",
+"featurecardDescriptionCadre":"It is an application dedicated to employment that relies on displaying jobs from reliable sources, due to its direct and electronic connection to the Etefa platform for human resource management.",
  "whyEktefa":"Why Ektefa?",
 "heighLightdescription":"Ektefa is a completely flexible and environement independent human resource management system. The objective behind the development of Ektefa as a complete enterprise level HRMS solution was to encourage a user-friendly, simple yet robust system which not only answers to the routine HR department issues but also provides intelligent analytics and new-age technological implementations.",
   "hrm":"Human Resource Management System",
@@ -42,7 +42,6 @@
   
   "quickLinks":"Quick Links",
   "egovService":"eGov Services Portal",
-  "contactUs":"Contact US",
   "location":" Prince Fahad Bin Ibrahim Al-Saud Road, Malaz, Riyadh",
   "downloadComapnyPRofile":"Download Company Profile",
   "followUs":"Follow Us",
@@ -77,7 +76,6 @@
   "goodbyebiometric":"Good bye Biometric devices!",
   "techSup":"Techsup Marketing Support Co.",
   "hrGate":"HR Gate",
-  "aboutUs":"about us",
   "abouttheCompany":"About the Company",
   "compnaysummry":"Founded in 2004, ZADIP has expanded from a small business to a multi-industry enterprise with operational teams in ICT, Networking, Software Development, Construction and Advertising. Our rapid expansion was only possible through the trust and support our customers put in our abilities.",
   "companyDescription":" Founded in 2004, ZADIP has expanded from a small business to a multi-industry enterprise with operational teams in ICT, Networking,Software Development, Construction and Advertising. Our rapidexpansion was only possible through the trust and support ourcustomers put in our abilities.<br></br>Today, ZADIP GROUP, has over 7000 customers all over KSA andoperates from two offices located in Riyadh and Dammam. Our vigilantfocus on emerging technologies in the global arena and their localrelevance is where our service proposition becomes unparalleled andfits every business need. We have successfully tied partnerships withglobal leaders in technology, advertising and building frameworksharnessing best practices to enhance the dependability of oursolutions and offerings.",
@@ -104,5 +102,7 @@
   "egoveservices":"E-government services",
   "certifiedPartner":"Elm Certified Sales Partner",
   "elmpartner":"With an extended partnership that started in 2008 with Elm Company. We meet the needs of our customers to access e-government services that contribute to raising their productivity.",
-  "visitsite":"Visit Service Site"
+  "visitsite":"Visit Service Site",
+  "letusaddValue":"LET US ADD VALUE TO YOUR BUSINESS",
+  "contactusDescription":"Our business hours are from 9am to 5pm, Sundays to Thursdays. Contact us today to learn about our cloud services and obtain subscription forms for e-Government services."
 }
