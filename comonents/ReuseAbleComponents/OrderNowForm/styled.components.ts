@@ -14,7 +14,7 @@ width:100% ;
 width:100% ;
 margin:0px ;
     }
-border-radius: 10px;
+border-radius: 20px;
 padding: 20px;
 
 `
@@ -96,7 +96,7 @@ text-align:center ;
 `
 export const ContactButton = styled.button`
     color: #fff;
-    padding: 12px;
+    padding: 16px;
     border: none;
     border-radius: 10px;
     outline: none;
@@ -113,6 +113,12 @@ export const ContactButton = styled.button`
       transition: all 0.5s ease-in;
       color:#fff ;
      background-color: #24afe7
+    }
+    > div >svg {
+        display:flex ;
+        justify-content:center ;
+        align-items:center ;
+        margin: 0px 7px;
     }
 `
 export const   CallUsNowWrapper =styled.div`

@@ -45,13 +45,14 @@
         {
             "name_en":"Clients & Partners",
             "name_ar":"العملاء والشركاء",
-            "link":"#",
+            "link":"/client_partners",
             "icon":"client_partnerSvg"
         },
         {
             "name_en":"About ZADIP Group",
             "name_ar":"حول مجموعة زاد المعلومات",
-            "icon":"aboutusSvg"
+            "icon":"aboutusSvg",
+            "link":"/about-us"
         }
         
     ]

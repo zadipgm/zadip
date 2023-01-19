@@ -20,20 +20,22 @@ import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
 const Footer = () => {
   const { t } = useTranslation();
+  const { translations } = useTheme();
   return (
     <>
       <FooterContainer>
         <FooterWrapper>
           <FooterRow>
             <FooterCol>
-              <FooterHeading>{t("contactUs")}</FooterHeading>
+              <FooterHeading>{translations?.contactUs}</FooterHeading>
               <FooterUL>
                 <FooterLI>
                   <Link href="#">
                     <MyLocationOutlinedIcon fontSize={"small"} />
-                    {t("location")}
+                    {translations?.location}
                   </Link>
                 </FooterLI>
                 <FooterLI>
@@ -49,13 +51,13 @@ const Footer = () => {
                 <FooterLI>
                   <Link href="#">
                     <CloudDownloadOutlinedIcon fontSize={"small"} />{" "}
-                    {t("downloadComapnyPRofile")}
+                    {translations?.downloadComapnyPRofile}
                   </Link>
                 </FooterLI>
               </FooterUL>
             </FooterCol>
             <FooterCol>
-              <FooterHeading>{t("followUs")}</FooterHeading>
+              <FooterHeading>{translations?.followUs}</FooterHeading>
               <FooterSocialLink className="social-link">
                 <Link href="https://twitter.com/zadipgroup" target={"_blank"}>
                   <TwitterIcon />
@@ -83,8 +85,9 @@ const Footer = () => {
           </FooterRow>
         </FooterWrapper>
         <FooterCopyRights>
-          © 2008 - 2023 {t("zadipGroups")}, {t("allRightsReserved")}.
-          <a href="#">{t("privacyPolicy")}</a>
+          © 2008 - 2023 {translations?.zadipGroups},{" "}
+          {translations?.allRightsReserved}.
+          <a href="#">{translations?.privacyPolicy}</a>
         </FooterCopyRights>
       </FooterContainer>
     </>

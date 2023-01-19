@@ -16,8 +16,7 @@ import Slider from "react-slick";
 import { useTheme } from "styled-components";
 import Link from "next/link";
 const FeatureSection = () => {
-  const { t } = useTranslation();
-  const { isLTR, device } = useTheme();
+  const { isLTR, translations } = useTheme();
   const settings = {
     dots: true,
     infinite: true,
@@ -33,8 +32,8 @@ const FeatureSection = () => {
       <AnimationBar
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
-        title={t("featureProduct") as string}
-        description={t("featureDescription")}
+        title={translations?.featureProduct}
+        description={translations?.featureDescription as string}
         fontSize={"22px"}
       />
       <FeatureSectionContainer>
@@ -48,16 +47,16 @@ const FeatureSection = () => {
                 height={"auto"}
               />
               <EktefaTitle direction={isLTR ? "ltr" : "rtl"}>
-                {t("featureTitleEktefa")}
+                {translations?.featureTitleEktefa}
               </EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
                 dangerouslySetInnerHTML={{
-                  __html: t("featurecardDescriptionEktefa"),
+                  __html: translations?.featurecardDescriptionEktefa as string,
                 }}
               ></EktefaDescription>
               <Link href="https://ektefa.net/zadip" target={"_blank"}>
-                {t("visitsite")}
+                {translations?.visitsite}
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
@@ -78,15 +77,15 @@ const FeatureSection = () => {
                 width={100}
                 height={60}
               />
-              <EktefaTitle>{t("featureTitleNafeth")}</EktefaTitle>
+              <EktefaTitle>{translations?.featureTitleNafeth}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
                 dangerouslySetInnerHTML={{
-                  __html: t("featurecardDescriptionNafeth"),
+                  __html: translations?.featurecardDescriptionNafeth as string,
                 }}
               ></EktefaDescription>
               <Link href="https://nafeth.com/zadip" target={"_blank"}>
-                {t("visitsite")}
+                {translations?.visitsite}
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
@@ -107,15 +106,15 @@ const FeatureSection = () => {
                 width={100}
                 height={60}
               />
-              <EktefaTitle>{t("featureTitleMuaref")}</EktefaTitle>
+              <EktefaTitle>{translations?.featureTitleMuaref}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
                 dangerouslySetInnerHTML={{
-                  __html: t("featurecardDescriptionMuaref"),
+                  __html: translations?.featurecardDescriptionMuaref as string,
                 }}
               ></EktefaDescription>
               <Link href="#" target={"_blank"}>
-                {t("visitsite")}
+                {translations?.visitsite}
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
@@ -136,15 +135,15 @@ const FeatureSection = () => {
                 width={150}
                 height={"auto"}
               />
-              <EktefaTitle>{t("featureTitleEhtiwa")}</EktefaTitle>
+              <EktefaTitle>{translations?.featureTitleEhtiwa}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
                 dangerouslySetInnerHTML={{
-                  __html: t("featurecardDescriptionEhtiwa"),
+                  __html: translations?.featurecardDescriptionEhtiwa as string,
                 }}
               ></EktefaDescription>
               <Link href="https://ehtwa.sa/" target={"_blank"}>
-                {t("visitsite")}
+                {translations?.visitsite}
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
@@ -165,14 +164,14 @@ const FeatureSection = () => {
                 width={150}
                 height={"auto"}
               />
-              <EktefaTitle>{t("featureTitlecadre")}</EktefaTitle>
+              <EktefaTitle>{translations?.featureTitlecadre}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
                 dangerouslySetInnerHTML={{
-                  __html: t("featurecardDescriptionCadre"),
+                  __html: translations?.featurecardDescriptionCadre as string,
                 }}
               ></EktefaDescription>
-              <Link href="https://cadre.sa/">{t("visitsite")}</Link>
+              <Link href="https://cadre.sa/">{translations?.visitsite}</Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage

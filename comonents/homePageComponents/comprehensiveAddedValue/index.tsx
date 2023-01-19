@@ -9,11 +9,12 @@ import {
   VisionImage,
 } from "./styled.components";
 import Image from "next/image";
-import visiionIMage2030 from "../../../public/images/saudi-vision.jpg";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
 
 const ComprehensiveAddedValue = () => {
   const { t } = useTranslation();
+  const { translations } = useTheme();
   return (
     <ComprehensiveContainer>
       <Wrapper>
@@ -26,10 +27,10 @@ const ComprehensiveAddedValue = () => {
           />
         </ImageWrapper>
         <Description>
-          <Title>{t("valueAddesHeading")}</Title>
+          <Title>{translations?.valueAddesHeading}</Title>
           <DescriptionVision
             dangerouslySetInnerHTML={{
-              __html: `${t("valueAddesDescription")}`,
+              __html: translations?.valueAddesDescription as string,
             }}
           ></DescriptionVision>
         </Description>

@@ -157,13 +157,26 @@ p{
 
 }
 `
-export const TeamInfo =styled.div`
+export const AboutusList = styled.ul`
 
+list-style-type: disclosure-closed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+`
+export const AboutusListItem =styled.li`
+width: 334px;
+    padding: 12px;
+    color:#393c3e;
+`
+export const TeamInfo =styled.div`
 background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
 border-radius: 75px;
 margin: 25px 10px;
 transition: .5s;
-
 `
 export const InfoTitle =styled.h4`
 font-size: 18px;

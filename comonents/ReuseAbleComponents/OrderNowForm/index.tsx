@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
+import SalesSvg from "../../../public/icons/salesSvg";
+import IconComponent from "../IconComponent";
 import ModalComponent from "../Modal";
 import SocialIcons from "../SocialIconsReUseable";
 import {
@@ -23,21 +25,31 @@ interface IProps {
   buttonTitle: string;
   isShow?: boolean;
   classname?: string;
+  icon?: string;
 }
 const OrderNowForm: React.FC<IProps> = ({
   title,
   buttonTitle,
   isShow = true,
   classname,
+  icon,
 }) => {
   const { t } = useTranslation();
-  const { isLTR } = useTheme();
+  const { isLTR, translations } = useTheme();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
     <>
-      <ContactButton onClick={handleOpen}>{title}</ContactButton>
+      <ContactButton onClick={handleOpen}>
+        {title}{" "}
+        <IconComponent
+          fill={"#fff"}
+          width={"30px"}
+          height={"30px"}
+          icon={icon}
+        />
+      </ContactButton>
       <ModalComponent
         open={open}
         handleClose={handleClose}
@@ -47,7 +59,7 @@ const OrderNowForm: React.FC<IProps> = ({
           <Wrapper className={classname}>
             <FormHeading>
               {isLTR
-                ? "Contact the service officer now"
+                ? "Contact the Service Officer Now"
                 : "تواصل مع مسؤول الخدمة الان"}
             </FormHeading>
             <InputWarapper>
@@ -72,8 +84,11 @@ const OrderNowForm: React.FC<IProps> = ({
                 placeholder={`${t("message")}`}
               />
             </InputWarapper>
-            <Button color="linear-gradient(-30deg,#009bfb 30%,#38b7ae);">
-              {buttonTitle}
+            <Button
+              color="linear-gradient(-30deg,#009bfb 30%,#38b7ae);"
+              onClick={handleClose}
+            >
+              {translations?.send}
             </Button>
           </Wrapper>
           {/* {isShow && (

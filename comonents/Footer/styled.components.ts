@@ -34,10 +34,7 @@ margin: 0;
 
 `
 export const FooterCol = styled.div`
-width: 33%;
-:last-child{
-    width:40% ;
-}
+width: 50%;
 @media (max-width: 600px) {
 width:100% ;
 display:block ;

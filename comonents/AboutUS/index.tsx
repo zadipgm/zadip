@@ -2,128 +2,104 @@ import * as React from "react";
 import Breadcrumb from "../ReuseAbleComponents/Breadcrumb";
 import {
   AboutUsContainer,
-  AboutusWrapper,
-  AboutusDescription,
-  AboutusImage,
-  AboutusImageWrapper,
   BreadCrumbWrapper,
-  OurTeam,
-  TeamCards,
-  TeamCradsWrapper,
-  TeamInfo,
-  InfoTitle,
-  InfoTitleSkill,
-  SocialIcons,
-  MemberDescription,
   AboutHeading,
+  AboutusList,
+  AboutusListItem,
 } from "./styled.components";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
-import TwitterSvg from "../../public/icons/twitterSvg";
-import LinkedInSvg from "../../public/icons/linkedinSvg";
-import FacebookSvg from "../../public/icons/facebookSvg";
-import SliderSlick from "../ReuseAbleComponents/SlickSlider";
-import partner from "../../DataLayer/client.json";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
-import Link from "next/link";
-import SocialIconsReUseable from "../ReuseAbleComponents/SocialIconsReUseable";
+import OurPartnerSection from "../homePageComponents/OurPartnerSection";
+import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 
 const AboutUS = () => {
   const { t } = useTranslation();
-  const { isLTR } = useTheme();
+  const { isLTR, translations } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
-      {t("home")}
+      {translations?.home}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#0196e3" }}>
-      {t("aboutUs")}
+      {translations?.aboutUs}
     </Typography>,
   ];
   return (
     <AboutUsContainer>
       <BreadCrumbWrapper>
-        <AboutHeading>{t("aboutUs")}</AboutHeading>
+        <AboutHeading>{translations?.aboutUs}</AboutHeading>
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>
       <AnimationBar
-        title={`${t("zadipGroups")}`}
-        description={`${t("compnaysummry")}`}
+        title={translations?.projects_it}
+        description={translations?.companySummry as string}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
         fontSize={"16px"}
       />
-      <AboutusWrapper>
-        <div>
-          <h3>{isLTR ? "About The Company" : "عن مجموعة زاد المعلومات"}</h3>
-          <AboutusDescription
-            dangerouslySetInnerHTML={{ __html: `${t("companyDescription")}` }}
-          ></AboutusDescription>
-        </div>
-        <AboutusImageWrapper>
-          <AboutusImage
-            src="https://zadip.com/images/values/8.jpg"
-            alt="about-us"
-            height={500}
-            width={600}
-          />
-        </AboutusImageWrapper>
-      </AboutusWrapper>
-
-      <SliderSlick
-        sliderData={partner.our_value}
-        rows={1}
-        sliderToShow={1}
-        classname={"our-value-slider"}
-        autoplay={true}
-        speed={500}
-        autoplaySpeed={2000}
+      <AboutusList>
+        <AboutusListItem>
+          {isLTR ? "Monitoring and control systems" : "أنظمة المراقبة والتحكم"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Fire fighting and alarm systems"
+            : "أنظمة مكافحة الحريق والانذار"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Intelligent building management systems"
+            : "أنظمة إدارة المباني الذكية"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Wired and wireless network systems"
+            : "أنظمة الشبكات السلكية واللاسلكية"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Electrical installations of all kinds"
+            : "التمديدات الكهربائية بأنواعها"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Communication extensions of all kinds"
+            : "تمديدات الاتصالات بأنواعها"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Install and organize endpoints"
+            : "تركيب وتنظيم النقاط الطرفية"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Supplies of all kinds of electronic devices"
+            : "توريدات الأجهزة الالكترونية بأنواعها"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Hall and conference systems equipment"
+            : "تجهيزات أنظمة القاعات والمؤتمرات"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "IP exchange systems of all kinds"
+            : "أنظمة سنترالات الاي بي بأنواعها"}
+        </AboutusListItem>
+        <AboutusListItem>
+          {isLTR
+            ? "Attendance, departure and fingerprint systems"
+            : "أنظمة أجهزة الحضور والانصراف والبصمة"}
+        </AboutusListItem>
+      </AboutusList>
+      <OrderNowForm
+        title={translations?.contactsalesnow as string}
+        buttonTitle={translations?.contactsalesnow as string}
+        icon={"salesSvg"}
       />
-      {/* <OurTeam>
-        <AnimationBar
-          title={`${t("ourteam")}`}
-          description={`${t("teamDescription")}`}
-          headingColor={"#2193b0"}
-          descriptionColor={"#737c85;"}
-          fontSize={"16px"}
-        />
-        <TeamCards>
-          {partner.our_team.map((item) => {
-            return (
-              <TeamCradsWrapper>
-                <img src={item.image} alt="json" width={125} height={125} />
-                <TeamInfo className="information">
-                  <InfoTitle>{isLTR ? item.name_en : item.name_ar}</InfoTitle>
-                  <InfoTitleSkill>
-                    {isLTR ? item.position_en : item.position_ar}
-                  </InfoTitleSkill>
-                </TeamInfo>
-                <SocialIconsReUseable classname={"about-page"} />
-              </TeamCradsWrapper>
-            );
-          })}
-        </TeamCards>
-      </OurTeam> */}
-      <AnimationBar
-        title={`${t("ourClient")}`}
-        description={`${t("clientdescription")}`}
-        headingColor={"#2193b0"}
-        descriptionColor={"#737c85;"}
-        fontSize={"16px"}
-      />
-      <SliderSlick
-        sliderData={partner.our_clients}
-        rows={1}
-        sliderToShow={6}
-        classname={"partner-slider"}
-        autoplay={true}
-        speed={4000}
-        autoplaySpeed={2000}
-      />
+      <OurPartnerSection />
     </AboutUsContainer>
   );
 };

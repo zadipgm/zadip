@@ -7,7 +7,6 @@ const nextConfig = {
     locales: ["ar", "en"],
     defaultLocale: "ar",
     localeDetection: false,
-
     domains: [
       {
         domain: "http://localhost:3000/",
@@ -19,6 +18,7 @@ const nextConfig = {
       },
     ],
   },
+  trailingSlash: true,
   experimental: {
     fontLoaders: [
       { loader: "@next/font/google", options: { subsets: ["arabic"] } },

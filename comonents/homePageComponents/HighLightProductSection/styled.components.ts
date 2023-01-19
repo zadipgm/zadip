@@ -52,7 +52,7 @@ export const Elogos = styled.div`
     @media (max-width: 600px) {
     display:block ;
  }
-    > img{
+   > a > img{
         cursor: pointer;
         padding: 25px;
     margin: 0px 20px 0px;

@@ -504,5 +504,38 @@
         "description_en":"Fleet management with complete control.",
         "description_ar":"دقة المعلوماتالدقة في الحصول على المعلومات."
       }
+    ],
+
+    "e_services":[
+      {
+        "title_en":"Tam",
+        "title_ar":"خدمة تم",
+        "description_en":"The TAMM service makes it easier for establishments to manage the traffic operations of their vehicles electronically. Among the services it provides is the authorization to drive the vehicle, inquire about violations, and so on",
+        "description_ar":"تسهل خدمة تم على المنشآت من إدارة العمليات المرورية الكترونيا لمركباتهم. من ضمن الخدمات التي تقدمها تم تفويض قيادة المركبة والاستعلام عن المخالفات وغير ذلك"
+      },
+      {
+        "title_en":"Muqeem",
+        "title_ar":"خدمة مقيم",
+        "description_en":"The facility resident service enables the completion of resident transactions at the General Directorate of Passports electronically. Among these services is the renewal and issuance of a resident identity, the implementation of electronic visa operations, the completion of services transfer operations, and others",
+        "description_ar":"تمكن خدمة مقيم المنشآت من انجاز معاملات المقيمين لدى المديرية العامة للجوازات الكترونيا.  ومن هذه الخدمات تجديد وإصدار هوية مقيم، تنفيذ عمليات التأشيرات الإلكترونية، إتمام عمليات نقل الخدمات وغيرها"
+      },
+      {
+        "title_en":"Masarat",
+        "title_ar":"خدمة مسارات",
+        "description_en":"Fleet management has never been so easy as Masarat service provides you with many features that are of interest to you to manage your fleets. Among these features are the monitoring and follow-up of the operations of your vehicles, electronic tracking of vehicles, maintenance management and much more",
+        "description_ar":"إدارة الاساطيل لم تكن بهذه السهولة من قبل حيث توفر لك خدمة مسارات العديد من المميزات التي تهمك لإدارة الاساطيل لديك. ومن هذه المميزات الرقابة والمتابعة لعمليات التشغيل الخاصة بمركباتك، تتبع المركبات الكترونيا وإدارة الصيانة وغير ذلك الكثير"
+      },
+      {
+        "title_en":"Permit",
+        "title_ar":"خدمة تصريح",
+        "description_en":"A vital facility is hardly devoid of preventive and safety measures. Among the most prominent of these procedures is the management of permit operations, and here comes the role of the permit service in verifying vehicle data for visitors and individuals and granting them the necessary permits, in connection with a number of concerned authorities.",
+        "description_ar":"لا يكاد تخلوا منشأة حيوية من إجراءات الوقاية والسلامة. ومن أبرز تلك الإجراءات إدارة عمليات التصاريح وهنا يأتي دور خدمة تصريح من التحقق من بيانات المركبات للزوار والافراد ومنحهم التصاريح اللازمة وذلك بالارتباط مع عدد من الجهات المعنية."
+      },
+      {
+        "title_en":"News",
+        "title_ar":"خدمة نبأ",
+        "description_en":"Nabaa service enables its subscribers to send short text messages called MS to the numbers registered with Absher. So that your establishment can send the correct message to the owner of the officially registered ID.",
+        "description_ar":"تمكن خدمة نبأ لمشتركيها ارسال رسائل نصية قصيرة اسم ام اس على الأرقام المقيدة لدى ابشر. حتى تتمكن منشأتك من ارسال الرسالة الصحيحة لصاحب الهوية المسجلة رسميا."
+      }
     ]
   }

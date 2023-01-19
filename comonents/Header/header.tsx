@@ -45,15 +45,15 @@ import { useTheme } from "styled-components";
 import ServicesSvg from "../../public/icons/servicesSvg";
 import Client_partnerSvg from "../../public/icons/client_partnerSvg";
 import IconComponent from "../ReuseAbleComponents/IconComponent";
+import Link from "next/link";
 
 interface IProps {
   headerImage?: string;
 }
 const Header: React.FC<IProps> = ({ headerImage }) => {
-  const { isLTR } = useTheme();
+  const { isLTR, translations, locale } = useTheme();
   const router = useRouter();
   const { t } = useTranslation();
-  const { locale, setLocale } = React.useContext(LocaleContext);
   const [show, setShow] = React.useState(0);
   const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
   const onScroll = () => {
@@ -79,10 +79,8 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
         router.push(`${router.asPath}`, `${router.asPath}`, {
           locale: "en",
         });
-        setLocale("en");
       } else {
         router.push(`${router.asPath}`, `${router.asPath}`, { locale: "ar" });
-        setLocale("ar");
       }
     },
     [locale]
@@ -107,27 +105,32 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
             </Video>
           </VideoWrapper>
         )}
-        <HeaderNavbarWrapper id="navbar">
+        <HeaderNavbarWrapper
+          className={router.pathname !== "/" ? "other-pages" : ""}
+          id="navbar"
+        >
           <Container>
             <img src="/images/zadiplogo.png" alt="logo" />
             <NavBar>
               {/* ========Home======== */}
 
-              <NavBarList>{t("home")}</NavBarList>
+              <NavBarList>
+                <Link href={"/"}>{translations?.home}</Link>
+              </NavBarList>
 
               {/* ========ProductsList======== */}
 
               <NavBarList>
-                {t("products")} <IconDownArrowHead fill="#fff" />
+                {translations?.products} <IconDownArrowHead fill="#fff" />
                 <div className="dropdown-content">
                   <NavbarItems>
                     <NavbarItemsLink href="#">
                       <SurvillenceSvg fill="#fff" width="30px" height="30px" />
                       {isLTR ? "Survillence" : "انظمة المراقبة والأمان"}
                     </NavbarItemsLink>
-                    {header_data.survillence.map((item) => {
+                    {header_data.survillence.map((item, index) => {
                       return (
-                        <NavbarItemsList>
+                        <NavbarItemsList key={index}>
                           <NavbarItemsLink href={item.link}>
                             {isLTR ? item.name_en : item.name_ar}
                           </NavbarItemsLink>
@@ -140,9 +143,9 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                       <FingerPrintSvg fill="#fff" width="25px" height="25px" />
                       {isLTR ? " Access Control" : "انظمة التحكم بالدخول"}
                     </NavbarItemsLink>
-                    {header_data.access_control.map((item) => {
+                    {header_data.access_control.map((item, index) => {
                       return (
-                        <NavbarItemsList>
+                        <NavbarItemsList key={index}>
                           <NavbarItemsLink href={item.link}>
                             {item.name_en}
                           </NavbarItemsLink>
@@ -155,9 +158,9 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                       <BuildingSvg fill="#fff" width="25px" height="25px" />
                       {isLTR ? "Building Management" : "إدارة المباني"}
                     </NavbarItemsLink>
-                    {header_data.bullding_management.map((item) => {
+                    {header_data.bullding_management.map((item, index) => {
                       return (
-                        <NavbarItemsList>
+                        <NavbarItemsList key={index}>
                           <NavbarItemsLink href={item.link}>
                             {isLTR ? item.name_en : item.name_ar}
                           </NavbarItemsLink>
@@ -171,16 +174,16 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
               {/* ========ServicesList======== */}
 
               <NavBarList>
-                {t("services")} <IconDownArrowHead fill="#fff" />
+                {translations?.services} <IconDownArrowHead fill="#fff" />
                 <div className="dropdown-content services">
                   <NavbarItems>
                     <NavbarItemsLink href="#">
                       <ServicesSvg fill="#fff" width="30px" height="30px" />
                       {isLTR ? "Professional Services" : "خدمات احترافية"}
                     </NavbarItemsLink>
-                    {header_data.survillence.map((item) => {
+                    {header_data.survillence.map((item, index) => {
                       return (
-                        <NavbarItemsList>
+                        <NavbarItemsList key={index}>
                           <NavbarItemsLink href={item.link}>
                             {isLTR ? item.name_en : item.name_ar}
                           </NavbarItemsLink>
@@ -191,13 +194,13 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                 </div>
               </NavBarList>
               <NavBarList>
-                {t("aboutUs")} <IconDownArrowHead fill="#fff" />
+                {translations?.aboutUs} <IconDownArrowHead fill="#fff" />
                 <div className="dropdown-content about-us">
                   <NavbarItems>
-                    {header_data.about_us.map((item) => {
+                    {header_data.about_us.map((item, index) => {
                       return (
-                        <NavbarItemsList>
-                          <NavbarItemsLink href={item.link}>
+                        <NavbarItemsList key={index}>
+                          <NavbarItemsLink href={`/${locale}${item.link}`}>
                             <IconComponent
                               icon={item.icon}
                               fill={"#fff"}
@@ -212,7 +215,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                   </NavbarItems>
                 </div>
               </NavBarList>
-              <NavBarList>{t("contactUs")}</NavBarList>
+              <NavBarList>{translations?.contactUs}</NavBarList>
 
               {/* ========Lang Button======== */}
 
@@ -250,8 +253,8 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
 
         {router.pathname === "/" && (
           <MainHeading>
-            <Text lineHeight={"88px"}>{t("wehelp")}</Text>
-            <Text lineHeight={"88px"}>{t("toreachGoals")}</Text>
+            <Text lineHeight={"88px"}>{translations?.wehelp}</Text>
+            <Text lineHeight={"88px"}>{translations?.toreachGoals}</Text>
           </MainHeading>
         )}
       </HeaderWrapper>

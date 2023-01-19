@@ -1,60 +1,159 @@
 {
     "our_clients": [
-      {  "id":"1",
-        "image":"https://zadip.com/images/clients/adel.jpg",
+      {"id":"1",
+        "image": "/images/elm.png",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"2",
+        "image": "/images/aqeel.jpg",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"3",
+        "image": "/images/hrgate.png",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"4",
+        "image": "/images/ciscos.jpg",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"5",
+        "image": "/images/mada.png",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"6",
+        "image": "/images/commvault.jpg",
+         "description_en": "",
+        "description_ar": ""
+      },
+      
+      {"id":"7",
+        "image": "/images/granding.jpg",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"8",
+        "image": "/images/hdl.jpg",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"9",
+      "image": "/images/quantum.jpg",
+       "description_en": "",
+      "description_ar": ""
+      },
+      {"id":"10",
+        "image": "/images/epec.png",
+         "description_en": "",
+        "description_ar": ""
+      },
+      {"id":"11",
+      "image": "/images/vmware.jpg",
+       "description_en": "",
+      "description_ar": ""
+      },
+      {"id":"12",
+      "image": "/images/zk.jpg",
+       "description_en": "",
+      "description_ar": ""
+      },
+      {  "id":"13",
+        "image":"/images/adel.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":"2",
-        "image":"https://zadip.com/images/clients/americana.jpg",
+      {  "id":"14",
+        "image":"/images/americana.jpg",
         "description_en": "",
         "description_ar": ""
         
       },
-      {  "id":"3",
-        "image":"https://zadip.com/images/clients/dawa.jpg",
+      {  "id":"15",
+        "image":"/images/dawa.jpg",
         "description_en": "",
         "description_ar": ""
+        
+      },
+      {  "id":"16",
+        "image":"/images/fanar.jpg",
+        "description_en": "",
+        "description_ar": ""
+        
+      },
+      {  "id":"17",
+        "image":"/images/fayha.jpg",
+        "description_en": "",
+        "description_ar": ""
+        
+      },
+      {  "id":"18",
+      "image":"/images/gasco.jpg",
+      "description_en": "",
+      "description_ar": ""
       
       },
-      {  "id":"4",
-        "image":"https://zadip.com/images/clients/fanar.jpg",
-        "description_en": "",
-        "description_ar": ""
-        
+      {  
+        "id":"19",
+      "image":"/images/haif.jpg",
+      "description_en": "",
+      "description_ar": ""
+    
+      },   
+      {  
+      "id":"20",
+      "image":"/images/interior.jpg",
+      "description_en": "",
+      "description_ar": ""
       },
-      {  "id":"5",
-        "image":"https://zadip.com/images/clients/fayha.jpg",
+      {  
+        "id":"21",
+        "image":"/images/kau.jpg",
         "description_en": "",
         "description_ar": ""
-        
       },
-      {  "id":"6",
-        "image":"https://zadip.com/images/clients/americana.jpg",
-        "description_en": "",
-        "description_ar": ""
-        
+      {  
+      "id":"22",
+      "image":"/images/majal.jpg",
+      "description_en": "",
+      "description_ar": ""
       },
-      {  "id":"7",
-        "image":"https://zadip.com/images/clients/dawa.jpg",
-        "description_en": "",
-        "description_ar": ""
-        
+      {  
+      "id":"23",
+      "image":"/images/nora.jpg",
+      "description_en": "",
+      "description_ar": ""
       },
-      {  "id":"8",
-        "image":"https://zadip.com/images/clients/fanar.jpg",
-        "description_en": "",
-        "description_ar": ""
-        
+      {  
+      "id":"24",
+      "image":"/images/psu.jpg",
+      "description_en": "",
+      "description_ar": ""
       },
-      {  "id":"9",
-        "image":"https://zadip.com/images/clients/fayha.jpg",
+      {  
+      "id":"25",
+      "image":"/images/sceco.jpg",
+      "description_en": "",
+      "description_ar": ""
+      },
+      {  
+      "id":"26",
+      "image":"/images/swcc.jpg",
+      "description_en": "",
+      "description_ar": ""
+      },
+      {  
+        "id":"27",
+        "image":"/images/zamil.jpg",
         "description_en": "",
         "description_ar": ""
-        
-      }
-    ],
+        }
+
+    ] ,
   
     
 
@@ -121,6 +220,7 @@
        "description_en": "",
       "description_ar": ""
       }
+      
     ] ,
     "our_value" : [
       {"id":"1",

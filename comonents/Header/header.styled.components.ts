@@ -14,6 +14,10 @@ background: linear-gradient(-30deg,#0676bb5e 30%,#38b7ae4f);
   animation: rotateMenu 1000ms ease-in-out;
   transform-origin: top center;
   }
+  &.other-pages{
+  background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+ animation:none
+  }
 `
 export const HeaderContainer = styled.div`
 font-size:12px;
@@ -75,6 +79,7 @@ perspective: 1000px;
 }
 
 :hover{
+  color:#a7f5ef;
 transition:.6s ease-in;
 & .dropdown-content{
   padding:12px ;
@@ -111,6 +116,15 @@ color: #fff;
 text-transform: uppercase;
 cursor: pointer;
 margin:0px 12px ;
+>a{
+  text-decoration: none;
+  color:#fff ;
+  transition:.5s ;
+  :hover{
+  transition:.5s ;
+  color:#a7f5ef;
+}
+}
 `
 export const NavLink = styled.a`
 text-decoration:none ;
@@ -127,7 +141,7 @@ export const NavbarItemsList =styled.li`
     padding: 0px 12px;
 :hover{
   transition:.5s ;
-  background-color: #60cbef6e;
+  background-color:#16242a82;
 
 }
 `
@@ -227,7 +241,7 @@ cursor: pointer;
 border:none ;
 margin: 0px 11px ;
 :hover{
-background-color: #60CBEF;
+background-color:#6fc5e8;
 transition:.6s ;
 }
 `
