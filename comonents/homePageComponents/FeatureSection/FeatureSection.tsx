@@ -34,7 +34,7 @@ const FeatureSection = () => {
         descriptionColor={"#737c85"}
         title={translations?.featureProduct}
         description={translations?.featureDescription as string}
-        fontSize={"22px"}
+        fontSize={"18px"}
       />
       <FeatureSectionContainer>
         <Slider {...settings} className={"feature-section"}>

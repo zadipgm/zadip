@@ -3,15 +3,13 @@ import ComprehensiveAddedValue from "./comprehensiveAddedValue";
 import FeatureSection from "./FeatureSection/FeatureSection";
 import HighLightProductSection from "./HighLightProductSection";
 import OurPartnerSection from "./OurPartnerSection";
-import RecentNewsSection from "./RecentNewSection";
-import TwitterSliderSection from "./TwitterSliderSection";
+import ProfessionalServices from "./ProfessionalServices";
 const HomePage = () => {
   return (
     <>
       <FeatureSection />
       <HighLightProductSection />
-      {/* <RecentNewsSection /> */}
-      {/* <TwitterSliderSection /> */}
+      <ProfessionalServices />
       <OurPartnerSection />
       <ComprehensiveAddedValue />
     </>
