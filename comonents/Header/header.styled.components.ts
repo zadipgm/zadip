@@ -106,10 +106,10 @@ transition:.6s ease-in;
     }
 }
 &.services{
-  min-width:250px ;
+  min-width:300px ;
 }
 &.about-us{
-  min-width:240px ;
+  min-width:300px ;
 }
 
 }

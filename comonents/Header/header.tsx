@@ -85,6 +85,9 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
     },
     [locale]
   );
+  const navigateToPage = (item: any) => {
+    return router.push(`/${locale}${item.link}`);
+  };
   return (
     <>
       <HeaderWrapper>
@@ -202,7 +205,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                     {header_data.about_us.map((item, index) => {
                       return (
                         <NavbarItemsList key={index}>
-                          <NavbarItemsLink href={`/${locale}${item.link}`}>
+                          <NavbarItemsLink onClick={() => navigateToPage(item)}>
                             <IconComponent
                               icon={item.icon}
                               fill={"#fff"}

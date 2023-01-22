@@ -16,7 +16,9 @@ export const HighLightProductWrapper = styled.div`
   display: flex;
     justify-content:center ;
     align-items: center;
-   
+    @media (max-width: 600px) {
+     display:block ;
+ }
 `
 export const Eservices =  styled.div`
 width:40% ;
