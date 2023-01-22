@@ -110,7 +110,9 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
           id="navbar"
         >
           <Container>
-            <img src="/images/zadiplogo.png" alt="logo" />
+            <Link href={"/"}>
+              <img src="/images/zadiplogo.png" alt="logo" />
+            </Link>
             <NavBar>
               {/* ========Home======== */}
 

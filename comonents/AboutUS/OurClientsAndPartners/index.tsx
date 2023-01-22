@@ -31,7 +31,7 @@ const OurClientsAndPartners = () => {
         <Breadcrumb color={"#737c85"} breadcrumbs={breadcrumbs} />
       </Wrapper>
       <AnimationBar
-        description={translations?.featureDescription as string}
+        description={translations?.partnerHeadingDes as string}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
         title={translations?.ourClientsandPartners}

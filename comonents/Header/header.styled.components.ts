@@ -50,6 +50,9 @@ justify-content: space-between;
 align-items:center ;
 width:1170px;
 margin:0 auto ;
+>a {
+  padding: 9px 0px 0px 0px;
+}
 `
 export const ImageContainer =styled.div`
 `

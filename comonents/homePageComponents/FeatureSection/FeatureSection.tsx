@@ -42,7 +42,7 @@ const FeatureSection = () => {
             <EktefaDescriptionWrapper>
               <img
                 src="/images/ektefa.png"
-                alt="Feature"
+                alt="ektefa"
                 width={100}
                 height={"auto"}
               />
@@ -61,7 +61,7 @@ const FeatureSection = () => {
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
-                src="https://ektefa.net/agency/img/illustrations/employee.svg"
+                src="/images/ektefa1.svg"
                 alt="ektefa"
                 width={657}
                 height={438}
@@ -90,7 +90,7 @@ const FeatureSection = () => {
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
-                src="https://nafeth.com/images/nafeth-naql.png"
+                src="/images/nafeth.svg"
                 alt="nafeth"
                 width={657}
                 height={438}
@@ -102,7 +102,7 @@ const FeatureSection = () => {
             <EktefaDescriptionWrapper>
               <img
                 src="/images/mauref.png"
-                alt="Feature"
+                alt="mauref"
                 width={100}
                 height={60}
               />
@@ -119,8 +119,8 @@ const FeatureSection = () => {
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
-                src="https://ektefa.net/agency/img/illustrations/qrcode.svg"
-                alt="ektefa"
+                src="/images/mauref.svg"
+                alt="mauref"
                 width={657}
                 height={438}
               />
@@ -148,8 +148,8 @@ const FeatureSection = () => {
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage
-                src="https://ektefa.net/agency/img/illustrations/employee.svg"
-                alt="ektefa"
+                src="/images/ehtiwa.svg"
+                alt="ehtiwa"
                 width={657}
                 height={438}
               />

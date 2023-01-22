@@ -98,7 +98,9 @@ letusaddValue:"LET US ADD VALUE TO YOUR BUSINESS",
 contactusDescription:"Our business hours are from 9am to 5pm, Sundays to Thursdays. Contact us today to learn about our cloud services and obtain subscription forms for e-Government services.",
 ourClientsandPartners:"Our Clients and Partners",
 projects_it:"Managing IT infrastructure projects",
-contactsalesnow:"Contact Sales Now"
+contactsalesnow:"Contact Sales Now",
+professionalServices:"Whether you have a huge technical project that requires advanced expertise to implement it, or a simple project that includes extending networks or wireless networks, or installing monitoring and control systems, all of this is possible with our professional services in the field of information technology.",
+partnerHeadingDes:"A list of clients we are proud to provide our services to and help them achieve their goals"
 }
 
   
