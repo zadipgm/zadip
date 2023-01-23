@@ -171,6 +171,9 @@ transition:.6s ease-in;
   min-width:250px ;
   > ul {
     padding:0 ;
+    :hover{
+      background:none ;
+    }
     > a{
       padding:12px ;
     }
@@ -226,6 +229,11 @@ padding: 0;
 margin: 0;
 list-style-type: none;
 padding:12px ;
+transition:.5s ;
+:hover{
+  transition:.5s ;
+  background-color: #000000de;
+}
 `
 export const MenuListcontainer= styled.div`
 display:flex ;
@@ -256,7 +264,6 @@ export const NavbarItemsList =styled.li`
 :hover{
   transition:.5s ;
   background-color:#000000de;
-
 }
 `
 export const NavbarItemsLink =styled.a`
