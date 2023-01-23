@@ -10,13 +10,11 @@ import {
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import OurPartnerSection from "../homePageComponents/OurPartnerSection";
 import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 
 const AboutUS = () => {
-  const { t } = useTranslation();
   const { isLTR, translations } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">

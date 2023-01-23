@@ -19,10 +19,8 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 const Footer = () => {
-  const { t } = useTranslation();
   const { translations } = useTheme();
   return (
     <>
