@@ -15,7 +15,6 @@ import {
   DetailsWrapper,
 } from "./styled.components";
 import RelatedProducts from "../RelatedSection";
-import { useTranslation } from "react-i18next";
 import { Typography } from "@mui/material";
 import { useTheme } from "styled-components";
 interface IRelated {
@@ -54,8 +53,7 @@ const DetailsComponent: React.FC<IProps> = ({
 }) => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
-  const { t } = useTranslation();
-  const { isLTR } = useTheme();
+  const { isLTR, translations } = useTheme();
   const query = router?.query?.sub_category;
   const filterProducts = detailsPageData.all.filter(
     (item) => item.link === query
@@ -65,7 +63,7 @@ const DetailsComponent: React.FC<IProps> = ({
   );
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      {t("home")}
+      {translations?.home}
     </Links>,
     <Links
       underline="hover"
@@ -73,7 +71,7 @@ const DetailsComponent: React.FC<IProps> = ({
       color="inherit"
       href={`/${locale}/${page}`}
     >
-      {page === "products" ? `${t("products")}` : page}
+      {page === "products" ? `${translations?.products}` : page}
     </Links>,
     <Links
       underline="hover"
@@ -107,7 +105,7 @@ const DetailsComponent: React.FC<IProps> = ({
       <PageBreadCrumbWrapper>
         <GoBackButton onClick={() => router.back()}>
           <KeyboardBackspaceIcon />
-          {t("goBack")}
+          {translations?.goBack}
         </GoBackButton>
         <Breadcrumb color="#0196e3" breadcrumbs={breadcrumbs} />
       </PageBreadCrumbWrapper>

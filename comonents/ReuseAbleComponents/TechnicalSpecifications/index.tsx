@@ -6,15 +6,9 @@ import {
   SpecsDescription,
   SpecsTitle,
 } from "./styled.components";
-import Typography from "@mui/material/Typography";
-import Links from "@mui/material/Link";
-import { useRouter } from "next/router";
-import LocaleContext from "../../../LocaleContext";
-import BadgeSvg from "../../../public/icons/badgeSvg";
 import IconComponent from "../IconComponent";
 import AnimationBar from "../AnimationBar/AnimationBar";
 import { useTheme } from "styled-components";
-import { useTranslation } from "react-i18next";
 interface ISpecsData {
   id?: number;
   name_en?: string;
@@ -29,13 +23,12 @@ interface IProps {
   page: string;
 }
 const TechnicalSpecsTable: React.FC<IProps> = ({ data, title, page }) => {
-  const { isLTR } = useTheme();
-  const { t } = useTranslation();
+  const { isLTR, translations } = useTheme();
   return (
     <SpecsContainer>
       {(data?.length as number) > 0 && (
         <AnimationBar
-          title={`${t("keyFeatures")}`}
+          title={translations?.keyFeatures}
           description={""}
           headingColor={"#0576bc"}
           descriptionColor={""}

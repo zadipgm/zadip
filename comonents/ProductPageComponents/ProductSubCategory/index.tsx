@@ -10,23 +10,19 @@ import {
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
 import { useRouter } from "next/router";
-import LocaleContext from "../../../LocaleContext";
 import SubCategory from "../../ReuseAbleComponents/SubCategories";
 import { useTheme } from "styled-components";
-import { useTranslation } from "react-i18next";
 const ProductSubCategory = () => {
-  const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
-  const { t } = useTranslation();
+  const { isLTR, translations, locale } = useTheme();
   const query = router?.query?.type;
   const filteredProducts = productData.all.filter(
     (item) => item.type === query
   );
   const main_category = filteredProducts[0];
-  const { isLTR } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      {t("home")}
+      {translations?.home}
     </Links>,
     <Links
       underline="hover"
@@ -34,7 +30,7 @@ const ProductSubCategory = () => {
       color="inherit"
       href={`/${locale}/products`}
     >
-      {t("products")}
+      {translations?.products}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#fff" }}>
       {isLTR
@@ -55,7 +51,7 @@ const ProductSubCategory = () => {
           }
           icon={main_category?.icon}
           color={"#fff"}
-          description={t("featureDescription")}
+          description={translations?.featureDescription as string}
           headingColor={"#fff"}
           descriptionColor={"#fff"}
           fontSize={"22px"}

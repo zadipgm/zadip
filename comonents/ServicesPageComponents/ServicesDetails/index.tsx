@@ -18,10 +18,7 @@ import {
   GoBackButton,
   PageBreadCrumbWrapper,
 } from "../../ReuseAbleComponents/DetailsComponent/styled.components";
-import LocaleContext from "../../../LocaleContext";
-
 import Breadcrumb from "../../ReuseAbleComponents/Breadcrumb";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import data from "../../../DataLayer/services.json";
 interface IProps {
@@ -29,7 +26,7 @@ interface IProps {
 }
 const ServicesDetail: React.FC<IProps> = ({ page }) => {
   const router = useRouter();
-  const { locale } = React.useContext(LocaleContext);
+  const { translations, locale } = useTheme();
   let type = router.query.sub_category;
   const filterServices = _data.sub_services.filter((item) =>
     item.link.includes(type as string)
@@ -40,11 +37,10 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
   const filterSpecificItem = filterServices.filter(
     (item) => item.link === `${type}`
   );
-  const { t } = useTranslation();
   const { isLTR } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      {t("home")}
+      {translations?.home}
     </Links>,
     <Links
       underline="hover"
@@ -52,7 +48,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
       color="inherit"
       href={`/${locale}/${"services"}`}
     >
-      {t("services")}
+      {translations?.services}
     </Links>,
     <Links
       underline="hover"
@@ -115,7 +111,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
           <PageBreadCrumbWrapper>
             <GoBackButton onClick={() => router.back()}>
               <KeyboardBackspaceIcon />
-              {t("goBack")}
+              {translations?.goBack}
             </GoBackButton>
             <Breadcrumb color="#0196e3" breadcrumbs={breadcrumbs} />
           </PageBreadCrumbWrapper>
@@ -146,7 +142,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
           )}
           {type === "tam" || type === "muqeem" ? (
             <AnimationBar
-              title={`${t("pricingPackages")}`}
+              title={translations?.pricingPackages}
               description={""}
               headingColor={"#2193b0"}
               descriptionColor={""}
@@ -169,7 +165,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
               }
               data={specs_data.pricing_Data}
               classname={""}
-              condition={`${t("conditions")}`}
+              condition={translations?.conditions as string}
             />
           ) : (
             ""
@@ -189,7 +185,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
               }
               classname={"direction"}
               data={specs_data.pricing_Data}
-              condition={`${t("conditions")}`}
+              condition={translations?.conditions as string}
             />
           ) : (
             ""
@@ -203,7 +199,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
           <>
             {type === "tam" || type === "muqeem" ? (
               <AnimationBar
-                title={`${t("supportingDocuments")}`}
+                title={translations?.supportingDocuments}
                 description={""}
                 headingColor={"#2193b0"}
                 descriptionColor={""}
@@ -239,7 +235,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
                       : ""
                   }
                 />
-                <DownLoadButton title={`${t("editdeletform")}`} />
+                <DownLoadButton title={translations?.editdeletform as string} />
               </ButtonsWrapper>
             ) : (
               ""
@@ -249,8 +245,8 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
           {type === "tam" || type === "muqeem" ? (
             <OrderNowForm
               classname="e-services"
-              title={`${t("orderNow")}`}
-              buttonTitle={`${t("sendOrder")}`}
+              title={translations?.orderNow as string}
+              buttonTitle={translations?.sendOrder as string}
             />
           ) : (
             ""

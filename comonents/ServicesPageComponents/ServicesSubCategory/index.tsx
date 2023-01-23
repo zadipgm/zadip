@@ -1,7 +1,6 @@
 import * as React from "react";
 import {
   ProductBreadcrumbWrapper,
-  ProductSubCategoryContainer,
   ProductSubCategoryWrapper,
 } from "../../ProductPageComponents/ProductSubCategory/styled.components";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
@@ -10,23 +9,19 @@ import servicesData from "../../../DataLayer/services.json";
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
 import { useRouter } from "next/router";
-import LocaleContext from "../../../LocaleContext";
 import SubCategory from "../../ReuseAbleComponents/SubCategories";
 import { ServicesSubCategoryContainer } from "./styled.components";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 const ServicesSubCategory = () => {
-  const { locale } = React.useContext(LocaleContext);
+  const { isLTR, locale, translations } = useTheme();
   const router = useRouter();
-  const { t } = useTranslation();
-  const { isLTR } = useTheme();
   const filter_services = servicesData.sub_services.filter(
     (item) => item.type === router.query.type
   );
   const main_category = filter_services[0];
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      {t("home")}
+      {translations?.home}
     </Links>,
     <Links
       underline="hover"
@@ -34,7 +29,7 @@ const ServicesSubCategory = () => {
       color="inherit"
       href={`/${locale}/services`}
     >
-      {t("services")}
+      {translations?.services}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#fff" }}>
       {isLTR
@@ -55,7 +50,7 @@ const ServicesSubCategory = () => {
           title={
             isLTR ? main_category?.main_title_en : main_category?.main_title_ar
           }
-          description={t("featureDescription")}
+          description={translations?.featureDescription as string}
           headingColor={"#fff"}
           descriptionColor={"#fff"}
           fontSize={"22px"}

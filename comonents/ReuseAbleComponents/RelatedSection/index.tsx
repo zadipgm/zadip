@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import LocaleContext from "../../../LocaleContext";
 
@@ -34,16 +33,14 @@ interface IProps {
 const RelatedProducts: React.FC<IProps> = ({ relatedData, page }) => {
   const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
-  const { isLTR } = useTheme();
-  const { t } = useTranslation();
-  console.log("here is page", page);
+  const { isLTR, translations } = useTheme();
   return (
     <RelatedWrapper>
       <Divider>
         <RelatedTitle>
           {page === "products"
-            ? `${t("relatedProducts")}`
-            : `${t("relatedServices")}`}
+            ? translations?.relatedProducts
+            : translations?.relatedServices}
         </RelatedTitle>
       </Divider>
       <ProductCardsItems>

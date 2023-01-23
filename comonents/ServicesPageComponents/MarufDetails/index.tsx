@@ -3,7 +3,6 @@ import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import TechnicalSpecsTable from "../../ReuseAbleComponents/TechnicalSpecifications";
 import {
   Container,
-  MuarefVedioWrapper,
   MuarefSectionContainer,
   Description,
   MuarefCompatibleWrapper,
@@ -14,7 +13,6 @@ import {
   Link,
   ValuedWrapper,
   ValuedDistributors,
-  Heading,
   Wrapper,
   ImageWrapper,
   TechImage,
@@ -27,33 +25,26 @@ import {
   PageBreadCrumbWrapper,
 } from "../../ReuseAbleComponents/DetailsComponent/styled.components";
 import Breadcrumb from "../../ReuseAbleComponents/Breadcrumb";
-import LocaleContext from "../../../LocaleContext";
 import Links from "@mui/material/Link";
 import { useRouter } from "next/router";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import VedioComponent from "../../ReuseAbleComponents/Vedio";
-import { useTranslation } from "react-i18next";
 import data from "../../../DataLayer/services.json";
 import { useTheme } from "styled-components";
 
 const MuarefDetails = () => {
-  const { locale } = React.useContext(LocaleContext);
   const router = useRouter();
-  const { t } = useTranslation();
-  const { isLTR } = useTheme();
+  const { isLTR, translations, locale } = useTheme();
   let type = router.query.sub_category;
   const filterServices = data.sub_services.filter((item) =>
     item.link.includes(type as string)
-  );
-  const filterRelatedServices = data.sub_services.filter(
-    (item) => item.type === router.query.detail
   );
   const filterSpecificItem = filterServices.filter(
     (item) => item.link === `${type}`
   );
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
-      {t("home")}
+      {translations?.home}
     </Links>,
     <Links
       underline="hover"
@@ -61,7 +52,7 @@ const MuarefDetails = () => {
       color="inherit"
       href={`/${locale}/${"services"}`}
     >
-      {t("services")}
+      {translations?.services}
     </Links>,
     <Links
       underline="hover"
@@ -93,13 +84,13 @@ const MuarefDetails = () => {
       <PageBreadCrumbWrapper>
         <GoBackButton onClick={() => router.back()}>
           <KeyboardBackspaceIcon />
-          {t("goBack")}
+          {translations?.goBack}
         </GoBackButton>
         <Breadcrumb color="#0196e3" breadcrumbs={breadcrumbs} />
       </PageBreadCrumbWrapper>
       <AnimationBar
-        title={`${t("muarefQR")}`}
-        description={`${t("goodbyebiometric")}`}
+        title={translations?.muarefQR}
+        description={translations?.goodbyebiometric as string}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
         fontSize={"22px"}
@@ -107,19 +98,23 @@ const MuarefDetails = () => {
       <MuarefSectionContainer>
         <VedioComponent />
         <Description
-          dangerouslySetInnerHTML={{ __html: `${t("maurefdescription")}` }}
+          dangerouslySetInnerHTML={{
+            __html: translations?.maurefdescription as string,
+          }}
         ></Description>{" "}
       </MuarefSectionContainer>
       <MuarefCompatibleWrapper>
         <MuarefBGImage>
-          <Text>{t("compatible")}</Text>
+          <Text>{translations?.compatible}</Text>
           <Image
             src="https://www.zadip.com/en/images/products/muaref/ektefa.png"
             alt="ektef"
             width={178}
             height={58}
           />
-          <MuarefDescription>{t("compatibleDescription")}</MuarefDescription>
+          <MuarefDescription>
+            {translations?.compatibleDescription}
+          </MuarefDescription>
         </MuarefBGImage>
         <MuarefCompatibleWrapper>
           <Link href="https://play.google.com/store/apps/details?id=com.zadip.muaref">
@@ -135,7 +130,7 @@ const MuarefDetails = () => {
       <ValuedWrapper>
         <ValuedDistributors>
           <AnimationBar
-            title={`${t("valuedDistributors")}`}
+            title={translations?.valuedDistributors}
             description={""}
             headingColor={"#2193b0"}
             descriptionColor={""}
@@ -147,7 +142,7 @@ const MuarefDetails = () => {
                 alt="tecs"
               />
               <ValueLink href="https://www.techsup.co/" target={"_blank"}>
-                {t("techSup")}
+                {translations?.techSup}
               </ValueLink>
             </ImageWrapper>
             <ImageWrapper>
@@ -157,7 +152,7 @@ const MuarefDetails = () => {
               />
               <ValueLink href="https://www.techsup.co/" target={"_blank"}>
                 {" "}
-                {t("hrGate")}
+                {translations?.hrGate}
               </ValueLink>
             </ImageWrapper>
           </Wrapper>

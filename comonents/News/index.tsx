@@ -22,17 +22,15 @@ import SocialIcons from "../ReuseAbleComponents/SocialIconsReUseable";
 import { useRouter } from "next/router";
 import { useTheme } from "styled-components";
 import recentNews from "../../DataLayer/news.json";
-import { useTranslation } from "react-i18next";
 const News = () => {
-  const { t } = useTranslation();
   const router = useRouter();
-  const { isLTR } = useTheme();
+  const { isLTR, translations } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
-      {t("home")}
+      {translations?.home}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#0196e3" }}>
-      {t("news")}
+      {translations?.news}
     </Typography>,
   ];
   const filteredNews = recentNews.recentNews.filter(
@@ -44,11 +42,11 @@ const News = () => {
   return (
     <NewsContainer>
       <BreadCrumbWrapper>
-        <NewsHeading>{t("news")}</NewsHeading>
+        <NewsHeading>{translations?.news}</NewsHeading>
         <Breadcrumb color={"#737c85"} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>
       <AnimationBar
-        title={`${t("zadipnews")}`}
+        title={translations?.zadipnews}
         description={""}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}

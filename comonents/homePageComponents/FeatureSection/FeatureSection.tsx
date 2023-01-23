@@ -9,7 +9,6 @@ import {
   EktefaTitle,
   EktefaDescription,
 } from "./styled.components";
-import { useTranslation } from "react-i18next";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 
 import Slider from "react-slick";

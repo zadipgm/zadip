@@ -9,7 +9,6 @@ import {
   Eservices,
   Elogos,
 } from "./styled.components";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
