@@ -1,18 +1,15 @@
 import * as React from "react";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import { RecentNewsSectionContainer } from "./styled.components";
-import dynamic from "next/dynamic";
-import SimpleSlider from "../../ReuseAbleComponents/SlickSlider";
 import SliderSlick from "../../ReuseAbleComponents/SlickSlider";
-import { useTranslation } from "react-i18next";
 import RecentNews from "../../../DataLayer/news.json";
+import { useTheme } from "styled-components";
 const RecentNewsSection = () => {
-  const { t } = useTranslation();
-
+  const { translations } = useTheme();
   return (
     <RecentNewsSectionContainer>
       <AnimationBar
-        title={`${t("recentNews")}`}
+        title={translations?.recentNews}
         description={""}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}

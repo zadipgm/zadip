@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
@@ -21,25 +20,24 @@ import EmailSvg from "../../public/icons/emailSvg";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import SimpleGoogleMap from "../SimpleGoogleMap";
 const ContactUs = () => {
-  const { t } = useTranslation();
-  const { isLTR } = useTheme();
+  const { isLTR, translations } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
-      {t("home")}
+      {translations?.home}
     </Links>,
     <Typography key="3" color="text.primary" style={{ color: "#0196e3" }}>
-      {t("Contact Us")}
+      {translations?.contactUs}
     </Typography>,
   ];
   return (
     <Wrapper>
       <BreadCrumbWrapper>
-        <AboutHeading>{t("Contact Us")}</AboutHeading>
+        <AboutHeading>{translations?.contactUs}</AboutHeading>
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>
       <AnimationBar
-        description={`${t("contactusDescription")}`}
-        title={`${t("letusaddValue")}`}
+        description={translations?.contactusDescription as string}
+        title={translations?.letusaddValue}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85"}
         fontSize={"18px"}
@@ -87,7 +85,7 @@ const ContactUs = () => {
       <OrderWrapper>
         <OrderNowForm
           title={isLTR ? "Contact Sales Now" : "اتصل بالمبيعات الآن"}
-          buttonTitle={t("send")}
+          buttonTitle={translations?.send as string}
           isShow={false}
           classname={"contact-us"}
         />

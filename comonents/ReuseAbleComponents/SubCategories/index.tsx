@@ -1,14 +1,5 @@
 import * as React from "react";
-import LocaleContext from "../../../LocaleContext";
-import DownloadSvg from "../../../public/icons/downloadSvg";
-import productData from "../../../DataLayer/product.json";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
 import {
-  CategoryCardsDescription,
   CategoryCardsImage,
   CategoryCardsItems,
   CategoryCardsListItems,
@@ -16,19 +7,15 @@ import {
   Input,
   LoadMoreButton,
   OverLay,
-  CardListWrapper,
   OverLaySubtitle,
   OverLayTitle,
   OverLayWrapper,
   SearchSvgWrapper,
   SearchWrapper,
-  ServicesTitle,
 } from "./styled.components";
 import Link from "next/link";
 import SearchSvg from "../../../public/icons/searchSvg";
 import DownLoadButton from "../DownLoadButton";
-import { t } from "i18next";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 interface ICategory {
   id?: number;
@@ -47,12 +34,10 @@ interface IProps {
   page: string;
 }
 const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
-  const { locale } = React.useContext(LocaleContext);
+  const { isLTR, translations, locale } = useTheme();
   const imagePerRow = 6;
-  const { t } = useTranslation();
   const [next, setNext] = React.useState(imagePerRow);
   const [search, setSearch] = React.useState("");
-  const { isLTR } = useTheme();
   const handleMoreImage = () => {
     setNext(next + imagePerRow);
   };
@@ -75,7 +60,7 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
         <Input
           type={"search"}
           value={search}
-          placeholder={`${t("serchProducts")}`}
+          placeholder={translations?.serchProducts}
           onChange={(e) => serchHandler(e)}
         />
         <SearchSvgWrapper>
@@ -110,7 +95,9 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
                           {isLTR ? item.title_en : item.title_ar}
                         </OverLayTitle>
                         <OverLaySubtitle>Hikvision</OverLaySubtitle>
-                        <DownLoadButton title={`${t("download")}`} />
+                        <DownLoadButton
+                          title={translations?.download as string}
+                        />
                       </OverLayWrapper>
                     </OverLay>
                   )}
@@ -149,7 +136,7 @@ const SubCategory: React.FC<IProps> = ({ sub_categories, page }) => {
       </CategoryCardsItems>
       {sub_categories.length > next ? (
         <LoadMoreButton color="#fff" onClick={handleMoreImage}>
-          {t("loadMore")}
+          {translations?.loadMore}
         </LoadMoreButton>
       ) : (
         ""

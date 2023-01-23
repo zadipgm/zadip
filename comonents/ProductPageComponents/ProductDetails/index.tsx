@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import * as React from "react";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import _data from "../../../DataLayer/product.json";
 
@@ -16,7 +15,6 @@ const ProductDetails = () => {
     (item) => item.type === router.query.detail
   );
   const { isLTR } = useTheme();
-  const { t } = useTranslation();
   return (
     <>
       <DetailsComponent

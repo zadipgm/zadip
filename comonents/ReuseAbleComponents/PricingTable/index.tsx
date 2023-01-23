@@ -12,7 +12,6 @@ import {
   TableHeading,
   ConditionWrapper,
 } from "./styled.components";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 interface IPriceProps {
   name_en: string;
@@ -37,8 +36,7 @@ const PricingTable: React.FC<IProps> = ({
   data,
   classname,
 }) => {
-  const { t } = useTranslation();
-  const { isLTR } = useTheme();
+  const { isLTR, translations } = useTheme();
   return (
     <Wrapper className={classname}>
       <TableContainer component={Paper}>
@@ -65,7 +63,7 @@ const PricingTable: React.FC<IProps> = ({
         </Table>
       </TableContainer>
       <ConditionWrapper>
-        <Heading>{t("conditionsTitle")}</Heading>
+        <Heading>{translations?.conditionsTitle}</Heading>
         <Conditions>{condition}</Conditions>
       </ConditionWrapper>
     </Wrapper>
