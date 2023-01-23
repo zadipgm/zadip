@@ -1,10 +1,7 @@
 import * as React from "react";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
-import SalesSvg from "../../../public/icons/salesSvg";
 import IconComponent from "../IconComponent";
 import ModalComponent from "../Modal";
-import SocialIcons from "../SocialIconsReUseable";
 import {
   OrderNowFormContainer,
   Wrapper,
@@ -15,10 +12,6 @@ import {
   Button,
   FormHeading,
   ContactButton,
-  CallUsNowWrapper,
-  CallButton,
-  Call,
-  CallContainer,
 } from "./styled.components";
 interface IProps {
   title: string;
@@ -34,7 +27,6 @@ const OrderNowForm: React.FC<IProps> = ({
   classname,
   icon,
 }) => {
-  const { t } = useTranslation();
   const { isLTR, translations } = useTheme();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -64,15 +56,19 @@ const OrderNowForm: React.FC<IProps> = ({
             </FormHeading>
             <InputWarapper>
               <Label>{isLTR ? "Name" : "الاسم"}</Label>
-              <Input type="text" placeholder={`${t("fullName")}`} required />
+              <Input
+                type="text"
+                placeholder={translations?.fullName}
+                required
+              />
             </InputWarapper>
             <InputWarapper>
               <Label>{isLTR ? "Email" : "البريد الإلكتروني"}</Label>
-              <Input type="email" placeholder={`${t("email")}`} />
+              <Input type="email" placeholder={translations?.email} />
             </InputWarapper>
             <InputWarapper>
               <Label>{isLTR ? "Mobile Number" : "رقم الجوال"}</Label>
-              <Input type="text" placeholder={`${t("contact")}`} />
+              <Input type="text" placeholder={translations?.contact} />
             </InputWarapper>
             <InputWarapper>
               <Label>{isLTR ? "Requested service" : "الخدمة المطلوبة"}</Label>
@@ -81,7 +77,7 @@ const OrderNowForm: React.FC<IProps> = ({
                 name="comments"
                 rows={4}
                 cols={50}
-                placeholder={`${t("message")}`}
+                placeholder={translations?.message}
               />
             </InputWarapper>
             <Button
@@ -91,15 +87,6 @@ const OrderNowForm: React.FC<IProps> = ({
               {translations?.send}
             </Button>
           </Wrapper>
-          {/* {isShow && (
-          <CallUsNowWrapper>
-            <CallContainer>
-              <Call>{t("callUsNow")}</Call>
-              <CallButton href="tel://9200 10047">920010047</CallButton>
-            </CallContainer>
-            <SocialIcons />
-          </CallUsNowWrapper>
-        )} */}
         </OrderNowFormContainer>
       </ModalComponent>
     </>

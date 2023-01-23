@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import Footer from "../../Footer/footer";
 import Header from "../../Header/header";
-import i18n from "i18next";
 import * as React from "react";
 import LocaleContext from "../../../LocaleContext";
 import { ThemeProvider } from "styled-components";
@@ -11,7 +10,6 @@ interface IProps {
 }
 
 const Layout: React.FC<IProps> = ({ children }) => {
-  const [locale, setLocale] = React.useState(i18n.language);
   const [initialRenderComplete, setInitialRenderComplete] =
     React.useState(false);
 
@@ -20,15 +18,12 @@ const Layout: React.FC<IProps> = ({ children }) => {
   }, []);
 
   if (!initialRenderComplete) return <></>;
-  i18n.on("languageChanged", () => setLocale(i18n.language));
   return (
     <>
       <ThemeProvider theme={theme}>
-        <LocaleContext.Provider value={{ locale, setLocale }}>
-          <Header />
-          {children}
-          <Footer />
-        </LocaleContext.Provider>
+        <Header />
+        {children}
+        <Footer />
       </ThemeProvider>
     </>
   );

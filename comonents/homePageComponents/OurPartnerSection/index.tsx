@@ -3,10 +3,8 @@ import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import SliderSlick from "../../ReuseAbleComponents/SlickSlider";
 import { OurPartnerSectionContainer } from "./styled.components";
 import partner from "../../../DataLayer/client.json";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 const OurPartnerSection = () => {
-  const { t } = useTranslation();
   const { translations } = useTheme();
   return (
     <OurPartnerSectionContainer>

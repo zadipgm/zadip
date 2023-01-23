@@ -1,17 +1,4 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { useTranslation } from "react-i18next";
 import {
   HeaderWrapper,
   LangButton,
@@ -19,7 +6,6 @@ import {
   VideoWrapper,
   ScrollTopButton,
   IconsWrapper,
-  HeaderLogo,
   MainHeading,
   Text,
   NavBar,
@@ -32,8 +18,6 @@ import {
   MenuListcontainer,
   MenuListWrapper,
 } from "./header.styled.components";
-import i18n from "../../i18n";
-import LocaleContext from "../../LocaleContext";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { useRouter } from "next/router";
 import MouseSvg from "../../public/icons/mouseSvg";
@@ -45,7 +29,6 @@ import FingerPrintSvg from "../../public/icons/fingerprintSvg";
 import header_data from "../../DataLayer/header.json";
 import { useTheme } from "styled-components";
 import ServicesSvg from "../../public/icons/servicesSvg";
-import Client_partnerSvg from "../../public/icons/client_partnerSvg";
 import IconComponent from "../ReuseAbleComponents/IconComponent";
 import Link from "next/link";
 
@@ -55,7 +38,6 @@ interface IProps {
 const Header: React.FC<IProps> = ({ headerImage }) => {
   const { isLTR, translations, locale } = useTheme();
   const router = useRouter();
-  const { t } = useTranslation();
   const [show, setShow] = React.useState(0);
   const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
   const onScroll = () => {
@@ -73,20 +55,15 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
   const onLoadedData = () => {
     setIsVideoLoaded(true);
   };
-  const changeLocale = React.useCallback(
-    (lang: string) => {
-      i18n.changeLanguage(lang);
-
-      if (locale === "en-US" || locale === "en") {
-        router.push(`${router.asPath}`, `${router.asPath}`, {
-          locale: "en",
-        });
-      } else {
-        router.push(`${router.asPath}`, `${router.asPath}`, { locale: "ar" });
-      }
-    },
-    [locale]
-  );
+  const changeLocale = React.useCallback(() => {
+    if (locale === "en-US" || locale === "en") {
+      router.push(`${router.asPath}`, `${router.asPath}`, {
+        locale: "en",
+      });
+    } else {
+      router.push(`${router.asPath}`, `${router.asPath}`, { locale: "ar" });
+    }
+  }, [locale]);
   const navigateToPage = (item: any) => {
     return router.push(`/${locale}${item.link}`);
   };
@@ -277,14 +254,14 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                 {locale === "ar" ? (
                   <LangButton
                     href={`/en${router.asPath}`}
-                    onClick={() => changeLocale("en")}
+                    onClick={() => changeLocale()}
                   >
                     English
                   </LangButton>
                 ) : (
                   <LangButton
                     href={`/ar${router.asPath}`}
-                    onClick={() => changeLocale("ar")}
+                    onClick={() => changeLocale()}
                   >
                     العربية
                   </LangButton>

@@ -1,13 +1,11 @@
 import "../styles/globals.css";
 import * as React from "react";
 import type { ReactElement, ReactNode } from "react";
-import type { NextPage, NextPageContext } from "next";
+import type { NextPage } from "next";
 import type { AppContext, AppProps } from "next/app";
 import Head from "next/head";
 import theme from "../global/theme";
-import { useRouter } from "next/router";
 import { ThemeProvider } from "styled-components";
-import i18n from "../i18n";
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -33,16 +31,6 @@ const MyApp = ({
   theme.isLTR = locale === "en-US" || locale === "en";
   theme.isRTL = locale === "ar";
   theme.locale = locale === "en-US" || locale === "en" ? "en" : "ar";
-
-  React.useEffect(() => {
-    i18n.changeLanguage(locale);
-    if (window?.innerWidth <= 600) {
-      theme.device = "mobile";
-    } else {
-      theme.device = "desktop";
-    }
-  }),
-    [];
   return getLayout(
     <>
       <Head>

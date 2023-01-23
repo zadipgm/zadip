@@ -9,11 +9,9 @@ import {
   VisionImage,
 } from "./styled.components";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
 const ComprehensiveAddedValue = () => {
-  const { t } = useTranslation();
   const { translations } = useTheme();
   return (
     <ComprehensiveContainer>

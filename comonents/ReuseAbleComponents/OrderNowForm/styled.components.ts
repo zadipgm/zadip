@@ -121,31 +121,3 @@ export const ContactButton = styled.button`
         margin: 0px 7px;
     }
 `
-export const   CallUsNowWrapper =styled.div`
-width:40% ;
-@media(max-width:600px){
-width:100% ;
-}
-padding:20px ;
-margin:20px ;
-`
-export const CallButton =styled.a`
-text-decoration: none;
-padding: 10px 119px;
-background-color: #c74040;
-color: #fff;
-border-radius: 6px;
-font-size: 18px;
-margin:20px 0px  ;
-transition: .5s;
-:hover{
-    opacity: .8;
-}
-`
-export const CallContainer = styled.div`
-height: 55%;
-`
-export const Call =styled.p`
-font-size:24px ;
-color:#737c85 ;
-`

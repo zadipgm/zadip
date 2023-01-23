@@ -8,7 +8,6 @@ import {
   Image,
   Title,
 } from "./styled.components";
-import i18n from "i18next";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useRouter } from "next/router";
@@ -94,7 +93,7 @@ const SliderSlick: React.FC<IProps> = ({
     ],
   };
   return (
-    <SliderContainer locale={i18n.language} className={classname}>
+    <SliderContainer className={classname}>
       <Slider {...settings}>
         {sliderData?.map((item, index) => {
           return (

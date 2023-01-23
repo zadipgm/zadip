@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const  SliderContainer = styled.div<{locale:string}>`
+export const  SliderContainer = styled.div`
         @media (max-width: 600px) {
          display:block ;
          width:100% ;

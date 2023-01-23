@@ -129,7 +129,7 @@ perspective: 1000px;
       position: absolute;
     animation: rotateMenu 800ms ease-in-out forwards;
     transform-origin: top center;
-    top: calc(100% - 52px);
+    top: calc(100% - 54px);
      ${({ theme }) =>
     theme.isLTR
     ? css`
