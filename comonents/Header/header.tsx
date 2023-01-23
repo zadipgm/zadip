@@ -29,6 +29,8 @@ import {
   NavbarItems,
   NavbarItemsList,
   NavbarItemsLink,
+  MenuListcontainer,
+  MenuListWrapper,
 } from "./header.styled.components";
 import i18n from "../../i18n";
 import LocaleContext from "../../LocaleContext";
@@ -128,50 +130,97 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
               <NavBarList>
                 {translations?.products} <IconDownArrowHead fill="#fff" />
                 <div className="dropdown-content">
-                  <NavbarItems>
-                    <NavbarItemsLink href="#">
-                      <SurvillenceSvg fill="#fff" width="30px" height="30px" />
-                      {isLTR ? "Survillence" : "انظمة المراقبة والأمان"}
-                    </NavbarItemsLink>
-                    {header_data.survillence.map((item, index) => {
-                      return (
-                        <NavbarItemsList key={index}>
-                          <NavbarItemsLink href={item.link}>
-                            {isLTR ? item.name_en : item.name_ar}
-                          </NavbarItemsLink>
-                        </NavbarItemsList>
-                      );
-                    })}
+                  <NavbarItems className="survillence">
+                    <li>
+                      <MenuListcontainer>
+                        <MenuListWrapper>
+                          <SurvillenceSvg
+                            fill="#fff"
+                            width="30px"
+                            height="30px"
+                          />
+                          {isLTR ? "Survillence" : "انظمة المراقبة والأمان"}
+                        </MenuListWrapper>
+                        <IconDownArrowHead
+                          fill="#fff"
+                          width="20px"
+                          height="20px"
+                          className="down-arrow-left"
+                        />
+                      </MenuListcontainer>
+                      <ul>
+                        {header_data.survillence.map((item, index) => {
+                          return (
+                            <NavbarItemsList key={index}>
+                              <NavbarItemsLink href={item.link}>
+                                {isLTR ? item.name_en : item.name_ar}
+                              </NavbarItemsLink>
+                            </NavbarItemsList>
+                          );
+                        })}
+                      </ul>
+                    </li>
                   </NavbarItems>
-                  <NavbarItems>
-                    <NavbarItemsLink href="#">
-                      <FingerPrintSvg fill="#fff" width="25px" height="25px" />
-                      {isLTR ? " Access Control" : "انظمة التحكم بالدخول"}
-                    </NavbarItemsLink>
-                    {header_data.access_control.map((item, index) => {
-                      return (
-                        <NavbarItemsList key={index}>
-                          <NavbarItemsLink href={item.link}>
-                            {item.name_en}
-                          </NavbarItemsLink>
-                        </NavbarItemsList>
-                      );
-                    })}
+
+                  <NavbarItems className="access-control">
+                    <li>
+                      <MenuListcontainer>
+                        <MenuListWrapper>
+                          <FingerPrintSvg
+                            fill="#fff"
+                            width="25px"
+                            height="25px"
+                          />
+                          {isLTR ? " Access Control" : "انظمة التحكم بالدخول"}
+                        </MenuListWrapper>
+                        <IconDownArrowHead
+                          fill="#fff"
+                          width="20px"
+                          height="20px"
+                          className="down-arrow-left"
+                        />
+                      </MenuListcontainer>
+                      <ul>
+                        {header_data.access_control.map((item, index) => {
+                          return (
+                            <NavbarItemsList key={index}>
+                              <NavbarItemsLink href={item.link}>
+                                {item.name_en}
+                              </NavbarItemsLink>
+                            </NavbarItemsList>
+                          );
+                        })}
+                      </ul>
+                    </li>
                   </NavbarItems>
-                  <NavbarItems>
-                    <NavbarItemsLink href="#">
-                      <BuildingSvg fill="#fff" width="25px" height="25px" />
-                      {isLTR ? "Building Management" : "إدارة المباني"}
-                    </NavbarItemsLink>
-                    {header_data.bullding_management.map((item, index) => {
-                      return (
-                        <NavbarItemsList key={index}>
-                          <NavbarItemsLink href={item.link}>
-                            {isLTR ? item.name_en : item.name_ar}
-                          </NavbarItemsLink>
-                        </NavbarItemsList>
-                      );
-                    })}
+
+                  <NavbarItems className="building_management">
+                    <li>
+                      <MenuListcontainer>
+                        <MenuListWrapper>
+                          <BuildingSvg fill="#fff" width="25px" height="25px" />
+                          {isLTR ? "Building Management" : "إدارة المباني"}
+                        </MenuListWrapper>
+                        <IconDownArrowHead
+                          fill="#fff"
+                          width="20px"
+                          height="20px"
+                          className="down-arrow-left"
+                        />
+                      </MenuListcontainer>
+
+                      <ul>
+                        {header_data.bullding_management.map((item, index) => {
+                          return (
+                            <NavbarItemsList key={index}>
+                              <NavbarItemsLink href={item.link}>
+                                {isLTR ? item.name_en : item.name_ar}
+                              </NavbarItemsLink>
+                            </NavbarItemsList>
+                          );
+                        })}
+                      </ul>
+                    </li>
                   </NavbarItems>
                 </div>
               </NavBarList>
@@ -180,16 +229,16 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
 
               <NavBarList>
                 {translations?.services} <IconDownArrowHead fill="#fff" />
-                <div className="dropdown-content services">
+                <div className="dropdown-content other-items">
                   <NavbarItems>
-                    <NavbarItemsLink href="#">
+                    <NavbarItemsLink>
                       <ServicesSvg fill="#fff" width="30px" height="30px" />
                       {isLTR ? "Professional Services" : "خدمات احترافية"}
                     </NavbarItemsLink>
                     {header_data.survillence.map((item, index) => {
                       return (
                         <NavbarItemsList key={index}>
-                          <NavbarItemsLink href={item.link}>
+                          <NavbarItemsLink>
                             {isLTR ? item.name_en : item.name_ar}
                           </NavbarItemsLink>
                         </NavbarItemsList>
@@ -200,7 +249,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
               </NavBarList>
               <NavBarList>
                 {translations?.aboutUs} <IconDownArrowHead fill="#fff" />
-                <div className="dropdown-content about-us">
+                <div className="dropdown-content other-items">
                   <NavbarItems>
                     {header_data.about_us.map((item, index) => {
                       return (
