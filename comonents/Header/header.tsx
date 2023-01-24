@@ -17,6 +17,7 @@ import {
   NavbarItemsLink,
   MenuListcontainer,
   MenuListWrapper,
+  LogoWrapper,
 } from "./header.styled.components";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { useRouter } from "next/router";
@@ -31,6 +32,8 @@ import { useTheme } from "styled-components";
 import ServicesSvg from "../../public/icons/servicesSvg";
 import IconComponent from "../ReuseAbleComponents/IconComponent";
 import Link from "next/link";
+import Image from "next/image";
+import CloudSvg from "../../public/icons/cloudSvg";
 
 interface IProps {
   headerImage?: string;
@@ -93,7 +96,14 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
         >
           <Container>
             <Link href={"/"}>
-              <img src="/images/zadiplogo.png" alt="logo" />
+              <LogoWrapper>
+                <img
+                  src="/images/zadiplogo.png"
+                  alt="logo"
+                  width={150}
+                  height={"auto"}
+                />
+              </LogoWrapper>
             </Link>
             <NavBar>
               {/* ========Home======== */}
@@ -111,12 +121,8 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                     <li>
                       <MenuListcontainer>
                         <MenuListWrapper>
-                          <SurvillenceSvg
-                            fill="#fff"
-                            width="30px"
-                            height="30px"
-                          />
-                          {isLTR ? "Survillence" : "انظمة المراقبة والأمان"}
+                          <CloudSvg fill="#fff" width="30px" height="30px" />
+                          {isLTR ? "Cloud Services" : "الخدمات السحابية"}
                         </MenuListWrapper>
                         <IconDownArrowHead
                           fill="#fff"
@@ -126,10 +132,13 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                         />
                       </MenuListcontainer>
                       <ul>
-                        {header_data.survillence.map((item, index) => {
+                        {header_data.cloud.map((item, index) => {
                           return (
                             <NavbarItemsList key={index}>
-                              <NavbarItemsLink href={item.link}>
+                              <NavbarItemsLink
+                                href={item.link}
+                                target={"_blank"}
+                              >
                                 {isLTR ? item.name_en : item.name_ar}
                               </NavbarItemsLink>
                             </NavbarItemsList>
@@ -143,12 +152,10 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                     <li>
                       <MenuListcontainer>
                         <MenuListWrapper>
-                          <FingerPrintSvg
-                            fill="#fff"
-                            width="25px"
-                            height="25px"
-                          />
-                          {isLTR ? " Access Control" : "انظمة التحكم بالدخول"}
+                          <ServicesSvg fill="#fff" width="25px" height="25px" />
+                          {isLTR
+                            ? "eGov Services"
+                            : "خدمات الحكومة الإلكترونية"}
                         </MenuListWrapper>
                         <IconDownArrowHead
                           fill="#fff"
@@ -158,40 +165,11 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                         />
                       </MenuListcontainer>
                       <ul>
-                        {header_data.access_control.map((item, index) => {
+                        {header_data.egov_services.map((item, index) => {
                           return (
                             <NavbarItemsList key={index}>
-                              <NavbarItemsLink href={item.link}>
+                              <NavbarItemsLink href={`/${locale}${item.link}`}>
                                 {item.name_en}
-                              </NavbarItemsLink>
-                            </NavbarItemsList>
-                          );
-                        })}
-                      </ul>
-                    </li>
-                  </NavbarItems>
-
-                  <NavbarItems className="building_management">
-                    <li>
-                      <MenuListcontainer>
-                        <MenuListWrapper>
-                          <BuildingSvg fill="#fff" width="25px" height="25px" />
-                          {isLTR ? "Building Management" : "إدارة المباني"}
-                        </MenuListWrapper>
-                        <IconDownArrowHead
-                          fill="#fff"
-                          width="20px"
-                          height="20px"
-                          className="down-arrow-left"
-                        />
-                      </MenuListcontainer>
-
-                      <ul>
-                        {header_data.bullding_management.map((item, index) => {
-                          return (
-                            <NavbarItemsList key={index}>
-                              <NavbarItemsLink href={item.link}>
-                                {isLTR ? item.name_en : item.name_ar}
                               </NavbarItemsLink>
                             </NavbarItemsList>
                           );
@@ -208,19 +186,10 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                 {translations?.services} <IconDownArrowHead fill="#fff" />
                 <div className="dropdown-content other-items">
                   <NavbarItems>
-                    <NavbarItemsLink>
+                    <NavbarItemsLink href={`/${locale}/professional_services`}>
                       <ServicesSvg fill="#fff" width="30px" height="30px" />
                       {isLTR ? "Professional Services" : "خدمات احترافية"}
                     </NavbarItemsLink>
-                    {header_data.survillence.map((item, index) => {
-                      return (
-                        <NavbarItemsList key={index}>
-                          <NavbarItemsLink>
-                            {isLTR ? item.name_en : item.name_ar}
-                          </NavbarItemsLink>
-                        </NavbarItemsList>
-                      );
-                    })}
                   </NavbarItems>
                 </div>
               </NavBarList>
@@ -246,7 +215,10 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                   </NavbarItems>
                 </div>
               </NavBarList>
-              <NavBarList>{translations?.contactUs}</NavBarList>
+
+              <NavBarList>
+                <Link href={"tel:// 9200 10047"}>920010047</Link>
+              </NavBarList>
 
               {/* ========Lang Button======== */}
 

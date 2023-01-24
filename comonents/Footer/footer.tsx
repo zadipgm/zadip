@@ -37,7 +37,7 @@ const Footer = () => {
                   </Link>
                 </FooterLI>
                 <FooterLI>
-                  <Link href="tel:920010047">
+                  <Link href="tel:// 9200 10047">
                     <PhoneAndroidOutlinedIcon fontSize={"small"} /> 920010047
                   </Link>
                 </FooterLI>

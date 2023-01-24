@@ -23,7 +23,7 @@ const FeatureSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
-    autoplay: true,
+    // autoplay: true,
     easing: "linear",
   };
   return (
@@ -73,8 +73,8 @@ const FeatureSection = () => {
               <img
                 src="/images/nafeth-light-logo.png"
                 alt="nafeth"
-                width={100}
-                height={60}
+                width={150}
+                height={"auto"}
               />
               <EktefaTitle>{translations?.featureTitleNafeth}</EktefaTitle>
               <EktefaDescription

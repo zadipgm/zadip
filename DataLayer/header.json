@@ -1,45 +1,53 @@
 {
-    "survillence":[
+    "cloud":[
         {
-        "name_en": "Cameras",
-        "name_ar":"كاميرات مراقبة",
-        "link":"#"
+        "name_en": "Ektefa",
+        "name_ar":"اكتفاء... يكفيك...",
+        "link":"https://ektefa.net/zadip"
         },
         {
-        "name_en": "NVRs & DVRs",
-        "name_ar":"اجهزة التخزين و التسجيل",
-        "link":"#"
+        "name_en": "Nafeth",
+        "name_ar":"لتأجير المركبات",
+        "link":"https://nafeth.com/zadip"
+        },
+        {
+        "name_en": "Muaref",
+        "name_ar":"حلول الحضور والانضباط",
+        "link":"/muaref"
+        },
+        {
+        "name_en": "Ehtiwa",
+        "name_ar":"عروضك تصل لهم",
+        "link":"https://ehtwa.sa/"
+        },
+        {
+        "name_en": "Reliable jobs",
+        "name_ar":"وظائف موثوقة",
+        "link":"https://cadre.sa/"
         }
     ],
-    "access_control":[
+    "egov_services":[
         {
-        "name_en": "F09",
-        "name_ar":"",
-        "link":"#"
+        "name_en": "Tam",
+        "name_ar":"خدمة تم",
+        "link":"/eGov_services/tam"
         },
         {
-        "name_en": "Multibio 007",
-        "name_ar":"",
-        "link":"#"
+        "name_en": "Muqeem",
+        "name_ar":"خدمة مقيم",
+        "link":"/eGov_services/muqeem"
         },
         {
-        "name_en": "SC103",
-        "name_ar":"",
-        "link":"#"
+        "name_en": "Masarat",
+        "name_ar":"خدمة مسارات",
+        "link":"/eGov_services/masarat"
+        },
+        {
+        "name_en": "Smart",
+        "name_ar":"خدمة تصريح",
+        "link":"/eGov_services/permit"
         }
 
-    ],
-    "bullding_management":[
-        {
-        "name_en": "Central Clock",
-        "name_ar":"نظام الساعات المركزية",
-        "link":"#"
-        },
-        {
-        "name_en": "Smart Building System",
-        "name_ar":"نظام المباني الذكية",
-        "link":"#"
-        }
     ],
     "about_us":[
         {
