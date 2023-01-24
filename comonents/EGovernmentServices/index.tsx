@@ -24,7 +24,6 @@ const EGovernmentServices = () => {
   const filter_services = _data.e_services.filter(
     (item) => item.title_en?.toLowerCase() === router.query.slug
   );
-  console.log("here is router", router, filter_services);
   return (
     <Container>
       <Wrapper>

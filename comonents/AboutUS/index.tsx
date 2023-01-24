@@ -4,8 +4,13 @@ import {
   AboutUsContainer,
   BreadCrumbWrapper,
   AboutHeading,
-  AboutusList,
+  AboutCompanyWrapper,
+  AboutusDescription,
+  ImageWrapper,
+  DesWrapper,
+  Title,
   AboutusListItem,
+  AboutusList,
 } from "./styled.components";
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
@@ -31,72 +36,54 @@ const AboutUS = () => {
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>
       <AnimationBar
-        title={translations?.projects_it}
+        title={translations?.abouttheCompany}
         description={translations?.companySummry as string}
+        headingColor={"#2193b0"}
+        descriptionColor={"#737c85;"}
+        fontSize={"16px"}
+      />
+      <AboutCompanyWrapper>
+        <DesWrapper>
+          <Title>{translations?.zadInfo}</Title>
+
+          <AboutusDescription
+            dangerouslySetInnerHTML={{
+              __html: translations?.aboutUsDescription as string,
+            }}
+          ></AboutusDescription>
+        </DesWrapper>
+        <img src="/images/ektefa1.svg" alt="about-img" width={"50%"} />
+      </AboutCompanyWrapper>
+      <AnimationBar
+        title={translations?.ourGoal}
+        description={""}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
         fontSize={"16px"}
       />
       <AboutusList>
         <AboutusListItem>
-          {isLTR ? "Monitoring and control systems" : "أنظمة المراقبة والتحكم"}
+          {isLTR
+            ? "We help our clients achieve their technical goals"
+            : "نساعد عملاؤنا في تحقيق أهدافهم التقنية"}
         </AboutusListItem>
         <AboutusListItem>
           {isLTR
-            ? "Fire fighting and alarm systems"
-            : "أنظمة مكافحة الحريق والانذار"}
+            ? "Carry out any work we do with accuracy and high quality"
+            : "انجاز أي عمل نقوم به بدقة وجودة عالية"}
         </AboutusListItem>
         <AboutusListItem>
           {isLTR
-            ? "Intelligent building management systems"
-            : "أنظمة إدارة المباني الذكية"}
+            ? "To have added value in everything we offer"
+            : "ان يكون هناك قيمة مضافة في كل ما نقدمه"}
         </AboutusListItem>
         <AboutusListItem>
           {isLTR
-            ? "Wired and wireless network systems"
-            : "أنظمة الشبكات السلكية واللاسلكية"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "Electrical installations of all kinds"
-            : "التمديدات الكهربائية بأنواعها"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "Communication extensions of all kinds"
-            : "تمديدات الاتصالات بأنواعها"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "Install and organize endpoints"
-            : "تركيب وتنظيم النقاط الطرفية"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "Supplies of all kinds of electronic devices"
-            : "توريدات الأجهزة الالكترونية بأنواعها"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "Hall and conference systems equipment"
-            : "تجهيزات أنظمة القاعات والمؤتمرات"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "IP exchange systems of all kinds"
-            : "أنظمة سنترالات الاي بي بأنواعها"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "Attendance, departure and fingerprint systems"
-            : "أنظمة أجهزة الحضور والانصراف والبصمة"}
+            ? "To create software technology products that serve the private and government sectors"
+            : "ان نخلق منتجات تقنية برمجية تخدم القطاع الخاص والحكومي"}
         </AboutusListItem>
       </AboutusList>
-      <OrderNowForm
-        title={translations?.contactsalesnow as string}
-        buttonTitle={translations?.contactsalesnow as string}
-        icon={"salesSvg"}
-      />
+
       <OurPartnerSection />
     </AboutUsContainer>
   );

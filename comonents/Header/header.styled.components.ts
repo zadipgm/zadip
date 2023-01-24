@@ -1,6 +1,13 @@
 import styled, { css } from "styled-components";
+export const Container = styled.div`
+display:flex ;
+justify-content: space-between;
+align-items:center ;
+width:1170px;
+margin:0 auto ;
+height:99px ;
+`
 export const HeaderWrapper = styled.div`
-
 `
 export const HeaderNavbarWrapper= styled.div`
 position: fixed;
@@ -8,6 +15,7 @@ top: 0;
 z-index:9999;
 width: 100%;
 background: linear-gradient(-30deg,#0676bb5e 30%,#38b7ae4f);
+backdrop-filter: saturate(180%) blur(5px);
 &.scrolled {
   opacity:.9 ;
   background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
@@ -44,16 +52,6 @@ align-items: center;
 margin:0 ;
 padding:0 ;
 `
-export const Container = styled.div`
-display:flex ;
-justify-content: space-between;
-align-items:center ;
-width:1170px;
-margin:0 auto ;
->a {
-  padding: 9px 0px 0px 0px;
-}
-`
 export const ImageContainer =styled.div`
 `
 export const  NavBarList =styled.li`
@@ -77,7 +75,6 @@ perspective: 1000px;
   display:none ;
   transition: background-color 0.5s linear;
   color:#fff ;
- 
 }
 & .dropdown-content .survillence{
      > li > ul {
@@ -99,34 +96,13 @@ perspective: 1000px;
     margin: 0;
     width: 200px;
     background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    
   }
 }
 & .dropdown-content .access-control{
     > li > ul{
     display:none ;
     position: absolute;
-    animation: rotateMenu 800ms ease-in-out forwards;
-    transform-origin: top center;
-    top: calc(100% - 108px);
-     ${({ theme }) =>
-    theme.isLTR
-    ? css`
-      left: 100%;
-        `
-    : css`
-    right:100% ;
-    `}
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 200px;
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
-    }
-  }
-  & .dropdown-content .building_management{
-    > li > ul{
-      display:none ;
-      position: absolute;
     animation: rotateMenu 800ms ease-in-out forwards;
     transform-origin: top center;
     top: calc(100% - 54px);
@@ -197,14 +173,7 @@ transition:.6s ease-in;
     }
   }
 }
-& .dropdown-content .building_management{
-  :hover{
-   > li > ul {
-      display:block ;
-    transition:.5s ;
-    }
-  }
-}
+
 border-radius: 8px;
 color: #fff;
 text-transform: uppercase;
@@ -251,6 +220,10 @@ width:250px ;
     `}
   
 }
+`
+export const LogoWrapper= styled.div`
+
+
 `
 export const MenuListWrapper= styled.div`
 display: flex;

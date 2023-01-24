@@ -3,7 +3,7 @@ import ComprehensiveAddedValue from "./comprehensiveAddedValue";
 import FeatureSection from "./FeatureSection/FeatureSection";
 import HighLightProductSection from "./HighLightProductSection";
 import OurPartnerSection from "./OurPartnerSection";
-import ProfessionalServices from "./ProfessionalServices";
+import ProfessionalServices from "./ProServices";
 const HomePage = () => {
   return (
     <>
