@@ -6,21 +6,18 @@ import {
   AboutHeading,
   AboutCompanyWrapper,
   AboutusDescription,
-  ImageWrapper,
   DesWrapper,
   Title,
-  AboutusListItem,
-  AboutusList,
 } from "./styled.components";
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import { useTheme } from "styled-components";
 import OurPartnerSection from "../homePageComponents/OurPartnerSection";
-import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
-
+import ListComponent from "../ReuseAbleComponents/ListComponent";
+import list from "../../DataLayer/list.json";
 const AboutUS = () => {
-  const { isLTR, translations } = useTheme();
+  const { translations } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
       {translations?.home}
@@ -52,7 +49,7 @@ const AboutUS = () => {
             }}
           ></AboutusDescription>
         </DesWrapper>
-        <img src="/images/ektefa1.svg" alt="about-img" width={"50%"} />
+        <img src="/images/abouts-side-svg.svg" alt="about-img" width={"50%"} />
       </AboutCompanyWrapper>
       <AnimationBar
         title={translations?.ourGoal}
@@ -61,30 +58,10 @@ const AboutUS = () => {
         descriptionColor={"#737c85;"}
         fontSize={"16px"}
       />
-      <AboutusList>
-        <AboutusListItem>
-          {isLTR
-            ? "We help our clients achieve their technical goals"
-            : "نساعد عملاؤنا في تحقيق أهدافهم التقنية"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "Carry out any work we do with accuracy and high quality"
-            : "انجاز أي عمل نقوم به بدقة وجودة عالية"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "To have added value in everything we offer"
-            : "ان يكون هناك قيمة مضافة في كل ما نقدمه"}
-        </AboutusListItem>
-        <AboutusListItem>
-          {isLTR
-            ? "To create software technology products that serve the private and government sectors"
-            : "ان نخلق منتجات تقنية برمجية تخدم القطاع الخاص والحكومي"}
-        </AboutusListItem>
-      </AboutusList>
-
-      <OurPartnerSection />
+      <ListComponent list={list.about_list} />
+      <OurPartnerSection
+        title={translations?.ourClientsandPartners as string}
+      />
     </AboutUsContainer>
   );
 };

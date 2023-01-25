@@ -7,9 +7,7 @@ export const Wrapper= styled.div`
 @media(max-width:600px){
     display:block ;
 }
-display: flex;
-justify-content:center ;
-align-items:center ;
+
 gap:15px;
     padding: 15px;
     &.direction{
@@ -19,7 +17,7 @@ gap:15px;
 & .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiTableContainer-root {
     /* background-color: #E7EBF0; */
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
-    width:50% ;
+   
     border-radius: 10px;
     @media(max-width:600px){
         width:100% ;
@@ -29,7 +27,8 @@ gap:15px;
 `
 export const ConditionWrapper= styled.div`
 padding:15px ;
-width:50% ;
+width:70%;
+margin:0 auto ;
 border-radius: 10px;
 @media(max-width:600px){
 width:100% ;

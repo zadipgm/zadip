@@ -4,12 +4,15 @@ import SliderSlick from "../../ReuseAbleComponents/SlickSlider";
 import { OurPartnerSectionContainer } from "./styled.components";
 import partner from "../../../DataLayer/client.json";
 import { useTheme } from "styled-components";
-const OurPartnerSection = () => {
+interface IProps {
+  title: string;
+}
+const OurPartnerSection = ({ title }: IProps) => {
   const { translations } = useTheme();
   return (
     <OurPartnerSectionContainer>
       <AnimationBar
-        title={translations?.ourpartner}
+        title={title}
         description=""
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}

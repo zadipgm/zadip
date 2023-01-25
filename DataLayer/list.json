@@ -1,0 +1,66 @@
+{"professional_list":[
+        {
+            "name_en": "Monitoring and control systems",
+            "name_ar" : "أنظمة المراقبة والتحكم"
+        },
+        {
+            "name_en": "Fire fighting and alarm systems",
+            "name_ar": "أنظمة مكافحة الحريق والانذار"
+        },
+        {
+            "name_en": "Intelligent building management systems",
+            "name_ar" : "أنظمة إدارة المباني الذكية"
+        },
+        {
+            "name_en": "Wired and wireless network systems",
+            "name_ar" : "أنظمة الشبكات السلكية واللاسلكية"
+        },
+        {
+            "name_en": "Electrical installations of all kinds",
+            "name_ar" : "التمديدات الكهربائية بأنواعها"
+        },
+        { 
+            "name_en":"Communication extensions of all kinds",
+            "name_ar" : "تمديدات الاتصالات بأنواعها"
+        },
+        {
+            "name_en": "Install and organize endpoints",
+            "name_ar" : "تركيب وتنظيم النقاط الطرفية"
+        },
+        {
+            "name_en": "Supplies of all kinds of electronic devices",
+            "name_ar"  : "توريدات الأجهزة الالكترونية بأنواعها"
+        },
+        {
+            "name_en":"Hall and conference systems equipment",
+            "name_ar" : "تجهيزات أنظمة القاعات والمؤتمرات"
+        },
+        { 
+            "name_en":"IP exchange systems of all kinds",
+            "name_ar" : "أنظمة سنترالات الاي بي بأنواعها"
+        },
+        {
+            "name_en": "Attendance, departure and fingerprint systems",
+            "name_ar" : "أنظمة أجهزة الحضور والانصراف والبصمة"
+        }
+        ],
+        "about_list": [
+            {
+                "name_en": "We help our clients achieve their technical goals",
+                "name_ar"  : "نساعد عملاؤنا في تحقيق أهدافهم التقنية"
+            },
+            {
+                "name_en":"Hall and conference systems equipment",
+                "name_ar" : "انجاز أي عمل نقوم به بدقة وجودة عالية"
+            },
+            { 
+                "name_en":"To have added value in everything we offer",
+                "name_ar" : "ان يكون هناك قيمة مضافة في كل ما نقدمه"
+            },
+            {
+                "name_en": "To create software technology products that serve the private and government sectors",
+                "name_ar" : "ان نخلق منتجات تقنية برمجية تخدم القطاع الخاص والحكومي"
+            }
+        ]
+    
+    }

@@ -33,7 +33,7 @@ const OrderNowForm: React.FC<IProps> = ({
   const handleClose = () => setOpen(false);
   return (
     <>
-      <ContactButton onClick={handleOpen}>
+      <ContactButton onClick={handleOpen} className={classname}>
         {title}{" "}
         <IconComponent
           fill={"#fff"}

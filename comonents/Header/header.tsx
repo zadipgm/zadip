@@ -155,7 +155,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                           <ServicesSvg fill="#fff" width="25px" height="25px" />
                           {isLTR
                             ? "eGov Services"
-                            : "خدمات الحكومة الإلكترونية"}
+                            : "خدمات الحكومة الالكترونية"}
                         </MenuListWrapper>
                         <IconDownArrowHead
                           fill="#fff"
@@ -169,7 +169,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
                           return (
                             <NavbarItemsList key={index}>
                               <NavbarItemsLink href={`/${locale}${item.link}`}>
-                                {item.name_en}
+                                {isLTR ? item.name_en : item.name_ar}
                               </NavbarItemsLink>
                             </NavbarItemsList>
                           );

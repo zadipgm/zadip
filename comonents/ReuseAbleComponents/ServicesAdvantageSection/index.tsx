@@ -10,6 +10,7 @@ import {
   Heading,
   Description,
   Wrapper,
+  VedioLinkWrapper,
 } from "./styled.components";
 import data from "../../../DataLayer/services.json";
 import { useTheme } from "styled-components";
@@ -23,14 +24,16 @@ interface IProps {
   description_ar: string;
 }
 interface Idata {
-  data: IProps[];
+  data?: IProps[];
+  poster?: string;
+  videoLink?: string;
 }
-const ServicesAdvantageSection = ({ data }: Idata) => {
+const ServicesAdvantageSection = ({ data, poster, videoLink }: Idata) => {
   const { isLTR } = useTheme();
   return (
     <AdvantageWrapper>
       <AdvantageContainer>
-        {data.map((item) => {
+        {data?.map((item) => {
           return (
             <Wrapper key={item.id}>
               <IconComponent
@@ -47,17 +50,17 @@ const ServicesAdvantageSection = ({ data }: Idata) => {
           );
         })}
       </AdvantageContainer>
-      <VedioComponent />
+      <VedioComponent poster={poster} videoLink={videoLink} />
       {/* <VedioLinkWrapper>
-          {" "}
-          <iframe
-            width="100%"
-            height="260"
-            src="https://www.youtube.com/embed/6NXA0W4lKXw?rel=0&controls=0&showinfo=0"
-            frameBorder="0"
-            allowFullScreen={true}
-          ></iframe>
-        </VedioLinkWrapper> */}
+        {" "}
+        <iframe
+          width="100%"
+          height="260"
+          src="https://www.youtube.com/embed/6NXA0W4lKXw?rel=0&controls=0&showinfo=0"
+          frameBorder="0"
+          allowFullScreen={true}
+        ></iframe>
+      </VedioLinkWrapper> */}
     </AdvantageWrapper>
   );
 };

@@ -2,50 +2,50 @@
     "cloud":[
         {
         "name_en": "Ektefa",
-        "name_ar":"اكتفاء... يكفيك...",
+        "name_ar":"خدمة اكتفاء",
         "link":"https://ektefa.net/zadip"
         },
         {
         "name_en": "Nafeth",
-        "name_ar":"لتأجير المركبات",
+        "name_ar":"خدمة نافذ",
         "link":"https://nafeth.com/zadip"
         },
         {
         "name_en": "Muaref",
-        "name_ar":"حلول الحضور والانضباط",
+        "name_ar":"خدمة معرف",
         "link":"/muaref"
         },
         {
         "name_en": "Ehtiwa",
-        "name_ar":"عروضك تصل لهم",
+        "name_ar":"خدمة احتواء",
         "link":"https://ehtwa.sa/"
         },
         {
-        "name_en": "Reliable jobs",
-        "name_ar":"وظائف موثوقة",
+        "name_en": "Cadre",
+        "name_ar":"خدمة كادر",
         "link":"https://cadre.sa/"
         }
     ],
     "egov_services":[
-        {
-        "name_en": "Tam",
-        "name_ar":"خدمة تم",
-        "link":"/eGov_services/tam"
-        },
         {
         "name_en": "Muqeem",
         "name_ar":"خدمة مقيم",
         "link":"/eGov_services/muqeem"
         },
         {
+        "name_en": "Tam",
+        "name_ar":"خدمة تم",
+        "link":"/eGov_services/tam"
+        },
+        {
+        "name_en": "Smart Gate",
+        "name_ar":"خدمة البوابة الذكية",
+        "link":"/eGov_services/smartgate"
+        },
+        {
         "name_en": "Masarat",
         "name_ar":"خدمة مسارات",
         "link":"/eGov_services/masarat"
-        },
-        {
-        "name_en": "Smart",
-        "name_ar":"خدمة تصريح",
-        "link":"/eGov_services/permit"
         }
 
     ],
