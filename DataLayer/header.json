@@ -52,13 +52,13 @@
     "about_us":[
         {
             "name_en":"Clients & Partners",
-            "name_ar":"العملاء والشركاء",
+            "name_ar":"عملاؤنا وشركاؤنا",
             "link":"/client_partners",
             "icon":"client_partnerSvg"
         },
         {
             "name_en":"About ZADIP Group",
-            "name_ar":"حول مجموعة زاد المعلومات",
+            "name_ar":"عن المجموعة",
             "icon":"aboutusSvg",
             "link":"/about-us"
         }
