@@ -6,13 +6,14 @@ display: flex;
     justify-content: center;
     align-items: center;
 `
-export const VedioWrapper =  styled.div`
+export const VedioWrapper =  styled.div<{poster?:string}>`
     width: 100%;
-    height: 442px;
+    height: 457px;
     position:relative ;
-    background-image:url("https://ektefa.net/agency/img/illustrations/superadmin.svg") ;
+    background-image:url(${({poster})=>poster}) ;
     background-repeat:no-repeat ;
     background-position:center center ;
+        border-radius: 20px;
 
     & .circle {
   width: 50%;
@@ -47,13 +48,13 @@ export const VedioWrapper =  styled.div`
   }
 }
 `
-export const VedioLinkWrapper =styled.div`
-position:absolute ;
-top:50% ;
-left:50% ;
-right:50% ;
-z-index:9999 ;
-cursor: pointer;
+export const VedioLinkWrapper =styled.div<{open?:boolean}>`
+position: absolute;
+    top: 49%;
+    left: 53%;
+    right: 53%;
+    z-index: ${({open})=>open?"":"9999"};
+    cursor: pointer;
 
 `
 

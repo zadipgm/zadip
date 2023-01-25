@@ -6,14 +6,18 @@ import {
   VedioLinkWrapper,
   VedioWrapper,
 } from "./styled.components";
-const VedioComponent = () => {
+interface IProps {
+  poster?: string;
+  videoLink?: string;
+}
+const VedioComponent = ({ poster, videoLink }: IProps) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
     <ProductVedio>
-      <VedioWrapper>
-        <VedioLinkWrapper onClick={handleOpen}>
+      <VedioWrapper poster={poster}>
+        <VedioLinkWrapper onClick={handleOpen} open={open as boolean}>
           <PlaySvg width="50px" height="50px" fill="#eb0000" />
         </VedioLinkWrapper>
         <div className="circle circle1"></div>
@@ -24,7 +28,7 @@ const VedioComponent = () => {
         <iframe
           width="100%"
           height="500px"
-          src="https://www.youtube.com/embed/zkTYTA9cx6k?rel=0&amp;controls=0&amp;showinfo=0"
+          src={videoLink}
           frameBorder="0"
           allowFullScreen={true}
         ></iframe>

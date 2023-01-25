@@ -120,4 +120,7 @@ export const ContactButton = styled.button`
         align-items:center ;
         margin: 0px 7px;
     }
+   &.e-services{
+        width:30% ;
+    }
 `

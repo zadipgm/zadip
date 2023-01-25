@@ -44,21 +44,3 @@ padding:15px ;
     border-radius:20px ;
 }
 `
-export const AboutusList = styled.ul`
-
-list-style-type: disclosure-closed;
-margin: 0;
-padding: 0;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-`
-export const AboutusListItem =styled.li`
-width: 334px;
-padding: 12px;
-color:#393c3e;
-::marker{
-    color:#2193b0 ;
-}
- 
-`

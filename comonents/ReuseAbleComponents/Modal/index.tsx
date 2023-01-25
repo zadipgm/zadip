@@ -7,10 +7,10 @@ import { Wrapper } from "./styled.components";
 
 const style = {
   position: "absolute" as "absolute",
-  top: "50%",
-  left: "50%",
+  top: "42%",
+  left: "49.43%",
   transform: "translate(-50%, -50%)",
-  width: "27%",
+  width: "79%",
   bgcolor: "background.paper",
   border: "none",
   borderRadius: "20px",
