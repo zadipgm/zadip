@@ -34,15 +34,13 @@ const AboutUS = () => {
       </BreadCrumbWrapper>
       <AnimationBar
         title={translations?.abouttheCompany}
-        description={translations?.companySummry as string}
+        description={""}
         headingColor={"#2193b0"}
         descriptionColor={"#737c85;"}
         fontSize={"16px"}
       />
       <AboutCompanyWrapper>
         <DesWrapper>
-          <Title>{translations?.zadInfo}</Title>
-
           <AboutusDescription
             dangerouslySetInnerHTML={{
               __html: translations?.aboutUsDescription as string,

@@ -51,16 +51,6 @@ const ServicesAdvantageSection = ({ data, poster, videoLink }: Idata) => {
         })}
       </AdvantageContainer>
       <VedioComponent poster={poster} videoLink={videoLink} />
-      {/* <VedioLinkWrapper>
-        {" "}
-        <iframe
-          width="100%"
-          height="260"
-          src="https://www.youtube.com/embed/6NXA0W4lKXw?rel=0&controls=0&showinfo=0"
-          frameBorder="0"
-          allowFullScreen={true}
-        ></iframe>
-      </VedioLinkWrapper> */}
     </AdvantageWrapper>
   );
 };

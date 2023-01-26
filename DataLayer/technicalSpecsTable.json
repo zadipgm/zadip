@@ -63,11 +63,8 @@
         {"id":7,"name":"Java", "description": "LCD Display: 2.4 High-definition Graphical Interface Speaker: Voice Prompt (Languages can be selected)"}
        
 
-    ],
-    "pricing_Data":[
-        {"name_ar":"الشرائح حسب عدد المقيمين","name_en":"Number of Workers", "col1":"0-10", "col2":"10-30", "col3":"30-50", "col4":"50-70", "col5":"70-90", "col6":"90-110"},
-        {"name_ar":"القيمة (ريال سعودي)","name_en":"Cost in SAR (Annual)", "col1":"1100", "col2":"1200", "col3":"1300", "col4":"1400", "col5":"1500", "col6":"1600"}
     ]
+    
 
 }
 

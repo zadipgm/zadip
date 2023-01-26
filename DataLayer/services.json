@@ -428,31 +428,7 @@
       
       
   ],
-  "tam":[
-    { "id":1,
-      "title_en":"Vehicle Transactions",
-      "title_ar":"سريع",
-      "icon":"transactionSvg",
-      "description_en":"Make all vehicles transactions quickly, accurately and safely.",
-      "description_ar":"سرعة ودقة وأمان في إجراء كافة معاملات المركبات."
-    },
-    {
-      "id":2,
-      "title_en":"Cost Reductions",
-      "title_ar":"تخفيض",
-      "icon":"secureSvg",
-      "description_en":"Reducing costs and increase business value.",
-      "description_ar":"تخفيض التكاليف."
-    },
-    {
-      "id":3,
-      "title_en":"Unified Data",
-      "title_ar":"تنظيم",
-      "icon":"acurateSvg",
-      "description_en":"Organize all required data and information.",
-      "description_ar":"تنظيم كافة البيانات والمعلومات المطلوبة."
-    }
-  ],
+  
   "masarat":[
     {
       "id":1,
@@ -518,7 +494,49 @@
       "form_button_ar":"نموذج الاشتراك",
       "poster":"/images/tampos.png",
       "video_link":"https://www.youtube.com/embed/JUYe6fPy9mI?rel=0&controls=0&showinfo=0",
-    
+      "advantage":[
+        { "id":1,
+          "title_en":"Vehicle Transactions",
+          "title_ar":"سريع",
+          "icon":"transactionSvg",
+          "description_en":"Make all vehicles transactions quickly, accurately and safely.",
+          "description_ar":"سرعة ودقة وأمان في إجراء كافة معاملات المركبات."
+        },
+        {
+          "id":2,
+          "title_en":"Cost Reductions",
+          "title_ar":"تخفيض",
+          "icon":"secureSvg",
+          "description_en":"Reducing costs and increase business value.",
+          "description_ar":"تخفيض التكاليف."
+        },
+        {
+          "id":3,
+          "title_en":"Unified Data",
+          "title_ar":"تنظيم",
+          "icon":"acurateSvg",
+          "description_en":"Organize all required data and information.",
+          "description_ar":"تنظيم كافة البيانات والمعلومات المطلوبة."
+        }
+      ],
+      "shamel":{
+        "number_of_worker_en":["Number of Cars",	"0-9",	"10-49",	"50-99","100-249",	"250-499"	,"500-999",	"1000-5000",	"5000-9999"],
+        "cost_in_sar_en":["Price in SAR (Annual)"	,"1800",	"3300",	"4800",	"7300"	,"9800",	"12300",	"16300",	"20300"],
+        "number_of_worker_ar":["عدد المركبات",	"0-9",	"10-49",	"50-99","100-249",	"250-499"	,"500-999",	"1000-5000",	"5000-9999"],
+        "cost_in_sar_ar":["رسوم الاشتراك (ريال سعودي))"	,"1800",	"3300",	"4800",	"7300"	,"9800",	"12300",	"16300",	"20300"]
+        },
+        "number_of_worker":[
+          {"row_ar":"إضافة التفويض الداخلي لقيادة مركبة","row_en":"Adding internal authorization for a vehicle","cost":"1.75","rows_ar":"إلغاء التفويض الداخلي لقيادة مركبة","rows_en":"Cancel internal authorization for a vehicle","costs":"0"},
+          {"row_ar":"إضافة التفويض الخارجي لقيادة مركبة","row_en":"Adding international authorization for a vehicle","cost":"35","rows_ar":"إلغاء التفويض الخارجي لقيادة مركبة","rows_en":"Cancel international authorization for a vehicle","costs":"0"},
+          {"row_ar":"إضافة القائد الفعلي لمركبة","row_en":"Add or edit actual driver for a vehicle","cost":"10","rows_ar":"إلغاء القائد الفعلي لمركبة","rows_en":"Cancel actual driver for a vehicle","costs":"0"},
+          {"row_ar":"اصدار رخص السير للمركبات","row_en":"Issue driving license for vehicle","cost":"45","rows_ar":"تجديد رخص السير للمركبات","rows_en":"Renew driving license for vehicle","costs":"35"},
+          {"row_ar":"نقل ملكية المركبات","row_en":"Transfer of ownership for a vehicle","cost":"75","rows_ar":"التحفظ على نقل ملكية مركبة","rows_en":"Reserve ownership for a vehicle","costs":"15"},
+          {"row_ar":"استعلام عن صلاحية التأمين على المركبات","row_en":"Vehicle insurance validity","cost":"0","rows_ar":"استعلام عن بيانات مركبة","rows_en":"Query on car information","costs":"3"},
+          {"row_ar":"استعلام عن بيانات رخصة قيادة","row_en":"Query about driver license data","cost":"0","rows_ar":"استعلام عن معلومات المخالفات المرورية المسددة","rows_en":"Inquiry about paid traffic violations","costs":"0"},
+          {"row_ar":"استعلام عن معلومات المخالفات المرورية القائمة","row_en":"Inquiry about unpaid traffic violations","cost":"1","rows_ar":"استعلام عن مخالفات المرور","rows_en":"Inquiry on all traffic violations","costs":"1"},
+          {"row_ar":"استعلام عن معلومات رخص القيادة","row_en":"Inquiry about driving license information","cost":"1","rows_ar":"استعلام عن معلومات المركبات","rows_en":"Inquiry about vehicle information","costs":"1"}
+        ],
+       
       "list":[
         {
             "name_en": "Vehicle Information Inquiry",
@@ -610,25 +628,27 @@
       "condition_amalyat_en":"This service gives Muqeem a range of interactive services and information services for a reduced annual subscription fee. There is also a fee to be paid for each transaction or query service.",
       "condition_amalyat_ar":"تمنح هذه الخدمة المشترك فرصة الاستفادة من خدمات محددة من الخدمات المتنوعة التي يقدمها مقيم من عمليات تفاعلية وخدمات الاستعلام مقابل دفع اشتراك سنوي مخفَّض كما يوجد رسوم يتم دفعها مقابل كل عملية تفاعلية أو خدمة اطلاع يقوم بها.",
       "video_link":"https://www.youtube.com/embed/6NXA0W4lKXw?rel=0&showinfo=0",
-      "shamel_Data":[
-       { "id":1, "title_en":"Number of Workers", "title_ar":"عدد العمال"},
-        {"col_en":"0-9","col_ar":"0-9"},
-        {"col_en":"10-49","col_ar":"10-49"},
-        {"col_en":"50-99","col_ar":"50-99"},
-        {"col_en":"100-199","col_ar":"100-199"},
-        {"col_en":"200-800","col_ar":"200-800"},
-        {"col_en":"801 or more","col_ar":"801 or more"}
-        ],
-      
-      "amalyat_data":[
-        {"id":2, "title_en":"Cost in SAR (Annual)", "title_ar":"عدد العمال"},
-        {"col_en":"1100","col_ar":"1100"},
-        {"col_en":"2300","col_ar":"2300"},
-        {"col_en":"3600","col_ar":"3600"},
-        {"col_en":"5600","col_ar":"5600"},
-        {"col_en":"7550","col_ar":"7550"},
-        {"col_en":"SAR 11 for each worker","col_ar":"SAR 11 for each worker"}
-      ] ,
+      "shamel":{
+        "number_of_worker_en":["Number of Workers","0-9","10-49","50-99","100-199","200-800","801 or more"],
+        "cost_in_sar_en":["Cost in SAR (Annual)","1100","2300","3600","5600","7550","SAR 11 for each worker"],
+        "number_of_worker_ar":["الشرائح حسب عدد المقيمين","0-9","10-49","50-99","100-199","200-800","801 و أكثر"],
+        "cost_in_sar_ar":["القيمة (ريال سعودي)","1100","2300","3600","5600","7550","SAR 11  ريال لكل مقيم"]
+        },
+        "amalyat":{
+            "number_of_worker":[
+                "الشرائح حسب عدد المقيمين",
+                "0-9",
+                "10-49",
+                "50-99"
+              ],
+            "cost_in_sar":[
+                "القيمة (ريال سعودي)",
+                "550",
+                "1150",
+                "1800"
+                
+              ]
+            },
       "list":[
         {
             "name_en": "Issuing the one-time exit and re-entry visa",
@@ -658,10 +678,7 @@
             "name_en":"Resident's data through the residency number",
             "name_ar" : "البحث والاستعلام"
         },
-        {
-            "name_en": "General data regarding any resident on your sponsorship",
-            "name_ar" : "إصدار تأشيرة الخروج والعودةوإعادة طباعتها"
-        },
+        
         {
             "name_en": "Information regarding driving licenses",
             "name_ar"  : "إلغاء تأشيرة الخروج والعودة"
@@ -677,7 +694,11 @@
         {
             "name_en": "Exit and re-entry visa by residency number",
             "name_ar" : "إصدار الإقامة"
-        }
+        },
+        {
+          "name_en": "General data regarding any resident on your sponsorship",
+          "name_ar" : "إصدار تأشيرة الخروج والعودةوإعادة طباعتها"
+      }
         
       ],
       "muqeem":[
@@ -719,13 +740,17 @@
       "poster":"/images/masaratpos.png",
       "video_link":"https://www.youtube.com/embed/Irwly2mhJCM?rel=0&controls=0&showinfo=0",
       "list":[
+        {
+          "name_en": "Follow-up vehicles operation and maintenance programs.",
+          "name_ar" : "متابعة برامج صيانة وتشغيل المركبات."
+      },
+      {
+        "name_en":"Manage vehicles rental.Manage vehicles rental.",
+        "name_ar" :"إدارة تأجير المركبات."
+      },
       {
         "name_en": "Monitor fleet vehicles of the facility.",
         "name_ar"  : "الرقابة على أسطول المركبات لدى المنشأة."
-    },
-    {
-        "name_en":"Manage vehicles rental and issue online driving authorization through integration with Tamm service.",
-        "name_ar" : "إدارة تأجير المركبات وإصدار التفويض الالكتروني للمستأجر من خلال الربط مع خدمة تم."
     },
     { 
         "name_en":"Follow-up operation and maintenance programs for each vehicle accurately.",
@@ -739,18 +764,16 @@
         "name_en": "Influence drivers’ behavior positively.",
         "name_ar"  : "القدرة على التأثير الإيجابي على سلوكيات السائقين."
     },
-    {
-        "name_en":"Manage vehicles rental.Manage vehicles rental.",
-        "name_ar" :"إدارة تأجير المركبات."
-    },
+    
     {   
         "name_en":"Track vehicles and identify their geographical locations.",
         "name_ar" : "تتبع المركبات و تحديد الموقع الجغرافي لها."
     },
+    
     {
-        "name_en": "Follow-up vehicles operation and maintenance programs.",
-        "name_ar" : "متابعة برامج صيانة وتشغيل المركبات."
-    }
+      "name_en":"Manage vehicles rental and issue online driving authorization through integration with Tamm service.",
+      "name_ar" : "إدارة تأجير المركبات وإصدار التفويض الالكتروني للمستأجر من خلال الربط مع خدمة تم."
+  }
     
   ],
       "masarat":[
@@ -785,16 +808,19 @@
       "title_ar":"البوابة الذكية",
       "description_en":"The smart gate provides all reliable security services that contribute to verifying the status of individuals and vehicles through quick and direct mechanisms of action, which focus on enhancing security and raising the level of necessary safety.",
       "description_ar":"البوابة الذكية توفر جميع الخدمات الأمنية الموثوقة التي تساهم في التحقق من حالة الأفراد والمركبات بآليات عمل سريعة ومباشرة، حيث تتمحور حول تعزيز الأمن ورفع مستوى السلامة الضرورية.",
+      "number_of_worker":[
+        {"row_en":"75000", "row_ar":"75000", "rows_en":"75,000","rows_ar":"75,000", "cost":"0 - 5000","costs_en":"First package","costs_ar":" ​الباقة الأولى"},
+        {"row_en":"​150000", "row_ar":"​150000", "rows_en":"130,000","rows_ar":"130,000", "cost":"​0 - 10000","costs_en":"Second package","costs_ar":"​الباقة الثانية"},
+        {"row_en":"​300000", "row_ar":"​300000", "rows_en":"​200,000","rows_ar":"​200,000", "cost":"​0 - 20000","costs_en":"Third package","costs_ar":"الباقة الثالثة"},
+        {"row_en":"​600000", "row_ar":"​600000", "rows_en":"​320,000","rows_ar":"​320,000", "cost":"​0 - 40000","costs_en":"Fourth  package","costs_ar":"​الباقة الرابعة"}
+
+      ],
       "list":[
-        
       {
           "name_en":"Proactive protection of installations",
           "name_ar" : "الحماية الاستباقية للمنشآت"
       },
-      { 
-          "name_en":"Verify the identity of individuals and vehicles",
-          "name_ar" : "التحقق من صحة الهوية للأفراد والمركبات"
-      },
+      
       {
           "name_en": "Protecting the establishment from forging permits",
           "name_ar" : "حماية المنشأة من تزوير التصاريح"
@@ -802,8 +828,11 @@
       {
           "name_en": "Automated and connected security method",
           "name_ar"  : "طريقة امنية مؤتمته ومتصلة"
+      },
+      { 
+          "name_en":"Verify the identity of individuals and vehicles",
+          "name_ar" : "التحقق من صحة الهوية للأفراد والمركبات"
       }
-      
   ]},
     {
       "title_en":"News",

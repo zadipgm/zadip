@@ -16,6 +16,7 @@ color: #2193b0;
 `
 export const Description = styled.p`
 margin:0 ;
+color:#5d666e;
 `
 export const Wrapper = styled.div`
 padding: 15px;

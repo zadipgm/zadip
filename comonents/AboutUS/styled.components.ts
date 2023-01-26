@@ -21,8 +21,8 @@ justify-content:center ;
 align-items:center ;
 padding:15px ;
 >img {
-    padding:15px ;
-    border-radius:20px ;
+    padding:8px ;
+    border-radius: 37px;
 }
 `
 export const DesWrapper = styled.div`
@@ -41,6 +41,6 @@ export const ImageWrapper =styled.div`
 width:50% ;
 padding:15px ;
 > img{
-    border-radius:20px ;
+    border-radius: 20px;
 }
 `

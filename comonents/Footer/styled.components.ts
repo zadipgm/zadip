@@ -38,6 +38,7 @@ width: 50%;
 @media (max-width: 600px) {
 width:100% ;
 display:block ;
+padding:0 ;
 }
 @media (min-width: 1200px) {
 width:1170px ;

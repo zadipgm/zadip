@@ -13,7 +13,7 @@ export const Description = styled.div`
     width: 50%;
     text-align: justify;
     padding: 25px;
-    color:#737c85 ;
+    color:#5d666e;
     > h2 {
         color: #0576bc;
     }
