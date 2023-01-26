@@ -135,7 +135,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
             headingColor={"#2193b0"}
             descriptionColor={""}
           />
-          {type === "tam" && <ServicesAdvantageSection data={data.tam} />}
+
           {type === "muqeem" && <ServicesAdvantageSection data={data.muqeem} />}
           {type === "masarat" && (
             <ServicesAdvantageSection data={data.masarat} />
