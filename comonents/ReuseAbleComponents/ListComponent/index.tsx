@@ -1,5 +1,7 @@
 import * as React from "react";
 import { useTheme } from "styled-components";
+import DownArrowSvg from "../../../public/icons/downArrowSvg";
+import IconDownArrowHead from "../../../public/icons/dropdownArrowSvg";
 import { List, ListItem } from "./styled.components";
 interface IList {
   name_en?: string;
@@ -14,7 +16,14 @@ const ListComponent = ({ list }: IProps) => {
     <>
       <List>
         {list?.map((item) => {
-          return <ListItem>{isLTR ? item.name_en : item.name_ar}</ListItem>;
+          return (
+            <>
+              <ListItem>
+                <IconDownArrowHead fill="#2193b0" />
+                {isLTR ? item.name_en : item.name_ar}
+              </ListItem>
+            </>
+          );
         })}
       </List>
     </>

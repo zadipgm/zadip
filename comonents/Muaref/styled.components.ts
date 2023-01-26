@@ -36,12 +36,21 @@ gap:6px;
 padding-bottom:15px ;
 `
 export const ImageWrapper = styled.div`
+width:164px ;
+
+display:flex ;
+justify-content:center ;
+align-items:center ;
+> img{
+    width:100% ;
+}
 > div {
     content:"" ;
     width:25px ;
     height:25px ;
     background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
     border-radius:100%;
+    top:14px ;
     position:absolute ;
     ${({ theme }) =>
     theme.isLTR
@@ -54,12 +63,12 @@ export const ImageWrapper = styled.div`
 }
 position: relative;
 border:2px solid #0576bc;
-padding:20px ;
+padding:28px ;
 border-radius:100%;
-width:fit-content;
 `
 export const Title = styled.h3`
     margin: 0;
+    text-align:center ;
     position:relative;
     width: 165px;
     color: #fff;

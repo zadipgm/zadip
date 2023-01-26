@@ -15,13 +15,14 @@ import {
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
+import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 const MuarefPage = () => {
   const { translations } = useTheme();
   const breadcrumbs = [
-    <Links underline="hover" key="1" color="#0196e3" href="/">
+    <Links underline="hover" key="1" color="#2193b0" href="/">
       {translations?.home}
     </Links>,
-    <Typography key="3" color="text.primary" style={{ color: "#0196e3" }}>
+    <Typography key="3" color="inherit" style={{ color: "#2193b0" }}>
       {translations?.featureTitleMuaref}
     </Typography>,
   ];
@@ -42,12 +43,7 @@ const MuarefPage = () => {
           <ImageContainer>
             <ImageWrapper>
               <div></div>
-              <img
-                src="/images/qr.png"
-                alt="muaref QR"
-                width={100}
-                height={100}
-              />
+              <img src="/images/qr.png" alt="muaref QR" />
             </ImageWrapper>
             <Title>{translations?.muarefQR}</Title>
           </ImageContainer>
@@ -57,12 +53,7 @@ const MuarefPage = () => {
           <ImageContainer>
             <ImageWrapper>
               <div></div>
-              <img
-                src="/images/device.png"
-                alt="muaref device"
-                width={100}
-                height={100}
-              />
+              <img src="/images/device.png" alt="muaref device" />
             </ImageWrapper>
             <Title>{translations?.muarefDevice}</Title>
           </ImageContainer>
@@ -72,12 +63,7 @@ const MuarefPage = () => {
           <ImageContainer>
             <ImageWrapper>
               <div></div>
-              <img
-                src="/images/location.png"
-                alt="muaref location"
-                width={100}
-                height={100}
-              />
+              <img src="/images/location.png" alt="muaref location" />
             </ImageWrapper>
             <Title>{translations?.muarefLocation}</Title>
           </ImageContainer>
@@ -87,18 +73,17 @@ const MuarefPage = () => {
           <ImageContainer>
             <ImageWrapper>
               <div></div>
-              <img
-                src="/images/mubashir.png"
-                alt="muaref mubashir"
-                width={100}
-                height={100}
-              />
+              <img src="/images/mubashir.png" alt="muaref mubashir" />
             </ImageWrapper>
             <Title>{translations?.muarefIdentifier}</Title>
           </ImageContainer>
           <Description>{translations?.muarefIdentifierDescription}</Description>
         </ListItems>
       </List>
+      <OrderNowForm
+        title={translations?.requestService as string}
+        buttonTitle={translations?.requestService as string}
+      />
     </Container>
   );
 };

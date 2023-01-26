@@ -7,13 +7,15 @@ import Breadcrumb from "../ReuseAbleComponents/Breadcrumb";
 import { Container, Heading, Wrapper } from "./styled.components";
 import _data from "../../DataLayer/services.json";
 import { useRouter } from "next/router";
-import specs_data from "../../DataLayer/technicalSpecsTable.json";
+import service_data from "../../DataLayer/services.json";
 import PricingTable from "../ReuseAbleComponents/PricingTable";
 import DownLoadButton from "../ReuseAbleComponents/DownLoadButton";
 import { ButtonsWrapper } from "../ServicesPageComponents/ServicesDetails/styled.components";
 import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 import ServicesAdvantageSection from "../ReuseAbleComponents/ServicesAdvantageSection";
 import ListComponent from "../ReuseAbleComponents/ListComponent";
+import TamTable from "./TamTable";
+import SmartGateTable from "./SmartgateTable";
 const EGovernmentServices = () => {
   const { translations, isLTR } = useTheme();
   const router = useRouter();
@@ -69,29 +71,83 @@ const EGovernmentServices = () => {
             videoLink={filter_services[0]?.video_link}
           />
         )}
-        {router.query.slug === "masarat" ? (
-          ""
-        ) : (
+        {router.query.slug === "muqeem" && (
           <>
+            <AnimationBar
+              headingColor={"#2193b0"}
+              descriptionColor={"#737c85"}
+              title={isLTR ? "Pricing Packages" : "قائمة الاسعار"}
+              description={""}
+            />
             <PricingTable
+              show={true}
               title={
                 isLTR
                   ? `${filter_services[0]?.title_en} Shamel`
                   : `باقة ${filter_services[0]?.title_ar} شامل`
               }
-              data={specs_data.pricing_Data}
+              data_head={
+                isLTR
+                  ? filter_services[0].shamel?.number_of_worker_en
+                  : filter_services[0].shamel?.number_of_worker_ar
+              }
+              data={
+                isLTR
+                  ? filter_services[0].shamel?.cost_in_sar_en
+                  : filter_services[0].shamel?.cost_in_sar_ar
+              }
               classname={""}
               condition={translations?.conditions as string}
             />
             <PricingTable
+              show={true}
               title={
                 isLTR
                   ? `${filter_services[0]?.title_en} Amalyat`
                   : `باقة ${filter_services[0]?.title_ar} عمليات`
               }
-              data={specs_data.pricing_Data}
+              data_head={filter_services[0]?.amalyat?.number_of_worker}
+              data={filter_services[0].amalyat?.cost_in_sar}
               classname={""}
               condition={translations?.conditions as string}
+            />
+          </>
+        )}
+        {router.query.slug === "tam" && (
+          <>
+            <PricingTable
+              title={isLTR ? "Annual Pricing" : "الاشتراك السنوي"}
+              data_head={
+                isLTR
+                  ? filter_services[0]?.shamel?.number_of_worker_en
+                  : filter_services[0]?.shamel?.number_of_worker_ar
+              }
+              data={
+                isLTR
+                  ? filter_services[0]?.shamel?.cost_in_sar_en
+                  : filter_services[0]?.shamel?.cost_in_sar_ar
+              }
+              classname={""}
+              condition={translations?.conditions as string}
+              show={false}
+            />
+            <TamTable
+              title={isLTR ? "Transactional Charges" : "رسوم العمليات"}
+              classname={""}
+              data_head={filter_services[0]?.number_of_worker}
+            />
+          </>
+        )}
+        {router.query.slug === "smartgate" && (
+          <>
+            <SmartGateTable
+              title={
+                isLTR
+                  ? "The cost of subscription packages for permit service"
+                  : "تكلفة باقات الاشتراك لخدمة تصريح"
+              }
+              classname={""}
+              data_head={filter_services[0]?.number_of_worker}
             />
           </>
         )}
@@ -102,35 +158,37 @@ const EGovernmentServices = () => {
           descriptionColor={""}
         />
         <ListComponent list={filter_services[0]?.list} />
-        <AnimationBar
-          title={translations?.supportingDocuments}
-          description={""}
-          headingColor={"#2193b0"}
-          descriptionColor={""}
-        />
-
-        <ButtonsWrapper>
-          <DownLoadButton
-            title={
-              isLTR
-                ? (filter_services[0]?.button_title_en as string)
-                : (filter_services[0]?.button_title_ar as string)
-            }
-          />
-          <DownLoadButton
-            title={
-              isLTR
-                ? (filter_services[0]?.form_button_en as string)
-                : (filter_services[0]?.form_button_ar as string)
-            }
-          />
-          <DownLoadButton title={translations?.editdeletform as string} />
-        </ButtonsWrapper>
-
+        {router.query.slug !== "masarat" &&
+          router.query.slug !== "smartgate" && (
+            <>
+              <AnimationBar
+                title={translations?.supportingDocuments}
+                description={""}
+                headingColor={"#2193b0"}
+                descriptionColor={""}
+              />
+              <ButtonsWrapper>
+                <DownLoadButton
+                  title={
+                    isLTR
+                      ? (filter_services[0]?.button_title_en as string)
+                      : (filter_services[0]?.button_title_ar as string)
+                  }
+                />
+                <DownLoadButton
+                  title={
+                    isLTR
+                      ? (filter_services[0]?.form_button_en as string)
+                      : (filter_services[0]?.form_button_ar as string)
+                  }
+                />
+                <DownLoadButton title={translations?.editdeletform as string} />
+              </ButtonsWrapper>
+            </>
+          )}
         <OrderNowForm
-          classname="e-services"
           title={translations?.requestService as string}
-          buttonTitle={translations?.sendOrder as string}
+          buttonTitle={translations?.requestService as string}
         />
       </Container>
     </>

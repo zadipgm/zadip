@@ -15,7 +15,7 @@ align-items: center;
 }
 `
 export const Description =styled.div`
-color:#737c85 ;
+color:#5d666e;
 font-size:18px ;
 margin: 20px 0px;
 width:50% ;

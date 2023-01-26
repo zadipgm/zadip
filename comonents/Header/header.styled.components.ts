@@ -6,6 +6,9 @@ align-items:center ;
 width:1170px;
 margin:0 auto ;
 height:99px ;
+@media(max-width:600px){
+  width:100% ;
+}
 `
 export const HeaderWrapper = styled.div`
 `
@@ -16,7 +19,9 @@ z-index:9999;
 width: 100%;
 background: linear-gradient(-30deg,#0676bb5e 30%,#38b7ae4f);
 backdrop-filter: saturate(180%) blur(5px);
+
 &.scrolled {
+
   opacity:.9 ;
   background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
   animation: rotateMenu 1000ms ease-in-out;
@@ -51,6 +56,9 @@ justify-content: center;
 align-items: center;
 margin:0 ;
 padding:0 ;
+@media(max-width:600px){
+  display:none ;
+}
 `
 export const ImageContainer =styled.div`
 `
@@ -269,6 +277,7 @@ ${({ theme }) =>
   theme.isLTR
   ? css`
     left:4% ;
+    top:66% ;
       `
   : css`
   left:12% ;
@@ -281,6 +290,10 @@ font-size: 70px;
 font-weight: 600;
 color:#fff;
 line-height:${({lineHeight})=>lineHeight} ;
+@media(max-width:600px){
+    font-size: 59px;
+    line-height: 76px;
+}
 `
 export const IconsWrapper = styled.div`
 & .mouse{
@@ -356,6 +369,13 @@ top: 0;
 right: 0;
 bottom: 10px;
 left: 0;
+}
+@media (max-aspect-ratio: 9/16) {
+  video{
+     width: 100%;
+    height: 100vh;
+    object-fit:cover ;
+  }
 }
 `
 export const Video= styled.video`

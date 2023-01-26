@@ -85,7 +85,7 @@ display: flex;
     gap: 4px;
     word-break:break-all ;
     text-align: justify;
-    color:#737c85 ;
+    color:#5d666e;
     :hover{
       color:#fff ;
     }

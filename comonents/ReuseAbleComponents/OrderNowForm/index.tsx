@@ -55,7 +55,10 @@ const OrderNowForm: React.FC<IProps> = ({
                 : "تواصل مع مسؤول الخدمة الان"}
             </FormHeading>
             <InputWarapper>
-              <Label>{isLTR ? "Name" : "الاسم"}</Label>
+              <Label>
+                <span>*</span>
+                {isLTR ? "Name" : "الاسم"}
+              </Label>
               <Input
                 type="text"
                 placeholder={translations?.fullName}
@@ -63,21 +66,28 @@ const OrderNowForm: React.FC<IProps> = ({
               />
             </InputWarapper>
             <InputWarapper>
-              <Label>{isLTR ? "Email" : "البريد الإلكتروني"}</Label>
-              <Input type="email" placeholder={translations?.email} />
+              <Label>
+                <span>*</span>
+                {isLTR ? "Email" : "البريد الإلكتروني"}
+              </Label>
+              <Input type="email" placeholder={translations?.email} required />
             </InputWarapper>
             <InputWarapper>
-              <Label>{isLTR ? "Mobile Number" : "رقم الجوال"}</Label>
-              <Input type="text" placeholder={translations?.contact} />
+              <Label>
+                <span>*</span>
+                {isLTR ? "Mobile Number" : "رقم الجوال"}
+              </Label>
+              <Input type="text" placeholder={translations?.contact} required />
             </InputWarapper>
             <InputWarapper>
-              <Label>{isLTR ? "Requested service" : "الخدمة المطلوبة"}</Label>
-              <Textarea
-                id="comments"
-                name="comments"
-                rows={4}
-                cols={50}
-                placeholder={translations?.message}
+              <Label>
+                <span>*</span>
+                {isLTR ? "Requested service" : "الخدمة المطلوبة"}
+              </Label>
+              <Input
+                type={"text"}
+                placeholder={isLTR ? "Requested service" : "الخدمة المطلوبة"}
+                required
               />
             </InputWarapper>
             <Button

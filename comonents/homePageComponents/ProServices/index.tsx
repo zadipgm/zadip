@@ -1,6 +1,8 @@
+import { useRouter } from "next/router";
 import * as React from "react";
 import { useTheme } from "styled-components";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
+import { Button } from "../../ReuseAbleComponents/DownLoadButton/styled.components";
 import {
   Container,
   IamgeWrapper,
@@ -11,7 +13,8 @@ import {
   Wrapper,
 } from "./styled.components";
 const ProfessionalServices = () => {
-  const { isLTR, translations } = useTheme();
+  const { isLTR, translations, locale } = useTheme();
+  const router = useRouter();
   return (
     <Container>
       <Wrapper>
@@ -19,6 +22,11 @@ const ProfessionalServices = () => {
           <Title>{translations?.proservicesTitle}</Title>
           <SubTitle>{translations?.projects_it}</SubTitle>
           <Text>{translations?.professionalServices as string}</Text>
+          <Button
+            onClick={() => router.push(`/${locale}/professional_services`)}
+          >
+            {translations?.viewmore}
+          </Button>
         </TextWrapper>
         <IamgeWrapper>
           <img

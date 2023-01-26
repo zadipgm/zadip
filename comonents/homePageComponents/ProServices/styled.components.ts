@@ -14,7 +14,6 @@ align-items:center ;
 margin:30px 0px ;
 @media(max-width: 600px){
     display:block ;
-    padding:15px ;
     margin:0 ;
 }
 `
@@ -47,6 +46,7 @@ margin:0;
 text-align:justify ;
     color: #3d4146cf;
     font-size: 18px;
+    margin-bottom:15px ;
 `
 export const IamgeWrapper= styled.div`
 width:50% ;

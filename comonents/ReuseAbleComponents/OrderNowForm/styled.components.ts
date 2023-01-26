@@ -29,6 +29,9 @@ export const Label = styled.label`
 font-size:22px ;
 transition: .5s;
 color:#2193b0 ;
+> span{
+    color: red;
+}
 `
 export const Input= styled.input`
 width: 100%;
@@ -102,11 +105,12 @@ export const ContactButton = styled.button`
     outline: none;
     display: flex;
     font-size:20px ;
+    margin:20px auto;
     justify-content: center;
-    align-items: self-start;
+    align-items:center;
     cursor: pointer;
     background-color: #0576bc;
-    margin:0 auto ;
+    width:250px ;
     transition: all 0.5s ease-in;
     
     :hover{

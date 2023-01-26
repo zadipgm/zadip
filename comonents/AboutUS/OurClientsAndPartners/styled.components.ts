@@ -11,7 +11,7 @@ align-items:center ;
 margin-top:80px ;
 `
 export const Heading = styled.h2`
-color:#737c85 ;
+color:#5d666e;
 `
 export const ClientWrapper = styled.div``
 export const ClientList = styled.ul`
