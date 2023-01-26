@@ -135,66 +135,11 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
             headingColor={"#2193b0"}
             descriptionColor={""}
           />
-          {type === "tam" && <ServicesAdvantageSection data={data.tam} />}
+
           {type === "muqeem" && <ServicesAdvantageSection data={data.muqeem} />}
           {type === "masarat" && (
             <ServicesAdvantageSection data={data.masarat} />
           )}
-          {type === "tam" || type === "muqeem" ? (
-            <AnimationBar
-              title={translations?.pricingPackages}
-              description={""}
-              headingColor={"#2193b0"}
-              descriptionColor={""}
-            />
-          ) : (
-            ""
-          )}
-          {type === "tam" || type === "muqeem" ? (
-            <PricingTable
-              title={
-                type === "tam"
-                  ? isLTR
-                    ? "Tam Shamel"
-                    : "باقة تم شامل"
-                  : type === "muqeem"
-                  ? isLTR
-                    ? "Muqeem Shamel"
-                    : "باقة مقيم شامل"
-                  : ""
-              }
-              data={specs_data.pricing_Data}
-              classname={""}
-              condition={translations?.conditions as string}
-            />
-          ) : (
-            ""
-          )}
-          {type === "tam" || type === "muqeem" ? (
-            <PricingTable
-              title={
-                type === "tam"
-                  ? isLTR
-                    ? "Tam Amalyat"
-                    : "باقة تم عمليات"
-                  : type === "muqeem"
-                  ? isLTR
-                    ? "Muqeem Amalyat"
-                    : "باقة مقيم عمليات"
-                  : ""
-              }
-              classname={"direction"}
-              data={specs_data.pricing_Data}
-              condition={translations?.conditions as string}
-            />
-          ) : (
-            ""
-          )}
-          <TechnicalSpecsTable
-            data={specs_data.features}
-            title={"Features"}
-            page={"services"}
-          />
 
           <>
             {type === "tam" || type === "muqeem" ? (
