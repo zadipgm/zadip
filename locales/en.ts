@@ -115,7 +115,10 @@ muarefLocation:"Location ID",
 muarefLocationDescription:"Some establishments want to dispense with the traditional fingerprint systems and give a kind of flexibility in dealing with their employees by using the location identifier. This system gives flexibility to the establishment in defining areas through which the employee can record attendance and leave without the need for any device, and the employee can from his mobile phone record attendance and leave .",
 muarefIdentifier:"Direct Identifier",
 muarefIdentifierDescription:"This solution has been allocated to some establishments that have a mobile team of employees who attend meetings with their clients or carry out security patrols in specific areas where they must be present at a specific time, where Mubasher ID activates the ability to record attendance and leave from any location on the map, and provides the facility with accurate information About the place and the coordinates of the site from which the attendance and departure process was recorded without the need to specify the location in advance.",
-muaref:"Muaref"
+muaref:"Muaref",
+smartgateTableDescription:"* In the event that the operations specified for each package expire, the service will stop, and the subscriber must purchase points, noting that the subscriber must exhaust the number of specified operations during the subscription year, and no refunds will be made for unused operations.",
+smartgateSecondtableDescription:"* In the event that the operations specified for each package end, the service will stop, and the subscriber must renew the subscription for a similar number of operations according to the number of cameras, noting that the subscriber must exhaust the specified number of operations during the subscription year, and no amounts will be refunded for unused operations.",
+
 
 
 }

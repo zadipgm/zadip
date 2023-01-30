@@ -15,14 +15,12 @@ const ListComponent = ({ list }: IProps) => {
   return (
     <>
       <List>
-        {list?.map((item) => {
+        {list?.map((item, index) => {
           return (
-            <>
-              <ListItem>
-                <IconDownArrowHead fill="#2193b0" />
-                {isLTR ? item.name_en : item.name_ar}
-              </ListItem>
-            </>
+            <ListItem key={index}>
+              <IconDownArrowHead fill="#2193b0" />
+              {isLTR ? item.name_en : item.name_ar}
+            </ListItem>
           );
         })}
       </List>

@@ -282,7 +282,7 @@ const Header: React.FC<IProps> = ({ headerImage }) => {
 
       {/* ========Scroll Top Button======== */}
 
-      {show > 500 && (
+      {show > 1000 && (
         <ScrollTopButton
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

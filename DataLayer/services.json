@@ -815,6 +815,42 @@
         {"row_en":"​600000", "row_ar":"​600000", "rows_en":"​320,000","rows_ar":"​320,000", "cost":"​0 - 40000","costs_en":"Fourth  package","costs_ar":"​الباقة الرابعة"}
 
       ],
+      "head":[
+        {
+        "name_en":"For points earned in the system",
+        "name_ar": "لنقاط المكتسبة في النظام"
+        },
+        {
+          "name_en": "The value of the package is in Saudi riyals *Does not include VAT",
+          "name_ar" : "يمة الباقة بالريال السعودي *لا تشمل ضريبة القيمة المضافة"
+        },
+          {
+            "name_en":"The number of checks to issue permits *Includes all individuals and vehicles in one permit",
+            "name_ar": "عدد عمليات التحقق لإصدار تصاريح *تشمل كل الأفراد والمركبات في التصريح الواحد"
+            },
+            {
+              "name_en":"Package name","name_ar" : "اسم الباقة"}
+      
+      ],
+      "second_head":[
+        {"name_en":"​The price is in Saudi Riyals *VAT not included","name_ar":"​السعر بالريال السعودي *غير شامل ضريبة القيمة المضافة"},
+        {"name_en":"​Number of cameras","name_ar":"​عدد الكاميرات"},
+        {"name_en":"The total number of operations","name_ar":"​إجمالي عدد العمليات"},
+        {"name_en":"Package name","name_ar":"​اسم الباقة"}
+      ],
+      "table_data":[
+        {"row1_en":"Free","row1_ar":"​مجاناً","row2_en":"1","row2_ar":"1","row3_en":"2000","row3_ar":"2000","row4_en":"Experimental (for a period of three months)","row4_ar":"​التجريبية (لمدة ثلاثة أشهر)"},
+        {"row1_en":"​3,500","row1_ar":"​3,500","row2_en":"1","row2_ar":"1","row3_en":"​From 0 to 115000","row3_ar":"​من 0 إلى 115000","row4_en":"The first package","row4_ar":"الباقة الأولى"},
+        {"row1_en":"6,600","row1_ar":"6,600","row2_en":"2","row2_ar":"2","row3_en":"​From 0 to 115000","row3_ar":"​من 0 إلى 115000","row4_en":"","row4_ar":""},
+        {"row1_en":"9,300","row1_ar":"9,300","row2_en":"3","row2_ar":"3","row3_en":"​From 0 to 115000","row3_ar":"​من 0 إلى 115000","row4_en":"","row4_ar":""},
+        {"row1_en":"​3,000 X total cameras","row1_ar":"​3,000 X  إجمالي الكاميرات","row2_en":"4 cameras or more","row2_ar":"4 كاميرات فأكثر","row3_en":"​From 0 to 115000","row3_ar":"​من 0 إلى 115000","row4_en":"","row4_ar":""},
+
+        {"row1_en":"14,000","row1_ar":"14,000","row2_en":"1","row2_ar":"1","row3_en":"​From 0 to 1,000,000","row3_ar":"​من 0 إلى 1,000,000","row4_en":"The second package","row4_ar":" ​الباقة الثانية"},
+        {"row1_en":"27,000","row1_ar":"27,000","row2_en":"2","row2_ar":"2","row3_en":"​From 0 to 1,000,000","row3_ar":"​من 0 إلى 1,000,000","row4_en":"","row4_ar":""},
+        {"row1_en":"39,000","row1_ar":"39,000","row2_en":"3","row2_ar":"3","row3_en":"​From 0 to 1,000,000","row3_ar":"​من 0 إلى 1,000,000","row4_en":"","row4_ar":""},
+        {"row1_en":"12,500 X total cameras","row1_ar":"12,500 X  إجمالي الكاميرات","row2_en":"4 cameras or more","row2_ar":"4 كاميرات فأكثر","row3_en":"​From 0 to 1,000,000","row3_ar":"​من 0 إلى 1,000,000","row4_en":"","row4_ar":""}
+        
+      ],
       "list":[
       {
           "name_en":"Proactive protection of installations",

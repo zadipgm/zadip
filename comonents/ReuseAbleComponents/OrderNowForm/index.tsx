@@ -1,17 +1,19 @@
 import * as React from "react";
 import { useTheme } from "styled-components";
+import CloseSvg from "../../../public/icons/closeSvg";
 import IconComponent from "../IconComponent";
 import ModalComponent from "../Modal";
 import {
   OrderNowFormContainer,
   Wrapper,
   Input,
-  Textarea,
   InputWarapper,
   Label,
   Button,
   FormHeading,
   ContactButton,
+  FormHeadingWrapper,
+  IconWrapper,
 } from "./styled.components";
 interface IProps {
   title: string;
@@ -22,7 +24,6 @@ interface IProps {
 }
 const OrderNowForm: React.FC<IProps> = ({
   title,
-  buttonTitle,
   isShow = true,
   classname,
   icon,
@@ -30,7 +31,51 @@ const OrderNowForm: React.FC<IProps> = ({
   const { isLTR, translations } = useTheme();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setName("");
+    setEmail("");
+    setNumber("");
+    setService("");
+    setOpen(false);
+  };
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [number, setNumber] = React.useState("");
+  const [service, setService] = React.useState("");
+
+  const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    setName(value);
+  };
+  const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    setEmail(value);
+  };
+  const phoneHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    setNumber(value);
+  };
+  const serviceHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    setService(value);
+  };
+  const handleSubmit = () => {
+    if (
+      name.length > 3 &&
+      email.length > 3 &&
+      number.length > 10 &&
+      service.length > 3
+    ) {
+      const email = "info@zadip.com";
+      const subject = `Request Services ${service}`;
+      const emailBody = "Hi";
+      document.location =
+        "mailto:" + email + "?subject=" + subject + "&body=" + emailBody;
+      handleClose();
+    } else {
+      handleOpen();
+    }
+  };
   return (
     <>
       <ContactButton onClick={handleOpen} className={classname}>
@@ -46,53 +91,93 @@ const OrderNowForm: React.FC<IProps> = ({
         open={open}
         handleClose={handleClose}
         classname={classname}
+        bgColor={"#fff"}
       >
         <OrderNowFormContainer>
           <Wrapper className={classname}>
-            <FormHeading>
-              {isLTR
-                ? "Contact the Service Officer Now"
-                : "تواصل مع مسؤول الخدمة الان"}
-            </FormHeading>
+            <FormHeadingWrapper>
+              <FormHeading>
+                {isLTR
+                  ? "Contact the Service Officer Now"
+                  : "تواصل مع مسؤول الخدمة الان"}
+              </FormHeading>
+              <IconWrapper onClick={handleClose}>
+                <CloseSvg width="30px" height="30px" fill="#000" />
+              </IconWrapper>
+            </FormHeadingWrapper>
             <InputWarapper>
               <Label>
-                <span>*</span>
+                {name.length <= 3 ? (
+                  <span>*</span>
+                ) : (
+                  <span className="green">*</span>
+                )}
                 {isLTR ? "Name" : "الاسم"}
               </Label>
               <Input
                 type="text"
                 placeholder={translations?.fullName}
                 required
+                value={name}
+                onChange={(e) => nameHandler(e)}
               />
             </InputWarapper>
             <InputWarapper>
               <Label>
-                <span>*</span>
+                {email.length <= 7 ? (
+                  <span>*</span>
+                ) : (
+                  <span className="green">*</span>
+                )}
                 {isLTR ? "Email" : "البريد الإلكتروني"}
               </Label>
-              <Input type="email" placeholder={translations?.email} required />
+              <Input
+                type="email"
+                placeholder={translations?.email}
+                required
+                value={email}
+                onChange={(e) => emailHandler(e)}
+              />
             </InputWarapper>
             <InputWarapper>
               <Label>
-                <span>*</span>
+                {number.length <= 10 ? (
+                  <span>*</span>
+                ) : (
+                  <span className="green">*</span>
+                )}
                 {isLTR ? "Mobile Number" : "رقم الجوال"}
               </Label>
-              <Input type="text" placeholder={translations?.contact} required />
+              <Input
+                type="text"
+                placeholder={translations?.contact}
+                required
+                value={number}
+                onChange={(e) => phoneHandler(e)}
+              />
             </InputWarapper>
             <InputWarapper>
               <Label>
-                <span>*</span>
-                {isLTR ? "Requested service" : "الخدمة المطلوبة"}
+                {service.length <= 7 ? (
+                  <span>*</span>
+                ) : (
+                  <span className="green">*</span>
+                )}
+                {isLTR ? "Request service" : "الخدمة المطلوبة"}
               </Label>
               <Input
                 type={"text"}
-                placeholder={isLTR ? "Requested service" : "الخدمة المطلوبة"}
+                placeholder={
+                  isLTR ? "Enter request service name..." : "الخدمة المطلوبة..."
+                }
+                value={service}
+                onChange={(e) => serviceHandler(e)}
                 required
               />
             </InputWarapper>
             <Button
               color="linear-gradient(-30deg,#009bfb 30%,#38b7ae);"
-              onClick={handleClose}
+              onClick={handleSubmit}
             >
               {translations?.send}
             </Button>

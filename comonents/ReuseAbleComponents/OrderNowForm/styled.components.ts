@@ -32,6 +32,9 @@ color:#2193b0 ;
 > span{
     color: red;
 }
+& .green{
+    color:green ;
+}
 `
 export const Input= styled.input`
 width: 100%;
@@ -92,6 +95,14 @@ font-size:16px ;
 cursor: pointer;
 border: none;
 background:${({color})=>color};
+`
+export const FormHeadingWrapper= styled.div`
+display:flex ;
+justify-content:space-between ;
+align-items:center ;
+`
+export const IconWrapper = styled.div`
+cursor: pointer;
 `
 export const FormHeading = styled.h3`
 color: #2193b0;

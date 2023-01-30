@@ -420,8 +420,8 @@ export const ScrollTopButton =  styled.button`
 position: fixed;
 padding: 16px 20px;
 font-size: 20px;
-bottom: 40px;
-right: 23px;
+${({theme})=>theme.isLTR?css`right:7px`:css`left:7px`};
+bottom: 67px;
 background-color: #99d2e3;
 color: rgb(255, 255, 255);
 border-radius: 100%;

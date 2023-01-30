@@ -56,6 +56,7 @@ const MobileHeader = () => {
           open={open}
           handleClose={handleClose}
           classname={"mobile-header"}
+          bgColor={"linear-gradient(-30deg,#0576bc 30%,#38b7ae91);"}
         >
           <div>
             <CloseIconWrapper onClick={handleClose}>

@@ -148,6 +148,9 @@ const EGovernmentServices = () => {
               }
               classname={""}
               data_head={filter_services[0]?.number_of_worker}
+              head={filter_services[0]?.head}
+              second_head={filter_services[0]?.second_head}
+              table_data={filter_services[0]?.table_data}
             />
           </>
         )}
