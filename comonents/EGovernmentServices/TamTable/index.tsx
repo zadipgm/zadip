@@ -40,9 +40,9 @@ const TamTable: React.FC<IProps> = ({ title, data, data_head }) => {
             <Thead>{isLTR ? "Cost SAR" : "الرسوم (ريال السعودي)"}</Thead>
           </TableRow>
 
-          {data_head?.map((item) => {
+          {data_head?.map((item, index) => {
             return (
-              <TableRow>
+              <TableRow key={index}>
                 <TableData>{isLTR ? item.row_en : item.row_ar}</TableData>
                 <TableData>{item.cost}</TableData>
                 <TableData>{isLTR ? item.rows_en : item.rows_ar}</TableData>

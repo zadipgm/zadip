@@ -6,6 +6,7 @@ import {
   TableData,
   Table,
   Thead,
+  TableDescription,
 } from "../TamTable/styled.components";
 import { useTheme } from "styled-components";
 interface IData {
@@ -18,41 +19,55 @@ interface IData {
   rows_ar: string;
   costs?: string;
 }
+interface IHead {
+  name_ar: string;
+  name_en: string;
+}
+
+interface ITableData {
+  row1_en: string;
+  row1_ar: string;
+  row2_en: string;
+  row2_ar: string;
+  row3_en: string;
+  row3_ar: string;
+  row4_en: string;
+  row4_ar: string;
+}
 interface IProps {
   title: string;
   condition?: string;
   data?: Array<string>;
   data_head?: Array<IData>;
   classname: string;
+  head?: Array<IHead>;
+  second_head?: Array<IHead>;
+  table_data?: Array<ITableData>;
 }
-const SmartGateTable: React.FC<IProps> = ({ title, data, data_head }) => {
+const SmartGateTable: React.FC<IProps> = ({
+  title,
+  data,
+  data_head,
+  head,
+  second_head,
+  table_data,
+}) => {
   const { isLTR, translations } = useTheme();
   return (
     <Wrapper>
       <TableHeading>{title}</TableHeading>
       <Table>
         <TableRow>
-          <Thead>
-            {isLTR
-              ? "For points earned in the system"
-              : "لنقاط المكتسبة في النظام"}
-          </Thead>
-          <Thead>
-            {isLTR
-              ? "The value of the package is in Saudi riyals *Does not include VAT"
-              : "يمة الباقة بالريال السعودي *لا تشمل ضريبة القيمة المضافة"}
-          </Thead>
-          <Thead>
-            {isLTR
-              ? "The number of checks to issue permits *Includes all individuals and vehicles in one permit"
-              : "عدد عمليات التحقق لإصدار تصاريح *تشمل كل الأفراد والمركبات في التصريح الواحد"}
-          </Thead>
-          <Thead>{isLTR ? "Package name" : "اسم الباقة"}</Thead>
+          {head?.map((item, index) => {
+            return (
+              <Thead key={index}>{isLTR ? item.name_en : item.name_ar}</Thead>
+            );
+          })}
         </TableRow>
 
-        {data_head?.map((item) => {
+        {data_head?.map((item, index) => {
           return (
-            <TableRow>
+            <TableRow key={index}>
               <TableData>{isLTR ? item.row_en : item.row_ar}</TableData>
               <TableData>{isLTR ? item.rows_en : item.rows_ar}</TableData>
               <TableData>{item.cost}</TableData>
@@ -61,6 +76,39 @@ const SmartGateTable: React.FC<IProps> = ({ title, data, data_head }) => {
           );
         })}
       </Table>
+      <TableDescription>
+        {translations?.smartgateTableDescription}
+      </TableDescription>
+
+      <TableHeading>
+        {isLTR
+          ? "The cost of subscription packages for Kashif service"
+          : "تكلفة باقات الاشتراك لخدمة كاشف"}
+      </TableHeading>
+
+      <Table className="second-table">
+        <TableRow>
+          {second_head?.map((item, index) => {
+            return (
+              <Thead key={index}>{isLTR ? item.name_en : item.name_ar}</Thead>
+            );
+          })}
+        </TableRow>
+
+        {table_data?.map((item, index) => {
+          return (
+            <TableRow key={index}>
+              <TableData>{isLTR ? item.row1_en : item.row1_ar}</TableData>
+              <TableData>{isLTR ? item.row2_en : item.row2_ar}</TableData>
+              <TableData>{isLTR ? item.row3_en : item.row3_ar}</TableData>
+              <TableData>{isLTR ? item.row4_en : item.row4_ar}</TableData>
+            </TableRow>
+          );
+        })}
+      </Table>
+      <TableDescription>
+        {translations?.smartgateSecondtableDescription}
+      </TableDescription>
     </Wrapper>
   );
 };
