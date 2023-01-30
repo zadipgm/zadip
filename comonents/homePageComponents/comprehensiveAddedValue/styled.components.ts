@@ -14,23 +14,17 @@ position:relative;
 display: flex;
 justify-content: center;
 align-items: center;
-    background: linear-gradient(-30deg,rgb(5 118 188 / 49%) 30%,#38b7ae);
-    
-    border-radius: 15px;
-    padding: 15px;
-@media (max-width: 600px) {
+background: linear-gradient(-30deg,rgb(5 118 188 / 49%) 30%,#38b7ae); 
+border-radius: 15px;
+padding: 15px;
+@media (max-width:600px){
 display: block;
 width: 100%;
 padding: 15px;
 }
-@media (min-width: 1200px) {
-
 width: 1170px;
 padding: 15px;
-}
 margin:0 auto ;
-
-
 `
 export const ImageWrapper = styled.div`
     padding: 20px 0px;

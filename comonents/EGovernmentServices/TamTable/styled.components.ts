@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
 export const Wrapper= styled.div`
+    padding: 15px;
 `
 export const Table = styled.table`
 border-collapse:collapse ;
 width: 100%;
+padding:15px ;
 `
 export const Tbody = styled.tbody``
 export const TableRow = styled.tr`

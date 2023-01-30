@@ -2,9 +2,12 @@ import styled, { css } from "styled-components"
 
 
 export const CardContainer = styled.div`
-@media (min-width: 1200px) {
+
 width:1170px;
 margin: 0 auto ;
+@media (max-width: 600px) {
+   width:100% ;
+
 }
 transition: .5s;
 `

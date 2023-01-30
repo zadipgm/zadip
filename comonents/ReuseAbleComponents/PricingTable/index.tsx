@@ -9,6 +9,7 @@ import {
   TableData,
   Table,
   Tbody,
+  TableContainer,
 } from "./styled.components";
 import { useTheme } from "styled-components";
 interface IProps {
@@ -29,22 +30,24 @@ const PricingTable: React.FC<IProps> = ({
 }) => {
   const { translations } = useTheme();
   return (
-    <Wrapper className={classname}>
+    <Wrapper>
       <TableHeading>{title}</TableHeading>
-      <Table>
-        <Tbody>
-          <TableRow>
-            {data_head?.map((item) => {
-              return <TableData>{item}</TableData>;
-            })}
-          </TableRow>
-          <TableRow>
-            {data?.map((item) => {
-              return <TableData>{item}</TableData>;
-            })}
-          </TableRow>
-        </Tbody>
-      </Table>
+      <TableContainer>
+        <Table>
+          <Tbody>
+            <TableRow>
+              {data_head?.map((item) => {
+                return <TableData>{item}</TableData>;
+              })}
+            </TableRow>
+            <TableRow>
+              {data?.map((item) => {
+                return <TableData>{item}</TableData>;
+              })}
+            </TableRow>
+          </Tbody>
+        </Table>
+      </TableContainer>
       {show && (
         <ConditionWrapper>
           <Heading>{translations?.conditionsTitle}</Heading>

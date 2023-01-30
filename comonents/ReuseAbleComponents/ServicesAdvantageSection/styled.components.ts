@@ -19,6 +19,10 @@ margin:0 ;
 color:#5d666e;
 `
 export const Wrapper = styled.div`
+@media (max-width: 600px) {
+ width:94%;
+ margin:15px auto ;
+}
 padding: 15px;
 margin:15px;
 width:33%;

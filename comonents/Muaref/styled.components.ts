@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-
 width:1170px ;
 margin:0 auto ;
+@media (max-width: 600px) {
+        width: 100%;
+      }
 `
 export const BreadCrumbWrapper = styled.div`
 display:flex ;
@@ -12,6 +14,7 @@ align-items: center;
 margin-top:100px ;
 @media (max-width: 600px) {
  display:block ;
+ padding:0px 15px ;
 }
 `
 export const Heading = styled.h2`
@@ -22,6 +25,10 @@ list-style-type:none ;
 display:flex ;
 justify-content:center ;
 flex-wrap:wrap ;
+@media (max-width: 600px) {
+ 
+ padding:0px
+}
 `
 export const ListItems = styled.li`
     text-align:justify ;

@@ -11,7 +11,9 @@ margin: 20px;
   margin:20px ;
   >button{
     margin:15px ;
-
+    @media(max-width:600px){
+  margin:15px auto ;
+}
   }
 }
     

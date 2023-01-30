@@ -116,9 +116,12 @@ align-items:center ;
 `
 export const SpecsMainSection = styled.div`
 
-@media (min-width: 1200px) {
+
 width: 1170px;
 margin:0 auto ;
+@media (max-width: 600px) {
+       width:100% ;
+
 }
 `
 

@@ -44,8 +44,6 @@ const SliderSlick: React.FC<IProps> = ({
   autoplaySpeed,
   speed,
 }) => {
-  const arrowForw = <ArrowForwardIosIcon color={"primary"} />;
-  const arrowPrev = <ArrowBackIosIcon />;
   const { isLTR } = useTheme();
   const router = useRouter();
   var settings = {
@@ -56,13 +54,9 @@ const SliderSlick: React.FC<IProps> = ({
     autoplaySpeed: autoplaySpeed,
     slidesToShow: sliderToShow,
     slidesToScroll: 1,
-    nextIcon: arrowForw,
-
     rows: rows,
     cssEase: "linear",
     arrows: false,
-
-    prevIcon: arrowPrev,
     responsive: [
       {
         breakpoint: 1024,

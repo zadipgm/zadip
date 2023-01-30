@@ -35,14 +35,14 @@ border-radius:10px ;
 export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    @media (max-width: 600px) {
+    @media (max-width:600px) {
      display:block ;
 
 }
-@media (min-width: 1200px) {
+
 width:1170px ;
 margin: 0 auto;
-}
+
 margin-bottom:50px  ;
 
 `
