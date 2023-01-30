@@ -15,6 +15,7 @@ margin-top:90px ;
 @media(max-width:600px){
     padding:0px 15px ;
     display:block ;
+    text-align: center;
 }
 `
 export const Heading = styled.h2`
