@@ -3,15 +3,22 @@ import styled from "styled-components";
 export const Container= styled.div`
 width:1170px;
 margin: 0 auto;
+@media(max-width:600px){
+  width:100% ;
+}
 `
 export const Wrapper = styled.div`
 display:flex ;
 justify-content:space-between ;
 align-items:center ;
-margin-top:80px ;
+margin-top:90px ;
+@media(max-width:600px){
+    padding:0px 15px ;
+    display:block ;
+}
 `
 export const Heading = styled.h2`
-color:#5d666e;
+color:#2193b0;
 `
 export const ClientWrapper = styled.div``
 export const ClientList = styled.ul`
@@ -27,6 +34,10 @@ margin:20px 0px ;
 export const ClientListItems = styled.li`
 padding:12px ;
 margin:12px ;
+@media(max-width:600px){
+  width:42% ;
+
+}
 border:1px solid #d3cbcb;
 border-radius:10px ;
 transition:.5s ;

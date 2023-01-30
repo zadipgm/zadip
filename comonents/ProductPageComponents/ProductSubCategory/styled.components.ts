@@ -11,11 +11,6 @@ background-position: center center;
     background-size: cover;
 `
 export const ProductSubCategoryWrapper  = styled.div`
-@media (min-width:1200px){
-width: 1170px ;
-margin:0 auto ;
-}
-
 `
 export const ProductCardsItems = styled.ul`
 all: unset;

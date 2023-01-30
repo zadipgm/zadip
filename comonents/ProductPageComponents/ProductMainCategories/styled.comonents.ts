@@ -25,7 +25,7 @@ text-transform:capitalize ;
 
 
 export const ProductCards = styled.div`
-@media (max-width: 600px) {
+@media (max-width:600px) {
 width:100%
 }
 @media (min-width: 1200px) {

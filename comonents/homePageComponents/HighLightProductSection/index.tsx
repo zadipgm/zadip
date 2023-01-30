@@ -28,7 +28,7 @@ const HighLightProductSection = () => {
             ></Description>
           </HighLightProductContent>
           <Eservices>
-            <Image src="/images/eGov.png" alt="" width={400} height={400} />
+            <Image src="/images/eGov.png" alt="" width={100} height={100} />
           </Eservices>
         </HighLightProductWrapper>
         <Elogos>

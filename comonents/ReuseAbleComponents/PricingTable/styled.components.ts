@@ -3,54 +3,17 @@ import styled, { css } from "styled-components";
 export const Conditions = styled.p`
  margin:0 ;
  color:#737c85;
+ @media(max-width:600px){
+    text-align:justify ;
+}
 `
 
 export const Wrapper= styled.div`
-
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}
-@media(max-width:600px){
-    display:block ;
-}
-
-gap:15px;
-    padding: 15px;
-    &.direction{
-        margin:40px 0px ;
-        flex-direction: row-reverse;
-    }
-& .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiTableContainer-root {
-    /* background-color: #E7EBF0; */
-    box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
-   
-    border-radius: 10px;
-    @media(max-width:600px){
-        width:100% ;
-}
-   
-}
+padding:15px ;
 `
-
+export const TableContainer= styled.div`
+overflow-x:auto ;
+`
 export const Table = styled.table`
 border-collapse:collapse ;
     width: 100%;

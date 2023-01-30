@@ -5,10 +5,10 @@ export const  SliderContainer = styled.div`
          display:block ;
          width:100% ;
         }
-    @media (min-width: 1200px) {
+    
             display:block ;
             width:1170px ;
-           }
+      
 margin:0 auto ;
 
 

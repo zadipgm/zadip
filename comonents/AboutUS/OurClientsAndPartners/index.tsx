@@ -20,7 +20,7 @@ const OurClientsAndPartners = () => {
     <Links underline="hover" key="1" color="inherit" href="/">
       {translations?.home}
     </Links>,
-    <Typography key="3" color="text.primary" style={{ color: "#737c85" }}>
+    <Typography key="3" color="text.primary" style={{ color: "#2193b0" }}>
       {translations?.ourClientsandPartners}
     </Typography>,
   ];
@@ -28,7 +28,7 @@ const OurClientsAndPartners = () => {
     <Container>
       <Wrapper>
         <Heading>{translations?.client}</Heading>
-        <Breadcrumb color={"#737c85"} breadcrumbs={breadcrumbs} />
+        <Breadcrumb color={"#2193b0"} breadcrumbs={breadcrumbs} />
       </Wrapper>
       <AnimationBar
         description={translations?.partnerHeadingDes as string}

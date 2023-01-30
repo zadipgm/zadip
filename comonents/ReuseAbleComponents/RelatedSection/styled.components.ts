@@ -6,10 +6,12 @@ background-image:url("https://bootstrapmade.com/demo/templates/Sailor/assets/img
 `
 export const RelatedWrapper= styled.div`
 padding: 15px;
-@media(min-width:1200px) {
+
     width:1170px ;
     margin: 0 auto;
-} 
+    @media (max-width: 600px) {
+width:100% ;
+}
 `
 export const ProductCardsItems = styled.ul`
     all: unset;

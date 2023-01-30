@@ -107,7 +107,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
       {/* e_Govservices  */}
 
       {type === "masarat" || type === "tam" || type === "muqeem" ? (
-        <div style={{ maxWidth: "1170px", margin: "0 auto" }}>
+        <div>
           <PageBreadCrumbWrapper>
             <GoBackButton onClick={() => router.back()}>
               <KeyboardBackspaceIcon />
@@ -203,7 +203,7 @@ const ServicesDetail: React.FC<IProps> = ({ page }) => {
       )}
 
       {type === "muaref" && (
-        <div style={{ maxWidth: "1170px", margin: "0 auto" }}>
+        <div>
           <MuarefDetails />
         </div>
       )}

@@ -9,9 +9,8 @@ export const FooterWrapper = styled.div`
 width:100% ;
 display:block ;
 }
-@media (min-width: 1200px) {
-        width:1170px ;
-        }
+
+width:1170px ;
 margin: 0 auto;
 `
 
@@ -23,9 +22,8 @@ align-items: flex-start;
 width:100% ;
 display:block ;
 }
-@media (min-width: 1200px) {
-        width:1170px ;
-        }
+width:1170px ;
+margin:0 auto ;
 `
 export const FooterUL = styled.ul`	
 list-style: none;
@@ -40,9 +38,8 @@ width:100% ;
 display:block ;
 padding:0 ;
 }
-@media (min-width: 1200px) {
 width:1170px ;
-}
+margin:0 auto;
 padding: 0 15px;
 `
 export const FooterHeading =  styled.h4`   

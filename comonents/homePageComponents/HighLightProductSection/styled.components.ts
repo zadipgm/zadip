@@ -4,7 +4,7 @@ export const HighLightProductSectionContainer = styled.div`
 
 background: linear-gradient(-30deg,#d6ecf9 30%,#a7f5ef);
 width: 1170px;
-    @media (max-width: 600px) {
+    @media (max-width:600px) {
      display:block ;
      width:100% ;
      padding:0px 0px 40px 0px ;
@@ -27,6 +27,11 @@ width:40% ;
 }
 @media (max-width: 600px) {
      width:100% ;
+     > img{
+  
+    height:350px ;
+    width:350px ;
+}
  }
 `
 export const HighLightProductContent = styled.div`

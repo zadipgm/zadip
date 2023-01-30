@@ -14,11 +14,11 @@ box-shadow: 0 0 35px rgb(0 0 0 / 10%);
          display:block ;
          width:100% ;
         }
-    @media (min-width: 1200px) {
+   
             display:block ;
             width:1170px ;
            
-           }
+           
 }
 `
 export const TwitterIconWrapper =  styled.div`

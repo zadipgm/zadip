@@ -15,7 +15,7 @@ import Slider from "react-slick";
 import { useTheme } from "styled-components";
 import Link from "next/link";
 const FeatureSection = () => {
-  const { isLTR, translations } = useTheme();
+  const { isLTR, translations, device } = useTheme();
   const settings = {
     dots: true,
     infinite: true,
@@ -23,8 +23,19 @@ const FeatureSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
-    // autoplay: true,
+    autoplay: true,
+    arrows: false,
     easing: "linear",
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+    ],
   };
   return (
     <FeatureSectionParent>
@@ -62,8 +73,8 @@ const FeatureSection = () => {
               <EktefaImage
                 src="/images/ektefa1.svg"
                 alt="ektefa"
-                width={657}
-                height={438}
+                width={device === "desktop" ? 657 : 350}
+                height={device === "desktop" ? 438 : 350}
               />
             </EktefaImageWrapper>
           </EktefaWrapper>
@@ -91,8 +102,8 @@ const FeatureSection = () => {
               <EktefaImage
                 src="/images/nafeth.svg"
                 alt="nafeth"
-                width={657}
-                height={438}
+                width={device === "desktop" ? 657 : 350}
+                height={device === "desktop" ? 438 : 350}
               />
             </EktefaImageWrapper>
           </EktefaWrapper>
@@ -120,8 +131,8 @@ const FeatureSection = () => {
               <EktefaImage
                 src="/images/mauref.svg"
                 alt="mauref"
-                width={657}
-                height={438}
+                width={device === "desktop" ? 657 : 350}
+                height={device === "desktop" ? 438 : 350}
               />
             </EktefaImageWrapper>
           </EktefaWrapper>
@@ -149,8 +160,8 @@ const FeatureSection = () => {
               <EktefaImage
                 src="/images/ehtiwa.svg"
                 alt="ehtiwa"
-                width={657}
-                height={438}
+                width={device === "desktop" ? 657 : 350}
+                height={device === "desktop" ? 438 : 350}
               />
             </EktefaImageWrapper>
           </EktefaWrapper>
@@ -176,8 +187,8 @@ const FeatureSection = () => {
               <EktefaImage
                 src="/images/cadre.svg"
                 alt="ektefa"
-                width={657}
-                height={438}
+                width={device === "desktop" ? 657 : 350}
+                height={device === "desktop" ? 438 : 350}
               />
             </EktefaImageWrapper>
           </EktefaWrapper>

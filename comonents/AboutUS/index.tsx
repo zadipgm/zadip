@@ -17,7 +17,7 @@ import OurPartnerSection from "../homePageComponents/OurPartnerSection";
 import ListComponent from "../ReuseAbleComponents/ListComponent";
 import list from "../../DataLayer/list.json";
 const AboutUS = () => {
-  const { translations } = useTheme();
+  const { translations, device } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
       {translations?.home}
@@ -47,7 +47,12 @@ const AboutUS = () => {
             }}
           ></AboutusDescription>
         </DesWrapper>
-        <img src="/images/abouts-side-svg.svg" alt="about-img" width={"50%"} />
+        <img
+          src="/images/abouts-side-svg.svg"
+          alt="about-img"
+          width={device === "desktop" ? "50%" : "100%"}
+          height={"100%"}
+        />
       </AboutCompanyWrapper>
       <AnimationBar
         title={translations?.ourGoal}

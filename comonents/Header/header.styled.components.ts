@@ -8,6 +8,7 @@ margin:0 auto ;
 height:99px ;
 @media(max-width:600px){
   width:100% ;
+  padding: 15px;
 }
 `
 export const HeaderWrapper = styled.div`
@@ -21,7 +22,6 @@ background: linear-gradient(-30deg,#0676bb5e 30%,#38b7ae4f);
 backdrop-filter: saturate(180%) blur(5px);
 
 &.scrolled {
-
   opacity:.9 ;
   background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
   animation: rotateMenu 1000ms ease-in-out;
@@ -229,9 +229,8 @@ width:250px ;
   
 }
 `
+
 export const LogoWrapper= styled.div`
-
-
 `
 export const MenuListWrapper= styled.div`
 display: flex;
@@ -283,6 +282,39 @@ ${({ theme }) =>
   left:12% ;
   `}
   }
+  @media (max-width: 390px) {
+top: 68%;
+${({ theme }) =>
+  theme.isLTR
+  ? css`
+    left:7px;
+      `
+  : css`
+  right:7px;
+  `}
+  }
+  @media (max-width: 375px) {
+top: 60%;
+${({ theme }) =>
+  theme.isLTR
+  ? css`
+    left:0;
+      `
+  : css`
+  right:0;
+  `}
+  }
+  @media (max-width: 360px) {
+top: 60%;
+${({ theme }) =>
+  theme.isLTR
+  ? css`
+    right:10px;
+      `
+  : css`
+  left:10px;
+  `}
+  }
 `
 export const Text = styled.p<{lineHeight?:string}>`
 margin:0 ;
@@ -312,7 +344,7 @@ left:50.4% ;
 right:50.4%;
 @media (max-width: 600px) {
   left: 51.6%;
-  right: 50.6%;
+  right: 51.6%;
 }
 width:25px ;
 height:25px ;
@@ -328,11 +360,7 @@ animation-iteration-count: infinite;
   to {bottom: 60px;}
   }
 `
-export  const HeaderTopBannerContainer = styled.div`
-width:100% ;
-background-color: #34495E;
-background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
-`
+
 export const LangButton = styled.a`
 text-decoration:none ;
 display: inline-block;
@@ -349,14 +377,15 @@ border:none ;
 margin: 0px 11px ;
 :hover{
 background-color:#6fc5e8;
-transition:.6s ;
+transition:.6s;
 }
-`
-export const Divider = styled.div`
-width: 100vw;
-height: 3px;
-background-image: url("https://zadip.com/images/components/stripe.png");
-background-repeat: repeat-x;
+&.mobile-lang {
+  padding: 6px 12px;
+    background: #fff;
+    color: #044783;
+    font-weight: 600;
+    margin: 5px;
+}
 `
 export const VideoWrapper = styled.div<{background:string}>`
 position: relative;
@@ -381,8 +410,9 @@ left: 0;
 export const Video= styled.video`
 width:100% ;
 @media (max-width: 600px) {
-height: 100vh;
-width:auto ;
+  width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 `
 export const ScrollTopButton =  styled.button`
@@ -403,6 +433,74 @@ z-index: 9999;
 :hover{
   background: #38b7ae;
   transition: .5s;
+}
+
+`
+
+
+// ..............................mobile header styles.......................
+
+
+export const MobileHeaderList = styled.ul`
+list-style-type:none ;
+padding:15px;
+margin:0 ;
+`
+export const MobileHeaderListItem = styled.li`
+color:#fff ;
+font-size:18px ;
+`
+export const MobileHeaderListLink = styled.a`
+text-decoration:none ;
+text-transform:capitalize ;
+font-size:18px ;
+color: #fff;
+`
+export const CloseIconWrapper= styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+export const BurgerMenu =styled.div`
+display:none ;
+>svg {
+  width: 50px;
+    height: 50px;
+    display: block;
+}
+@media(max-width:600px){
+  display:block ;
+}
+`
+export const ListTitle= styled.span`
+text-transform:capitalize ;
+font-size:18px ;
+color: #fff;
+`
+export const InnerList =styled.ul`
+list-style-type:none ;
+margin:0 ;
+`
+export const NestedList= styled.ul`
+list-style-type:none ;
+`
+export const NestedListItems =styled.li``
+export const NestedListItemsLink =styled.a`
+color:#0106a9 ;
+display:flex ;
+justify-content:flex-start ;
+align-items:center ;
+gap:12px;
+margin:6px ;
+font-size:18px ;
+`
+export const IconWrapper = styled.div`
+display:flex ;
+justify-content: flex-start;
+align-items:center ;
+color:#fff ;
+>svg {
+  margin: 0px 6px;
 }
 
 `

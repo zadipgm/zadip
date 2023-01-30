@@ -9,6 +9,10 @@ flex-wrap: wrap;
 `
 export const ListItem =styled.li`
     width: 25%;
+    @media (max-width:600px) {
+        width: 100%;
+        padding:15px ;
+      }
     padding: 8px 10px;
     display: flex;
 color:#737c85;

@@ -8,20 +8,8 @@ margin:0 auto ;
   }
 `
 export const FeatureSectionContainer = styled.div`
-/* display:flex ;
-justify-content:center ;
-align-items:center ;
-width:1170px ;
-margin:0 auto ;
-@media (max-width: 600px) {
-   width:100% ;
-   display:block ;
-  } */
-
-  
 `
 export const  FeatureSectionWrapper = styled.div`
-
 >a{
     text-decoration:none ;
     ${({ theme }) =>
@@ -129,8 +117,9 @@ width:100% ;
 }
 `;  
 export const EktefaImage = styled.img`
-@media (max-width: 600px) {
 width:100% ;
+@media (max-width: 600px) {
+width:350px;
 max-height: 300px;
 }
 `;  

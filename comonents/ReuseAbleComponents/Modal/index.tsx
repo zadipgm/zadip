@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { Wrapper } from "./styled.components";
+import { useTheme } from "styled-components";
 
 const style = {
   position: "absolute" as "absolute",
@@ -17,6 +18,21 @@ const style = {
   outline: "none",
   boxShadow: 24,
 };
+const mobilestyle = {
+  position: "absolute" as "absolute",
+  top: "50%",
+  left: "50%",
+  height: "100%",
+  transform: "translate(-50%, -50%)",
+  width: "100%",
+  background: "linear-gradient(-30deg,#0576bc 30%,#38b7ae91);",
+  border: "none",
+  outline: "none",
+  boxShadow: 24,
+  zIndex: "9999",
+  overflow: "scroll",
+  transition: ".5s",
+};
 interface IProps {
   open: boolean;
   handleClose: () => void;
@@ -29,6 +45,7 @@ const ModalComponent: React.FC<IProps> = ({
   children,
   classname,
 }) => {
+  const { device } = useTheme();
   return (
     <Wrapper className={classname}>
       <Modal
@@ -36,8 +53,9 @@ const ModalComponent: React.FC<IProps> = ({
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        className={classname}
       >
-        <Box sx={style}>{children}</Box>
+        <Box sx={device === "desktop" ? style : mobilestyle}>{children}</Box>
       </Modal>
     </Wrapper>
   );

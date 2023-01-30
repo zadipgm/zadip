@@ -49,7 +49,7 @@ align-items: center;
 margin-top:100px ;
 @media (max-width: 600px) {
   display:block ;
-
+padding: 0px 15px ;
       }
 `
 export const Heading = styled.h2`

@@ -56,4 +56,8 @@ text-align:center ;
 margin: 0 auto;
 font-size:${({fontSize})=>fontSize} ;
 font-weight:${({fontWeight})=>fontWeight} ;
+@media (max-width: 600px) {
+text-align:justify ;
+      }
+
 `
