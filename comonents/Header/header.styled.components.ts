@@ -3,12 +3,18 @@ export const Container = styled.div`
 display:flex ;
 justify-content: space-between;
 align-items:center ;
-width:1170px;
-margin:0 auto ;
 height:99px ;
+width:100% ;
+margin:0 auto ;
 @media(max-width:600px){
   width:100% ;
   padding: 15px;
+}
+@media(min-width:600px){
+  width:100% ;
+}
+@media(min-width:1440px){
+  width:1170px;
 }
 `
 export const HeaderWrapper = styled.div`
@@ -20,7 +26,6 @@ z-index:9999;
 width: 100%;
 background: linear-gradient(-30deg,#0676bb5e 30%,#38b7ae4f);
 backdrop-filter: saturate(180%) blur(5px);
-
 &.scrolled {
   opacity:.9 ;
   background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
@@ -58,6 +63,15 @@ margin:0 ;
 padding:0 ;
 @media(max-width:600px){
   display:none ;
+}
+@media(min-width:600px){
+  display:none ;
+}
+@media(min-width:992px){
+  display:flex ;
+}
+@media(min-width:1440px){
+  display:flex;
 }
 `
 export const ImageContainer =styled.div`
@@ -271,49 +285,21 @@ export const MainHeading =styled.div`
   : css`
   left:6% ;
   `}
+ 
 @media (max-width: 600px) {
+  top:63% ;
 ${({ theme }) =>
   theme.isLTR
   ? css`
-    left:4% ;
+    left:4%;
     top:66% ;
       `
   : css`
-  left:12% ;
+  left:4% ;
   `}
   }
-  @media (max-width: 390px) {
-top: 68%;
-${({ theme }) =>
-  theme.isLTR
-  ? css`
-    left:7px;
-      `
-  : css`
-  right:7px;
-  `}
-  }
-  @media (max-width: 375px) {
-top: 60%;
-${({ theme }) =>
-  theme.isLTR
-  ? css`
-    left:0;
-      `
-  : css`
-  right:0;
-  `}
-  }
-  @media (max-width: 360px) {
-top: 60%;
-${({ theme }) =>
-  theme.isLTR
-  ? css`
-    right:10px;
-      `
-  : css`
-  left:10px;
-  `}
+  @media (min-width: 390px) {
+    top:70% ;
   }
 `
 export const Text = styled.p<{lineHeight?:string}>`
@@ -323,8 +309,8 @@ font-weight: 600;
 color:#fff;
 line-height:${({lineHeight})=>lineHeight} ;
 @media(max-width:600px){
-    font-size: 59px;
-    line-height: 76px;
+    font-size: 40px;
+    line-height: 55px;
 }
 `
 export const IconsWrapper = styled.div`
@@ -336,6 +322,10 @@ right:50%;
 width:40px ;
 height:40px ;
 fill:#fff ;
+@media(max-width:600px){
+    bottom: 49px;
+}
+
 }
 & .down-arrow{
 position:absolute ;
@@ -406,6 +396,13 @@ left: 0;
     object-fit:cover ;
   }
 }
+@media (min-width:600px) {
+  video{
+    width: 100%;
+    height: 100vh;
+    object-fit:cover ;
+  }
+}
 `
 export const Video= styled.video`
 width:100% ;
@@ -416,7 +413,6 @@ width:100% ;
 }
 `
 export const ScrollTopButton =  styled.button`
-
 position: fixed;
 padding: 16px 20px;
 font-size: 20px;
@@ -433,74 +429,6 @@ z-index: 9999;
 :hover{
   background: #38b7ae;
   transition: .5s;
-}
-
-`
-
-
-// ..............................mobile header styles.......................
-
-
-export const MobileHeaderList = styled.ul`
-list-style-type:none ;
-padding:15px;
-margin:0 ;
-`
-export const MobileHeaderListItem = styled.li`
-color:#fff ;
-font-size:18px ;
-`
-export const MobileHeaderListLink = styled.a`
-text-decoration:none ;
-text-transform:capitalize ;
-font-size:18px ;
-color: #fff;
-`
-export const CloseIconWrapper= styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
-export const BurgerMenu =styled.div`
-display:none ;
->svg {
-  width: 50px;
-    height: 50px;
-    display: block;
-}
-@media(max-width:600px){
-  display:block ;
-}
-`
-export const ListTitle= styled.span`
-text-transform:capitalize ;
-font-size:18px ;
-color: #fff;
-`
-export const InnerList =styled.ul`
-list-style-type:none ;
-margin:0 ;
-`
-export const NestedList= styled.ul`
-list-style-type:none ;
-`
-export const NestedListItems =styled.li``
-export const NestedListItemsLink =styled.a`
-color:#0106a9 ;
-display:flex ;
-justify-content:flex-start ;
-align-items:center ;
-gap:12px;
-margin:6px ;
-font-size:18px ;
-`
-export const IconWrapper = styled.div`
-display:flex ;
-justify-content: flex-start;
-align-items:center ;
-color:#fff ;
->svg {
-  margin: 0px 6px;
 }
 
 `

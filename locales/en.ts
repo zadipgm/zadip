@@ -1,7 +1,7 @@
 const english = {
 language: "العربية",
-home:"home",
-products:"product",
+home:"Home",
+products:"products",
 services:"services",
 aboutUs:"About Us",
 Career:"Career",

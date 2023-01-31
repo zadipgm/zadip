@@ -1,11 +1,17 @@
 import styled, { css } from "styled-components";
 export const FeatureSectionParent = styled.div`
-width:1170px ;
+width:100% ;
 margin:0 auto ;
 @media (max-width: 600px) {
    width:100% ;
    display:block ;
   }
+  @media (min-width: 600px) {
+     width:100% ;
+ }
+ @media (min-width: 1440px) {
+     width:1170px;
+ }
 `
 export const FeatureSectionContainer = styled.div`
 `

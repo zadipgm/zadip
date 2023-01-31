@@ -10,7 +10,6 @@ import {
   CloseIconWrapper,
   IconWrapper,
   InnerList,
-  LangButton,
   ListTitle,
   MobileHeaderList,
   MobileHeaderListItem,
@@ -18,10 +17,17 @@ import {
   NestedList,
   NestedListItems,
   NestedListItemsLink,
-} from "../header.styled.components";
+} from "./styled.components";
 import header_data from "../../../DataLayer/header.json";
 import IconComponent from "../../ReuseAbleComponents/IconComponent";
 import CloseSvg from "../../../public/icons/closeSvg";
+import PhoneSvg from "../../../public/icons/phoneSvg";
+import HomeSvg from "../../../public/icons/homeSvg";
+import AboutSvg from "../../../public/icons/aboutSvg";
+import SecurehSvg from "../../../public/icons/secureSvg";
+import AccurateSvg from "../../../public/icons/acurateSvg";
+import UsersSvg from "../../../public/icons/opencartSvg";
+import { LangButton } from "../header.styled.components";
 
 const MobileHeader = () => {
   const { isLTR, translations, locale, device } = useTheme();
@@ -82,12 +88,16 @@ const MobileHeader = () => {
             </CloseIconWrapper>
             <MobileHeaderList>
               <MobileHeaderListItem>
-                <MobileHeaderListLink href="/">
+                <NestedListItemsLink href="/">
+                  <HomeSvg width="25px" height="25px" fill="#fff" />{" "}
                   {translations?.home}
-                </MobileHeaderListLink>
+                </NestedListItemsLink>
               </MobileHeaderListItem>
               <MobileHeaderListItem>
-                <ListTitle>{translations?.products}</ListTitle>
+                <MobileHeaderListLink href="#">
+                  <UsersSvg width="25px" height="25px" fill="#fff" />{" "}
+                  <ListTitle>{translations?.products}</ListTitle>
+                </MobileHeaderListLink>
                 <InnerList>
                   <li>
                     <IconWrapper>
@@ -146,6 +156,7 @@ const MobileHeader = () => {
               </MobileHeaderListItem>
               <MobileHeaderListItem>
                 <MobileHeaderListLink href="#">
+                  <AboutSvg fill={"#fff"} width="25px" height="25px" />
                   {translations?.aboutUs}
                 </MobileHeaderListLink>
               </MobileHeaderListItem>
@@ -168,7 +179,7 @@ const MobileHeader = () => {
               </NestedList>
               <li>
                 <NestedListItemsLink href={"tel:// 9200 10047"}>
-                  920010047
+                  <PhoneSvg fill="#fff" width="25px" height="25px" /> 920010047
                 </NestedListItemsLink>
               </li>
             </MobileHeaderList>

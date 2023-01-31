@@ -22,6 +22,9 @@ svg{
   fill:#fff ;  
   margin:0px 5px ;
 }
+&.mobile-button{
+  margin:20px 0px ;
+}
 @media(max-width:600px){
   width: 100%;
   margin:0 auto ;

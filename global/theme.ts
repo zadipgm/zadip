@@ -8,7 +8,7 @@ declare module "styled-components" {
     | typeof import("../locales/en").default;
     direction: "rtl" | "ltr";
     isLTR: boolean;
-    device:"mobile" | "desktop";
+    device:"mobile" | "desktop" | "tablet";
     isRTL: boolean;
     locale: "ar" | "en-US" |"en";
     colors: {

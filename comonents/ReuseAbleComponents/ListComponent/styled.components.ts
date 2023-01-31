@@ -13,6 +13,14 @@ export const ListItem =styled.li`
         width: 100%;
         padding:15px ;
       }
+      @media (min-width:600px) {
+        width: 50%;
+        padding:15px ;
+      }
+      @media (min-width:1024px) {
+        width: 25%;
+       
+      }
     padding: 8px 10px;
     display: flex;
 color:#737c85;

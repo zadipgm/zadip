@@ -34,11 +34,8 @@
         { 
             "name_en":"IP exchange systems of all kinds",
             "name_ar" : "أنظمة سنترالات الاي بي بأنواعها"
-        },
-        {
-            "name_en": "Attendance, departure and fingerprint systems",
-            "name_ar" : "أنظمة أجهزة الحضور والانصراف والبصمة"
         }
+        
         ],
         "about_list": [
             {

@@ -6,7 +6,12 @@ margin: 0 auto;
 margin-bottom:30px ;
 @media (max-width: 600px) {
 width:100% ;
-
+}
+@media (min-width: 600px) {
+width:100% ;
+}
+@media (min-width: 1440px) {
+width:1170px ;
 }
 `
 export const Wrapper = styled.div`
@@ -18,6 +23,9 @@ margin-top:80px ;
  display:block ;
  padding:0px 15px ;
  text-align: center;
+}
+@media (min-width: 600px) {
+ padding:0px 15px ;
 }
 `
 export const Heading = styled.h2`
