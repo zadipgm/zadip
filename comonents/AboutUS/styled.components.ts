@@ -1,9 +1,15 @@
 import styled from "styled-components";
 export const AboutUsContainer = styled.div`
-width:1170px ;
+
 margin:0 auto ;
 @media (max-width: 600px) {
         width: 100%;
+      }
+      @media (min-width: 600px) {
+        width: 100%;
+      }
+      @media (min-width: 1440px) {
+        width:1170px ;
       }
 `
 export const BreadCrumbWrapper = styled.div`
@@ -15,6 +21,9 @@ margin-top:100px ;
  display:block ;
  padding:0px 15px ;
  text-align: center;
+}
+@media (min-width: 600px) {
+ padding:0px 15px ;
 }
 `
 export const AboutHeading = styled.h2`
@@ -28,15 +37,27 @@ padding:15px ;
 >img {
     padding:8px ;
     border-radius: 37px;
+   
 }
 @media (max-width: 600px) {
  display:block ;
 }
+@media (min-width: 600px) {
+ display:block ;
+}
+@media (min-width: 1024px) {
+ display:flex ;
+}
+
 `
 export const DesWrapper = styled.div`
 width:50% ;
 padding:15px ;
 @media (max-width: 600px) {
+width:100% ;
+padding:0 ;
+}
+@media (min-width: 600px) {
 width:100% ;
 padding:0 ;
 }
@@ -52,6 +73,10 @@ text-align:justify ;
 export const ImageWrapper =styled.div`
 width:50% ;
 @media (max-width: 600px) {
+width:100% ;
+padding:0 ;
+}
+@media (min-width: 600px) {
 width:100% ;
 padding:0 ;
 }

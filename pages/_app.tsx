@@ -31,10 +31,14 @@ const MyApp = ({
   theme.isRTL = locale === "ar";
   theme.locale = locale === "en-US" || locale === "en" ? "en" : "ar";
   React.useEffect(() => {
-    if (window?.innerWidth > 600) {
-      theme.device = "desktop";
-    } else {
+    if (window?.innerWidth <= 600) {
       theme.device = "mobile";
+    }
+    if (window?.innerWidth >= 600 && window?.innerWidth <= 1024) {
+      theme.device = "tablet";
+    }
+    if (window?.innerWidth >= 1024) {
+      theme.device = "desktop";
     }
   }, []);
 

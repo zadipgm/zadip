@@ -3,11 +3,17 @@ import styled from "styled-components";
 export const HighLightProductSectionContainer = styled.div`
 
 background: linear-gradient(-30deg,#d6ecf9 30%,#a7f5ef);
-width: 1170px;
-    @media (max-width:600px) {
-     display:block ;
+padding:0px 0px 40px 0px ;
+display:block ;
+
+@media (max-width:600px) {
      width:100% ;
-     padding:0px 0px 40px 0px ;
+ }
+ @media (min-width:600px) {
+     width:100% ;
+ }
+ @media (min-width:1440px) {
+     width:1170px ;
  }
     margin:  50px auto auto;
     border-radius: 15px;  
@@ -24,15 +30,15 @@ export const Eservices =  styled.div`
 width:40% ;
 > img{
     padding: 12px;
+    width:100% ;
 }
 @media (max-width: 600px) {
      width:100% ;
-     > img{
-  
-    height:350px ;
-    width:350px ;
-}
  }
+ @media (min-width: 1440px) {
+     width:350px ;
+ }
+
 `
 export const HighLightProductContent = styled.div`
 width:60% ;
@@ -58,6 +64,7 @@ export const Elogos = styled.div`
     align-items: center;
     @media (max-width: 600px) {
     display:block ;
+        text-align: center;
  }
    > a > img{
         cursor: pointer;
@@ -65,7 +72,10 @@ export const Elogos = styled.div`
     margin: 0px 20px 0px;
     @media (max-width: 600px) {
         margin: 0;
- }
+    }
+    @media (min-width: 600px) {
+        margin: 0;
+    }
  transition: transform .2s;
  :hover{
   transform: scale(1.2); 

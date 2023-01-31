@@ -1,23 +1,17 @@
 import styled, { css } from "styled-components";
 
 export const  SliderContainer = styled.div`
-        @media (max-width: 600px) {
-         display:block ;
-         width:100% ;
-        }
-    
-            display:block ;
-            width:1170px ;
-      
-margin:0 auto ;
-
-
-
-
- 
- 
-
-
+@media (max-width: 600px) {
+     width:100% ;
+    }
+    @media (min-width: 600px) {
+    width:100% ;
+    }
+    @media (min-width: 1440px) {
+    width:1170px ;
+    }
+    display:block ;
+    margin:0 auto ;
 `
 export const SliderWrapper = styled.div`
 &.recent-news{

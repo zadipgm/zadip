@@ -74,7 +74,7 @@ const TwitterSliderSection = () => {
     prevIcon: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1440px,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

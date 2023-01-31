@@ -1,10 +1,16 @@
 import styled from "styled-components";
 
 export const Container =styled.div`
-width:1170px ;
+
 margin: 0 auto; 
 @media (max-width: 600px) {
      width:100% ;
+ }
+ @media (min-width: 600px) {
+     width:100% ;
+ }
+ @media (min-width: 1440px) {
+    width:1170px ;
  }
 `
 export const Wrapper = styled.div`

@@ -1,16 +1,19 @@
 import styled from "styled-components"
-
 export const FooterContainer= styled.div`
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
-    padding: 12px;
+background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+padding: 12px;
 `
 export const FooterWrapper = styled.div`
 @media (max-width: 600px) {
 width:100% ;
 display:block ;
 }
-
-width:1170px ;
+@media (min-width: 600px) {
+     width:100% ;
+ }
+ @media (min-width: 1440px) {
+    width:1170px ;
+ }
 margin: 0 auto;
 `
 
@@ -22,23 +25,34 @@ align-items: flex-start;
 width:100% ;
 display:block ;
 }
-width:1170px ;
+@media (min-width: 600px) {
+     width:100% ;
+ }
+ @media (min-width: 1440px) {
+    width:1170px ;
+ }
 margin:0 auto ;
 `
 export const FooterUL = styled.ul`	
 list-style: none;
 padding: 0;
 margin: 0;
-
 `
 export const FooterCol = styled.div`
 width: 50%;
+display:block ;
+
 @media (max-width: 600px) {
 width:100% ;
-display:block ;
 padding:0 ;
 }
+@media (min-width: 600px) {
+width:100% ;
+padding:0 ;
+}
+@media (min-width: 1440px) {
 width:1170px ;
+}
 margin:0 auto;
 padding: 0 15px;
 `
@@ -70,7 +84,6 @@ transition:.5s ;
 :hover {
     color: #6fc5e8;
 transition:.5s ;
-
 }
 }
 

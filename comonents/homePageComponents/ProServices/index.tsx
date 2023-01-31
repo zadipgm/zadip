@@ -13,7 +13,7 @@ import {
   Wrapper,
 } from "./styled.components";
 const ProfessionalServices = () => {
-  const { isLTR, translations, locale } = useTheme();
+  const { device, translations, locale } = useTheme();
   const router = useRouter();
   return (
     <Container>
@@ -22,11 +22,13 @@ const ProfessionalServices = () => {
           <Title>{translations?.proservicesTitle}</Title>
           <SubTitle>{translations?.projects_it}</SubTitle>
           <Text>{translations?.professionalServices as string}</Text>
-          <Button
-            onClick={() => router.push(`/${locale}/professional_services`)}
-          >
-            {translations?.viewmore}
-          </Button>
+          {device === "desktop" && (
+            <Button
+              onClick={() => router.push(`/${locale}/professional_services`)}
+            >
+              {translations?.viewmore}
+            </Button>
+          )}
         </TextWrapper>
         <IamgeWrapper>
           <img
@@ -35,6 +37,22 @@ const ProfessionalServices = () => {
             width={"100%"}
             height={"auto"}
           />
+          {device === "mobile" && (
+            <Button
+              className="mobile-button"
+              onClick={() => router.push(`/${locale}/professional_services`)}
+            >
+              {translations?.viewmore}
+            </Button>
+          )}
+          {device === "tablet" && (
+            <Button
+              className="mobile-button"
+              onClick={() => router.push(`/${locale}/professional_services`)}
+            >
+              {translations?.viewmore}
+            </Button>
+          )}
         </IamgeWrapper>
       </Wrapper>
     </Container>
