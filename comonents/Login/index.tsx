@@ -9,13 +9,9 @@ import {
   Wrapper,
   SvgWrapper,
 } from "./styled.components";
-interface IProps {
-  handleClose: () => void;
-}
 
-const LogIn = ({ handleClose }: IProps) => {
+const LogIn = () => {
   const close = () => {
-    handleClose();
     console.log("here is close");
   };
   return (
