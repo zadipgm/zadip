@@ -59,7 +59,7 @@ padding:0 ;
 }
 @media (min-width: 600px) {
 width:100% ;
-padding:0 ;
+padding:12px ;
 }
 `
 export const Title = styled.h3`

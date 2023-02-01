@@ -2,13 +2,24 @@ import styled, { css } from "styled-components";
 export const Wrapper= styled.div`
     padding: 15px;
 `
+export const TableWrapper =styled.div`
+overflow-x:auto ;
+width:100% ;
+`
 export const Table = styled.table`
-border-collapse:collapse ;
-overflow:scroll ;
-width: 100%;
+ border-collapse: collapse;
+  border-spacing: 0;
+@media(max-width:600px){
+   width: 900px; ;
+}
+@media(min-width:600px){
+    width:900px ;
+}
+@media(min-width:1024px){
+    width:100%;
+}
 padding:15px ;
 &.second-table{
-    overflow:scroll ;
     > tr{
         :nth-child(3){
            > td{
@@ -174,9 +185,10 @@ export const TableRow = styled.tr`
 `
 export const Thead =styled.th`
 font-weight:700 ;
-    padding: 0px 12px;
+border: 1px solid #ddd;
+padding:6px;
 color:#2193b0 ;
-font-size:18px ;
+font-size:14px ;
 ${({theme})=>
     theme.isLTR
     ?css`
@@ -189,7 +201,6 @@ ${({theme})=>
 `
 export const TableData = styled.td`
 padding: 12px;
-width:28% ;
 ${({theme})=>
     theme.isLTR
     ?css`

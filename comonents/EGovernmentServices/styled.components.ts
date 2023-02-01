@@ -31,3 +31,9 @@ margin-top:80px ;
 export const Heading = styled.h2`
 color:#2193b0 ;
 `
+export const ButtonsWrapper= styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 25px;
+`

@@ -7,6 +7,7 @@ import {
   Table,
   Thead,
   TableDescription,
+  TableWrapper,
 } from "../TamTable/styled.components";
 import { useTheme } from "styled-components";
 interface IData {
@@ -56,26 +57,33 @@ const SmartGateTable: React.FC<IProps> = ({
   return (
     <Wrapper>
       <TableHeading>{title}</TableHeading>
-      <Table>
-        <TableRow>
-          {head?.map((item, index) => {
-            return (
-              <Thead key={index}>{isLTR ? item.name_en : item.name_ar}</Thead>
-            );
-          })}
-        </TableRow>
-
-        {data_head?.map((item, index) => {
-          return (
-            <TableRow key={index}>
-              <TableData>{isLTR ? item.row_en : item.row_ar}</TableData>
-              <TableData>{isLTR ? item.rows_en : item.rows_ar}</TableData>
-              <TableData>{item.cost}</TableData>
-              <TableData>{isLTR ? item.costs_en : item.costs_ar}</TableData>
+      <TableWrapper>
+        <Table>
+          <thead>
+            <TableRow>
+              {head?.map((item, index) => {
+                return (
+                  <Thead key={index}>
+                    {isLTR ? item.name_en : item.name_ar}
+                  </Thead>
+                );
+              })}
             </TableRow>
-          );
-        })}
-      </Table>
+          </thead>
+          <tbody>
+            {data_head?.map((item, index) => {
+              return (
+                <TableRow key={index}>
+                  <TableData>{isLTR ? item.row_en : item.row_ar}</TableData>
+                  <TableData>{isLTR ? item.rows_en : item.rows_ar}</TableData>
+                  <TableData>{item.cost}</TableData>
+                  <TableData>{isLTR ? item.costs_en : item.costs_ar}</TableData>
+                </TableRow>
+              );
+            })}
+          </tbody>
+        </Table>
+      </TableWrapper>
       <TableDescription>
         {translations?.smartgateTableDescription}
       </TableDescription>
@@ -85,27 +93,33 @@ const SmartGateTable: React.FC<IProps> = ({
           ? "The cost of subscription packages for Kashif service"
           : "تكلفة باقات الاشتراك لخدمة كاشف"}
       </TableHeading>
-
-      <Table className="second-table">
-        <TableRow>
-          {second_head?.map((item, index) => {
-            return (
-              <Thead key={index}>{isLTR ? item.name_en : item.name_ar}</Thead>
-            );
-          })}
-        </TableRow>
-
-        {table_data?.map((item, index) => {
-          return (
-            <TableRow key={index}>
-              <TableData>{isLTR ? item.row1_en : item.row1_ar}</TableData>
-              <TableData>{isLTR ? item.row2_en : item.row2_ar}</TableData>
-              <TableData>{isLTR ? item.row3_en : item.row3_ar}</TableData>
-              <TableData>{isLTR ? item.row4_en : item.row4_ar}</TableData>
+      <TableWrapper>
+        <Table className="second-table">
+          <thead>
+            <TableRow>
+              {second_head?.map((item, index) => {
+                return (
+                  <Thead key={index}>
+                    {isLTR ? item.name_en : item.name_ar}
+                  </Thead>
+                );
+              })}
             </TableRow>
-          );
-        })}
-      </Table>
+          </thead>
+          <tbody>
+            {table_data?.map((item, index) => {
+              return (
+                <TableRow key={index}>
+                  <TableData>{isLTR ? item.row1_en : item.row1_ar}</TableData>
+                  <TableData>{isLTR ? item.row2_en : item.row2_ar}</TableData>
+                  <TableData>{isLTR ? item.row3_en : item.row3_ar}</TableData>
+                  <TableData>{isLTR ? item.row4_en : item.row4_ar}</TableData>
+                </TableRow>
+              );
+            })}
+          </tbody>
+        </Table>
+      </TableWrapper>
       <TableDescription>
         {translations?.smartgateSecondtableDescription}
       </TableDescription>

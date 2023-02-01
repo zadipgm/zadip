@@ -37,6 +37,16 @@ color:#2193b0 ;
 }
 `
 export const Input= styled.input`
+
+ :out-of-range{
+    border:1px solid red;
+ }
+ :in-range{
+    border-bottom: 1px solid #cdc1c1;
+border-top:1px solid transparent ;
+border-left:1px solid transparent ;
+border-right:1px solid transparent ;
+ }
 width: 100%;
 
 @media (max-width: 600px) {
@@ -85,7 +95,7 @@ width: 30%;
 margin: 0px 6px;
 }
 `
-export const Button= styled.button<{color:string}>`
+export const Button= styled.input<{color:string}>`
 width: 150px;
 padding: 14px;
 border-radius: 6px;

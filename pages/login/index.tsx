@@ -1,13 +1,15 @@
-import * as React from "react";
-import Layout from "../../comonents/Layouts/PageLayout";
-import { NextPageWithLayout } from "../_app";
 import type { ReactElement } from "react";
-import ServicesMainCategory from "../../comonents/ServicesPageComponents/ServicesMainCategories";
+import Layout from "../../comonents/Layouts/PageLayout";
+
+import LogIn from "../../comonents/Login";
+import { NextPageWithLayout } from "../_app";
+
 const Page: NextPageWithLayout = () => {
-  return <ServicesMainCategory />;
+  return <LogIn />;
 };
 
 Page.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
+
 export default Page;

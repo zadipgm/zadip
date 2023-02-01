@@ -6,19 +6,6 @@ import Modal from "@mui/material/Modal";
 import { Wrapper } from "./styled.components";
 import { useTheme } from "styled-components";
 
-const style = {
-  position: "absolute" as "absolute",
-  top: "42%",
-  left: "49.43%",
-  transform: "translate(-50%, -50%)",
-  width: "50%",
-  bgcolor: "background.paper",
-  border: "none",
-  borderRadius: "20px",
-  outline: "none",
-  boxShadow: 24,
-};
-
 interface IProps {
   open: boolean;
   handleClose: () => void;
@@ -48,6 +35,18 @@ const ModalComponent: React.FC<IProps> = ({
     zIndex: "9999",
     overflow: "scroll",
     transition: ".5s",
+  };
+  const style = {
+    position: "absolute" as "absolute",
+    top: "42%",
+    left: "49.43%",
+    transform: "translate(-50%, -50%)",
+    width: "50%",
+    background: bgColor,
+    border: "none",
+    borderRadius: "20px",
+    outline: "none",
+    boxShadow: 24,
   };
   return (
     <Wrapper className={classname}>

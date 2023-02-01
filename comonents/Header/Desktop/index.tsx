@@ -17,9 +17,19 @@ import {
 import ServicesSvg from "../../../public/icons/servicesSvg";
 import IconComponent from "../../ReuseAbleComponents/IconComponent";
 import { useRouter } from "next/router";
+import ModalComponent from "../../ReuseAbleComponents/Modal";
+import LogIn from "../../Login";
 const DesktopHeader = () => {
+  const [open, setOpen] = React.useState(false);
   const { translations, isLTR, locale } = useTheme();
   const router = useRouter();
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+  const handleClose = () => {
+    console.log("here is another cloase", open);
+    setOpen(!open);
+  };
   const changeLocale = React.useCallback(() => {
     if (locale === "en-US" || locale === "en") {
       router.push(`${router.asPath}`, `${router.asPath}`, {
@@ -32,6 +42,7 @@ const DesktopHeader = () => {
   const navigateToPage = (item: any) => {
     return router.push(`/${locale}${item.link}`);
   };
+  console.log("here is open", open);
   return (
     <>
       <NavBar>
@@ -64,7 +75,15 @@ const DesktopHeader = () => {
                   {header_data.cloud.map((item, index) => {
                     return (
                       <NavbarItemsList key={index}>
-                        <NavbarItemsLink href={item.link} target={"_blank"}>
+                        <NavbarItemsLink
+                          href={item.link}
+                          target={
+                            translations?.muaref ===
+                            (isLTR ? item.name_en : item.name_ar)
+                              ? ""
+                              : "_blank"
+                          }
+                        >
                           {isLTR ? item.name_en : item.name_ar}
                         </NavbarItemsLink>
                       </NavbarItemsList>
@@ -143,6 +162,16 @@ const DesktopHeader = () => {
         <NavBarList>
           <Link href={"tel:// 9200 10047"}>920010047</Link>
         </NavBarList>
+        {/* <NavBarList>
+          <LangButton onClick={handleOpen}>Login</LangButton>
+          <ModalComponent
+            open={open}
+            handleClose={handleClose}
+            bgColor={"linear-gradient(-30deg,#0576bc 30%,#38b7ae);"}
+          >
+            <LogIn handleClose={handleClose} />
+          </ModalComponent>
+        </NavBarList> */}
 
         {/* ========Lang Button======== */}
 

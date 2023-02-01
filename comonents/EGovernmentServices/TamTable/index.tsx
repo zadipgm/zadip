@@ -33,23 +33,26 @@ const TamTable: React.FC<IProps> = ({ title, data, data_head }) => {
       <TableHeading>{title}</TableHeading>
       <TableContainer>
         <Table>
-          <TableRow>
-            <Thead>{isLTR ? "Transation" : "العملية"}</Thead>
-            <Thead>{isLTR ? "Cost SAR" : "الرسوم (ريال السعودي)"}</Thead>
-            <Thead>{isLTR ? "Transation" : "العملية"}</Thead>
-            <Thead>{isLTR ? "Cost SAR" : "الرسوم (ريال السعودي)"}</Thead>
-          </TableRow>
-
-          {data_head?.map((item, index) => {
-            return (
-              <TableRow key={index}>
-                <TableData>{isLTR ? item.row_en : item.row_ar}</TableData>
-                <TableData>{item.cost}</TableData>
-                <TableData>{isLTR ? item.rows_en : item.rows_ar}</TableData>
-                <TableData>{item.costs}</TableData>
-              </TableRow>
-            );
-          })}
+          <thead>
+            <TableRow>
+              <Thead>{isLTR ? "Transation" : "العملية"}</Thead>
+              <Thead>{isLTR ? "Cost SAR" : "الرسوم (ريال السعودي)"}</Thead>
+              <Thead>{isLTR ? "Transation" : "العملية"}</Thead>
+              <Thead>{isLTR ? "Cost SAR" : "الرسوم (ريال السعودي)"}</Thead>
+            </TableRow>
+          </thead>
+          <tbody>
+            {data_head?.map((item, index) => {
+              return (
+                <TableRow key={index}>
+                  <TableData>{isLTR ? item.row_en : item.row_ar}</TableData>
+                  <TableData>{item.cost}</TableData>
+                  <TableData>{isLTR ? item.rows_en : item.rows_ar}</TableData>
+                  <TableData>{item.costs}</TableData>
+                </TableRow>
+              );
+            })}
+          </tbody>
         </Table>
       </TableContainer>
     </Wrapper>
