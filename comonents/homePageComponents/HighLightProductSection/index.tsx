@@ -51,7 +51,7 @@ const HighLightProductSection = () => {
               height={100}
             />
           </Link>
-          <Link href={`/${locale}/eGov_services/permit`}>
+          <Link href={`/${locale}/eGov_services/smartgate`}>
             <Image
               src="/images/esmart.png"
               alt="smart"

@@ -10,7 +10,7 @@ width:31% ;
 border-radius: 12px;
 cursor: pointer;
 opacity:.9 ;
-font-size:18px ;
+font-size:16px;
 transition: transform .5s;
  :hover{
   transform: scale(1.1); 

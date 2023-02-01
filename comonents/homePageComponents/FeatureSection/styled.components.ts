@@ -153,6 +153,7 @@ width:100% ;
     background-color: #0576bc;
     margin-top: 22px;
     transition: all 0.5s ease-in;
+    font-size:16px;
     
     :hover{
       transition: all 0.5s ease-in;

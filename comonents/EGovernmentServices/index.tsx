@@ -4,13 +4,16 @@ import Links from "@mui/material/Link";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import { useTheme } from "styled-components";
 import Breadcrumb from "../ReuseAbleComponents/Breadcrumb";
-import { Container, Heading, Wrapper } from "./styled.components";
+import {
+  Container,
+  Heading,
+  Wrapper,
+  ButtonsWrapper,
+} from "./styled.components";
 import _data from "../../DataLayer/services.json";
 import { useRouter } from "next/router";
-import service_data from "../../DataLayer/services.json";
 import PricingTable from "../ReuseAbleComponents/PricingTable";
 import DownLoadButton from "../ReuseAbleComponents/DownLoadButton";
-import { ButtonsWrapper } from "../ServicesPageComponents/ServicesDetails/styled.components";
 import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 import ServicesAdvantageSection from "../ReuseAbleComponents/ServicesAdvantageSection";
 import ListComponent from "../ReuseAbleComponents/ListComponent";

@@ -34,12 +34,14 @@ const PricingTable: React.FC<IProps> = ({
       <TableHeading>{title}</TableHeading>
       <TableContainer>
         <Table>
-          <Tbody>
+          <thead>
             <TableRow>
               {data_head?.map((item, index) => {
                 return <TableData key={index}>{item}</TableData>;
               })}
             </TableRow>
+          </thead>
+          <Tbody>
             <TableRow>
               {data?.map((item, index) => {
                 return <TableData key={index}>{item}</TableData>;

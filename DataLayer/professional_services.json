@@ -6,6 +6,6 @@
         {"title_en":"Fire Alarm Systems", "title_ar":"أنظمة إنذار الحريق" ,"images":["/images/FireAlarmSystems/Bosch-logo.svg.png","/images/FireAlarmSystems/Gent.png","/images/FireAlarmSystems/honeywell.png"]},
         {"title_en":"IP Phone Systems", "title_ar":"أنظمة هاتف IP" ,"images":["/images/IPPhoneSystems/AVAYA.png","/images/IPPhoneSystems/grandstrem.png"]},
         {"title_en":"MATV SMATV Systems", "title_ar":"أنظمة MATV SMATV" ,"images":["/images/MATVSMATVSystems/Alcad.png","/images/MATVSMATVSystems/satrover.png","/images/MATVSMATVSystems/Televes.png"]},
-        {"title_en":"Sound Systems", "title_ar":"أنظمة كاميرات المراقبة" ,"images":["/images/SoundSystems/Bosch-logo.svg.png","/images/SoundSystems/Bose.png","/images/SoundSystems/ITC.png","/images/SoundSystems/Jedia.png","/images/SoundSystems/jedia-logo-svg-vector.svg","/images/SoundSystems/Prosound.png","/images/SoundSystems/TOA.png", "/images/SoundSystems/TOA_Corporation_1984.svg", "/images/SoundSystems/yamaha.png"]}
+        {"title_en":"Sound and Audio Systems", "title_ar":"الأنظمة الصوتية" ,"images":["/images/SoundSystems/Bosch-logo.svg.png","/images/SoundSystems/Bose.png","/images/SoundSystems/ITC.png","/images/SoundSystems/jedia-logo-svg-vector.svg","/images/SoundSystems/Prosound.png", "/images/SoundSystems/TOA_Corporation_1984.svg", "/images/SoundSystems/yamaha.png"]}
     ]
 }

@@ -39,7 +39,6 @@ const Header = () => {
   const onLoadedData = () => {
     setIsVideoLoaded(true);
   };
-  console.log("here is device", device);
   return (
     <>
       {/* ========Main Video======== */}

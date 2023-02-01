@@ -16,7 +16,15 @@ overflow-x:auto ;
 `
 export const Table = styled.table`
 border-collapse:collapse ;
-    width: 100%;
+@media(max-width:600px){
+   width: 900px; ;
+}
+@media(min-width:600px){
+    width:900px ;
+}
+@media(min-width:1024px){
+    width:100%;
+}
 `
 export const Tbody = styled.tbody``
 export const TableRow = styled.tr`

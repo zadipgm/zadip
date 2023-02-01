@@ -42,6 +42,7 @@ const OrderNowForm: React.FC<IProps> = ({
   const [email, setEmail] = React.useState("");
   const [number, setNumber] = React.useState("");
   const [service, setService] = React.useState("");
+  const [error, setError] = React.useState("");
 
   const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
@@ -60,21 +61,16 @@ const OrderNowForm: React.FC<IProps> = ({
     setService(value);
   };
   const handleSubmit = () => {
-    if (
-      name.length > 3 &&
-      email.length > 3 &&
-      number.length > 10 &&
-      service.length > 3
-    ) {
-      const email = "info@zadip.com";
-      const subject = `Request Services ${service}`;
-      const emailBody = "Hi";
-      document.location =
-        "mailto:" + email + "?subject=" + subject + "&body=" + emailBody;
-      handleClose();
-    } else {
-      handleOpen();
-    }
+    const email = "info@zadip.com";
+    const subject = `Request Services ${service}`;
+    const emailBody = "Hi";
+    document.location =
+      "mailto:" + email + "?subject=" + subject + "&body=" + emailBody;
+    handleClose();
+    setEmail("");
+    setName("");
+    setNumber("");
+    setService("");
   };
   return (
     <>
@@ -105,82 +101,69 @@ const OrderNowForm: React.FC<IProps> = ({
                 <CloseSvg width="30px" height="30px" fill="#000" />
               </IconWrapper>
             </FormHeadingWrapper>
-            <InputWarapper>
-              <Label>
-                {name.length <= 3 ? (
+            <form onSubmit={handleSubmit}>
+              <InputWarapper>
+                <Label>
                   <span>*</span>
-                ) : (
-                  <span className="green">*</span>
-                )}
-                {isLTR ? "Name" : "الاسم"}
-              </Label>
-              <Input
-                type="text"
-                placeholder={translations?.fullName}
-                required
-                value={name}
-                onChange={(e) => nameHandler(e)}
-              />
-            </InputWarapper>
-            <InputWarapper>
-              <Label>
-                {email.length <= 7 ? (
+                  {isLTR ? "Name" : "الاسم"}
+                </Label>
+                <Input
+                  type="text"
+                  placeholder={translations?.fullName}
+                  required
+                  title="Please Enter Your Full Name"
+                  value={name}
+                  minLength={2}
+                  maxLength={8}
+                  onChange={(e) => nameHandler(e)}
+                />
+              </InputWarapper>
+              <InputWarapper>
+                <Label>
                   <span>*</span>
-                ) : (
-                  <span className="green">*</span>
-                )}
-                {isLTR ? "Email" : "البريد الإلكتروني"}
-              </Label>
-              <Input
-                type="email"
-                placeholder={translations?.email}
-                required
-                value={email}
-                onChange={(e) => emailHandler(e)}
-              />
-            </InputWarapper>
-            <InputWarapper>
-              <Label>
-                {number.length <= 10 ? (
+                  {isLTR ? "Email" : "البريد الإلكتروني"}
+                </Label>
+                <Input type="email" id="email" name="email" required />
+              </InputWarapper>
+              <InputWarapper>
+                <Label>
                   <span>*</span>
-                ) : (
-                  <span className="green">*</span>
-                )}
-                {isLTR ? "Mobile Number" : "رقم الجوال"}
-              </Label>
-              <Input
-                type="text"
-                placeholder={translations?.contact}
-                required
-                value={number}
-                onChange={(e) => phoneHandler(e)}
-              />
-            </InputWarapper>
-            <InputWarapper>
-              <Label>
-                {service.length <= 7 ? (
+                  {isLTR ? "Mobile Number" : "رقم الجوال"}
+                </Label>
+                <Input
+                  placeholder="05XXXXXXXX"
+                  type="text"
+                  maxLength={10}
+                  pattern="\d{10}"
+                  title="Please enter exactly 10 digits"
+                  value={number}
+                  required
+                  onChange={(e) => phoneHandler(e)}
+                />
+              </InputWarapper>
+              <InputWarapper>
+                <Label>
                   <span>*</span>
-                ) : (
-                  <span className="green">*</span>
-                )}
-                {isLTR ? "Request service" : "الخدمة المطلوبة"}
-              </Label>
-              <Input
-                type={"text"}
-                placeholder={
-                  isLTR ? "Enter request service name..." : "الخدمة المطلوبة..."
-                }
-                value={service}
-                onChange={(e) => serviceHandler(e)}
-                required
+                  {isLTR ? "Request service" : "الخدمة المطلوبة"}
+                </Label>
+                <Input
+                  type={"text"}
+                  placeholder={
+                    isLTR
+                      ? "Enter request service name..."
+                      : "الخدمة المطلوبة..."
+                  }
+                  value={service}
+                  onChange={(e) => serviceHandler(e)}
+                  required
+                />
+              </InputWarapper>
+
+              <Button
+                type={"submit"}
+                color="linear-gradient(-30deg,#009bfb 30%,#38b7ae);"
               />
-            </InputWarapper>
-            <Button
-              color="linear-gradient(-30deg,#009bfb 30%,#38b7ae);"
-              onClick={handleSubmit}
-            >
-              {translations?.send}
-            </Button>
+            </form>
           </Wrapper>
         </OrderNowFormContainer>
       </ModalComponent>

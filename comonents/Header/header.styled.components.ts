@@ -373,8 +373,8 @@ transition:.6s;
   padding: 6px 12px;
     background: #fff;
     color: #044783;
-    font-weight: 600;
     margin: 5px;
+    font-size: 1rem;
 }
 `
 export const VideoWrapper = styled.div<{background:string}>`

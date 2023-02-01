@@ -14,7 +14,6 @@ import Links from "@mui/material/Link";
 import Breadcrumb from "../ReuseAbleComponents/Breadcrumb";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
-import OurPartnerSection from "../homePageComponents/OurPartnerSection";
 import ListComponent from "../ReuseAbleComponents/ListComponent";
 import list from "../../DataLayer/list.json";
 import _data from "../../DataLayer/professional_services.json";
@@ -42,7 +41,6 @@ const ProfessionalServices = () => {
         fontSize={"16px"}
       />
       <ListComponent list={list.professional_list} />
-
       <AllServices>
         {_data.professional_services.map((item) => {
           return (
