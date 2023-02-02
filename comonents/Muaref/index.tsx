@@ -31,7 +31,7 @@ const MuarefPage = () => {
       <BreadCrumbWrapper>
         <Heading>{translations?.featureTitleMuaref}</Heading>
 
-        <img src="/images/mauref.png" alt="muaref" width={100} height={60} />
+        <img src="/images/pro3.png" alt="muaref" width={100} height={60} />
 
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>

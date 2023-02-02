@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Button= styled.a`
-    color: ${({theme})=>theme.colors.white};
+export const Button = styled.a`
+    color: ${({ theme }) => theme.colors.white};
     padding: 9px;
     border: none;
     border-radius: 10px;
@@ -10,15 +10,15 @@ export const Button= styled.a`
     justify-content: center;
     align-items: self-start;
     width: 156px;
-    background-color: ${({theme})=>theme.colors.lightBlue};
+    background-color: ${({ theme }) => theme.colors.lightBlue};
     margin-top: 22px;
     transition: all 0.5s ease-in;
     font-size:16px;
     cursor: pointer;
     :hover{
       transition: all 0.5s ease-in;
-      color:${({theme})=>theme.colors.white} ;
-     background-color: ${({theme})=>theme.colors.darkBlue};
+      color:${({ theme }) => theme.colors.white} ;
+     background-color: ${({ theme }) => theme.colors.darkBlue};
     }
     &.download-button{
       width:270px ;
@@ -26,14 +26,14 @@ export const Button= styled.a`
     }
 
 svg{
-  fill:${({theme})=>theme.colors.white} ;  
+  fill:${({ theme }) => theme.colors.white} ;  
   margin:0px 5px ;
 }
 &.mobile-button{
   margin:20px 0px ;
 }
 @media(max-width:600px){
-  width: 100%;
-  margin:0 auto ;
+  margin:15px auto ;
 }
+
 `
