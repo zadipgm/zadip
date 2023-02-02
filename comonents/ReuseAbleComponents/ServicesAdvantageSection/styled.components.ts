@@ -12,7 +12,7 @@ export const AdvantageWrapper= styled.div`
 `
 export const Heading = styled.h3`
 margin:0 ;
-color: #2193b0;
+color: ${({theme})=>theme.colors.lightBlue};
 `
 export const Description = styled.p`
 margin:0 ;

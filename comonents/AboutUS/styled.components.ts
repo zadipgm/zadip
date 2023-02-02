@@ -27,9 +27,9 @@ margin-top:100px ;
 }
 `
 export const AboutHeading = styled.h2`
-color: #2193b0;
+color: ${({ theme }) => theme.colors.lightBlue};
 `
-export const AboutCompanyWrapper= styled.div`
+export const AboutCompanyWrapper = styled.div`
 display:flex ;
 justify-content:center ;
 align-items:center ;
@@ -37,7 +37,6 @@ padding:15px ;
 >img {
     padding:8px ;
     border-radius: 37px;
-   
 }
 @media (max-width: 600px) {
  display:block ;
@@ -62,15 +61,12 @@ width:100% ;
 padding:12px ;
 }
 `
-export const Title = styled.h3`
-color: #2193b0;
-margin:0 ;
-`
+
 export const AboutusDescription = styled.div`
 color:#737c85; 
 text-align:justify ;
 `
-export const ImageWrapper =styled.div`
+export const ImageWrapper = styled.div`
 width:50% ;
 @media (max-width: 600px) {
 width:100% ;

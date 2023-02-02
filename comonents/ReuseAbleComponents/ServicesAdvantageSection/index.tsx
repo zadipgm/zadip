@@ -2,7 +2,7 @@ import * as React from "react";
 import AccurateSvg from "../../../public/icons/acurateSvg";
 import SecurehSvg from "../../../public/icons/secureSvg";
 import TransactionSvg from "../../../public/icons/transactionSvg";
-import DownLoadButton from "../DownLoadButton";
+import DownLoadButton from "../ReuseableButton";
 import VedioComponent from "../Vedio";
 import {
   AdvantageWrapper,
@@ -29,7 +29,7 @@ interface Idata {
   videoLink?: string;
 }
 const ServicesAdvantageSection = ({ data, poster, videoLink }: Idata) => {
-  const { isLTR } = useTheme();
+  const { isLTR, colors } = useTheme();
   return (
     <AdvantageWrapper>
       <AdvantageContainer>
@@ -37,7 +37,7 @@ const ServicesAdvantageSection = ({ data, poster, videoLink }: Idata) => {
           return (
             <Wrapper key={item.id}>
               <IconComponent
-                fill={"#2193b0"}
+                fill={colors.lightBlue}
                 width={"25px"}
                 height={"25px"}
                 icon={item.icon}

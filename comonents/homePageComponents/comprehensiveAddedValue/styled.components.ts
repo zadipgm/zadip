@@ -14,7 +14,7 @@ position:relative;
 display: flex;
 justify-content: center;
 align-items: center;
-background: linear-gradient(-30deg,rgb(5 118 188 / 49%) 30%,#38b7ae); 
+background: ${({theme})=>theme.colors.themeColor};
 border-radius: 15px;
 padding: 15px;
 @media (max-width:600px){

@@ -8,14 +8,15 @@ import {
   EktefaDescriptionWrapper,
   EktefaTitle,
   EktefaDescription,
+  Wrapper,
 } from "./styled.components";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
-
 import Slider from "react-slick";
 import { useTheme } from "styled-components";
 import Link from "next/link";
 const FeatureSection = () => {
-  const { isLTR, translations, device } = useTheme();
+  const { isLTR, translations, device, colors } = useTheme();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -23,9 +24,19 @@ const FeatureSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
-    // autoplay: true,
+    autoplay: true,
     arrows: false,
     easing: "linear",
+    customPaging: (i: any) => (
+      <Wrapper>
+        <img
+          src={`/images/pro${i + 1}.png`}
+          alt="products"
+          width={"100%"}
+          height={"auto"}
+        />
+      </Wrapper>
+    ),
     responsive: [
       {
         breakpoint: 600,
@@ -40,22 +51,23 @@ const FeatureSection = () => {
   return (
     <FeatureSectionParent>
       <AnimationBar
-        headingColor={"#2193b0"}
+        headingColor={colors.lightBlue}
         descriptionColor={"#737c85"}
         title={translations?.featureProduct}
         description={translations?.featureDescription as string}
         fontSize={"18px"}
       />
+
       <FeatureSectionContainer>
         <Slider {...settings} className={"feature-section"}>
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              <img
+              {/* <img
                 src="/images/ektefa.png"
                 alt="ektefa"
                 width={100}
                 height={"auto"}
-              />
+              /> */}
               <EktefaTitle direction={isLTR ? "ltr" : "rtl"}>
                 {translations?.featureTitleEktefa}
               </EktefaTitle>
@@ -81,12 +93,12 @@ const FeatureSection = () => {
 
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              <img
+              {/* <img
                 src="/images/nafeth-light-logo.png"
                 alt="nafeth"
                 width={150}
                 height={"auto"}
-              />
+              /> */}
               <EktefaTitle>{translations?.featureTitleNafeth}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
@@ -110,12 +122,12 @@ const FeatureSection = () => {
 
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              <img
+              {/* <img
                 src="/images/mauref.png"
                 alt="mauref"
                 width={100}
                 height={60}
-              />
+              /> */}
               <EktefaTitle>{translations?.featureTitleMuaref}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
@@ -139,12 +151,12 @@ const FeatureSection = () => {
 
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              <img
+              {/* <img
                 src="/images/ihtiwa.png"
                 alt="ehtiwa"
                 width={150}
                 height={"auto"}
-              />
+              /> */}
               <EktefaTitle>{translations?.featureTitleEhtiwa}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
@@ -168,12 +180,12 @@ const FeatureSection = () => {
 
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              <img
+              {/* <img
                 src="/images/cadre.png"
                 alt="cadre"
                 width={150}
                 height={"auto"}
-              />
+              /> */}
               <EktefaTitle>{translations?.featureTitlecadre}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}

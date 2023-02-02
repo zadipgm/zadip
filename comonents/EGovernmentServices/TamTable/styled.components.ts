@@ -187,7 +187,7 @@ export const Thead =styled.th`
 font-weight:700 ;
 border: 1px solid #ddd;
 padding:6px;
-color:#2193b0 ;
+color:${({theme})=>theme.colors.lightBlue} ;
 font-size:14px ;
 ${({theme})=>
     theme.isLTR
@@ -214,6 +214,6 @@ border: 1px solid #ddd;
 color:#5d666e;
 `
 export const TableHeading= styled.h3`
-color:#2193b0 ;
+color:${({theme})=>theme.colors.lightBlue} ;
 text-transform:capitalize ;
 `

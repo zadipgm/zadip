@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HighLightProductSectionContainer = styled.div`
 
-background: linear-gradient(-30deg,#d6ecf9 30%,#a7f5ef);
+background: ${({theme})=>theme.colors.lightThemeColor};
 padding:0px 0px 40px 0px ;
 display:block ;
 

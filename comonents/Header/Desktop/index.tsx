@@ -42,7 +42,6 @@ const DesktopHeader = () => {
   const navigateToPage = (item: any) => {
     return router.push(`/${locale}${item.link}`);
   };
-  console.log("here is open", open);
   return (
     <>
       <NavBar>
@@ -167,7 +166,7 @@ const DesktopHeader = () => {
           <ModalComponent
             open={open}
             handleClose={handleClose}
-            bgColor={"linear-gradient(-30deg,#0576bc 30%,#38b7ae);"}
+            bgColor={"${({theme})=>theme.colors.themeColor};"}
           >
             <LogIn handleClose={handleClose} />
           </ModalComponent>

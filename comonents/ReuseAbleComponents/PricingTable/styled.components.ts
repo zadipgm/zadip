@@ -30,7 +30,7 @@ export const Tbody = styled.tbody``
 export const TableRow = styled.tr`
 td:first-child{
     font-weight:700 ;
-    color:#2193b0 ;
+    color:${({theme})=>theme.colors.lightBlue} ;
 }
 `
 
@@ -59,11 +59,11 @@ width:100% ;
 }
 `
 export const TableHeading= styled.h3`
-color:#2193b0 ;
+color:${({theme})=>theme.colors.lightBlue} ;
 text-transform:capitalize ;
 `
 export const Heading= styled.h3`
 
-color:#2193b0 ;
+color:${({theme})=>theme.colors.lightBlue} ;
 text-transform:capitalize ;
 `

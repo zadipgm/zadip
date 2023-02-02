@@ -29,7 +29,7 @@ margin-top:80px ;
 }
 `
 export const Heading = styled.h2`
-color:#2193b0 ;
+color:${({theme})=>theme.colors.lightBlue} ;
 `
 export const ButtonsWrapper= styled.div`
 display: flex;

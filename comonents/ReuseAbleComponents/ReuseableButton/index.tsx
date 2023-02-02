@@ -3,12 +3,13 @@ import DownloadSvg from "../../../public/icons/downloadSvg";
 import { Button } from "./styled.components";
 interface IButtonProps {
   title: string;
+  classname?: string;
 }
-const DownLoadButton: React.FC<IButtonProps> = ({ title }) => {
+const ReuseableButton: React.FC<IButtonProps> = ({ title, classname }) => {
   return (
-    <Button>
+    <Button className={classname}>
       {title} <DownloadSvg />
     </Button>
   );
 };
-export default DownLoadButton;
+export default ReuseableButton;

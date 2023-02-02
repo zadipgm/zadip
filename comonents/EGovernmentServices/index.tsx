@@ -13,20 +13,24 @@ import {
 import _data from "../../DataLayer/services.json";
 import { useRouter } from "next/router";
 import PricingTable from "../ReuseAbleComponents/PricingTable";
-import DownLoadButton from "../ReuseAbleComponents/DownLoadButton";
+import DownLoadButton from "../ReuseAbleComponents/ReuseableButton";
 import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 import ServicesAdvantageSection from "../ReuseAbleComponents/ServicesAdvantageSection";
 import ListComponent from "../ReuseAbleComponents/ListComponent";
 import TamTable from "./TamTable";
 import SmartGateTable from "./SmartgateTable";
 const EGovernmentServices = () => {
-  const { translations, isLTR } = useTheme();
+  const { translations, isLTR, colors } = useTheme();
   const router = useRouter();
   const breadcrumbs = [
-    <Links underline="hover" key="1" color="#2193b0" href="/">
+    <Links underline="hover" key="1" color={`${colors.lightBlue}`} href="/">
       {translations?.home}
     </Links>,
-    <Typography key="3" color="text.primary" style={{ color: "#2193b0" }}>
+    <Typography
+      key="3"
+      color="text.primary"
+      style={{ color: colors.lightBlue }}
+    >
       {translations?.egovService}
     </Typography>,
   ];
@@ -39,7 +43,7 @@ const EGovernmentServices = () => {
       <Container>
         <Wrapper>
           <Heading>{translations?.egoveservices}</Heading>
-          <Breadcrumb color={"#2193b0"} breadcrumbs={breadcrumbs} />
+          <Breadcrumb color={colors.lightBlue} breadcrumbs={breadcrumbs} />
         </Wrapper>
         <AnimationBar
           description={
@@ -50,7 +54,7 @@ const EGovernmentServices = () => {
           title={
             isLTR ? filter_services[0]?.title_en : filter_services[0]?.title_ar
           }
-          headingColor={"#2193b0"}
+          headingColor={colors.lightBlue}
           descriptionColor={"#737c85"}
         />
         {router.query.slug === "tam" && (
@@ -77,7 +81,7 @@ const EGovernmentServices = () => {
         {router.query.slug === "muqeem" && (
           <>
             <AnimationBar
-              headingColor={"#2193b0"}
+              headingColor={colors.lightBlue}
               descriptionColor={"#737c85"}
               title={isLTR ? "Pricing Packages" : "قائمة الاسعار"}
               description={""}
@@ -160,7 +164,7 @@ const EGovernmentServices = () => {
         <AnimationBar
           title={translations?.keyFeatures}
           description={""}
-          headingColor={"#2193b0"}
+          headingColor={colors.lightBlue}
           descriptionColor={""}
         />
         <ListComponent list={filter_services[0]?.list} />
@@ -170,7 +174,7 @@ const EGovernmentServices = () => {
               <AnimationBar
                 title={translations?.supportingDocuments}
                 description={""}
-                headingColor={"#2193b0"}
+                headingColor={colors.lightBlue}
                 descriptionColor={""}
               />
               <ButtonsWrapper>
@@ -180,6 +184,7 @@ const EGovernmentServices = () => {
                       ? (filter_services[0]?.button_title_en as string)
                       : (filter_services[0]?.button_title_ar as string)
                   }
+                  classname={"download-button"}
                 />
                 <DownLoadButton
                   title={
@@ -187,14 +192,19 @@ const EGovernmentServices = () => {
                       ? (filter_services[0]?.form_button_en as string)
                       : (filter_services[0]?.form_button_ar as string)
                   }
+                  classname={"download-button"}
                 />
-                <DownLoadButton title={translations?.editdeletform as string} />
+                <DownLoadButton
+                  title={translations?.editdeletform as string}
+                  classname={"download-button"}
+                />
               </ButtonsWrapper>
             </>
           )}
         <OrderNowForm
           title={translations?.requestService as string}
           buttonTitle={translations?.requestService as string}
+          icon={"salesSvg"}
         />
       </Container>
     </>

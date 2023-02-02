@@ -41,7 +41,7 @@ justify-content: flex-start; ;
        > h4{
             color: #fff;
         }
-        background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+        background: ${({theme})=>theme.colors.themeColor};
         transition: .5s;
         transform: translateY(-5px);
         box-shadow: -3px 4px 15px 9px rgba(148,148,148,0.47);

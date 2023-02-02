@@ -15,12 +15,16 @@ import { useTheme } from "styled-components";
 import Image from "next/image";
 import _data from "../../../DataLayer/client.json";
 const OurClientsAndPartners = () => {
-  const { translations } = useTheme();
+  const { translations, colors } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="inherit" href="/">
       {translations?.home}
     </Links>,
-    <Typography key="3" color="text.primary" style={{ color: "#2193b0" }}>
+    <Typography
+      key="3"
+      color="text.primary"
+      style={{ color: colors.lightBlue }}
+    >
       {translations?.ourClientsandPartners}
     </Typography>,
   ];
@@ -28,11 +32,11 @@ const OurClientsAndPartners = () => {
     <Container>
       <Wrapper>
         <Heading>{translations?.client}</Heading>
-        <Breadcrumb color={"#2193b0"} breadcrumbs={breadcrumbs} />
+        <Breadcrumb color={colors.lightBlue} breadcrumbs={breadcrumbs} />
       </Wrapper>
       <AnimationBar
         description={translations?.partnerHeadingDes as string}
-        headingColor={"#2193b0"}
+        headingColor={colors.lightBlue}
         descriptionColor={"#737c85"}
         title={translations?.ourClientsandPartners}
       />
