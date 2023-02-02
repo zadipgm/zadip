@@ -2,7 +2,7 @@ import * as React from "react";
 import {
   FooterContainer,
   FooterWrapper,
-  FooterRow,
+  FooterMain,
   FooterCol,
   FooterHeading,
   FooterUL,
@@ -26,7 +26,7 @@ const Footer = () => {
     <>
       <FooterContainer>
         <FooterWrapper>
-          <FooterRow>
+          <FooterMain>
             <FooterCol>
               <FooterHeading>{translations?.contactUs}</FooterHeading>
               <FooterUL>
@@ -80,7 +80,17 @@ const Footer = () => {
                 </Link>
               </FooterSocialLink>
             </FooterCol>
-          </FooterRow>
+            <FooterCol className="logo">
+              <Link href={"/"}>
+                <img
+                  src="/images/zadiplogo.png"
+                  alt="logo"
+                  width={240}
+                  height={"auto"}
+                />
+              </Link>
+            </FooterCol>
+          </FooterMain>
         </FooterWrapper>
         <FooterCopyRights>
           © 2008 - 2023 {translations?.zadipGroups},{" "}
