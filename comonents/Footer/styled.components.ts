@@ -1,6 +1,6 @@
 import styled from "styled-components"
-export const FooterContainer= styled.div`
-background: ${({theme})=>theme.colors.themeColor};
+export const FooterContainer = styled.div`
+background: ${({ theme }) => theme.colors.themeColor};
 padding: 12px;
 `
 export const FooterWrapper = styled.div`
@@ -17,7 +17,7 @@ display:block ;
 margin: 0 auto;
 `
 
-export const FooterRow = styled.div`
+export const FooterMain = styled.div`
 display: flex;
 justify-content: center;
 align-items: flex-start;
@@ -39,30 +39,31 @@ padding: 0;
 margin: 0;
 `
 export const FooterCol = styled.div`
-width: 50%;
+width: 33.3%;
 display:block ;
+&.logo{
+    text-align:center ;
+    @media (max-width: 600px) {
+text-align:unset ;
+}
+}
 
 @media (max-width: 600px) {
 width:100% ;
 padding:0 ;
 }
-@media (min-width: 600px) {
-width:100% ;
-padding:0 ;
-}
-@media (min-width: 1440px) {
-width:1170px ;
-}
+
+
 margin:0 auto;
 padding: 0 15px;
 `
-export const FooterHeading =  styled.h4`   
+export const FooterHeading = styled.h4`   
 font-size: 16px;
 color: #fff !important;
 font-weight: 700;
 `
 
-export const  FooterLI = styled.li`
+export const FooterLI = styled.li`
 font-style: normal;
 display: flex;
 justify-content: flex-start;
@@ -89,7 +90,7 @@ transition:.5s ;
 
 `
 
-export const FooterSocialLink =  styled.div`
+export const FooterSocialLink = styled.div`
 display: flex;
 height: 40px;
 width: 40px;

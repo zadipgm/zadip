@@ -18,7 +18,6 @@ class MyDocument extends Document {
     return (
       <Html dir={this.props.__NEXT_DATA__.locale === "ar" ? "rtl" : "ltr"}>
         <Head>
-          <title>Zadip Groups Pvt LTD</title>
           <link
             href="https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap"
             rel="stylesheet"
