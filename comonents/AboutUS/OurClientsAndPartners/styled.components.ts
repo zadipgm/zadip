@@ -26,7 +26,7 @@ margin-top:90px ;
 }
 `
 export const Heading = styled.h2`
-color:#2193b0;
+color:${({theme})=>theme.colors.lightBlue};
 `
 export const ClientWrapper = styled.div``
 export const ClientList = styled.ul`

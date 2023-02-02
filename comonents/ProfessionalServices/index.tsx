@@ -18,7 +18,7 @@ import ListComponent from "../ReuseAbleComponents/ListComponent";
 import list from "../../DataLayer/list.json";
 import _data from "../../DataLayer/professional_services.json";
 const ProfessionalServices = () => {
-  const { isLTR, translations } = useTheme();
+  const { isLTR, translations, colors } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
       {translations?.home}
@@ -36,7 +36,7 @@ const ProfessionalServices = () => {
       <AnimationBar
         title={translations?.projects_it}
         description={translations?.proServicesDescription as string}
-        headingColor={"#2193b0"}
+        headingColor={colors.lightBlue}
         descriptionColor={"#737c85;"}
         fontSize={"16px"}
       />
@@ -48,7 +48,7 @@ const ProfessionalServices = () => {
               <AnimationBar
                 title={isLTR ? item.title_en : item.title_ar}
                 description={""}
-                headingColor={"#2193b0"}
+                headingColor={colors.lightBlue}
                 descriptionColor={""}
                 fontSize={"14px"}
               />

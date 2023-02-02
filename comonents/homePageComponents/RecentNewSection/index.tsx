@@ -5,13 +5,13 @@ import SliderSlick from "../../ReuseAbleComponents/SlickSlider";
 import RecentNews from "../../../DataLayer/news.json";
 import { useTheme } from "styled-components";
 const RecentNewsSection = () => {
-  const { translations } = useTheme();
+  const { translations, colors } = useTheme();
   return (
     <RecentNewsSectionContainer>
       <AnimationBar
         title={translations?.recentNews}
         description={""}
-        headingColor={"#2193b0"}
+        headingColor={colors.lightBlue}
         descriptionColor={"#737c85;"}
         fontSize={"22px"}
       />

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 export const FooterContainer= styled.div`
-background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+background: ${({theme})=>theme.colors.themeColor};
 padding: 12px;
 `
 export const FooterWrapper = styled.div`

@@ -43,7 +43,7 @@ overflow: visible;
     :hover{
       transition: all 0.5s ease-in;
       color:#fff ;
-      background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+      background: ${({theme})=>theme.colors.themeColor};
       background-position:  469px;
       background-color: #A0A0A0;
       
@@ -128,7 +128,7 @@ margin:0 auto ;
 export const Button= styled.button`
 text-decoration:none ;
 padding:11px 40px ;
-background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+background: ${({theme})=>theme.colors.themeColor};
 color:#fff ;
 border: none;
 border-radius: 12px;

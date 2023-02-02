@@ -28,7 +28,7 @@ const OrderNowForm: React.FC<IProps> = ({
   classname,
   icon,
 }) => {
-  const { isLTR, translations } = useTheme();
+  const { isLTR, translations, colors } = useTheme();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
@@ -98,7 +98,7 @@ const OrderNowForm: React.FC<IProps> = ({
                   : "تواصل مع مسؤول الخدمة الان"}
               </FormHeading>
               <IconWrapper onClick={handleClose}>
-                <CloseSvg width="30px" height="30px" fill="#000" />
+                <CloseSvg width="30px" height="30px" fill={colors.lightBlue} />
               </IconWrapper>
             </FormHeadingWrapper>
             <form onSubmit={handleSubmit}>

@@ -28,7 +28,7 @@ transition: .5s
 export const Label = styled.label`
 font-size:22px ;
 transition: .5s;
-color:#2193b0 ;
+color:${({theme})=>theme.colors.lightBlue} ;
 > span{
     color: red;
 }
@@ -97,14 +97,14 @@ margin: 0px 6px;
 `
 export const Button= styled.input<{color:string}>`
 width: 150px;
-padding: 14px;
+padding: 15px;
 border-radius: 6px;
 outline: none;
-color:#fff ;
+color:${({theme})=>theme.colors.white} ;
 font-size:16px ;
 cursor: pointer;
 border: none;
-background:${({color})=>color};
+background:${({theme})=>theme.colors.themeColor} ;
 `
 export const FormHeadingWrapper= styled.div`
 display:flex ;
@@ -115,29 +115,32 @@ export const IconWrapper = styled.div`
 cursor: pointer;
 `
 export const FormHeading = styled.h3`
-color: #2193b0;
+color: ${({theme})=>theme.colors.lightBlue};
 text-align:center ;
 `
 export const ContactButton = styled.button`
-    color: #fff;
-    padding: 16px;
+      color: ${({theme})=>theme.colors.white};
+    padding: 15px;
     border: none;
     border-radius: 10px;
     outline: none;
     display: flex;
-    font-size:20px ;
+    justify-content: center;
+    align-items: self-start;
+    transition: all 0.5s ease-in;
+    font-size:16px;
     margin:20px auto;
     justify-content: center;
     align-items:center;
     cursor: pointer;
-    background-color: #0576bc;
+    background-color:${({theme})=>theme.colors.lightBlue};
     width:250px ;
-    transition: all 0.5s ease-in;
+    font-family: 'Cairo', sans-serif !important;
     
     :hover{
       transition: all 0.5s ease-in;
-      color:#fff ;
-     background-color: #24afe7
+      color:${({theme})=>theme.colors.white} ;
+     background-color: ${({theme})=>theme.colors.darkBlue};
     }
     > div >svg {
         display:flex ;

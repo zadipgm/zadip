@@ -7,7 +7,6 @@ import {
   AboutCompanyWrapper,
   AboutusDescription,
   DesWrapper,
-  Title,
 } from "./styled.components";
 import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
@@ -17,12 +16,16 @@ import OurPartnerSection from "../homePageComponents/OurPartnerSection";
 import ListComponent from "../ReuseAbleComponents/ListComponent";
 import list from "../../DataLayer/list.json";
 const AboutUS = () => {
-  const { translations, device } = useTheme();
+  const { translations, device, colors } = useTheme();
   const breadcrumbs = [
-    <Links underline="hover" key="1" color="#0196e3" href="/">
+    <Links underline="hover" key="1" color={colors.lightBlue} href="/">
       {translations?.home}
     </Links>,
-    <Typography key="3" color="text.primary" style={{ color: "#0196e3" }}>
+    <Typography
+      key="3"
+      color="text.primary"
+      style={{ color: colors.lightBlue }}
+    >
       {translations?.aboutUs}
     </Typography>,
   ];
@@ -35,7 +38,7 @@ const AboutUS = () => {
       <AnimationBar
         title={translations?.abouttheCompany}
         description={""}
-        headingColor={"#2193b0"}
+        headingColor={colors.lightBlue}
         descriptionColor={"#737c85;"}
         fontSize={"16px"}
       />
@@ -57,7 +60,7 @@ const AboutUS = () => {
       <AnimationBar
         title={translations?.ourGoal}
         description={""}
-        headingColor={"#2193b0"}
+        headingColor={colors.lightBlue}
         descriptionColor={"#737c85;"}
         fontSize={"16px"}
       />

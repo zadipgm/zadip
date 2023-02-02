@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import { useTheme } from "styled-components";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
-import { Button } from "../../ReuseAbleComponents/DownLoadButton/styled.components";
+import { Button } from "../../ReuseAbleComponents/ReuseableButton/styled.components";
 import {
   Container,
   IamgeWrapper,
@@ -48,7 +48,7 @@ const ProfessionalServices = () => {
           {device === "tablet" && (
             <Button
               className="mobile-button"
-              onClick={() => router.push(`/${locale}/professional_services`)}
+              href={`/${locale}/professional_services`}
             >
               {translations?.viewmore}
             </Button>

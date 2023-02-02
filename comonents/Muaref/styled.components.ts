@@ -28,7 +28,7 @@ padding:0px 15px ;
 }
 `
 export const Heading = styled.h2`
-color: #2193b0;
+color: ${({theme})=>theme.colors.lightBlue};
 `
 export const List = styled.ul`
 list-style-type:none ;
@@ -72,7 +72,7 @@ width:100% ;
 content:"" ;
 width:25px ;
 height:25px ;
-background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+background: ${({theme})=>theme.colors.themeColor};
 border-radius:100%;
 top:14px ;
 position:absolute ;
@@ -107,7 +107,7 @@ position:relative;
 width: 165px;
 color: #fff;
 padding: 10px;
-background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+background: ${({theme})=>theme.colors.themeColor};
 border-radius: 34px 0px 34px 0px;
 `
 export const Description = styled.p`

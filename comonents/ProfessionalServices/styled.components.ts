@@ -15,7 +15,7 @@ h3{
     margin-bottom: 36px;
     font-size: 48px;
     line-height: 44px;
-    color: #2193b0;
+    color: ${({theme})=>theme.colors.lightBlue};
 }
 display: flex;
 justify-content: center;
@@ -55,7 +55,7 @@ text-align: center;
 }
 `
 export const Heading = styled.h2`
-color: #2193b0;
+color: ${({theme})=>theme.colors.lightBlue};
 `
 export const OurHistory = styled.div`
 transition: .5s;
@@ -66,7 +66,7 @@ margin:15px ;
 padding:15px ;
 box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
 :hover{
-background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+background: ${({theme})=>theme.colors.themeColor};
 color: #fff;
 transition: .5s;
 transform: translateY(-10px);
@@ -105,7 +105,7 @@ cursor: pointer;
 -webkit-transition: .5s;
 transition: .5s;
 :hover{
-background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+background: ${({theme})=>theme.colors.themeColor};
 color: #fff;
 transition: .5s;
 transform: translateY(-10px);

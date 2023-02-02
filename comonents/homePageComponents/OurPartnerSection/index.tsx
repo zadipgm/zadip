@@ -8,13 +8,13 @@ interface IProps {
   title: string;
 }
 const OurPartnerSection = ({ title }: IProps) => {
-  const { translations } = useTheme();
+  const { translations, colors } = useTheme();
   return (
     <OurPartnerSectionContainer>
       <AnimationBar
         title={title}
         description=""
-        headingColor={"#2193b0"}
+        headingColor={colors.lightBlue}
         descriptionColor={"#737c85;"}
         fontSize={"22px"}
       />

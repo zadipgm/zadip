@@ -24,16 +24,16 @@ position: fixed;
 top: 0;
 z-index:9999;
 width: 100%;
-background: linear-gradient(-30deg,#0676bb5e 30%,#38b7ae4f);
+background: ${({theme})=>theme.colors.headerLightColor};
 backdrop-filter: saturate(180%) blur(5px);
 &.scrolled {
   opacity:.9 ;
-  background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+  background:${({theme})=>theme.colors.themeColor};
   animation: rotateMenu 1000ms ease-in-out;
   transform-origin: top center;
   }
   &.other-pages{
-  background:linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+  background:${({theme})=>theme.colors.themeColor};
  animation:none
   }
 `
@@ -87,7 +87,7 @@ transition:.6s ease-in-out;
 perspective: 1000px;
 & .dropdown-content{
   position: absolute;
-  background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+  background: ${({theme})=>theme.colors.themeColor};
   opacity:.8 ;
   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
   z-index: 1;
@@ -117,7 +117,7 @@ perspective: 1000px;
     padding: 0;
     margin: 0;
     width: 200px;
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    background: ${({theme})=>theme.colors.themeColor};
     
   }
 }
@@ -140,11 +140,11 @@ perspective: 1000px;
     padding: 0;
     margin: 0;
     width: 200px;
-    background: linear-gradient(-30deg,#0576bc 30%,#38b7ae);
+    background: ${({theme})=>theme.colors.themeColor};
     }
   }
 :hover{
-  color:#a7f5ef;
+  color:${({theme})=>theme.colors.black};
 transition:.6s ease-in;
 & .dropdown-content{
   display:block ;
@@ -207,7 +207,7 @@ margin:0px 12px ;
   transition:.5s ;
   :hover{
   transition:.5s ;
-  color:#a7f5ef;
+  color:${({theme})=>theme.colors.black};
 }
 }
 `
@@ -355,10 +355,10 @@ export const LangButton = styled.a`
 text-decoration:none ;
 display: inline-block;
 padding: .75rem 1.15rem;
-border-radius: 8px;
+border-radius: 10px;
 color: #fff;
 text-transform: uppercase;
-font-size: 1rem;
+font-size: 16px;
 transition: all .6s;
 z-index: 1;
 transition:.5s ;
@@ -374,7 +374,7 @@ transition:.6s;
     background: #fff;
     color: #044783;
     margin: 5px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 `
 export const VideoWrapper = styled.div<{background:string}>`
@@ -418,7 +418,7 @@ padding: 16px 20px;
 font-size: 20px;
 ${({theme})=>theme.isLTR?css`right:7px`:css`left:7px`};
 bottom: 67px;
-background-color: #99d2e3;
+background-color: ${({theme})=>theme.colors.lightBlue};
 color: rgb(255, 255, 255);
 border-radius: 100%;
 border: none;
@@ -427,7 +427,7 @@ cursor: pointer;
 transition: .5s;
 z-index: 9999;
 :hover{
-  background: #38b7ae;
+  background: ${({theme})=>theme.colors.darkBlue};
   transition: .5s;
 }
 

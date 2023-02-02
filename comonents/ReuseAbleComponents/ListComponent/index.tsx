@@ -11,14 +11,14 @@ interface IProps {
   list?: IList[];
 }
 const ListComponent = ({ list }: IProps) => {
-  const { isLTR } = useTheme();
+  const { isLTR, colors } = useTheme();
   return (
     <>
       <List>
         {list?.map((item, index) => {
           return (
             <ListItem key={index}>
-              <IconDownArrowHead fill="#2193b0" />
+              <IconDownArrowHead fill={colors.lightBlue} />
               {isLTR ? item.name_en : item.name_ar}
             </ListItem>
           );

@@ -30,7 +30,7 @@ import UsersSvg from "../../../public/icons/opencartSvg";
 import { LangButton } from "../header.styled.components";
 
 const MobileHeader = () => {
-  const { isLTR, translations, locale, device } = useTheme();
+  const { isLTR, translations, locale, colors } = useTheme();
   const router = useRouter();
 
   const navigateToPage = (item: any) => {
@@ -62,7 +62,7 @@ const MobileHeader = () => {
           open={open}
           handleClose={handleClose}
           classname={"mobile-header"}
-          bgColor={"linear-gradient(-30deg,#0576bc 30%,#38b7ae91);"}
+          bgColor={colors.themeColor}
         >
           <div>
             <CloseIconWrapper onClick={handleClose}>

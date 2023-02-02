@@ -17,12 +17,12 @@ import Links from "@mui/material/Link";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 const MuarefPage = () => {
-  const { translations } = useTheme();
+  const { translations, colors } = useTheme();
   const breadcrumbs = [
-    <Links underline="hover" key="1" color="#2193b0" href="/">
+    <Links underline="hover" key="1" color={`${colors.lightBlue}`} href="/">
       {translations?.home}
     </Links>,
-    <Typography key="3" color="inherit" style={{ color: "#2193b0" }}>
+    <Typography key="3" color="inherit" style={{ color: colors.lightBlue }}>
       {translations?.featureTitleMuaref}
     </Typography>,
   ];
@@ -37,7 +37,7 @@ const MuarefPage = () => {
       </BreadCrumbWrapper>
       <AnimationBar
         description={translations?.muarefDes as string}
-        headingColor={"#2193b0"}
+        headingColor={colors.lightBlue}
         descriptionColor={"#737c85;"}
         title={translations?.featureTitleMuaref}
       />
@@ -86,6 +86,7 @@ const MuarefPage = () => {
       <OrderNowForm
         title={translations?.requestService as string}
         buttonTitle={translations?.requestService as string}
+        icon={"salesSvg"}
       />
     </Container>
   );
