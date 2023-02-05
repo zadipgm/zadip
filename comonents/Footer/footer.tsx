@@ -57,24 +57,31 @@ const Footer = () => {
             <FooterCol>
               <FooterHeading>{translations?.followUs}</FooterHeading>
               <FooterSocialLink className="social-link">
-                <Link href="https://twitter.com/zadipgroup" target={"_blank"}>
+                <Link
+                  href="https://twitter.com/zadipgroup"
+                  target={"_blank"}
+                  aria-label="Twitter"
+                >
                   <TwitterIcon />
                 </Link>
                 <Link
                   href="https://www.facebook.com/zadipgroup/"
                   target={"_blank"}
+                  aria-label="Facebook"
                 >
                   <FacebookOutlinedIcon />
                 </Link>
                 <Link
                   href="https://www.youtube.com/channel/UCpcPg5FVYATjR4FMFYtGm0Q/about"
                   target={"_blank"}
+                  aria-label="youtube"
                 >
                   <YouTubeIcon />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/company/zadip-group-of-companies"
                   target={"_blank"}
+                  aria-label="LinkedIn"
                 >
                   <LinkedInIcon />
                 </Link>

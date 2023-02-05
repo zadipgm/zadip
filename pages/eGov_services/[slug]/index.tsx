@@ -1,14 +1,14 @@
 import type { ReactElement } from "react";
 import EGovernmentServices from "../../../comonents/EGovernmentServices";
+import { EGovernmentServicesMainPage } from "../../../comonents/EGovernmentServices/styled.components";
 import Layout from "../../../comonents/Layouts/PageLayout";
-import { TechnicalSpecsMainPage } from "../../../comonents/ReuseAbleComponents/TechnicalSpecifications/styled.components";
 import { NextPageWithLayout } from "../../_app";
 
 const Page: NextPageWithLayout = () => {
   return (
-    <TechnicalSpecsMainPage>
+    <EGovernmentServicesMainPage>
       <EGovernmentServices />
-    </TechnicalSpecsMainPage>
+    </EGovernmentServicesMainPage>
   );
 };
 

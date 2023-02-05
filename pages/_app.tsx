@@ -45,11 +45,13 @@ const MyApp = ({
   return getLayout(
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="icon"
-          href="https://www.zadip.com/en/favicons/favicon_96x96.png"
+        <meta
+          name="viewport"
+          key="viewport"
+          content="width=device-width, height=device-height ,initial-scale=1.0, shrink-to-fit=no"
         />
+
+        <title>مجموعة زاد المعلومات | ZADIP GROUP LTD</title>
       </Head>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />

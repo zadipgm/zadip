@@ -14,7 +14,7 @@ position:relative;
 display: flex;
 justify-content: center;
 align-items: center;
-background: ${({theme})=>theme.colors.themeColor};
+background: ${({ theme }) => theme.colors.themeColor};
 border-radius: 15px;
 padding: 15px;
 @media (max-width:600px){
@@ -52,16 +52,6 @@ width: 50%;
 }
 }
 `
-export const VisionImage = styled.img`
-text-align:center ;
-display: flex;
-justify-content:center ;
-align-items:center ;
-@media (max-width: 600px) {
-    display:block ;
-    width:100% ;
-}
-`
 export const Description = styled.div`
 padding: 20px;
 width:70% ;
@@ -70,7 +60,7 @@ width:70% ;
     width:100% ;
     padding:0px ;
 }
-`  
+`
 export const Title = styled.h3`font-size: 35px;
 line-height: 45px;
 color: #fff;
