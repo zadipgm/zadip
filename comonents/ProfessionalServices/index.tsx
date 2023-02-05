@@ -54,9 +54,9 @@ const ProfessionalServices = () => {
               />
               <List key={index}>
                 <ListItem>
-                  {item.images.map((path) => {
+                  {item.images.map((path, key) => {
                     return (
-                      <AllServicesImageWrapper>
+                      <AllServicesImageWrapper key={key}>
                         <img src={path} alt="" width={"auto"} height={"auto"} />
                       </AllServicesImageWrapper>
                     );

@@ -8,17 +8,17 @@ declare module "styled-components" {
     | typeof import("../locales/en").default;
     direction: "rtl" | "ltr";
     isLTR: boolean;
-    device:"mobile" | "desktop" | "tablet";
+    device: "mobile" | "desktop" | "tablet";
     isRTL: boolean;
-    locale: "ar" | "en-US" |"en";
+    locale: "ar" | "en-US" | "en";
     colors: {
       themeColor: string;
-      lightThemeColor:string
-      darkBlue:string;
-      lightBlue:string;
-      headerLightColor:string
-      white:string
-      black:string
+      lightThemeColor: string
+      darkBlue: string;
+      lightBlue: string;
+      headerLightColor: string
+      white: string
+      black: string
     };
   }
 }
@@ -27,17 +27,17 @@ const defaultTheme: DefaultTheme = {
 
   locale: "en",
   direction: "rtl",
-  device:"mobile",
+  device: "mobile",
   isLTR: false,
   isRTL: true,
   colors: {
-    themeColor: "linear-gradient(-49deg,#0969a5d6 22%,#838383cc);",
-    lightThemeColor:"linear-gradient(-49deg,#31b0ff6e 22%,#83838375);",
-    headerLightColor:"linear-gradient(-49deg,#2dadfd1f 22%,#83838375);",
-    darkBlue:"#044783",
-    lightBlue:"#0969a5d6",
-    white:"#fff",
-    black:"#000"
+    themeColor: "linear-gradient(-49deg,#0969a5d6 22%,#e61a6cdb);",
+    lightThemeColor: "linear-gradient(-49deg,#31b0ff6e 22%,#e61a6c5c);",
+    headerLightColor: "linear-gradient(-49deg,#2dadfd1f 22%,#e61a6c5c);",
+    darkBlue: "#044783",
+    lightBlue: "#0969a5d6",
+    white: "#fff",
+    black: "#000"
   }
 };
 

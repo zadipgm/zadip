@@ -93,7 +93,7 @@ const Footer = () => {
                   src="/images/zadiplogo.png"
                   alt="logo"
                   width={240}
-                  height={"auto"}
+                  height={"100%"}
                 />
               </Link>
             </FooterCol>

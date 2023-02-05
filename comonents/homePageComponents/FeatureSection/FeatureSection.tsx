@@ -24,7 +24,7 @@ const FeatureSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
-    autoplay: true,
+    // autoplay: true,
     arrows: false,
     easing: "linear",
     customPaging: (i: any) => (
@@ -33,7 +33,7 @@ const FeatureSection = () => {
           src={`/images/pro${i + 1}.png`}
           alt="products"
           width={"100%"}
-          height={"auto"}
+          height={"100%"}
         />
       </Wrapper>
     ),
@@ -62,12 +62,6 @@ const FeatureSection = () => {
         <Slider {...settings} className={"feature-section"}>
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              {/* <img
-                src="/images/ektefa.png"
-                alt="ektefa"
-                width={100}
-                height={"auto"}
-              /> */}
               <EktefaTitle direction={isLTR ? "ltr" : "rtl"}>
                 {translations?.featureTitleEktefa}
               </EktefaTitle>
@@ -77,7 +71,11 @@ const FeatureSection = () => {
                   __html: translations?.featurecardDescriptionEktefa as string,
                 }}
               ></EktefaDescription>
-              <Link href="https://ektefa.net/zadip" target={"_blank"}>
+              <Link
+                href="https://ektefa.net/zadip"
+                target={"_blank"}
+                aria-label="visit application link"
+              >
                 {translations?.visitsite}
               </Link>
             </EktefaDescriptionWrapper>
@@ -93,12 +91,6 @@ const FeatureSection = () => {
 
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              {/* <img
-                src="/images/nafeth-light-logo.png"
-                alt="nafeth"
-                width={150}
-                height={"auto"}
-              /> */}
               <EktefaTitle>{translations?.featureTitleNafeth}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
@@ -106,7 +98,11 @@ const FeatureSection = () => {
                   __html: translations?.featurecardDescriptionNafeth as string,
                 }}
               ></EktefaDescription>
-              <Link href="https://nafeth.com/zadip" target={"_blank"}>
+              <Link
+                href="https://nafeth.com/zadip"
+                target={"_blank"}
+                aria-label="visit application link"
+              >
                 {translations?.visitsite}
               </Link>
             </EktefaDescriptionWrapper>
@@ -122,12 +118,6 @@ const FeatureSection = () => {
 
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              {/* <img
-                src="/images/mauref.png"
-                alt="mauref"
-                width={100}
-                height={60}
-              /> */}
               <EktefaTitle>{translations?.featureTitleMuaref}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
@@ -135,7 +125,11 @@ const FeatureSection = () => {
                   __html: translations?.featurecardDescriptionMuaref as string,
                 }}
               ></EktefaDescription>
-              <Link href="#" target={"_blank"}>
+              <Link
+                href="#"
+                target={"_blank"}
+                aria-label="visit application link"
+              >
                 {translations?.visitsite}
               </Link>
             </EktefaDescriptionWrapper>
@@ -151,12 +145,6 @@ const FeatureSection = () => {
 
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              {/* <img
-                src="/images/ihtiwa.png"
-                alt="ehtiwa"
-                width={150}
-                height={"auto"}
-              /> */}
               <EktefaTitle>{translations?.featureTitleEhtiwa}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
@@ -164,7 +152,11 @@ const FeatureSection = () => {
                   __html: translations?.featurecardDescriptionEhtiwa as string,
                 }}
               ></EktefaDescription>
-              <Link href="https://ehtwa.sa/" target={"_blank"}>
+              <Link
+                href="https://ehtwa.sa/"
+                target={"_blank"}
+                aria-label="visit application link"
+              >
                 {translations?.visitsite}
               </Link>
             </EktefaDescriptionWrapper>
@@ -180,12 +172,6 @@ const FeatureSection = () => {
 
           <EktefaWrapper direction={isLTR ? "ltr" : "rtl"}>
             <EktefaDescriptionWrapper>
-              {/* <img
-                src="/images/cadre.png"
-                alt="cadre"
-                width={150}
-                height={"auto"}
-              /> */}
               <EktefaTitle>{translations?.featureTitlecadre}</EktefaTitle>
               <EktefaDescription
                 direction={isLTR ? "ltr" : "rtl"}
@@ -193,7 +179,12 @@ const FeatureSection = () => {
                   __html: translations?.featurecardDescriptionCadre as string,
                 }}
               ></EktefaDescription>
-              <Link href="https://cadre.sa/">{translations?.visitsite}</Link>
+              <Link
+                href="https://cadre.sa/"
+                aria-label="visit application link"
+              >
+                {translations?.visitsite}
+              </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
               <EktefaImage

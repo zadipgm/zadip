@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HighLightProductSectionContainer = styled.div`
 
-background: ${({theme})=>theme.colors.lightThemeColor};
+background: ${({ theme }) => theme.colors.lightThemeColor};
 padding:0px 0px 40px 0px ;
 display:block ;
 
@@ -26,7 +26,7 @@ export const HighLightProductWrapper = styled.div`
      display:block ;
  }
 `
-export const Eservices =  styled.div`
+export const Eservices = styled.div`
 width:40% ;
 > img{
     padding: 12px;
@@ -69,6 +69,8 @@ export const Elogos = styled.div`
    > a > img{
         cursor: pointer;
         padding: 25px;
+        width:100% ;
+        height:100% ;
     margin: 0px 20px 0px;
     @media (max-width: 600px) {
         margin: 0;

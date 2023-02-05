@@ -28,7 +28,7 @@ const HighLightProductSection = () => {
             ></Description>
           </HighLightProductContent>
           <Eservices>
-            <img src="/images/eGov.png" alt="" />
+            <img src="/images/eGov.png" alt="" width={"100%"} height={"100%"} />
           </Eservices>
         </HighLightProductWrapper>
         <Elogos>
@@ -36,27 +36,27 @@ const HighLightProductSection = () => {
             <Image
               src="/images/emuqeem.png"
               alt="muqeem"
-              width={150}
-              height={100}
+              width={80}
+              height={80}
             />
           </Link>
           <Link href={`/${locale}/eGov_services/tam`}>
-            <Image src="/images/etam.png" alt="tam" width={150} height={100} />
+            <Image src="/images/etam.png" alt="tam" width={80} height={80} />
           </Link>
           <Link href={`/${locale}/eGov_services/masarat`}>
             <Image
               src="/images/emasarat.png"
               alt="masarat"
-              width={150}
-              height={100}
+              width={80}
+              height={80}
             />
           </Link>
           <Link href={`/${locale}/eGov_services/smartgate`}>
             <Image
               src="/images/esmart.png"
               alt="smart"
-              width={150}
-              height={100}
+              width={80}
+              height={80}
             />
           </Link>
         </Elogos>

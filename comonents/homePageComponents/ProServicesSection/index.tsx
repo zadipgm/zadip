@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import * as React from "react";
 import { useTheme } from "styled-components";
-import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import { Button } from "../../ReuseAbleComponents/ReuseableButton/styled.components";
 import {
   Container,
@@ -23,9 +22,7 @@ const ProfessionalServices = () => {
           <SubTitle>{translations?.projects_it}</SubTitle>
           <Text>{translations?.professionalServices as string}</Text>
           {device === "desktop" && (
-            <Button
-              onClick={() => router.push(`/${locale}/professional_services`)}
-            >
+            <Button href={`/${locale}/professional_services`}>
               {translations?.viewmore}
             </Button>
           )}
@@ -35,12 +32,12 @@ const ProfessionalServices = () => {
             src="/images/proservice.jpg"
             alt="proservice"
             width={"100%"}
-            height={"auto"}
+            height={"100%"}
           />
           {device === "mobile" && (
             <Button
               className="mobile-button"
-              onClick={() => router.push(`/${locale}/professional_services`)}
+              href={`/${locale}/professional_services`}
             >
               {translations?.viewmore}
             </Button>

@@ -58,6 +58,7 @@ transition:.5s ease-in-out;
 cursor: pointer;
 > img {
   width:100%;
+  height:auto ;
   padding:6px;
 }
 @media(max-width:600px){
