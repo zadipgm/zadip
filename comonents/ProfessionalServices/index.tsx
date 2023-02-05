@@ -42,7 +42,7 @@ const ProfessionalServices = () => {
       />
       <ListComponent list={list.professional_list} />
       <AllServices>
-        {_data.professional_services.map((item) => {
+        {_data.professional_services.map((item, index) => {
           return (
             <>
               <AnimationBar
@@ -52,7 +52,7 @@ const ProfessionalServices = () => {
                 descriptionColor={""}
                 fontSize={"14px"}
               />
-              <List>
+              <List key={index}>
                 <ListItem>
                   {item.images.map((path) => {
                     return (

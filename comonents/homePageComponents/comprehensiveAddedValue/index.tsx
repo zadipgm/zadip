@@ -6,9 +6,7 @@ import {
   Title,
   ImageWrapper,
   Wrapper,
-  VisionImage,
 } from "./styled.components";
-import Image from "next/image";
 import { useTheme } from "styled-components";
 
 const ComprehensiveAddedValue = () => {

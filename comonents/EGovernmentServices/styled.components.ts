@@ -31,6 +31,9 @@ margin-top:80px ;
 export const Heading = styled.h2`
 color:${({ theme }) => theme.colors.lightBlue} ;
 `
+export const EGovernmentServicesMainPage = styled.div`
+margin-top: 90px;
+`
 export const ButtonsWrapper = styled.div`
 display: flex;
 justify-content: center;

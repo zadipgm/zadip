@@ -18,10 +18,18 @@ class MyDocument extends Document {
     return (
       <Html dir={this.props.__NEXT_DATA__.locale === "ar" ? "rtl" : "ltr"}>
         <Head>
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="HandheldFriendly" content="true" />
           <link
             href="https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="/images/favicon.png"
+          />
+          <meta name="theme-color" content="#fff" />
         </Head>
         <body>
           <Main />
