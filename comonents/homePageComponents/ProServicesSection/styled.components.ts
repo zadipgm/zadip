@@ -30,7 +30,7 @@ padding:15px ;
     width:100% ;
 }
 `
-export const Title = styled.h4`
+export const Title = styled.h3`
 color: #0078a9;
 text-transform: none;
 font-size: 26px;
@@ -58,6 +58,7 @@ export const IamgeWrapper = styled.div`
 width:50% ;
 @media (max-width: 600px) {
     width:100% ;
+    height:100% ;
 }
 padding:15px ;
 > img {

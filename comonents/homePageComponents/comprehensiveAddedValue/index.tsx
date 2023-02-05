@@ -18,8 +18,8 @@ const ComprehensiveAddedValue = () => {
           <img
             src={"https://www.zadip.com/en/images/vision2030.png"}
             alt={"2030"}
-            width={""}
-            height={""}
+            width={"100%"}
+            height={"100%"}
           />
         </ImageWrapper>
         <Description>

@@ -53,7 +53,7 @@ const Header = () => {
                 src="/images/zadiplogo.png"
                 alt="logo"
                 width={150}
-                height={"auto"}
+                height={"100%"}
               />
             </LogoWrapper>
           </Link>

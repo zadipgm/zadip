@@ -3,7 +3,7 @@ import Breadcrumb from "../ReuseAbleComponents/Breadcrumb";
 import {
   AboutUsContainer,
   BreadCrumbWrapper,
-  AboutHeading,
+  Title,
   AboutCompanyWrapper,
   AboutusDescription,
   DesWrapper,
@@ -32,7 +32,7 @@ const AboutUS = () => {
   return (
     <AboutUsContainer>
       <BreadCrumbWrapper>
-        <AboutHeading>{translations?.aboutUs}</AboutHeading>
+        <Title>{translations?.aboutUs}</Title>
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>
       <AnimationBar

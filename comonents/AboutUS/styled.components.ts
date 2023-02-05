@@ -26,7 +26,7 @@ margin-top:100px ;
  padding:0px 15px ;
 }
 `
-export const AboutHeading = styled.h2`
+export const Title = styled.h2`
 color: ${({ theme }) => theme.colors.lightBlue};
 `
 export const AboutCompanyWrapper = styled.div`

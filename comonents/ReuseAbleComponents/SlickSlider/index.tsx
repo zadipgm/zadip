@@ -2,17 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-  SliderContainer,
-  SliderWrapper,
-  Image,
-  Title,
-} from "./styled.components";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { SliderContainer, SliderWrapper, Image } from "./styled.components";
 import { useRouter } from "next/router";
 import { useTheme } from "styled-components";
-
 interface INewsDetails {
   date?: string;
   image?: string;
@@ -44,7 +36,6 @@ const SliderSlick: React.FC<IProps> = ({
   autoplaySpeed,
   speed,
 }) => {
-  const { isLTR } = useTheme();
   const router = useRouter();
   var settings = {
     dots: false,
@@ -91,22 +82,9 @@ const SliderSlick: React.FC<IProps> = ({
       <Slider {...settings}>
         {sliderData?.map((item, index) => {
           return (
-            <div
-              key={item.id}
-              onClick={() =>
-                router.push({
-                  pathname: "/news-headlines",
-                  query: { id: item?.id },
-                })
-              }
-            >
-              <SliderWrapper className={classname}>
-                <Image src={item.image} alt="" width={130} height={90} />
-                <Title>
-                  {isLTR ? item.description_en : item.description_ar}
-                </Title>
-              </SliderWrapper>
-            </div>
+            <SliderWrapper className={classname} key={index}>
+              <Image src={item.image} alt={item.id} width={100} height={100} />
+            </SliderWrapper>
           );
         })}
       </Slider>

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const  SliderContainer = styled.div`
+export const SliderContainer = styled.div`
 @media (max-width: 600px) {
      width:100% ;
     }
@@ -16,11 +16,11 @@ export const  SliderContainer = styled.div`
 export const SliderWrapper = styled.div`
 &.recent-news{
     ${({ theme }) =>
-    theme.isLTR
-    ? css`
+        theme.isLTR
+            ? css`
         direction:ltr ;
         `
-    : css`
+            : css`
     direction:rtl ;
     `}
     display:flex !important ;
@@ -41,7 +41,7 @@ justify-content: flex-start; ;
        > h4{
             color: #fff;
         }
-        background: ${({theme})=>theme.colors.themeColor};
+        background: ${({ theme }) => theme.colors.themeColor};
         transition: .5s;
         transform: translateY(-5px);
         box-shadow: -3px 4px 15px 9px rgba(148,148,148,0.47);
@@ -51,10 +51,7 @@ justify-content: flex-start; ;
     &.partner-slider{
         display:flex !important ;
  justify-content:center ;
- margin: 20px ;
-    border-radius: 25px;
     border:none ;
-    cursor: pointer;
     transition: .5s;
     :hover{
         
@@ -69,11 +66,9 @@ justify-content: flex-start; ;
         }
     }
 `
-export const Image= styled.img``
-export const Title = styled.h4`
-    font-weight: 700;
-    text-align: start;
-    margin: 0px 12px;
-    color:#34495e ;
-    `
+export const Image = styled.img`
+width:50%;
+height:50% ;
+`
+
 

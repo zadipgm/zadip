@@ -62,6 +62,12 @@
             "name_ar":"عن المجموعة",
             "icon":"aboutusSvg",
             "link":"/about-us"
+        },
+        {
+            "name_en":"Recruitment",
+            "name_ar":"التوظيف",
+            "icon":"recruitmentSvg",
+            "link":"/recruitment"
         }
         
     ]

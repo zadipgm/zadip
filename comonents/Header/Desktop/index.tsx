@@ -61,7 +61,10 @@ const DesktopHeader = () => {
                 <MenuListcontainer>
                   <MenuListWrapper>
                     <CloudSvg fill="#fff" width="30px" height="30px" />
-                    {isLTR ? "Cloud Services" : "الخدمات السحابية"}
+                    <span>
+                      {" "}
+                      {isLTR ? "Cloud Services" : "الخدمات السحابية"}
+                    </span>
                   </MenuListWrapper>
                   <IconDownArrowHead
                     fill="#fff"
@@ -97,7 +100,10 @@ const DesktopHeader = () => {
                 <MenuListcontainer>
                   <MenuListWrapper>
                     <ServicesSvg fill="#fff" width="25px" height="25px" />
-                    {isLTR ? "eGov Services" : "خدمات الحكومة الالكترونية"}
+                    <span>
+                      {" "}
+                      {isLTR ? "eGov Services" : "خدمات الحكومة الالكترونية"}
+                    </span>
                   </MenuListWrapper>
                   <IconDownArrowHead
                     fill="#fff"
@@ -130,7 +136,10 @@ const DesktopHeader = () => {
             <NavbarItems>
               <NavbarItemsLink href={`/${locale}/professional_services`}>
                 <ServicesSvg fill="#fff" width="30px" height="30px" />
-                {isLTR ? "Professional Services" : "خدمات احترافية"}
+                <span>
+                  {" "}
+                  {isLTR ? "Professional Services" : "خدمات احترافية"}
+                </span>
               </NavbarItemsLink>
             </NavbarItems>
           </div>
@@ -142,7 +151,7 @@ const DesktopHeader = () => {
               {header_data.about_us.map((item, index) => {
                 return (
                   <NavbarItemsList key={index}>
-                    <NavbarItemsLink onClick={() => navigateToPage(item)}>
+                    <NavbarItemsLink href={`/${locale}${item.link}`}>
                       <IconComponent
                         icon={item.icon}
                         fill={"#fff"}
