@@ -25,7 +25,7 @@ export const FeatureSectionContainer = styled.div`
     width: 130px;
     transition:.5s ease ;
     height: 130px;
-    border-radius: 100%;
+    border-radius: 10%;
     @media(max-width:600px){
     width:70px ;
     height:70px;
@@ -53,7 +53,7 @@ height:130px;
 display:flex;
 justify-content:center;
 align-items:center;
-border-radius:100%;
+border-radius:10%;
 transition:.5s ease-in-out;
 cursor: pointer;
 > img {

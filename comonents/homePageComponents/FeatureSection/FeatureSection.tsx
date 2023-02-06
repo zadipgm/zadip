@@ -24,7 +24,7 @@ const FeatureSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
-    // autoplay: true,
+    autoplay: true,
     arrows: false,
     easing: "linear",
     customPaging: (i: any) => (
