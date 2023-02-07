@@ -31,9 +31,9 @@ const defaultTheme: DefaultTheme = {
   isLTR: false,
   isRTL: true,
   colors: {
-    themeColor: "linear-gradient(-49deg,#0969a5d6 22%,#e61a6cdb);",
-    lightThemeColor: "linear-gradient(-49deg,#31b0ff6e 22%,#e61a6c5c);",
-    headerLightColor: "linear-gradient(-49deg,#2dadfd1f 22%,#e61a6c5c);",
+    themeColor: "linear-gradient(-49deg,#09589d 22%, #56ceff);",
+    lightThemeColor: "linear-gradient(-49deg,#09589d29 22%,#56ceff33);",
+    headerLightColor: "linear-gradient(-49deg,#09589d29 22%,#56ceff33);",
     darkBlue: "#044783",
     lightBlue: "#0969a5d6",
     white: "#fff",
