@@ -50,12 +50,12 @@ const AboutUS = () => {
             }}
           ></AboutusDescription>
         </DesWrapper>
-        <img
+        {/* <img
           src="/images/abouts-side-svg.svg"
           alt="about-img"
           width={device === "desktop" ? "50%" : "100%"}
           height={"100%"}
-        />
+        /> */}
       </AboutCompanyWrapper>
       <AnimationBar
         title={translations?.ourGoal}
