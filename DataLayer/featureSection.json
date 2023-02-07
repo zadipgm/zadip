@@ -1,9 +1,0 @@
-{
-    "slider_data":[
-        {"image":"/images/ektefa.png", "color":"#1668AF","width":"100"},
-        {"image":"/images/nafeth-light-logo.png", "color":"#1281C4","width":"150"},
-        {"image":"/images/mauref.png", "color":"#1668AF","width":"100"},
-        {"image":"/images/ihtiwa.png", "color":"#35B1B5","width":"150"},
-        {"image":"/images/cadre.png", "color":"#41B9EA","width":"150"}
-    ]
-}
