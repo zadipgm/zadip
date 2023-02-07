@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap');
+html{
+
+  scroll-behavior: smooth;
+  transition: .6s;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  height:100%;
+  width:100%;
+  margin:0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif !important;
+}
+.MuiModal-root{
+  z-index:9999 !important ;
+}
+/* h1,h2,h3,h4,h5,h6{
+  font-family:"'__Cairo_f3a025'";
+  margin:0
+} */
+/* p{
+ font-family:"'__Cairo_f3a025', '__Cairo_Fallback_f3a025'";
+margin:0
+} */
+/* span{
+  font-family:'__Cairo_f3a025', '__Cairo_Fallback_f3a025'
+
+}
+a{
+  font-family:'__Cairo_f3a025', '__Cairo_Fallback_f3a025'
+
+} */
+
