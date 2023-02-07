@@ -3,7 +3,6 @@ import * as React from "react";
 import { useTheme } from "styled-components";
 import ComprehensiveAddedValue from "./comprehensiveAddedValue";
 import FeatureSection from "./FeatureSection/FeatureSection";
-import HighLightProductSection from "./HighLightProductSection";
 import OurPartnerSection from "./OurPartnerSection";
 import ProductSection from "./ProductsSection";
 import ProfessionalServices from "./ProServicesSection";
@@ -18,7 +17,6 @@ const HomePage = () => {
         />
       </Head>
       <FeatureSection />
-      <HighLightProductSection />
       <ProductSection />
       <OurPartnerSection title={translations?.ourpartner as string} />
       <ProfessionalServices />
