@@ -3,7 +3,7 @@ import { useTheme } from "styled-components";
 import CloseSvg from "../../../public/icons/closeSvg";
 import IconComponent from "../IconComponent";
 import ModalComponent from "../Modal";
-import axios from "axios";
+// import axios from "axios";
 import {
   OrderNowFormContainer,
   Wrapper,
@@ -61,17 +61,17 @@ const OrderNowForm: React.FC<IProps> = ({
     setService(value);
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      await axios.post("http://localhost:5000/contact", {
-        Name: name,
-        Email: email,
-        MobileNumber: number,
-        ServiceName: service,
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    // e.preventDefault();
+    // try {
+    //   await axios.post("http://localhost:5000/contact", {
+    //     Name: name,
+    //     Email: email,
+    //     MobileNumber: number,
+    //     ServiceName: service,
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // }
     setName("");
     setEmail("");
     setNumber("");
