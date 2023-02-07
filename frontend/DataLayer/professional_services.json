@@ -1,0 +1,11 @@
+{
+    "professional_services":[
+        {"title_en":"CCTV Systems", "title_ar":"أنظمة كاميرات المراقبة" ,"images":["/images/CCTVSystems/avigilon.png","/images/CCTVSystems/Bosch-logo.svg.png","/images/CCTVSystems/dahua.png","/images/CCTVSystems/hikvision.png","/images/CCTVSystems/honeywell.png","/images/CCTVSystems/hyundai.png","/images/CCTVSystems/milestonesys.png"]},
+        {"title_en":"Data Systems", "title_ar":"نظام البيانات" ,"images":["/images/Datasystems/640px-Tp-Link_logo_2016.png","/images/Datasystems/cisco.png","/images/Datasystems/dlink.png","/images/Datasystems/linksys.png"]},
+        {"title_en":"EIB Systems", "title_ar":"أنظمة EIB" ,"images":["/images/EIBSystems/knxlightingcontrolsystem.png","/images/EIBSystems/Shnaider.png"]},
+        {"title_en":"Fire Alarm Systems", "title_ar":"أنظمة إنذار الحريق" ,"images":["/images/FireAlarmSystems/Bosch-logo.svg.png","/images/FireAlarmSystems/Gent.png","/images/FireAlarmSystems/honeywell.png"]},
+        {"title_en":"IP Phone Systems", "title_ar":"أنظمة هاتف IP" ,"images":["/images/IPPhoneSystems/AVAYA.png","/images/IPPhoneSystems/grandstrem.png"]},
+        {"title_en":"MATV SMATV Systems", "title_ar":"أنظمة MATV SMATV" ,"images":["/images/MATVSMATVSystems/Alcad.png","/images/MATVSMATVSystems/satrover.png","/images/MATVSMATVSystems/Televes.png"]},
+        {"title_en":"Sound and Audio Systems", "title_ar":"الأنظمة الصوتية" ,"images":["/images/SoundSystems/Bosch-logo.svg.png","/images/SoundSystems/Bose.png","/images/SoundSystems/ITC.png","/images/SoundSystems/jedia-logo-svg-vector.svg","/images/SoundSystems/Prosound.png", "/images/SoundSystems/TOA_Corporation_1984.svg", "/images/SoundSystems/yamaha.png"]}
+    ]
+}
