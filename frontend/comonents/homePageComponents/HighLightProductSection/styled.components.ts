@@ -36,14 +36,14 @@ width:40% ;
      width:100% ;
  }
  @media (min-width: 1440px) {
-     width:350px ;
+    width:350px ;
  }
 
 `
 export const HighLightProductContent = styled.div`
 width:60% ;
 @media (max-width: 600px) {
-     width:100% ;
+width:100% ;
  }
 padding: 15px;
  > a{
@@ -64,7 +64,7 @@ export const Elogos = styled.div`
     align-items: center;
     @media (max-width: 600px) {
     display:block ;
-        text-align: center;
+    text-align: center;
  }
    > a > img{
         cursor: pointer;
@@ -74,7 +74,7 @@ export const Elogos = styled.div`
     margin: 0px 20px 0px;
     @media (max-width: 600px) {
         margin: 0;
-        width:40% ;
+        width:40%;
     }
     @media (min-width: 600px) {
         margin: 0;
@@ -84,7 +84,6 @@ export const Elogos = styled.div`
   transform: scale(1.2); 
 }
     }
-
 `
 export const SUbTitle = styled.h4`    padding-top: 14px;
 text-transform: uppercase;
