@@ -15,17 +15,19 @@ import Slider from "react-slick";
 import { useTheme } from "styled-components";
 import Link from "next/link";
 const FeatureSection = () => {
-  const { isLTR, translations, device, colors } = useTheme();
+  const { isLTR, isRTL, translations, device, colors } = useTheme();
 
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 500,
+    pauseOnDotsHover: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 3000,
     autoplay: true,
     arrows: false,
+    rtl: isRTL,
     easing: "linear",
     customPaging: (i: any) => (
       <Wrapper>

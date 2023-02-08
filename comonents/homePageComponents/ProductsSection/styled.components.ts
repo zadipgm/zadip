@@ -37,15 +37,14 @@ align-items:center ;
 }
 `
 export const OtherLogo = styled.div`
+margin:20px 0px 0px  0px ;
 display:flex ;
 justify-content:center ;
 align-items:center ;
 flex-wrap:wrap ;
->img{
+> a >img{
         cursor: pointer;
-        padding: 25px;
-        height:auto ;
-        width:15% ;
+        width:100% ;
     margin: 0px 20px 0px;
     @media (max-width: 600px) {
         margin: 0;

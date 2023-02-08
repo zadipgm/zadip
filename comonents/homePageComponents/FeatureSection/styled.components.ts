@@ -18,6 +18,15 @@ export const FeatureSectionContainer = styled.div`
     padding-top:115px ;
 }
 .slick-dots{
+    ${({ theme }) =>
+        theme.isLTR
+            ? css`
+               direction:ltr ;
+                `
+            : css`
+                direction:rtl ;
+                `
+    }
     transition:.5s ease ;
     top:0 ;
     .slick-active{

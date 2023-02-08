@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as React from "react";
 import { useTheme } from "styled-components";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
@@ -19,20 +20,33 @@ const ProductSection = () => {
             <img src="/images/eGov.svg" alt="" width={"100%"} height={"100%"} />
           </MainLogo>
           <OtherLogo>
-            <img
-              src="/images/emuqeem.svg"
-              alt="muqeem"
-              width={80}
-              height={80}
-            />
-            <img src="/images/etam.svg" alt="tam" width={80} height={80} />
-            <img
-              src="/images/emasarat.svg"
-              alt="masarat"
-              width={80}
-              height={80}
-            />
-            <img src="/images/esmart.svg" alt="smart" width={80} height={80} />
+            <Link href={`/${locale}/eGov_services/muqeem`}>
+              <img
+                src="/images/emuqeem.svg"
+                alt="muqeem"
+                width={60}
+                height={60}
+              />
+            </Link>
+            <Link href={`/${locale}/eGov_services/tam`}>
+              <img src="/images/etam.svg" alt="tam" width={60} height={60} />
+            </Link>
+            <Link href={`/${locale}/eGov_services/masarat`}>
+              <img
+                src="/images/emasarat.svg"
+                alt="masarat"
+                width={60}
+                height={60}
+              />
+            </Link>
+            <Link href={`/${locale}/eGov_services/smartgate`}>
+              <img
+                src="/images/esmart.svg"
+                alt="smart"
+                width={60}
+                height={60}
+              />
+            </Link>
           </OtherLogo>
         </Wrapper>
       </Container>
