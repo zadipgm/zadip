@@ -11,7 +11,6 @@ margin:30px 0px ;
 `
 export const Wrapper = styled.div`
 position:relative;
-background: #ffffffc7;
 border-radius: 15px;
 padding: 15px;
 @media (max-width:600px){

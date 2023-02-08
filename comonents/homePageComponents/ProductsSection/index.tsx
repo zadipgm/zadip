@@ -16,23 +16,23 @@ const ProductSection = () => {
       <Container>
         <Wrapper>
           <MainLogo>
-            <img src="/images/eGov.png" alt="" width={"100%"} height={"100%"} />
+            <img src="/images/eGov.svg" alt="" width={"100%"} height={"100%"} />
           </MainLogo>
           <OtherLogo>
             <img
-              src="/images/emuqeem.png"
+              src="/images/emuqeem.svg"
               alt="muqeem"
               width={80}
               height={80}
             />
-            <img src="/images/etam.png" alt="tam" width={80} height={80} />
+            <img src="/images/etam.svg" alt="tam" width={80} height={80} />
             <img
-              src="/images/emasarat.png"
+              src="/images/emasarat.svg"
               alt="masarat"
               width={80}
               height={80}
             />
-            <img src="/images/esmart.png" alt="smart" width={80} height={80} />
+            <img src="/images/esmart.svg" alt="smart" width={80} height={80} />
           </OtherLogo>
         </Wrapper>
       </Container>
