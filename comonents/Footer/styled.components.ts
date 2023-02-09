@@ -44,16 +44,26 @@ display:block ;
 &.logo{
     text-align:center ;
     @media (max-width: 600px) {
-text-align:unset ;
+    text-align:unset ;
+    }
+  > a > img{
+        @media (max-width: 600px) {
+        width:180px;
+        } 
+        @media (min-width: 600px) {
+        width:180px;
+        }
+        @media (min-width: 1024px) {
+        width:70% ;
+        }
+    }
 }
-}
+
 
 @media (max-width: 600px) {
 width:100% ;
 padding:0 ;
 }
-
-
 margin:0 auto;
 padding: 0 15px;
 `

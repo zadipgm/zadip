@@ -15,9 +15,21 @@ margin:0 auto ;
 `
 export const FeatureSectionContainer = styled.div`
 .slick-list{
-    padding-top:115px ;
+    @media(min-width:320px){
+        padding-top:200px ;
+    }
+    @media(min-width:425px){
+        padding-top:170px ;
+    }
+    @media(min-width:1024px){
+        padding-top:125px ;
+    }
 }
 .slick-dots{
+    height: 134px;
+    @media(min-width:600px){
+        height: 134px;
+    }
     ${({ theme }) =>
         theme.isLTR
             ? css`
@@ -31,21 +43,40 @@ export const FeatureSectionContainer = styled.div`
     top:0 ;
     .slick-active{
      border:2px solid ${({ theme }) => theme.colors.lightBlue} ;
-    width: 130px;
+    width: 150px;
     transition:.5s ease ;
     height: 130px;
     border-radius: 10%;
+    padding:0px 12px 12px 12px ;
     @media(max-width:600px){
-    width:70px ;
+    width:94px ;
     height:70px;
-}
     }
+    div > img{
+            display:none ;   
+        }
+        > div{
+        
+     
+        }
+    
+    }
+    padding:0px 12px 12px 12px ;
+}
+.slick-dots {
+    display:flex !important ;
+    justify-content:center ;
+    align-items:center ;
+    flex-wrap:wrap ;
 }
 .slick-dots li{
-    width:130px;
+    transition:.5s ease-in ;
+    width:150px;
+    height:130px ;
+    padding:0px 12px 12px 12px ;
     border:2px solid transparent;
     @media(max-width:600px){
-    width:70px;
+    width:94px;
     height:70px;
 }
 @media(min-width:600px){
@@ -56,19 +87,21 @@ export const FeatureSectionContainer = styled.div`
 }
 }
 `
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ path: string }>`
 width:130px;
 height:130px;
 display:flex;
+background-image: url(${({ path }) => path});
+background-position:center center;
+        background-repeat: no-repeat;
+        background-size: contain;
 justify-content:center;
 align-items:center;
 border-radius:10%;
-transition:.5s ease-in-out;
 cursor: pointer;
 > img {
   width:100%;
   height:auto ;
-  padding:6px;
 }
 @media(max-width:600px){
     width:70px;

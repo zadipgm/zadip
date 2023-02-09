@@ -19,21 +19,21 @@ margin:0 auto ;
 `
 export const HeaderWrapper = styled.div`
 `
-export const HeaderNavbarWrapper= styled.div`
+export const HeaderNavbarWrapper = styled.div`
 position: fixed;
 top: 0;
 z-index:9999;
 width: 100%;
-background: ${({theme})=>theme.colors.headerLightColor};
+background: ${({ theme }) => theme.colors.headerLightColor};
 backdrop-filter: saturate(180%) blur(5px);
 &.scrolled {
   opacity:.9 ;
-  background:${({theme})=>theme.colors.themeColor};
+  background:${({ theme }) => theme.colors.themeColor};
   animation: rotateMenu 1000ms ease-in-out;
   transform-origin: top center;
   }
   &.other-pages{
-  background:${({theme})=>theme.colors.themeColor};
+  background:${({ theme }) => theme.colors.themeColor};
  animation:none
   }
 `
@@ -44,7 +44,7 @@ export const Link = styled.a`
 color: #a8aeb3;
 text-decoration:none;
 padding: 0px 8px;
-` 
+`
 export const HeaderLogo = styled.img`
 padding-top:12px ;
 @media (max-width: 600px) {
@@ -54,7 +54,7 @@ align-items:center ;
 width:200px ;
 }
 `
-export const  NavBar = styled.ul`
+export const NavBar = styled.ul`
 list-style-type: none;
 display: flex;
 justify-content: center;
@@ -74,9 +74,9 @@ padding:0 ;
   display:flex;
 }
 `
-export const ImageContainer =styled.div`
+export const ImageContainer = styled.div`
 `
-export const  NavBarList =styled.li`
+export const NavBarList = styled.li`
 padding: 33px 18px;
 font-size: 16px;
 display: flex;
@@ -87,7 +87,7 @@ transition:.6s ease-in-out;
 perspective: 1000px;
 & .dropdown-content{
   position: absolute;
-  background: ${({theme})=>theme.colors.themeColor};
+  background: ${({ theme }) => theme.colors.themeColor};
   opacity:.8 ;
   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
   z-index: 1;
@@ -105,10 +105,10 @@ perspective: 1000px;
     top: 0;
     ${({ theme }) =>
     theme.isLTR
-    ? css`
+      ? css`
       left: 100%;
         `
-    : css`
+      : css`
     right:100% ;
     `}
     animation: rotateMenu 800ms ease-in-out forwards;
@@ -117,7 +117,7 @@ perspective: 1000px;
     padding: 0;
     margin: 0;
     width: 200px;
-    background: ${({theme})=>theme.colors.themeColor};
+    background: ${({ theme }) => theme.colors.themeColor};
     
   }
 }
@@ -130,21 +130,21 @@ perspective: 1000px;
     top: calc(100% - 54px);
      ${({ theme }) =>
     theme.isLTR
-    ? css`
+      ? css`
       left: 100%;
         `
-    : css`
+      : css`
     right:100% ;
     `}
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: 200px;
-    background: ${({theme})=>theme.colors.themeColor};
+    background: ${({ theme }) => theme.colors.themeColor};
     }
   }
 :hover{
-  color:${({theme})=>theme.colors.black};
+  color:${({ theme }) => theme.colors.black};
 transition:.6s ease-in;
 & .dropdown-content{
   display:block ;
@@ -207,7 +207,7 @@ margin:0px 12px ;
   transition:.5s ;
   :hover{
   transition:.5s ;
-  color:${({theme})=>theme.colors.black};
+  color:${({ theme }) => theme.colors.black};
 }
 }
 `
@@ -215,7 +215,7 @@ export const NavLink = styled.a`
 text-decoration:none ;
 color: #fff;
 `
-export const NavbarItems =styled.ul`
+export const NavbarItems = styled.ul`
 padding: 0;
 margin: 0;
 list-style-type: none;
@@ -226,7 +226,7 @@ transition:.5s ;
   background-color: #000000de;
 }
 `
-export const MenuListcontainer= styled.div`
+export const MenuListcontainer = styled.div`
 display:flex ;
 justify-content:space-between ;
 align-items:center ;
@@ -234,25 +234,25 @@ width:250px ;
 >svg {
   ${({ theme }) =>
     theme.isLTR
-    ? css`
+      ? css`
       transform:rotate(-90deg) ;
         `
-    : css`
+      : css`
    transform:rotate(90deg) ;
     `}
   
 }
 `
 
-export const LogoWrapper= styled.div`
+export const LogoWrapper = styled.div`
 `
-export const MenuListWrapper= styled.div`
+export const MenuListWrapper = styled.div`
 display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
 `
-export const NavbarItemsList =styled.li`
+export const NavbarItemsList = styled.li`
   transition:.5s ;
     padding: 6px;
 :hover{
@@ -260,7 +260,7 @@ export const NavbarItemsList =styled.li`
   background-color:#000000de;
 }
 `
-export const NavbarItemsLink =styled.a`
+export const NavbarItemsLink = styled.a`
 color: #fff;
 display: flex;
 text-transform:none ;
@@ -273,28 +273,28 @@ text-decoration: none;
     display:flex ;
   }
 `
-export const MainHeading =styled.div`
+export const MainHeading = styled.div`
   position: absolute;
   top: 70%;
   bottom: 0;
   ${({ theme }) =>
-  theme.isLTR
-  ? css`
+    theme.isLTR
+      ? css`
     right:6% ;
       `
-  : css`
+      : css`
   left:6% ;
   `}
  
 @media (max-width: 600px) {
   top:63% ;
 ${({ theme }) =>
-  theme.isLTR
-  ? css`
+    theme.isLTR
+      ? css`
     left:4%;
     top:66% ;
       `
-  : css`
+      : css`
   left:4% ;
   `}
   }
@@ -302,12 +302,12 @@ ${({ theme }) =>
     top:70% ;
   }
 `
-export const Text = styled.p<{lineHeight?:string}>`
+export const Text = styled.p<{ lineHeight?: string }>`
 margin:0 ;
 font-size: 70px;
 font-weight: 600;
 color:#fff;
-line-height:${({lineHeight})=>lineHeight} ;
+line-height:${({ lineHeight }) => lineHeight} ;
 @media(max-width:600px){
     font-size: 40px;
     line-height: 55px;
@@ -377,13 +377,13 @@ transition:.6s;
     font-size: 16px;
 }
 `
-export const VideoWrapper = styled.div<{background:string}>`
+export const VideoWrapper = styled.div<{ background: string }>`
 position: relative;
 width: 100%;
 ::before{
   content: '';
 position: absolute;
-background: ${({background})=>background};
+background: ${({ background }) => background};
 top: 0;
 right: 0;
 bottom: 10px;
@@ -404,7 +404,7 @@ left: 0;
   }
 }
 `
-export const Video= styled.video`
+export const Video = styled.video`
 width:100% ;
 @media (max-width: 600px) {
   width: 100%;
@@ -412,13 +412,13 @@ width:100% ;
     object-fit: cover;
 }
 `
-export const ScrollTopButton =  styled.button`
+export const ScrollTopButton = styled.button`
 position: fixed;
 padding: 16px 20px;
 font-size: 20px;
-${({theme})=>theme.isLTR?css`right:7px`:css`left:7px`};
+${({ theme }) => theme.isLTR ? css`right:7px` : css`left:7px`};
 bottom: 67px;
-background-color: ${({theme})=>theme.colors.lightBlue};
+background-color: ${({ theme }) => theme.colors.lightBlue};
 color: rgb(255, 255, 255);
 border-radius: 100%;
 border: none;
@@ -427,7 +427,7 @@ cursor: pointer;
 transition: .5s;
 z-index: 9999;
 :hover{
-  background: ${({theme})=>theme.colors.darkBlue};
+  background: ${({ theme }) => theme.colors.darkBlue};
   transition: .5s;
 }
 

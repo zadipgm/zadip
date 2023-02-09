@@ -16,7 +16,6 @@ import { useTheme } from "styled-components";
 import Link from "next/link";
 const FeatureSection = () => {
   const { isLTR, isRTL, translations, device, colors } = useTheme();
-
   const settings = {
     dots: true,
     infinite: true,
@@ -30,12 +29,16 @@ const FeatureSection = () => {
     rtl: isRTL,
     easing: "linear",
     customPaging: (i: any) => (
-      <Wrapper>
+      <Wrapper
+        className={`/images/pro${i + 1}.png`}
+        path={`/images/pro${i + 1}.png`}
+      >
         <img
-          src={`/images/pro${i + 1}.png`}
+          src={`/images/progray${i + 1}.svg`}
           alt="products"
           width={"100%"}
           height={"100%"}
+          className={"inactive"}
         />
       </Wrapper>
     ),
@@ -101,7 +104,7 @@ const FeatureSection = () => {
                 }}
               ></EktefaDescription>
               <Link
-                href="https://nafeth.com/zadip"
+                href="https://nafeth.com/index.html?code=zadip"
                 target={"_blank"}
                 aria-label="visit application link"
               >

@@ -20,31 +20,31 @@ const ProductSection = () => {
             <img src="/images/eGov.svg" alt="" width={"100%"} height={"100%"} />
           </MainLogo>
           <OtherLogo>
-            <Link href={`/${locale}/eGov_services/muqeem`}>
+            <Link href={`/${locale}/eGov_services/muqeem`} className={"muqeem"}>
               <img
                 src="/images/emuqeem.svg"
                 alt="muqeem"
-                width={60}
-                height={60}
+                width={140}
+                height={75}
               />
             </Link>
             <Link href={`/${locale}/eGov_services/tam`}>
-              <img src="/images/etam.svg" alt="tam" width={60} height={60} />
+              <img src="/images/etam.svg" alt="tam" width={140} height={75} />
             </Link>
             <Link href={`/${locale}/eGov_services/masarat`}>
               <img
                 src="/images/emasarat.svg"
                 alt="masarat"
-                width={60}
-                height={60}
+                width={140}
+                height={75}
               />
             </Link>
             <Link href={`/${locale}/eGov_services/smartgate`}>
               <img
                 src="/images/esmart.svg"
                 alt="smart"
-                width={60}
-                height={60}
+                width={140}
+                height={75}
               />
             </Link>
           </OtherLogo>

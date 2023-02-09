@@ -13,7 +13,7 @@ import { useTheme } from "styled-components";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import Link from "next/link";
 const Recruitment = () => {
-  const { translations, device, colors } = useTheme();
+  const { translations, colors } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color={colors.lightBlue} href="/">
       {translations?.home}

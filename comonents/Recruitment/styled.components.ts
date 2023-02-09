@@ -42,7 +42,7 @@ export const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:30px 0px ;
+    margin:30px 0px 0px 0px ;
     padding:15px ;
     @media(max-width:600px) {
     width:100% ;

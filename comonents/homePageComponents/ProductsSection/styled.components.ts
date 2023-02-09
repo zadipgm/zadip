@@ -42,18 +42,22 @@ display:flex ;
 justify-content:center ;
 align-items:center ;
 flex-wrap:wrap ;
-> a >img{
+width:100% ;
+
+> a{
+   &.muqeem{
+    display: flex;
+   }
+    >img{
         cursor: pointer;
-        width:100% ;
-    margin: 0px 20px 0px;
-    @media (max-width: 600px) {
-        margin: 0;
-        width:40%;
-    }
+    padding:15px ;
+   
    
  transition: transform .2s;
  :hover{
   transform: scale(1.2); 
 }
     }
+} 
+    
 `
