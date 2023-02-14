@@ -67,7 +67,7 @@ const OrderNowForm: React.FC<IProps> = ({
     e.preventDefault();
     console.log("here is data", name, email, number, service);
     try {
-      await axios.post("http://localhost:3001/contactPost", {
+      await axios.post("https://zadip.netlify.app/contactPost", {
         Name: name,
         Email: email,
         MobileNumber: number,
