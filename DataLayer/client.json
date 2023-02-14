@@ -1,154 +1,154 @@
 {
     "our_clients": [
       {"id":"1",
-        "image": "/images/elm.png",
+        "image": "/images/elm.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"2",
-        "image": "/images/aqeel.jpg",
+        "image": "/images/aqeel.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"3",
-        "image": "/images/hrgate.png",
+        "image": "/images/hrgate.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"4",
-        "image": "/images/ciscos.jpg",
+        "image": "/images/cisco.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"5",
-        "image": "/images/mada.png",
+        "image": "/images/mada.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"6",
-        "image": "/images/commvault.jpg",
+        "image": "/images/commvault.svg",
          "description_en": "",
         "description_ar": ""
       },
       
       {"id":"7",
-        "image": "/images/granding.jpg",
+        "image": "/images/granding.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"8",
-        "image": "/images/hdl.jpg",
+        "image": "/images/hdl.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"9",
-      "image": "/images/quantum.jpg",
+      "image": "/images/quantum.svg",
        "description_en": "",
       "description_ar": ""
       },
       {"id":"10",
-        "image": "/images/epec.png",
+        "image": "/images/epec.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"11",
-      "image": "/images/vmware.jpg",
+      "image": "/images/vmware.svg",
        "description_en": "",
       "description_ar": ""
       },
       {"id":"12",
-      "image": "/images/zk.jpg",
+      "image": "/images/zk.svg",
        "description_en": "",
       "description_ar": ""
       },
       {  "id":"13",
-        "image":"/images/adel.jpg",
+        "image":"/images/adel.svg",
         "description_en": "",
         "description_ar": ""
         
       },
       {  "id":"14",
-        "image":"/images/americana.jpg",
+        "image":"/images/americana.svg",
         "description_en": "",
         "description_ar": ""
         
       },
       {  "id":"15",
-        "image":"/images/dawa.jpg",
+        "image":"/images/dawa.svg",
         "description_en": "",
         "description_ar": ""
         
       },
       {  "id":"16",
-        "image":"/images/fanar.jpg",
+        "image":"/images/fanar.svg",
         "description_en": "",
         "description_ar": ""
         
       },
       {  "id":"17",
-        "image":"/images/fayha.jpg",
+        "image":"/images/fayha.svg",
         "description_en": "",
         "description_ar": ""
         
       },
       {  "id":"18",
-      "image":"/images/gasco.jpg",
+      "image":"/images/gasco.svg",
       "description_en": "",
       "description_ar": ""
       
       },
       {  
         "id":"19",
-      "image":"/images/haif.jpg",
+      "image":"/images/haif.svg",
       "description_en": "",
       "description_ar": ""
     
       },   
       {  
       "id":"20",
-      "image":"/images/interior.jpg",
+      "image":"/images/interior.svg",
       "description_en": "",
       "description_ar": ""
       },
       {  
         "id":"21",
-        "image":"/images/kau.jpg",
+        "image":"/images/kau.svg",
         "description_en": "",
         "description_ar": ""
       },
       {  
       "id":"22",
-      "image":"/images/majal.jpg",
+      "image":"/images/majal.svg",
       "description_en": "",
       "description_ar": ""
       },
       {  
       "id":"23",
-      "image":"/images/nora.jpg",
+      "image":"/images/nora.svg",
       "description_en": "",
       "description_ar": ""
       },
       {  
       "id":"24",
-      "image":"/images/psu.jpg",
+      "image":"/images/psu.svg",
       "description_en": "",
       "description_ar": ""
       },
       {  
       "id":"25",
-      "image":"/images/sceco.jpg",
+      "image":"/images/sceco.svg",
       "description_en": "",
       "description_ar": ""
       },
       {  
       "id":"26",
-      "image":"/images/swcc.jpg",
+      "image":"/images/swcc.svg",
       "description_en": "",
       "description_ar": ""
       },
       {  
         "id":"27",
-        "image":"/images/zamil.jpg",
+        "image":"/images/zamil.svg",
         "description_en": "",
         "description_ar": ""
         }
@@ -160,63 +160,63 @@
     
     "partners" : [
       {"id":"1",
-        "image": "/images/elm.png",
+        "image": "/images/elm.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"2",
-        "image": "/images/aqeel.jpg",
+        "image": "/images/aqeel.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"3",
-        "image": "/images/hrgate.png",
+        "image": "/images/hrgate.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"4",
-        "image": "/images/ciscos.jpg",
+        "image": "/images/cisco.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"5",
-        "image": "/images/mada.png",
+        "image": "/images/mada.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"6",
-        "image": "/images/commvault.jpg",
+        "image": "/images/commvault.svg",
          "description_en": "",
         "description_ar": ""
       },
       
       {"id":"7",
-        "image": "/images/granding.jpg",
+        "image": "/images/granding.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"8",
-        "image": "/images/hdl.jpg",
+        "image": "/images/hdl.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"9",
-      "image": "/images/quantum.jpg",
+      "image": "/images/quantum.svg",
        "description_en": "",
       "description_ar": ""
       },
       {"id":"10",
-        "image": "/images/epec.png",
+        "image": "/images/epec.svg",
          "description_en": "",
         "description_ar": ""
       },
       {"id":"11",
-      "image": "/images/vmware.jpg",
+      "image": "/images/vmware.svg",
        "description_en": "",
       "description_ar": ""
       },
       {"id":"12",
-      "image": "/images/zk.jpg",
+      "image": "/images/zk.svg",
        "description_en": "",
       "description_ar": ""
       }

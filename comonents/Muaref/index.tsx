@@ -46,7 +46,7 @@ const MuarefPage = () => {
           <ImageContainer>
             <ImageWrapper>
               <div></div>
-              <img src="/images/qr.png" alt="muaref QR" />
+              <img src="/images/qr.svg" alt="muaref QR" />
             </ImageWrapper>
             <Title>{translations?.muarefQR}</Title>
           </ImageContainer>
@@ -56,7 +56,7 @@ const MuarefPage = () => {
           <ImageContainer>
             <ImageWrapper>
               <div></div>
-              <img src="/images/device.png" alt="muaref device" />
+              <img src="/images/device.svg" alt="muaref device" />
             </ImageWrapper>
             <Title>{translations?.muarefDevice}</Title>
           </ImageContainer>
@@ -66,7 +66,7 @@ const MuarefPage = () => {
           <ImageContainer>
             <ImageWrapper>
               <div></div>
-              <img src="/images/location.png" alt="muaref location" />
+              <img src="/images/location.svg" alt="muaref location" />
             </ImageWrapper>
             <Title>{translations?.muarefLocation}</Title>
           </ImageContainer>
@@ -76,7 +76,7 @@ const MuarefPage = () => {
           <ImageContainer>
             <ImageWrapper>
               <div></div>
-              <img src="/images/mubashir.png" alt="muaref mubashir" />
+              <img src="/images/mubashir.svg" alt="muaref mubashir" />
             </ImageWrapper>
             <Title>{translations?.muarefIdentifier}</Title>
           </ImageContainer>
@@ -87,6 +87,7 @@ const MuarefPage = () => {
         title={translations?.requestService as string}
         buttonTitle={translations?.requestService as string}
         icon={"salesSvg"}
+        page={"Muaref"}
       />
     </Container>
   );

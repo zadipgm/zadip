@@ -42,7 +42,7 @@ const SliderSlick: React.FC<IProps> = ({
     infinite: true,
     speed: speed,
     autoplay: autoplay,
-    autoplaySpeed: autoplaySpeed,
+    autoplaySpeed: 0,
     slidesToShow: sliderToShow,
     slidesToScroll: 1,
     rows: rows,

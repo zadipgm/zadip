@@ -205,6 +205,7 @@ const EGovernmentServices = () => {
           title={translations?.requestService as string}
           buttonTitle={translations?.requestService as string}
           icon={"salesSvg"}
+          page={filter_services[0]?.title_en}
         />
       </Container>
     </>

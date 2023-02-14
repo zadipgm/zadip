@@ -1,3 +1,4 @@
+import axios from "axios";
 import * as React from "react";
 import { useTheme } from "styled-components";
 import CloseSvg from "../../../public/icons/closeSvg";
@@ -22,15 +23,21 @@ interface IProps {
   isShow?: boolean;
   classname?: string;
   icon?: string;
+  page: string;
 }
 const OrderNowForm: React.FC<IProps> = ({
   title,
   isShow = true,
   classname,
   icon,
+  page,
 }) => {
   const { isLTR, translations, colors } = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [number, setNumber] = React.useState("");
+  const [service, setService] = React.useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setName("");
@@ -39,10 +46,6 @@ const OrderNowForm: React.FC<IProps> = ({
     setService("");
     setOpen(false);
   };
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [number, setNumber] = React.useState("");
-  const [service, setService] = React.useState("");
 
   const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
@@ -61,17 +64,19 @@ const OrderNowForm: React.FC<IProps> = ({
     setService(value);
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    // e.preventDefault();
-    // try {
-    //   await axios.post("http://localhost:5000/contact", {
-    //     Name: name,
-    //     Email: email,
-    //     MobileNumber: number,
-    //     ServiceName: service,
-    //   });
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    e.preventDefault();
+    console.log("here is data", name, email, number, service);
+    try {
+      await axios.post("http://localhost:3001/contactPost", {
+        Name: name,
+        Email: email,
+        MobileNumber: number,
+        ServiceName: service,
+        Page: page,
+      });
+    } catch (error) {
+      console.log(error);
+    }
     setName("");
     setEmail("");
     setNumber("");
@@ -120,7 +125,7 @@ const OrderNowForm: React.FC<IProps> = ({
                   title="Please Enter Your Full Name"
                   value={name}
                   minLength={2}
-                  maxLength={8}
+                  maxLength={50}
                   onChange={(e) => nameHandler(e)}
                 />
               </InputWarapper>

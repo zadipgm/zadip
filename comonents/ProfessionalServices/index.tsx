@@ -71,6 +71,7 @@ const ProfessionalServices = () => {
         title={translations?.contactsalesnow as string}
         buttonTitle={translations?.contactsalesnow as string}
         icon={"salesSvg"}
+        page={"Professional Services"}
       />
     </Container>
   );

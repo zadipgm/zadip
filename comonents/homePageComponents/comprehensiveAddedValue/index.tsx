@@ -16,7 +16,7 @@ const ComprehensiveAddedValue = () => {
       <Wrapper>
         <ImageWrapper>
           <img
-            src={"https://www.zadip.com/en/images/vision2030.png"}
+            src={"/images/vision2030.png"}
             alt={"2030"}
             width={"100%"}
             height={"100%"}

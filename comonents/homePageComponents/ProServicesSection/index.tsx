@@ -29,7 +29,7 @@ const ProfessionalServices = () => {
         </TextWrapper>
         <IamgeWrapper>
           <img
-            src="/images/proservice.jpg"
+            src="/images/proservice.svg"
             alt="proservice"
             width={"100%"}
             height={"100%"}
