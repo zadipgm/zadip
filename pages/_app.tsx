@@ -108,7 +108,6 @@ const MyApp = ({
     };
     fetchItem();
   }, []);
-  console.log("here is dat", data);
   const handlePageMeta = () => {
     return (
       data &&
