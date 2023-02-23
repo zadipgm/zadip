@@ -66,17 +66,17 @@ const OrderNowForm: React.FC<IProps> = ({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("here is data", name, email, number, service);
-    try {
-      await axios.post("https://zadip.netlify.app/contactPost", {
-        Name: name,
-        Email: email,
-        MobileNumber: number,
-        ServiceName: service,
-        Page: page,
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   await axios.post("https://zadip.netlify.app/contactPost", {
+    //     Name: name,
+    //     Email: email,
+    //     MobileNumber: number,
+    //     ServiceName: service,
+    //     Page: page,
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // }
     setName("");
     setEmail("");
     setNumber("");
