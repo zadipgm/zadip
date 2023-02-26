@@ -6,6 +6,7 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from "next/document";
+import Salesiq from "./salesiq";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -34,6 +35,12 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Salesiq
+            widgetCode={
+              "d7c25406e79976420cc2efe548ff944ed75097dfb86910ae5e9214b0773aa0f1"
+            }
+            domain={"https://salesiq.zoho.com/widget"}
+          />
         </body>
       </Html>
     );
