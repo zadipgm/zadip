@@ -43,7 +43,7 @@ const Header = () => {
     <>
       {/* ========Main Video======== */}
       <HeaderNavbarWrapper
-        className={router.pathname !== "/" ? "other-pages" : ""}
+        className={router.pathname === "/" ? "" : "other-pages"}
         id="navbar"
       >
         <Container>

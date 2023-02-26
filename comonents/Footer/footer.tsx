@@ -21,7 +21,7 @@ import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined
 import Link from "next/link";
 import { useTheme } from "styled-components";
 const Footer = () => {
-  const { translations } = useTheme();
+  const { translations, locale } = useTheme();
   return (
     <>
       <FooterContainer>
@@ -102,7 +102,7 @@ const Footer = () => {
         <FooterCopyRights>
           © 2008 - 2023 {translations?.zadipGroups},{" "}
           {translations?.allRightsReserved}.
-          <a href="#">{translations?.privacyPolicy}</a>
+          <a href={`/${locale}/privacypolicy`}>{translations?.privacyPolicy}</a>
         </FooterCopyRights>
       </FooterContainer>
     </>

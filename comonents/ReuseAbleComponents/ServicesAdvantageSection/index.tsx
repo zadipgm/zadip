@@ -50,7 +50,7 @@ const ServicesAdvantageSection = ({ data, poster, videoLink }: Idata) => {
           );
         })}
       </AdvantageContainer>
-      <VedioComponent poster={poster} videoLink={videoLink} />
+      {/* <VedioComponent poster={poster} videoLink={videoLink} /> */}
     </AdvantageWrapper>
   );
 };

@@ -70,7 +70,7 @@
           "title_ar":"سريع",
           "icon":"transactionSvg",
           "description_en":"Make all vehicles transactions quickly, accurately and safely.",
-          "description_ar":"سرعة ودقة وأمان في إجراء كافة معاملات المركبات."
+          "description_ar":"سرعة في اتمام كافة اجراءات المركبة."
         },
         {
           "id":2,
@@ -163,7 +163,7 @@
           "title_ar":"سريع",
           "icon":"transactionSvg",
           "description_en":"Make all vehicles transactions quickly, accurately and safely.",
-          "description_ar":"سرعة ودقة وأمان في إجراء كافة معاملات المركبات."
+          "description_ar":"سرعة في اتمام كافة اجراءات المركبة."
         },
         {
           "id":2,
@@ -294,7 +294,7 @@
           "title_ar":"دقيق",
           "icon":"acurateSvg",
           "description_en":"Fleet management with complete control.",
-          "description_ar":"دقة المعلوماتالدقة في الحصول على المعلومات."
+          "description_ar":"الدقة في الحصول على المعلومات."
         }
       ]
     },
