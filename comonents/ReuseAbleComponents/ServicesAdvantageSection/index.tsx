@@ -11,6 +11,8 @@ import {
   Description,
   Wrapper,
   VedioLinkWrapper,
+  VideoWrapper,
+  Video,
 } from "./styled.components";
 import data from "../../../DataLayer/services.json";
 import { useTheme } from "styled-components";
@@ -27,9 +29,15 @@ interface Idata {
   data?: IProps[];
   poster?: string;
   videoLink?: string;
+  path?: string;
 }
-const ServicesAdvantageSection = ({ data, poster, videoLink }: Idata) => {
+const ServicesAdvantageSection = ({ data, poster, videoLink, path }: Idata) => {
   const { isLTR, colors } = useTheme();
+  const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
+
+  const onLoadedData = () => {
+    setIsVideoLoaded(true);
+  };
   return (
     <AdvantageWrapper>
       <AdvantageContainer>
@@ -50,7 +58,20 @@ const ServicesAdvantageSection = ({ data, poster, videoLink }: Idata) => {
           );
         })}
       </AdvantageContainer>
-      {/* <VedioComponent poster={poster} videoLink={videoLink} /> */}
+      <VideoWrapper>
+        <Video
+          poster="/images/thumb.png"
+          className="videoTag"
+          autoPlay
+          loop
+          muted
+          controls
+          onLoadedData={onLoadedData}
+          style={{ opacity: isVideoLoaded ? 1 : 0 }}
+        >
+          <source src={path} type="video/mp4" />
+        </Video>
+      </VideoWrapper>
     </AdvantageWrapper>
   );
 };

@@ -22,6 +22,11 @@ import Link from "next/link";
 import { useTheme } from "styled-components";
 const Footer = () => {
   const { translations, locale } = useTheme();
+  const showInMapClicked = () => {
+    window.open(
+      "https://maps.google.com?q=" + "24.653892364630916, 46.729899904499504"
+    );
+  };
   return (
     <>
       <FooterContainer>
@@ -30,7 +35,7 @@ const Footer = () => {
             <FooterCol>
               <FooterHeading>{translations?.contactUs}</FooterHeading>
               <FooterUL>
-                <FooterLI>
+                <FooterLI onClick={showInMapClicked}>
                   <Link href="#">
                     <MyLocationOutlinedIcon fontSize={"small"} />
                     {translations?.location}
@@ -47,7 +52,7 @@ const Footer = () => {
                   </Link>
                 </FooterLI>
                 <FooterLI>
-                  <Link href="#">
+                  <Link href="/images/zadip-profile.pdf" target={"_blank"}>
                     <CloudDownloadOutlinedIcon fontSize={"small"} />{" "}
                     {translations?.downloadComapnyPRofile}
                   </Link>
