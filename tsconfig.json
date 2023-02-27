@@ -25,6 +25,7 @@
       "pages/*": ["pages/*"],
       "public/*": ["public/*"],
       "styles/*": ["styles/*"],
+      "videos/*": ["./public/videos/*"],
       "dataLayer/*": ["dataLayer/*"],
     }
   },
