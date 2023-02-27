@@ -63,7 +63,7 @@ const EGovernmentServices = () => {
             data={filter_services[0]?.tam}
             poster={filter_services[0]?.poster}
             videoLink={filter_services[0]?.video_link}
-            path={`/videos/${router.query.slug}.mp4`}
+            path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
           />
         )}
         {router.query.slug === "muqeem" && (
@@ -71,7 +71,7 @@ const EGovernmentServices = () => {
             data={filter_services[0]?.muqeem}
             poster={filter_services[0]?.poster}
             videoLink={filter_services[0]?.video_link}
-            path={`/videos/${router.query.slug}.mp4`}
+            path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
           />
         )}
         {router.query.slug === "masarat" && (
@@ -79,7 +79,7 @@ const EGovernmentServices = () => {
             data={filter_services[0]?.masarat}
             poster={filter_services[0]?.poster}
             videoLink={filter_services[0]?.video_link}
-            path={`/videos/${router.query.slug}.mp4`}
+            path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
           />
         )}
         {router.query.slug === "muqeem" && (
