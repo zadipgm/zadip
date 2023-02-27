@@ -82,6 +82,14 @@ const EGovernmentServices = () => {
             path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
           />
         )}
+        {router.query.slug === "smartgate" && (
+          <ServicesAdvantageSection
+            data={filter_services[0]?.smartgate}
+            poster={filter_services[0]?.poster}
+            videoLink={filter_services[0]?.video_link}
+            path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
+          />
+        )}
         {router.query.slug === "muqeem" && (
           <>
             <AnimationBar

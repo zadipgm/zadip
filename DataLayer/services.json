@@ -384,6 +384,32 @@
         {"row_en":"​300000", "row_ar":"​300000", "rows_en":"​200,000","rows_ar":"​200,000", "cost":"​0 - 20000","costs_en":"Third package","costs_ar":"الباقة الثالثة"},
         {"row_en":"​600000", "row_ar":"​600000", "rows_en":"​320,000","rows_ar":"​320,000", "cost":"​0 - 40000","costs_en":"Fourth  package","costs_ar":"​الباقة الرابعة"}
       ],
+      "smartgate":[
+        {
+          "id":1,
+          "title_en":"protection",
+          "title_ar":"حماية",
+          "icon":"transactionSvg",
+          "description_en":"Proactive protection of facilities",
+          "description_ar":"الحماية الاستباقية للمنشات"
+        },
+        {
+          "id":2,
+          "title_en":"Against Forgery",
+          "title_ar":"ضد التزوير",
+          "icon":"secureSvg",
+          "description_en":"Preventing cases of permit fraud",
+          "description_ar":"منع حالات تزوير التصاريح"
+        },
+        {
+          "id":3,
+          "title_en":"verification",
+          "title_ar":"تحقق",
+          "icon":"acurateSvg",
+          "description_en":"Verify that the ID and the vehicle are correct",
+          "description_ar":"تحقق من صحة الهوية والمركبة"
+        }
+      ],
       "head":[
         {
         "name_en":"For points earned in the system",
