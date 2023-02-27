@@ -75,7 +75,10 @@ const Header = () => {
             onLoadedData={onLoadedData}
             style={{ opacity: isVideoLoaded ? 1 : 0 }}
           >
-            <source src="/videos/zadipvideo.mp4" type="video/mp4" />
+            <source
+              src="https://zadip-staging.netlify.app/videos/zadipvideo.mp4"
+              type="video/mp4"
+            />
           </Video>
         </VideoWrapper>
       )}
