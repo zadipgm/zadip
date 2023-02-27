@@ -48,7 +48,7 @@ width:100% ;
  width:94%;
  margin:15px auto ;
 }
-padding: 15px;
+padding: 15px 8px;
 margin-bottom:20px;
 border-radius:10px;
 background-color:rgba(13,74,118,0.04);

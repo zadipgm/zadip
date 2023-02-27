@@ -9,8 +9,6 @@ import {
   Heading,
   Wrapper,
   ButtonsWrapper,
-  Video,
-  VideoWrapper,
 } from "./styled.components";
 import _data from "../../DataLayer/services.json";
 import { useRouter } from "next/router";
@@ -23,7 +21,6 @@ import TamTable from "./TamTable";
 import SmartGateTable from "./SmartgateTable";
 const EGovernmentServices = () => {
   const { translations, isLTR, colors } = useTheme();
-  const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
 
   const router = useRouter();
   const breadcrumbs = [
@@ -42,25 +39,8 @@ const EGovernmentServices = () => {
   const filter_services = _data.e_services.filter(
     (item) => item.title_en?.toLowerCase() === router.query.slug
   );
-  const onLoadedData = () => {
-    setIsVideoLoaded(true);
-  };
   return (
     <>
-      <VideoWrapper>
-        <Video
-          poster="/images/thumb.png"
-          className="videoTag"
-          autoPlay
-          loop
-          muted
-          controls
-          onLoadedData={onLoadedData}
-          style={{ opacity: isVideoLoaded ? 1 : 0 }}
-        >
-          <source src={`/vedio/${router.query.slug}.mp4`} type="video/mp4" />
-        </Video>
-      </VideoWrapper>
       <Container>
         <Wrapper>
           <Heading>{translations?.egoveservices}</Heading>

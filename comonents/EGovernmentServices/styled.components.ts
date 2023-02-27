@@ -1,20 +1,6 @@
 import styled from "styled-components";
 
-export const VideoWrapper = styled.div`
 
-@media (max-width: 600px) {
-width:100% ;
-overflow:hidden ;
-}
-`
-export const Video = styled.video`
-width:100% ;
-height:90vh ;
-@media (max-width: 600px) {
-    width:unset;
-overflow:hidden ;
-}
-`
 export const Container = styled.div`
 width:1170px;
 margin: 0 auto;
