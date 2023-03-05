@@ -227,7 +227,7 @@ const OrderNowForm: React.FC<IProps> = ({
                   className={`login login-${isComplete}`}
                   value={translations?.submit}
                 />
-                {true && (
+                {isComplete && (
                   <Box>
                     <CircularProgress />
                   </Box>
