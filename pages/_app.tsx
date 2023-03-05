@@ -90,21 +90,19 @@ const MyApp = ({
   }
 
   React.useEffect(() => {
+    console.log("here is process", process.env.NODE_ENV);
     setLoading(true);
     const fetchItem = async () => {
-      // try {
-      //   const response = await axios.get(
-      //     "https://zadip.netlify.app/api/getHead/",
-      //     {
-      //       params: {
-      //         page: `${path}`,
-      //       },
-      //     }
-      //   );
-      //   setData(response.data);
-      // } catch (error) {
-      //   console.log(error);
-      // }
+      try {
+        const response = await axios.get("https://api.zadip.sa/get_head", {
+          params: {
+            page: `${path}`,
+          },
+        });
+        setData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
     };
     fetchItem();
   }, []);

@@ -28,10 +28,9 @@ interface IProps {
 interface Idata {
   data?: IProps[];
   poster?: string;
-  videoLink?: string;
   path?: string;
 }
-const ServicesAdvantageSection = ({ data, poster, videoLink, path }: Idata) => {
+const ServicesAdvantageSection = ({ data, poster, path }: Idata) => {
   const { isLTR, colors } = useTheme();
   const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
 
@@ -60,7 +59,7 @@ const ServicesAdvantageSection = ({ data, poster, videoLink, path }: Idata) => {
       </AdvantageContainer>
       <VideoWrapper>
         <Video
-          poster="/images/thumb.png"
+          poster={poster}
           className="videoTag"
           autoPlay
           loop

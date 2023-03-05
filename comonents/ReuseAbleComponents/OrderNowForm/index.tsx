@@ -4,7 +4,10 @@ import { useTheme } from "styled-components";
 import CloseSvg from "../../../public/icons/closeSvg";
 import IconComponent from "../IconComponent";
 import ModalComponent from "../Modal";
+import SimpleSnackbar from "../Snackbar";
 // import axios from "axios";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 import {
   OrderNowFormContainer,
   Wrapper,
@@ -16,6 +19,7 @@ import {
   ContactButton,
   FormHeadingWrapper,
   IconWrapper,
+  SpinnerWrapper,
 } from "./styled.components";
 interface IProps {
   title: string;
@@ -34,10 +38,14 @@ const OrderNowForm: React.FC<IProps> = ({
 }) => {
   const { isLTR, translations, colors } = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [openSnack, setOpenSnack] = React.useState(false);
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [number, setNumber] = React.useState("");
   const [service, setService] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [color, setColor] = React.useState("");
+  const [isComplete, setIsComplete] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setName("");
@@ -46,7 +54,12 @@ const OrderNowForm: React.FC<IProps> = ({
     setService("");
     setOpen(false);
   };
-
+  const handleClick = () => {
+    setOpenSnack(true);
+  };
+  const handleCloseSnack = () => {
+    setOpenSnack(false);
+  };
   const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
     setName(value);
@@ -66,25 +79,56 @@ const OrderNowForm: React.FC<IProps> = ({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("here is data", name, email, number, service);
-    // try {
-    //   await axios.post("https://zadip.netlify.app/contactPost", {
-    //     Name: name,
-    //     Email: email,
-    //     MobileNumber: number,
-    //     ServiceName: service,
-    //     Page: page,
-    //   });
-    // } catch (error) {
-    //   console.log(error);
-    // }
-    setName("");
-    setEmail("");
-    setNumber("");
-    setService("");
-    setOpen(false);
+    try {
+      await axios.post("https://api.zadip.sa/zadip_form", {
+        Name: name,
+        Email: email,
+        MobileNumber: number,
+        ServiceName: service,
+        Page: page,
+      });
+      handleClick();
+      setMessage(
+        isLTR
+          ? "Thanks for yous time, We'll get back to shortly."
+          : "شكرًا لك على وقتك ، وسنعاود الاتصال به قريبًا."
+      );
+      setIsComplete(true);
+      setTimeout(function () {
+        setIsComplete(false);
+        setOpen(false);
+      }, 5000);
+      setColor("#2e7d32");
+      setName("");
+      setEmail("");
+      setNumber("");
+      setService("");
+    } catch (error) {
+      if (error) {
+        handleClick();
+        setIsComplete(true);
+        setTimeout(function () {
+          setIsComplete(false);
+        }, 5000);
+        setColor("#d32f2f");
+        console.log(error);
+        setMessage(
+          isLTR
+            ? error.response?.data?.message_en
+            : error.response?.data?.message_ar
+        );
+        setOpen(true);
+      }
+    }
   };
   return (
     <>
+      <SimpleSnackbar
+        open={openSnack}
+        handleClose={handleCloseSnack}
+        message={message}
+        color={color}
+      />
       <ContactButton onClick={handleOpen} className={classname}>
         {title}{" "}
         <IconComponent
@@ -177,10 +221,18 @@ const OrderNowForm: React.FC<IProps> = ({
                 />
               </InputWarapper>
 
-              <Button
-                type={"submit"}
-                color="linear-gradient(-30deg,#009bfb 30%,#38b7ae);"
-              />
+              <SpinnerWrapper>
+                <Input
+                  type="submit"
+                  className={`login login-${isComplete}`}
+                  value={translations?.submit}
+                />
+                {true && (
+                  <Box>
+                    <CircularProgress />
+                  </Box>
+                )}
+              </SpinnerWrapper>
             </form>
           </Wrapper>
         </OrderNowFormContainer>

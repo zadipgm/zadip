@@ -62,7 +62,7 @@
       "button_title_ar":"قائمة الاسعار",
       "form_button_en":"Tam Subscription Form",
       "form_button_ar":"نموذج الاشتراك",
-      "poster":"/images/tampos.svg",
+      "poster":"/images/tamposter.png",
       "video_link":"https://www.youtube.com/embed/JUYe6fPy9mI?rel=0&controls=0&showinfo=0",
       "advantage":[
         { "id":1,
@@ -192,7 +192,7 @@
       "button_title_ar":"قائمة الاسعار",
       "form_button_en":"Muqeem Subscription Form",
       "form_button_ar":"نموذج الاشتراك",
-      "poster":"/images/muqeempos.svg",
+      "poster":"/images/muqeemposter.png",
       "condition_shamel_en":"This packages provides unlimited transactions for all resident workers working in the establishment by the authorized entity or person within this establishment for an annual subscription with a one-time payment.",
       "condition_shamel_ar":"تمنح هذه الخدمة المشترك إمكانية القيام بإجراء عدد لا محدود من كافة العمليات التفاعلية وكافة خدمات الاستعلام عن المقيمين العاملين في المنشأة من قِبَل الجهة أو الشخص المفوض داخل هذه المنشأة مقابل اشتراك سنوي بدفعة مرة واحدة.",
       "condition_amalyat_en":"This service gives Muqeem a range of interactive services and information services for a reduced annual subscription fee. There is also a fee to be paid for each transaction or query service.",
@@ -307,7 +307,7 @@
       "button_title_ar":"قائمة الاسعار",
       "form_button_en":"Masarat Subscription Form",
       "form_button_ar":"نموذج الاشتراك",
-      "poster":"/images/masaratpos.svg",
+      "poster":"/images/masaratposter.png",
       "video_link":"https://www.youtube.com/embed/Irwly2mhJCM?rel=0&controls=0&showinfo=0",
       "list":[
         {
@@ -384,6 +384,7 @@
         {"row_en":"​300000", "row_ar":"​300000", "rows_en":"​200,000","rows_ar":"​200,000", "cost":"​0 - 20000","costs_en":"Third package","costs_ar":"الباقة الثالثة"},
         {"row_en":"​600000", "row_ar":"​600000", "rows_en":"​320,000","rows_ar":"​320,000", "cost":"​0 - 40000","costs_en":"Fourth  package","costs_ar":"​الباقة الرابعة"}
       ],
+      "poster":"/images/smartgateposter.png",
       "smartgate":[
         {
           "id":1,

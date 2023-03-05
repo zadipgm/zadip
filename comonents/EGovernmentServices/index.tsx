@@ -62,7 +62,6 @@ const EGovernmentServices = () => {
           <ServicesAdvantageSection
             data={filter_services[0]?.tam}
             poster={filter_services[0]?.poster}
-            videoLink={filter_services[0]?.video_link}
             path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
           />
         )}
@@ -70,7 +69,6 @@ const EGovernmentServices = () => {
           <ServicesAdvantageSection
             data={filter_services[0]?.muqeem}
             poster={filter_services[0]?.poster}
-            videoLink={filter_services[0]?.video_link}
             path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
           />
         )}
@@ -78,7 +76,6 @@ const EGovernmentServices = () => {
           <ServicesAdvantageSection
             data={filter_services[0]?.masarat}
             poster={filter_services[0]?.poster}
-            videoLink={filter_services[0]?.video_link}
             path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
           />
         )}
@@ -86,7 +83,6 @@ const EGovernmentServices = () => {
           <ServicesAdvantageSection
             data={filter_services[0]?.smartgate}
             poster={filter_services[0]?.poster}
-            videoLink={filter_services[0]?.video_link}
             path={`https://zadip-staging.netlify.app/videos/${router.query.slug}.mp4`}
           />
         )}
