@@ -36,6 +36,17 @@ color:#178ce1;
 transition: .5s
 }
 `
+export const Select = styled.select`
+width: 100%;
+    border-bottom: 1px solid #cdc1c1;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    outline: none;
+    font-family: 'Cairo',sans-serif !important;
+    font-size: 14px;
+    transition: .3s;
+`
 export const Label = styled.label`
 font-size:22px ;
 transition: .5s;

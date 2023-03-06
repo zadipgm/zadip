@@ -20,6 +20,7 @@ import {
   FormHeadingWrapper,
   IconWrapper,
   SpinnerWrapper,
+  Select,
 } from "./styled.components";
 interface IProps {
   title: string;
@@ -72,15 +73,19 @@ const OrderNowForm: React.FC<IProps> = ({
     let value = e.target.value;
     setNumber(value);
   };
-  const serviceHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const serviceHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
     let value = e.target.value;
     setService(value);
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("here is data", name, email, number, service);
+    let APP_URL =
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:5000"
+        : "https://api.zadip.sa";
     try {
-      await axios.post("https://api.zadip.sa/zadip_form", {
+      await axios.post(`${APP_URL}/zadip_form`, {
         Name: name,
         Email: email,
         MobileNumber: number,
@@ -208,7 +213,7 @@ const OrderNowForm: React.FC<IProps> = ({
                   <span>*</span>
                   {isLTR ? "Request service" : "الخدمة المطلوبة"}
                 </Label>
-                <Input
+                {/* <Input
                   type={"text"}
                   placeholder={
                     isLTR
@@ -218,7 +223,41 @@ const OrderNowForm: React.FC<IProps> = ({
                   value={service}
                   onChange={(e) => serviceHandler(e)}
                   required
-                />
+                /> */}
+                <Select
+                  value={service}
+                  onChange={(e) => serviceHandler(e)}
+                  required
+                >
+                  <option value={""} selected disabled hidden>
+                    {isLTR ? "Select Service" : "حدد الخدمة"}
+                  </option>
+                  <option value="ektifa">
+                    {translations.featureTitleEktefa}
+                  </option>
+                  <option value="nafeth">
+                    {translations.featureTitleNafeth}
+                  </option>
+                  <option value="cadre">
+                    {translations.featureTitlecadre}
+                  </option>
+                  <option value="ehtwa">
+                    {translations.featureTitleEhtiwa}
+                  </option>
+                  <option value="muaref">
+                    {translations.featureTitleMuaref}
+                  </option>
+                  <option value="tam">{isLTR ? "Tamm" : "خدمة تم"}</option>
+                  <option value="muqeem">
+                    {isLTR ? "Muqeem" : "خدمة مقيم"}
+                  </option>
+                  <option value="masarat">
+                    {isLTR ? "Masarat" : "خدمة مسارات"}
+                  </option>
+                  <option value="smartgate">
+                    {isLTR ? "Smart Gate" : "خدمة البوابة الذكية"}
+                  </option>
+                </Select>
               </InputWarapper>
 
               <SpinnerWrapper>
