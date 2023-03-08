@@ -48,11 +48,15 @@ const ModalComponent: React.FC<IProps> = ({
     outline: "none",
     boxShadow: 24,
   };
+  const myCloseModal = (event, reason) => {
+    if (reason && reason == "backdropClick") return;
+    handleClose();
+  };
   return (
     <Wrapper className={classname}>
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose={(e) => myCloseModal(e, "backdropClick")}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         className={classname}

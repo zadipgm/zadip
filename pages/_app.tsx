@@ -65,13 +65,13 @@ const MyApp = ({
     path = "muaref";
   }
   if (router.asPath === "/professional_services/") {
-    path = "professional services";
+    path = "professional_services";
   }
   if (router.asPath === "/client_partners/") {
-    path = "client partners";
+    path = "client_partners";
   }
   if (router.asPath === "/about-us/") {
-    path = "about us";
+    path = "about_us";
   }
   if (router.asPath === "/recruitment/") {
     path = "recruitment";
@@ -93,8 +93,12 @@ const MyApp = ({
     console.log("here is process", process.env.NODE_ENV);
     setLoading(true);
     const fetchItem = async () => {
+      let APP_URL =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:5000"
+          : "https://api.zadip.sa";
       try {
-        const response = await axios.get("https://api.zadip.sa/get_head", {
+        const response = await axios.get(`${APP_URL}/get_head`, {
           params: {
             page: `${path}`,
           },
@@ -111,7 +115,7 @@ const MyApp = ({
       data &&
       data.map((item, index) => {
         return (
-          <>
+          <div key={index}>
             {item.Page_Title.length > 0 && <title>{item.Page_Title}</title>}
             {item.Meta_Name.length > 0 && item.Meta_Description.length > 0 && (
               <meta name={item.Meta_Name} content={item.Meta_Description} />
@@ -123,7 +127,7 @@ const MyApp = ({
                   content={item.Meta_Property_Description}
                 />
               )}
-          </>
+          </div>
         );
       })
     );

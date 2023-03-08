@@ -31,10 +31,34 @@ position: relative;
 `
 export const InputWarapper = styled.div`
 margin-bottom: 12px;
+
+& .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary{
+    display:block ;
+    font-family: 'Cairo', sans-serif !important;
+    
+    & .MuiOutlinedInput-notchedOutline{
+        border-bottom: 1px solid #cdc1c1;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    outline: none;
+    font-family: 'Cairo',sans-serif !important;
+    font-size: 14px;
+    transition: .3s;
+    color: #858282 ;
+    overflow: hidden;
+    font-family: 'Cairo', sans-serif !important;
+    }
+}
 :focus-within label {
 color:#178ce1;
-transition: .5s
+transition: .5s;
+
 }
+`
+export const Em = styled.span`
+    font-family: 'Cairo',sans-serif !important;
+    color: #858282 ;
 `
 export const Select = styled.select`
 width: 100%;

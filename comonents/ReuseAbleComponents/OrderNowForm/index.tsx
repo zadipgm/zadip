@@ -4,8 +4,10 @@ import { useTheme } from "styled-components";
 import CloseSvg from "../../../public/icons/closeSvg";
 import IconComponent from "../IconComponent";
 import ModalComponent from "../Modal";
-import SimpleSnackbar from "../Snackbar";
-// import axios from "axios";
+import MenuItem from "@mui/material/MenuItem";
+import ListItemText from "@mui/material/ListItemText";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Checkbox from "@mui/material/Checkbox";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import {
@@ -14,14 +16,14 @@ import {
   Input,
   InputWarapper,
   Label,
-  Button,
   FormHeading,
   ContactButton,
   FormHeadingWrapper,
   IconWrapper,
   SpinnerWrapper,
-  Select,
+  Em,
 } from "./styled.components";
+import ChildModal from "../childModal";
 interface IProps {
   title: string;
   buttonTitle: string;
@@ -30,6 +32,18 @@ interface IProps {
   icon?: string;
   page: string;
 }
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+};
+
 const OrderNowForm: React.FC<IProps> = ({
   title,
   isShow = true,
@@ -43,21 +57,21 @@ const OrderNowForm: React.FC<IProps> = ({
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [number, setNumber] = React.useState("");
-  const [service, setService] = React.useState("");
+  const [serviceName, setServiceName] = React.useState<string[]>([]);
   const [message, setMessage] = React.useState("");
   const [color, setColor] = React.useState("");
   const [isComplete, setIsComplete] = React.useState(false);
+  const serviceHandler = (event: SelectChangeEvent<typeof serviceName>) => {
+    const {
+      target: { value },
+    } = event;
+    setServiceName(typeof value === "string" ? value.split(",") : value);
+  };
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
-    setName("");
-    setEmail("");
-    setNumber("");
-    setService("");
     setOpen(false);
   };
-  const handleClick = () => {
-    setOpenSnack(true);
-  };
+
   const handleCloseSnack = () => {
     setOpenSnack(false);
   };
@@ -73,13 +87,9 @@ const OrderNowForm: React.FC<IProps> = ({
     let value = e.target.value;
     setNumber(value);
   };
-  const serviceHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    let value = e.target.value;
-    setService(value);
-  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("here is data", name, email, number, service);
     let APP_URL =
       process.env.NODE_ENV === "development"
         ? "http://localhost:5000"
@@ -89,28 +99,32 @@ const OrderNowForm: React.FC<IProps> = ({
         Name: name,
         Email: email,
         MobileNumber: number,
-        ServiceName: service,
+        ServiceName: serviceName.toString(),
         Page: page,
       });
-      handleClick();
       setMessage(
         isLTR
-          ? "Thanks for yous time, We'll get back to shortly."
+          ? "Thanks for your time, We'll get back to shortly."
           : "شكرًا لك على وقتك ، وسنعاود الاتصال به قريبًا."
       );
       setIsComplete(true);
       setTimeout(function () {
         setIsComplete(false);
+        setOpenSnack(true);
+      }, 3000);
+      setTimeout(function () {
         setOpen(false);
-      }, 5000);
+        setOpenSnack(false);
+        setName("");
+      }, 7000);
       setColor("#2e7d32");
-      setName("");
+
       setEmail("");
       setNumber("");
-      setService("");
+      setServiceName([]);
     } catch (error) {
       if (error) {
-        handleClick();
+        setOpenSnack(false);
         setIsComplete(true);
         setTimeout(function () {
           setIsComplete(false);
@@ -126,14 +140,19 @@ const OrderNowForm: React.FC<IProps> = ({
       }
     }
   };
+  const services = [
+    `${translations.featureTitleEktefa}`,
+    `${translations.featureTitleNafeth}`,
+    `${translations.featureTitleEhtiwa}`,
+    `${translations.featureTitleMuaref}`,
+    `${translations.featureTitlecadre}`,
+    `${isLTR ? "Tamm" : "خدمة تم"}`,
+    `${isLTR ? "Muqeem" : "خدمة مقيم"}`,
+    `${isLTR ? "Masarat" : "خدمة مسارات"}`,
+    `${isLTR ? "Smart Gate" : "خدمة البوابة الذكية"}`,
+  ];
   return (
     <>
-      <SimpleSnackbar
-        open={openSnack}
-        handleClose={handleCloseSnack}
-        message={message}
-        color={color}
-      />
       <ContactButton onClick={handleOpen} className={classname}>
         {title}{" "}
         <IconComponent
@@ -213,50 +232,32 @@ const OrderNowForm: React.FC<IProps> = ({
                   <span>*</span>
                   {isLTR ? "Request service" : "الخدمة المطلوبة"}
                 </Label>
-                {/* <Input
-                  type={"text"}
-                  placeholder={
-                    isLTR
-                      ? "Enter request service name..."
-                      : "الخدمة المطلوبة..."
-                  }
-                  value={service}
-                  onChange={(e) => serviceHandler(e)}
-                  required
-                /> */}
                 <Select
-                  value={service}
-                  onChange={(e) => serviceHandler(e)}
+                  multiple
                   required
+                  value={serviceName}
+                  displayEmpty
+                  onChange={(e) => serviceHandler(e)}
+                  renderValue={(selected) => {
+                    if (selected.length === 0) {
+                      return (
+                        <Em>{isLTR ? "Request service" : "أدخل طلب الخدمة"}</Em>
+                      );
+                    } else {
+                      return selected.join(", ");
+                    }
+                  }}
+                  MenuProps={MenuProps}
                 >
-                  <option value={""} selected disabled hidden>
-                    {isLTR ? "Select Service" : "حدد الخدمة"}
-                  </option>
-                  <option value="ektifa">
-                    {translations.featureTitleEktefa}
-                  </option>
-                  <option value="nafeth">
-                    {translations.featureTitleNafeth}
-                  </option>
-                  <option value="cadre">
-                    {translations.featureTitlecadre}
-                  </option>
-                  <option value="ehtwa">
-                    {translations.featureTitleEhtiwa}
-                  </option>
-                  <option value="muaref">
-                    {translations.featureTitleMuaref}
-                  </option>
-                  <option value="tam">{isLTR ? "Tamm" : "خدمة تم"}</option>
-                  <option value="muqeem">
-                    {isLTR ? "Muqeem" : "خدمة مقيم"}
-                  </option>
-                  <option value="masarat">
-                    {isLTR ? "Masarat" : "خدمة مسارات"}
-                  </option>
-                  <option value="smartgate">
-                    {isLTR ? "Smart Gate" : "خدمة البوابة الذكية"}
-                  </option>
+                  <MenuItem disabled value="">
+                    <em>{isLTR ? "Request service" : "الخدمة المطلوبة"}</em>
+                  </MenuItem>
+                  {services.map((name) => (
+                    <MenuItem key={name} value={name}>
+                      <Checkbox checked={serviceName.indexOf(name) > -1} />
+                      <ListItemText primary={name} />
+                    </MenuItem>
+                  ))}
                 </Select>
               </InputWarapper>
 
@@ -274,6 +275,13 @@ const OrderNowForm: React.FC<IProps> = ({
               </SpinnerWrapper>
             </form>
           </Wrapper>
+          <ChildModal
+            name={name}
+            open={openSnack}
+            handleClose={handleCloseSnack}
+            message={message}
+            color={color}
+          />
         </OrderNowFormContainer>
       </ModalComponent>
     </>
