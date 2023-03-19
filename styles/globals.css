@@ -16,6 +16,9 @@ body{
   padding: 0;
   font-family: 'Cairo', sans-serif !important;
 }
+.MuiPopover-paper {
+  width: 9%;
+  } 
 .MuiModal-root{
   z-index:9999 !important ;
 }

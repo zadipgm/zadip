@@ -19,6 +19,10 @@ declare module "styled-components" {
       headerLightColor: string
       white: string
       black: string
+      black1: string
+      gray1: string
+      gray2: string
+      gray3: string
     };
   }
 }
@@ -37,7 +41,11 @@ const defaultTheme: DefaultTheme = {
     darkBlue: "#044783",
     lightBlue: "#0969a5d6",
     white: "#fff",
-    black: "#000"
+    black: "#000",
+    black1: "#292929",
+    gray1: "#5a5c69",
+    gray2: "#cfcfcf",
+    gray3: "#cfcfcf1f",
   }
 };
 

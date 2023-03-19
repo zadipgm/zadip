@@ -152,9 +152,40 @@ const english = {
   CANSPAMAct: "CAN SPAM Act",
   CanSPANDescription: "The CAN-SPAM Act is a law that sets the rules for commercial email, establishes requirements for commercial messages, gives recipients the right to have emails stopped from being sent to them, and spells out tough penalties for violations.<br>We collect your email address in order to:<br>• Process orders and to send information and updates pertaining to orders.<br>• Send you additional information related to your product and/or service.<br>To be in accordance with CANSPAM, we agree to the following:<br>If at any time you would like to unsubscribe from receiving future emails, you can email us at and we will promptly remove you from ALL correspondence.",
   ContactingUs: "Contacting Us",
-  ContactingUsDescription: "If there are any questions regarding this privacy policy, you may contact us using the information below.<br><br><strong>ZADIP GROUP</strong><br>Prince Fahad Bin Ibrahim AlSaud Road<br>Riyadh, Riyadh 15400<br>Saudi Arabia<br><a href=mailto:info@zadip.com>info@zadip.com</a><br>920010047"
+  ContactingUsDescription: "If there are any questions regarding this privacy policy, you may contact us using the information below.<br><br><strong>ZADIP GROUP</strong><br>Prince Fahad Bin Ibrahim AlSaud Road<br>Riyadh, Riyadh 15400<br>Saudi Arabia<br><a href=mailto:info@zadip.com>info@zadip.com</a><br>920010047",
 
-
+  //dashboard
+  forgotpassword: "Forgot Password?",
+  createanAccount: "Create an Account!",
+  login: "LogIn",
+  rememberMe: "Remember Me",
+  password: "Password",
+  enterEmail: "Enter Email Address...",
+  forgotyourpassword: "Forgot Your Password?",
+  forgotDescription: "We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password.",
+  alreadyhaveaccount: "Already have an account? Login!",
+  firstName: "First Name...",
+  lastName: "Last Name...",
+  repeatPassword: "Repeat Password",
+  register: "Register",
+  update: "Update",
+  dashboard: "Dashboard",
+  formsData: "Forms Data",
+  logout: "Logout",
+  welcometoZadip: "Welcome to Zadip Group",
+  copyRights: "© 2008 - 2023 Information Zad Group, All Rights Reserved.",
+  serviceDetails: "Requested Services Details",
+  editSuccessHeading: "Success!",
+  verify: "Verify",
+  resetPassWord: "Reset Password",
+  newPassWord: "Enter your new password",
+  userRequestedServices: "User Requested Services",
+  userVisitedPage: "Most Visited Page",
+  myProfile: "My profile",
+  welcomeNote: "Welcome",
+  headTag: "Head Tag",
+  createUser: "Create User",
+  allUsers: "All Users"
 
 
 }

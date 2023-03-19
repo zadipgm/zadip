@@ -18,7 +18,6 @@ import ServicesSvg from "../../../public/icons/servicesSvg";
 import IconComponent from "../../ReuseAbleComponents/IconComponent";
 import { useRouter } from "next/router";
 import ModalComponent from "../../ReuseAbleComponents/Modal";
-import LogIn from "../../Login";
 const DesktopHeader = () => {
   const [open, setOpen] = React.useState(false);
   const { translations, isLTR, locale } = useTheme();
