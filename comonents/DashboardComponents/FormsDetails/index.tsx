@@ -32,34 +32,34 @@ const FormsDetails = () => {
       });
   }, []);
 
-  const renderTableData = () => {
-    return (
-      data &&
-      data?.slice(0, show)?.map((item, index) => {
-        const { Name, MobileNumber, Email, ServiceName, Page } = item; //destructuring
-        return (
-          <TableRow key={index}>
-            <TableData>{Name}</TableData>
-            <TableData>{MobileNumber}</TableData>
-            <TableData>{Email}</TableData>
-            <TableData>{ServiceName}</TableData>
-            <TableData>{Page}</TableData>
-          </TableRow>
-        );
-      })
-    );
-  };
-  const renderTableHeader = () => {
-    return (
-      <>
-        <TableHead>NAME</TableHead>
-        <TableHead>PHONE</TableHead>
-        <TableHead>EMAIL</TableHead>
-        <TableHead>SERVICE</TableHead>
-        <TableHead>Page</TableHead>
-      </>
-    );
-  };
+  // const renderTableData = () => {
+  //   return (
+  //     data &&
+  //     data?.slice(0, show)?.map((item, index) => {
+  //       const { Name, MobileNumber, Email, ServiceName, Page } = item; //destructuring
+  //       return (
+  //         <TableRow key={index}>
+  //           <TableData>{Name}</TableData>
+  //           <TableData>{MobileNumber}</TableData>
+  //           <TableData>{Email}</TableData>
+  //           <TableData>{ServiceName}</TableData>
+  //           <TableData>{Page}</TableData>
+  //         </TableRow>
+  //       );
+  //     })
+  //   );
+  // };
+  // const renderTableHeader = () => {
+  //   return (
+  //     <>
+  //       <TableHead>NAME</TableHead>
+  //       <TableHead>PHONE</TableHead>
+  //       <TableHead>EMAIL</TableHead>
+  //       <TableHead>SERVICE</TableHead>
+  //       <TableHead>Page</TableHead>
+  //     </>
+  //   );
+  // };
 
   const serviceCounts = {} as any;
   data.forEach((service) => {
@@ -72,9 +72,9 @@ const FormsDetails = () => {
     pageCounts[service.Page] = (pageCounts[service.Page] || 0) + 1;
   });
 
-  const ShowMore = () => {
-    setShow(show + 10);
-  };
+  // const ShowMore = () => {
+  //   setShow(show + 10);
+  // };
 
   return (
     <Container>
@@ -85,14 +85,14 @@ const FormsDetails = () => {
         pageCounts={pageCounts}
       />
 
-      <Title>{translations?.serviceDetails}</Title>
+      {/* <Title>{translations?.serviceDetails}</Title>
       <Table id="Services" className="Services">
         <TableBody>
           <TableRow>{renderTableHeader()}</TableRow>
           {renderTableData()}
         </TableBody>
       </Table>
-      {data.length <= show ? "" : <Button onClick={ShowMore}>Show More</Button>}
+      {data.length <= show ? "" : <Button onClick={ShowMore}>Show More</Button>} */}
     </Container>
   );
 };

@@ -6,10 +6,10 @@ text-align:center;
 margin:30px 0px ;
 color:${({ theme }) => theme.colors.lightBlue} ;
 `
-export const Form = styled.form`
-     background-color:#1212121f;
-    padding: 20px;
-    margin:0px 50px ;
+export const Form = styled.form` `
+export const FormContainer = styled.div`
+ background-color:#1212121f;
+ padding: 20px;
     border-radius:20px ;
 `
 export const FormWrapper = styled.div`
@@ -19,12 +19,22 @@ align-items:center ;
 flex-wrap:wrap ;
 `
 export const Wrapper = styled.div`
-width:70% ;
-margin:12px ;
+width:50% ;
+padding:12px ;
+&.page_selection{
+    width:100% ;
+    margin:0 auto ;
+}
+&.check{
+    display: flex;
+    justify-content:flex-start ;
+    align-items:center ;
+    width:100% ;
+}
 `
 export const Label = styled.label`
 font-size:16px ;
-color:gray ;
+color:${({ theme }) => theme.colors.darkBlue};
 margin:12px ;
 font-family: 'Cairo', sans-serif !important;
 
@@ -40,13 +50,16 @@ font-family: 'Cairo', sans-serif !important;
 :focus{
 border: 1px solid ${({ theme }) => theme.colors.lightBlue} ;
 }
+&.checkbox{
+    width:auto ;
+}
 `
 export const Select = styled.select`
 width: 100%;
 font-size: 16px;
 padding: 10px 8px;
 outline: none;
-color:gray ;
+color:${({ theme }) => theme.colors.black1};
 border-radius: 6px;
 border: 1px solid gray;
 font-family: 'Cairo',sans-serif !important;
@@ -66,19 +79,25 @@ border: 1px solid ${({ theme }) => theme.colors.lightBlue} ;
 }
 `
 export const Submit = styled.input`
-width: 20%;
-    padding: 10px;
-    font-size:16px ;
-    border: 1px solid gray;
-    border-radius: 6px;
-    margin: 0 auto;
-    display:flex ;
-    justify-content:center;
-    align-items:center ;
-    color: gray;
+ color: rgb(255, 255, 255);
+    padding: 12px 9px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    border-radius:10px ;
+    justify-content: center;
+    align-items: self-start;
+    width: 156px;
+    background-color: ${({ theme }) => theme.colors.darkBlue};
+    margin: 22px auto;
+    transition: all 0.5s ease-in 0s;
+    font-size: 16px;
     font-family: 'Cairo', sans-serif !important;
     cursor: pointer;
-    :focus{
-border: 1px solid ${({ theme }) => theme.colors.lightBlue} ;
-}
+    :hover{
+        transition: all 0.5s ease-in 0s;
+        background-color: #49b9ffd6;
+    }
+
 `

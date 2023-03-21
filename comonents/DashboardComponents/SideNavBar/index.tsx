@@ -40,25 +40,25 @@ const SideNavBar = () => {
           <SideIconWrapper>
             <DashboardSvg fill={colors.gray2} width="35px" height="35px" />
           </SideIconWrapper>
-          <ListItems> {translations?.dashboard}</ListItems>
+          <ListItems> {"Dashboard"}</ListItems>
         </Link>
         <Link href="/head_tag" className={width ? "active" : "In-active"}>
           <SideIconWrapper>
             <FormsSvg width="25px" height="25px" fill="#fff" />
           </SideIconWrapper>
-          <ListItems> {translations.headTag}</ListItems>
+          <ListItems> {"Head Tag"}</ListItems>
         </Link>
         <Link href="/users" className={width ? "active" : "In-active"}>
           <SideIconWrapper>
             <UsersSvg width="25px" height="25px" fill="#fff" />
           </SideIconWrapper>
-          <ListItems> {translations?.createUser}</ListItems>
+          <ListItems> {"Create User"}</ListItems>
         </Link>
         <Link href="/all_users" className={width ? "active" : "In-active"}>
           <SideIconWrapper>
             <UsersSvg width="25px" height="25px" fill="#fff" />
           </SideIconWrapper>
-          <ListItems> {translations?.allUsers}</ListItems>
+          <ListItems> {"All Users List"}</ListItems>
         </Link>
       </List>
       <IconWrapper

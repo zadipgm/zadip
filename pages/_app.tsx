@@ -21,11 +21,14 @@ type AppPropsWithLayout = Props & {
   Component: NextPageWithLayout;
 };
 interface IDataProps {
+  id: number;
   Page_Title: string;
-  Meta_Name: string;
   Meta_Description: string;
-  Meta_Property: string;
-  Meta_Property_Description: string;
+  Meta_Keyword_Description: string;
+  Meta_og_title: string;
+  Meta_og_description: string;
+  Meta_og_image: string;
+  Page_Name: string;
 }
 interface IData {
   data: IDataProps[];
@@ -37,7 +40,7 @@ const MyApp = ({
   locale,
 }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page);
-  const [data, setData] = React.useState<IDataProps[]>();
+  const [data, setData] = React.useState<IDataProps[]>([]);
   const [isLoading, setLoading] = React.useState(false);
   const router = useRouter();
   // @ts-ignore
@@ -58,7 +61,7 @@ const MyApp = ({
   }, []);
   let path: string;
 
-  if (router.asPath === "/") {
+  if (router.asPath === "/" || router.asPath === "") {
     path = "home";
   }
   if (router.asPath === "/muaref/") {
@@ -90,7 +93,6 @@ const MyApp = ({
   }
 
   React.useEffect(() => {
-    console.log("here is process", process.env.NODE_ENV);
     setLoading(true);
     const fetchItem = async () => {
       let APP_URL =
@@ -110,28 +112,6 @@ const MyApp = ({
     };
     fetchItem();
   }, []);
-  const handlePageMeta = () => {
-    return (
-      data &&
-      data.map((item, index) => {
-        return (
-          <div key={index}>
-            {item.Page_Title.length > 0 && <title>{item.Page_Title}</title>}
-            {item.Meta_Name.length > 0 && item.Meta_Description.length > 0 && (
-              <meta name={item.Meta_Name} content={item.Meta_Description} />
-            )}
-            {item.Meta_Property.length > 0 &&
-              item.Meta_Property_Description.length > 0 && (
-                <meta
-                  property={item.Meta_Property}
-                  content={item.Meta_Property_Description}
-                />
-              )}
-          </div>
-        );
-      })
-    );
-  };
   return getLayout(
     <>
       <Head>
@@ -140,8 +120,37 @@ const MyApp = ({
           key="viewport"
           content="width=device-width, height=device-height ,initial-scale=1.0, shrink-to-fit=no"
         />
-
-        {handlePageMeta()}
+        {data && data[0]?.Page_Name === "all" ? (
+          <>
+            <title>{data[0]?.Page_Title}</title>
+            <meta name="description" content={data[0]?.Meta_Description} />
+            <meta name="keywords" content={data[0]?.Meta_Keyword_Description} />
+            <meta property="og:title" content={data[0]?.Meta_og_title} />
+            <meta
+              property="og:description"
+              content={data[0]?.Meta_og_description}
+            />
+            <meta
+              property={data[0]?.Meta_og_image}
+              content="https://zadip.com/favicons/favicon_96x96.png"
+            />
+          </>
+        ) : (
+          <>
+            <title>{data[0]?.Page_Title}</title>
+            <meta name="description" content={data[0]?.Meta_Description} />
+            <meta name="keywords" content={data[0]?.Meta_Keyword_Description} />
+            <meta property="og:title" content={data[0]?.Meta_og_title} />
+            <meta
+              property="og:description"
+              content={data[0]?.Meta_og_description}
+            />
+            <meta
+              property={data[0]?.Meta_og_image}
+              content="https://zadip.com/favicons/favicon_96x96.png"
+            />
+          </>
+        )}
       </Head>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
