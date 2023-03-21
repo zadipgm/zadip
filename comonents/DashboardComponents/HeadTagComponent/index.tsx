@@ -16,7 +16,7 @@ interface IDataProps {
 const HeadTagComponent = () => {
   const [data, setData] = React.useState<IDataProps[]>([]);
   const [pageName, setPageName] = React.useState("home");
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     const fetchItem = async () => {
