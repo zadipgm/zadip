@@ -25,14 +25,14 @@ const HeadTagComponent = () => {
           ? "http://localhost:5000"
           : "https://api.zadip.sa";
       try {
-        setLoading(true);
+        // setLoading(true);
         const response = await axios.get(`${APP_URL}/get_head`, {
           params: {
             page: `${pageName}`,
           },
         });
         setData(response.data);
-        setLoading(false);
+        // setLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -47,17 +47,17 @@ const HeadTagComponent = () => {
   return (
     <Container>
       <Title>{"Page Head Tag Data"}</Title>
-      {loading ? (
+      {/* {loading ? (
         <Box>
           <CircularProgress />
         </Box>
-      ) : (
-        <AddEditForm
-          pageNameHandler={(param) => pageNameHandler(param)}
-          data={data}
-          pageName={pageName}
-        />
-      )}
+      ) : ( */}
+      <AddEditForm
+        pageNameHandler={(param) => pageNameHandler(param)}
+        data={data}
+        pageName={pageName}
+      />
+      {/* )} */}
     </Container>
   );
 };
