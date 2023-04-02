@@ -49,18 +49,13 @@ const HeadTagComponent = () => {
   return (
     <Container>
       <Title>{"Page Head Tag Data"}</Title>
-      {loading ? (
-        <Box>
-          <CircularProgress />
-        </Box>
-      ) : (
-        <AddEditForm
-          pageNameHandler={(param) => pageNameHandler(param)}
-          data={data}
-          pageName={pageName}
-          loading={loading}
-        />
-      )}
+
+      <AddEditForm
+        pageNameHandler={(param) => pageNameHandler(param)}
+        data={data}
+        pageName={pageName}
+        loading={loading}
+      />
     </Container>
   );
 };
