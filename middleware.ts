@@ -4,7 +4,6 @@ export function middleware(request) {
     let cookie = request.cookies.get('isLogedIn')?.value
     const urld = request.nextUrl.clone()
     if (urld.pathname = '/login') {
-        console.log("here", cookie)
         if (cookie === undefined) {
             const url = request.nextUrl.clone()
             url.pathname = '/login'

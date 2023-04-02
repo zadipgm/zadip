@@ -40,7 +40,6 @@ const AllUsersScreen = () => {
   }, [users]);
 
   const hanldeDelet = async (id: any) => {
-    console.log("here is delet", id);
     try {
       await axios.delete(`${APP_URL}/delete/${id}`);
       setUsers((prev) => prev.filter((user) => user.id !== id));

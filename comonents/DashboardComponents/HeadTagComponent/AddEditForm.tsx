@@ -13,23 +13,22 @@ import {
   FormContainer,
 } from "./styled.components";
 interface IDataProps {
-  id: number;
-  Page_Title: string;
-  Meta_Description: string;
-  Meta_Keyword_Description: string;
-  Meta_og_title: string;
-  Meta_og_description: string;
-  Meta_og_image: string;
-  Page_Name: string;
+  id?: number;
+  Page_Title?: string;
+  Meta_Description?: string;
+  Meta_Keyword_Description?: string;
+  Meta_og_title?: string;
+  Meta_og_description?: string;
+  Meta_og_image?: string;
+  Page_Name?: string;
 }
 interface IProps {
   pageNameHandler: (pageName: string) => void;
-  data: IDataProps[];
+  data?: IDataProps[];
   pageName: string;
 }
 const AddEditForm = ({ pageNameHandler, data, pageName }: IProps) => {
   console.log("AddEditForm", data);
-  const [showAll, setShowAll] = React.useState("false");
   const [pageTitle, setPageTitle] = React.useState(
     data[0]?.Page_Title as string
   );
@@ -130,13 +129,7 @@ const AddEditForm = ({ pageNameHandler, data, pageName }: IProps) => {
     },
     []
   );
-  React.useEffect(() => {
-    if (pageName === "all") {
-      setShowAll("true");
-    } else {
-      setShowAll("false");
-    }
-  }, [showAll]);
+
   return (
     <>
       <SimpleSnackbar

@@ -52,7 +52,10 @@ const Footer = () => {
                   </Link>
                 </FooterLI>
                 <FooterLI>
-                  <Link href="/images/zadip-profile.pdf" target={"_blank"}>
+                  <Link
+                    href="https://zadip.sa/images/zadip-profile.pdf"
+                    target={"_blank"}
+                  >
                     <CloudDownloadOutlinedIcon fontSize={"small"} />{" "}
                     {translations?.downloadComapnyPRofile}
                   </Link>

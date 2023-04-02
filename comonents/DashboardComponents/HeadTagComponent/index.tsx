@@ -17,26 +17,28 @@ const HeadTagComponent = () => {
   const [data, setData] = React.useState<IDataProps[]>([]);
   const [pageName, setPageName] = React.useState("home");
   const [loading, setLoading] = React.useState(true);
-
-  React.useEffect(() => {
-    const fetchItem = async () => {
-      let APP_URL =
-        process.env.NODE_ENV === "development"
-          ? "http://localhost:5000"
-          : "https://api.zadip.sa";
-      try {
-        // setLoading(true);
-        const response = await axios.get(`${APP_URL}/get_head`, {
+  const fetchItem = async () => {
+    let APP_URL =
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:5000"
+        : "https://api.zadip.sa";
+    try {
+      setLoading(true);
+      await axios
+        .get(`${APP_URL}/get_head`, {
           params: {
             page: `${pageName}`,
           },
+        })
+        .then((res) => {
+          setData(res.data);
+          setLoading(false);
         });
-        setData(response.data);
-        // setLoading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  React.useEffect(() => {
     fetchItem();
   }, [pageName]);
 
@@ -47,17 +49,17 @@ const HeadTagComponent = () => {
   return (
     <Container>
       <Title>{"Page Head Tag Data"}</Title>
-      {/* {loading ? (
+      {loading ? (
         <Box>
           <CircularProgress />
         </Box>
-      ) : ( */}
-      <AddEditForm
-        pageNameHandler={(param) => pageNameHandler(param)}
-        data={data}
-        pageName={pageName}
-      />
-      {/* )} */}
+      ) : (
+        <AddEditForm
+          pageNameHandler={(param) => pageNameHandler(param)}
+          data={data}
+          pageName={pageName}
+        />
+      )}
     </Container>
   );
 };

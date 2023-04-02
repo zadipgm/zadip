@@ -26,7 +26,6 @@ const DesktopHeader = () => {
     setOpen(!open);
   };
   const handleClose = () => {
-    console.log("here is another cloase", open);
     setOpen(!open);
   };
   const changeLocale = React.useCallback(() => {
