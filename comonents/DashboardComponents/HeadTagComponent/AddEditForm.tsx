@@ -12,6 +12,7 @@ import {
   Select,
   FormContainer,
 } from "./styled.components";
+import { Box, CircularProgress } from "@mui/material";
 interface IDataProps {
   id?: number;
   Page_Title?: string;
@@ -26,8 +27,9 @@ interface IProps {
   pageNameHandler: (pageName: string) => void;
   data?: IDataProps[];
   pageName: string;
+  loading: boolean;
 }
-const AddEditForm = ({ pageNameHandler, data, pageName }: IProps) => {
+const AddEditForm = ({ pageNameHandler, data, pageName, loading }: IProps) => {
   console.log("AddEditForm", data);
   const [pageTitle, setPageTitle] = React.useState(
     data[0]?.Page_Title as string
@@ -220,7 +222,13 @@ const AddEditForm = ({ pageNameHandler, data, pageName }: IProps) => {
               </Wrapper>
             </FormWrapper>
           </FormContainer>
-          <Submit type={"submit"} value={"submit"} className={"tag-form"} />
+          {loading ? (
+            <Box>
+              <CircularProgress />
+            </Box>
+          ) : (
+            <Submit type={"submit"} value={"submit"} className={"tag-form"} />
+          )}
         </Form>
       </div>
     </>

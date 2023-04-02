@@ -58,6 +58,7 @@ const HeadTagComponent = () => {
           pageNameHandler={(param) => pageNameHandler(param)}
           data={data}
           pageName={pageName}
+          loading={loading}
         />
       )}
     </Container>
