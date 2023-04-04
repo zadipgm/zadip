@@ -167,7 +167,7 @@ const AddEditForm = ({ pageNameHandler, data, pageName, loading }: IProps) => {
               <Wrapper>
                 <Label htmlFor="title">{"Page Title"}</Label>
                 <TextArea
-                  defaultValue={pageTitle}
+                  defaultValue={data[0]?.Page_Title}
                   placeholder={"Enter page title..."}
                   onChange={(e) => setPageTitle(e.target.value)}
                 />
@@ -175,7 +175,7 @@ const AddEditForm = ({ pageNameHandler, data, pageName, loading }: IProps) => {
               <Wrapper>
                 <Label htmlFor="Page Description">{"Page Description"}</Label>
                 <TextArea
-                  defaultValue={metaDescription}
+                  defaultValue={data[0]?.Meta_Description}
                   placeholder={"Enter Page Description"}
                   onChange={(e) => setMetaDescription(e.target.value)}
                 />
@@ -186,7 +186,7 @@ const AddEditForm = ({ pageNameHandler, data, pageName, loading }: IProps) => {
                 </Label>
                 <TextArea
                   required
-                  defaultValue={metaKeyWordDescription}
+                  defaultValue={data[0]?.Meta_Keyword_Description}
                   placeholder={"Enter Page Keywords Description"}
                   onChange={(e) => setmetaKeyWordDescription(e.target.value)}
                 />
@@ -195,7 +195,7 @@ const AddEditForm = ({ pageNameHandler, data, pageName, loading }: IProps) => {
                 <Label htmlFor="Page og:title">{"Page og:title"}</Label>
                 <TextArea
                   required
-                  defaultValue={metaOgTitle}
+                  defaultValue={data[0]?.Meta_og_title}
                   placeholder={"Enter Page og:title "}
                   onChange={(e) => setmetaOgTitle(e.target.value)}
                 />
@@ -206,7 +206,7 @@ const AddEditForm = ({ pageNameHandler, data, pageName, loading }: IProps) => {
                 </Label>
                 <TextArea
                   required
-                  defaultValue={metaOgDescription}
+                  defaultValue={data[0]?.Meta_og_description}
                   placeholder={"Enter og:description"}
                   onChange={(e) => setmetaOgDescription(e.target.value)}
                 />
@@ -215,20 +215,15 @@ const AddEditForm = ({ pageNameHandler, data, pageName, loading }: IProps) => {
                 <Label htmlFor="Page KeyWords Content">{"Page og:image"}</Label>
                 <TextArea
                   required
-                  defaultValue={metaOgImage}
+                  defaultValue={data[0]?.Meta_og_image}
                   placeholder={"Enter Page og:image url"}
                   onChange={(e) => setmetaOgImage(e.target.value)}
                 />
               </Wrapper>
             </FormWrapper>
           </FormContainer>
-          {loading ? (
-            <Box>
-              <CircularProgress />
-            </Box>
-          ) : (
-            <Submit type={"submit"} value={"submit"} className={"tag-form"} />
-          )}
+
+          <Submit type={"submit"} value={"submit"} className={"tag-form"} />
         </Form>
       </div>
     </>
