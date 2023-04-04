@@ -18,6 +18,7 @@ const HeadTagComponent = () => {
   const [pageName, setPageName] = React.useState("home");
   const [loading, setLoading] = React.useState(true);
   const fetchItem = async () => {
+    let page = pageName.length > 0 ? pageName : "";
     let APP_URL =
       process.env.NODE_ENV === "development"
         ? "http://localhost:5000"
@@ -27,7 +28,7 @@ const HeadTagComponent = () => {
       await axios
         .get(`${APP_URL}/get_head`, {
           params: {
-            page: `${pageName}`,
+            page: `${page}`,
           },
         })
         .then((res) => {
