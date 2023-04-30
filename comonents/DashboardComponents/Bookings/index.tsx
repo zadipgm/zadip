@@ -1,6 +1,6 @@
 import * as React from "react";
 import DataTable from "../DataTable";
-import Booking from "dataLayer/booking.json";
+import Booking from "DataLayer/booking.json";
 const Bookings = () => {
   return (
     <div>
