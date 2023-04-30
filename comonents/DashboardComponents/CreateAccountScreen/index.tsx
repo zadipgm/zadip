@@ -26,9 +26,10 @@ const CreateAccountScreen = () => {
   const { locale, colors, translations, isLTR } = useTheme();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [firstName, setFirstName] = React.useState("");
-  const [lastName, setLastName] = React.useState("");
-  const [confirmPassword, setConfirmPassword] = React.useState("");
+  const [arabicName, setArabicName] = React.useState("");
+  const [englishName, setEnglishName] = React.useState("");
+  const [nationalID, setNationalID] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState("");
   const [message, setMessage] = React.useState("");
   const [color, setColor] = React.useState("");
   const [isComplete, setIsComplete] = React.useState(false);
@@ -53,19 +54,22 @@ const CreateAccountScreen = () => {
     setPassword(value);
   };
 
-  const handleConfirmPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleArabicName = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
-    setConfirmPassword(value);
+    setArabicName(value);
+  };
+  const handleEnglishName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    setEnglishName(value);
   };
 
-  const handleFirstName = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleIDnumber = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
-    setFirstName(value);
+    setNationalID(value);
   };
-
-  const handleLastName = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePhonenumber = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
-    setLastName(value);
+    setPhoneNumber(value);
   };
   const handleRole = (e: React.ChangeEvent<HTMLSelectElement>) => {
     let value = e.target.value;
@@ -80,17 +84,16 @@ const CreateAccountScreen = () => {
         : "https://api.zadip.sa";
     try {
       await axios.post(`${APP_URL}/register`, {
-        First_Name: firstName,
-        Last_Name: lastName,
+        name_en: englishName,
+        name_ar: arabicName,
         Email: email,
         Password: password,
-        Confirm_Password: confirmPassword,
         Role: role,
       });
-      setFirstName("");
-      setLastName("");
+      setArabicName("");
+      setEnglishName("");
       setPassword("");
-      setConfirmPassword("");
+      setNationalID("");
       setEmail("");
       handleClick();
       setMessage(
@@ -127,7 +130,7 @@ const CreateAccountScreen = () => {
         message={message}
         color={color}
       />
-      <UserTitle>{isLTR ? "Create User!" : "إنشاء المستخدم"}</UserTitle>
+      <UserTitle>{"Create New User"}</UserTitle>
       <ContainerUser>
         <Form onSubmit={(e) => handleSubmit(e)} className={"create-account"}>
           <FormContent>
@@ -137,10 +140,23 @@ const CreateAccountScreen = () => {
               </SvgWrapper>
               <Input
                 type="text"
-                placeholder={translations?.firstName}
+                placeholder={"Enter name in arabic"}
                 required
-                value={firstName}
-                onChange={(e) => handleFirstName(e)}
+                value={arabicName}
+                onChange={(e) => handleArabicName(e)}
+                minLength={2}
+              />
+            </Wrapper>{" "}
+            <Wrapper className={"create-account"}>
+              <SvgWrapper>
+                <NameSvg width="25px" height="25px" fill={colors.lightBlue} />
+              </SvgWrapper>
+              <Input
+                type="text"
+                placeholder={"Enter name in english"}
+                required
+                value={englishName}
+                onChange={(e) => handleEnglishName(e)}
                 minLength={2}
               />
             </Wrapper>
@@ -150,11 +166,24 @@ const CreateAccountScreen = () => {
               </SvgWrapper>
               <Input
                 type="text"
-                placeholder={translations?.lastName}
+                placeholder={"National ID number / Iqama number"}
                 required
-                value={lastName}
+                value={nationalID}
+                onChange={(e) => handleIDnumber(e)}
                 minLength={2}
-                onChange={(e) => handleLastName(e)}
+              />
+            </Wrapper>
+            <Wrapper className={"create-account"}>
+              <SvgWrapper>
+                <NameSvg width="25px" height="25px" fill={colors.lightBlue} />
+              </SvgWrapper>
+              <Input
+                type="text"
+                placeholder={"05X XXX XXXX"}
+                required
+                value={phoneNumber}
+                onChange={(e) => handlePhonenumber(e)}
+                minLength={2}
               />
             </Wrapper>
             <Wrapper className={"create-account"}>
@@ -163,7 +192,7 @@ const CreateAccountScreen = () => {
               </SvgWrapper>
               <Input
                 type="email"
-                placeholder={translations?.enterEmail}
+                placeholder={"abc@gmail.com"}
                 required
                 value={email}
                 onChange={(e) => handleEmail(e)}
@@ -175,10 +204,10 @@ const CreateAccountScreen = () => {
               </SvgWrapper>
               <UserSelect value={role} onChange={(e) => handleRole(e)} required>
                 <option value={""} selected disabled hidden>
-                  {isLTR ? "Select Role" : "حدد الدور"}
+                  {"Select Role"}
                 </option>
-                <option value={"admin"}>{isLTR ? "Admin" : "مدير"}</option>
-                <option value={"user"}>{isLTR ? "User" : "مستخدم"}</option>
+                <option value={"admin"}>{"Admin"}</option>
+                <option value={"user"}>{"User"}</option>
               </UserSelect>
             </Wrapper>
             <Wrapper className={"create-account"}>
@@ -191,27 +220,10 @@ const CreateAccountScreen = () => {
               </SvgWrapper>
               <Input
                 type="text"
-                placeholder={translations?.password}
+                placeholder={"password"}
                 required
                 value={password}
                 onChange={(e) => handlePassword(e)}
-              />
-            </Wrapper>
-
-            <Wrapper className={"create-account"}>
-              <SvgWrapper>
-                <PassWordSvg
-                  width="25px"
-                  height="25px"
-                  fill={colors.lightBlue}
-                />
-              </SvgWrapper>
-              <Input
-                type="text"
-                placeholder={translations?.repeatPassword}
-                required
-                value={confirmPassword}
-                onChange={(e) => handleConfirmPassword(e)}
               />
             </Wrapper>
           </FormContent>

@@ -11,6 +11,8 @@ import {
   TableRow,
   Title,
 } from "./styled.components";
+import HomeCard from "../HomeCard";
+import DataTable from "../DataTable";
 const FormsDetails = () => {
   const { translations } = useTheme();
   const [data, setData] = React.useState([]);
@@ -78,7 +80,8 @@ const FormsDetails = () => {
 
   return (
     <Container>
-      <Title>{translations.welcomeNote}</Title>
+      {/* <Title>{translations.welcomeNote}</Title> */}
+      <HomeCard />
       <Charts
         title={translations.userRequestedServices}
         serviceCounts={serviceCounts}

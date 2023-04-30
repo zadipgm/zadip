@@ -9,12 +9,12 @@ export const Container = styled.div`
         background-size: cover;
         transition:.5s ;
     &.active{
-        width:8% ;
+        width:14% ;
         transition:.5s ;
     }
     &.In-active{
         transition:.5s ;
-        width:18% ;
+        width:25% ;
     }
 
 `
@@ -26,10 +26,18 @@ export const LogoContainer = styled.div`
 `
 export const SideIconWrapper = styled.div`
 display:flex ;
-justify-content:center ;
+padding:10px 15px;
+gap:10px;
+justify-content:flex-start; ;
 align-items: center ;
-width:50px;
-height:50px;
+>a{
+    text-decoration: none;
+    color:${({ theme }) => theme.colors.white}
+}
+:hover{
+        background-color: ${({ theme }) => theme.colors.black1};cursor:pointer;
+    }
+
 `
 export const IconWrapper = styled.div`
     width: 50px;
@@ -66,11 +74,17 @@ export const IconWrapper = styled.div`
                 `
     }
 `
+
+
+
+
 export const List = styled.ul`
     padding: 0;
     list-style-type: none;
-    margin-bottom: 100px;
-    transition:.5s ;
+    transition:.5s ;margin:0;
+    &.menu-list{
+        margin-bottom: 100px;
+    }
     >a{
         padding:8px ;
     display:flex ;
@@ -85,10 +99,9 @@ export const List = styled.ul`
     display: block;
     text-align: center;
     }
-    border-bottom:1px solid ${({ theme }) => theme.colors.gray3}; ;
+    border-bottom:1px solid ${({ theme }) => theme.colors.gray3}; 
     :hover{
-        background-color: #00000052;
-    
+        background-color: ${({ theme }) => theme.colors.black1};
     }
    }
 
@@ -105,17 +118,40 @@ export const ListItems = styled.li`
    
 
 `
-export const Langwrapper = styled.div`
- 
- padding: 10px 18px;
-    display:flex ;
-    justify-content:flex-start ;
-    align-items:center ;
-    gap:6px;
-    width:100% ;
-    color:#fff;
-    :hover{
-        background-color: #00000052;
-    
+
+export const AccordionContainer = styled.div`
+margin-bottom:100px;
+   & .MuiPaper-root{
+    background-color: transparent;
+    box-shadow: none;
+    margin:0 ;
+    & .MuiButtonBase-root {
+        border-bottom:1px solid ${({ theme }) => theme.colors.gray3}; 
+        :hover{
+            background-color: ${({ theme }) => theme.colors.black1}; 
+        }
     }
+    &.Mui-expanded{
+        margin: 0;
+    }
+   }
    `
+export const PageWrapper = styled.div`
+ 
+   padding: 10px 35px;
+      display:flex ;
+      justify-content:flex-start ;
+      align-items:center ;
+      gap:6px;
+      width:100% ;
+      a{
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.black1}; 
+      }
+      :hover{
+          background-color: #00000052;
+        a{
+            color: ${({ theme }) => theme.colors.white};
+        }
+      }
+     `

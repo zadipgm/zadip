@@ -185,7 +185,13 @@ const english = {
   welcomeNote: "Welcome",
   headTag: "Head Tag",
   createUser: "Create User",
-  allUsers: "All Users"
+  allUsers: "All Users",
+  pendingrehearsals: "Pending Trainings",
+  rehearsalsCompleted: "Completed Trainings",
+  totalRatings: "Total Ratings",
+  averageRating: "Average Rating",
+  hiCoach: "Hi Coach",
+
 
 
 }

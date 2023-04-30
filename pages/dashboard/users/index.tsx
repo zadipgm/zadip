@@ -2,7 +2,7 @@ import CreateAccountScreen from "comonents/DashboardComponents/CreateAccountScre
 import Layout from "comonents/DashboardComponents/Layouts/PageLayout";
 import type { ReactElement } from "react";
 
-import type { NextPageWithLayout } from "../_app";
+import type { NextPageWithLayout } from "../../_app";
 const Page: NextPageWithLayout = () => {
   return <CreateAccountScreen />;
 };
