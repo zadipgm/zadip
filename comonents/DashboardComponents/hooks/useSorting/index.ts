@@ -1,4 +1,4 @@
-import userInfo from 'dataLayer/dataTable.json'
+import userInfo from 'DataLayer/dataTable.json'
 export const HandleDescending = (key, setSearchvalue) => {
     if (key === "id") {
         const numDescending = [...userInfo.data].sort((a, b) => b.id - a.id);

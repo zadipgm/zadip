@@ -26,13 +26,9 @@
       "public/*": ["public/*"],
       "styles/*": ["styles/*"],
       "videos/*": ["videos/*"],
-      "dataLayer/*": ["dataLayer/*"],
+      "dataLayer/*": ["DataLayer/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

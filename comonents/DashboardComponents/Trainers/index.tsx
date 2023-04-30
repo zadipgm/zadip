@@ -1,6 +1,6 @@
 import * as React from "react";
 import DataTable from "../DataTable";
-import userInfo from "dataLayer/dataTable.json";
+import userInfo from "DataLayer/dataTable.json";
 const Trainer = () => {
   return (
     <div>

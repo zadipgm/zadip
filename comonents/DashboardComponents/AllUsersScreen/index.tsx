@@ -15,7 +15,7 @@ import {
   Title,
 } from "../FormsDetails/styled.components";
 import DataTable from "../DataTable";
-import users from "dataLayer/user.json";
+import users from "DataLayer/user.json";
 const AllUsersScreen = () => {
   const { isLTR } = useTheme();
   // const [users, setUsers] = React.useState([]);
