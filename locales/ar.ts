@@ -174,7 +174,13 @@ const arabic = {
   welcomeNote: "اهلا بك",
   headTag: "علامة الرأس",
   createUser: "إنشاء المستخدم",
-  allUsers: "جميع المستخدمين"
+  allUsers: "جميع المستخدمين",
+  pendingrehearsals: "تداريب معلقة",
+  hiCoach: "مرحبا المدرب",
+
+  rehearsalsCompleted: "تداريب اكملت",
+  totalRatings: "اجمالي التقييمات",
+  averageRating: "متوسط تقييم",
 
 }
 

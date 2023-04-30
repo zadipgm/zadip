@@ -7,16 +7,6 @@ const nextConfig = {
     locales: ["ar", "en"],
     defaultLocale: "ar",
     localeDetection: false,
-    domains: [
-      {
-        domain: "http://localhost:3000/",
-        defaultLocale: "en",
-      },
-      {
-        domain: "http://localhost:3000/",
-        defaultLocale: "ar",
-      },
-    ],
   },
   trailingSlash: true,
   experimental: {
