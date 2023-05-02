@@ -12,17 +12,22 @@ import {
   Table,
   TableData,
   Row,
-  SortArrow,
   Data,
   PaginationWrapper,
   PaginationOuterDiv,
   ActionList,
   ActionListItems,
   Actions,
+  CardViewContainer,
+  CardList,
+  CardListItems,
+  CardListItemsWrapper,
+  Button,
+  DataView,
+  DataViewWrapper,
+  TableDataWrapper,
 } from "./style";
 import EditSvg from "public/icons/editSvg";
-import ArrowUpSvg from "public/icons/arrowUpsvg";
-import ArrowDown2Svg from "public/icons/arrowdown2svg";
 import { useTheme } from "styled-components";
 import DeleteSvg from "public/icons/deleteSvg";
 import Pagination from "../ReuseableComponents/Pagnation";
@@ -33,6 +38,19 @@ import {
   RequestSearch,
 } from "../hooks/useSorting";
 import ArrowDown from "public/icons/arrowDownSvg";
+import EmailSvg from "public/icons/emailSvg";
+import PhoneSvg from "public/icons/phoneSvg";
+import IDsvg from "public/icons/idSvg";
+import ActiveSvg from "public/icons/active";
+import CardUserSvg from "public/icons/carduserSvg";
+import InActiveSvg from "public/icons/inactive";
+import TableView from "public/icons/tableView";
+import GridView from "public/icons/gridView";
+import StarSvg from "public/icons/starsSvg";
+import AccurateSvg from "public/icons/acurateSvg";
+import { filterByLocale } from "../hooks/filterByLocale";
+import SortUp from "public/icons/sortUp";
+import SortDown from "public/icons/sortDown";
 
 interface Iprocedure {
   DOB?: string;
@@ -76,7 +94,7 @@ interface IProps {
   showFilter: boolean;
 }
 const DataTable = ({ data, title, showFilter }: IProps) => {
-  const { colors } = useTheme();
+  const { colors, locale } = useTheme();
   const [searchvalue, setSearchvalue] = React.useState(data);
   const [filterKey, setFilterKey] = React.useState("id");
   const [expanded, setExpanded] = React.useState(false);
@@ -85,6 +103,7 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
   const [open, setOpen] = React.useState(false);
   const [currentPage, setCurrentPage] = React.useState(1);
   const [recordsPerPage, setRecordPerPage] = React.useState(10);
+  const [dataView, setDataView] = React.useState("table");
   const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
   const currentRecords = data.slice(indexOfFirstRecord, indexOfLastRecord);
@@ -120,26 +139,33 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
   // Table Header
   const renderTableHeader = () => {
     let header = Object.keys(data[0]);
-    return header.map((key, index) => {
+    return filterByLocale(locale, header).map((key, index) => {
       return (
         <TableData key={index} className="table-header">
-          <Data>{key.toUpperCase()}</Data>
-          {key.toUpperCase() === "PROCEDURES" ? (
-            ""
-          ) : (
-            <SortArrow>
-              <div onClick={() => HandleAscending(key, setSearchvalue)}>
-                <ArrowUpSvg fill={colors.gray2} />
+          <TableDataWrapper>
+            <Data>{key.toUpperCase()}</Data>
+            {key.toUpperCase() === "PROCEDURES" ? (
+              ""
+            ) : (
+              <div>
+                <span
+                  onClick={() => HandleAscending(key, setSearchvalue, data)}
+                >
+                  <SortUp fill={colors.gray1} width="15px" height="15px" />
+                </span>
+                <span
+                  onClick={() => HandleDescending(key, setSearchvalue, data)}
+                >
+                  <SortDown fill={colors.gray1} width="15px" height="15px" />
+                </span>
               </div>
-              <div onClick={() => HandleDescending(key, setSearchvalue)}>
-                <ArrowDown2Svg fill={colors.gray2} />
-              </div>
-            </SortArrow>
-          )}
+            )}
+          </TableDataWrapper>
         </TableData>
       );
     });
   };
+
   const actionHandler = (id) => {
     setOpen(!open);
     setShowActions(id);
@@ -148,9 +174,7 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
     let header = Object.keys(data[0].procedures[0]);
     return header.map((key, index) => {
       return (
-        <TableData key={index} className="table-header">
-          <Data>{key.toUpperCase()}</Data>
-        </TableData>
+        <TableData className="table-header">{key.toUpperCase()}</TableData>
       );
     });
   };
@@ -165,9 +189,29 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
       );
     });
   };
+
+  const handleDataView = (view) => {
+    setDataView(view);
+  };
   return (
     <Container>
       <h1>List of all {title}</h1>
+      <DataViewWrapper>
+        <DataView
+          onClick={() => handleDataView("table")}
+          className={dataView === "table" ? "active" : ""}
+        >
+          <TableView />
+          <span>Table View</span>
+        </DataView>
+        <DataView
+          onClick={() => handleDataView("grid")}
+          className={dataView === "grid" ? "active" : ""}
+        >
+          <GridView />
+          <span>Grid View</span>
+        </DataView>
+      </DataViewWrapper>
       {showFilter && (
         <Wrapper>
           <Filter>
@@ -200,68 +244,70 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
           </EntriesWrapper>
         </Wrapper>
       )}
-      <Table>
-        <Row>{renderTableHeader()}</Row>
-        {searchvalue.slice(0, recordsPerPage as number).map((item) => {
-          let keys = Object.keys(item).filter(
-            (procedure) => procedure !== "procedures"
-          );
+      {dataView === "table" && (
+        <Table>
+          <Row>{renderTableHeader()}</Row>
+          {searchvalue.slice(0, recordsPerPage as number).map((item) => {
+            let keys = Object.keys(item).filter(
+              (procedure) => procedure !== "procedures"
+            );
 
-          return (
-            <>
-              <Row key={item.id}>
-                {keys.map((key) => {
-                  return <TableData>{item[key]}</TableData>;
-                })}
-                <TableData>
-                  <ActionWrapper onClick={() => actionHandler(item.id)}>
-                    <Actions>
-                      <div>Actions</div>
-                      <ArrowDown fill={colors.gray2} />
-                    </Actions>
-                    {open && showActions === item.id && (
-                      <ActionList>
-                        <ActionListItems>
-                          <InnerWrapper>
-                            <EditSvg
-                              fill={colors.darkBlue}
-                              width="15px"
-                              height="15px"
-                            />
-                          </InnerWrapper>
-                          <span>Edit</span>
-                        </ActionListItems>
-                        <ActionListItems>
-                          <InnerWrapper className="delete">
-                            <DeleteSvg
-                              fill={colors.red}
-                              width="15px"
-                              height="15px"
-                            />
-                          </InnerWrapper>
-                          <span>Delete</span>
-                        </ActionListItems>
-                        <ActionListItems
-                          onClick={() => HandleViewDetails(item.id)}
+            return (
+              <>
+                <Row key={item.id}>
+                  {filterByLocale(locale, keys).map((key) => {
+                    return <TableData>{`${item[key]}`}</TableData>;
+                  })}
+                  <TableData>
+                    <ActionWrapper onClick={() => actionHandler(item.id)}>
+                      <Actions>
+                        <div>Actions</div>
+                        <ArrowDown fill={colors.gray2} />
+                      </Actions>
+                      {open && showActions === item.id && (
+                        <ActionList
+                          className={showActions === item.id ? "show" : "hide"}
                         >
-                          <InnerWrapper>
-                            <ViewMoreSvg
-                              fill={colors.lightBlue}
-                              width="15px"
-                              height="15px"
-                            />
-                          </InnerWrapper>
-                          <span>View</span>
-                        </ActionListItems>
-                      </ActionList>
-                    )}
-                  </ActionWrapper>
-                </TableData>
-              </Row>
-              {active === item.id && (
-                <Table className={active === item.id ? "details" : ""}>
-                  <h3>{title} detail</h3>
-                  <Row className="details-row">{renderTableNestedHeader()}</Row>
+                          <ActionListItems>
+                            <InnerWrapper>
+                              <EditSvg
+                                fill={colors.darkBlue}
+                                width="15px"
+                                height="15px"
+                              />
+                            </InnerWrapper>
+                            <span>Edit</span>
+                          </ActionListItems>
+                          <ActionListItems>
+                            <InnerWrapper className="delete">
+                              <DeleteSvg
+                                fill={colors.red}
+                                width="15px"
+                                height="15px"
+                              />
+                            </InnerWrapper>
+                            <span>Delete</span>
+                          </ActionListItems>
+                          <ActionListItems
+                            onClick={() => HandleViewDetails(item.id)}
+                          >
+                            <InnerWrapper>
+                              <ViewMoreSvg
+                                fill={colors.lightBlue}
+                                width="15px"
+                                height="15px"
+                              />
+                            </InnerWrapper>
+                            <span>View</span>
+                          </ActionListItems>
+                        </ActionList>
+                      )}
+                    </ActionWrapper>
+                  </TableData>
+                </Row>
+                <Row className={active === item.id ? "show" : "hide"}>
+                  <br></br>
+                  <Row> {renderTableNestedHeader()}</Row>
                   {item.procedures.map((detail) => {
                     return (
                       <Row key={item.id} className="details-row">
@@ -271,12 +317,90 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
                       </Row>
                     );
                   })}
-                </Table>
-              )}
-            </>
-          );
-        })}
-      </Table>
+                  <br></br>
+                </Row>
+              </>
+            );
+          })}
+        </Table>
+      )}
+
+      {dataView === "grid" && (
+        <CardViewContainer>
+          <CardList>
+            {searchvalue.slice(0, recordsPerPage as number).map((item) => {
+              let keys = Object.keys(item).filter(
+                (procedure) => procedure !== "procedures"
+              );
+              return (
+                <>
+                  <CardListItems>
+                    <CardListItemsWrapper className="card-name">
+                      <div>
+                        {" "}
+                        <CardUserSvg />
+                      </div>
+                      <span>{item?.name_en || item?.company_en}</span>
+                    </CardListItemsWrapper>
+
+                    <CardListItemsWrapper>
+                      <IDsvg />
+                      <span>{item.id}</span>
+                    </CardListItemsWrapper>
+                    {item?.trainer && (
+                      <CardListItemsWrapper>
+                        <CardUserSvg />
+                        <span>{item?.trainer}</span>
+                      </CardListItemsWrapper>
+                    )}
+                    {item?.email && (
+                      <CardListItemsWrapper>
+                        <EmailSvg />
+                        <span>{item?.email}</span>
+                      </CardListItemsWrapper>
+                    )}
+                    {item?.product_en && (
+                      <CardListItemsWrapper>
+                        <AccurateSvg />
+                        <span>{item?.product_en}</span>
+                      </CardListItemsWrapper>
+                    )}
+                    {item.rating_en && (
+                      <CardListItemsWrapper>
+                        <StarSvg />
+                        <span>{item.rating_en}</span>
+                      </CardListItemsWrapper>
+                    )}
+                    {item.phone && (
+                      <CardListItemsWrapper>
+                        <PhoneSvg />
+                        <span>{item.phone}</span>
+                      </CardListItemsWrapper>
+                    )}
+                    {item.status && (
+                      <CardListItemsWrapper>
+                        {item.status === "active" ? (
+                          <ActiveSvg />
+                        ) : (
+                          <InActiveSvg />
+                        )}
+                        <span>{item.status}</span>
+                      </CardListItemsWrapper>
+                    )}
+                  </CardListItems>
+                </>
+              );
+            })}
+          </CardList>
+          {recordsPerPage === searchvalue.length ? (
+            <Button onClick={() => setRecordPerPage(recordsPerPage + 5)}>
+              view more
+            </Button>
+          ) : (
+            ""
+          )}
+        </CardViewContainer>
+      )}
       <PaginationWrapper>
         <PaginationOuterDiv>
           <Pagination
@@ -295,52 +419,3 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
   );
 };
 export default DataTable;
-// import * as React from "react";
-// import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
-
-// const columns: GridColDef[] = [
-//   { field: "id", headerName: "ID", width: 70 },
-//   { field: "firstName", headerName: "First name", width: 130 },
-//   { field: "lastName", headerName: "Last name", width: 130 },
-//   {
-//     field: "age",
-//     headerName: "Age",
-//     type: "number",
-//     width: 90,
-//   },
-//   {
-//     field: "fullName",
-//     headerName: "Full name",
-//     description: "This column has a value getter and is not sortable.",
-//     sortable: false,
-//     width: 160,
-//     valueGetter: (params: GridValueGetterParams) =>
-//       `${params.row.firstName || ""} ${params.row.lastName || ""}`,
-//   },
-// ];
-
-// const rows = [
-//   { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
-//   { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
-//   { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
-//   { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
-//   { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-//   { id: 6, lastName: "Melisandre", firstName: null, age: 150 },
-//   { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-//   { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
-//   { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
-// ];
-
-// export default function DataTable() {
-//   return (
-//     <div style={{ height: 400, width: "100%" }}>
-//       <DataGrid
-//         rows={rows}
-//         columns={columns}
-//         pageSize={5}
-//         rowsPerPageOptions={[5]}
-//         checkboxSelection
-//       />
-//     </div>
-//   );
-// }

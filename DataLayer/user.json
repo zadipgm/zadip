@@ -22,7 +22,7 @@
       "name_en": "rameez",
       "phone": "966531955852",
       "email": "haider@example.com",
-      "status": "active",
+      "status": "In-active",
       "last_login_date": "2023-01-27 15:17:05",
       "procedures": [
         {
@@ -52,7 +52,7 @@
       "name_en": "usman",
       "phone": "966531955852",
       "email": "haider@example.com",
-      "status": "active",
+      "status": "In-active",
       "last_login_date": "2023-01-27 15:17:05",
       "procedures": [
         {
@@ -97,7 +97,7 @@
       "name_en": "khan",
       "phone": "966531955852",
       "email": "haider@example.com",
-      "status": "active",
+      "status": "In-active",
       "last_login_date": "2023-01-27 15:17:05",
       "procedures": [
         {
@@ -157,7 +157,7 @@
       "name_en": "fasil",
       "phone": "966531955852",
       "email": "saud@example.com",
-      "status": "active",
+      "status": "In-active",
       "last_login_date": "2019-01-28 15:11:05",
       "procedures": [
         {
