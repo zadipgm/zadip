@@ -78,47 +78,6 @@ export const IconWrapper = styled.div`
 
 
 
-export const List = styled.ul`
-    padding: 0;
-    list-style-type: none;
-    transition:.5s ;margin:0;
-    &.menu-list{
-        margin-bottom: 100px;
-    }
-    >a{
-        padding:8px ;
-    display:flex ;
-    transition:.5s ;
-    justify-content:flex-start ;
-    align-items:center ;
-    width:100% ;
-    color:${({ theme }) => theme.colors.gray2};
-    text-decoration:none ;
-    &.active{
-    transition:.5s ;
-    display: block;
-    text-align: center;
-    }
-    border-bottom:1px solid ${({ theme }) => theme.colors.gray3}; 
-    :hover{
-        background-color: ${({ theme }) => theme.colors.black1};
-    }
-   }
-
-`
-
-export const ListItems = styled.li`
- 
-   display:flex ;
-   justify-content:flex-start;
-   align-items: center;
-   gap:6px;
-   font-size: 18px;
-   cursor: pointer;
-   
-
-`
-
 export const AccordionContainer = styled.div`
 margin-bottom:100px;
    & .MuiPaper-root{
@@ -126,7 +85,7 @@ margin-bottom:100px;
     box-shadow: none;
     margin:0 ;
     & .MuiButtonBase-root {
-        border-bottom:1px solid ${({ theme }) => theme.colors.gray3}; 
+        /* border-bottom:1px solid ${({ theme }) => theme.colors.gray3};  */
         :hover{
             background-color: ${({ theme }) => theme.colors.black1}; 
         }
@@ -143,13 +102,16 @@ export const PageWrapper = styled.div`
       justify-content:flex-start ;
       align-items:center ;
       gap:6px;
+      border-radius: 6px;
       width:100% ;
       a{
         text-decoration: none;
-        color: ${({ theme }) => theme.colors.black1}; 
+        color: ${({ theme }) => theme.colors.white}; 
       }
+      background-color: #00000052;
+      color: ${({ theme }) => theme.colors.white};
       :hover{
-          background-color: #00000052;
+          /* background-color: #00000052; */
         a{
             color: ${({ theme }) => theme.colors.white};
         }

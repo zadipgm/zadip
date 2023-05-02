@@ -1,4 +1,3 @@
-
 import { DefaultTheme } from "styled-components";
 
 declare module "styled-components" {
@@ -13,30 +12,29 @@ declare module "styled-components" {
     locale: "ar" | "en-US" | "en";
     colors: {
       themeColor: string;
-      lightThemeColor: string
+      lightThemeColor: string;
       darkBlue: string;
       red: string;
       lightBlue: string;
-      headerLightColor: string
-      white: string
-      black: string
-      black1: string
-      gray1: string
-      gray2: string
-      gray3: string
+      headerLightColor: string;
+      white: string;
+      black: string;
+      black1: string;
+      gray1: string;
+      gray2: string;
+      gray3: string;
     };
   }
 }
 
 const defaultTheme: DefaultTheme = {
-
   locale: "en",
   direction: "rtl",
   device: "mobile",
   isLTR: false,
   isRTL: true,
   colors: {
-    themeColor: "linear-gradient(-49deg,#09589d 22%, #56ceff);",
+    themeColor: "linear-gradient(-49deg,#022646cc 22%,#12baff);",
     lightThemeColor: "linear-gradient(-49deg,#09589d29 22%,#56ceff33);",
     headerLightColor: "linear-gradient(-49deg,#09589d29 22%,#56ceff33);",
     darkBlue: "#044783",
@@ -48,7 +46,7 @@ const defaultTheme: DefaultTheme = {
     gray1: "#5a5c69",
     gray2: "#cfcfcf",
     gray3: "#cfcfcf45",
-  }
+  },
 };
 
 export default defaultTheme;

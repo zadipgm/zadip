@@ -37,14 +37,14 @@ const SideNavBar = () => {
     },
     {
       module_name: "Users List",
-      icon: "usersSvg",
+      icon: "userListSvg",
       page_name: "All Users",
       page_link: "/dashboard/all_users",
       panel: "panel3",
     },
     {
       module_name: "Trainers",
-      icon: "usersSvg",
+      icon: "trainerSvg",
       page_name: "Trainers",
       page_link: "/dashboard/trainers",
       panel: "panel4",
