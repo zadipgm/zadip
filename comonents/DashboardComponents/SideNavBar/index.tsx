@@ -63,6 +63,20 @@ const SideNavBar = () => {
       page_link: "/dashboard/ratings",
       panel: "panel6",
     },
+    {
+      module_name: "Calendar",
+      icon: "calendarSvg",
+      page_name: "Calendar",
+      page_link: "/dashboard/calendar",
+      panel: "panel7",
+    },
+    {
+      module_name: "Certificate",
+      icon: "certificateSvg",
+      page_name: "Certificate",
+      page_link: "/dashboard/certificate",
+      panel: "panel8",
+    },
   ];
   return (
     <Container className={width ? "In-active" : "active"}>
