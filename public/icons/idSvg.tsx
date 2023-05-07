@@ -24,7 +24,7 @@ const IDsvg = ({
       <path
         d="M6 16.5049H8"
         stroke={fill}
-        stroke-width="1.5"
+        strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -32,7 +32,7 @@ const IDsvg = ({
       <path
         d="M10.5 16.5049H14.5"
         stroke={fill}
-        stroke-width="1.5"
+        strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
