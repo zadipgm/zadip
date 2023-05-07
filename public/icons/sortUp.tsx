@@ -22,17 +22,17 @@ const SortUp = ({
               id="Right-2"
               points="7 7.5 12 2.5 17 7.5"
               stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
             />
 
             <line
               fill="none"
               stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               x1="12"
               x2="12"
               y1="21.3"

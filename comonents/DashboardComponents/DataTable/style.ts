@@ -291,6 +291,9 @@ export const CardListItems = styled.li`
   width: 30%;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    &.in-active{
+      background-color: #ff00008f;
+    }
 `;
 export const CardListItemsWrapper = styled.div`
   display: flex;

@@ -334,7 +334,9 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
               );
               return (
                 <>
-                  <CardListItems>
+                  <CardListItems
+                    className={item.status === "In-active" ? "in-active" : ""}
+                  >
                     <CardListItemsWrapper className="card-name">
                       <div>
                         {" "}

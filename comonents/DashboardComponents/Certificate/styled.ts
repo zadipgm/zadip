@@ -1,117 +1,135 @@
-import styled from "styled-components";
-
+import styled, { css } from "styled-components";
 export const Container = styled.div`
-  width: 100%;
+  text-align: center;
+`;
+export const ImageWrapper = styled.div`
+  text-align: center;
   position: relative;
-  background-color: #fff;
-  border: 1px solid ${({ theme }) => theme.colors.gray2};
-  > svg {
-    position: absolute;
-    top: 0;
+`;
+export const InputWrapper = styled.div`
+  position: absolute;
+  &.ID-number {
+    top: 29%;
+    left: 38%;
+  }
+  &.Certificate-number {
+    top: 34%;
+    left: 38%;
+  }
+  &.Expire-Date {
+    top: 39%;
+    left: 38%;
+  }
+  &.name {
+    top: 51%;
+    left: 38%;
+  }
+  &.ID-number-arabic {
+    top: 29%;
+    right: 38%;
+  }
+  &.Certificate-number-arabic {
+    top: 34%;
+    right: 38%;
+  }
+  &.Expire-Date-arabic {
+    top: 39%;
+    right: 38%;
+  }
+  &.name-arabic {
+    top: 51%;
+    right: 38%;
+  }
+
+  > input {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 12px;
+    outline: none;
+    padding: 5px;
+    :focus {
+      border: 1px solid ${({ theme }) => theme.colors?.lightBlue};
+      outline: none;
+      border-radius: 4px;
+    }
   }
 `;
 
-export const Heading = styled.h1`
-  text-align: center;
-  color: ${({ theme }) => theme.colors.gray1};
-  > span {
-    color: ${({ theme }) => theme.colors.darkBlue};
+export const CertificateNumber = styled.div`
+  position: absolute;
+  top: 34%;
+  left: 24%;
+  > input {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 12px;
+    outline: none;
+    padding: 5px;
+    :focus {
+      border: 1px solid ${({ theme }) => theme.colors?.lightBlue};
+      outline: none;
+      border-radius: 4px;
+    }
   }
 `;
-export const Content = styled.div`
+export const ExpireDate = styled.div`
   position: absolute;
-  top: 12rem;
-  right: 2.5rem;
-  width: 65%;
-  * {
-    margin-bottom: 1rem;
-  }
-  > h1 {
-    font-family: "Poppins", sans-serif;
-    color: var(--white);
-    font-size: 3rem !important;
-    line-height: 1;
-    margin-bottom: 2rem;
-  }
-  > h2 {
-    font-size: 2rem !important;
-    font-weight: 500;
-    line-height: 1;
+  top: 37%;
+  left: 24%;
+  > input {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 12px;
+    outline: none;
+    padding: 5px;
+    :focus {
+      border: 1px solid ${({ theme }) => theme.colors?.lightBlue};
+      outline: none;
+      border-radius: 4px;
+    }
   }
 `;
-export const Date = styled.div`
+export const Name = styled.div`
   position: absolute;
-  bottom: 5%;
-  font-size: 0.75rem;
+  top: 40%;
+  left: 24%;
+  > input {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 12px;
+    outline: none;
+    padding: 5px;
+    :focus {
+      border: 1px solid ${({ theme }) => theme.colors?.lightBlue};
+      outline: none;
+      border-radius: 4px;
+    }
+  }
 `;
 export const QRcode = styled.div`
   position: absolute;
-  top: 3%;
-  right: 0;
-  left: 89%;
+
+  left: 31%;
+  bottom: 5%;
+  right: 31%;
 `;
-export const Text = styled.p`
-  position: absolute;
-  right: 16%;
-`;
-export const Wrapper = styled.div`
+export const PreviewCertificate = styled.button`
+  text-decoration: none;
+  background: ${({ theme }) => theme.colors?.darkBlue};
+  color: ${({ theme }) => theme.colors?.white};
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
-`;
-export const English = styled.div`
-  width: 50%;
-  color: ${({ theme }) => theme.colors.darkBlue};
-  padding: 30px;
-  text-align: justify;
-  > p {
-    &.name {
-      color: ${({ theme }) => theme.colors.lightBlue};
-      font-weight: 600;
-    }
-    &.pass {
-      font-size: 20px;
-    }
-    &.pass {
-      font-size: 20px;
-    }
-    &.center {
-      text-align: center;
-    }
-  }
-`;
-export const Arabic = styled.div`
-  width: 50%;
-  padding: 30px;
-  color: ${({ theme }) => theme.colors.darkBlue};
-  text-align: justify;
-  direction: rtl;
-  > p {
-    &.name {
-      font-weight: 600;
-      color: ${({ theme }) => theme.colors.lightBlue};
-    }
-    &.pass {
-      font-size: 20px;
-    }
-    &.center {
-      text-align: center;
-    }
-  }
-`;
-export const HR = styled.hr`
-  background-color: none;
-  border-left: 1px solid ${({ theme }) => theme.colors.darkBlue};
-  height: 500px;
-`;
-export const InfoWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 12px;
-  > p {
-    &.heading {
-      font-weight: 700;
-    }
+  width: 200px;
+  margin: 0 auto;
+  transition: 0.5s;
+  cursor: pointer;
+  :hover {
+    transition: 0.5s;
+    background: ${({ theme }) => theme.colors?.lightBlue};
   }
 `;
