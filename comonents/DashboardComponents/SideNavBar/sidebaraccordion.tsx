@@ -4,15 +4,23 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { AccordionContainer, PageWrapper } from "./styled.components";
+import {
+  AccordionContainer,
+  PageLinkWrapper,
+  PageWrapper,
+} from "./styled.components";
 import Link from "next/link";
 import IconComponent from "comonents/ReuseAbleComponents/IconComponent";
 
+interface IPage {
+  page_name: string;
+  page_link: string;
+  icon?: string;
+}
 interface IAccordion {
   module_name: string;
   icon: string;
-  page_name: string;
-  page_link: string;
+  page?: IPage[];
   panel: string;
 }
 interface IProps {
@@ -60,7 +68,19 @@ const SideBarAccordions = ({ sideBarMenuData }: IProps) => {
             <AccordionDetails>
               <Typography>
                 <PageWrapper>
-                  <Link href={item.page_link}>{item.page_name}</Link>
+                  {item.page.map((p) => {
+                    return (
+                      <PageLinkWrapper>
+                        <IconComponent
+                          icon={p.icon}
+                          width="25px"
+                          height="25px"
+                          fill="#fff"
+                        />
+                        <Link href={p.page_link}>{p.page_name}</Link>
+                      </PageLinkWrapper>
+                    );
+                  })}
                 </PageWrapper>
               </Typography>
             </AccordionDetails>

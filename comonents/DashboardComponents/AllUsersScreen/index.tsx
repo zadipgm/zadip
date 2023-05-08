@@ -4,7 +4,14 @@ import users from "DataLayer/user.json";
 const AllUsersScreen = () => {
   return (
     <>
-      <DataTable data={users.user} title={"user"} showFilter={false} />
+      <DataTable
+        data={users.user}
+        title={"user"}
+        showFilter={false}
+        nestedTable={true}
+        isEditable={true}
+        view={true}
+      />
     </>
   );
 };

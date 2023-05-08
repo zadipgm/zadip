@@ -1,7 +1,7 @@
 export const HandleDescending = (key, setSearchvalue, data) => {
     if (key === "id") {
         const numDescending = [...data].sort((a, b) => b.id - a.id);
-        console.log(numDescending);
+
         setSearchvalue(numDescending);
     } else {
         const strDescending = [...data].sort((a, b) => (a[key] > b[key] ? -1 : 1));

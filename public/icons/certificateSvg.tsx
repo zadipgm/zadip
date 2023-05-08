@@ -31,7 +31,7 @@ const CertificateSvg = ({
       </g>
       <defs>
         <clipPath id="clip0_429_11195">
-          <rect width="24" height="24" fill="white" />
+          <rect width="24" height="24" fill={fill} />
         </clipPath>
       </defs>
     </svg>

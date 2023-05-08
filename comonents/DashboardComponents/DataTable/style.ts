@@ -164,10 +164,12 @@ export const ActionList = styled.ul`
   padding: 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 6px;
-  width: 100%;
+  width: max-content;
+  padding:10px;
   position: absolute;
   top: 35px;
   background: white;
+  right: 0;
   z-index: 999;
   &.show {
     border: none;
@@ -193,9 +195,12 @@ export const ActionListItems = styled.li`
   align-items: center;
   padding: 6px;
   width: 100%;
+  transition: all.5s;
   gap: 8px;
+  border-radius: 6px;
   cursor: pointer;
   :hover {
+    transition: all.5s;
     background-color: ${({ theme }) => theme.colors.darkBlue};
     color: ${({ theme }) => theme.colors.white};
     div {

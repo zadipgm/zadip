@@ -11,14 +11,10 @@ import {
   Font,
 } from "@react-pdf/renderer";
 import { useRouter } from "next/router";
-Font.register({
-  family: "Roboto",
-  src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-light-webfont.ttf",
-});
+
 const styles = StyleSheet.create({
   page: {
     // backgroundColor: "#d11fb6",
-    fontFamily: "Roboto",
   },
   image: {
     width: "auto",
@@ -67,7 +63,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: "20%",
     top: "55%",
-    fontFamily: "Roboto",
   },
   IDArabic: {
     fontSize: 10,
@@ -96,15 +91,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: "20%",
     top: "55%",
-    fontFamily: "Roboto",
   },
 });
 const PreViewCertificate = () => {
   const router = useRouter();
   return (
     <PDFViewer style={styles.viewer}>
-      <Document language="arabic">
-        <Page size="A4" style={styles.page}>
+      <Document language="ar">
+        <Page size="A4" style={styles.page} orientation="landscape">
           <View style={styles.section}>
             <Image style={styles.image} src="/images/certificate.jpeg" />
             <Text style={styles.ID}>{router.query.idnumber}</Text>
@@ -120,10 +114,10 @@ const PreViewCertificate = () => {
             <Text style={styles.dateArabic}>
               {router.query.expire_dateArabic}
             </Text>
-            <Text style={styles.nameArabic}>{router.query.nameArabic}</Text>
-            <QRcode>
+            <Text style={styles.nameArabic}>{router.query.name}</Text>
+            {/* <QRcode>
               <Image src="/images/qrcode.png" style={styles.image2} />
-            </QRcode>
+            </QRcode> */}
             <PreviewCertificate>Preview Certificate</PreviewCertificate>
           </View>
         </Page>

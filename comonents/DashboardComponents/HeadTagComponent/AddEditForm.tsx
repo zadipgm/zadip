@@ -30,7 +30,6 @@ interface IProps {
   loading: boolean;
 }
 const AddEditForm = ({ pageNameHandler, data, pageName, loading }: IProps) => {
-  console.log("AddEditForm", data);
   const [pageTitle, setPageTitle] = React.useState(
     data[0]?.Page_Title as string
   );
