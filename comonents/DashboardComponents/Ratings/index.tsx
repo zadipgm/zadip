@@ -3,7 +3,14 @@ import DataTable from "../DataTable";
 import ratingData from "DataLayer/ratings.json";
 const Ratings = () => {
   return (
-    <DataTable data={ratingData.rating} title="rating" showFilter={false} />
+    <DataTable
+      data={ratingData.rating}
+      title="rating"
+      showFilter={false}
+      nestedTable={true}
+      isEditable={true}
+      view={true}
+    />
   );
 };
 export default Ratings;

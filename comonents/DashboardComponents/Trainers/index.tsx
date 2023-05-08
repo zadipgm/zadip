@@ -4,7 +4,14 @@ import userInfo from "DataLayer/dataTable.json";
 const Trainer = () => {
   return (
     <div>
-      <DataTable data={userInfo.data} title={"trainer"} showFilter={true} />
+      <DataTable
+        data={userInfo.data}
+        title={"trainer"}
+        showFilter={true}
+        nestedTable={true}
+        isEditable={true}
+        view={true}
+      />
     </div>
   );
 };

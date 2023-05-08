@@ -121,7 +121,6 @@ const CreateAccountScreen = () => {
       }
     }
   };
-  console.log("here is role", role);
   return (
     <>
       <SimpleSnackbar

@@ -4,7 +4,14 @@ import Booking from "DataLayer/booking.json";
 const Bookings = () => {
   return (
     <div>
-      <DataTable data={Booking.booking} title="Booking" showFilter={false} />
+      <DataTable
+        data={Booking.booking}
+        title="Booking"
+        showFilter={false}
+        nestedTable={true}
+        isEditable={true}
+        view={true}
+      />
     </div>
   );
 };

@@ -22,60 +22,62 @@ const SideNavBar = () => {
   };
   const sideBarMenuData = [
     {
-      module_name: "Page Head",
-      icon: "formsSvg",
-      page_name: "Head Tag",
-      page_link: "/dashboard/head_tag",
-      panel: "panel1",
-    },
-    {
-      module_name: "Create User",
+      module_name: "User",
       icon: "usersSvg",
-      page_name: "Create new user",
-      page_link: "/dashboard/users",
-      panel: "panel2",
-    },
-    {
-      module_name: "Users List",
-      icon: "userListSvg",
-      page_name: "All Users",
-      page_link: "/dashboard/all_users",
-      panel: "panel3",
+      page: [
+        {
+          page_name: "Create new user",
+          page_link: "/dashboard/users",
+          icon: "usersSvg",
+        },
+        {
+          page_name: "All Users",
+          page_link: "/dashboard/all_users",
+          icon: "alluserSvg",
+        },
+      ],
+      panel: "panel1",
     },
     {
       module_name: "Trainers",
       icon: "trainerSvg",
       page_name: "Trainers",
       page_link: "/dashboard/trainers",
-      panel: "panel4",
-    },
-    {
-      module_name: "Bookings",
-      icon: "bookingSvg",
-      page_name: "Bookings",
-      page_link: "/dashboard/bookings",
-      panel: "panel5",
-    },
-    {
-      module_name: "Ratings",
-      icon: "starsSvg",
-      page_name: "Ratings",
-      page_link: "/dashboard/ratings",
-      panel: "panel6",
-    },
-    {
-      module_name: "Calendar",
-      icon: "calendarSvg",
-      page_name: "Calendar",
-      page_link: "/dashboard/calendar",
-      panel: "panel7",
+      page: [
+        {
+          page_name: "Trainers List",
+          page_link: "/dashboard/trainers",
+          icon: "trainerSvg",
+        },
+        {
+          page_name: "Bookings",
+          page_link: "/dashboard/bookings",
+          icon: "bookingSvg",
+        },
+        {
+          page_name: "Ratings",
+          page_link: "/dashboard/ratings",
+          icon: "starsSvg",
+        },
+        {
+          page_name: "Calendar",
+          page_link: "/dashboard/calendar",
+          icon: "calendarSvg",
+        },
+      ],
+      panel: "panel2",
     },
     {
       module_name: "Certificate",
       icon: "certificateSvg",
-      page_name: "Certificate",
-      page_link: "/dashboard/certificate",
-      panel: "panel8",
+      page: [
+        {
+          page_name: "Certificate List",
+          page_link: "/dashboard/certificate",
+          icon: "certificateSvg",
+        },
+      ],
+      panel: "panel3",
     },
   ];
   return (

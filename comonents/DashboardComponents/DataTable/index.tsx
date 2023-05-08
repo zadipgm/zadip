@@ -51,6 +51,9 @@ import AccurateSvg from "public/icons/acurateSvg";
 import { filterByLocale } from "../hooks/filterByLocale";
 import SortUp from "public/icons/sortUp";
 import SortDown from "public/icons/sortDown";
+import { Router, useRouter } from "next/router";
+import CertificateSvg from "public/icons/certificateSvg";
+import CalendarSvg from "public/icons/calendarSvg";
 
 interface Iprocedure {
   DOB?: string;
@@ -82,19 +85,39 @@ interface TableData {
   last_login_date?: string;
   city_ar?: string;
   city_en?: string;
+  certificate_number?: string;
   product_en?: string;
   product_ar?: string;
   training_date?: string;
   slot?: string;
+  expire_date?: string;
+  isEligibility?: boolean;
   procedures?: Iprocedure[];
 }
 interface IProps {
   data: TableData[];
   title: string;
   showFilter: boolean;
+  setCertificate?: (param) => void;
+  isEditable?: boolean;
+  generateCertificate?: boolean;
+  nestedTable?: boolean;
+  renewCertificate?: boolean;
+  view?: boolean;
 }
-const DataTable = ({ data, title, showFilter }: IProps) => {
+const DataTable = ({
+  data,
+  title,
+  showFilter,
+  setCertificate,
+  isEditable,
+  generateCertificate,
+  nestedTable,
+  renewCertificate,
+  view,
+}: IProps) => {
   const { colors, locale } = useTheme();
+  const router = useRouter();
   const [searchvalue, setSearchvalue] = React.useState(data);
   const [filterKey, setFilterKey] = React.useState("id");
   const [expanded, setExpanded] = React.useState(false);
@@ -121,7 +144,6 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
   };
   const handlerChangeRows = (e) => {
     let value = e.target.value;
-    console.log(typeof value);
     setRecordPerPage(value);
   };
 
@@ -171,12 +193,15 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
     setShowActions(id);
   };
   const renderTableNestedHeader = () => {
-    let header = Object.keys(data[0].procedures[0]);
-    return header.map((key, index) => {
-      return (
-        <TableData className="table-header">{key.toUpperCase()}</TableData>
-      );
-    });
+    let header = Object.keys(data[0]?.procedures[0]);
+    return (
+      header &&
+      header.map((key, index) => {
+        return (
+          <TableData className="table-header">{key.toUpperCase()}</TableData>
+        );
+      })
+    );
   };
   // Column keys
   const renderColumnKeys = () => {
@@ -192,6 +217,43 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
 
   const handleDataView = (view) => {
     setDataView(view);
+  };
+  const renewCertificateHandler = (item) => {
+    // setCertificate(item);
+    // router.push("/dashboard/certificate/generate");
+  };
+  const addOneYear = (date) => {
+    date.setFullYear(date.getFullYear() + 1);
+    return date;
+  };
+
+  // April 20, 2022
+  const date = new Date();
+
+  const newDate = addOneYear(date);
+
+  // April 20, 2023
+  let arFormat = "en-u-ca-islamic-umalqura-nu-latn"; // use islamic-umalqura calendar (most modern)
+  let enFormat = "en-US";
+  let myDate = new Date(newDate); // today's date
+
+  let english = new Intl.DateTimeFormat(enFormat).format(myDate);
+  let arabic = new Intl.DateTimeFormat(arFormat).format(myDate);
+  const generateCertificateHandler = (item) => {
+    setCertificate(item);
+    router.push({
+      pathname: `/${locale}/dashboard/certificate/generate`,
+      query: {
+        idnumber: item.ID_number,
+        certificate_number: "004",
+        expire_date: english,
+        name: item.name_en,
+        idnumberArabic: item.ID_number,
+        certificate_numberArabic: "004",
+        expire_dateArabic: arabic,
+        nameArabic: item.name_ar,
+      },
+    });
   };
   return (
     <Container>
@@ -268,16 +330,18 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
                         <ActionList
                           className={showActions === item.id ? "show" : "hide"}
                         >
-                          <ActionListItems>
-                            <InnerWrapper>
-                              <EditSvg
-                                fill={colors.darkBlue}
-                                width="15px"
-                                height="15px"
-                              />
-                            </InnerWrapper>
-                            <span>Edit</span>
-                          </ActionListItems>
+                          {isEditable && (
+                            <ActionListItems>
+                              <InnerWrapper>
+                                <EditSvg
+                                  fill={colors.darkBlue}
+                                  width="15px"
+                                  height="15px"
+                                />
+                              </InnerWrapper>
+                              <span>Edit</span>
+                            </ActionListItems>
+                          )}
                           <ActionListItems>
                             <InnerWrapper className="delete">
                               <DeleteSvg
@@ -288,18 +352,48 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
                             </InnerWrapper>
                             <span>Delete</span>
                           </ActionListItems>
-                          <ActionListItems
-                            onClick={() => HandleViewDetails(item.id)}
-                          >
-                            <InnerWrapper>
-                              <ViewMoreSvg
-                                fill={colors.lightBlue}
-                                width="15px"
-                                height="15px"
-                              />
-                            </InnerWrapper>
-                            <span>View</span>
-                          </ActionListItems>
+                          {renewCertificate && (
+                            <ActionListItems
+                              onClick={() => renewCertificateHandler(item)}
+                            >
+                              <InnerWrapper>
+                                <ViewMoreSvg
+                                  fill={colors.lightBlue}
+                                  width="15px"
+                                  height="15px"
+                                />
+                              </InnerWrapper>
+                              <span>Renew Certificate</span>
+                            </ActionListItems>
+                          )}
+                          {generateCertificate && (
+                            <ActionListItems
+                              onClick={() => generateCertificateHandler(item)}
+                            >
+                              <InnerWrapper>
+                                <ViewMoreSvg
+                                  fill={colors.lightBlue}
+                                  width="15px"
+                                  height="15px"
+                                />
+                              </InnerWrapper>
+                              <span>Generate Certificate</span>
+                            </ActionListItems>
+                          )}
+                          {view && (
+                            <ActionListItems
+                              onClick={() => HandleViewDetails(item.id)}
+                            >
+                              <InnerWrapper>
+                                <ViewMoreSvg
+                                  fill={colors.lightBlue}
+                                  width="15px"
+                                  height="15px"
+                                />
+                              </InnerWrapper>
+                              <span>View</span>
+                            </ActionListItems>
+                          )}
                         </ActionList>
                       )}
                     </ActionWrapper>
@@ -307,16 +401,17 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
                 </Row>
                 <Row className={active === item.id ? "show" : "hide"}>
                   <br></br>
-                  <Row> {renderTableNestedHeader()}</Row>
-                  {item.procedures.map((detail) => {
-                    return (
-                      <Row key={item.id} className="details-row">
-                        {Object.keys(detail).map((detail_key) => {
-                          return <TableData>{detail[detail_key]}</TableData>;
-                        })}
-                      </Row>
-                    );
-                  })}
+                  {nestedTable && <Row> {renderTableNestedHeader()}</Row>}
+                  {item.procedures &&
+                    item.procedures.map((detail) => {
+                      return (
+                        <Row key={item.id} className="details-row">
+                          {Object.keys(detail).map((detail_key) => {
+                            return <TableData>{detail[detail_key]}</TableData>;
+                          })}
+                        </Row>
+                      );
+                    })}
                   <br></br>
                 </Row>
               </>
@@ -349,6 +444,18 @@ const DataTable = ({ data, title, showFilter }: IProps) => {
                       <IDsvg />
                       <span>{item.id}</span>
                     </CardListItemsWrapper>
+                    {item?.certificate_number && (
+                      <CardListItemsWrapper>
+                        <CertificateSvg fill={colors.darkBlue} />
+                        <span>{item?.certificate_number}</span>
+                      </CardListItemsWrapper>
+                    )}
+                    {item?.expire_date && (
+                      <CardListItemsWrapper>
+                        <CalendarSvg fill={colors.darkBlue} />
+                        <span>{item?.expire_date}</span>
+                      </CardListItemsWrapper>
+                    )}
                     {item?.trainer && (
                       <CardListItemsWrapper>
                         <CardUserSvg />

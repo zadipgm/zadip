@@ -22,7 +22,7 @@ export const InputWrapper = styled.div`
   }
   &.name {
     top: 51%;
-    left: 38%;
+    left: 29%;
   }
   &.ID-number-arabic {
     top: 29%;
@@ -38,7 +38,7 @@ export const InputWrapper = styled.div`
   }
   &.name-arabic {
     top: 51%;
-    right: 38%;
+    right: 29%;
   }
 
   > input {
@@ -131,5 +131,8 @@ export const PreviewCertificate = styled.button`
   :hover {
     transition: 0.5s;
     background: ${({ theme }) => theme.colors?.lightBlue};
+  }
+  &.generate{
+    margin: 15px
   }
 `;
