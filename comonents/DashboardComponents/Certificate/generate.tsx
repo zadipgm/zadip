@@ -5,6 +5,7 @@ import { ImageWrapper, InputWrapper, PreviewCertificate } from "./styled";
 const GenerateCertificate = () => {
   const router = useRouter();
   const { locale } = useTheme();
+  const toFa = (n) => n.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
   const sendStateToPreview = (e) => {
     router.push({
       pathname: `/${locale}/dashboard/certificate/preview`,
@@ -13,14 +14,13 @@ const GenerateCertificate = () => {
         certificate_number: router.query.certificate_number,
         expire_date: router.query.expire_date,
         name: router.query.name,
-        idnumberArabic: router.query.idnumber,
-        certificate_numberArabic: router.query.certificate_number,
-        expire_dateArabic: router.query.expire_dateArabic,
-        nameArabic: router.query.name,
+        idnumberArabic: toFa(router.query.idnumber),
+        certificate_numberArabic: toFa(router.query.certificate_number),
+        expire_dateArabic: toFa(router.query.expire_dateArabic),
+        nameArabic: router.query.nameArabic,
       },
     });
   };
-
   return (
     <div>
       <ImageWrapper>
@@ -36,24 +36,17 @@ const GenerateCertificate = () => {
         </InputWrapper>
         <InputWrapper className="name">{router.query.name}</InputWrapper>
         <InputWrapper className="ID-number-arabic">
-          {router.query.idnumber}
+          {toFa(router.query.idnumber)}
         </InputWrapper>
         <InputWrapper className="Certificate-number-arabic">
-          {router.query.certificate_numberArabic}
+          {toFa(router.query.certificate_numberArabic)}
         </InputWrapper>
         <InputWrapper className="Expire-Date-arabic">
-          {router.query.expire_dateArabic}
+          {toFa(router.query.expire_dateArabic)}
         </InputWrapper>
-        <InputWrapper className="name-arabic">{router.query.name}</InputWrapper>
-        {/* <QRcodeComponent /> */}
-        {/* <QRcode>
-              <img
-                src="/images/qrcode.png"
-                alt="qrcode"
-                width={150}
-                height={150}
-              />
-            </QRcode> */}
+        <InputWrapper className="name-arabic">
+          {router.query.nameArabic}
+        </InputWrapper>
       </ImageWrapper>
       <PreviewCertificate onClick={sendStateToPreview}>
         Download Certificate
