@@ -114,7 +114,7 @@ const PreViewCertificate = () => {
   const router = useRouter();
   const pdfTemplate = () => {
     return (
-      <PDFViewer style={styles.viewer} fileName={"certificate"}>
+      <PDFViewer style={styles.viewer}>
         <Document language="ar">
           <Page size="A4" style={styles.page} orientation="landscape">
             <View style={styles.section}>
