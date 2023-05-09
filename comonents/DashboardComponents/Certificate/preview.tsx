@@ -13,7 +13,6 @@ import {
 import { useRouter } from "next/router";
 
 // AIzaSyCoEVYGBZPtlTkNl7w11B6oz0G14R83FOg
-// AIzaSyCoEVYGBZPtlTkNl7w11B6oz0G14R83FOg
 const PreViewCertificate = () => {
   Font.register({
     family: "Cairo",
