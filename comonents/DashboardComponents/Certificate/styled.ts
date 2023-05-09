@@ -8,17 +8,20 @@ export const ImageWrapper = styled.div`
 `;
 export const InputWrapper = styled.div`
   position: absolute;
+  font-size: 18px;
+  font-family: "Cairo", sans-serif !important;
+
   &.ID-number {
     top: 29%;
-    left: 38%;
+    left: 36%;
   }
   &.Certificate-number {
     top: 34%;
-    left: 38%;
+    left: 36%;
   }
   &.Expire-Date {
     top: 39%;
-    left: 38%;
+    left: 36%;
   }
   &.name {
     top: 51%;
@@ -26,21 +29,20 @@ export const InputWrapper = styled.div`
   }
   &.ID-number-arabic {
     top: 29%;
-    right: 38%;
+    right: 34%;
   }
   &.Certificate-number-arabic {
     top: 34%;
-    right: 38%;
+    right: 34%;
   }
   &.Expire-Date-arabic {
     top: 39%;
-    right: 38%;
+    right: 34%;
   }
   &.name-arabic {
     top: 51%;
     right: 29%;
   }
-
   > input {
     border: none;
     border-bottom: 1px solid gray;
@@ -89,6 +91,9 @@ export const ExpireDate = styled.div`
     }
   }
 `;
+export const ContainerPdf = styled.div`
+  font-family: "Courier New", Courier, monospace;
+`;
 export const Name = styled.div`
   position: absolute;
   top: 40%;
@@ -113,6 +118,9 @@ export const QRcode = styled.div`
   bottom: 5%;
   right: 31%;
 `;
+export const Inner = styled.div`
+  font-family: "Cario";
+`;
 export const PreviewCertificate = styled.button`
   text-decoration: none;
   background: ${({ theme }) => theme.colors?.darkBlue};
@@ -132,7 +140,7 @@ export const PreviewCertificate = styled.button`
     transition: 0.5s;
     background: ${({ theme }) => theme.colors?.lightBlue};
   }
-  &.generate{
-    margin: 15px
+  &.generate {
+    margin: 15px;
   }
 `;
