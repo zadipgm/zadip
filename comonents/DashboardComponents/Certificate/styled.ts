@@ -2,6 +2,9 @@ import styled, { css } from "styled-components";
 export const Container = styled.div`
   text-align: center;
 `;
+export const Title = styled.h1`
+text-align: center;
+`
 export const ImageWrapper = styled.div`
   text-align: center;
   position: relative;
@@ -121,7 +124,7 @@ export const QRcode = styled.div`
 export const Inner = styled.div`
   font-family: "Cario";
 `;
-export const PreviewCertificate = styled.button`
+export const PreviewCertificate = styled.a`
   text-decoration: none;
   background: ${({ theme }) => theme.colors?.darkBlue};
   color: ${({ theme }) => theme.colors?.white};

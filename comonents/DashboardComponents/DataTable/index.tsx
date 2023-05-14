@@ -104,6 +104,7 @@ interface IProps {
   nestedTable?: boolean;
   renewCertificate?: boolean;
   view?: boolean;
+  isDelete?: boolean;
 }
 const DataTable = ({
   data,
@@ -115,6 +116,7 @@ const DataTable = ({
   nestedTable,
   renewCertificate,
   view,
+  isDelete,
 }: IProps) => {
   const { colors, locale } = useTheme();
   const router = useRouter();
@@ -198,7 +200,9 @@ const DataTable = ({
       header &&
       header.map((key, index) => {
         return (
-          <TableData className="table-header">{key.toUpperCase()}</TableData>
+          <TableData className="table-header" key={index}>
+            {key.toUpperCase()}
+          </TableData>
         );
       })
     );
@@ -317,8 +321,8 @@ const DataTable = ({
             return (
               <>
                 <Row key={item.id}>
-                  {filterByLocale(locale, keys).map((key) => {
-                    return <TableData>{`${item[key]}`}</TableData>;
+                  {filterByLocale(locale, keys).map((key, i) => {
+                    return <TableData key={i}>{`${item[key]}`}</TableData>;
                   })}
                   <TableData>
                     <ActionWrapper onClick={() => actionHandler(item.id)}>
@@ -342,16 +346,18 @@ const DataTable = ({
                               <span>Edit</span>
                             </ActionListItems>
                           )}
-                          <ActionListItems>
-                            <InnerWrapper className="delete">
-                              <DeleteSvg
-                                fill={colors.red}
-                                width="15px"
-                                height="15px"
-                              />
-                            </InnerWrapper>
-                            <span>Delete</span>
-                          </ActionListItems>
+                          {isDelete && (
+                            <ActionListItems>
+                              <InnerWrapper className="delete">
+                                <DeleteSvg
+                                  fill={colors.red}
+                                  width="15px"
+                                  height="15px"
+                                />
+                              </InnerWrapper>
+                              <span>Delete</span>
+                            </ActionListItems>
+                          )}
                           {renewCertificate && (
                             <ActionListItems
                               onClick={() => renewCertificateHandler(item)}
@@ -406,8 +412,12 @@ const DataTable = ({
                     item.procedures.map((detail) => {
                       return (
                         <Row key={item.id} className="details-row">
-                          {Object.keys(detail).map((detail_key) => {
-                            return <TableData>{detail[detail_key]}</TableData>;
+                          {Object.keys(detail).map((detail_key, i) => {
+                            return (
+                              <TableData key={i}>
+                                {detail[detail_key]}
+                              </TableData>
+                            );
                           })}
                         </Row>
                       );
@@ -430,6 +440,7 @@ const DataTable = ({
               return (
                 <>
                   <CardListItems
+                    key={item.id}
                     className={item.status === "In-active" ? "in-active" : ""}
                   >
                     <CardListItemsWrapper className="card-name">

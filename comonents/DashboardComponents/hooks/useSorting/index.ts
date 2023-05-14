@@ -21,8 +21,8 @@ export const HandleAscending = (key, setSearchvalue, data) => {
 
 export const RequestSearch = (
     searchedVal: string,
-    filterKey,
-    currentRecords,
+    filterKey: string,
+    currentRecords: any[],
     setSearchvalue
 ) => {
     const filteredRows = currentRecords.filter((row) =>

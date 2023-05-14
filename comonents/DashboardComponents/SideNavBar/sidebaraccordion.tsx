@@ -68,9 +68,9 @@ const SideBarAccordions = ({ sideBarMenuData }: IProps) => {
             <AccordionDetails>
               <Typography>
                 <PageWrapper>
-                  {item.page.map((p) => {
+                  {item.page.map((p, i) => {
                     return (
-                      <PageLinkWrapper>
+                      <PageLinkWrapper key={i}>
                         <IconComponent
                           icon={p.icon}
                           width="25px"

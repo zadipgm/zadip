@@ -1,28 +1,18 @@
 import { useRouter } from "next/router";
 import * as React from "react";
 import { useTheme } from "styled-components";
-import { ImageWrapper, InputWrapper, PreviewCertificate } from "./styled";
+import {
+  ImageWrapper,
+  InputWrapper,
+  PreviewCertificate,
+  Title,
+} from "./styled";
 const GenerateCertificate = () => {
   const router = useRouter();
-  const { locale } = useTheme();
   const toFa = (n) => n.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
-  const sendStateToPreview = (e) => {
-    router.push({
-      pathname: `/${locale}/dashboard/certificate/preview`,
-      query: {
-        idnumber: router.query.idnumber,
-        certificate_number: router.query.certificate_number,
-        expire_date: router.query.expire_date,
-        name: router.query.name,
-        idnumberArabic: toFa(router.query.idnumber),
-        certificate_numberArabic: toFa(router.query.certificate_number),
-        expire_dateArabic: toFa(router.query.expire_dateArabic),
-        nameArabic: router.query.nameArabic,
-      },
-    });
-  };
   return (
     <div>
+      <Title>Certificate Preview</Title>
       <ImageWrapper>
         <img src="/images/certificate.jpeg" alt="certificate" />
         <InputWrapper className="ID-number">
@@ -48,8 +38,21 @@ const GenerateCertificate = () => {
           {router.query.nameArabic}
         </InputWrapper>
       </ImageWrapper>
-      <PreviewCertificate onClick={sendStateToPreview}>
-        Download Certificate
+      <PreviewCertificate
+        href={`/dashboard/certificate/preview/?idnumber=${
+          router.query.idnumber
+        }&certificate_number=${router.query.certificate_number}&expire_date=${
+          router.query.expire_date
+        }&name=${router.query.name}&idnumberArabic=${toFa(
+          router.query.idnumber
+        )}&certificate_numberArabic=${toFa(
+          router.query.certificate_numberArabic
+        )}&expire_dateArabic=${toFa(
+          router.query.expire_dateArabic
+        )}&nameArabic=${router.query.nameArabic}`}
+        target={"_blank"}
+      >
+        Generate Certificate
       </PreviewCertificate>
     </div>
   );

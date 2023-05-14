@@ -11,6 +11,7 @@ const Bookings = () => {
         nestedTable={true}
         isEditable={true}
         view={true}
+        isDelete={true}
       />
     </div>
   );
