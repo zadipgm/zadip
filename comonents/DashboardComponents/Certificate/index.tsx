@@ -30,6 +30,7 @@ const Certificate = () => {
           nestedTable={false}
           renewCertificate={false}
           view={false}
+          isDelete={false}
         />
       </CertificateModal>
       <DataTable
@@ -42,6 +43,7 @@ const Certificate = () => {
         nestedTable={false}
         renewCertificate={true}
         view={false}
+        isDelete={true}
       />
     </Container>
   );

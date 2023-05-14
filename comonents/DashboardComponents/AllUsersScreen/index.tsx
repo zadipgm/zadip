@@ -11,6 +11,7 @@ const AllUsersScreen = () => {
         nestedTable={true}
         isEditable={true}
         view={true}
+        isDelete={true}
       />
     </>
   );

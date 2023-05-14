@@ -10,6 +10,7 @@ const Ratings = () => {
       nestedTable={true}
       isEditable={true}
       view={true}
+      isDelete={true}
     />
   );
 };

@@ -11,6 +11,7 @@ const Trainer = () => {
         nestedTable={true}
         isEditable={true}
         view={true}
+        isDelete={true}
       />
     </div>
   );
