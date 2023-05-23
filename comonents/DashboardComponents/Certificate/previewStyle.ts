@@ -3,6 +3,13 @@ import {
 } from "@react-pdf/renderer";
 
 export const styles = StyleSheet.create({
+    qr: {
+        width: '50px',
+        height: '50px',
+        position: "absolute",
+        right: "48%",
+        bottom: "14%",
+    },
     page: {},
     image: {
         width: "98.5%",
