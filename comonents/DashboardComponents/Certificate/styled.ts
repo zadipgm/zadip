@@ -3,48 +3,81 @@ export const Container = styled.div`
   text-align: center;
 `;
 export const Title = styled.h1`
-text-align: center;
-`
+  text-align: center;
+`;
 export const ImageWrapper = styled.div`
   text-align: center;
   position: relative;
 `;
 export const InputWrapper = styled.div`
   position: absolute;
+  color: #465364;
+  font-weight: 500;
+  font-family: "Cairo";
   font-size: 18px;
+  &.mobile {
+    font-size: 8px;
+  }
   font-family: "Cairo", sans-serif !important;
 
   &.ID-number {
     top: 29%;
     left: 36%;
+    &.mobile {
+      left: 30%;
+    }
   }
   &.Certificate-number {
     top: 34%;
     left: 36%;
+    &.mobile {
+      left: 30%;
+    }
   }
   &.Expire-Date {
     top: 39%;
     left: 36%;
+    &.mobile {
+      left: 30%;
+    }
   }
   &.name {
     top: 51%;
     left: 29%;
+    &.mobile {
+      top: 50%;
+      left: 18%;
+    }
   }
   &.ID-number-arabic {
     top: 29%;
     right: 34%;
+    font-family: 'Cairo', sans-serif !important;
+    &.mobile {
+      right: 26%;
+    }
   }
   &.Certificate-number-arabic {
     top: 34%;
     right: 34%;
+    &.mobile {
+      right: 26%;
+    }
   }
   &.Expire-Date-arabic {
     top: 39%;
     right: 34%;
+    &.mobile {
+      right: 26%;
+    }
   }
   &.name-arabic {
     top: 51%;
     right: 29%;
+    &.mobile {
+      top: 50%;
+      right: 18%;
+    }
   }
   > input {
     border: none;

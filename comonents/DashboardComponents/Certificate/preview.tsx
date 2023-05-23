@@ -11,15 +11,27 @@ import {
 } from "@react-pdf/renderer";
 import { useRouter } from "next/router";
 import { styles } from "./previewStyle";
-
 const PreViewCertificate = () => {
   const router = useRouter();
   const [isClient, setIsClient] = React.useState(false);
+  const toFa = (n) => n.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
 
   React.useEffect(() => {
     setIsClient(true);
   }, []);
-
+  let url = new URL(
+    `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${
+      router.query.idnumber
+    }&certificate_number=${router.query.certificate_number}&expire_date=${
+      router.query.expire_date
+    }&name=${router.query.name}&idnumberArabic=${toFa(
+      router.query.idnumber
+    )}&certificate_numberArabic=${toFa(
+      router.query.certificate_numberArabic
+    )}&expire_dateArabic=${toFa(router.query.expire_dateArabic)}&nameArabic=${
+      router.query.nameArabic
+    }`
+  );
   // register font family for PDF
   Font.register({
     family: "Cairo",
@@ -31,6 +43,7 @@ const PreViewCertificate = () => {
   });
 
   // PDF Template
+  let img = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${url}`;
 
   const pdfTemplate = () => {
     return (
@@ -38,7 +51,7 @@ const PreViewCertificate = () => {
         <PDFViewer style={styles.viewer}>
           <Document language="ar">
             <Page size="A4" style={styles.page} orientation="landscape">
-              <View style={styles.section}>
+              <View style={styles.section} fixed>
                 <Image style={styles.image} src="/images/certificate.jpeg" />
                 <Text style={styles.ID}>{router.query.idnumber}</Text>
                 <Text style={styles.certificate}>
@@ -56,6 +69,7 @@ const PreViewCertificate = () => {
                   {router.query.expire_dateArabic}
                 </Text>
                 <Text style={styles.nameArabic}>{router.query.nameArabic}</Text>
+                <Image src={img} style={styles.qr} />
               </View>
             </Page>
           </Document>

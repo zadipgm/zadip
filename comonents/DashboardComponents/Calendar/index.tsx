@@ -26,8 +26,8 @@ const Schedular = () => {
           {
             title: "شركة ارض القصيم",
             date: "2023-05-10",
-            start: new Date("2023-05-09T16:00:00"),
-            end: new Date("2023-05-09T16:30:00"),
+            start: new Date().toISOString().replace(/T.*$/, "") + "T16:00:00",
+            end: new Date().toISOString().replace(/T.*$/, "") + "T16:30:00",
           },
           {
             title: "شركة ارض القصيم",

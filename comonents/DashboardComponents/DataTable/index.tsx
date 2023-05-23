@@ -237,12 +237,19 @@ const DataTable = ({
   const newDate = addOneYear(date);
 
   // April 20, 2023
-  let arFormat = "en-u-ca-islamic-umalqura-nu-latn"; // use islamic-umalqura calendar (most modern)
-  let enFormat = "en-US";
+  let arFormat = "ar-SA"; // use islamic-umalqura calendar (most modern)
   let myDate = new Date(newDate); // today's date
 
-  let english = new Intl.DateTimeFormat(enFormat).format(myDate);
-  let arabic = new Intl.DateTimeFormat(arFormat).format(myDate);
+  let english = myDate.toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+  });
+  let arabic = myDate.toLocaleDateString("ar-u-ca-islamic", {
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+  });
   const generateCertificateHandler = (item) => {
     setCertificate(item);
     router.push({
