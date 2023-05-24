@@ -226,43 +226,43 @@ const DataTable = ({
     // setCertificate(item);
     // router.push("/dashboard/certificate/generate");
   };
-  const addOneYear = (date) => {
-    date.setFullYear(date.getFullYear() + 1);
-    return date;
-  };
+  // const addOneYear = (date) => {
+  //   date.setFullYear(date.getFullYear() + 1);
+  //   return date;
+  // };
 
-  // April 20, 2022
-  const date = new Date();
+  // // April 20, 2022
+  // const date = new Date();
 
-  const newDate = addOneYear(date);
+  // const newDate = addOneYear(date);
 
-  // April 20, 2023
-  let arFormat = "ar-SA"; // use islamic-umalqura calendar (most modern)
-  let myDate = new Date(newDate); // today's date
+  // // April 20, 2023
+  // let arFormat = "ar-SA"; // use islamic-umalqura calendar (most modern)
+  // let myDate = new Date(newDate); // today's date
 
-  let english = myDate.toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "numeric",
-    year: "numeric",
-  });
-  let arabic = myDate.toLocaleDateString("ar-u-ca-islamic", {
-    day: "numeric",
-    month: "numeric",
-    year: "numeric",
-  });
+  // let english = myDate.toLocaleDateString("en-US", {
+  //   day: "numeric",
+  //   month: "numeric",
+  //   year: "numeric",
+  // });
+  // let arabic = myDate.toLocaleDateString("ar-u-ca-islamic", {
+  //   day: "numeric",
+  //   month: "numeric",
+  //   year: "numeric",
+  // });
   const generateCertificateHandler = (item) => {
     setCertificate(item);
     router.push({
       pathname: `/${locale}/dashboard/certificate/generate`,
       query: {
         idnumber: item.ID_number,
-        certificate_number: "004",
-        expire_date: english,
-        name: item.name_en,
-        idnumberArabic: item.ID_number,
-        certificate_numberArabic: "004",
-        expire_dateArabic: arabic,
-        nameArabic: item.name_ar,
+        // certificate_number: "004",
+        // expire_date: english,
+        // name: item.name_en,
+        // idnumberArabic: item.ID_number,
+        // certificate_numberArabic: "004",
+        // expire_dateArabic: arabic,
+        // nameArabic: item.name_ar,
       },
     });
   };

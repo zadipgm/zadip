@@ -11,6 +11,8 @@ import {
 } from "@react-pdf/renderer";
 import { useRouter } from "next/router";
 import { styles } from "./previewStyle";
+import data from "dataLayer/certificate.json";
+import { arabicDate, englishDate } from "../hooks/certificateDate/iindex";
 const PreViewCertificate = () => {
   const router = useRouter();
   const [isClient, setIsClient] = React.useState(false);
@@ -22,15 +24,18 @@ const PreViewCertificate = () => {
   let url = new URL(
     `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${
       router.query.idnumber
-    }&certificate_number=${router.query.certificate_number}&expire_date=${
-      router.query.expire_date
-    }&name=${router.query.name}&idnumberArabic=${toFa(
-      router.query.idnumber
-    )}&certificate_numberArabic=${toFa(
-      router.query.certificate_numberArabic
-    )}&expire_dateArabic=${toFa(router.query.expire_dateArabic)}&nameArabic=${
-      router.query.nameArabic
+      // }&certificate_number=${router.query.certificate_number}&expire_date=${
+      //   router.query.expire_date
+      // }&name=${router.query.name}&idnumberArabic=${toFa(
+      //   router.query.idnumber
+      // )}&certificate_numberArabic=${toFa(
+      //   router.query.certificate_numberArabic
+      // )}&expire_dateArabic=${toFa(router.query.expire_dateArabic)}&nameArabic=${
+      //   router.query.nameArabic
     }`
+  );
+  let user = data.certificate.filter(
+    (u) => u.ID_number === router.query.idnumber
   );
   // register font family for PDF
   Font.register({
@@ -53,22 +58,18 @@ const PreViewCertificate = () => {
             <Page size="A4" style={styles.page} orientation="landscape">
               <View style={styles.section} fixed>
                 <Image style={styles.image} src="/images/certificate.jpeg" />
-                <Text style={styles.ID}>{router.query.idnumber}</Text>
+                <Text style={styles.ID}>{user[0].ID_number}</Text>
                 <Text style={styles.certificate}>
-                  {router.query.certificate_number}
+                  {user[0].certificate_number}
                 </Text>
-                <Text style={styles.date}>{router.query.expire_date}</Text>
-                <Text style={styles.name}>{router.query.name}</Text>
-                <Text style={styles.IDArabic}>
-                  {router.query.idnumberArabic}
-                </Text>
+                <Text style={styles.date}>{englishDate}</Text>
+                <Text style={styles.name}>{user[0].name_en}</Text>
+                <Text style={styles.IDArabic}>{toFa(user[0].ID_number)}</Text>
                 <Text style={styles.certificateArabic}>
-                  {router.query.certificate_numberArabic}
+                  {toFa(user[0].certificate_number)}
                 </Text>
-                <Text style={styles.dateArabic}>
-                  {router.query.expire_dateArabic}
-                </Text>
-                <Text style={styles.nameArabic}>{router.query.nameArabic}</Text>
+                <Text style={styles.dateArabic}>{toFa(arabicDate)}</Text>
+                <Text style={styles.nameArabic}>{user[0].name_ar}</Text>
                 <Image src={img} style={styles.qr} />
               </View>
             </Page>
