@@ -1,35 +1,36 @@
 import { ImageWrapper, InputWrapper } from "./styled";
 import { useRouter } from "next/router";
 import QRcodeComponent from "../QRcode";
-
+import data from "dataLayer/certificate.json";
+import { arabicDate, englishDate } from "../hooks/certificateDate/iindex";
 const MobilePreview = () => {
   const router = useRouter();
   const toFa = (n) => n.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
+  let user = data.certificate.filter(
+    (u) => u.ID_number === router.query.idnumber
+  );
   return (
     <>
       <ImageWrapper>
         <img src="/images/certificate.jpeg" alt="certificate" width={"100%"} />
         <InputWrapper className="ID-number mobile">
-          {router.query.idnumber}
+          {user[0].ID_number}
         </InputWrapper>
         <InputWrapper className="Certificate-number mobile">
-          {router.query.certificate_number}
+          {user[0].certificate_number}
         </InputWrapper>
         <InputWrapper className="Expire-Date mobile">
-          {router.query.expire_date}
+          {englishDate}
         </InputWrapper>
-        <InputWrapper className="name mobile">{router.query.name}</InputWrapper>
+        <InputWrapper className="name mobile">{user[0].name_en}</InputWrapper>
         <InputWrapper className="ID-number-arabic mobile">
           {toFa(
-            (router.query.idnumber as string)
-              .split("")
-              .reverse()
-              .join("") as string
+            (user[0].ID_number as string).split("").reverse().join("") as string
           )}
         </InputWrapper>
         <InputWrapper className="Certificate-number-arabic mobile">
           {toFa(
-            (router.query.certificate_numberArabic as string)
+            (user[0].certificate_number as string)
               .split("")
               .reverse()
               .join("") as string
@@ -37,14 +38,14 @@ const MobilePreview = () => {
         </InputWrapper>
         <InputWrapper className="Expire-Date-arabic mobile">
           {
-            toFa(router.query.expire_dateArabic as string)
+            toFa(arabicDate as string)
               .split("")
               .reverse()
               .join("") as string
           }
         </InputWrapper>
         <InputWrapper className="name-arabic mobile">
-          {router.query.nameArabic}
+          {user[0].name_ar}
         </InputWrapper>
         <QRcodeComponent
           value={""}
