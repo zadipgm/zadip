@@ -52,7 +52,7 @@ export const InputWrapper = styled.div`
   &.ID-number-arabic {
     top: 29%;
     right: 34%;
-    font-family: 'Cairo', sans-serif !important;
+    font-family: "Cairo", sans-serif !important;
     &.mobile {
       right: 26%;
     }
@@ -178,5 +178,22 @@ export const PreviewCertificate = styled.a`
   }
   &.generate {
     margin: 15px;
+  }
+`;
+export const Goback = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border-radius: 6px;
+  background: ${({ theme }) => theme.colors?.darkBlue};
+  color: ${({ theme }) => theme.colors?.white};
+  width: 132px;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  :hover {
+    transition: 0.5s;
+    background: ${({ theme }) => theme.colors?.lightBlue};
   }
 `;

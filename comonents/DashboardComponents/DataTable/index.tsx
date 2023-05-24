@@ -105,6 +105,7 @@ interface IProps {
   renewCertificate?: boolean;
   view?: boolean;
   isDelete?: boolean;
+  classname?: string;
 }
 const DataTable = ({
   data,
@@ -117,6 +118,7 @@ const DataTable = ({
   renewCertificate,
   view,
   isDelete,
+  classname,
 }: IProps) => {
   const { colors, locale } = useTheme();
   const router = useRouter();
@@ -339,7 +341,11 @@ const DataTable = ({
                       </Actions>
                       {open && showActions === item.id && (
                         <ActionList
-                          className={showActions === item.id ? "show" : "hide"}
+                          className={
+                            showActions === item.id
+                              ? `show ${classname}`
+                              : "hide"
+                          }
                         >
                           {isEditable && (
                             <ActionListItems>
