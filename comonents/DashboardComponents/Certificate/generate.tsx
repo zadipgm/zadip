@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import { useTheme } from "styled-components";
 import {
+  Goback,
   ImageWrapper,
   InputWrapper,
   PreviewCertificate,
@@ -19,7 +20,7 @@ const GenerateCertificate = () => {
 
   let page = device === "desktop" ? "preview" : "mpreview";
   let url = new URL(
-    `https://zadip.sa/en//dashboard/certificate/${page}/?idnumber=${router.query.idnumber}`
+    `https://zadip.sa/en//dashboard/certificate/mpreview/?idnumber=${router.query.idnumber}`
     // }&certificate_number=${router.query.certificate_number}&expire_date=${
     //   router.query.expire_date
     // }&name=${router.query.name}&idnumberArabic=${toFa(
@@ -34,10 +35,12 @@ const GenerateCertificate = () => {
   let user = data.certificate.filter(
     (u) => u.ID_number === router.query.idnumber
   );
-  console.log(user);
 
   return (
     <div>
+      <Goback onClick={() => router.back()} className="back">
+        Go back to list
+      </Goback>
       <Title>Certificate Preview</Title>
       <ImageWrapper>
         <img src="/images/certificate.jpeg" alt="certificate" />
@@ -48,23 +51,13 @@ const GenerateCertificate = () => {
         <InputWrapper className="Expire-Date">{englishDate}</InputWrapper>
         <InputWrapper className="name">{user[0]?.name_en}</InputWrapper>
         <InputWrapper className="ID-number-arabic">
-          {toFa(user[0].ID_number.split("").reverse().join("") as string)}
+          {toFa(user[0].ID_number)}
         </InputWrapper>
         <InputWrapper className="Certificate-number-arabic">
-          {toFa(
-            (user[0].certificate_number as string)
-              .split("")
-              .reverse()
-              .join("") as string
-          )}
+          {toFa(user[0].certificate_number as string)}
         </InputWrapper>
         <InputWrapper className="Expire-Date-arabic">
-          {
-            toFa(arabicDate as string)
-              .split("")
-
-              .join("") as string
-          }
+          {arabicDate.substring(0, 12) as string}
         </InputWrapper>
         <InputWrapper className="name-arabic">{user[0].name_ar}</InputWrapper>
         <QRcodeComponent

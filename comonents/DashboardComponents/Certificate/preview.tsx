@@ -22,17 +22,7 @@ const PreViewCertificate = () => {
     setIsClient(true);
   }, []);
   let url = new URL(
-    `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${
-      router.query.idnumber
-      // }&certificate_number=${router.query.certificate_number}&expire_date=${
-      //   router.query.expire_date
-      // }&name=${router.query.name}&idnumberArabic=${toFa(
-      //   router.query.idnumber
-      // )}&certificate_numberArabic=${toFa(
-      //   router.query.certificate_numberArabic
-      // )}&expire_dateArabic=${toFa(router.query.expire_dateArabic)}&nameArabic=${
-      //   router.query.nameArabic
-    }`
+    `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${router.query.idnumber}`
   );
   let user = data.certificate.filter(
     (u) => u.ID_number === router.query.idnumber
@@ -47,9 +37,19 @@ const PreViewCertificate = () => {
     ],
   });
 
-  // PDF Template
   let img = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${url}`;
+  //day reverse
+  let arabicDay = arabicDate.split("/")[0].toString();
+  let reverseDay = arabicDay.split("").reverse().join("");
+  //month reverse
+  let arabicMonth = arabicDate.split("/")[1].toString();
+  let reverseMonth = arabicMonth.split("").reverse().join("");
+  //year reverse
+  let arabicYear = arabicDate.split("/")[2].toString();
+  let reverseYear = arabicYear.split("هـ")[0].toString();
+  let reverseYear_AR = reverseYear.split("").reverse().join("");
 
+  // PDF Template
   const pdfTemplate = () => {
     return (
       isClient && (
@@ -64,11 +64,26 @@ const PreViewCertificate = () => {
                 </Text>
                 <Text style={styles.date}>{englishDate}</Text>
                 <Text style={styles.name}>{user[0].name_en}</Text>
-                <Text style={styles.IDArabic}>{toFa(user[0].ID_number)}</Text>
-                <Text style={styles.certificateArabic}>
-                  {toFa(user[0].certificate_number)}
+                <Text style={styles.IDArabic}>
+                  {" "}
+                  {toFa(
+                    (user[0].ID_number as string)
+                      .split("")
+                      .reverse()
+                      .join("") as string
+                  )}
                 </Text>
-                <Text style={styles.dateArabic}>{toFa(arabicDate)}</Text>
+                <Text style={styles.certificateArabic}>
+                  {
+                    toFa(user[0].certificate_number)
+                      .split("")
+                      .reverse()
+                      .join("") as string
+                  }
+                </Text>
+                <Text
+                  style={styles.dateArabic}
+                >{`${reverseDay}/${reverseMonth}/${reverseYear_AR}`}</Text>
                 <Text style={styles.nameArabic}>{user[0].name_ar}</Text>
                 <Image src={img} style={styles.qr} />
               </View>

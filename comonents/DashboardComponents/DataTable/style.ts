@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { css } from "styled-components";
 export const Container = styled.div`
   > h1 {
     text-align: center;
@@ -175,7 +176,19 @@ export const ActionList = styled.ul`
     border: none;
     display: block;
     animation: fadeIn 0.7s;
+   
   }
+  &.certificate {
+       ${({ theme }) =>
+    theme.isLTR
+      ? css`
+                right: -17%;
+    `
+      : css`
+               right: -35%
+    `
+  } 
+    }
   &.hide {
     display: none;
   }

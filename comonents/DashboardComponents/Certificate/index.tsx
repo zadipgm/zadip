@@ -31,6 +31,7 @@ const Certificate = () => {
           renewCertificate={false}
           view={false}
           isDelete={false}
+          classname={"certificate"}
         />
       </CertificateModal>
       <DataTable
