@@ -1,5 +1,5 @@
 const addOneYear = (date) => {
-  date.setFullYear(date.getFullYear() + 1);
+  date.setFullYear(date.getFullYear() + 2);
   return date;
 };
 
