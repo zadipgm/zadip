@@ -67,13 +67,15 @@ const PreViewCertificate = () => {
               <View style={styles.section} fixed>
                 <Image style={styles.image} src="/images/certificate.jpeg" />
                 <Text style={styles.ID}>{user[0].ID_number}</Text>
-                <Text style={styles.certificate}>{Number(maxNumber + 1)}</Text>
+                <Text style={styles.certificate}>
+                  {user[0]?.certificate_number}
+                </Text>
                 <Text style={styles.date}>{englishDate}</Text>
                 <Text style={styles.name}>{user[0].name_en}</Text>
                 <Text style={styles.IDArabic}>
                   {" "}
                   {toFa(
-                    (user[0].ID_number as string)
+                    (user[0]?.certificate_number)
                       .split("")
                       .reverse()
                       .join("") as string
