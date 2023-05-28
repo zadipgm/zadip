@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import { useTheme } from "styled-components";
 import {
+  CertificateNumber,
   Goback,
   ImageWrapper,
   InputWrapper,
@@ -12,29 +13,31 @@ import QRcodeComponent from "../QRcode";
 import data from "dataLayer/certificate.json";
 import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
 import { arabicDate, englishDate } from "../hooks/certificateDate/iindex";
+
 const GenerateCertificate = () => {
+  //find the max number of certificates
+
+  let findMaxNumber = data.certificate
+    .map((max) => max.certificate_number)
+    .sort((a, b) => Number(b) - Number(a));
+  let maxNumber = Number(findMaxNumber[0]);
+
   const router = useRouter();
   const { device } = useTheme();
-  console.log("heee", device);
   const toFa = (n) => n.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
-
   let page = device === "desktop" ? "preview" : "mpreview";
   let url = new URL(
     `https://zadip.sa/en//dashboard/certificate/mpreview/?idnumber=${router.query.idnumber}`
-    // }&certificate_number=${router.query.certificate_number}&expire_date=${
-    //   router.query.expire_date
-    // }&name=${router.query.name}&idnumberArabic=${toFa(
-    //   router.query.idnumber
-    // )}&certificate_numberArabic=${toFa(
-    //   router.query.certificate_numberArabic
-    // )}&expire_dateArabic=${toFa(router.query.expire_dateArabic)}&nameArabic=${
-    //   router.query.nameArabic
-    // }`
   );
 
+  //filter user by ID_number
   let user = data.certificate.filter(
     (u) => u.ID_number === router.query.idnumber
   );
+
+  // Convert certificate number to a string
+  let arabicNumber = Number(maxNumber + 1);
+  let arabicStr = arabicNumber.toString();
 
   return (
     <div>
@@ -46,7 +49,7 @@ const GenerateCertificate = () => {
         <img src="/images/certificate.jpeg" alt="certificate" />
         <InputWrapper className="ID-number">{user[0]?.ID_number}</InputWrapper>
         <InputWrapper className="Certificate-number">
-          {user[0]?.certificate_number}
+          {Number(maxNumber + 1)}
         </InputWrapper>
         <InputWrapper className="Expire-Date">{englishDate}</InputWrapper>
         <InputWrapper className="name">{user[0]?.name_en}</InputWrapper>
@@ -54,7 +57,7 @@ const GenerateCertificate = () => {
           {toFa(user[0].ID_number)}
         </InputWrapper>
         <InputWrapper className="Certificate-number-arabic">
-          {toFa(user[0].certificate_number as string)}
+          {toFa(arabicStr as string)}
         </InputWrapper>
         <InputWrapper className="Expire-Date-arabic">
           {arabicDate.substring(0, 12) as string}
