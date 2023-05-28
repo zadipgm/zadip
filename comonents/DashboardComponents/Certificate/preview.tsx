@@ -49,6 +49,14 @@ const PreViewCertificate = () => {
   let reverseYear = arabicYear.split("هـ")[0].toString();
   let reverseYear_AR = reverseYear.split("").reverse().join("");
 
+  // find max number
+  let findMaxNumber = data.certificate
+    .map((max) => max.certificate_number)
+    .sort((a, b) => Number(b) - Number(a));
+  let maxNumber = Number(findMaxNumber[0]);
+  // Convert certificate number to a string
+  let arabicNumber = Number(maxNumber + 1);
+  let arabicStr = arabicNumber.toString();
   // PDF Template
   const pdfTemplate = () => {
     return (
@@ -59,9 +67,7 @@ const PreViewCertificate = () => {
               <View style={styles.section} fixed>
                 <Image style={styles.image} src="/images/certificate.jpeg" />
                 <Text style={styles.ID}>{user[0].ID_number}</Text>
-                <Text style={styles.certificate}>
-                  {user[0].certificate_number}
-                </Text>
+                <Text style={styles.certificate}>{Number(maxNumber + 1)}</Text>
                 <Text style={styles.date}>{englishDate}</Text>
                 <Text style={styles.name}>{user[0].name_en}</Text>
                 <Text style={styles.IDArabic}>
@@ -74,12 +80,7 @@ const PreViewCertificate = () => {
                   )}
                 </Text>
                 <Text style={styles.certificateArabic}>
-                  {
-                    toFa(user[0].certificate_number)
-                      .split("")
-                      .reverse()
-                      .join("") as string
-                  }
+                  {arabicNumber as unknown as string}
                 </Text>
                 <Text
                   style={styles.dateArabic}
