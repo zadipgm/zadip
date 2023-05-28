@@ -10,8 +10,9 @@ const newDate = addOneYear(date);
 
 // April 20, 2023
 let myDate = new Date(newDate); // today's date
-
-export const englishDate = myDate.toLocaleDateString("en-GB", {
+let georgianDate = myDate.setDate(myDate.getDate() - 22);
+let newGeorginDate = new Date(georgianDate);
+export const englishDate = newGeorginDate.toLocaleDateString("en-GB", {
   day: "numeric",
   month: "numeric",
   year: "numeric",
