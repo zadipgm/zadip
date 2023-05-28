@@ -49,7 +49,7 @@ const GenerateCertificate = () => {
         <img src="/images/certificate.jpeg" alt="certificate" />
         <InputWrapper className="ID-number">{user[0]?.ID_number}</InputWrapper>
         <InputWrapper className="Certificate-number">
-          {Number(maxNumber + 1)}
+          {user[0]?.certificate_number}
         </InputWrapper>
         <InputWrapper className="Expire-Date">{englishDate}</InputWrapper>
         <InputWrapper className="name">{user[0]?.name_en}</InputWrapper>
@@ -57,7 +57,7 @@ const GenerateCertificate = () => {
           {toFa(user[0].ID_number)}
         </InputWrapper>
         <InputWrapper className="Certificate-number-arabic">
-          {toFa(arabicStr as string)}
+          {toFa(user[0]?.certificate_number)}
         </InputWrapper>
         <InputWrapper className="Expire-Date-arabic">
           {arabicDate.substring(0, 12) as string}
