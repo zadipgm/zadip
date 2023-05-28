@@ -75,14 +75,14 @@ const PreViewCertificate = () => {
                 <Text style={styles.IDArabic}>
                   {" "}
                   {toFa(
-                    (user[0]?.certificate_number)
+                    (user[0].ID_number as string)
                       .split("")
                       .reverse()
                       .join("") as string
                   )}
                 </Text>
                 <Text style={styles.certificateArabic}>
-                  {arabicNumber as unknown as string}
+                  {user[0]?.certificate_number as unknown as string}
                 </Text>
                 <Text
                   style={styles.dateArabic}
