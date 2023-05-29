@@ -82,7 +82,7 @@ const PreViewCertificate = () => {
                   )}
                 </Text>
                 <Text style={styles.certificateArabic}>
-                  {user[0]?.certificate_number as unknown as string}
+                  {toFa(user[0]?.certificate_number as unknown as string)}
                 </Text>
                 <Text
                   style={styles.dateArabic}
