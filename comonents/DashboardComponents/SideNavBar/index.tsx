@@ -68,6 +68,18 @@ const SideNavBar = () => {
       panel: "panel2",
     },
     {
+      module_name: "Head Tag",
+      icon: "formsSvg",
+      page: [
+        {
+          page_name: "Head tag",
+          page_link: "/dashboard/head_tag",
+          icon: "",
+        },
+      ],
+      panel: "panel3",
+    },
+    {
       module_name: "Certificate",
       icon: "certificateSvg",
       page: [
@@ -77,7 +89,7 @@ const SideNavBar = () => {
           icon: "certificateSvg",
         },
       ],
-      panel: "panel3",
+      panel: "panel4",
     },
   ];
   return (
