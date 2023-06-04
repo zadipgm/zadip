@@ -19,7 +19,9 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { FormContent } from "./styled.components";
 import UsersSvg from "public/icons/usersSvg";
-import SimpleSnackbar from "../Snackbar";
+import SimpleSnackbar from "comonents/ReuseAbleComponents/Snackbar";
+import IDsvg from "public/icons/idSvg";
+import PhoneSvg from "public/icons/phoneSvg";
 
 const CreateAccountScreen = () => {
   const router = useRouter();
@@ -84,17 +86,21 @@ const CreateAccountScreen = () => {
         : "https://api.zadip.sa";
     try {
       await axios.post(`${APP_URL}/register`, {
-        name_en: englishName,
         name_ar: arabicName,
-        Email: email,
-        Password: password,
-        Role: role,
+        name_en: englishName,
+        nationalID: nationalID,
+        phoneNumber: phoneNumber,
+        email: email,
+        role: role,
+        password: password,
       });
       setArabicName("");
       setEnglishName("");
       setPassword("");
       setNationalID("");
       setEmail("");
+      setPhoneNumber("");
+      setPassword("");
       handleClick();
       setMessage(
         isLTR ? "User Added successfully!" : "تم تسجيل المستخدم بنجاح!"
@@ -103,7 +109,7 @@ const CreateAccountScreen = () => {
       setTimeout(function () {
         setIsComplete(false);
       }, 5000);
-      setColor("success");
+      setColor("#0d880d");
     } catch (error) {
       if (error) {
         handleClick();
@@ -111,12 +117,16 @@ const CreateAccountScreen = () => {
         setTimeout(function () {
           setIsComplete(false);
         }, 5000);
-        setColor("error");
+        setColor("#ec0e0e");
         console.log(error);
         setMessage(
           isLTR
             ? error.response?.data?.message_en
+              ? error.response?.data?.message_en
+              : error.message
             : error.response?.data?.message_ar
+            ? error.response?.data?.message_ar
+            : error.message
         );
       }
     }
@@ -161,7 +171,7 @@ const CreateAccountScreen = () => {
             </Wrapper>
             <Wrapper className={"create-account"}>
               <SvgWrapper>
-                <NameSvg width="25px" height="25px" fill={colors.lightBlue} />
+                <IDsvg width="25px" height="25px" fill={colors.lightBlue} />
               </SvgWrapper>
               <Input
                 type="text"
@@ -174,7 +184,7 @@ const CreateAccountScreen = () => {
             </Wrapper>
             <Wrapper className={"create-account"}>
               <SvgWrapper>
-                <NameSvg width="25px" height="25px" fill={colors.lightBlue} />
+                <PhoneSvg width="25px" height="25px" fill={colors.lightBlue} />
               </SvgWrapper>
               <Input
                 type="text"
