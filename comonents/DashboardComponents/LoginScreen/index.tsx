@@ -63,8 +63,8 @@ const LoginScreen = () => {
     try {
       await axios
         .post(`${APP_URL}/login`, {
-          Email: email,
-          Password: password,
+          email: email,
+          password: password,
         })
         .then(
           (res) =>
@@ -82,19 +82,23 @@ const LoginScreen = () => {
         setIsComplete(false);
         router.push(`/dashboard`);
       }, 3000);
-      setColor("success");
+      setColor("#0d880d");
     } catch (error) {
       handleClick();
       setIsComplete(true);
       setTimeout(function () {
         setIsComplete(false);
       }, 3000);
-      setColor("error");
+      setColor("#ec0e0e");
       console.log(error);
       setMessage(
         isLTR
           ? error.response?.data?.message_en
+            ? error.response?.data?.message_en
+            : error.message
           : error.response?.data?.message_ar
+          ? error.response?.data?.message_ar
+          : error.message
       );
     }
   };
