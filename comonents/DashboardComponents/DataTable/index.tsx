@@ -68,8 +68,10 @@ interface Iprocedure {
   city_en?: string;
   phone?: string;
 }
-interface TableData {
-  id: number;
+interface ITableData {
+  id?: number;
+  ID_number?: string;
+  nationalID?: string;
   name_en?: string;
   name_ar?: string;
   company_en?: string;
@@ -86,6 +88,9 @@ interface TableData {
   city_ar?: string;
   city_en?: string;
   certificate_number?: string;
+  gender?: string;
+  name?: string;
+  expiry_date?: string;
   product_en?: string;
   product_ar?: string;
   training_date?: string;
@@ -95,7 +100,7 @@ interface TableData {
   procedures?: Iprocedure[];
 }
 interface IProps {
-  data: TableData[];
+  data?: ITableData[];
   title: string;
   showFilter: boolean;
   setCertificate?: (param) => void;
@@ -133,9 +138,8 @@ const DataTable = ({
   const [dataView, setDataView] = React.useState("table");
   const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
-  const currentRecords = data.slice(indexOfFirstRecord, indexOfLastRecord);
-  const nPages = Math.ceil(data.length / recordsPerPage);
-
+  const currentRecords = data?.slice(indexOfFirstRecord, indexOfLastRecord);
+  const nPages = Math.ceil(data?.length / recordsPerPage);
   React.useEffect(() => {
     let value = currentRecords;
     setSearchvalue(value);
@@ -156,7 +160,7 @@ const DataTable = ({
   const handlerChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     let value = e.target.value;
     let filtterArray = [];
-    data.filter((obj) => {
+    data?.filter((obj) => {
       return filtterArray.push(obj[value]);
     });
     setFilterKey(value);
@@ -164,7 +168,7 @@ const DataTable = ({
 
   // Table Header
   const renderTableHeader = () => {
-    let header = Object.keys(data[0]);
+    let header = Object?.keys(data && data[0]);
     return filterByLocale(locale, header).map((key, index) => {
       return (
         <TableData key={index} className="table-header">
@@ -197,10 +201,10 @@ const DataTable = ({
     setShowActions(id);
   };
   const renderTableNestedHeader = () => {
-    let header = Object.keys(data[0]?.procedures[0]);
+    let header = Object?.keys(data.length > 1 && data[0]?.procedures[0]);
     return (
       header &&
-      header.map((key, index) => {
+      header?.map((key, index) => {
         return (
           <TableData className="table-header" key={index}>
             {key.toUpperCase()}
@@ -211,8 +215,8 @@ const DataTable = ({
   };
   // Column keys
   const renderColumnKeys = () => {
-    let header = Object.keys(data[0]);
-    return header.map((key, index) => {
+    let header = Object?.keys(data && data[0]);
+    return header?.map((key, index) => {
       return (
         <option key={index} value={key}>
           {key}
@@ -228,43 +232,13 @@ const DataTable = ({
     // setCertificate(item);
     // router.push("/dashboard/certificate/generate");
   };
-  // const addOneYear = (date) => {
-  //   date.setFullYear(date.getFullYear() + 1);
-  //   return date;
-  // };
 
-  // // April 20, 2022
-  // const date = new Date();
-
-  // const newDate = addOneYear(date);
-
-  // // April 20, 2023
-  // let arFormat = "ar-SA"; // use islamic-umalqura calendar (most modern)
-  // let myDate = new Date(newDate); // today's date
-
-  // let english = myDate.toLocaleDateString("en-US", {
-  //   day: "numeric",
-  //   month: "numeric",
-  //   year: "numeric",
-  // });
-  // let arabic = myDate.toLocaleDateString("ar-u-ca-islamic", {
-  //   day: "numeric",
-  //   month: "numeric",
-  //   year: "numeric",
-  // });
   const generateCertificateHandler = (item) => {
     setCertificate(item);
     router.push({
       pathname: `/${locale}/dashboard/certificate/generate`,
       query: {
-        idnumber: item.ID_number,
-        // certificate_number: "004",
-        // expire_date: english,
-        // name: item.name_en,
-        // idnumberArabic: item.ID_number,
-        // certificate_numberArabic: "004",
-        // expire_dateArabic: arabic,
-        // nameArabic: item.name_ar,
+        idnumber: item.nationalID,
       },
     });
   };
@@ -292,7 +266,7 @@ const DataTable = ({
           <Filter>
             <span>Filter By Column</span>
             <Select onChange={(e) => handlerChange(e)}>
-              {renderColumnKeys()}
+              {data && renderColumnKeys()}
             </Select>
           </Filter>
           <SearchWrapper>
@@ -322,124 +296,127 @@ const DataTable = ({
       {dataView === "table" && (
         <Table>
           <Row>{renderTableHeader()}</Row>
-          {searchvalue.slice(0, recordsPerPage as number).map((item) => {
-            let keys = Object.keys(item).filter(
-              (procedure) => procedure !== "procedures"
-            );
+          {searchvalue &&
+            searchvalue?.slice(0, recordsPerPage as number)?.map((item) => {
+              let keys = Object?.keys(item)?.filter(
+                (procedure) => procedure !== "procedures"
+              );
 
-            return (
-              <>
-                <Row key={item.id}>
-                  {filterByLocale(locale, keys).map((key, i) => {
-                    return <TableData key={i}>{`${item[key]}`}</TableData>;
-                  })}
-                  <TableData>
-                    <ActionWrapper onClick={() => actionHandler(item.id)}>
-                      <Actions>
-                        <div>Actions</div>
-                        <ArrowDown fill={colors.gray2} />
-                      </Actions>
-                      {open && showActions === item.id && (
-                        <ActionList
-                          className={
-                            showActions === item.id
-                              ? `show ${classname}`
-                              : "hide"
-                          }
-                        >
-                          {isEditable && (
-                            <ActionListItems>
-                              <InnerWrapper>
-                                <EditSvg
-                                  fill={colors.darkBlue}
-                                  width="15px"
-                                  height="15px"
-                                />
-                              </InnerWrapper>
-                              <span>Edit</span>
-                            </ActionListItems>
-                          )}
-                          {isDelete && (
-                            <ActionListItems>
-                              <InnerWrapper className="delete">
-                                <DeleteSvg
-                                  fill={colors.red}
-                                  width="15px"
-                                  height="15px"
-                                />
-                              </InnerWrapper>
-                              <span>Delete</span>
-                            </ActionListItems>
-                          )}
-                          {renewCertificate && (
-                            <ActionListItems
-                              onClick={() => renewCertificateHandler(item)}
-                            >
-                              <InnerWrapper>
-                                <ViewMoreSvg
-                                  fill={colors.lightBlue}
-                                  width="15px"
-                                  height="15px"
-                                />
-                              </InnerWrapper>
-                              <span>Renew Certificate</span>
-                            </ActionListItems>
-                          )}
-                          {generateCertificate && (
-                            <ActionListItems
-                              onClick={() => generateCertificateHandler(item)}
-                            >
-                              <InnerWrapper>
-                                <ViewMoreSvg
-                                  fill={colors.lightBlue}
-                                  width="15px"
-                                  height="15px"
-                                />
-                              </InnerWrapper>
-                              <span>Generate Certificate</span>
-                            </ActionListItems>
-                          )}
-                          {view && (
-                            <ActionListItems
-                              onClick={() => HandleViewDetails(item.id)}
-                            >
-                              <InnerWrapper>
-                                <ViewMoreSvg
-                                  fill={colors.lightBlue}
-                                  width="15px"
-                                  height="15px"
-                                />
-                              </InnerWrapper>
-                              <span>View</span>
-                            </ActionListItems>
-                          )}
-                        </ActionList>
-                      )}
-                    </ActionWrapper>
-                  </TableData>
-                </Row>
-                <Row className={active === item.id ? "show" : "hide"}>
-                  <br></br>
-                  {nestedTable && <Row> {renderTableNestedHeader()}</Row>}
-                  {item.procedures &&
-                    item.procedures.map((detail) => {
-                      return (
-                        <Row key={item.id} className="details-row">
-                          {Object.keys(detail).map((detail_key, i) => {
-                            return (
-                              <TableData key={i}>
-                                {detail[detail_key]}
-                              </TableData>
-                            );
-                          })}
-                        </Row>
-                      );
+              return (
+                <>
+                  <Row key={item.id}>
+                    {filterByLocale(locale, keys).map((key, i) => {
+                      return <TableData key={i}>{`${item[key]}`}</TableData>;
                     })}
-                  <br></br>
-                </Row>
-              </>
-            );
-          })}
+                    <TableData>
+                      <ActionWrapper onClick={() => actionHandler(item.id)}>
+                        <Actions>
+                          <div>Actions</div>
+                          <ArrowDown fill={colors.gray2} />
+                        </Actions>
+                        {open && showActions === item.id && (
+                          <ActionList
+                            className={
+                              showActions === item.id
+                                ? `show ${classname}`
+                                : "hide"
+                            }
+                          >
+                            {isEditable && (
+                              <ActionListItems>
+                                <InnerWrapper>
+                                  <EditSvg
+                                    fill={colors.darkBlue}
+                                    width="15px"
+                                    height="15px"
+                                  />
+                                </InnerWrapper>
+                                <span>Edit</span>
+                              </ActionListItems>
+                            )}
+                            {isDelete && (
+                              <ActionListItems>
+                                <InnerWrapper className="delete">
+                                  <DeleteSvg
+                                    fill={colors.red}
+                                    width="15px"
+                                    height="15px"
+                                  />
+                                </InnerWrapper>
+                                <span>Delete</span>
+                              </ActionListItems>
+                            )}
+                            {renewCertificate && (
+                              <ActionListItems
+                                onClick={() => renewCertificateHandler(item)}
+                              >
+                                <InnerWrapper>
+                                  <ViewMoreSvg
+                                    fill={colors.lightBlue}
+                                    width="15px"
+                                    height="15px"
+                                  />
+                                </InnerWrapper>
+                                <span>Renew Certificate</span>
+                              </ActionListItems>
+                            )}
+                            {generateCertificate && (
+                              <ActionListItems
+                                onClick={() => generateCertificateHandler(item)}
+                              >
+                                <InnerWrapper>
+                                  <ViewMoreSvg
+                                    fill={colors.lightBlue}
+                                    width="15px"
+                                    height="15px"
+                                  />
+                                </InnerWrapper>
+                                <span>Generate Certificate</span>
+                              </ActionListItems>
+                            )}
+                            {view && (
+                              <ActionListItems
+                                onClick={() => HandleViewDetails(item.id)}
+                              >
+                                <InnerWrapper>
+                                  <ViewMoreSvg
+                                    fill={colors.lightBlue}
+                                    width="15px"
+                                    height="15px"
+                                  />
+                                </InnerWrapper>
+                                <span>View</span>
+                              </ActionListItems>
+                            )}
+                          </ActionList>
+                        )}
+                      </ActionWrapper>
+                    </TableData>
+                  </Row>
+                  <Row className={active === item.id ? "show" : "hide"}>
+                    <br></br>
+                    {nestedTable && data[0]?.procedures.length > 1 && (
+                      <Row> {renderTableNestedHeader()}</Row>
+                    )}
+                    {item.procedures &&
+                      item.procedures.map((detail) => {
+                        return (
+                          <Row key={item.id} className="details-row">
+                            {Object.keys(detail).map((detail_key, i) => {
+                              return (
+                                <TableData key={i}>
+                                  {detail[detail_key]}
+                                </TableData>
+                              );
+                            })}
+                          </Row>
+                        );
+                      })}
+                    <br></br>
+                  </Row>
+                </>
+              );
+            })}
         </Table>
       )}
 
@@ -543,9 +520,9 @@ const DataTable = ({
           />
         </PaginationOuterDiv>
         <div>
-          Showing {currentRecords[0].id} to{" "}
-          {currentRecords[currentRecords.length - 1].id} of {data.length}{" "}
-          entries
+          Showing {currentRecords && currentRecords[0].id} to{" "}
+          {currentRecords && currentRecords[currentRecords.length - 1].id} of{" "}
+          {data.length} entries
         </div>
       </PaginationWrapper>
     </Container>

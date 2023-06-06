@@ -21,6 +21,9 @@ flex-wrap:wrap ;
 export const Wrapper = styled.div`
 width:50% ;
 padding:12px ;
+&.all-pages{
+    width: 100%;
+}
 &.page_selection{
     width:100% ;
     margin:0 auto ;
@@ -35,7 +38,7 @@ padding:12px ;
 export const Label = styled.label`
 font-size:16px ;
 color:${({ theme }) => theme.colors.darkBlue};
-margin:12px ;
+margin:6px ;
 font-family: 'Cairo', sans-serif !important;
 
 `

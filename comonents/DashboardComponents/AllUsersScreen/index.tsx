@@ -1,18 +1,24 @@
 import * as React from "react";
 import DataTable from "../DataTable";
-import users from "DataLayer/user.json";
+import { fetchUserData } from "../hooks/api/getUsers";
 const AllUsersScreen = () => {
+  const [userdata, setData] = React.useState([]);
+  React.useEffect(() => {
+    fetchUserData(setData);
+  }, [userdata]);
   return (
     <>
-      <DataTable
-        data={users.user}
-        title={"user"}
-        showFilter={false}
-        nestedTable={true}
-        isEditable={true}
-        view={true}
-        isDelete={true}
-      />
+      {userdata.length > 1 && (
+        <DataTable
+          data={userdata && userdata}
+          title={"user"}
+          showFilter={false}
+          nestedTable={true}
+          isEditable={true}
+          view={true}
+          isDelete={true}
+        />
+      )}
     </>
   );
 };

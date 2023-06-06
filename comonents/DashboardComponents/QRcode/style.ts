@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 150px;
-  margin: 0px auto;
-  max-width: 64px;
-  width: 150px;
-  position: absolute;
-  bottom: 4%;
-  left: 44%;
-  right: 44%;
+ height: 77px;
+    margin: 0px auto;
+    max-width: 82px;
+    width: 74px;
+    position: absolute;
+    top: 4%;
+    left: 0%;
+    right: 87%;
   &.mobile-qr {
-    height: auto;
-    left: 43%;
-    right: 41%;
-    bottom: 9%;
+    height: 80px;
+    left: 0%;
+    right: 84.8%;
   }
 `;

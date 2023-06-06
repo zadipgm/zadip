@@ -1,18 +1,27 @@
 import * as React from "react";
 import { Container, PreviewCertificate } from "./styled";
-import { useTheme } from "styled-components";
-import { useRouter } from "next/router";
 import DataTable from "../DataTable";
-import data from "dataLayer/certificate.json";
-import users from "dataLayer/user.json";
 import CertificateModal from "../ReuseableComponents/Modal";
+import { fetchUserData } from "../hooks/api/getUsers";
+import { useFetch } from "../hooks/api/certificate";
 
 const Certificate = () => {
-  const { locale } = useTheme();
-  const router = useRouter();
+  const [userdata, setData] = React.useState([]);
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  let APP_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:5000"
+      : "https://api.zadip.sa";
+  let fetchurl = `${APP_URL}/certificates` as RequestInfo | URL;
+  const { certificateData } = useFetch(fetchurl);
   const handleClose = () => setOpen(false);
+  React.useEffect(() => {
+    fetchUserData(setData);
+  }, []);
+  const handleOpen = () => {
+    fetchUserData(setData);
+    setOpen(true);
+  };
   const [certificate, setCertificate] = React.useState(null);
   return (
     <Container>
@@ -22,7 +31,7 @@ const Certificate = () => {
       <CertificateModal open={open} handleClose={handleClose}>
         <DataTable
           title="Customers"
-          data={users.user}
+          data={userdata && userdata}
           showFilter={true}
           setCertificate={setCertificate}
           isEditable={false}
@@ -34,18 +43,20 @@ const Certificate = () => {
           classname={"certificate"}
         />
       </CertificateModal>
-      <DataTable
-        title="Certificates"
-        data={data.certificate}
-        showFilter={true}
-        setCertificate={setCertificate}
-        isEditable={false}
-        generateCertificate={false}
-        nestedTable={false}
-        renewCertificate={true}
-        view={false}
-        isDelete={true}
-      />
+      {certificateData?.length > 0 && (
+        <DataTable
+          title="Certificates"
+          data={certificateData && certificateData}
+          showFilter={true}
+          setCertificate={setCertificate}
+          isEditable={false}
+          generateCertificate={false}
+          nestedTable={false}
+          renewCertificate={true}
+          view={false}
+          isDelete={true}
+        />
+      )}
     </Container>
   );
 };

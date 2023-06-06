@@ -22,6 +22,7 @@ import UsersSvg from "public/icons/usersSvg";
 import SimpleSnackbar from "comonents/ReuseAbleComponents/Snackbar";
 import IDsvg from "public/icons/idSvg";
 import PhoneSvg from "public/icons/phoneSvg";
+import GenderSvg from "public/icons/genderSvg";
 
 const CreateAccountScreen = () => {
   const router = useRouter();
@@ -37,6 +38,7 @@ const CreateAccountScreen = () => {
   const [isComplete, setIsComplete] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [role, setRole] = React.useState("");
+  const [gender, setGender] = React.useState("");
 
   const handleClick = () => {
     setOpen(true);
@@ -77,7 +79,10 @@ const CreateAccountScreen = () => {
     let value = e.target.value;
     setRole(value);
   };
-
+  const handleGender = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    let value = e.target.value;
+    setGender(value);
+  };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let APP_URL =
@@ -91,6 +96,7 @@ const CreateAccountScreen = () => {
         nationalID: nationalID,
         phoneNumber: phoneNumber,
         email: email,
+        gender: gender,
         role: role,
         password: password,
       });
@@ -102,13 +108,15 @@ const CreateAccountScreen = () => {
       setPhoneNumber("");
       setPassword("");
       handleClick();
+      setGender("");
+      setRole("");
       setMessage(
         isLTR ? "User Added successfully!" : "تم تسجيل المستخدم بنجاح!"
       );
       setIsComplete(true);
       setTimeout(function () {
         setIsComplete(false);
-      }, 5000);
+      }, 3000);
       setColor("#0d880d");
     } catch (error) {
       if (error) {
@@ -116,7 +124,7 @@ const CreateAccountScreen = () => {
         setIsComplete(true);
         setTimeout(function () {
           setIsComplete(false);
-        }, 5000);
+        }, 3000);
         setColor("#ec0e0e");
         console.log(error);
         setMessage(
@@ -206,6 +214,22 @@ const CreateAccountScreen = () => {
                 value={email}
                 onChange={(e) => handleEmail(e)}
               />
+            </Wrapper>
+            <Wrapper className={"create-account"}>
+              <SvgWrapper>
+                <GenderSvg width="25px" height="25px" fill={colors.lightBlue} />
+              </SvgWrapper>
+              <UserSelect
+                value={gender}
+                onChange={(e) => handleGender(e)}
+                required
+              >
+                <option value={""} selected disabled hidden>
+                  {"Select Gender"}
+                </option>
+                <option value={"male"}>{"Male"}</option>
+                <option value={"female"}>{"Female"}</option>
+              </UserSelect>
             </Wrapper>
             <Wrapper className={"create-account"}>
               <SvgWrapper>

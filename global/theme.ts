@@ -23,6 +23,8 @@ declare module "styled-components" {
       gray1: string;
       gray2: string;
       gray3: string;
+      success: string;
+      error: string
     };
   }
 }
@@ -46,6 +48,8 @@ const defaultTheme: DefaultTheme = {
     gray1: "#5a5c69",
     gray2: "#cfcfcf",
     gray3: "#cfcfcf45",
+    success: "#0d880d",
+    error: "#ec0e0e"
   },
 };
 
