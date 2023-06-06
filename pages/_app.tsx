@@ -30,8 +30,8 @@ interface IDataProps {
   Meta_og_image: string;
   Page_Name: string;
 }
-interface IData {
-  data: IDataProps[];
+interface IAllPageSeoProps {
+  all_page_content: string;
 }
 const MyApp = ({
   Component,
@@ -41,6 +41,7 @@ const MyApp = ({
 }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page);
   const [data, setData] = React.useState<IDataProps[]>([]);
+  const [allPageData, setAllPageData] = React.useState<IAllPageSeoProps[]>([]);
   const [isLoading, setLoading] = React.useState(false);
   const router = useRouter();
   // @ts-ignore
@@ -91,26 +92,34 @@ const MyApp = ({
   if (router.asPath === "/eGov_services/smartgate/") {
     path = "smartgate";
   }
-
+  let APP_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:5000"
+      : "https://api.zadip.sa";
+  const fetchPageSeo = async () => {
+    try {
+      const response = await axios.get(`${APP_URL}/get_head`, {
+        params: {
+          page: `${path}`,
+        },
+      });
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const fetchAllPageSeo = async () => {
+    try {
+      const response = await axios.get(`${APP_URL}/get_all`);
+      setAllPageData(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   React.useEffect(() => {
     setLoading(true);
-    const fetchItem = async () => {
-      let APP_URL =
-        process.env.NODE_ENV === "development"
-          ? "http://localhost:5000"
-          : "https://api.zadip.sa";
-      try {
-        const response = await axios.get(`${APP_URL}/get_head`, {
-          params: {
-            page: `${path}`,
-          },
-        });
-        setData(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchItem();
+    fetchPageSeo();
+    fetchAllPageSeo();
   }, []);
   return getLayout(
     <>
@@ -151,7 +160,11 @@ const MyApp = ({
             />
           </>
         )}
+        <style
+          dangerouslySetInnerHTML={{ __html: allPageData[0]?.all_page_content }}
+        ></style>
       </Head>
+
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>

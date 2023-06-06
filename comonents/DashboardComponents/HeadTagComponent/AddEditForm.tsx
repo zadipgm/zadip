@@ -13,6 +13,7 @@ import {
   FormContainer,
 } from "./styled.components";
 import { useRouter } from "next/router";
+import { useTheme } from "styled-components";
 
 interface IProps {
   pageNameHandler: (param: string) => void;
@@ -49,6 +50,7 @@ const AddEditForm = ({
   setmetaOgDescriptions,
   setmetaOgImages,
 }: IProps) => {
+  const { colors } = useTheme();
   const router = useRouter();
   const [pageTitle, setPageTitle] = React.useState("");
   const [metaDescription, setMetaDescription] = React.useState("");
@@ -99,7 +101,7 @@ const AddEditForm = ({
         await axios.put(`${APP_URL}/updatehead/${dataid}`, updatebody);
         handleClick();
         setMessage("Page Head Data updated");
-        setColor("success");
+        setColor(colors.success);
         setPageTitle("");
         setMetaDescription("");
         setmetaKeyWordDescription("");
@@ -110,7 +112,7 @@ const AddEditForm = ({
       } catch (error) {
         if (error) {
           handleClick();
-          setColor("error");
+          setColor(colors.error);
           console.log(error);
           setMessage(error.response?.data?.msg);
         }
@@ -121,7 +123,7 @@ const AddEditForm = ({
         await axios.post(`${APP_URL}/set_head`, addbody);
         handleClick();
         setMessage("Page Head Data Added");
-        setColor("success");
+        setColor("#ffffff");
         setPageTitle("");
         setMetaDescription("");
         setmetaKeyWordDescription("");

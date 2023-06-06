@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import { useTheme } from "styled-components";
 import {
-  CertificateNumber,
   Goback,
   ImageWrapper,
   InputWrapper,
@@ -10,70 +9,126 @@ import {
   Title,
 } from "./styled";
 import QRcodeComponent from "../QRcode";
-import data from "dataLayer/certificate.json";
 import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
-import { arabicDate, englishDate } from "../hooks/certificateDate/iindex";
+import { arabicDate } from "../hooks/certificateDate/iindex";
+import { fetchUserData } from "../hooks/api/getUsers";
+import { findMaxNumber, useFetch } from "../hooks/api/certificate";
+import axios from "axios";
+import SimpleSnackbar from "comonents/ReuseAbleComponents/Snackbar";
 
 const GenerateCertificate = () => {
-  //find the max number of certificates
+  const [open, setOpen] = React.useState(false);
+  const [isComplete, setIsComplete] = React.useState(false);
+  const [message, setMessage] = React.useState("");
+  const [color, setColor] = React.useState("");
+  const [userData, setUserData] = React.useState([]);
 
-  let findMaxNumber = data.certificate
-    .map((max) => max.certificate_number)
-    .sort((a, b) => Number(b) - Number(a));
-  let maxNumber = Number(findMaxNumber[0]);
+  let APP_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:5000"
+      : "https://api.zadip.sa";
+  let fetchurl = `${APP_URL}/certificates` as RequestInfo | URL;
+  const { certificateData } = useFetch(fetchurl);
 
   const router = useRouter();
-  const { device } = useTheme();
-  const toFa = (n) => n.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
+  const { device, isLTR } = useTheme();
+  const toFa = (n) => n?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
   let page = device === "desktop" ? "preview" : "mpreview";
   let url = new URL(
     `https://zadip.sa/en//dashboard/certificate/mpreview/?idnumber=${router.query.idnumber}`
   );
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  React.useEffect(() => {
+    fetchUserData(setUserData);
+  }, []);
 
   //filter user by ID_number
-  let user = data.certificate.filter(
-    (u) => u.ID_number === router.query.idnumber
-  );
+  let user = userData?.filter((u) => u.nationalID === router.query.idnumber);
 
-  // Convert certificate number to a string
-  let arabicNumber = Number(maxNumber + 1);
-  let arabicStr = arabicNumber.toString();
-
+  const Create_Certificate = async () => {
+    let body = {
+      name: user[0]?.name_ar as string,
+      certificate_number: findMaxNumber(certificateData),
+      nationalID: user[0]?.nationalID as string,
+      gender: user[0]?.gender,
+      expiry_date: arabicDate,
+    };
+    try {
+      await axios.post(`${APP_URL}/create_certificate`, body);
+      handleClick();
+      setMessage("Certificate Generated successfully");
+      setIsComplete(true);
+      setColor("#0d880d");
+      setTimeout(function () {
+        setIsComplete(false);
+        setColor("#0d880d");
+        const win = window.open(
+          `/dashboard/certificate/${page}/?idnumber=${user[0]?.nationalID}`,
+          "_blank"
+        );
+        win.focus();
+      }, 2000);
+    } catch (error) {
+      if (error) {
+        handleClick();
+        setIsComplete(true);
+        setTimeout(function () {
+          setIsComplete(false);
+        }, 3000);
+        setColor("#ec0e0e");
+        console.log(error);
+        setMessage(
+          isLTR
+            ? error.response?.data?.message_en
+              ? error.response?.data?.message_en
+              : error.message
+            : error.response?.data?.message_ar
+            ? error.response?.data?.message_ar
+            : error.message
+        );
+      }
+      console.log(error);
+    }
+  };
   return (
     <div>
+      <SimpleSnackbar
+        open={open}
+        handleClose={handleClose}
+        message={message}
+        color={color}
+      />
       <Goback onClick={() => router.back()} className="back">
         Go back to list
       </Goback>
       <Title>Certificate Preview</Title>
       <ImageWrapper>
-        <img src="/images/certificate.jpeg" alt="certificate" />
-        <InputWrapper className="ID-number">{user[0]?.ID_number}</InputWrapper>
-        <InputWrapper className="Certificate-number">
-          {user[0]?.certificate_number}
-        </InputWrapper>
-        <InputWrapper className="Expire-Date">{englishDate}</InputWrapper>
-        <InputWrapper className="name">{user[0]?.name_en}</InputWrapper>
+        <img src={`/images/${user[0]?.gender}.jpg`} alt="certificate" />
         <InputWrapper className="ID-number-arabic">
-          {toFa(user[0].ID_number)}
+          {toFa(user[0]?.nationalID)}
         </InputWrapper>
         <InputWrapper className="Certificate-number-arabic">
-          {toFa(user[0]?.certificate_number)}
+          {toFa(findMaxNumber(certificateData))}
         </InputWrapper>
         <InputWrapper className="Expire-Date-arabic">
           {arabicDate.substring(0, 12) as string}
         </InputWrapper>
-        <InputWrapper className="name-arabic">{user[0].name_ar}</InputWrapper>
+        <InputWrapper className="name-arabic">{user[0]?.name_ar}</InputWrapper>
         <QRcodeComponent
           value={url as unknown as string}
-          width="80px"
-          height="80px"
+          width="61px"
+          height="61px"
         />
       </ImageWrapper>
 
-      <PreviewCertificate
-        href={`/dashboard/certificate/${page}/?idnumber=${user[0].ID_number}`}
-        target={"_blank"}
-      >
+      <PreviewCertificate onClick={Create_Certificate}>
         Generate Certificate
       </PreviewCertificate>
     </div>

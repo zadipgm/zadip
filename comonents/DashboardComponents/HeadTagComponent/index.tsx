@@ -2,6 +2,7 @@ import axios from "axios";
 import * as React from "react";
 import AddEditForm from "./AddEditForm";
 import { Container, Title } from "./styled.components";
+import AllPagesScript from "./AllPagesScript";
 
 const HeadTagComponent = () => {
   const [dataId, setDataID] = React.useState();
@@ -13,6 +14,8 @@ const HeadTagComponent = () => {
   const [metaOgTitle, setmetaOgTitle] = React.useState();
   const [metaOgDescription, setmetaOgDescription] = React.useState();
   const [metaOgImage, setmetaOgImage] = React.useState();
+  const [allpagesContent, setAllpagesContent] = React.useState("");
+  const [allpagesContentID, setAllpagesContentID] = React.useState();
   const fetchItem = async () => {
     let page = pageName.length > 0 ? pageName : "";
     let APP_URL =
@@ -42,14 +45,30 @@ const HeadTagComponent = () => {
       console.log(error);
     }
   };
+  const fetchAllSeo = async () => {
+    let APP_URL =
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:5000"
+        : "https://api.zadip.sa";
+    try {
+      setLoading(true);
+      await axios.get(`${APP_URL}/get_all`, {}).then((res) => {
+        setAllpagesContent(res.data[0].all_page_content);
+        setAllpagesContentID(res.data[0].id);
+        setLoading(false);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   React.useEffect(() => {
     fetchItem();
+    fetchAllSeo();
   }, [pageName]);
 
   const pageNameHandler = (param: React.SetStateAction<string>) => {
     setPageName(param);
   };
-
   return (
     <Container>
       <Title>{"Page Head Tag Data"}</Title>
@@ -70,6 +89,11 @@ const HeadTagComponent = () => {
         setmetaOgTitles={(param) => setmetaOgTitle(param)}
         setmetaOgDescriptions={(param) => setmetaOgDescription(param)}
         setmetaOgImages={(param) => setmetaOgImage(param)}
+      />
+      <AllPagesScript
+        setAllpagesContent={(param) => setAllpagesContent(param)}
+        allpagesContent={allpagesContent}
+        id={allpagesContentID}
       />
     </Container>
   );

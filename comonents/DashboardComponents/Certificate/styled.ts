@@ -8,75 +8,57 @@ export const Title = styled.h1`
 export const ImageWrapper = styled.div`
   text-align: center;
   position: relative;
+  width: 1024px;
+    height: 726px;
+    margin: 0 auto;
+    &.mobile{
+      width: 100%;
+      height: auto;
+    }
 `;
 export const InputWrapper = styled.div`
   position: absolute;
-  color: #465364;
+  color: #525252;
   font-weight: 500;
   font-family: "Cairo";
-  font-size: 18px;
-  &.mobile {
-    font-size: 8px;
-  }
+  font-size: 21px;
   font-family: "Cairo", sans-serif !important;
-
-  &.ID-number {
-    top: 29%;
-    left: 36%;
-    &.mobile {
-      left: 30%;
-    }
-  }
-  &.Certificate-number {
-    top: 34%;
-    left: 36%;
-    &.mobile {
-      left: 30%;
-    }
-  }
-  &.Expire-Date {
-    top: 39%;
-    left: 36%;
-    &.mobile {
-      left: 30%;
-    }
-  }
-  &.name {
-    top: 51%;
-    left: 29%;
-    &.mobile {
-      top: 50%;
-      left: 18%;
-    }
-  }
   &.ID-number-arabic {
-    top: 29%;
-    right: 34%;
+    top: 64.7%;
+    right: 78.8%;
     font-family: "Cairo", sans-serif !important;
     &.mobile {
-      right: 26%;
+      right: 79%;
+      font-size: 40px;
     }
   }
   &.Certificate-number-arabic {
-    top: 34%;
-    right: 34%;
+    top: 65.3%;
+    right: 55.5%;
     &.mobile {
-      right: 26%;
+    right: 55.5%;
+      font-size: 40px;
     }
   }
   &.Expire-Date-arabic {
-    top: 39%;
-    right: 34%;
+    top: 58.7%;
+    right: 79.4%;
+    font-size: 23px;
+    background: white;
     &.mobile {
-      right: 26%;
+      top: 58.8%;
+      right: 79.5%;
+    background: white;
+    font-size: 40px;
     }
   }
   &.name-arabic {
-    top: 51%;
-    right: 29%;
+    top: 30.4%;
+    right: 56.5%;
     &.mobile {
-      top: 50%;
-      right: 18%;
+      top: 31%;
+    right: 56.7%;
+    font-size: 33px;
     }
   }
   > input {

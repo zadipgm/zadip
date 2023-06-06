@@ -11,22 +11,27 @@ import {
 } from "@react-pdf/renderer";
 import { useRouter } from "next/router";
 import { styles } from "./previewStyle";
-import data from "dataLayer/certificate.json";
-import { arabicDate, englishDate } from "../hooks/certificateDate/iindex";
+import { arabicDate } from "../hooks/certificateDate/iindex";
+import { fetchUserData } from "../hooks/api/getUsers";
+import { useFetch } from "../hooks/api/certificate";
 const PreViewCertificate = () => {
   const router = useRouter();
   const [isClient, setIsClient] = React.useState(false);
-  const toFa = (n) => n.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
-
+  const toFa = (n) => n?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
+  const [userData, setUserData] = React.useState([]);
+  let APP_URL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:5000"
+      : "https://api.zadip.sa";
+  let fetchurl = `${APP_URL}/certificates` as RequestInfo | URL;
+  const { certificateData } = useFetch(fetchurl);
   React.useEffect(() => {
     setIsClient(true);
   }, []);
   let url = new URL(
     `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${router.query.idnumber}`
   );
-  let user = data.certificate.filter(
-    (u) => u.ID_number === router.query.idnumber
-  );
+
   // register font family for PDF
   Font.register({
     family: "Cairo",
@@ -36,7 +41,12 @@ const PreViewCertificate = () => {
       },
     ],
   });
-
+  //fetch user
+  React.useEffect(() => {
+    fetchUserData(setUserData);
+  }, []);
+  //filter user by ID_number
+  let user = userData?.filter((u) => u.nationalID === router.query.idnumber);
   let img = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${url}`;
   //day reverse
   let arabicDay = arabicDate.split("/")[0].toString();
@@ -49,15 +59,11 @@ const PreViewCertificate = () => {
   let reverseYear = arabicYear.split("هـ")[0].toString();
   let reverseYear_AR = reverseYear.split("").reverse().join("");
 
-  // find max number
-  let findMaxNumber = data.certificate
-    .map((max) => max.certificate_number)
-    .sort((a, b) => Number(b) - Number(a));
-  let maxNumber = Number(findMaxNumber[0]);
-  // Convert certificate number to a string
-  let arabicNumber = Number(maxNumber + 1);
-  let arabicStr = arabicNumber.toString();
+  let filter_certificate_number =
+    certificateData &&
+    certificateData?.filter((item) => item.nationalID === user[0]?.nationalID);
   // PDF Template
+
   const pdfTemplate = () => {
     return (
       isClient && (
@@ -65,29 +71,34 @@ const PreViewCertificate = () => {
           <Document language="ar">
             <Page size="A4" style={styles.page} orientation="landscape">
               <View style={styles.section} fixed>
-                <Image style={styles.image} src="/images/certificate.jpeg" />
-                <Text style={styles.ID}>{user[0].ID_number}</Text>
-                <Text style={styles.certificate}>
-                  {user[0]?.certificate_number}
-                </Text>
-                <Text style={styles.date}>{englishDate}</Text>
-                <Text style={styles.name}>{user[0].name_en}</Text>
+                <Image
+                  style={styles.image}
+                  src={`/images/${user[0]?.gender}.jpg`}
+                />
                 <Text style={styles.IDArabic}>
                   {" "}
                   {toFa(
-                    (user[0].ID_number as string)
-                      .split("")
+                    (user[0]?.nationalID as string)
+                      ?.split("")
                       .reverse()
                       .join("") as string
                   )}
                 </Text>
                 <Text style={styles.certificateArabic}>
-                  {toFa(user[0]?.certificate_number as unknown as string)}
+                  {
+                    toFa(
+                      filter_certificate_number &&
+                        filter_certificate_number[0]?.certificate_number
+                    )
+                      ?.split("")
+                      .reverse()
+                      .join("") as string
+                  }
                 </Text>
                 <Text
                   style={styles.dateArabic}
                 >{`${reverseDay}/${reverseMonth}/${reverseYear_AR}`}</Text>
-                <Text style={styles.nameArabic}>{user[0].name_ar}</Text>
+                <Text style={styles.nameArabic}>{user[0]?.name_ar}</Text>
                 <Image src={img} style={styles.qr} />
               </View>
             </Page>
