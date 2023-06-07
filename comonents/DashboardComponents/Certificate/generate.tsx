@@ -11,17 +11,24 @@ import {
 import QRcodeComponent from "../QRcode";
 import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
 import { arabicDate } from "../hooks/certificateDate/iindex";
-import { fetchUserData } from "../hooks/api/getUsers";
 import { findMaxNumber, useFetch } from "../hooks/api/certificate";
 import axios from "axios";
 import SimpleSnackbar from "comonents/ReuseAbleComponents/Snackbar";
 
-const GenerateCertificate = () => {
+interface IUser {
+  name_ar?: string;
+  nationalID?: string;
+  gender?: string;
+}
+interface IProps {
+  userData?: IUser[];
+}
+
+const GenerateCertificate = ({ userData }: IProps) => {
   const [open, setOpen] = React.useState(false);
   const [isComplete, setIsComplete] = React.useState(false);
   const [message, setMessage] = React.useState("");
   const [color, setColor] = React.useState("");
-  const [userData, setUserData] = React.useState([]);
 
   let APP_URL =
     process.env.NODE_ENV === "development"
@@ -45,13 +52,9 @@ const GenerateCertificate = () => {
     setOpen(false);
   };
 
-  React.useEffect(() => {
-    fetchUserData(setUserData);
-  }, []);
-
   //filter user by ID_number
   let user = userData?.filter((u) => u.nationalID === router.query.idnumber);
-
+  console.log(user);
   const Create_Certificate = async () => {
     let body = {
       name: user[0]?.name_ar as string,
@@ -69,11 +72,9 @@ const GenerateCertificate = () => {
       setTimeout(function () {
         setIsComplete(false);
         setColor("#0d880d");
-        const win = window.open(
-          `/dashboard/certificate/${page}/?idnumber=${user[0]?.nationalID}`,
-          "_blank"
+        router.push(
+          `/dashboard/certificate/${page}/?idnumber=${user[0]?.nationalID}`
         );
-        win.focus();
       }, 2000);
     } catch (error) {
       if (error) {
@@ -110,7 +111,10 @@ const GenerateCertificate = () => {
       </Goback>
       <Title>Certificate Preview</Title>
       <ImageWrapper>
-        <img src={`/images/${user[0]?.gender}.jpg`} alt="certificate" />
+        <img
+          src={`/images/${user[0]?.gender === "male" ? "male" : "female"}.jpg`}
+          alt="certificate"
+        />
         <InputWrapper className="ID-number-arabic">
           {toFa(user[0]?.nationalID)}
         </InputWrapper>
