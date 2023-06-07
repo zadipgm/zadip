@@ -10,8 +10,8 @@ export function middleware(request) {
             return NextResponse.redirect(url)
         } else if (cookie === 'true') {
             const url = request.nextUrl.clone()
-            url.pathname = '/dashboard'
-            return NextResponse.redirect(url)
+            url.pathname = '/ar/dashboard'
+            return NextResponse.rewrite(url)
 
         }
         return NextResponse.next()
@@ -19,5 +19,5 @@ export function middleware(request) {
 }
 
 export const config = {
-    matcher: ['/dashboard', '/dashboard/all_users', '/dashboard/bookings', '/dashboard/calendar', '/dashboard/head_tag', '/dashboard/ratings', '/dashboard/trainers']
+    matcher: ['/dashboard/', '/dashboard/all_users', '/dashboard/bookings', '/dashboard/calendar', '/dashboard/head_tag', '/dashboard/ratings', '/dashboard/trainers']
 }
