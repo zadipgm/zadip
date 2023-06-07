@@ -19,14 +19,16 @@ const MobilePreview = ({ data }: IProps) => {
   let filter_certificate =
     data && data?.filter((u) => u.nationalID === router.query.idnumber);
   const toFa = (n) => n?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
-
+  console.log("mpreview", data);
   return (
     <>
       {data && (
         <ImageWrapper className="mobile">
           <img
             src={`/images/${
-              filter_certificate && filter_certificate[0]?.gender
+              filter_certificate && filter_certificate[0]?.gender === "male"
+                ? "male"
+                : "female"
             }.jpg`}
             alt="certificate"
             width={"100%"}
@@ -39,7 +41,7 @@ const MobilePreview = ({ data }: IProps) => {
           </InputWrapper>
           <InputWrapper className="Certificate-number-arabic mobile">
             {toFa(
-              filter_certificate && filter_certificate[0].certificate_number
+              filter_certificate && filter_certificate[0]?.certificate_number
             )}
           </InputWrapper>
           <InputWrapper className="Expire-Date-arabic mobile">

@@ -33,7 +33,7 @@ const PreViewCertificate = ({ data }: IProps) => {
       filter_certificate && filter_certificate[0]?.nationalID
     }`
   );
-
+  console.log("prevuew", filter_certificate);
   // register font family for PDF
   Font.register({
     family: "Cairo",
