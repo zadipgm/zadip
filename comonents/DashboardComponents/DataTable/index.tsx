@@ -201,7 +201,7 @@ const DataTable = ({
     setShowActions(id);
   };
   const renderTableNestedHeader = () => {
-    let header = Object?.keys(data.length > 1 && data[0]?.procedures[0]);
+    let header = Object?.keys(data && data[0]?.procedures[0]);
     return (
       header &&
       header?.map((key, index) => {

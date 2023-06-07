@@ -26,12 +26,11 @@ const PreViewCertificate = ({ data }: IProps) => {
   const router = useRouter();
   const toFa = (n) => n?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
 
-  let filter_certificate =
-    data && data?.filter((item) => item.nationalID === router.query.idnumber);
+  let filter_certificate = data?.filter(
+    (item) => item.nationalID === router.query.idnumber
+  );
   let url = new URL(
-    `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${
-      filter_certificate && filter_certificate[0]?.nationalID
-    }`
+    `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${filter_certificate[0]?.nationalID}`
   );
   console.log("prevuew", filter_certificate);
   // register font family for PDF
@@ -60,55 +59,44 @@ const PreViewCertificate = ({ data }: IProps) => {
 
   const pdfTemplate = () => {
     return (
-      data && (
-        <PDFViewer style={styles.viewer}>
-          <Document language="ar">
-            <Page size="A4" style={styles.page} orientation="landscape">
-              <View style={styles.section} fixed>
-                <Image
-                  style={styles.image}
-                  src={`/images/${
-                    filter_certificate &&
-                    filter_certificate[0]?.gender === "male"
-                      ? "male"
-                      : "female"
-                  }.jpg`}
-                />
-                <Text style={styles.IDArabic}>
-                  {" "}
-                  {toFa(
-                    (
-                      filter_certificate &&
-                      (filter_certificate[0]?.nationalID as string)
-                    )
-                      ?.split("")
-                      .reverse()
-                      .join("") as string
-                  )}
-                </Text>
-                <Text style={styles.certificateArabic}>
-                  {
-                    toFa(
-                      filter_certificate &&
-                        filter_certificate[0]?.certificate_number
-                    )
-                      ?.split("")
-                      .reverse()
-                      .join("") as string
-                  }
-                </Text>
-                <Text
-                  style={styles.dateArabic}
-                >{`${reverseDay}/${reverseMonth}/${reverseYear_AR}`}</Text>
-                <Text style={styles.nameArabic}>
-                  {filter_certificate && filter_certificate[0]?.name}
-                </Text>
-                <Image src={img} style={styles.qr} />
-              </View>
-            </Page>
-          </Document>
-        </PDFViewer>
-      )
+      <PDFViewer style={styles.viewer}>
+        <Document language="ar">
+          <Page size="A4" style={styles.page} orientation="landscape">
+            <View style={styles.section} fixed>
+              <Image
+                style={styles.image}
+                src={`/images/${
+                  filter_certificate[0]?.gender === "male" ? "male" : "female"
+                }.jpg`}
+              />
+              <Text style={styles.IDArabic}>
+                {" "}
+                {toFa(
+                  (filter_certificate[0]?.nationalID as string)
+                    ?.split("")
+                    .reverse()
+                    .join("") as string
+                )}
+              </Text>
+              <Text style={styles.certificateArabic}>
+                {
+                  toFa(filter_certificate[0]?.certificate_number)
+                    ?.split("")
+                    .reverse()
+                    .join("") as string
+                }
+              </Text>
+              <Text
+                style={styles.dateArabic}
+              >{`${reverseDay}/${reverseMonth}/${reverseYear_AR}`}</Text>
+              <Text style={styles.nameArabic}>
+                {filter_certificate[0]?.name}
+              </Text>
+              <Image src={img} style={styles.qr} />
+            </View>
+          </Page>
+        </Document>
+      </PDFViewer>
     );
   };
   return <ContainerPdf>{pdfTemplate()}</ContainerPdf>;
