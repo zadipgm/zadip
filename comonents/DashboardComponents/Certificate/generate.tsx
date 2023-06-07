@@ -75,7 +75,7 @@ const GenerateCertificate = ({ userData }: IProps) => {
         router.push(
           `/dashboard/certificate/${page}/?idnumber=${user[0]?.nationalID}`
         );
-      }, 2000);
+      }, 1000);
     } catch (error) {
       if (error) {
         handleClick();
