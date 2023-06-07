@@ -12,28 +12,22 @@ import {
 import { useRouter } from "next/router";
 import { styles } from "./previewStyle";
 import { arabicDate } from "../hooks/certificateDate/iindex";
-import { fetchUserData } from "../hooks/api/getUsers";
-import { useFetch } from "../hooks/api/certificate";
-const PreViewCertificate = () => {
+interface IData {
+  name?: string;
+  gender?: string;
+  nationalID?: string;
+  certificate_number?: string;
+  expiry_date?: string;
+}
+interface IProps {
+  data?: IData[];
+}
+const PreViewCertificate = ({ data }: IProps) => {
   const router = useRouter();
-  const [isClient, setIsClient] = React.useState(false);
   const toFa = (n) => n?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
-  const [userData, setUserData] = React.useState([]);
-  let APP_URL =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:5000"
-      : "https://api.zadip.sa";
-  let fetchurl = `${APP_URL}/certificates` as RequestInfo | URL;
-  const { certificateData } = useFetch(fetchurl);
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   let filter_certificate =
-    certificateData &&
-    certificateData?.filter(
-      (item) => item.nationalID === router.query.idnumber
-    );
+    data && data?.filter((item) => item.nationalID === router.query.idnumber);
   let url = new URL(
     `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${
       filter_certificate && filter_certificate[0]?.nationalID
@@ -66,8 +60,7 @@ const PreViewCertificate = () => {
 
   const pdfTemplate = () => {
     return (
-      isClient &&
-      filter_certificate && (
+      data && (
         <PDFViewer style={styles.viewer}>
           <Document language="ar">
             <Page size="A4" style={styles.page} orientation="landscape">

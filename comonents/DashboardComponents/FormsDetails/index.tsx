@@ -2,25 +2,21 @@ import * as React from "react";
 import { useTheme } from "styled-components";
 import Charts from "../pieChart";
 import HomeCard from "../HomeCard";
-const FormsDetails = () => {
+interface IHomeData {
+  id: number;
+  Email: string;
+  MobileNumber: string;
+  Name: string;
+  Page: string;
+  ServiceName: string;
+}
+interface IProps {
+  data?: IHomeData[];
+}
+const FormsDetails = ({ data }: IProps) => {
+  console.log(data);
   const { translations } = useTheme();
-  const [data, setData] = React.useState([]);
-  const [isLoading, setLoading] = React.useState(false);
   let showdata = 10;
-  React.useEffect(() => {
-    setLoading(true);
-    let APP_URL =
-      process.env.NODE_ENV === "development"
-        ? "http://localhost:5000"
-        : "https://api.zadip.sa";
-    fetch(`${APP_URL}/get_zadipform`)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
-
   const serviceCounts = {} as any;
   data.forEach((service) => {
     serviceCounts[service.ServiceName] =
