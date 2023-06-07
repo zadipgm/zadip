@@ -27,7 +27,7 @@ const PreViewCertificate = ({ data }: IProps) => {
   const toFa = (n) => n?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
 
   let filter_certificate = data?.filter(
-    (item) => item.nationalID === router.query.idnumber
+    (item) => item.nationalID.trim() === router.query.idnumber
   );
   let url = new URL(
     `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${filter_certificate[0]?.nationalID}`
