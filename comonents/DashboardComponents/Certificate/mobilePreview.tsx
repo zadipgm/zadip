@@ -17,7 +17,7 @@ const MobilePreview = ({ data }: IProps) => {
   const router = useRouter();
   //filter user by ID_number
   let filter_certificate = data?.filter(
-    (u) => u.nationalID === router.query.idnumber
+    (u) => u.nationalID.trim() === router.query.idnumber
   );
   const toFa = (n) => n?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
   console.log("mpreview", data, filter_certificate);
