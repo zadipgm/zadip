@@ -29,7 +29,8 @@ export const InputWrapper = styled.div`
     font-family: "Cairo", sans-serif !important;
     &.mobile {
       right: 79%;
-      font-size: 40px;
+      top: 62.7%;
+      font-size: 10px;
     }
   }
   &.Certificate-number-arabic {
@@ -37,7 +38,8 @@ export const InputWrapper = styled.div`
     right: 55.5%;
     &.mobile {
     right: 55.5%;
-      font-size: 40px;
+    top: 63.3%;
+      font-size: 10px;
     }
   }
   &.Expire-Date-arabic {
@@ -46,19 +48,19 @@ export const InputWrapper = styled.div`
     font-size: 23px;
     background: white;
     &.mobile {
-      top: 58.8%;
+      top: 56.8%;
       right: 79.5%;
     background: white;
-    font-size: 40px;
+    font-size: 10px;
     }
   }
   &.name-arabic {
     top: 30.4%;
     right: 56.5%;
     &.mobile {
-      top: 31%;
+      top: 30%;
     right: 56.7%;
-    font-size: 33px;
+    font-size: 8px;
     }
   }
   > input {

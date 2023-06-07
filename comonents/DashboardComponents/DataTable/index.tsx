@@ -111,6 +111,7 @@ interface IProps {
   view?: boolean;
   isDelete?: boolean;
   classname?: string;
+  deleteHandler?: (param) => void;
 }
 const DataTable = ({
   data,
@@ -124,6 +125,7 @@ const DataTable = ({
   view,
   isDelete,
   classname,
+  deleteHandler,
 }: IProps) => {
   const { colors, locale } = useTheme();
   const router = useRouter();
@@ -297,126 +299,132 @@ const DataTable = ({
         <Table>
           <Row>{renderTableHeader()}</Row>
           {searchvalue &&
-            searchvalue?.slice(0, recordsPerPage as number)?.map((item) => {
-              let keys = Object?.keys(item)?.filter(
-                (procedure) => procedure !== "procedures"
-              );
+            searchvalue
+              ?.slice(0, recordsPerPage as number)
+              ?.map((item, index) => {
+                let keys = Object?.keys(item)?.filter(
+                  (procedure) => procedure !== "procedures"
+                );
 
-              return (
-                <>
-                  <Row key={item.id}>
-                    {filterByLocale(locale, keys).map((key, i) => {
-                      return <TableData key={i}>{`${item[key]}`}</TableData>;
-                    })}
-                    <TableData>
-                      <ActionWrapper onClick={() => actionHandler(item.id)}>
-                        <Actions>
-                          <div>Actions</div>
-                          <ArrowDown fill={colors.gray2} />
-                        </Actions>
-                        {open && showActions === item.id && (
-                          <ActionList
-                            className={
-                              showActions === item.id
-                                ? `show ${classname}`
-                                : "hide"
-                            }
-                          >
-                            {isEditable && (
-                              <ActionListItems>
-                                <InnerWrapper>
-                                  <EditSvg
-                                    fill={colors.darkBlue}
-                                    width="15px"
-                                    height="15px"
-                                  />
-                                </InnerWrapper>
-                                <span>Edit</span>
-                              </ActionListItems>
-                            )}
-                            {isDelete && (
-                              <ActionListItems>
-                                <InnerWrapper className="delete">
-                                  <DeleteSvg
-                                    fill={colors.red}
-                                    width="15px"
-                                    height="15px"
-                                  />
-                                </InnerWrapper>
-                                <span>Delete</span>
-                              </ActionListItems>
-                            )}
-                            {renewCertificate && (
-                              <ActionListItems
-                                onClick={() => renewCertificateHandler(item)}
-                              >
-                                <InnerWrapper>
-                                  <ViewMoreSvg
-                                    fill={colors.lightBlue}
-                                    width="15px"
-                                    height="15px"
-                                  />
-                                </InnerWrapper>
-                                <span>Renew Certificate</span>
-                              </ActionListItems>
-                            )}
-                            {generateCertificate && (
-                              <ActionListItems
-                                onClick={() => generateCertificateHandler(item)}
-                              >
-                                <InnerWrapper>
-                                  <ViewMoreSvg
-                                    fill={colors.lightBlue}
-                                    width="15px"
-                                    height="15px"
-                                  />
-                                </InnerWrapper>
-                                <span>Generate Certificate</span>
-                              </ActionListItems>
-                            )}
-                            {view && (
-                              <ActionListItems
-                                onClick={() => HandleViewDetails(item.id)}
-                              >
-                                <InnerWrapper>
-                                  <ViewMoreSvg
-                                    fill={colors.lightBlue}
-                                    width="15px"
-                                    height="15px"
-                                  />
-                                </InnerWrapper>
-                                <span>View</span>
-                              </ActionListItems>
-                            )}
-                          </ActionList>
-                        )}
-                      </ActionWrapper>
-                    </TableData>
-                  </Row>
-                  <Row className={active === item.id ? "show" : "hide"}>
-                    <br></br>
-                    {nestedTable && data[0]?.procedures.length > 1 && (
-                      <Row> {renderTableNestedHeader()}</Row>
-                    )}
-                    {item.procedures &&
-                      item.procedures.map((detail) => {
-                        return (
-                          <Row key={item.id} className="details-row">
-                            {Object.keys(detail).map((detail_key, i) => {
-                              return (
-                                <TableData key={i}>
-                                  {detail[detail_key]}
-                                </TableData>
-                              );
-                            })}
-                          </Row>
-                        );
+                return (
+                  <>
+                    <Row key={item.nationalID}>
+                      {filterByLocale(locale, keys).map((key, i) => {
+                        return <TableData key={i}>{`${item[key]}`}</TableData>;
                       })}
-                    <br></br>
-                  </Row>
-                </>
-              );
-            })}
+                      <TableData>
+                        <ActionWrapper onClick={() => actionHandler(item.id)}>
+                          <Actions>
+                            <div>Actions</div>
+                            <ArrowDown fill={colors.gray2} />
+                          </Actions>
+                          {open && showActions === item.id && (
+                            <ActionList
+                              className={
+                                showActions === item.id
+                                  ? `show ${classname}`
+                                  : "hide"
+                              }
+                            >
+                              {isEditable && (
+                                <ActionListItems>
+                                  <InnerWrapper>
+                                    <EditSvg
+                                      fill={colors.darkBlue}
+                                      width="15px"
+                                      height="15px"
+                                    />
+                                  </InnerWrapper>
+                                  <span>Edit</span>
+                                </ActionListItems>
+                              )}
+                              {isDelete && (
+                                <ActionListItems
+                                  onClick={() => deleteHandler(item.nationalID)}
+                                >
+                                  <InnerWrapper className="delete">
+                                    <DeleteSvg
+                                      fill={colors.red}
+                                      width="15px"
+                                      height="15px"
+                                    />
+                                  </InnerWrapper>
+                                  <span>Delete</span>
+                                </ActionListItems>
+                              )}
+                              {renewCertificate && (
+                                <ActionListItems
+                                  onClick={() => renewCertificateHandler(item)}
+                                >
+                                  <InnerWrapper>
+                                    <ViewMoreSvg
+                                      fill={colors.lightBlue}
+                                      width="15px"
+                                      height="15px"
+                                    />
+                                  </InnerWrapper>
+                                  <span>Renew Certificate</span>
+                                </ActionListItems>
+                              )}
+                              {generateCertificate && (
+                                <ActionListItems
+                                  onClick={() =>
+                                    generateCertificateHandler(item)
+                                  }
+                                >
+                                  <InnerWrapper>
+                                    <ViewMoreSvg
+                                      fill={colors.lightBlue}
+                                      width="15px"
+                                      height="15px"
+                                    />
+                                  </InnerWrapper>
+                                  <span>Generate Certificate</span>
+                                </ActionListItems>
+                              )}
+                              {view && (
+                                <ActionListItems
+                                  onClick={() => HandleViewDetails(item.id)}
+                                >
+                                  <InnerWrapper>
+                                    <ViewMoreSvg
+                                      fill={colors.lightBlue}
+                                      width="15px"
+                                      height="15px"
+                                    />
+                                  </InnerWrapper>
+                                  <span>View</span>
+                                </ActionListItems>
+                              )}
+                            </ActionList>
+                          )}
+                        </ActionWrapper>
+                      </TableData>
+                    </Row>
+                    <Row className={active === item.id ? "show" : "hide"}>
+                      <br></br>
+                      {nestedTable && data[0]?.procedures.length > 1 && (
+                        <Row> {renderTableNestedHeader()}</Row>
+                      )}
+                      {item.procedures &&
+                        item.procedures.map((detail) => {
+                          return (
+                            <Row key={item.id} className="details-row">
+                              {Object.keys(detail).map((detail_key, i) => {
+                                return (
+                                  <TableData key={i}>
+                                    {detail[detail_key]}
+                                  </TableData>
+                                );
+                              })}
+                            </Row>
+                          );
+                        })}
+                      <br></br>
+                    </Row>
+                  </>
+                );
+              })}
         </Table>
       )}
 

@@ -10,8 +10,14 @@ export const Container = styled.div`
     left: 0%;
     right: 87%;
   &.mobile-qr {
-    height: 80px;
-    left: 0%;
-    right: 84.8%;
+    max-width: unset;
+    left: 3.3%;
+    top: 3.9%;
+    height:unset;
+    margin: unset;
+    max-width:unset;
+    width: unset;
+    right: unset;;
+
   }
 `;
