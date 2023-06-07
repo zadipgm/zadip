@@ -28,8 +28,16 @@ const PreViewCertificate = () => {
   React.useEffect(() => {
     setIsClient(true);
   }, []);
+
+  let filter_certificate =
+    certificateData &&
+    certificateData?.filter(
+      (item) => item.nationalID === router.query.idnumber
+    );
   let url = new URL(
-    `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${router.query.idnumber}`
+    `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${
+      filter_certificate && filter_certificate[0]?.nationalID
+    }`
   );
 
   // register font family for PDF
@@ -41,12 +49,7 @@ const PreViewCertificate = () => {
       },
     ],
   });
-  //fetch user
-  React.useEffect(() => {
-    fetchUserData(setUserData);
-  }, []);
-  //filter user by ID_number
-  let user = userData?.filter((u) => u.nationalID === router.query.idnumber);
+
   let img = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${url}`;
   //day reverse
   let arabicDay = arabicDate.split("/")[0].toString();
@@ -59,26 +62,32 @@ const PreViewCertificate = () => {
   let reverseYear = arabicYear.split("هـ")[0].toString();
   let reverseYear_AR = reverseYear.split("").reverse().join("");
 
-  let filter_certificate_number =
-    certificateData &&
-    certificateData?.filter((item) => item.nationalID === user[0]?.nationalID);
   // PDF Template
 
   const pdfTemplate = () => {
     return (
-      isClient && (
+      isClient &&
+      filter_certificate && (
         <PDFViewer style={styles.viewer}>
           <Document language="ar">
             <Page size="A4" style={styles.page} orientation="landscape">
               <View style={styles.section} fixed>
                 <Image
                   style={styles.image}
-                  src={`/images/${user[0]?.gender}.jpg`}
+                  src={`/images/${
+                    filter_certificate &&
+                    filter_certificate[0]?.gender === "male"
+                      ? "male"
+                      : "female"
+                  }.jpg`}
                 />
                 <Text style={styles.IDArabic}>
                   {" "}
                   {toFa(
-                    (user[0]?.nationalID as string)
+                    (
+                      filter_certificate &&
+                      (filter_certificate[0]?.nationalID as string)
+                    )
                       ?.split("")
                       .reverse()
                       .join("") as string
@@ -87,8 +96,8 @@ const PreViewCertificate = () => {
                 <Text style={styles.certificateArabic}>
                   {
                     toFa(
-                      filter_certificate_number &&
-                        filter_certificate_number[0]?.certificate_number
+                      filter_certificate &&
+                        filter_certificate[0]?.certificate_number
                     )
                       ?.split("")
                       .reverse()
@@ -98,7 +107,9 @@ const PreViewCertificate = () => {
                 <Text
                   style={styles.dateArabic}
                 >{`${reverseDay}/${reverseMonth}/${reverseYear_AR}`}</Text>
-                <Text style={styles.nameArabic}>{user[0]?.name_ar}</Text>
+                <Text style={styles.nameArabic}>
+                  {filter_certificate && filter_certificate[0]?.name}
+                </Text>
                 <Image src={img} style={styles.qr} />
               </View>
             </Page>
