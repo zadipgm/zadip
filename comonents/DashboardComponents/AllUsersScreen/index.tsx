@@ -5,7 +5,7 @@ const AllUsersScreen = () => {
   const [userdata, setData] = React.useState([]);
   React.useEffect(() => {
     fetchUserData(setData);
-  }, [userdata]);
+  }, []);
   return (
     <>
       {userdata.length > 1 && (

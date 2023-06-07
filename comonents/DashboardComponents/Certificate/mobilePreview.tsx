@@ -14,35 +14,44 @@ const MobilePreview = () => {
   const { certificateData } = useFetch(fetchurl);
 
   //filter user by ID_number
-  let user = certificateData?.filter(
-    (u) => u.nationalID === router.query.idnumber
-  );
+  let filter_certificate =
+    certificateData &&
+    certificateData?.filter((u) => u.nationalID === router.query.idnumber);
   console.log;
   const toFa = (n) => n?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
 
   return (
     <>
-      {user && (
+      {filter_certificate && (
         <ImageWrapper className="mobile">
           <img
-            src={`/images/${user[0]?.gender}.jpg`}
+            src={`/images/${
+              filter_certificate && filter_certificate[0]?.gender
+            }.jpg`}
             alt="certificate"
             width={"100%"}
           />
           <InputWrapper className="ID-number-arabic mobile">
-            {toFa(user[0]?.nationalID as string)}
+            {toFa(
+              filter_certificate &&
+                (filter_certificate[0]?.nationalID as string)
+            )}
           </InputWrapper>
           <InputWrapper className="Certificate-number-arabic mobile">
-            {toFa(user[0].certificate_number)}
+            {toFa(
+              filter_certificate && filter_certificate[0].certificate_number
+            )}
           </InputWrapper>
           <InputWrapper className="Expire-Date-arabic mobile">
-            {user[0]?.expiry_date}
+            {filter_certificate && filter_certificate[0]?.expiry_date}
           </InputWrapper>
           <InputWrapper className="name-arabic mobile">
-            {user[0]?.name}
+            {filter_certificate && filter_certificate[0]?.name}
           </InputWrapper>
           <QRcodeComponent
-            value={`https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${user[0]?.nationalID}`}
+            value={`https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${
+              filter_certificate && filter_certificate[0]?.nationalID
+            }`}
             width={"127px"}
             height={"127px"}
             classname={"mobile-qr"}
