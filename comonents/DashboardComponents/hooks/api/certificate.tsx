@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+export const useFetcher = (args) => fetch(args).then((res) => res.json());
 export const useFetch = (url) => {
   const [certificateData, setdata] = useState(null);
   const [loading, setloading] = useState(true);
