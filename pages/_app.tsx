@@ -139,10 +139,7 @@ const MyApp = ({
               property="og:description"
               content={data[0]?.Meta_og_description}
             />
-            <meta
-              property={data[0]?.Meta_og_image}
-              content="https://zadip.com/favicons/favicon_96x96.png"
-            />
+            <meta property="og:image" content={data[0]?.Meta_og_image} />
           </>
         ) : (
           <>
@@ -154,10 +151,7 @@ const MyApp = ({
               property="og:description"
               content={data[0]?.Meta_og_description}
             />
-            <meta
-              property={data[0]?.Meta_og_image}
-              content="https://zadip.com/favicons/favicon_96x96.png"
-            />
+            <meta property="og:image" content={data[0]?.Meta_og_image} />
           </>
         )}
         <style
