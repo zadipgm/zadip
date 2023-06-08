@@ -132,6 +132,8 @@ const MyApp = ({
         {data && data[0]?.Page_Name === "all" ? (
           <>
             <title>{data[0]?.Page_Title}</title>
+            <meta name="robots" content="index,follow" />
+            <link href="https://zadip.sa" rel="canonical" />
             <meta name="description" content={data[0]?.Meta_Description} />
             <meta name="keywords" content={data[0]?.Meta_Keyword_Description} />
             <meta property="og:title" content={data[0]?.Meta_og_title} />
@@ -144,6 +146,8 @@ const MyApp = ({
         ) : (
           <>
             <title>{data[0]?.Page_Title}</title>
+            <meta name="robots" content="index,follow" />
+            <link href="https://zadip.sa" rel="canonical" />
             <meta name="description" content={data[0]?.Meta_Description} />
             <meta name="keywords" content={data[0]?.Meta_Keyword_Description} />
             <meta property="og:title" content={data[0]?.Meta_og_title} />
