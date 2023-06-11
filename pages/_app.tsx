@@ -158,9 +158,11 @@ const MyApp = ({
               content={data[0]?.Meta_og_description}
             />
             <meta property="og:type" content="website" />
+            <meta property="og:image:alt" content="about zadip" />
+            <meta property="og:image:type" content="image/png" />
             <meta property="og:image" content={data[0]?.Meta_og_image} />
-            <meta property="og:image:width" content="200" />
-            <meta property="og:image:height" content="200" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
           </>
         )}
         <style
