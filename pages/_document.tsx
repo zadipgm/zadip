@@ -19,6 +19,25 @@ class MyDocument extends Document {
     return (
       <Html dir={this.props.__NEXT_DATA__.locale === "ar" ? "rtl" : "ltr"}>
         <Head>
+          <meta property="og:url" content="https://zadip.sa" />
+          <meta property="og:site_name" content="zadip" />
+          <meta
+            property="og:title"
+            content="شركة مجموعة زاد المعلومات | ZADIP GROUP LTD"
+          />
+          <meta
+            property="og:description"
+            content=" شركة سعودية متخصصة في تقنية المعلومات تمتلك العديد من العلامات التجارية الرائدة "
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:image:alt" content="about zadip" />
+          <meta property="og:image:type" content="image/png" />
+          <meta
+            property="og:image"
+            content="https://zadip.sa/images/logo.png"
+          />
+          <meta property="og:image:width" content="200" />
+          <meta property="og:image:height" content="200" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="HandheldFriendly" content="true" />
           <link
