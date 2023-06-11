@@ -123,54 +123,44 @@ const MyApp = ({
   }, []);
   return getLayout(
     <>
-      <Head>
-        <meta
-          name="viewport"
-          key="viewport"
-          content="width=device-width, height=device-height ,initial-scale=1.0, shrink-to-fit=no"
-        />
-        {data && data[0]?.Page_Name === "all" ? (
-          <>
-            <title>{data[0]?.Page_Title}</title>
-            <meta name="robots" content="index,follow" />
-            <link href="https://zadip.sa" rel="canonical" />
-            <meta name="description" content={data[0]?.Meta_Description} />
-            <meta name="keywords" content={data[0]?.Meta_Keyword_Description} />
-            <meta property="og:title" content={data[0]?.Meta_og_title} />
-            <meta
-              property="og:description"
-              content={data[0]?.Meta_og_description}
-            />
-            <meta property="og:image" content={data[0]?.Meta_og_image} />
-          </>
-        ) : (
-          <>
-            <title>{data[0]?.Page_Title}</title>
-            <meta name="robots" content="index,follow" />
-            <link href="https://zadip.sa" rel="canonical" />
-            <meta name="description" content={data[0]?.Meta_Description} />
-            <meta name="keywords" content={data[0]?.Meta_Keyword_Description} />
-            <meta property="og:url" content="https://zadip.sa" />
-            <meta property="og:site_name" content="zadip" />
-            <meta property="og:title" content={data[0]?.Meta_og_title} />
-            <meta
-              property="og:description"
-              content={data[0]?.Meta_og_description}
-            />
-            <meta property="og:type" content="website" />
-            <meta property="og:image:alt" content="about zadip" />
-            <meta property="og:image:type" content="image/png" />
-            <meta property="og:image" content={data[0]?.Meta_og_image} />
-            <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="630" />
-          </>
-        )}
-        <style
-          dangerouslySetInnerHTML={{ __html: allPageData[0]?.all_page_content }}
-        ></style>
-      </Head>
-
       <ThemeProvider theme={theme}>
+        <Head>
+          <meta
+            name="viewport"
+            key="viewport"
+            content="width=device-width, height=device-height ,initial-scale=1.0, shrink-to-fit=no"
+          />
+          {data && (
+            <>
+              <title>{data[0]?.Page_Title}</title>
+              <meta name="robots" content="index,follow" />
+              <link href="https://zadip.sa" rel="canonical" />
+              <meta name="description" content={data[0]?.Meta_Description} />
+              <meta
+                name="keywords"
+                content={data[0]?.Meta_Keyword_Description}
+              />
+              <meta property="og:url" content="https://zadip.sa" />
+              <meta property="og:site_name" content="zadip" />
+              <meta property="og:title" content={data[0]?.Meta_og_title} />
+              <meta
+                property="og:description"
+                content={data[0]?.Meta_og_description}
+              />
+              <meta property="og:type" content="website" />
+              <meta property="og:image:alt" content="about zadip" />
+              <meta property="og:image:type" content="image/png" />
+              <meta property="og:image" content={data[0]?.Meta_og_image} />
+              <meta property="og:image:width" content="1200" />
+              <meta property="og:image:height" content="630" />
+            </>
+          )}
+          <style
+            dangerouslySetInnerHTML={{
+              __html: allPageData[0]?.all_page_content,
+            }}
+          ></style>
+        </Head>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
