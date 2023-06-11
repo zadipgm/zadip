@@ -150,12 +150,17 @@ const MyApp = ({
             <link href="https://zadip.sa" rel="canonical" />
             <meta name="description" content={data[0]?.Meta_Description} />
             <meta name="keywords" content={data[0]?.Meta_Keyword_Description} />
+            <meta property="og:url" content="https://zadip.sa" />
+            <meta property="og:site_name" content="zadip" />
             <meta property="og:title" content={data[0]?.Meta_og_title} />
             <meta
               property="og:description"
               content={data[0]?.Meta_og_description}
             />
+            <meta property="og:type" content="website" />
             <meta property="og:image" content={data[0]?.Meta_og_image} />
+            <meta property="og:image:width" content="200" />
+            <meta property="og:image:height" content="200" />
           </>
         )}
         <style
