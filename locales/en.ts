@@ -177,6 +177,11 @@ const english = {
   serviceDetails: "Requested Services Details",
   editSuccessHeading: "Success!",
   verify: "Verify",
+  pagenotfound: {
+    message: " Sorry... You are unable to access this page",
+    description:
+      "The page you are trying to access no longer exits, is unavailable due to technical issues, or you have entered the wrong link.",
+  },
   resetPassWord: "Reset Password",
   newPassWord: "Enter your new password",
   userRequestedServices: "User Requested Services",
