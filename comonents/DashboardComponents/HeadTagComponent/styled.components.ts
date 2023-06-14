@@ -6,11 +6,15 @@ text-align:center;
 margin:30px 0px ;
 color:${({ theme }) => theme.colors.lightBlue} ;
 `
-export const Form = styled.form` `
-export const FormContainer = styled.div`
- background-color:#1212121f;
+export const Form = styled.form`
+background-color:#f9f9f91f;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
  padding: 20px;
     border-radius:20px ;
+    margin: 30px 0px;
+`
+export const FormContainer = styled.div`
+ 
 `
 export const FormWrapper = styled.div`
 display:flex ;
@@ -32,6 +36,9 @@ padding:12px ;
     display: flex;
     justify-content:flex-start ;
     align-items:center ;
+    width:100% ;
+}
+& .MuiFormControl-root{
     width:100% ;
 }
 `

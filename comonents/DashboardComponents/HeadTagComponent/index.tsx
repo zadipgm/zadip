@@ -14,6 +14,7 @@ const HeadTagComponent = () => {
   const [metaOgTitle, setmetaOgTitle] = React.useState();
   const [metaOgDescription, setmetaOgDescription] = React.useState();
   const [metaOgImage, setmetaOgImage] = React.useState();
+  const [metaOgEditUrl, setmetaOgEditUrl] = React.useState("");
   const [allpagesContent, setAllpagesContent] = React.useState("");
   const [allpagesContentID, setAllpagesContentID] = React.useState();
   const fetchItem = async () => {
@@ -38,7 +39,7 @@ const HeadTagComponent = () => {
           setmetaOgTitle(res.data[0].Meta_og_title);
           setmetaOgDescription(res.data[0].Meta_og_description);
           setmetaOgImage(res.data[0].Meta_og_image);
-
+          setmetaOgEditUrl(res.data[0].Meta_og_Url);
           setLoading(false);
         });
     } catch (error) {
@@ -71,7 +72,7 @@ const HeadTagComponent = () => {
   };
   return (
     <Container>
-      <Title>{"Page Head Tag Data"}</Title>
+      <Title>{"Meta Tags Content Management"}</Title>
       <AddEditForm
         pageNameHandler={(param) => pageNameHandler(param)}
         dataid={dataId}
@@ -79,16 +80,18 @@ const HeadTagComponent = () => {
         metaDescriptions={metaDescription}
         metaKeyWordDescriptions={metaKeyWordDescription}
         metaOgTitles={metaOgTitle}
-        metaOgDescriptions={metaOgDescription}
+        metaOgEditDescriptions={metaOgDescription}
         metaOgImages={metaOgImage}
         pageName={pageName}
         loading={loading}
+        metaOgEditUrl={metaOgEditUrl}
         setPageTitles={(param) => setPageTitle(param)}
         setMetaDescriptions={(param) => setMetaDescription(param)}
         setmetaKeyWordDescriptions={(param) => setmetaKeyWordDescription(param)}
         setmetaOgTitles={(param) => setmetaOgTitle(param)}
-        setmetaOgDescriptions={(param) => setmetaOgDescription(param)}
+        setmetaOgEditDescriptions={(param) => setmetaOgDescription(param)}
         setmetaOgImages={(param) => setmetaOgImage(param)}
+        setmetaOgEditUrl={(param) => setmetaOgEditUrl(param)}
       />
       <AllPagesScript
         setAllpagesContent={(param) => setAllpagesContent(param)}

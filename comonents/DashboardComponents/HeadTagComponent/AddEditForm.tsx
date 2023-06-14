@@ -1,20 +1,19 @@
 import * as React from "react";
 import axios from "axios";
-import SimpleSnackbar from "comonents/ReuseAbleComponents/Snackbar";
 
 import {
   Form,
   FormWrapper,
   Label,
   Submit,
-  TextArea,
   Wrapper,
   Select,
   FormContainer,
 } from "./styled.components";
 import { useRouter } from "next/router";
 import { useTheme } from "styled-components";
-
+import TextField from "@mui/material/TextField";
+import SimpleSnackbar from "comonents/ReuseAbleComponents/Snackbar";
 interface IProps {
   pageNameHandler: (param: string) => void;
   dataid: string;
@@ -24,14 +23,16 @@ interface IProps {
   metaDescriptions: string;
   metaKeyWordDescriptions: string;
   metaOgTitles: string;
-  metaOgDescriptions: string;
+  metaOgEditDescriptions: string;
   metaOgImages: string;
+  metaOgEditUrl: string;
   setPageTitles: (param) => void;
   setMetaDescriptions: (param) => void;
   setmetaKeyWordDescriptions: (param) => void;
   setmetaOgTitles: (param) => void;
-  setmetaOgDescriptions: (param) => void;
+  setmetaOgEditDescriptions: (param) => void;
   setmetaOgImages: (param) => void;
+  setmetaOgEditUrl: (param) => void;
 }
 const AddEditForm = ({
   pageNameHandler,
@@ -39,16 +40,19 @@ const AddEditForm = ({
   pageName,
   metaDescriptions,
   metaKeyWordDescriptions,
-  metaOgDescriptions,
+  metaOgEditDescriptions,
   metaOgImages,
+  metaOgEditUrl,
+
   metaOgTitles,
   pageTitles,
   setPageTitles,
   setMetaDescriptions,
   setmetaKeyWordDescriptions,
   setmetaOgTitles,
-  setmetaOgDescriptions,
+  setmetaOgEditDescriptions,
   setmetaOgImages,
+  setmetaOgEditUrl,
 }: IProps) => {
   const { colors } = useTheme();
   const router = useRouter();
@@ -59,6 +63,7 @@ const AddEditForm = ({
   const [metaOgTitle, setmetaOgTitle] = React.useState("");
   const [metaOgDescription, setmetaOgDescription] = React.useState("");
   const [metaOgImage, setmetaOgImage] = React.useState("");
+  const [metaOgUrl, setmetaOgUrl] = React.useState("");
   const [open, setOpen] = React.useState(false);
   const [color, setColor] = React.useState("");
   const [message, setMessage] = React.useState("");
@@ -82,8 +87,9 @@ const AddEditForm = ({
       Meta_Description: metaDescriptions,
       Meta_Keyword_Description: metaKeyWordDescriptions,
       Meta_og_title: metaOgTitles,
-      Meta_og_description: metaOgDescriptions,
+      Meta_og_description: metaOgEditDescriptions,
       Meta_og_image: metaOgImages,
+      Meta_og_Url: metaOgEditUrl,
       Page_Name: pageName,
     };
     let addbody = {
@@ -93,6 +99,7 @@ const AddEditForm = ({
       Meta_og_title: metaOgTitle,
       Meta_og_description: metaOgDescription,
       Meta_og_image: metaOgImage,
+      Meta_og_Url: metaOgUrl,
       Page_Name: pageName,
     };
     if (dataid) {
@@ -102,12 +109,6 @@ const AddEditForm = ({
         handleClick();
         setMessage("Page Head Data updated");
         setColor(colors.success);
-        setPageTitle("");
-        setMetaDescription("");
-        setmetaKeyWordDescription("");
-        setmetaOgTitle("");
-        setmetaOgDescription("");
-        setmetaOgImage("");
         setTimeout(() => router.reload(), 2000);
       } catch (error) {
         if (error) {
@@ -123,18 +124,19 @@ const AddEditForm = ({
         await axios.post(`${APP_URL}/set_head`, addbody);
         handleClick();
         setMessage("Page Head Data Added");
-        setColor("#ffffff");
+        setColor("#0d880d");
         setPageTitle("");
         setMetaDescription("");
         setmetaKeyWordDescription("");
         setmetaOgTitle("");
         setmetaOgDescription("");
         setmetaOgImage("");
+        setmetaOgUrl("");
         setTimeout(() => router.reload(), 2000);
       } catch (error: any) {
         if (error) {
           handleClick();
-          setColor("error");
+          setColor("#ec0e0e");
           console.log(error);
           setMessage(error.response?.data?.msg);
         }
@@ -182,63 +184,88 @@ const AddEditForm = ({
               </Wrapper>
               <FormWrapper>
                 <Wrapper>
-                  <Label htmlFor="title">{"Page Title"}</Label>
-                  <TextArea
+                  <TextField
                     required
+                    id="outlined-multiline-flexible"
+                    label="Title"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     value={pageTitles}
-                    placeholder={"Enter page title..."}
                     onChange={(e) => setPageTitles(e.target.value)}
+                    // helperText="Some important text"
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page Description">{"Page Description"}</Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaDescriptions}
-                    placeholder={"Enter Page Description"}
+                    id="outlined-multiline-flexible"
+                    label="Description"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setMetaDescriptions(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page Keywords Description">
-                    {"Page Keywords Description"}
-                  </Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaKeyWordDescriptions}
-                    placeholder={"Enter Page Keywords Description"}
+                    id="outlined-multiline-flexible"
+                    label="Keywords Description"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setmetaKeyWordDescriptions(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page og:title">{"Page og:title"}</Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaOgTitles}
-                    placeholder={"Enter Page og:title "}
+                    id="outlined-multiline-flexible"
+                    label="og:title"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setmetaOgTitles(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page og:description">
-                    {"Page og:description"}
-                  </Label>
-                  <TextArea
+                  <TextField
                     required
-                    value={metaDescriptions}
-                    placeholder={"Enter og:description"}
-                    onChange={(e) => setmetaOgDescriptions(e.target.value)}
+                    value={metaOgEditDescriptions}
+                    id="outlined-multiline-flexible"
+                    label="og:description"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
+                    onChange={(e) => setmetaOgEditDescriptions(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page KeyWords Content">
-                    {"Page og:image"}
-                  </Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaOgImages}
-                    placeholder={"Enter Page og:image url"}
+                    id="outlined-multiline-flexible"
+                    label="og:image"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setmetaOgImages(e.target.value)}
+                  />
+                </Wrapper>
+                <Wrapper>
+                  <TextField
+                    required
+                    value={metaOgEditUrl}
+                    id="outlined-multiline-flexible"
+                    label="og:url"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
+                    onChange={(e) => setmetaOgEditUrl(e.target.value)}
                   />
                 </Wrapper>
               </FormWrapper>
@@ -271,63 +298,87 @@ const AddEditForm = ({
               </Wrapper>
               <FormWrapper>
                 <Wrapper>
-                  <Label htmlFor="title">{"Page Title"}</Label>
-                  <TextArea
+                  <TextField
                     required
                     value={pageTitle}
-                    placeholder={"Enter page title..."}
+                    id="outlined-multiline-flexible"
+                    label="Title"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setPageTitle(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page Description">{"Page Description"}</Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaDescription}
-                    placeholder={"Enter Page Description"}
+                    id="outlined-multiline-flexible"
+                    label="Description"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setMetaDescription(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page Keywords Description">
-                    {"Page Keywords Description"}
-                  </Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaKeyWordDescription}
-                    placeholder={"Enter Page Keywords Description"}
+                    id="outlined-multiline-flexible"
+                    label="Keywords Description"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setmetaKeyWordDescription(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page og:title">{"Page og:title"}</Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaOgTitle}
-                    placeholder={"Enter Page og:title "}
+                    id="outlined-multiline-flexible"
+                    label="og:title"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setmetaOgTitle(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page og:description">
-                    {"Page og:description"}
-                  </Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaOgDescription}
-                    placeholder={"Enter og:description"}
+                    id="outlined-multiline-flexible"
+                    label="og:description"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setmetaOgDescription(e.target.value)}
                   />
                 </Wrapper>
                 <Wrapper>
-                  <Label htmlFor="Page KeyWords Content">
-                    {"Page og:image"}
-                  </Label>
-                  <TextArea
+                  <TextField
                     required
                     value={metaOgImage}
-                    placeholder={"Enter Page og:image url"}
+                    id="outlined-multiline-flexible"
+                    label="og:image"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
                     onChange={(e) => setmetaOgImage(e.target.value)}
+                  />
+                </Wrapper>
+                <Wrapper>
+                  <TextField
+                    required
+                    value={metaOgUrl}
+                    id="outlined-multiline-flexible"
+                    label="og:url"
+                    multiline
+                    minRows={2}
+                    maxRows={4}
+                    onChange={(e) => setmetaOgUrl(e.target.value)}
                   />
                 </Wrapper>
               </FormWrapper>
