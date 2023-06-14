@@ -28,7 +28,10 @@ class MyDocument extends Document {
           />
           <meta name="robots" content="index,follow" />
           <link href="https://zadip.sa" rel="canonical" />
-          <MetaTags data={this.props.__NEXT_DATA__.props.data} />
+          <MetaTags
+            data={this.props.__NEXT_DATA__.props.data}
+            locale={this.props.__NEXT_DATA__.locale}
+          />
           <link
             rel="shortcut icon"
             type="image/x-icon"
