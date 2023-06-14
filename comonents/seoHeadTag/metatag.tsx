@@ -8,6 +8,7 @@ interface IDataProps {
   Meta_og_description: string;
   Meta_og_image: string;
   Page_Name: string;
+  Meta_og_Url: string;
 }
 interface IData {
   data: IDataProps[];
@@ -26,7 +27,7 @@ const MetaTags = ({ data }: IData) => {
         content={data[0]?.Meta_Keyword_Description}
         key={"keywords"}
       />
-      <meta property="og:url" content="https://zadip.sa" key={"og:url"} />
+      <meta property="og:url" content={data[0]?.Meta_og_Url} key={"og:url"} />
       <meta property="og:site_name" content="zadip" key={"og:site_name"} />
       <meta
         property="og:title"

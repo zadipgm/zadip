@@ -68,11 +68,11 @@ const SideNavBar = () => {
       panel: "panel2",
     },
     {
-      module_name: "Head Tag",
+      module_name: "Page SEO",
       icon: "formsSvg",
       page: [
         {
-          page_name: "Head tag",
+          page_name: "Meta Tags",
           page_link: "/dashboard/head_tag",
           icon: "",
         },

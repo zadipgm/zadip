@@ -1,64 +1,74 @@
- <!-- public/sitemap.xml -->
-   <xml version="1.0" encoding="UTF-8">
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-          <url>
-          <loc>http://www.zadip.sa/muaref</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-          <url>
-          <loc>http://www.zadip.sa/eGov_services/muqeem/</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-      
-          <url>
-          <loc>http://www.zadip.sa/eGov_services/tam/</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-         
-          <url>
-          <loc>http://www.zadip.sa/eGov_services/smartgate/</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-
-          <url>
-          <loc>http://www.zadip.sa/eGov_services/masarat/</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-
-          <url>
-          <loc>http://www.zadip.sa/professional_services/</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-
-          <url>
-          <loc>http://www.zadip.sa/client_partners/</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-
-          <url>
-          <loc>http://www.zadip.sa/about-us/</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-
-          <url>
-          <loc>http://www.zadip.sa/recruitment/</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-
-          <url>
-          <loc>http://www.zadip.sa</loc>
-          <lastmod>6/11/2023</lastmod>
-          <changefreq>monthly</changefreq>
-          </url>
-   </urlset>
-   </xml>
+<url>
+ <loc>http://www.zadip.sa/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/en/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+ <loc>http://www.zadip.sa/ar/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/muaref</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/eGov_services/muqeem/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/eGov_services/tam/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/eGov_services/smartgate/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/eGov_services/masarat/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/professional_services/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/client_partners/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+   <loc>http://www.zadip.sa/about-us/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/recruitment/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.zadip.sa/privacypolicy/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+</urlset>
