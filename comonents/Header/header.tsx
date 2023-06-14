@@ -1,7 +1,5 @@
 import * as React from "react";
 import {
-  Video,
-  VideoWrapper,
   ScrollTopButton,
   IconsWrapper,
   MainHeading,
@@ -18,12 +16,12 @@ import Link from "next/link";
 import MobileHeader from "./Mobile";
 import DesktopHeader from "./Desktop";
 import { useTheme } from "styled-components";
+import MainVedioComponent from "comonents/homePageComponents/vedioComponent";
 
 const Header = () => {
   const { translations, device } = useTheme();
   const router = useRouter();
   const [show, setShow] = React.useState(0);
-  const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
   const onScroll = () => {
     let navbar = document.getElementById("navbar");
     const scroll = document.documentElement.scrollTop;
@@ -35,10 +33,10 @@ const Header = () => {
       setShow(0);
     }
   };
-  window.addEventListener("scroll", onScroll);
-  const onLoadedData = () => {
-    setIsVideoLoaded(true);
-  };
+  React.useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       {/* ========Main Video======== */}
@@ -63,25 +61,8 @@ const Header = () => {
           {device === "desktop" && <DesktopHeader />}
         </Container>
       </HeaderNavbarWrapper>
-
-      {router.pathname === "/" && (
-        <VideoWrapper background={isVideoLoaded ? "rgba(0, 0, 0, 0.5)" : ""}>
-          <Video
-            poster="/images/thumb.png"
-            className="videoTag"
-            autoPlay
-            loop
-            muted
-            onLoadedData={onLoadedData}
-            style={{ opacity: isVideoLoaded ? 1 : 0 }}
-          >
-            <source
-              src="https://zadip-staging.netlify.app/videos/zadipvideo.mp4"
-              type="video/mp4"
-            />
-          </Video>
-        </VideoWrapper>
-      )}
+      {/* ========Main vedio======== */}
+      {router.pathname === "/" && <MainVedioComponent />}
       {/* ========DownIndicator======== */}
 
       {router.pathname === "/" && (

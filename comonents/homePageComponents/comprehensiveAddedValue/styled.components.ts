@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ComprehensiveContainer = styled.div`
 background-attachment: fixed;
 background-image:url("https://zadip.com/images/ntpbg.jpg") ;
-padding:50px 0px ;
+padding:50px 15px ;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;

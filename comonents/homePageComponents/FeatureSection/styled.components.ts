@@ -31,26 +31,34 @@ export const FeatureSectionContainer = styled.div`
         height: 134px;
     }
     ${({ theme }) =>
-        theme.isLTR
-            ? css`
+    theme.isLTR
+      ? css`
                direction:ltr ;
                 `
-            : css`
+      : css`
                 direction:rtl ;
                 `
-    }
+  }
     transition:.5s ease ;
     top:0 ;
     .slick-active{
      border:2px solid ${({ theme }) => theme.colors.lightBlue} ;
-    width: 150px;
+   
     transition:.5s ease ;
-    height: 130px;
+   
     border-radius: 10%;
     padding:0px 12px 12px 12px ;
     @media(max-width:600px){
     width:94px ;
     height:70px;
+    }
+    @media(min-width:600px){
+    width:94px ;
+    height:70px;
+    }
+    @media(min-width:1024px){
+      width: 150px;
+    height: 130px;
     }
     div > img{
             display:none ;   
@@ -67,12 +75,16 @@ export const FeatureSectionContainer = styled.div`
     display:flex !important ;
     justify-content:center ;
     align-items:center ;
-    flex-wrap:wrap ;
+    flex-wrap:wrap;
+    @media(min-width:1024px){
+  /* gap:80px; */
+  justify-content:space-between
+}
+    
 }
 .slick-dots li{
     transition:.5s ease-in ;
-    width:150px;
-    height:130px ;
+    
     padding:0px 12px 12px 12px ;
     border:2px solid transparent;
     @media(max-width:600px){
@@ -80,16 +92,19 @@ export const FeatureSectionContainer = styled.div`
     height:70px;
 }
 @media(min-width:600px){
+  width:94px;
+    height:70px;
     display:inline-block;
 }
 @media(min-width:1024px){
+  width:150px;
+    height:130px ;
     display:inline-block;
 }
 }
 `
 export const Wrapper = styled.div<{ path: string }>`
-width:130px;
-height:130px;
+
 display:flex;
 background-image: url(${({ path }) => path});
 background-position:center center;
@@ -107,15 +122,23 @@ cursor: pointer;
     width:70px;
     height:70px;
 }
+@media(min-width:600px){
+    width:70px;
+    height:70px;
+}
+@media(min-width:1024px){
+  width:130px;
+height:130px;
+}
 `
 export const FeatureSectionWrapper = styled.div`
 >a{
     text-decoration:none ;
     ${({ theme }) =>
-        theme.isLTR
-            ? css`
+    theme.isLTR
+      ? css`
         `
-            : css`
+      : css`
    margin-bottom:4px ;
     `}
 }
@@ -131,20 +154,20 @@ export const FeatureSectionWrapper = styled.div`
     background: #6c707c26;
     width:100% ; 
     ${({ theme }) =>
-        theme.isLTR
-            ? css`
+    theme.isLTR
+      ? css`
        height: 300px;
         `
-            : css`
+      : css`
         height: 278px;
     `}
     @media (max-width: 600px) {
     ${({ theme }) =>
-        theme.isLTR
-            ? css`
+    theme.isLTR
+      ? css`
        height: 300px;
         `
-            : css`
+      : css`
    height: 230px;
     `}
   }
@@ -245,7 +268,9 @@ width:100%;
       color:#fff ;
      background-color: ${({ theme }) => theme.colors.darkBlue};
     }
-    
+    @media (max-width: 600px) {
+      margin: 20px auto 20px auto;
+}
 }
 `;
 export const EktefaTitle = styled.h3<{ direction?: string }>`
@@ -253,11 +278,17 @@ font-size: 30px;
 margin:0 ;
 direction: ${({ direction }) => direction};
 color:#404854 ;
+@media (max-width: 600px) {
+text-align: center;
+}
 `;
 export const EktefaDescription = styled.p<{ direction: string }>`
 font-size: 18px;
 margin:0 ;
-direction: ${({ direction }) => direction}
+direction: ${({ direction }) => direction};
+@media (max-width: 600px) {
+text-align: center;
+}
 `;
 
 
