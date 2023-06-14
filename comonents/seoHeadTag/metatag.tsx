@@ -1,42 +1,48 @@
 import React from "react";
 interface IDataProps {
   id: number;
-  Page_Title: string;
-  Meta_Description: string;
-  Meta_Keyword_Description: string;
-  Meta_og_title: string;
-  Meta_og_description: string;
+  Page_Title_en: string;
+  Page_Title_ar: string;
+  Meta_Description_en: string;
+  Meta_Description_ar: string;
+  Meta_Keyword_Description_en: string;
+  Meta_Keyword_Description_ar: string;
+  Meta_og_title_en: string;
+  Meta_og_title_ar: string;
+  Meta_og_description_en: string;
+  Meta_og_description_ar: string;
   Meta_og_image: string;
   Page_Name: string;
   Meta_og_Url: string;
 }
 interface IData {
   data: IDataProps[];
+  locale: string;
 }
-const MetaTags = ({ data }: IData) => {
+const MetaTags = ({ data, locale }: IData) => {
   return (
     <>
-      <title>{data[0]?.Page_Title}</title>
+      <title>{data[0]?.[`Page_Title_${locale}`]}</title>
       <meta
         name="description"
-        content={data[0]?.Meta_Description}
+        content={data[0]?.[`Meta_Description_${locale}`]}
         key={"description"}
       />
       <meta
         name="keywords"
-        content={data[0]?.Meta_Keyword_Description}
+        content={data[0]?.[`Meta_Keyword_Description_${locale}`]}
         key={"keywords"}
       />
       <meta property="og:url" content={data[0]?.Meta_og_Url} key={"og:url"} />
       <meta property="og:site_name" content="zadip" key={"og:site_name"} />
       <meta
         property="og:title"
-        content={data[0]?.Meta_og_title}
+        content={data[0]?.[`Meta_og_title_${locale}`]}
         key={"og:title"}
       />
       <meta
         property="og:description"
-        content={data[0]?.Meta_og_description}
+        content={data[0]?.[`Meta_og_description_${locale}`]}
         key={"og:description"}
       />
       <meta property="og:type" content="website" key={"og:type"} />
