@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const Container = styled.div`
     margin:0 auto ;
+    padding: 15px;
 @media (min-width: 600px){
 width:100% ;
 }
@@ -15,7 +16,7 @@ h3{
     margin-bottom: 36px;
     font-size: 48px;
     line-height: 44px;
-    color: ${({theme})=>theme.colors.lightBlue};
+    color: ${({ theme }) => theme.colors.lightBlue};
 }
 display: flex;
 justify-content: center;
@@ -37,7 +38,7 @@ border-radius:10px ;
   width:100% ;
 }
 `
-export const ImageWrapper =styled.div`  
+export const ImageWrapper = styled.div`  
 padding: 15px;
 `
 export const BreadCrumbWrapper = styled.div`
@@ -55,7 +56,7 @@ text-align: center;
 }
 `
 export const Heading = styled.h2`
-color: ${({theme})=>theme.colors.lightBlue};
+color: ${({ theme }) => theme.colors.lightBlue};
 `
 export const OurHistory = styled.div`
 transition: .5s;
@@ -66,7 +67,7 @@ margin:15px ;
 padding:15px ;
 box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
 :hover{
-background: ${({theme})=>theme.colors.themeColor};
+background: ${({ theme }) => theme.colors.themeColor};
 color: #fff;
 transition: .5s;
 transform: translateY(-10px);
@@ -86,7 +87,7 @@ margin:30px 0px  ;
   display:block ;
 }
 `
-export const ClientWrapper= styled.div`
+export const ClientWrapper = styled.div`
 text-align: center;
 -webkit-transition: .5s;
 transition: .5s;
@@ -105,7 +106,7 @@ cursor: pointer;
 -webkit-transition: .5s;
 transition: .5s;
 :hover{
-background: ${({theme})=>theme.colors.themeColor};
+background: ${({ theme }) => theme.colors.themeColor};
 color: #fff;
 transition: .5s;
 transform: translateY(-10px);
@@ -121,26 +122,26 @@ border-radius:100% ;
 }
 }
 `
-export const ClientTitle= styled.h5`
+export const ClientTitle = styled.h5`
 margin: 0;
 color: #737c85;`
-export const ClientSector= styled.span`
+export const ClientSector = styled.span`
 color: #737c85;;
 `
-export const AllServices= styled.div``
+export const AllServices = styled.div``
 
-export const List= styled.ul`
+export const List = styled.ul`
 list-style-type:none ;
 padding:0 ;
 `
-export const ListItem= styled.li`
+export const ListItem = styled.li`
 display: flex;
 justify-content: flex-start;
 align-items: center;
 flex-wrap:wrap ;
 `
 
-export const AllServicesImageWrapper= styled.div`
+export const AllServicesImageWrapper = styled.div`
 width:200px;
 height:200px ;
 margin:12px ;

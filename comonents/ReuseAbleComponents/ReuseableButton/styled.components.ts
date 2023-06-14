@@ -31,7 +31,7 @@ svg{
   margin:0px 5px ;
 }
 &.mobile-button{
-  margin:20px 0px ;
+  margin:20px auto ;
 }
 @media(max-width:600px){
   margin:15px auto ;

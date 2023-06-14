@@ -3,10 +3,8 @@ import * as React from "react";
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppContext, AppProps } from "next/app";
-import Head from "next/head";
 import theme from "../global/theme";
 import { ThemeProvider } from "styled-components";
-import axios from "axios";
 import { useRouter } from "next/router";
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -16,6 +14,7 @@ interface Props extends AppProps {
     | typeof import("../locales/ar").default
     | typeof import("../locales/en").default;
   locale: string;
+  data: IDataProps[];
 }
 type AppPropsWithLayout = Props & {
   Component: NextPageWithLayout;
@@ -40,10 +39,6 @@ const MyApp = ({
   locale,
 }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page);
-  const [data, setData] = React.useState<IDataProps[]>([]);
-  const [allPageData, setAllPageData] = React.useState<IAllPageSeoProps[]>([]);
-  const [isLoading, setLoading] = React.useState(false);
-  const router = useRouter();
   // @ts-ignore
   theme.translations = translations;
   theme.isLTR = locale === "en-US" || locale === "en";
@@ -60,6 +55,20 @@ const MyApp = ({
       theme.device = "desktop";
     }
   }, []);
+
+  return getLayout(
+    <>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
+};
+MyApp.getInitialProps = async ({ router }: AppContext) => {
+  const { locale } = router;
+  const { default: arLocalStrings } = await import("../locales/ar");
+  const { default: enLocalStrings } = await import("../locales/en");
+  const translations = locale === "ar" ? arLocalStrings : enLocalStrings;
   let path: string;
 
   if (router.asPath === "/" || router.asPath === "") {
@@ -96,81 +105,8 @@ const MyApp = ({
     process.env.NODE_ENV === "development"
       ? "http://localhost:5000"
       : "https://api.zadip.sa";
-  const fetchPageSeo = async () => {
-    try {
-      const response = await axios.get(`${APP_URL}/get_head`, {
-        params: {
-          page: `${path}`,
-        },
-      });
-      setData(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const fetchAllPageSeo = async () => {
-    try {
-      const response = await axios.get(`${APP_URL}/get_all`);
-      setAllPageData(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  React.useEffect(() => {
-    setLoading(true);
-    fetchPageSeo();
-    fetchAllPageSeo();
-  }, []);
-  return getLayout(
-    <>
-      <ThemeProvider theme={theme}>
-        <Head>
-          {data && (
-            <>
-              {/* <meta property="og:url" content="https://zadip.sa" />
-              <meta property="og:site_name" content="zadip" />
-              <meta property="og:title" content={data[0]?.Meta_og_title} />
-              <meta
-                property="og:description"
-                content={data[0]?.Meta_og_description}
-              />
-              <meta property="og:type" content="website" />
-              <meta property="og:image:alt" content="about zadip" />
-              <meta property="og:image:type" content="image/png" />
-              <meta property="og:image" content={data[0]?.Meta_og_image} />
-              <meta property="og:image:width" content="200" />
-              <meta property="og:image:height" content="200" /> */}
-              <meta
-                name="viewport"
-                key="viewport"
-                content="width=device-width, height=device-height ,initial-scale=1.0, shrink-to-fit=no"
-              />
-              <title>{data[0]?.Page_Title}</title>
-              <meta name="robots" content="index,follow" />
-              <link href="https://zadip.sa" rel="canonical" />
-              <meta name="description" content={data[0]?.Meta_Description} />
-              <meta
-                name="keywords"
-                content={data[0]?.Meta_Keyword_Description}
-              />
-            </>
-          )}
-          <style
-            dangerouslySetInnerHTML={{
-              __html: allPageData[0]?.all_page_content,
-            }}
-          ></style>
-        </Head>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
-  );
-};
-MyApp.getInitialProps = async ({ router }: AppContext) => {
-  const { locale } = router;
-  const { default: arLocalStrings } = await import("../locales/ar");
-  const { default: enLocalStrings } = await import("../locales/en");
-  const translations = locale === "ar" ? arLocalStrings : enLocalStrings;
-  return { translations, locale };
+  const res = await fetch(`${APP_URL}/get_head?page=${path}`);
+  const data = await res.json();
+  return { translations, locale, data };
 };
 export default MyApp;
