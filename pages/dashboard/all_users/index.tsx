@@ -20,7 +20,7 @@ const Page: NextPageWithLayout = () => {
           <CircularProgress />
         </Box>
       ) : (
-        <AllUsersScreen userData={data} />
+        <AllUsersScreen userData={data} isLoading={isLoading} />
       )}
     </>
   );

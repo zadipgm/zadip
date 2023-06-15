@@ -7,6 +7,7 @@ import { useFetch } from "../hooks/api/certificate";
 import axios from "axios";
 import SimpleSnackbar from "comonents/ReuseAbleComponents/Snackbar";
 import { useTheme } from "styled-components";
+import { useRouter } from "next/router";
 interface IUser {
   name_ar?: string;
   name_en?: string;
@@ -46,18 +47,19 @@ const Certificate = ({ userData }: IProps) => {
   };
   let filter_user = userData.filter((user) => user.role !== "admin");
   const [certificate, setCertificate] = React.useState(null);
-
+  const router = useRouter();
   const deleteCertificate = async (id) => {
     try {
       await axios.delete(`${APP_URL}/delete_certificate/${id.trim()}`);
       handleClick();
       setMessage(
-        isLTR ? "User Added successfully!" : "تم تسجيل المستخدم بنجاح!"
+        isLTR ? "User Deleted successfully!" : "User Deleted successfully!"
       );
       setIsComplete(true);
       setTimeout(function () {
         setIsComplete(false);
-      }, 3000);
+        router.reload();
+      }, 1000);
       setColor("#0d880d");
     } catch (error) {
       if (error) {
@@ -116,8 +118,8 @@ const Certificate = ({ userData }: IProps) => {
           isEditable={false}
           generateCertificate={false}
           nestedTable={false}
-          renewCertificate={true}
-          view={false}
+          renewCertificate={false}
+          view={true}
           isDelete={true}
         />
       )}

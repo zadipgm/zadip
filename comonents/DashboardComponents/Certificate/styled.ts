@@ -23,23 +23,70 @@ export const InputWrapper = styled.div`
   font-family: "Cairo";
   font-size: 21px;
   font-family: "Cairo", sans-serif !important;
+  &.name-arabic {
+    top: 30.4%;
+    right: 56.5%;
+    &.mobile {
+      @media (min-width: 340px) {
+      top: 29.5%;
+    right: 56.7%;
+    font-size: 7px;
+      }
+      @media (min-width: 420px) {
+      top: 30%;
+      }
+      @media (min-width: 520px) {
+        top: 31%;
+        font-size: 11px;
+      }
+      @media (min-width: 620px) {
+        font-size: 31px;
+      }
+    }
+  }
   &.ID-number-arabic {
     top: 64.7%;
     right: 78.8%;
     font-family: "Cairo", sans-serif !important;
     &.mobile {
+      @media (min-width: 340px) {
       right: 79%;
-      top: 62.7%;
+      top: 61.5%;
       font-size: 10px;
+      }
+      @media (min-width: 420px) {
+      top: 62.5%;
+      }
+      @media (min-width: 520px) {
+        top: 63%;
+        font-size: 11px;
+      }
+      @media (min-width: 620px) {
+        font-size: 31px;
+        top: 65%;
+      }
     }
   }
   &.Certificate-number-arabic {
     top: 65.3%;
     right: 55.5%;
     &.mobile {
+      @media (min-width: 340px) {
     right: 55.5%;
-    top: 63.3%;
+    top: 62%;
       font-size: 10px;
+      }
+      @media (min-width: 420px) {
+        top: 63%;
+      }
+      @media (min-width: 520px) {
+        top: 64%;
+        font-size: 11px;
+      }
+      @media (min-width: 620px) {
+        font-size: 31px;
+        top: 65%;
+      }
     }
   }
   &.Expire-Date-arabic {
@@ -48,21 +95,26 @@ export const InputWrapper = styled.div`
     font-size: 23px;
     background: white;
     &.mobile {
-      top: 56.8%;
-      right: 79.5%;
+      @media (min-width: 340px) {
+        top: 55.9%;
+    right: 79.5%;
     background: white;
-    font-size: 10px;
+    font-size: 9px;
+      }
+      @media (min-width: 420px) {
+        top: 56.9%;
+      }
+      @media (min-width: 520px) {
+        top: 57.9%;
+        font-size: 11px;
+      }
+      @media (min-width: 620px) {
+        font-size: 31px;
+        top: 58.9%;
+      }
     }
   }
-  &.name-arabic {
-    top: 30.4%;
-    right: 56.5%;
-    &.mobile {
-      top: 30%;
-    right: 56.7%;
-    font-size: 8px;
-    }
-  }
+  
   > input {
     border: none;
     border-bottom: 1px solid gray;
@@ -162,6 +214,10 @@ export const PreviewCertificate = styled.a`
   }
   &.generate {
     margin: 15px;
+  }
+  &.mobile{
+    margin: 15px auto; 
+    padding: 8px 15px;
   }
 `;
 export const Goback = styled.div`
