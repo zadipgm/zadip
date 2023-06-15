@@ -17,6 +17,7 @@ const QRcodeComponent = ({ value, width, height, classname }: IProps) => {
         width={"50px"}
         height={"54px"}
         style={{ width: width, height: height }}
+        className={classname}
       />
     </Container>
   );

@@ -11,19 +11,22 @@ interface IUser {
 }
 interface IProps {
   userData?: IUser[];
+  isLoading?: boolean;
 }
-const AllUsersScreen = ({ userData }: IProps) => {
+const AllUsersScreen = ({ userData, isLoading }: IProps) => {
   return (
     <>
-      <DataTable
-        data={userData && userData}
-        title={"user"}
-        showFilter={false}
-        nestedTable={true}
-        isEditable={true}
-        view={true}
-        isDelete={true}
-      />
+      {!isLoading && (
+        <DataTable
+          data={userData && userData}
+          title={"user"}
+          showFilter={false}
+          nestedTable={true}
+          isEditable={true}
+          view={true}
+          isDelete={true}
+        />
+      )}
     </>
   );
 };

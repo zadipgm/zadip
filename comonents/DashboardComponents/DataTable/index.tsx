@@ -148,9 +148,18 @@ const DataTable = ({
   }, [indexOfLastRecord, indexOfFirstRecord]);
 
   // Entries to show
-  const HandleViewDetails = (id) => {
-    setActive(id);
-    setExpanded(!expanded);
+  const HandleViewDetails = (item) => {
+    setCertificate(item);
+    router.push({
+      pathname: `/${locale}/dashboard/certificate/generate`,
+      query: {
+        idnumber: item.nationalID,
+      },
+    });
+    setTimeout(() => {
+      setActive(item.id);
+      setExpanded(!expanded);
+    }, 2000);
   };
   const handlerChangeRows = (e) => {
     let value = e.target.value;
@@ -244,6 +253,7 @@ const DataTable = ({
       },
     });
   };
+
   return (
     <Container>
       <h1>List of all {title}</h1>
@@ -310,7 +320,15 @@ const DataTable = ({
                   <>
                     <Row key={item.nationalID}>
                       {filterByLocale(locale, keys).map((key, i) => {
-                        return <TableData key={i}>{`${item[key]}`}</TableData>;
+                        return (
+                          <TableData key={i}>
+                            {key === "id"
+                              ? index === 0
+                                ? 1
+                                : index + 1
+                              : `${item[key]}`}
+                          </TableData>
+                        );
                       })}
                       <TableData>
                         <ActionWrapper onClick={() => actionHandler(item.id)}>
@@ -384,7 +402,7 @@ const DataTable = ({
                               )}
                               {view && (
                                 <ActionListItems
-                                  onClick={() => HandleViewDetails(item.id)}
+                                  onClick={() => HandleViewDetails(item)}
                                 >
                                   <InnerWrapper>
                                     <ViewMoreSvg

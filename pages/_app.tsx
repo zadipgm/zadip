@@ -5,7 +5,6 @@ import type { NextPage } from "next";
 import type { AppContext, AppProps } from "next/app";
 import theme from "../global/theme";
 import { ThemeProvider } from "styled-components";
-import { useRouter } from "next/router";
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };

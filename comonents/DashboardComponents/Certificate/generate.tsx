@@ -129,6 +129,7 @@ const GenerateCertificate = ({ userData }: IProps) => {
           value={url as unknown as string}
           width="61px"
           height="61px"
+          classname="desktop-style"
         />
       </ImageWrapper>
 
