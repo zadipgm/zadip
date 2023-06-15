@@ -117,7 +117,7 @@ const MobilePreview = ({ data }: IProps) => {
               {filter_certificate[0]?.name}
             </InputWrapper>
             <QRcodeComponent
-              value={`https:zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${filter_certificate[0]?.nationalID}`}
+              value={`https:zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${filter_certificate[0]?.nationalID.trim()}`}
               width={"25px"}
               height={"25px"}
               classname={"mobile-qr mobile-style"}

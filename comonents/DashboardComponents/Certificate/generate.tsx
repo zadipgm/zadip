@@ -53,13 +53,15 @@ const GenerateCertificate = ({ userData }: IProps) => {
   };
 
   //filter user by ID_number
-  let user = userData?.filter((u) => u.nationalID === router.query.idnumber);
+  let user = userData?.filter(
+    (u) => u.nationalID.trim() === router.query.idnumber
+  );
   console.log(user);
   const Create_Certificate = async () => {
     let body = {
       name: user[0]?.name_ar as string,
       certificate_number: findMaxNumber(certificateData),
-      nationalID: user[0]?.nationalID as string,
+      nationalID: user[0]?.nationalID.trim() as string,
       gender: user[0]?.gender,
       expiry_date: arabicDate,
     };
@@ -73,7 +75,7 @@ const GenerateCertificate = ({ userData }: IProps) => {
         setIsComplete(false);
         setColor("#0d880d");
         router.push(
-          `/dashboard/certificate/${page}/?idnumber=${user[0]?.nationalID}`
+          `/dashboard/certificate/${page}/?idnumber=${user[0]?.nationalID.trim()}`
         );
       }, 1000);
     } catch (error) {

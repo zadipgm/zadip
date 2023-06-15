@@ -249,7 +249,7 @@ const DataTable = ({
     router.push({
       pathname: `/${locale}/dashboard/certificate/generate`,
       query: {
-        idnumber: item.nationalID,
+        idnumber: item.nationalID.trim(),
       },
     });
   };
