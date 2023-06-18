@@ -15,6 +15,9 @@ export const UserTitle = styled.h2`
 margin-top: 50px;
 text-align:center ;
 color:${({ theme }) => theme.colors.darkBlue} ;
+&.edit-header{
+    margin: unset;
+}
 `
 export const ContainerUser = styled.div`
 display:flex ;
@@ -101,6 +104,13 @@ export const UserSelect = styled.select`
     box-shadow: 0 0 0 0.1rem #2493f5;
     }
 `
+export const EditHeader = styled.div`
+display: flex;
+justify-content: flex-start;
+gap: 43%;
+    padding: 15px;
+    align-items: center;
+`
 export const Wrapper = styled.div`
     margin-bottom: 1rem;
     display: flex;
@@ -112,9 +122,9 @@ export const Wrapper = styled.div`
         margin: 17px;
     }
     &.edit-account{
-        width:100% ;
-        padding:20px 
+        width:50% ;
     }
+    
     &.password{
     position: relative;
     }

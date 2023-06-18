@@ -112,6 +112,7 @@ interface IProps {
   isDelete?: boolean;
   classname?: string;
   deleteHandler?: (param) => void;
+  edithandler?: (param) => void;
 }
 const DataTable = ({
   data,
@@ -126,6 +127,7 @@ const DataTable = ({
   isDelete,
   classname,
   deleteHandler,
+  edithandler,
 }: IProps) => {
   const { colors, locale } = useTheme();
   const router = useRouter();
@@ -135,6 +137,7 @@ const DataTable = ({
   const [active, setActive] = React.useState(null);
   const [showActions, setShowActions] = React.useState(null);
   const [open, setOpen] = React.useState(false);
+
   const [currentPage, setCurrentPage] = React.useState(1);
   const [recordsPerPage, setRecordPerPage] = React.useState(10);
   const [dataView, setDataView] = React.useState("table");
@@ -345,7 +348,9 @@ const DataTable = ({
                               }
                             >
                               {isEditable && (
-                                <ActionListItems>
+                                <ActionListItems
+                                  onClick={() => edithandler(item)}
+                                >
                                   <InnerWrapper>
                                     <EditSvg
                                       fill={colors.darkBlue}
@@ -546,9 +551,9 @@ const DataTable = ({
           />
         </PaginationOuterDiv>
         <div>
-          Showing {currentRecords && currentRecords[0].id} to{" "}
-          {currentRecords && currentRecords[currentRecords.length - 1].id} of{" "}
-          {data.length} entries
+          Showing {currentRecords && currentRecords[0]?.id} to{" "}
+          {currentRecords && currentRecords[currentRecords?.length - 1].id} of{" "}
+          {data?.length} entries
         </div>
       </PaginationWrapper>
     </Container>
