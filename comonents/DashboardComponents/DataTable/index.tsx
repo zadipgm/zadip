@@ -215,17 +215,19 @@ const DataTable = ({
     setShowActions(id);
   };
   const renderTableNestedHeader = () => {
-    let header = Object?.keys(data && data[0]?.procedures[0]);
-    return (
-      header &&
-      header?.map((key, index) => {
-        return (
-          <TableData className="table-header" key={index}>
-            {key.toUpperCase()}
-          </TableData>
-        );
-      })
-    );
+    if (data[0]?.procedures !== null) {
+      let header = Object?.keys(data && data[0]?.procedures[0]);
+      return (
+        header &&
+        header?.map((key, index) => {
+          return (
+            <TableData className="table-header" key={index}>
+              {key.toUpperCase()}
+            </TableData>
+          );
+        })
+      );
+    }
   };
   // Column keys
   const renderColumnKeys = () => {
@@ -426,9 +428,11 @@ const DataTable = ({
                     </Row>
                     <Row className={active === item.id ? "show" : "hide"}>
                       <br></br>
-                      {nestedTable && data[0]?.procedures.length > 1 && (
-                        <Row> {renderTableNestedHeader()}</Row>
-                      )}
+                      {nestedTable &&
+                        data[0]?.procedures !== null &&
+                        data[0]?.procedures.length > 1 && (
+                          <Row> {renderTableNestedHeader()}</Row>
+                        )}
                       {item.procedures &&
                         item.procedures.map((detail) => {
                           return (
