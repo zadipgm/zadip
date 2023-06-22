@@ -56,7 +56,6 @@ const GenerateCertificate = ({ userData }: IProps) => {
   let user = userData?.filter(
     (u) => u.nationalID.trim() === router.query.idnumber
   );
-  console.log(user);
   const Create_Certificate = async () => {
     let body = {
       name: user[0]?.name_ar as string,

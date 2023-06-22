@@ -11,6 +11,7 @@ import {
 } from "./styled.components";
 import Link from "next/link";
 import IconComponent from "comonents/ReuseAbleComponents/IconComponent";
+import { useRouter } from "next/router";
 
 interface IPage {
   page_name: string;
@@ -27,6 +28,7 @@ interface IProps {
   sideBarMenuData: IAccordion[];
 }
 const SideBarAccordions = ({ sideBarMenuData }: IProps) => {
+  const router = useRouter();
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
@@ -70,7 +72,10 @@ const SideBarAccordions = ({ sideBarMenuData }: IProps) => {
                 <PageWrapper>
                   {item.page.map((p, i) => {
                     return (
-                      <PageLinkWrapper key={i}>
+                      <PageLinkWrapper
+                        key={i}
+                        onClick={() => router.push(`${p.page_link}`)}
+                      >
                         <IconComponent
                           icon={p.icon}
                           width="25px"
