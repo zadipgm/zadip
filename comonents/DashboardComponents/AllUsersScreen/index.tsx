@@ -32,7 +32,6 @@ const AllUsersScreen = ({ userData, isLoading }: IProps) => {
 
   const handleCloseModal = () => setOpenModal(false);
   const editHandler = (item) => {
-    console.log("here is item", item);
     setEditData(item);
     setOpenModal(true);
   };
@@ -82,7 +81,6 @@ const AllUsersScreen = ({ userData, isLoading }: IProps) => {
       }
     }
   };
-  console.log("Start", userData);
   return (
     <>
       <SimpleSnackbar

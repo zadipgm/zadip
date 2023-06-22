@@ -32,7 +32,6 @@ const PreViewCertificate = ({ data }: IProps) => {
   let url = new URL(
     `https://zadip.sa/en/dashboard/certificate/mpreview/?idnumber=${filter_certificate[0]?.nationalID.trim()}`
   );
-  console.log("prevuew", filter_certificate);
   // register font family for PDF
   Font.register({
     family: "Cairo",
