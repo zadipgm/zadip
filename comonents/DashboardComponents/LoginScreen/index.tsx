@@ -80,7 +80,7 @@ const LoginScreen = () => {
       setIsComplete(true);
       setTimeout(function () {
         setIsComplete(false);
-        router.push(`dashboard`);
+        router.push(`${locale}/dashboard/`);
       }, 3000);
       setColor("#0d880d");
     } catch (error) {
