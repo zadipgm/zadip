@@ -3,14 +3,15 @@ export function middleware(request) {
 
     let cookie = request.cookies.get('isLogedIn')?.value
     const urld = request.nextUrl.clone()
-    if (urld.pathname = '/login') {
+    console.log("here is path", urld.pathname)
+    if (urld.pathname = '/login/') {
         if (cookie === undefined) {
             const url = request.nextUrl.clone()
-            url.pathname = '/login'
+            url.pathname = '/login/'
             return NextResponse.redirect(url)
         } else if (cookie === 'true') {
             const url = request.nextUrl.clone()
-            url.pathname = '/dashboard'
+            url.pathname = '/dashboard/'
             return NextResponse.rewrite(url)
 
         }
@@ -19,5 +20,5 @@ export function middleware(request) {
 }
 
 export const config = {
-    matcher: ['/dashboard']
+    matcher: ['/dashboard/', "/dashboard/all_users/", "/dashboard/head_tag/"]
 }
