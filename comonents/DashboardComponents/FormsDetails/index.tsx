@@ -14,7 +14,6 @@ interface IProps {
   data?: IHomeData[];
 }
 const FormsDetails = ({ data }: IProps) => {
-  console.log(data);
   const { translations } = useTheme();
   let showdata = 10;
   const serviceCounts = {} as any;
