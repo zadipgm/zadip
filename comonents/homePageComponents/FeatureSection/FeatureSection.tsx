@@ -4,7 +4,6 @@ import {
   FeatureSectionParent,
   EktefaWrapper,
   EktefaImageWrapper,
-  EktefaImage,
   EktefaDescriptionWrapper,
   EktefaTitle,
   EktefaDescription,
@@ -14,6 +13,7 @@ import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import Slider from "react-slick";
 import { useTheme } from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
 const FeatureSection = () => {
   const { isLTR, isRTL, translations, device, colors } = useTheme();
   const settings = {
@@ -85,7 +85,7 @@ const FeatureSection = () => {
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
-              <EktefaImage
+              <Image
                 src="/images/ektefa1.svg"
                 alt="ektefa"
                 width={device === "desktop" ? 657 : 350}
@@ -112,7 +112,7 @@ const FeatureSection = () => {
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
-              <EktefaImage
+              <Image
                 src="/images/nafeth.svg"
                 alt="nafeth"
                 width={device === "desktop" ? 657 : 350}
@@ -139,7 +139,7 @@ const FeatureSection = () => {
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
-              <EktefaImage
+              <Image
                 src="/images/mauref.svg"
                 alt="mauref"
                 width={device === "desktop" ? 657 : 350}
@@ -166,7 +166,7 @@ const FeatureSection = () => {
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
-              <EktefaImage
+              <Image
                 src="/images/ehtiwa.svg"
                 alt="ehtiwa"
                 width={device === "desktop" ? 657 : 350}
@@ -192,7 +192,7 @@ const FeatureSection = () => {
               </Link>
             </EktefaDescriptionWrapper>
             <EktefaImageWrapper>
-              <EktefaImage
+              <Image
                 src="/images/cadre.svg"
                 alt="ektefa"
                 width={device === "desktop" ? 657 : 350}

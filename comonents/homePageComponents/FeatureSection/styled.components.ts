@@ -230,14 +230,17 @@ padding:15px;
 @media (max-width:600px) {
 width:100%;
 }
-`;
-export const EktefaImage = styled.img`
-width:100% ;
+img >{
+  width:100% ;
 @media (max-width: 600px) {
 width:350px;
 max-height: 300px;
 }
+}
 `;
+// export const EktefaImage = styled.img`
+
+// `;
 export const EktefaDescriptionWrapper = styled.div`
 width: 40%;
 padding:15px;

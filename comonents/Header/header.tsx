@@ -17,6 +17,7 @@ import MobileHeader from "./Mobile";
 import DesktopHeader from "./Desktop";
 import { useTheme } from "styled-components";
 import MainVedioComponent from "comonents/homePageComponents/vedioComponent";
+import Image from "next/image";
 
 const Header = () => {
   const { translations, device } = useTheme();
@@ -47,11 +48,11 @@ const Header = () => {
         <Container>
           <Link href={"/"}>
             <LogoWrapper>
-              <img
+              <Image
                 src="/images/zadiplogo.png"
                 alt="logo"
                 width={150}
-                height={"100%"}
+                height={106}
               />
             </LogoWrapper>
           </Link>
