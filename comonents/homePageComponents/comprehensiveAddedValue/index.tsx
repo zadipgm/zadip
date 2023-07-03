@@ -19,8 +19,8 @@ const ComprehensiveAddedValue = () => {
           <Image
             src={"/images/vision2030.png"}
             alt={"2030"}
-            width={518}
-            height={323}
+            width={360}
+            height={225}
           />
         </ImageWrapper>
         <Description>

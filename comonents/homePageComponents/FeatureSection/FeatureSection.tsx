@@ -33,11 +33,11 @@ const FeatureSection = () => {
         className={`/images/pro${i + 1}.png`}
         path={`/images/pro${i + 1}.png`}
       >
-        <img
+        <Image
           src={`/images/progray${i + 1}.svg`}
           alt="products"
-          width={"100%"}
-          height={"100%"}
+          width={100}
+          height={100}
           className={"inactive"}
         />
       </Wrapper>

@@ -10,7 +10,7 @@ const MainVedioComponent = () => {
     <>
       <VideoWrapper background={isVideoLoaded ? "rgba(0, 0, 0, 0.5)" : ""}>
         <Video
-          poster="/images/thumb.png"
+          poster="/images/thumb.webp"
           className="videoTag"
           autoPlay
           loop

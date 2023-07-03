@@ -49,12 +49,15 @@ display:block ;
   > a > img{
         @media (max-width: 600px) {
         width:180px;
+        height: 120px;
         } 
         @media (min-width: 600px) {
         width:180px;
+        height:158px;
         }
         @media (min-width: 1024px) {
         width:70% ;
+        height:158px;
         }
     }
 }
