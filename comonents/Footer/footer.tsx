@@ -9,6 +9,7 @@ import {
   FooterLI,
   FooterSocialLink,
   FooterCopyRights,
+  ImageWrapper,
 } from "./styled.components";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -97,14 +98,16 @@ const Footer = () => {
               </FooterSocialLink>
             </FooterCol>
             <FooterCol className="logo">
-              <Link href={"/"}>
-                <Image
-                  src="/images/zadiplogo.png"
-                  alt="logo"
-                  width={240}
-                  height={189}
-                />
-              </Link>
+              <ImageWrapper>
+                <Link href={"/"}>
+                  <Image
+                    src="/images/zadiplogo.png"
+                    alt="logo"
+                    width={256}
+                    height={181}
+                  />
+                </Link>
+              </ImageWrapper>
             </FooterCol>
           </FooterMain>
         </FooterWrapper>

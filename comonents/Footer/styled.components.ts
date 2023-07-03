@@ -38,6 +38,9 @@ list-style: none;
 padding: 0;
 margin: 0;
 `
+export const ImageWrapper = styled.div`
+width: 100%;
+`
 export const FooterCol = styled.div`
 width: 33.3%;
 display:block ;
@@ -46,7 +49,10 @@ display:block ;
     @media (max-width: 600px) {
     text-align:unset ;
     }
-  > a > img{
+  > a{
+width: 100%;
+  }
+   > img{
         @media (max-width: 600px) {
         width:180px;
         height: 120px;

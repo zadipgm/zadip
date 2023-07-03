@@ -245,6 +245,11 @@ width:250px ;
 `
 
 export const LogoWrapper = styled.div`
+width: 150px;
+>img{
+  width: 100%;
+  height: 100%;
+}
 `
 export const MenuListWrapper = styled.div`
 display: flex;

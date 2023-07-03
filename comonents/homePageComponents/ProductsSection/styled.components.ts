@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 background-attachment: fixed;
 background-image:url("/images/bgimage.jpg") ;
-padding:50px 0px ;
+padding:30px 0px ;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
@@ -30,7 +30,6 @@ display:flex ;
 justify-content:center ;
 align-items:center ;
 > img{
-    width:30%;
     @media (max-width:600px){
     width: 100%;
 }
@@ -53,9 +52,11 @@ width:100% ;
     padding:15px ;
    
    
- transition: transform .2s;
+ transition: transform .5s;
  :hover{
   transform: scale(1.2); 
+  transition:.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
     }
 } 

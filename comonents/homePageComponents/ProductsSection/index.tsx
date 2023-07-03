@@ -3,6 +3,7 @@ import * as React from "react";
 import { useTheme } from "styled-components";
 import AnimationBar from "../../ReuseAbleComponents/AnimationBar/AnimationBar";
 import { Container, Wrapper, MainLogo, OtherLogo } from "./styled.components";
+import Image from "next/image";
 const ProductSection = () => {
   const { translations, locale } = useTheme();
 
@@ -17,7 +18,12 @@ const ProductSection = () => {
       <Container>
         <Wrapper>
           <MainLogo>
-            <img src="/images/eGov.svg" alt="" width={"100%"} height={"100%"} />
+            <Image
+              src="/images/eGov.svg"
+              alt="services"
+              width={645}
+              height={400}
+            />
           </MainLogo>
           <OtherLogo>
             <Link href={`/${locale}/eGov_services/muqeem`} className={"muqeem"}>
