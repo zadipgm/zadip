@@ -42,6 +42,13 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <iframe
+            title="gtm-title"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T7TKR52"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
           <Salesiq
             widgetCode={
               "d7c25406e79976420cc2efe548ff944ed75097dfb86910ae5e9214b0773aa0f1"

@@ -16,6 +16,7 @@ import Typography from "@mui/material/Typography";
 import Links from "@mui/material/Link";
 import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
+import Image from "next/image";
 const MuarefPage = () => {
   const { translations, colors } = useTheme();
   const breadcrumbs = [
@@ -31,7 +32,7 @@ const MuarefPage = () => {
       <BreadCrumbWrapper>
         <Heading>{translations?.featureTitleMuaref}</Heading>
 
-        <img src="/images/pro3.png" alt="muaref" width={100} height={60} />
+        <Image src="/images/pro3.png" alt="muaref" width={100} height={60} />
 
         <Breadcrumb color={""} breadcrumbs={breadcrumbs} />
       </BreadCrumbWrapper>

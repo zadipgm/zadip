@@ -90,7 +90,7 @@ transition:.5s ;
 > svg {
     width:20px ;
         height:20px ;
-        margin: 0px 6px ;
+        margin: 0px 4px ;
 }
 :hover {
     color: #6fc5e8;
@@ -113,7 +113,7 @@ transition: all 0.5s ease;
     svg {
         width:40px ;
         height:40px ;
-        margin: 0px 6px ;
+        margin: 0px 4px ;
         fill: #fff
     }
     :hover {
