@@ -42,12 +42,11 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <iframe
-            title="gtm-title"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-T7TKR52"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7TKR52"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+            }}
           />
           <Salesiq
             widgetCode={

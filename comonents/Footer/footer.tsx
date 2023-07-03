@@ -20,6 +20,7 @@ import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 import Link from "next/link";
 import { useTheme } from "styled-components";
+import Image from "next/image";
 const Footer = () => {
   const { translations, locale } = useTheme();
   const showInMapClicked = () => {
@@ -97,11 +98,11 @@ const Footer = () => {
             </FooterCol>
             <FooterCol className="logo">
               <Link href={"/"}>
-                <img
+                <Image
                   src="/images/zadiplogo.png"
                   alt="logo"
                   width={240}
-                  height={"100%"}
+                  height={189}
                 />
               </Link>
             </FooterCol>

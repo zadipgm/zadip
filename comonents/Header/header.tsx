@@ -53,6 +53,7 @@ const Header = () => {
                 alt="logo"
                 width={150}
                 height={106}
+                loading="eager"
               />
             </LogoWrapper>
           </Link>
