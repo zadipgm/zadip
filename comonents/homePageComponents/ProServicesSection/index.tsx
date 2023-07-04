@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import * as React from "react";
 import { useTheme } from "styled-components";
 import { Button } from "../../ReuseAbleComponents/ReuseableButton/styled.components";
@@ -11,9 +10,9 @@ import {
   Title,
   Wrapper,
 } from "./styled.components";
+import Image from "next/image";
 const ProfessionalServices = () => {
   const { device, translations, locale } = useTheme();
-  const router = useRouter();
   return (
     <Container>
       <Wrapper>
@@ -28,11 +27,11 @@ const ProfessionalServices = () => {
           )}
         </TextWrapper>
         <IamgeWrapper>
-          <img
+          <Image
             src="/images/proservice.webp"
             alt="proservice"
-            width={"100%"}
-            height={"100%"}
+            width={300}
+            height={300}
           />
           {device === "mobile" && (
             <Button

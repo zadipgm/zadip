@@ -46,7 +46,7 @@ const Recruitment = () => {
           }}
         ></Description>
         <img
-          src="/images/recruitment.svg"
+          src="/images/recruitment.webp"
           alt="recritment"
           width={100}
           height={100}

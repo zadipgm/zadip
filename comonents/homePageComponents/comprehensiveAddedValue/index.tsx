@@ -8,7 +8,6 @@ import {
   Wrapper,
 } from "./styled.components";
 import { useTheme } from "styled-components";
-import Image from "next/image";
 
 const ComprehensiveAddedValue = () => {
   const { translations } = useTheme();
@@ -16,11 +15,11 @@ const ComprehensiveAddedValue = () => {
     <ComprehensiveContainer>
       <Wrapper>
         <ImageWrapper>
-          <Image
-            src={"/images/vision2030.png"}
+          <img
+            src={"/images/vision2030.webp"}
             alt={"2030"}
-            width={360}
-            height={225}
+            width={"100%"}
+            height={"100%"}
           />
         </ImageWrapper>
         <Description>

@@ -51,7 +51,7 @@ const AboutUS = () => {
           ></AboutusDescription>
         </DesWrapper>
         <img
-          src="/images/abouts-side-svg.svg"
+          src="/images/abouts-side-svg.webp"
           alt="about-img"
           width={device === "desktop" ? "50%" : "100%"}
           height={"100%"}

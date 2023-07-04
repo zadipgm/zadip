@@ -238,18 +238,12 @@ max-height: 300px;
 }
 }
 `;
-// export const EktefaImage = styled.img`
-
-// `;
 export const EktefaDescriptionWrapper = styled.div`
 width: 40%;
 padding:15px;
 text-align:justify;
 @media (max-width: 600px) {
 width:100%;
-}
-> img {
-    /* margin:0 auto ; */
 }
 > a{
     text-decoration: none;

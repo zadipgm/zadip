@@ -71,25 +71,27 @@ const DesktopHeader = () => {
                     className="down-arrow-left"
                   />
                 </MenuListcontainer>
-                <ul>
-                  {header_data.cloud.map((item, index) => {
-                    return (
-                      <NavbarItemsList key={index}>
-                        <NavbarItemsLink
-                          href={item.link}
-                          target={
-                            translations?.muaref ===
-                            (isLTR ? item.name_en : item.name_ar)
-                              ? ""
-                              : "_blank"
-                          }
-                        >
-                          {isLTR ? item.name_en : item.name_ar}
-                        </NavbarItemsLink>
-                      </NavbarItemsList>
-                    );
-                  })}
-                </ul>
+                <div>
+                  <ul>
+                    {header_data.cloud.map((item, index) => {
+                      return (
+                        <NavbarItemsList key={index}>
+                          <NavbarItemsLink
+                            href={item.link}
+                            target={
+                              translations?.muaref ===
+                              (isLTR ? item.name_en : item.name_ar)
+                                ? ""
+                                : "_blank"
+                            }
+                          >
+                            {isLTR ? item.name_en : item.name_ar}
+                          </NavbarItemsLink>
+                        </NavbarItemsList>
+                      );
+                    })}
+                  </ul>
+                </div>
               </li>
             </NavbarItems>
 
@@ -168,19 +170,6 @@ const DesktopHeader = () => {
         <NavBarList>
           <Link href={"tel:// 9200 10047"}>920010047</Link>
         </NavBarList>
-        {/* <NavBarList>
-          <LangButton onClick={handleOpen}>Login</LangButton>
-          <ModalComponent
-            open={open}
-            handleClose={handleClose}
-            bgColor={"${({theme})=>theme.colors.themeColor};"}
-          >
-            <LogIn handleClose={handleClose} />
-          </ModalComponent>
-        </NavBarList> */}
-
-        {/* ========Lang Button======== */}
-
         <div>
           {locale === "ar" ? (
             <LangButton

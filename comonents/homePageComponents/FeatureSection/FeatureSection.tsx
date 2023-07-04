@@ -31,7 +31,7 @@ const FeatureSection = () => {
     customPaging: (i: any) => (
       <Wrapper
         className={`/images/pro${i + 1}.png`}
-        path={`/images/pro${i + 1}.png`}
+        path={`/images/pro${i + 1}.webp`}
       >
         <Image
           src={`/images/progray${i + 1}.svg`}
@@ -57,7 +57,7 @@ const FeatureSection = () => {
     <FeatureSectionParent>
       <AnimationBar
         headingColor={colors.lightBlue}
-        descriptionColor={"#737c85"}
+        descriptionColor={colors.darkGray}
         title={translations?.featureProduct}
         description={translations?.featureDescription as string}
         fontSize={"18px"}
