@@ -17,6 +17,7 @@ declare module "styled-components" {
       red: string;
       lightBlue: string;
       headerLightColor: string;
+      darkGray: string;
       white: string;
       black: string;
       black1: string;
@@ -39,6 +40,7 @@ const defaultTheme: DefaultTheme = {
     themeColor: "linear-gradient(-49deg,#022646cc 22%,#12baff);",
     lightThemeColor: "linear-gradient(-49deg,#09589d29 22%,#56ceff33);",
     headerLightColor: "linear-gradient(-49deg,#09589d29 22%,#56ceff33);",
+    darkGray: "#454647",
     darkBlue: "#044783",
     red: "#dd3737",
     lightBlue: "#0969a5d6",

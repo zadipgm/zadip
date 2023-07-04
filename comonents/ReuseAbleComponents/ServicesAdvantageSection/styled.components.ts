@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const VideoWrapper = styled.div`
 
 @media (max-width: 600px) {
+  padding: 15px;
   width:100% ;
 }
 @media (min-width: 600px) {

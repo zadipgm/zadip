@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 background-attachment: fixed;
-background-image:url("/images/bgimage.jpg") ;
+background-image:url("/images/bgimage.webp") ;
 padding:30px 0px ;
 background-repeat: no-repeat;
 background-size: cover;

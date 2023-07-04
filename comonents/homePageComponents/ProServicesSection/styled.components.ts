@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
 margin: 0 auto; 
 @media (max-width: 600px) {
     width:100% ;
@@ -73,6 +72,8 @@ width:50% ;
     height:100% ;
 }
 > img {
+    width: 100%;
+    height: auto;
 border-radius:20px ;
 }
 `
