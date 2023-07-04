@@ -71,27 +71,26 @@ const DesktopHeader = () => {
                     className="down-arrow-left"
                   />
                 </MenuListcontainer>
-                <div>
-                  <ul>
-                    {header_data.cloud.map((item, index) => {
-                      return (
-                        <NavbarItemsList key={index}>
-                          <NavbarItemsLink
-                            href={item.link}
-                            target={
-                              translations?.muaref ===
-                              (isLTR ? item.name_en : item.name_ar)
-                                ? ""
-                                : "_blank"
-                            }
-                          >
-                            {isLTR ? item.name_en : item.name_ar}
-                          </NavbarItemsLink>
-                        </NavbarItemsList>
-                      );
-                    })}
-                  </ul>
-                </div>
+
+                <ul>
+                  {header_data.cloud.map((item, index) => {
+                    return (
+                      <NavbarItemsList key={index}>
+                        <NavbarItemsLink
+                          href={item.link}
+                          target={
+                            translations?.muaref ===
+                            (isLTR ? item.name_en : item.name_ar)
+                              ? ""
+                              : "_blank"
+                          }
+                        >
+                          {isLTR ? item.name_en : item.name_ar}
+                        </NavbarItemsLink>
+                      </NavbarItemsList>
+                    );
+                  })}
+                </ul>
               </li>
             </NavbarItems>
 
