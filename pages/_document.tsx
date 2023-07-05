@@ -8,6 +8,7 @@ import Document, {
 } from "next/document";
 import Salesiq from "./salesiq";
 import MetaTags from "comonents/seoHeadTag/metatag";
+import GtmScript from "comonents/seoHeadTag/gtmScript";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -38,18 +39,10 @@ class MyDocument extends Document {
             href="/images/favicon.png"
           />
           <meta name="theme-color" content="#fff" />
-          <script
-            id="gtm-tags"
-            type="module"
-            dangerouslySetInnerHTML={{
-              __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-T7TKR52');
-          `,
-            }}
+          <GtmScript
+            all_page_content={
+              this.props.__NEXT_DATA__.props.allPagesScript[0]?.all_page_content
+            }
           />
         </Head>
         <body>
