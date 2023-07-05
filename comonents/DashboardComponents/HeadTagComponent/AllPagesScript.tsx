@@ -6,6 +6,7 @@ import SimpleSnackbar from "comonents/ReuseAbleComponents/Snackbar";
 import { useTheme } from "styled-components";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { TextField } from "@mui/material";
 interface IProps {
   setAllpagesContent: (param: string) => void;
   allpagesContent: string;
@@ -39,35 +40,48 @@ const AllPagesScript = ({
       all_page_content: allpagesContent,
     };
     if (id) {
-      try {
-        await axios.put(`${APP_URL}/add_all_update/${id}`, body);
-
-        handleClick();
-        setMessage("Page Head Data updated");
-        setColor(colors.success);
-        setAllpagesContent("");
-        router.reload();
-      } catch (error) {
-        if (error) {
+      if (allpagesContent?.includes("<script>")) {
+        try {
+          await axios.put(`${APP_URL}/add_all_update/${id}`, body);
           handleClick();
-          setColor(colors.error);
-          console.log(error);
-          setMessage(error.response?.data?.msg);
+          setMessage("Page Head Data updated");
+          setColor(colors.success);
+          setAllpagesContent("");
+          setTimeout(() => router.reload(), 2000);
+        } catch (error) {
+          if (error) {
+            handleClick();
+            setColor(colors.error);
+            console.log(error);
+            setMessage(error.response?.data?.msg);
+          }
         }
-      }
-    }
-    try {
-      await axios.post(`${APP_URL}/add_all`, body);
-      handleClick();
-      setMessage("Page Head Data updated");
-      setColor(colors.success);
-      setAllpagesContent("");
-    } catch (error) {
-      if (error) {
+      } else {
         handleClick();
+        setMessage("Please Include script tag in text input");
         setColor(colors.error);
-        console.log(error);
-        setMessage(error.response?.data?.msg);
+      }
+    } else {
+      if (allpagesContent?.includes("<script>")) {
+        try {
+          await axios.post(`${APP_URL}/add_all`, body);
+          handleClick();
+          setMessage("Page Head Data updated");
+          setColor(colors.success);
+          setAllpagesContent("");
+          setTimeout(() => router.reload(), 2000);
+        } catch (error) {
+          if (error) {
+            handleClick();
+            setColor(colors.error);
+            console.log(error);
+            setMessage(error.response?.data?.msg);
+          }
+        }
+      } else {
+        handleClick();
+        setMessage("Please Include script tag in text input");
+        setColor(colors.error);
       }
     }
   };
@@ -79,16 +93,17 @@ const AllPagesScript = ({
         message={message}
         color={color}
       />
-      {allpagesContent.length > 1 ? (
+      {id ? (
         <Form onSubmit={(e) => handelSubmit(e)}>
           <Wrapper className="all-pages">
-            <Label htmlFor="Add content for all pages">
-              {"Script for all pages"}
-            </Label>
-            <TextArea
+            <TextField
               required
+              id="outlined-multiline-flexible"
+              label="GTM script in head tag for all pages"
+              multiline
+              minRows={2}
+              maxRows={9}
               value={allpagesContent}
-              placeholder={"Enter content for all pages..."}
               onChange={(e) => setAllpagesContent(e.target.value)}
             />
           </Wrapper>

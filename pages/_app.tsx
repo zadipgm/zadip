@@ -106,6 +106,8 @@ MyApp.getInitialProps = async ({ router }: AppContext) => {
       : "https://api.zadip.sa";
   const res = await fetch(`${APP_URL}/get_head?page=${path}`);
   const data = await res.json();
-  return { translations, locale, data };
+  const resAllpagesScript = await fetch(`${APP_URL}/get_all`);
+  const allPagesScript = await resAllpagesScript.json();
+  return { translations, locale, data, allPagesScript };
 };
 export default MyApp;

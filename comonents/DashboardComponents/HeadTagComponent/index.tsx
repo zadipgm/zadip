@@ -72,8 +72,8 @@ const HeadTagComponent = () => {
     try {
       setLoading(true);
       await axios.get(`${APP_URL}/get_all`, {}).then((res) => {
-        setAllpagesContent(res.data[0].all_page_content);
-        setAllpagesContentID(res.data[0].id);
+        setAllpagesContent(res.data[0]?.all_page_content);
+        setAllpagesContentID(res.data[0]?.id);
         setLoading(false);
       });
     } catch (error) {
