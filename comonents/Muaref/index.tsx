@@ -18,7 +18,7 @@ import AnimationBar from "../ReuseAbleComponents/AnimationBar/AnimationBar";
 import OrderNowForm from "../ReuseAbleComponents/OrderNowForm";
 import Image from "next/image";
 const MuarefPage = () => {
-  const { translations, colors } = useTheme();
+  const { translations, colors, locale, device } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color={`${colors.lightBlue}`} href="/">
       {translations?.home}
@@ -89,6 +89,12 @@ const MuarefPage = () => {
         buttonTitle={translations?.requestService as string}
         icon={"salesSvg"}
         page={"Muaref"}
+        language={locale}
+        device={device}
+        eventType="userClick"
+        eventAction="onSubmit"
+        screenName={"Muaref"}
+        eventLabel={translations?.requestService as string}
       />
     </Container>
   );

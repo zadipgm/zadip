@@ -18,7 +18,7 @@ import ListComponent from "../ReuseAbleComponents/ListComponent";
 import list from "../../DataLayer/list.json";
 import _data from "../../DataLayer/professional_services.json";
 const ProfessionalServices = () => {
-  const { isLTR, translations, colors } = useTheme();
+  const { isLTR, translations, colors, locale, device } = useTheme();
   const breadcrumbs = [
     <Links underline="hover" key="1" color="#0196e3" href="/">
       {translations?.home}
@@ -72,6 +72,12 @@ const ProfessionalServices = () => {
         buttonTitle={translations?.contactsalesnow as string}
         icon={"salesSvg"}
         page={"Professional Services"}
+        language={locale}
+        device={device}
+        eventType="userClick"
+        eventAction="onSubmit"
+        screenName={"Professional Services"}
+        eventLabel={translations?.requestService as string}
       />
     </Container>
   );
