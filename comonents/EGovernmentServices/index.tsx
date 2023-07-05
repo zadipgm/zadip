@@ -20,7 +20,7 @@ import ListComponent from "../ReuseAbleComponents/ListComponent";
 import TamTable from "./TamTable";
 import SmartGateTable from "./SmartgateTable";
 const EGovernmentServices = () => {
-  const { translations, isLTR, colors } = useTheme();
+  const { translations, isLTR, colors, locale, device } = useTheme();
 
   const router = useRouter();
   const breadcrumbs = [
@@ -217,6 +217,12 @@ const EGovernmentServices = () => {
           buttonTitle={translations?.requestService as string}
           icon={"salesSvg"}
           page={filter_services[0]?.title_en}
+          language={locale}
+          device={device}
+          eventType="userClick"
+          eventAction="onSubmit"
+          screenName={filter_services[0]?.title_en}
+          eventLabel={translations?.requestService as string}
         />
       </Container>
     </>

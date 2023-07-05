@@ -24,6 +24,7 @@ import {
   Em,
 } from "./styled.components";
 import ChildModal from "../childModal";
+import { trackEvent } from "GTMs/libs";
 interface IProps {
   title: string;
   buttonTitle: string;
@@ -31,6 +32,12 @@ interface IProps {
   classname?: string;
   icon?: string;
   page: string;
+  screenName?: string;
+  eventType?: string;
+  eventAction?: string;
+  eventLabel?: string;
+  language?: string;
+  device?: string;
 }
 
 const ITEM_HEIGHT = 48;
@@ -50,6 +57,12 @@ const OrderNowForm: React.FC<IProps> = ({
   classname,
   icon,
   page,
+  screenName,
+  eventType,
+  eventAction,
+  eventLabel,
+  language,
+  device,
 }) => {
   const { isLTR, translations, colors } = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -122,6 +135,14 @@ const OrderNowForm: React.FC<IProps> = ({
       setEmail("");
       setNumber("");
       setServiceName([]);
+      trackEvent(
+        screenName,
+        eventType,
+        eventAction,
+        eventLabel,
+        language,
+        device
+      );
     } catch (error) {
       if (error) {
         setOpenSnack(false);

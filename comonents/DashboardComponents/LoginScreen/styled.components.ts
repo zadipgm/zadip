@@ -5,7 +5,7 @@ background:${({ theme }) => theme.colors.themeColor} ;
 width:100% ;
 height:100vh ;
 background-attachment: fixed;
-background-image:url("/images/bgimage.jpg") ;
+background-image:url("/images/bgimage.webp") ;
 padding:50px 0px ;
 background-repeat: no-repeat;
 background-size: cover;

@@ -11,8 +11,8 @@ export function middleware(request) {
             return NextResponse.redirect(url)
         } else if (cookie === 'true') {
             const url = request.nextUrl.clone()
-            url.pathname = '/dashboard/'
-            return NextResponse.rewrite(url)
+            url.pathname = urld.pathname
+            return NextResponse.next(url)
 
         }
         return NextResponse.next()
