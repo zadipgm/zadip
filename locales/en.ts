@@ -40,7 +40,6 @@ const english = {
   quickLinks: "Quick Links",
   egovService: "e-Gov services provider",
   elmpartner: "Through our long-standing partnership with Elm Company, we provide all organizations with the full range of e-government solutions to help them digitize their operations.",
-  location: " Prince Fahad Bin Ibrahim Al-Saud Road, Malaz, Riyadh",
   downloadComapnyPRofile: "Download Company Profile",
   followUs: "Follow Us",
   zadipGroups: " ZADIP Group",

@@ -162,11 +162,10 @@ const OrderNowForm: React.FC<IProps> = ({
     }
   };
   const services = [
-    `${translations.featureTitleEktefa}`,
-    `${translations.featureTitleNafeth}`,
-    `${translations.featureTitleEhtiwa}`,
-    `${translations.featureTitleMuaref}`,
-    `${translations.featureTitlecadre}`,
+    `${isLTR ? "Ektefa" : "خدمة اكتفاء"}`,
+    `${isLTR ? "Nafeth" : "خدمة نافذ"}`,
+    `${isLTR ? "Muaref" : "خدمة معرف"}`,
+    `${isLTR ? "Professional Services" : "خدمات احترافية"}`,
     `${isLTR ? "Tamm" : "خدمة تم"}`,
     `${isLTR ? "Muqeem" : "خدمة مقيم"}`,
     `${isLTR ? "Masarat" : "خدمة مسارات"}`,

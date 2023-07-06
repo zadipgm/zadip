@@ -15,7 +15,6 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import MyLocationOutlinedIcon from "@mui/icons-material/MyLocationOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
@@ -24,11 +23,7 @@ import { useTheme } from "styled-components";
 import Image from "next/image";
 const Footer = () => {
   const { translations, locale } = useTheme();
-  const showInMapClicked = () => {
-    window.open(
-      "https://maps.google.com?q=" + "24.653892364630916, 46.729899904499504"
-    );
-  };
+
   return (
     <>
       <FooterContainer>
@@ -37,12 +32,6 @@ const Footer = () => {
             <FooterCol>
               <FooterHeading>{translations?.contactUs}</FooterHeading>
               <FooterUL>
-                <FooterLI onClick={showInMapClicked}>
-                  <Link href="#">
-                    <MyLocationOutlinedIcon fontSize={"small"} />
-                    {translations?.location}
-                  </Link>
-                </FooterLI>
                 <FooterLI>
                   <Link href="tel:// 9200 10047">
                     <PhoneAndroidOutlinedIcon fontSize={"small"} /> 920010047
