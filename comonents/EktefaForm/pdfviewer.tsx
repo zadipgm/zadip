@@ -58,7 +58,7 @@ const MyPdfViewer = ({ pdfUrl }) => {
       const input = document.getElementById("rootElementId");
       html2canvas(input).then((canvas) => {
         const imgData = canvas.toDataURL("image/png");
-        const pdf = new jsPDF("p", "mm", [680, 300]);
+        const pdf = new jsPDF("p", "mm", [700, 320]);
         pdf.addImage(imgData, "JPEG", 0, 0, 0, 0);
         pdf.save(`ektefa.pdf`);
       });
