@@ -1,6 +1,7 @@
 const arabic = {
   language: "English",
   home: "الرئيسية",
+  ektefasubsForm: "نموذج اشتراك في خدمة اكتفاء",
   products: "المنتجات",
   services: "الخدمات",
   aboutUs: "عن المجموعة",

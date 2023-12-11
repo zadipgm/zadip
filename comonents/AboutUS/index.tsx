@@ -44,11 +44,10 @@ const AboutUS = () => {
       />
       <AboutCompanyWrapper>
         <DesWrapper>
-          <AboutusDescription
-            dangerouslySetInnerHTML={{
-              __html: translations?.aboutUsDescription as string,
-            }}
-          ></AboutusDescription>
+          <AboutusDescription>
+            {" "}
+            {translations?.aboutUsDescription as string}
+          </AboutusDescription>
         </DesWrapper>
         <img
           src="/images/abouts-side-svg.webp"

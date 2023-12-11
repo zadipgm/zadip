@@ -58,44 +58,46 @@ const PreViewCertificate = ({ data }: IProps) => {
 
   const pdfTemplate = () => {
     return (
-      <PDFViewer style={styles.viewer}>
-        <Document language="ar">
-          <Page size="A4" style={styles.page} orientation="landscape">
-            <View style={styles.section} fixed>
-              <Image
-                style={styles.image}
-                src={`/images/${
-                  filter_certificate[0]?.gender === "male" ? "male" : "female"
-                }.jpg`}
-              />
-              <Text style={styles.IDArabic}>
-                {" "}
-                {toFa(
-                  (filter_certificate[0]?.nationalID as string)
-                    ?.split("")
-                    .reverse()
-                    .join("") as string
-                )}
-              </Text>
-              <Text style={styles.certificateArabic}>
-                {
-                  toFa(filter_certificate[0]?.certificate_number)
-                    ?.split("")
-                    .reverse()
-                    .join("") as string
-                }
-              </Text>
-              <Text
-                style={styles.dateArabic}
-              >{`${reverseDay}/${reverseMonth}/${reverseYear_AR}`}</Text>
-              <Text style={styles.nameArabic}>
-                {filter_certificate[0]?.name}
-              </Text>
-              <Image src={img} style={styles.qr} />
-            </View>
-          </Page>
-        </Document>
-      </PDFViewer>
+      <>
+        <PDFViewer style={styles.viewer}>
+          <Document language="ar">
+            <Page size="A4" style={styles.page} orientation="landscape">
+              <View style={styles.section} fixed>
+                <Image
+                  style={styles.image}
+                  src={`/images/${
+                    filter_certificate[0]?.gender === "male" ? "male" : "female"
+                  }.jpg`}
+                />
+                <Text style={styles.IDArabic}>
+                  {" "}
+                  {toFa(
+                    (filter_certificate[0]?.nationalID as string)
+                      ?.split("")
+                      .reverse()
+                      .join("") as string
+                  )}
+                </Text>
+                <Text style={styles.certificateArabic}>
+                  {
+                    toFa(filter_certificate[0]?.certificate_number)
+                      ?.split("")
+                      .reverse()
+                      .join("") as string
+                  }
+                </Text>
+                <Text
+                  style={styles.dateArabic}
+                >{`${reverseDay}/${reverseMonth}/${reverseYear_AR}`}</Text>
+                <Text style={styles.nameArabic}>
+                  {filter_certificate[0]?.name}
+                </Text>
+                <Image src={img} style={styles.qr} />
+              </View>
+            </Page>
+          </Document>
+        </PDFViewer>
+      </>
     );
   };
   return <ContainerPdf>{pdfTemplate()}</ContainerPdf>;

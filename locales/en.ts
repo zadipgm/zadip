@@ -1,6 +1,7 @@
 const english = {
   language: "العربية",
   home: "Home",
+  ektefasubsForm: "Ektefa Subscription Form",
   products: "products",
   services: "services",
   aboutUs: "About Us",
