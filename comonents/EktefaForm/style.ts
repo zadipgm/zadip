@@ -30,6 +30,9 @@ export const Label = styled.div`
 `;
 export const Root = styled.div`
   position: relative;
+  width: 1170px;
+  max-width: 1170px;
+  min-width:1170px;
 `;
 export const NumberWrapper = styled.div`
  
