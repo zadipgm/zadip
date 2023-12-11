@@ -56,11 +56,19 @@ const MyPdfViewer = ({ pdfUrl }) => {
     setShow(true);
     setTimeout(() => {
       const input = document.getElementById("rootElementId");
-      html2canvas(input).then((canvas) => {
+      html2canvas(input, { scale: 1.5 }).then((canvas) => {
+        const componentWidth = input.offsetWidth;
+        const componentHeight = input.offsetHeight;
+        const orientation = componentWidth >= componentHeight ? "l" : "p";
         const imgData = canvas.toDataURL("image/png");
-        const pdf = new jsPDF("p", "mm", [700, 320]);
-        pdf.addImage(imgData, "JPEG", 0, 0, 0, 0);
-        pdf.save(`ektefa.pdf`);
+        const pdf = new jsPDF({
+          orientation,
+          unit: "px",
+        });
+        pdf.internal.pageSize.width = componentWidth;
+        pdf.internal.pageSize.height = componentHeight;
+        pdf.addImage(imgData, "PNG", 0, 0, componentWidth, componentHeight);
+        pdf.save("ektefa_form.pdf");
       });
     }, 300);
   };
