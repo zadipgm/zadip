@@ -5,7 +5,7 @@ import type { ReactElement } from "react";
 import AboutUS from "../../comonents/AboutUS";
 import EktefaForm from "comonents/EktefaForm";
 const Page: NextPageWithLayout = () => {
-  return <EktefaForm />;
+  return <>hello</>;
 };
 
 Page.getLayout = function getLayout(page: ReactElement) {
