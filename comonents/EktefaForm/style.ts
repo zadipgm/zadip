@@ -40,11 +40,13 @@ export const NumberWrapper = styled.div`
     top: 8.25%;
     left: 52.7%;
     background-color: white;
+    direction: ltr;
   &.fifteenlength {
     position: absolute;
     top: 8.25%;
     left: 13%;
     background-color: white;
+    direction: ltr;
   }
   &.ninelength {
     position: absolute;
