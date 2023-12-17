@@ -2,6 +2,9 @@ import styled from "styled-components"
 export const FooterContainer = styled.div`
 background: ${({ theme }) => theme.colors.themeColor};
 padding: 12px;
+&.ektefa_form{
+    display: none;
+}
 `
 export const FooterWrapper = styled.div`
 @media (max-width: 600px) {

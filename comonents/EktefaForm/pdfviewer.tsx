@@ -263,21 +263,21 @@ const MyPdfViewer = ({ pdfUrl }) => {
         </NameInput>
         <NameInput className="user4">
           {show === true ? (
-            <>{data.user3}</>
+            <>{data.user4}</>
           ) : (
             <input onChange={handleChange} type="text" name="user4" />
           )}
         </NameInput>
         <NameInput className="user5">
           {show === true ? (
-            <>{data.user3}</>
+            <>{data.user5}</>
           ) : (
             <input onChange={handleChange} type="text" name="user5" />
           )}
         </NameInput>
         <NameInput className="user6">
           {show === true ? (
-            <>{data.user3}</>
+            <>{data.user6}</>
           ) : (
             <input onChange={handleChange} type="text" name="user6" />
           )}

@@ -6,6 +6,9 @@ align-items:center ;
 height:99px ;
 width:100% ;
 margin:0 auto ;
+&.ektefa_form{
+  display: none;
+}
 @media(max-width:600px){
   width:100% ;
   padding: 15px;

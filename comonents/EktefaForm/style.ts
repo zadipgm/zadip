@@ -51,6 +51,7 @@ export const NumberWrapper = styled.div`
     top: 11.1%;
     left: 13.4%;
     background-color: white;
+    direction: ltr;
   }
   &.Tenlength{
     position: absolute;
@@ -59,22 +60,23 @@ export const NumberWrapper = styled.div`
     width: 24%;
     background-color: white;
     height: 28px;
+    direction: ltr;
   }
   &.Tenlength1{
-    width: 25.6%;
     position: absolute;
     top: 29.1%;
-    left: 42.8%;
+    left: 43.8%;
     height: 28px;
     background-color: white;
+    direction: ltr;
   }
   &.Tenlength2{
-    width: 25.6%;
     position: absolute;
     top: 30.3%;
-    left: 42.8%;
+    left: 43.8%;
     height: 28px;
     background-color: white;
+    direction: ltr;
   }
 `;
 export const DownloadButton = styled.button`
