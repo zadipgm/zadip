@@ -21,12 +21,15 @@ import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined
 import Link from "next/link";
 import { useTheme } from "styled-components";
 import Image from "next/image";
-const Footer = () => {
-  const { translations, locale } = useTheme();
+interface IProps {
+  classname?: string;
+}
+const Footer = ({ classname }: IProps) => {
+  const { translations, locale, device } = useTheme();
 
   return (
     <>
-      <FooterContainer>
+      <FooterContainer className={device === "mobile" ? classname : ""}>
         <FooterWrapper>
           <FooterMain>
             <FooterCol>

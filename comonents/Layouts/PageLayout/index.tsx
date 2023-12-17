@@ -7,9 +7,10 @@ import theme from "../../../global/theme";
 import { Container } from "./styled.components";
 interface IProps {
   children: ReactElement;
+  classname?: string;
 }
 
-const Layout: React.FC<IProps> = ({ children }) => {
+const Layout: React.FC<IProps> = ({ children, classname }) => {
   const [initialRenderComplete, setInitialRenderComplete] =
     React.useState(false);
 
@@ -21,9 +22,9 @@ const Layout: React.FC<IProps> = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Header />
+        <Header classname={classname} />
         <Container>{children}</Container>
-        <Footer />
+        <Footer classname={classname} />
       </ThemeProvider>
     </>
   );

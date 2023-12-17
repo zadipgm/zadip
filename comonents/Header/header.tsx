@@ -18,8 +18,10 @@ import DesktopHeader from "./Desktop";
 import { useTheme } from "styled-components";
 import MainVedioComponent from "comonents/homePageComponents/vedioComponent";
 import Image from "next/image";
-
-const Header = () => {
+interface IProps {
+  classname?: string;
+}
+const Header = ({ classname }: IProps) => {
   const { translations, device } = useTheme();
   const router = useRouter();
   const [show, setShow] = React.useState(0);
@@ -45,7 +47,7 @@ const Header = () => {
         className={router.pathname === "/" ? "" : "other-pages"}
         id="navbar"
       >
-        <Container>
+        <Container className={device === "mobile" ? classname : ""}>
           <Link href={"/"}>
             <LogoWrapper>
               <Image

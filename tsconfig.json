@@ -29,6 +29,6 @@
       "dataLayer/*": ["DataLayer/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "ecosystem.config.js"],
   "exclude": ["node_modules"]
 }
