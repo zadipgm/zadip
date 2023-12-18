@@ -81,6 +81,12 @@ export const NumberWrapper = styled.div`
     direction: ltr;
   }
 `;
+export const ButtonWrapper = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+`
 export const DownloadButton = styled.button`
 padding: 10px 15px;
     border: none;
@@ -91,12 +97,19 @@ padding: 10px 15px;
     text-transform: capitalize;
     border-radius: 6px;
     letter-spacing: 1.2px;
-    width: 200px;
+    width: 250px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 12px auto;
+    :disabled{
+      background-color: gray;
+      cursor: no-drop;
+    }
+    &.refresh{
+      width: 300px;
+    }
 `
 export const NameInput = styled.div`
   position: absolute;

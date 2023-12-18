@@ -80,8 +80,11 @@ const Header = ({ classname }: IProps) => {
 
       {router.pathname === "/" && (
         <MainHeading>
-          <Text lineHeight={"88px"}>{translations?.wehelp}</Text>
-          <Text lineHeight={"88px"}>{translations?.toreachGoals}</Text>
+          <Text lineHeight={"88px"}>
+            {translations?.wehelp}
+            <br />
+            {translations?.toreachGoals}
+          </Text>
         </MainHeading>
       )}
 

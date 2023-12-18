@@ -310,7 +310,7 @@ ${({ theme }) =>
     top:70% ;
   }
 `
-export const Text = styled.p<{ lineHeight?: string }>`
+export const Text = styled.h1<{ lineHeight?: string }>`
 margin:0 ;
 font-size: 70px;
 font-weight: 600;

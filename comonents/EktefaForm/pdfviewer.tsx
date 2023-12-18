@@ -4,16 +4,17 @@ import "@react-pdf-viewer/core/lib/styles/index.css";
 import { pdfjs } from "react-pdf";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
-// Import styles
 import {
+  ButtonWrapper,
   DownloadButton,
   InputSubscription,
-  Label,
   NameInput,
   NumberWrapper,
   Root,
 } from "./style";
 import OtpComponent from "../otpComponent";
+import { DownloadDone, DownloadRounded, Refresh } from "@mui/icons-material";
+import { useRouter } from "next/router";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 let obj = {
   input1: "",
@@ -52,27 +53,51 @@ let obj = {
 const MyPdfViewer = ({ pdfUrl }) => {
   const [data, setData] = React.useState(obj);
   const [show, setShow] = React.useState(false);
+  const router = useRouter();
   const downloadPdfDocument = () => {
     setShow(true);
     setTimeout(() => {
-      const input = document.getElementById("rootElementId");
-      html2canvas(input, { scale: 1.5 }).then((canvas) => {
-        const componentWidth = input.offsetWidth;
-        const componentHeight = input.offsetHeight;
-        const orientation = componentWidth >= componentHeight ? "l" : "p";
-        const imgData = canvas.toDataURL("image/png");
-        const pdf = new jsPDF({
-          orientation,
-          unit: "px",
-        });
-        pdf.internal.pageSize.width = componentWidth;
-        pdf.internal.pageSize.height = componentHeight;
-        pdf.addImage(imgData, "PNG", 0, 0, componentWidth, componentHeight);
-        pdf.save("ektefa_form.pdf");
+      const data = document.getElementById("rootElementId");
+      html2canvas(data, { scale: 2 }).then((canvas: any) => {
+        const imgWidth = 208;
+        const pageHeight = 295;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        let heightLeft = imgHeight;
+        let position = 0;
+        heightLeft -= pageHeight;
+        const doc = new jsPDF("p", "mm");
+        debugger;
+        doc.addImage(canvas, "PNG", 0, position, imgWidth, 600, "", "FAST");
+        while (heightLeft >= 0) {
+          debugger;
+          position = heightLeft - imgHeight;
+          doc.addPage();
+          doc.addImage(canvas, "PNG", 0, -250, imgWidth, imgHeight, "", "FAST");
+          heightLeft -= pageHeight;
+        }
+        doc.save("ektefa_form.pdf");
       });
     }, 300);
+    // setTimeout(() => {
+    //   const input = document.getElementById("rootElementId");
+    //   html2canvas(input, { scale: 1.5 }).then((canvas) => {
+    //     const componentWidth = input.offsetWidth;
+    //     const componentHeight = input.offsetHeight;
+    //     console.log("here is height:", componentHeight);
+    //     const orientation = componentWidth >= componentHeight ? "l" : "p";
+    //     const imgData = canvas.toDataURL("image/png");
+    //     const pdf = new jsPDF({
+    //       orientation,
+    //       unit: "px",
+    //     });
+    //     pdf.internal.pageSize.width = componentWidth;
+    //     pdf.internal.pageSize.height = componentHeight;
+    //     pdf.addImage(imgData, "PNG", 0, 0, componentWidth, componentHeight);
+    //     pdf.save("ektefa_form.pdf");
+    //   });
+    // }, 300);
   };
-  const hanldeotp = () => {};
+
   const handleChange = (e: { target: { name: any; value: any } }) => {
     setData({
       ...data,
@@ -342,9 +367,27 @@ const MyPdfViewer = ({ pdfUrl }) => {
           )}
         </NameInput>
       </Root>
-      <DownloadButton onClick={downloadPdfDocument}>
-        Download Pdf
-      </DownloadButton>
+      <ButtonWrapper>
+        <DownloadButton onClick={downloadPdfDocument} disabled={show}>
+          {show ? (
+            <>
+              <DownloadDone color="inherit" />
+              {"Pdf Downloaded"}
+            </>
+          ) : (
+            <>
+              <DownloadRounded color="inherit" />
+              {"Download Pdf"}
+            </>
+          )}
+        </DownloadButton>
+        {show && (
+          <DownloadButton onClick={() => router.reload()} className="refresh">
+            <Refresh color="inherit" />
+            {"Refresh for new PDF"}
+          </DownloadButton>
+        )}
+      </ButtonWrapper>
     </>
   );
 };

@@ -5,6 +5,7 @@ import type { NextPage } from "next";
 import type { AppContext, AppProps } from "next/app";
 import theme from "../global/theme";
 import { ThemeProvider } from "styled-components";
+import Head from "next/head";
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -58,6 +59,9 @@ const MyApp = ({
   return getLayout(
     <>
       <ThemeProvider theme={theme}>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
