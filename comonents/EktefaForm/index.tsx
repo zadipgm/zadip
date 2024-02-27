@@ -11,7 +11,7 @@ import { useTheme } from "styled-components";
 import Breadcrumb from "comonents/ReuseAbleComponents/Breadcrumb";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 const EktefaForm = () => {
-  const pdfUrl = "/images/ektefa_form.pdf";
+  const pdfUrl = "/images/ektefa_form2.pdf";
   const { colors, translations } = useTheme();
   const divRef = React.useRef(null);
   const breadcrumbs = [
