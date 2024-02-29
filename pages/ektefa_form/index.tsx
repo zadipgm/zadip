@@ -3,7 +3,7 @@ import Layout from "../../comonents/Layouts/PageLayout";
 import { NextPageWithLayout } from "../_app";
 import type { ReactElement } from "react";
 import AboutUS from "../../comonents/AboutUS";
-import EktefaForm from "comonents/EktefaForm";
+import EktefaForm from "../../comonents/EktefaForm";
 const Page: NextPageWithLayout = () => {
   return <EktefaForm />;
 };
