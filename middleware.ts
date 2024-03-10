@@ -5,11 +5,11 @@ export function middleware(request) {
     const urld = request.nextUrl.clone()
     console.log(cookie, "token", cookie != '')
     if (urld.pathname = '/login/') {
-        if (cookie === '') {
+        if (cookie === '' || cookie === undefined) {
             const url = request.nextUrl.clone()
             url.pathname = '/login/'
             return NextResponse.redirect(url)
-        } else if (cookie != '') {
+        } else if (cookie != '' || cookie != undefined) {
             const url = request.nextUrl.clone()
             url.pathname = urld.pathname
             return NextResponse.next(url)
