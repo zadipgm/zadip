@@ -426,29 +426,6 @@ const DataTable = ({
                         </ActionWrapper>
                       </TableData>
                     </Row>
-                    <Row className={active === item.id ? "show" : "hide"}>
-                      <br></br>
-                      {nestedTable &&
-                        data[0]?.procedures !== null &&
-                        data[0]?.procedures.length > 1 && (
-                          <Row> {renderTableNestedHeader()}</Row>
-                        )}
-                      {item.procedures &&
-                        item.procedures.map((detail) => {
-                          return (
-                            <Row key={item.id} className="details-row">
-                              {Object.keys(detail).map((detail_key, i) => {
-                                return (
-                                  <TableData key={i}>
-                                    {detail[detail_key]}
-                                  </TableData>
-                                );
-                              })}
-                            </Row>
-                          );
-                        })}
-                      <br></br>
-                    </Row>
                   </>
                 );
               })}

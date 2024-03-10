@@ -54,6 +54,7 @@ const Header = () => {
       await axios.delete(`${APP_URL}/logout`);
       router.push(`/${locale}/login`);
       Cookies.remove("isLogedIn");
+      Cookies.remove("token");
       // window.location.reload();
     } catch (error: any) {
       if (error) {

@@ -69,7 +69,7 @@ const LoginScreen = () => {
         .then(
           (res) =>
             Cookies.set("isLogedIn", res.data.isLogin) &&
-            Cookies.set("email", res.data.email)
+            Cookies.set("token", res.data.token)
         );
       setEmail("");
       setPassword("");

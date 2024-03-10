@@ -39,35 +39,6 @@ const SideNavBar = () => {
       panel: "panel1",
     },
     {
-      module_name: "Trainers",
-      icon: "trainerSvg",
-      page_name: "Trainers",
-      page_link: "/dashboard/trainers",
-      page: [
-        {
-          page_name: "Trainers List",
-          page_link: "/dashboard/trainers",
-          icon: "trainerSvg",
-        },
-        {
-          page_name: "Bookings",
-          page_link: "/dashboard/bookings",
-          icon: "bookingSvg",
-        },
-        {
-          page_name: "Ratings",
-          page_link: "/dashboard/ratings",
-          icon: "starsSvg",
-        },
-        {
-          page_name: "Calendar",
-          page_link: "/dashboard/calendar",
-          icon: "calendarSvg",
-        },
-      ],
-      panel: "panel2",
-    },
-    {
       module_name: "Page SEO",
       icon: "formsSvg",
       page: [
@@ -77,7 +48,7 @@ const SideNavBar = () => {
           icon: "",
         },
       ],
-      panel: "panel3",
+      panel: "panel2",
     },
     {
       module_name: "Certificate",
@@ -89,7 +60,7 @@ const SideNavBar = () => {
           icon: "certificateSvg",
         },
       ],
-      panel: "panel4",
+      panel: "panel3",
     },
   ];
   return (
