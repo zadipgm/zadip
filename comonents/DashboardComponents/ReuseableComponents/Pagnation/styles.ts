@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const PaginationList = styled.ul`
 display:flex ;
 list-style-type: none;
-padding: 0;
+padding: 0;flex-wrap:wrap;
 `
 export const PaginationListItem = styled.li`
-width: 100%;
+flex-basis: 90px;
+    flex-grow: 1;
     text-align: center;
     border: 1px solid ${({ theme }) => theme.colors.lightBlue};
     margin: 2px;

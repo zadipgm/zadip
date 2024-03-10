@@ -93,6 +93,7 @@ background-color:#e0e0e0;
 `
 export const UserSelect = styled.select`
  color: #5c5858;
+ border-radius:15px;
     width: 100%;
     padding: 15px 7px;
     border: 1px solid lightgray;
@@ -117,12 +118,15 @@ export const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: center;
     &.create-account{
-        width:46% ;
-        padding:20px ;
-        margin: 17px;
+            flex-grow: 1;
+    flex-basis: 500px;
+        padding:15px 10px 10px 10px ;
+        
     }
     &.edit-account{
-        width:50% ;
+            flex-grow: 1;
+    flex-basis: 400px;
+    margin: 15px;
     }
     
     &.password{
@@ -171,7 +175,7 @@ position: absolute;
         font-size: 50px;
     }
 `
-export const Input = styled.input`
+export const Input = styled.input`border-radius:15px;
     color: #5c5858;
     /* ${({ theme }) =>
         theme.isLTR

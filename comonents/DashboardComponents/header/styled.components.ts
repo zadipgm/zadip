@@ -8,6 +8,39 @@ export const Container = styled.div`
     width:100%;
     height:70px ;
 `
+export const WrapperMobileDash = styled.div`
+display:flex;
+justify-content: space-between;
+align-items: center;
+`
+export const BurgerMenuDash = styled.div`
+
+>svg {
+  width: 50px;
+    height: 50px;
+    display: block;
+}
+@media(max-width:768px){
+  display:block ;
+}
+@media(min-width:768px) {
+  display:none;
+}
+`
+export const MobileContainer = styled.div`
+display:flex; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+padding:12px;
+justify-content: space-between;
+align-items: center;
+`
+export const SideContainerMobileDash = styled.div`
+
+`
+export const LogoutContainerMobile = styled.div`
+display:flex;
+justify-content:center;
+
+`
 export const ProfileImageContainer = styled.div`
 >div{
 display:flex ;
@@ -18,6 +51,9 @@ color: #fff;
 position: relative;
 padding:15px 0px;
 cursor: pointer;
+&.mobile{width:100%;
+  justify-content:space-between;
+}
 > img{
     width:40px ;
     height:40px ;
@@ -26,6 +62,24 @@ cursor: pointer;
 }
 
 `
+export const HeadersContainer = styled.div`
+.mobile {
+  @media (max-width: 768px) {
+    display: block;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.desktop {
+  @media (max-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+`;
 export const Langwrapper = styled.div`
  padding: 0px 20px;
     display:flex ;
@@ -60,6 +114,17 @@ export const LangButton = styled.a`
     color: #044783;
     margin: 5px;
     font-size: 16px;
+}
+&.mobile-lang-dash {
+  padding: 0px 12px;
+    background: #fff;
+    color: #044783;
+    margin: 5px;width:35%;
+    text-align: center;
+    font-size: 16px;
+    border-radius:8px;
+        display: flex;
+    justify-content: center;
 }
 `
 export const ArrowWrapper = styled.div`

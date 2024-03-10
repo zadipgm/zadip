@@ -4,8 +4,8 @@ import * as React from "react";
 import { ThemeProvider } from "styled-components";
 import theme from "global/theme";
 import { Children, LayoutContainer, Wrapper } from "./styled.components";
-import Header from "comonents/DashboardComponents/header";
 import SideNavBar from "comonents/DashboardComponents/SideNavBar";
+import Header from "comonents/DashboardComponents/header";
 interface IProps {
   children: ReactElement;
 }

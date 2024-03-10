@@ -9,13 +9,19 @@ export const Container = styled.div`
   background-size: cover;
   transition: 0.5s;
   &.active {
-    width: 14%;
+    width: 25%;
     transition: 0.5s;
   }
   &.In-active {
     transition: 0.5s;
     width: 25%;
-  }
+  } 
+  @media (max-width: 768px) {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      display: block;
+    }
 `;
 export const LogoContainer = styled.div`
   display: flex;
@@ -50,8 +56,8 @@ export const IconWrapper = styled.div`
   border-radius: 100%;
   transition: 0.5s;
   ${({ theme }) =>
-        theme.isLTR
-            ? css`
+    theme.isLTR
+      ? css`
           &.active {
             transform: rotate(-90deg);
             transition: 0.5s;
@@ -61,7 +67,7 @@ export const IconWrapper = styled.div`
             transition: 0.5s;
           }
         `
-            : css`
+      : css`
           &.active {
             transform: rotate(90deg);
             transition: 0.5s;

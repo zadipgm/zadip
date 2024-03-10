@@ -28,12 +28,12 @@ const SideNavBar = () => {
         {
           page_name: "Create new user",
           page_link: "/dashboard/users",
-          icon: "usersSvg",
+          icon: "",
         },
         {
           page_name: "All Users",
           page_link: "/dashboard/all_users",
-          icon: "alluserSvg",
+          icon: "",
         },
       ],
       panel: "panel1",
@@ -57,7 +57,7 @@ const SideNavBar = () => {
         {
           page_name: "Certificate List",
           page_link: "/dashboard/certificate",
-          icon: "certificateSvg",
+          icon: "",
         },
       ],
       panel: "panel3",
@@ -82,12 +82,6 @@ const SideNavBar = () => {
         </a>
       </SideIconWrapper>
       <SideBarAccordions sideBarMenuData={sideBarMenuData} />
-      <IconWrapper
-        onClick={handleWidth}
-        className={width ? "In-active" : "active"}
-      >
-        <ArrowDown fill={"#fff"} width="30px" height="30px" />
-      </IconWrapper>
     </Container>
   );
 };

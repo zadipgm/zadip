@@ -6,6 +6,7 @@ justify-content:space-between ;
 align-items:center ;
 flex-wrap:wrap ;
 margin-bottom:20px ;
+gap:10px;
 `
 export const Title = styled.h2`
 color:${({ theme }) => theme.colors.black1} ;

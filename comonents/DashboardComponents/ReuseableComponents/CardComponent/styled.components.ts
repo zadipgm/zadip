@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-width:24% ;
+width:24% ;flex-basis: 250px;
+    flex-grow: 1;gap: 10px;
 `;
 export const Wrapper = styled.div<{ color: string }>`
 display:flex ;

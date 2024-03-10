@@ -19,12 +19,12 @@ justify-content:flex-start ;
 align-items:center ;
 gap:6px;
 `
-export const CloseIconWrapper= styled.div`
+export const CloseIconWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
 `
-export const BurgerMenu =styled.div`
+export const BurgerMenu = styled.div`
 display:none ;
 >svg {
   width: 50px;
@@ -38,20 +38,20 @@ display:none ;
   display:block ;
 }
 `
-export const ListTitle= styled.span`
+export const ListTitle = styled.span`
 text-transform:capitalize ;
 font-size:18px ;
 color: #fff;
 `
-export const InnerList =styled.ul`
+export const InnerList = styled.ul`
 list-style-type:none ;
 margin:0 ;
 `
-export const NestedList= styled.ul`
+export const NestedList = styled.ul`
 list-style-type:none ;
 `
-export const NestedListItems =styled.li``
-export const NestedListItemsLink =styled.a`
+export const NestedListItems = styled.li``
+export const NestedListItemsLink = styled.a`
 color:#d6ecf9; ;
 display:flex ;
 text-decoration:none ;

@@ -26,8 +26,9 @@ interface IAccordion {
 }
 interface IProps {
   sideBarMenuData: IAccordion[];
+  handleClose?: () => void;
 }
-const SideBarAccordions = ({ sideBarMenuData }: IProps) => {
+const SideBarAccordions = ({ sideBarMenuData, handleClose }: IProps) => {
   const router = useRouter();
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
@@ -35,7 +36,12 @@ const SideBarAccordions = ({ sideBarMenuData }: IProps) => {
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
-
+  const handleClickLink = (link: string) => {
+    router.push(link);
+    setTimeout(() => {
+      handleClose?.();
+    }, 800);
+  };
   return (
     <AccordionContainer>
       {sideBarMenuData.map((item, index) => {
@@ -74,7 +80,7 @@ const SideBarAccordions = ({ sideBarMenuData }: IProps) => {
                     return (
                       <PageLinkWrapper
                         key={i}
-                        onClick={() => router.push(`${p.page_link}`)}
+                        onClick={() => handleClickLink(`${p.page_link}`)}
                       >
                         <IconComponent
                           icon={p.icon}

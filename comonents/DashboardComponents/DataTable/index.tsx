@@ -2,11 +2,9 @@ import * as React from "react";
 import {
   ActionWrapper,
   Container,
-  EntriesWrapper,
   Filter,
   InnerWrapper,
   Input,
-  SearchWrapper,
   Select,
   Wrapper,
   Table,
@@ -26,6 +24,7 @@ import {
   DataView,
   DataViewWrapper,
   TableDataWrapper,
+  TableContainerDashboard,
 } from "./style";
 import EditSvg from "public/icons/editSvg";
 import { useTheme } from "styled-components";
@@ -281,12 +280,13 @@ const DataTable = ({
       {showFilter && (
         <Wrapper>
           <Filter>
-            <span>Filter By Column</span>
+            <div>Filter By Column</div>
             <Select onChange={(e) => handlerChange(e)}>
               {data && renderColumnKeys()}
             </Select>
           </Filter>
-          <SearchWrapper>
+          <Filter>
+            <div>Search</div>
             <Input
               type="search"
               onChange={(e) =>
@@ -299,137 +299,142 @@ const DataTable = ({
               }
               placeholder={`Search record by ${filterKey}`}
             />
-          </SearchWrapper>
-          <EntriesWrapper>
-            <span>Show</span>
+          </Filter>
+          <Filter>
+            <div>Show Entries</div>
             <Select onChange={(e) => handlerChangeRows(e)}>
               <option value={10}>10</option>
               <option value={15}>15</option>
             </Select>
-            <span>Entries</span>
-          </EntriesWrapper>
+          </Filter>
         </Wrapper>
       )}
       {dataView === "table" && (
-        <Table>
-          <Row>{renderTableHeader()}</Row>
-          {searchvalue &&
-            searchvalue
-              ?.slice(0, recordsPerPage as number)
-              ?.map((item, index) => {
-                let keys = Object?.keys(item)?.filter(
-                  (procedure) => procedure !== "procedures"
-                );
+        <TableContainerDashboard>
+          <Table>
+            <Row>{renderTableHeader()}</Row>
+            {searchvalue &&
+              searchvalue
+                ?.slice(0, recordsPerPage as number)
+                ?.map((item, index) => {
+                  let keys = Object?.keys(item)?.filter(
+                    (procedure) => procedure !== "procedures"
+                  );
 
-                return (
-                  <>
-                    <Row key={item.nationalID}>
-                      {filterByLocale(locale, keys).map((key, i) => {
-                        return (
-                          <TableData key={i}>
-                            {key === "id"
-                              ? index === 0
-                                ? 1
-                                : index + 1
-                              : `${item[key]}`}
-                          </TableData>
-                        );
-                      })}
-                      <TableData>
-                        <ActionWrapper onClick={() => actionHandler(item.id)}>
-                          <Actions>
-                            <div>Actions</div>
-                            <ArrowDown fill={colors.gray2} />
-                          </Actions>
-                          {open && showActions === item.id && (
-                            <ActionList
-                              className={
-                                showActions === item.id
-                                  ? `show ${classname}`
-                                  : "hide"
-                              }
-                            >
-                              {isEditable && (
-                                <ActionListItems
-                                  onClick={() => edithandler(item)}
-                                >
-                                  <InnerWrapper>
-                                    <EditSvg
-                                      fill={colors.darkBlue}
-                                      width="15px"
-                                      height="15px"
-                                    />
-                                  </InnerWrapper>
-                                  <span>Edit</span>
-                                </ActionListItems>
-                              )}
-                              {isDelete && (
-                                <ActionListItems
-                                  onClick={() => deleteHandler(item.nationalID)}
-                                >
-                                  <InnerWrapper className="delete">
-                                    <DeleteSvg
-                                      fill={colors.red}
-                                      width="15px"
-                                      height="15px"
-                                    />
-                                  </InnerWrapper>
-                                  <span>Delete</span>
-                                </ActionListItems>
-                              )}
-                              {renewCertificate && (
-                                <ActionListItems
-                                  onClick={() => renewCertificateHandler(item)}
-                                >
-                                  <InnerWrapper>
-                                    <ViewMoreSvg
-                                      fill={colors.lightBlue}
-                                      width="15px"
-                                      height="15px"
-                                    />
-                                  </InnerWrapper>
-                                  <span>Renew Certificate</span>
-                                </ActionListItems>
-                              )}
-                              {generateCertificate && (
-                                <ActionListItems
-                                  onClick={() =>
-                                    generateCertificateHandler(item)
-                                  }
-                                >
-                                  <InnerWrapper>
-                                    <ViewMoreSvg
-                                      fill={colors.lightBlue}
-                                      width="15px"
-                                      height="15px"
-                                    />
-                                  </InnerWrapper>
-                                  <span>Generate Certificate</span>
-                                </ActionListItems>
-                              )}
-                              {view && (
-                                <ActionListItems
-                                  onClick={() => HandleViewDetails(item)}
-                                >
-                                  <InnerWrapper>
-                                    <ViewMoreSvg
-                                      fill={colors.lightBlue}
-                                      width="15px"
-                                      height="15px"
-                                    />
-                                  </InnerWrapper>
-                                  <span>View</span>
-                                </ActionListItems>
-                              )}
-                            </ActionList>
-                          )}
-                        </ActionWrapper>
-                      </TableData>
-                    </Row>
-                  </>
-                );
-              })}
-        </Table>
+                  return (
+                    <>
+                      <Row key={item.nationalID}>
+                        {filterByLocale(locale, keys).map((key, i) => {
+                          return (
+                            <TableData key={i}>
+                              {key === "id"
+                                ? index === 0
+                                  ? 1
+                                  : index + 1
+                                : `${item[key]}`}
+                            </TableData>
+                          );
+                        })}
+                        <TableData>
+                          <ActionWrapper onClick={() => actionHandler(item.id)}>
+                            <Actions>
+                              <div>Actions</div>
+                              <ArrowDown fill={colors.gray2} />
+                            </Actions>
+                            {open && showActions === item.id && (
+                              <ActionList
+                                className={
+                                  showActions === item.id
+                                    ? `show ${classname}`
+                                    : "hide"
+                                }
+                              >
+                                {isEditable && (
+                                  <ActionListItems
+                                    onClick={() => edithandler(item)}
+                                  >
+                                    <InnerWrapper>
+                                      <EditSvg
+                                        fill={colors.darkBlue}
+                                        width="15px"
+                                        height="15px"
+                                      />
+                                    </InnerWrapper>
+                                    <span>Edit</span>
+                                  </ActionListItems>
+                                )}
+                                {isDelete && (
+                                  <ActionListItems
+                                    onClick={() =>
+                                      deleteHandler(item.nationalID)
+                                    }
+                                  >
+                                    <InnerWrapper className="delete">
+                                      <DeleteSvg
+                                        fill={colors.red}
+                                        width="15px"
+                                        height="15px"
+                                      />
+                                    </InnerWrapper>
+                                    <span>Delete</span>
+                                  </ActionListItems>
+                                )}
+                                {renewCertificate && (
+                                  <ActionListItems
+                                    onClick={() =>
+                                      renewCertificateHandler(item)
+                                    }
+                                  >
+                                    <InnerWrapper>
+                                      <ViewMoreSvg
+                                        fill={colors.lightBlue}
+                                        width="15px"
+                                        height="15px"
+                                      />
+                                    </InnerWrapper>
+                                    <span>Renew Certificate</span>
+                                  </ActionListItems>
+                                )}
+                                {generateCertificate && (
+                                  <ActionListItems
+                                    onClick={() =>
+                                      generateCertificateHandler(item)
+                                    }
+                                  >
+                                    <InnerWrapper>
+                                      <ViewMoreSvg
+                                        fill={colors.lightBlue}
+                                        width="15px"
+                                        height="15px"
+                                      />
+                                    </InnerWrapper>
+                                    <span>Generate Certificate</span>
+                                  </ActionListItems>
+                                )}
+                                {view && (
+                                  <ActionListItems
+                                    onClick={() => HandleViewDetails(item)}
+                                  >
+                                    <InnerWrapper>
+                                      <ViewMoreSvg
+                                        fill={colors.lightBlue}
+                                        width="15px"
+                                        height="15px"
+                                      />
+                                    </InnerWrapper>
+                                    <span>View</span>
+                                  </ActionListItems>
+                                )}
+                              </ActionList>
+                            )}
+                          </ActionWrapper>
+                        </TableData>
+                      </Row>
+                    </>
+                  );
+                })}
+          </Table>
+        </TableContainerDashboard>
       )}
 
       {dataView === "grid" && (
@@ -531,11 +536,6 @@ const DataTable = ({
             setCurrentPage={setCurrentPage}
           />
         </PaginationOuterDiv>
-        <div>
-          Showing {currentRecords && currentRecords[0]?.id} to{" "}
-          {currentRecords && currentRecords[currentRecords?.length - 1].id} of{" "}
-          {data?.length} entries
-        </div>
       </PaginationWrapper>
     </Container>
   );

@@ -23,7 +23,8 @@ align-items:center ;
 flex-wrap:wrap ;
 `
 export const Wrapper = styled.div`
-width:50% ;
+flex-grow:1;
+flex-basis:400px;
 padding:12px ;
 &.all-pages{
     width: 100%;

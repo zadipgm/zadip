@@ -12,11 +12,13 @@ export const DataViewWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 `;
 export const DataView = styled.div`
-  width: 9%;
+  flex-grow:1 ;
+  flex-basis: 200px;
   border-radius: 6px;
-  margin: 12px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,6 +51,9 @@ export const Table = styled.table`
     }
   }
 `;
+export const TableContainerDashboard = styled.div`
+overflow-x:scroll;
+`
 export const TableData = styled.td`
   padding: 5px;
   border-bottom: 1px solid #dddddd;
@@ -89,7 +94,7 @@ export const PaginationWrapper = styled.div`
   gap: 15px;
 `;
 export const PaginationOuterDiv = styled.div`
-  width: 25%;
+  width: 50%;
 `;
 
 export const TableDataWrapper = styled.div`
@@ -100,16 +105,11 @@ export const TableDataWrapper = styled.div`
 export const Data = styled.div``;
 
 export const Filter = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-grow: 1;
+    flex-basis: 200px;
   gap: 8px;
-  width: 20%;
   color: #5a5c69;
-  > span {
-    font-size: 14px;
-    font-weight: bold;
-  }
+  
 `;
 export const Wrapper = styled.div`
   display: flex;
@@ -117,34 +117,23 @@ export const Wrapper = styled.div`
   align-items: center;
   margin-bottom: 30px;
   gap: 15px;
+  flex-wrap: wrap;
 `;
-export const SearchWrapper = styled.div`
-  width: 60%;
-`;
-export const Label = styled.label``;
+
 export const Input = styled.input`
   padding: 10px;
   width: 100%;
+  flex-grow: 1;
+    flex-basis: 200px;
   outline: none;
   border-radius: 5px;
   border: 1px solid lightgray;
   font-size: 14px;
 `;
-export const EntriesWrapper = styled.div`
-  width: 20%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  > span {
-    color: #5a5c69;
-    font-size: 14px;
-    font-weight: bold;
-  }
-`;
+
 export const IconWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-grow: 1;
+    flex-basis: 200px;
 `;
 export const ActionWrapper = styled.div`
   display: flex;
@@ -185,7 +174,7 @@ export const ActionList = styled.ul`
                 right: -17%;
     `
       : css`
-               right: -35%
+               right: -35%;
     `
   } 
     }
@@ -244,9 +233,8 @@ export const InnerWrapper = styled.div`
 `;
 export const Select = styled.select`
   padding: 11px 10px;
-  outline: none;
+  outline: none;width:100%;
   border-radius: 5px;
-  margin: 10px;
   direction: ltr;
   cursor: pointer;
   border: 1px solid lightgray;
@@ -306,7 +294,8 @@ export const CardListItems = styled.li`
   border-radius: 10px;
   padding: 12px;
   margin: 12px;
-  width: 30%;
+  flex-grow: 1;
+    flex-basis: 400px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     &.in-active{
