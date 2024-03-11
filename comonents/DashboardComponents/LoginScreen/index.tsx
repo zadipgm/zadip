@@ -131,6 +131,7 @@ const LoginScreen = () => {
                 placeholder={translations?.enterEmail}
                 required
                 onChange={(e) => handleEmail(e)}
+                className="login-form"
               />
             </Wrapper>
             <Wrapper className="password">
@@ -146,6 +147,7 @@ const LoginScreen = () => {
                 placeholder={translations?.password}
                 required
                 onChange={(e) => handlePassword(e)}
+                className="login-form"
               />
               <EyesWrapper onClick={togglePassword}>
                 {passwordShown ? (

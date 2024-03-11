@@ -41,6 +41,11 @@ border-radius:20px ;
 &.create-account{
     width:70% ;
 }
+@media (max-width: 768px) {
+        width: 80%;
+        display:block; ;
+      }
+
 `
 export const LogoWrapper = styled.div`
 width:50%;
@@ -48,6 +53,10 @@ padding:15px ;
 &.create-account{
     width:30% ;
 }
+@media (max-width: 768px) {
+        width: 80%;margin:0 auto;
+       
+      }
 `
 export const Logo = styled.img`
 width:100% ;
@@ -57,8 +66,11 @@ color:${({ theme }) => theme.colors.darkBlue} ;
 text-align:center ;
 `
 export const Form = styled.form`
-width:50% ;
 width:50%;
+@media (max-width: 768px) {
+        width: 100%;
+       
+      }
 >a{
     text-decoration: none;
     color: #fff;
@@ -177,15 +189,6 @@ position: absolute;
 `
 export const Input = styled.input`border-radius:15px;
     color: #5c5858;
-    /* ${({ theme }) =>
-        theme.isLTR
-            ? css`
-                border-radius: 0px 20px 20px 0px;
-    `
-            : css`
-                border-radius: 20px 0px 0px 20px;
-    `
-    } */
     width: 100%;
     padding: 15px 7px;
     border: 1px solid lightgray;
@@ -196,6 +199,9 @@ export const Input = styled.input`border-radius:15px;
         border: 1px solid #007dcbd6;
     box-shadow: 0 0 0 0.1rem #2493f5;
     }
+    &.login-form{
+        border-radius:0px;
+    }
     &.login{
     color: rgb(255, 255, 255);
     padding: 12px 9px;
@@ -203,7 +209,7 @@ export const Input = styled.input`border-radius:15px;
     outline: none;
     text-decoration: none;
     display: flex;
-    border-radius:10px ;
+    border-radius:10px;
     justify-content: center;
     align-items: self-start;
     width: 156px;
