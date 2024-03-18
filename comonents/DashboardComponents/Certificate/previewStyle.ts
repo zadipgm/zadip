@@ -50,11 +50,11 @@ export const styles = StyleSheet.create({
         backgroundColor: "#FFFFFF",
     },
     nameArabic: {
-        fontSize: 16,
+        fontSize: 14,
         color: "#525252",
         position: "absolute",
-        right: "58.5%",
-        top: "32%",
+        right: "58%",
+        top: "32.5%",
         fontFamily: "Cairo",
     },
 });

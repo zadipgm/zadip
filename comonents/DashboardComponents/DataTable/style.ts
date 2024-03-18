@@ -58,9 +58,19 @@ export const TableData = styled.td`
   padding: 5px;
   border-bottom: 1px solid #dddddd;
   text-align: left;
+  ${({ theme }) =>
+    theme.isLTR
+      ? css`
+              text-align: left;
+    `
+      : css`
+               text-align: right;
+    `
+  } 
   &.table-header {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
+    text-transform:capitalize;
     align-items: center;
     border: 1px solid #dddddd;
   }
@@ -141,6 +151,20 @@ export const ActionWrapper = styled.div`
   align-items: center;
   position: relative;
 `;
+export const ActionButton = styled.button`
+    background: ${({ theme }) => theme.colors.darkBlue};
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 6px;
+    color: white;
+    transition: .5s;
+    :hover{
+    background:  #044783bf
+    }
+
+`
 export const Actions = styled.div`
   display: flex;
   justify-content: space-between;

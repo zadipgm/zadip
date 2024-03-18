@@ -2,19 +2,13 @@ import styled, { css } from "styled-components";
 export const Container = styled.div`
   text-align: center;
 `;
-export const Title = styled.h1`
+export const Title = styled.h3`
   text-align: center;
 `;
 export const ImageWrapper = styled.div`
   text-align: center;
   position: relative;
-  width: 1024px;
-    height: 726px;
-    margin: 0 auto;
-    &.mobile{
-      width: 100%;
-      height: auto;
-    }
+  margin: 0 auto;
 `;
 export const InputWrapper = styled.div`
   position: absolute;
@@ -24,97 +18,114 @@ export const InputWrapper = styled.div`
   font-size: 21px;
   font-family: "Cairo", sans-serif !important;
   &.name-arabic {
-    top: 30.4%;
-    right: 56.5%;
+    
+    font-weight: 700;
     &.mobile {
-      @media (min-width: 340px) {
-      top: 29.5%;
-    right: 56.7%;
-    font-size: 7px;
+      @media (min-width: 320px) {
+        top: 30.5%;
+        right: 56.7%;
+        font-size: 5px;
       }
-      @media (min-width: 420px) {
-      top: 30%;
+      @media (min-width: 480px) {
+        top: 30%;
+        right: 56.7%;
+        font-size: 7px;
       }
-      @media (min-width: 520px) {
+      @media (min-width: 768px) {
         top: 31%;
-        font-size: 11px;
+        font-size: 7px;
       }
-      @media (min-width: 620px) {
-        font-size: 31px;
+      @media (min-width: 992px) {
+        
+        font-size: 12px;
       }
+      @media (min-width: 1440px) {
+        top: 31%;
+        font-size: 18px;
+      }
+      
     }
   }
   &.ID-number-arabic {
-    top: 64.7%;
-    right: 78.8%;
-    font-family: "Cairo", sans-serif !important;
+   
+    font-weight: 700;
     &.mobile {
-      @media (min-width: 340px) {
-      right: 79%;
-      top: 61.5%;
-      font-size: 10px;
+      @media (min-width: 320px) {
+        right: 79%;
+        top: 62.5%;
+        font-size: 7px;
       }
-      @media (min-width: 420px) {
-      top: 62.5%;
+      @media (min-width: 480px) {
+        top: 63.5%;
       }
-      @media (min-width: 520px) {
-        top: 63%;
+      @media (min-width: 768px) {
+        top: 64%;
         font-size: 11px;
       }
-      @media (min-width: 620px) {
-        font-size: 31px;
+      @media (min-width: 992px) {
+        font-size: 12px;
         top: 65%;
+      }
+      @media (min-width: 1440px) {
+        font-size: 14px;
+        top: 66%;
       }
     }
   }
   &.Certificate-number-arabic {
-    top: 65.3%;
-    right: 55.5%;
+   
+    font-weight: 700;
     &.mobile {
-      @media (min-width: 340px) {
-    right: 55.5%;
-    top: 62%;
-      font-size: 10px;
-      }
-      @media (min-width: 420px) {
+      @media (min-width: 320px) {
+        right: 55.5%;
         top: 63%;
+        font-size: 7px;
       }
-      @media (min-width: 520px) {
+      @media (min-width: 480px) {
         top: 64%;
-        font-size: 11px;
       }
-      @media (min-width: 620px) {
-        font-size: 31px;
+      @media (min-width: 768px) {
         top: 65%;
+        font-size: 8px;
+      }
+      @media (min-width: 992px) {
+        font-size: 12px;
+        top: 65%;
+      }
+      @media (min-width: 1440px) {
+        font-size: 18px;
+        top: 66%;
       }
     }
   }
   &.Expire-Date-arabic {
-    top: 58.7%;
-    right: 79.4%;
-    font-size: 23px;
-    background: white;
+   
+    font-weight: 700;
     &.mobile {
-      @media (min-width: 340px) {
-        top: 55.9%;
-    right: 79.5%;
-    background: white;
-    font-size: 9px;
-      }
-      @media (min-width: 420px) {
+      @media (min-width: 320px) {
         top: 56.9%;
+        right: 79.5%;
+        background: white;
+        font-size: 7px;
       }
-      @media (min-width: 520px) {
+      @media (min-width: 480px) {
+        top: 57.9%;
+      }
+      @media (min-width: 768px) {
         top: 57.9%;
         font-size: 11px;
       }
-      @media (min-width: 620px) {
-        font-size: 31px;
+      @media (min-width: 992px) {
+        font-size: 12px;
         top: 58.9%;
+      }
+      @media (min-width: 1440px) {
+        font-size: 18px;
+        top: 59.9%;
       }
     }
   }
-  
+
   > input {
     border: none;
     border-bottom: 1px solid gray;
@@ -198,7 +209,7 @@ export const PreviewCertificate = styled.a`
   background: ${({ theme }) => theme.colors?.darkBlue};
   color: ${({ theme }) => theme.colors?.white};
   font-size: 18px;
-  padding: 15px;
+  padding: 4px;
   border: none;
   border-radius: 6px;
   display: flex;
@@ -215,8 +226,8 @@ export const PreviewCertificate = styled.a`
   &.generate {
     margin: 15px;
   }
-  &.mobile{
-    margin: 15px auto; 
+  &.mobile {
+    margin: 15px auto;
     padding: 8px 15px;
   }
 `;

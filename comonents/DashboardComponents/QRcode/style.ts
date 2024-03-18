@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
 
 export const Container = styled.div`
  height: 77px;
@@ -8,7 +9,16 @@ export const Container = styled.div`
     position: absolute;
     top: 4%;
     left: 0%;
-    right: 87%;
+    right: 86%;
+    ${({ theme }) =>
+    theme.isLTR
+      ? css`
+                 right: 92%;
+    `
+      : css`
+                right: 86%;
+    `
+  } 
   &.mobile-qr {
     max-width: unset;
     left: 3.3%;
@@ -27,6 +37,7 @@ export const Container = styled.div`
     @media (min-width: 320px) {
       width: 25px !important;
       height: 25px !important;
+      
       }
     @media (min-width: 480px) {
       width: 30px !important;

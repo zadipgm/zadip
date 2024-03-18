@@ -110,27 +110,34 @@ const GenerateCertificate = ({ userData }: IProps) => {
       <Goback onClick={() => router.back()} className="back">
         Go back to list
       </Goback>
-      <Title>Certificate Preview</Title>
-      <ImageWrapper>
+      <Title>
+        {isLTR
+          ? "This is Certificate Preview. Please scroll down to Generate certificate."
+          : "هذه للمعاينة فقط. يرجى التمرير للأسفل لإنشاء الشهادة."}
+      </Title>
+      <ImageWrapper className="mobile">
         <img
           src={`/images/${user[0]?.gender === "male" ? "male" : "female"}.jpg`}
           alt="certificate"
+          width={"100%"}
         />
-        <InputWrapper className="ID-number-arabic">
+        <InputWrapper className="ID-number-arabic mobile">
           {toFa(user[0]?.nationalID)}
         </InputWrapper>
-        <InputWrapper className="Certificate-number-arabic">
+        <InputWrapper className="Certificate-number-arabic mobile">
           {toFa(findMaxNumber(certificateData))}
         </InputWrapper>
-        <InputWrapper className="Expire-Date-arabic">
+        <InputWrapper className="Expire-Date-arabic mobile">
           {arabicDate.substring(0, 12) as string}
         </InputWrapper>
-        <InputWrapper className="name-arabic">{user[0]?.name_ar}</InputWrapper>
+        <InputWrapper className="name-arabic mobile">
+          {user[0]?.name_ar}
+        </InputWrapper>
         <QRcodeComponent
           value={url as unknown as string}
           width="61px"
           height="61px"
-          classname="desktop-style"
+          classname="mobile-style"
         />
       </ImageWrapper>
 
