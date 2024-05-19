@@ -50,7 +50,7 @@ const PreViewCertificate = ({ data }: IProps) => {
   let arabicMonth = arabicDate.split("/")[1].toString();
   let reverseMonth = arabicMonth.split("").reverse().join("");
   //year reverse
-  let arabicYear = arabicDate.split("/")[2].toString();
+  let arabicYear = arabicDate;
   let reverseYear = arabicYear.split("هـ")[0].toString();
   let reverseYear_AR = reverseYear.split("").reverse().join("");
 
@@ -71,24 +71,12 @@ const PreViewCertificate = ({ data }: IProps) => {
                 />
                 <Text style={styles.IDArabic}>
                   {" "}
-                  {toFa(
-                    (filter_certificate[0]?.nationalID as string)
-                      ?.split("")
-                      .reverse()
-                      .join("") as string
-                  )}
+                  {toFa(filter_certificate[0]?.nationalID as string)}
                 </Text>
                 <Text style={styles.certificateArabic}>
-                  {
-                    toFa(filter_certificate[0]?.certificate_number)
-                      ?.split("")
-                      .reverse()
-                      .join("") as string
-                  }
+                  {toFa(filter_certificate[0]?.certificate_number)}
                 </Text>
-                <Text
-                  style={styles.dateArabic}
-                >{`${reverseDay}/${reverseMonth}/${reverseYear_AR}`}</Text>
+                <Text style={styles.dateArabic}>{arabicDate}</Text>
                 <Text style={styles.nameArabic}>
                   {filter_certificate[0]?.name}
                 </Text>
